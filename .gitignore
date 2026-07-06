@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+
+# Local config with secrets / overrides
+config.yaml
+
+# Test / coverage
+.pytest_cache/
+.coverage
+
+# Editor
+.vscode/
+.idea/
+*.swp
+
+# Note: data/seen.db is intentionally NOT ignored — it is the persisted
+# dedup state and is committed back by the daily workflow.

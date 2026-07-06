@@ -1,0 +1,53 @@
+name: Daily CyberSecNews
+
+on:
+  schedule:
+    # 06:00 UTC every day. Adjust as desired (cron is in UTC).
+    - cron: "0 6 * * *"
+  workflow_dispatch: {}   # allow manual runs from the Actions tab
+
+# Needed so the job can commit the updated dedup DB back to the repo.
+permissions:
+  contents: write
+
+concurrency:
+  # Never run two aggregations at once (they'd race on the DB commit).
+  group: cybersecnews-daily
+  cancel-in-progress: false
+
+jobs:
+  aggregate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e .
+
+      - name: Run aggregator
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+          NTFY_TOKEN: ${{ secrets.NTFY_TOKEN }}   # optional; empty if unset
+        run: |
+          python -m cybersecnews --verbose
+
+      - name: Commit updated dedup DB
+        run: |
+          git config user.name "cybersecnews-bot"
+          git config user.email "actions@github.com"
+          if [ -n "$(git status --porcelain data/seen.db)" ]; then
+            git add data/seen.db
+            git commit -m "chore: update seen vulnerabilities DB [skip ci]"
+            git push
+          else
+            echo "No DB changes to commit."
+          fi

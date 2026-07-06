@@ -1,0 +1,106 @@
+# CyberSecNews configuration.
+# Copy to config.yaml and adjust. Secrets are taken from environment variables
+# (see the `env:` markers below) and should NOT be committed.
+
+# How far back to look for news each run.
+since_hours: 24
+
+# Which categories to keep. Anything the LLM classifies outside these is dropped.
+# Supported: vulnerability, red_team
+categories:
+  - vulnerability
+  - red_team
+
+# News source connectors. type currently supports "rss".
+# Disable a source by setting enabled: false.
+connectors:
+  - name: heise-security
+    type: rss
+    enabled: true
+    url: https://www.heise.de/security/rss/news-atom.xml
+  - name: golem-security
+    type: rss
+    enabled: true
+    url: https://www.golem.de/rss/rss_sicherheit.xml
+  - name: thehackernews
+    type: rss
+    enabled: true
+    url: https://feeds.feedburner.com/TheHackersNews
+  - name: bleepingcomputer
+    type: rss
+    enabled: true
+    url: https://www.bleepingcomputer.com/feed/
+
+# Cheap keyword prefilter run before any LLM call. An article is sent to the LLM
+# only if its title/summary contains at least one of these terms (case-insensitive).
+# This keeps LLM cost low without hurting recall much. Keep generous.
+prefilter:
+  vulnerability:
+    - vulnerability
+    - vulnerabilities
+    - cve-
+    - zero-day
+    - zero day
+    - 0-day
+    - exploit
+    - exploited
+    - rce
+    - remote code execution
+    - privilege escalation
+    - authentication bypass
+    - auth bypass
+    - buffer overflow
+    - sql injection
+    - patch
+    - patched
+    - security update
+    - flaw
+    - backdoor
+  red_team:
+    - red team
+    - red teaming
+    - c2
+    - command and control
+    - command-and-control
+    - beacon
+    - cobalt strike
+    - sliver
+    - mythic
+    - havoc
+    - lateral movement
+    - edr evasion
+    - edr bypass
+    - av evasion
+    - defense evasion
+    - post-exploitation
+    - post exploitation
+    - offensive security
+    - tradecraft
+    - persistence
+    - living off the land
+    - lolbin
+
+# LLM settings. The API key comes from the ANTHROPIC_API_KEY environment variable.
+llm:
+  provider: anthropic
+  model: claude-haiku-4-5-20251001
+  max_tokens: 1024
+  # Whether to use the LLM semantic-match dedup layer (layer 3). Set false to
+  # rely only on url/CVE/canonical_key matching (cheaper, slightly less robust).
+  semantic_dedup: true
+
+# Dedup: how many days back the semantic layer compares against.
+dedup_window_days: 45
+
+# Persisted dedup database (SQLite). Committed back by the daily workflow.
+database: data/seen.db
+
+# ntfy.sh reporting. Topic and optional token come from the environment.
+ntfy:
+  base_url: https://ntfy.sh
+  topic_env: NTFY_TOPIC        # env var holding the topic name
+  token_env: NTFY_TOKEN        # optional env var holding an access token
+  priority: default            # ntfy priority: min, low, default, high, urgent
+  # If true, send a short "no new items" heartbeat when nothing new was found.
+  # If false, stay silent on empty runs (still logged).
+  quiet_heartbeat: false
