@@ -39,7 +39,7 @@ def build_report(items: list[Vulnerability], report_date: date | None = None) ->
     n_red = len(by_cat.get(CATEGORY_RED_TEAM, []))
     total = n_vuln + n_red
 
-    title = f"CyberSecNews {report_date.isoformat()} — {total} new"
+    title = f"CyberSecNews {report_date.isoformat()} - {total} new"
     if total:
         title += f" ({n_vuln} vuln, {n_red} red-team)"
 

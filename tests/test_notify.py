@@ -6,8 +6,8 @@ import pytest
 import responses
 
 from cybersecnews.config import NtfyConfig
-from cybersecnews.notify import NtfyError, send_report
-from cybersecnews.report import build_report
+from cybersecnews.notify import NtfyError, _header_safe, send_report
+from cybersecnews.report import Report, build_report
 from conftest import make_vuln
 
 
@@ -39,3 +39,25 @@ def test_http_error_raises():
     report = build_report([make_vuln()])
     with pytest.raises(NtfyError):
         send_report(report, NtfyConfig(topic="t"))
+
+
+def test_header_safe_transliterates_and_is_latin1():
+    out = _header_safe("CyberSecNews 2026-07-06 — 1 new … “quote”")
+    out.encode("latin-1")  # must not raise
+    assert "—" not in out and "…" not in out
+
+
+@responses.activate
+def test_send_with_unicode_title_does_not_crash():
+    """Regression: an em dash in the Title header must not abort the request."""
+    responses.add(responses.POST, "https://ntfy.sh/t", status=200)
+    report = Report(
+        title="CyberSecNews 2026-07-06 — 1 new",  # em dash, not Latin-1
+        body="body",
+        click_url="https://a/1",
+        count=1,
+    )
+    send_report(report, NtfyConfig(topic="t"))
+    sent_title = responses.calls[0].request.headers["Title"]
+    sent_title.encode("latin-1")  # the header actually sent is encodable
+    assert "—" not in sent_title
