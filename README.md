@@ -2,8 +2,9 @@
 
 A cybersecurity news aggregator that runs on a short interval (every 4h). It pulls
 from a broad set of fast, high-signal sources — authoritative vulnerability/advisory
-feeds (ZDI, Project Zero, watchTowr, SANS ISC, vendor research …) plus curated
-red-team / offensive-tradecraft blogs (derived from Bad Sector Labs' reading list) —
+feeds (CISA KEV, GitHub critical advisories, ZDI, Project Zero, watchTowr, SANS ISC,
+vendor research …) plus curated red-team / offensive-tradecraft blogs (derived from
+Bad Sector Labs' reading list) —
 and keeps **only** the two things you care about —
 
 1. **Zero-/n-day vulnerabilities**, and

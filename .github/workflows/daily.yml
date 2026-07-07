@@ -43,6 +43,9 @@ jobs:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
           NTFY_TOKEN: ${{ secrets.NTFY_TOKEN }}   # optional; empty if unset
+          # Auto-provided by Actions; raises the GitHub Advisories API rate limit
+          # from 60/h (unauth) to 5000/h. No secret setup required.
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           # Passed via env (not inline) to avoid shell-injection from the input.
           SINCE_HOURS: ${{ github.event.inputs.since_hours }}
         run: |

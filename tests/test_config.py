@@ -37,8 +37,12 @@ def test_new_fields_are_loaded(tmp_path):
         fetch_workers: 4
         connectors:
           - name: a
-            url: https://example.com/a
+            type: github_advisories
+            url: https://api.github.com/advisories
             bypass_prefilter: true
+            options:
+              severities: [critical]
+              max_pages: 2
           - name: b
             url: https://example.com/b
         """,
@@ -47,4 +51,6 @@ def test_new_fields_are_loaded(tmp_path):
     assert config.fetch_timeout == 8
     assert config.fetch_workers == 4
     assert config.connectors[0].bypass_prefilter is True
+    assert config.connectors[0].options == {"severities": ["critical"], "max_pages": 2}
     assert config.connectors[1].bypass_prefilter is False
+    assert config.connectors[1].options == {}  # default, backwards-compatible

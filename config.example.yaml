@@ -49,6 +49,22 @@ connectors:
   # --- Fast authoritative vulnerability / threat-research feeds ------------------
   # These beat the news outlets to zero-/n-days. bypass_prefilter so terse advisory
   # titles are never dropped before the LLM sees them.
+  #
+  # JSON-API sources (not RSS) — highest-signal, CVE-carrying:
+  - name: cisa-kev
+    type: cisa_kev
+    url: https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json
+    bypass_prefilter: true
+  - name: github-advisories
+    type: github_advisories
+    url: https://api.github.com/advisories
+    bypass_prefilter: true
+    options:
+      severities: [critical]   # add "high" to widen (more volume/noise)
+      type: reviewed
+      max_pages: 3             # API pages of 100, newest-first; stops at the window
+      token_env: GITHUB_TOKEN  # optional; auto-provided in GitHub Actions
+  # RSS advisory / research feeds:
   - name: zdi-published
     url: https://www.zerodayinitiative.com/rss/published/
     bypass_prefilter: true

@@ -43,8 +43,11 @@ Orchestrated by `src/cybersecnews/pipeline.py::run()`.
 | `models.py` | Core dataclasses: `Article`, `Classification`, `Vulnerability`, `SeenRecord`, and the `CATEGORY_*` constants. |
 | `logging_setup.py` | stdout logging, grep-friendly per-stage lines. `configure(verbose)`. |
 | `connectors/base.py` | `Connector` ABC: `fetch(since) -> list[Article]`. |
-| `connectors/rss.py` | Generic `feedparser` RSS connector (drives all v1 feeds via config). Browser User-Agent to dodge 403s; resilient to parse/network errors. |
-| `connectors/__init__.py` | Type registry (`{"rss": ...}`) + `build_connectors()`. |
+| `connectors/rss.py` | Generic `feedparser` RSS connector (drives all feed sources via config). Browser User-Agent to dodge 403s; per-feed timeout; resilient to parse/network errors. |
+| `connectors/http.py` | Shared `http_get()` (urllib + UA + timeout + optional bearer) for the JSON-API connectors. |
+| `connectors/cisa_kev.py` | CISA KEV JSON connector (`cisa_kev` type). Actively-exploited CVEs → `Article` (CVE kept in text for dedup layer 1). |
+| `connectors/github_advisories.py` | GitHub Security Advisories connector (`github_advisories` type). Paginated, severity-filtered (default critical), optional `GITHUB_TOKEN`. |
+| `connectors/__init__.py` | Type registry (`rss`, `cisa_kev`, `github_advisories`) + `build_connectors()`. |
 | `llm/base.py` | `LLMClient` protocol: `classify`, `match_existing`, `summarize`. |
 | `llm/anthropic_client.py` | Claude Haiku impl. Prompts + defensive JSON extraction. |
 | `llm/stub.py` | `HeuristicLLM` — offline keyword-based stub for `--dry-run`/tests. **Approximate, not a substitute for the real model.** |
@@ -132,7 +135,10 @@ python -m pytest -q
   `dedup_window_days`, `since_hours`, `fetch_timeout`, `fetch_workers`,
   `ntfy.quiet_heartbeat`. Sources are two-track: high-volume general news outlets
   (prefilter-gated) plus curated fast vuln feeds + red-team blogs (bypass; the
-  red-team set is derived from Bad Sector Labs' `blogs.txt`).
+  red-team set is derived from Bad Sector Labs' `blogs.txt`). Two of the fast
+  sources are **JSON APIs, not RSS** — `cisa_kev` (actively-exploited CVEs) and
+  `github_advisories` (critical GHSA) — each its own connector type; per-connector
+  `options:` carries their params (GHSA `severities`/`max_pages`/`token_env`).
 - Secrets come from the environment (never commit them). `config.yaml` is
   git-ignored; `config.example.yaml` is the committed template.
 
@@ -141,6 +147,7 @@ python -m pytest -q
 | `ANTHROPIC_API_KEY` | yes (not for `--dry-run`) | Claude Haiku access |
 | `NTFY_TOPIC` | yes (to send) | ntfy.sh topic to publish to |
 | `NTFY_TOKEN` | no | Bearer token for access-protected topics |
+| `GITHUB_TOKEN` | no | Raises GitHub Advisories API limit 60→5000/h. Auto-provided in Actions. |
 
 ## Deployment
 

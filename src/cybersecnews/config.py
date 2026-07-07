@@ -30,6 +30,9 @@ class ConnectorConfig:
     # the LLM classifier. Use for curated, low-volume feeds (e.g. red-team research
     # blogs) whose posts rarely contain the prefilter keywords verbatim.
     bypass_prefilter: bool = False
+    # Connector-type-specific parameters (e.g. GHSA severity filter, page cap,
+    # token env var). Ignored by connectors that don't need it (e.g. rss).
+    options: dict = field(default_factory=dict)
 
 
 @dataclass
@@ -98,6 +101,7 @@ def load_config(path: Optional[str | Path] = None) -> Config:
             url=c["url"],
             enabled=c.get("enabled", True),
             bypass_prefilter=c.get("bypass_prefilter", False),
+            options=c.get("options", {}) or {},
         )
         for c in raw.get("connectors", [])
     ]
