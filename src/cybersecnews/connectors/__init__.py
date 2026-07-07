@@ -14,11 +14,13 @@ from .rss import RSSConnector
 log = get_logger(__name__)
 
 _REGISTRY = {
-    "rss": lambda c: RSSConnector(name=c.name, url=c.url),
+    "rss": lambda c, timeout: RSSConnector(name=c.name, url=c.url, timeout=timeout),
 }
 
 
-def build_connectors(configs: list[ConnectorConfig]) -> list[Connector]:
+def build_connectors(
+    configs: list[ConnectorConfig], timeout: int = 15
+) -> list[Connector]:
     """Instantiate connectors for the enabled config entries."""
     connectors: list[Connector] = []
     for cfg in configs:
@@ -28,7 +30,7 @@ def build_connectors(configs: list[ConnectorConfig]) -> list[Connector]:
                 "[%s] unknown connector type %r — skipping", cfg.name, cfg.type
             )
             continue
-        connectors.append(factory(cfg))
+        connectors.append(factory(cfg, timeout))
     return connectors
 
 

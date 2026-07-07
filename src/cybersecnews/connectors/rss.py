@@ -6,6 +6,7 @@ differ only by feed URL, which comes from config.
 
 from __future__ import annotations
 
+import urllib.request
 from datetime import datetime, timezone
 from time import mktime
 from typing import Optional
@@ -25,18 +26,35 @@ _USER_AGENT = (
     "Chrome/124.0 Safari/537.36 CyberSecNews/0.1"
 )
 
+# Default per-feed network timeout in seconds. feedparser.parse() has no timeout
+# parameter, so we fetch the bytes ourselves (below) and hand them to feedparser.
+_DEFAULT_TIMEOUT = 15
+
 
 class RSSConnector(Connector):
-    def __init__(self, name: str, url: str) -> None:
+    def __init__(self, name: str, url: str, timeout: int = _DEFAULT_TIMEOUT) -> None:
         super().__init__(name)
         self.url = url
+        self.timeout = timeout
 
     def fetch(self, since: datetime) -> list[Article]:
         since = _as_utc(since)
         log.info("[%s] fetching %s", self.name, self.url)
         try:
-            parsed = feedparser.parse(self.url, agent=_USER_AGENT)
-        except Exception as exc:  # feedparser rarely raises, but be safe
+            if self.url.startswith(("http://", "https://")):
+                # Fetch bytes with an explicit timeout (feedparser.parse takes
+                # none), then parse. Don't advertise gzip so we get plain text.
+                request = urllib.request.Request(
+                    self.url, headers={"User-Agent": _USER_AGENT}
+                )
+                with urllib.request.urlopen(request, timeout=self.timeout) as response:
+                    raw = response.read()
+                parsed = feedparser.parse(raw)
+            else:
+                # Local path / non-HTTP source (used in tests) — let feedparser
+                # handle it directly; no network timeout applies.
+                parsed = feedparser.parse(self.url, agent=_USER_AGENT)
+        except Exception as exc:  # network error, timeout, HTTP error, …
             log.error("[%s] fetch failed: %s", self.name, exc)
             return []
 

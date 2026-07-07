@@ -26,6 +26,10 @@ class ConnectorConfig:
     type: str
     url: str
     enabled: bool = True
+    # If true, this source's articles skip the keyword prefilter and always reach
+    # the LLM classifier. Use for curated, low-volume feeds (e.g. red-team research
+    # blogs) whose posts rarely contain the prefilter keywords verbatim.
+    bypass_prefilter: bool = False
 
 
 @dataclass
@@ -56,6 +60,11 @@ class Config:
     dedup_window_days: int = 45
     database: str = "data/seen.db"
     ntfy: NtfyConfig = field(default_factory=NtfyConfig)
+    # Per-feed network timeout (seconds). Guards against a single hanging source
+    # stalling the whole run now that many feeds are fetched concurrently.
+    fetch_timeout: int = 15
+    # Max concurrent feed fetches.
+    fetch_workers: int = 10
 
     def enabled_connectors(self) -> list[ConnectorConfig]:
         return [c for c in self.connectors if c.enabled]
@@ -88,6 +97,7 @@ def load_config(path: Optional[str | Path] = None) -> Config:
             type=c.get("type", "rss"),
             url=c["url"],
             enabled=c.get("enabled", True),
+            bypass_prefilter=c.get("bypass_prefilter", False),
         )
         for c in raw.get("connectors", [])
     ]
@@ -121,6 +131,8 @@ def load_config(path: Optional[str | Path] = None) -> Config:
         dedup_window_days=raw.get("dedup_window_days", 45),
         database=raw.get("database", "data/seen.db"),
         ntfy=ntfy,
+        fetch_timeout=raw.get("fetch_timeout", 15),
+        fetch_workers=raw.get("fetch_workers", 10),
     )
     _validate(config)
     return config

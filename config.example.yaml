@@ -2,8 +2,15 @@
 # Copy to config.yaml and adjust. Secrets are taken from environment variables
 # (see the `env:` markers below) and should NOT be committed.
 
-# How far back to look for news each run.
-since_hours: 24
+# How far back to look for news each run. Kept slightly larger than the workflow
+# cron interval (every 4h) so consecutive runs overlap and nothing slips through;
+# the dedup DB prevents the overlap from causing repeat reports.
+since_hours: 6
+
+# Per-feed network timeout (seconds) and max concurrent feed fetches. Feeds are
+# fetched in parallel, so one slow/hanging source can't stall the whole run.
+fetch_timeout: 15
+fetch_workers: 10
 
 # Which categories to keep. Anything the LLM classifies outside these is dropped.
 # Supported: vulnerability, red_team
@@ -13,7 +20,15 @@ categories:
 
 # News source connectors. type currently supports "rss".
 # Disable a source by setting enabled: false.
+#
+# bypass_prefilter: true  -> this source's articles skip the keyword prefilter and
+# always reach the LLM classifier. Set it on curated, low-volume, high-signal feeds
+# (authoritative advisories + red-team research blogs) whose posts often don't
+# contain the prefilter keywords verbatim (e.g. "Abusing AD CS ESC13"). The general
+# news outlets below keep the prefilter because they are high-volume and off-topic
+# heavy.
 connectors:
+  # --- General security news outlets (prefilter-gated) ---------------------------
   - name: heise-security
     type: rss
     enabled: true
@@ -21,7 +36,7 @@ connectors:
   - name: golem-security
     type: rss
     enabled: true
-    url: https://www.golem.de/rss/rss_sicherheit.xml
+    url: https://rss.golem.de/rss.php?feed=SEC-ATOM1.0
   - name: thehackernews
     type: rss
     enabled: true
@@ -30,6 +45,143 @@ connectors:
     type: rss
     enabled: true
     url: https://www.bleepingcomputer.com/feed/
+
+  # --- Fast authoritative vulnerability / threat-research feeds ------------------
+  # These beat the news outlets to zero-/n-days. bypass_prefilter so terse advisory
+  # titles are never dropped before the LLM sees them.
+  - name: zdi-published
+    url: https://www.zerodayinitiative.com/rss/published/
+    bypass_prefilter: true
+  - name: zdi-upcoming
+    url: https://www.zerodayinitiative.com/rss/upcoming/
+    bypass_prefilter: true
+  - name: project-zero
+    url: https://googleprojectzero.blogspot.com/feeds/posts/default
+    bypass_prefilter: true
+  - name: watchtowr-labs
+    url: https://labs.watchtowr.com/rss/
+    bypass_prefilter: true
+  - name: sans-isc
+    url: https://isc.sans.edu/rssfeed.xml
+    bypass_prefilter: true
+  - name: google-security
+    url: https://security.googleblog.com/feeds/posts/default
+    bypass_prefilter: true
+  - name: rapid7
+    url: https://blog.rapid7.com/rss/
+    bypass_prefilter: true
+  - name: tenable
+    url: https://www.tenable.com/blog/feed
+    bypass_prefilter: true
+  - name: qualys
+    url: https://blog.qualys.com/feed
+    bypass_prefilter: true
+  - name: checkpoint-research
+    url: https://research.checkpoint.com/feed/
+    bypass_prefilter: true
+  - name: sentinelone-labs
+    url: https://www.sentinelone.com/labs/feed/
+    bypass_prefilter: true
+  - name: zscaler-threatlabz
+    url: https://www.zscaler.com/blogs/feeds/security-research
+    bypass_prefilter: true
+  - name: elastic-security-labs
+    url: https://www.elastic.co/security-labs/rss/feed.xml
+    bypass_prefilter: true
+  - name: snyk
+    url: https://snyk.io/blog/feed/
+    bypass_prefilter: true
+  - name: sonarsource
+    url: https://www.sonarsource.com/blog/rss.xml
+    bypass_prefilter: true
+  - name: quarkslab
+    url: https://blog.quarkslab.com/feeds/all.rss.xml
+    bypass_prefilter: true
+  - name: include-security
+    url: https://blog.includesecurity.com/feed/
+    bypass_prefilter: true
+
+  # --- Red-team / offensive tradecraft blogs (Bad Sector Labs style) -------------
+  # Curated from https://blog.badsectorlabs.com/files/blogs.txt (active feeds only).
+  # All bypass_prefilter: red-team research rarely contains the prefilter keywords.
+  - name: trustedsec
+    url: https://www.trustedsec.com/feed/
+    bypass_prefilter: true
+  - name: mdsec
+    url: https://www.mdsec.co.uk/feed/
+    bypass_prefilter: true
+  - name: outflank
+    url: https://outflank.nl/feed/
+    bypass_prefilter: true
+  - name: specterops
+    url: https://medium.com/feed/@specterops
+    bypass_prefilter: true
+  - name: praetorian
+    url: https://www.praetorian.com/blog/feed/
+    bypass_prefilter: true
+  - name: blackhills-infosec
+    url: https://www.blackhillsinfosec.com/feed/
+    bypass_prefilter: true
+  - name: nviso-labs
+    url: https://blog.nviso.eu/feed/
+    bypass_prefilter: true
+  - name: s3cur3th1ssh1t
+    url: https://s3cur3th1ssh1t.github.io/feed.xml
+    bypass_prefilter: true
+  - name: dirkjanm
+    url: https://dirkjanm.io/feed.xml
+    bypass_prefilter: true
+  - name: harmj0y
+    url: https://blog.harmj0y.net/rss/
+    bypass_prefilter: true
+  - name: rastamouse
+    url: https://rastamouse.me/feed/
+    bypass_prefilter: true
+  - name: synzack
+    url: https://synzack.github.io/feed.xml
+    bypass_prefilter: true
+  - name: cocomelonc
+    url: https://cocomelonc.github.io/feed.xml
+    bypass_prefilter: true
+  - name: code-white
+    url: https://codewhitesec.blogspot.com/feeds/posts/default
+    bypass_prefilter: true
+  - name: horizon3
+    url: https://www.horizon3.ai/feed/
+    bypass_prefilter: true
+  - name: bishop-fox
+    url: https://bishopfox.com/feeds/blog.rss
+    bypass_prefilter: true
+  - name: pentestlab
+    url: https://pentestlab.blog/feed/
+    bypass_prefilter: true
+  - name: hausec
+    url: https://hausec.com/feed/
+    bypass_prefilter: true
+  - name: n00py
+    url: https://www.n00py.io/feed/
+    bypass_prefilter: true
+  - name: decoder-cloud
+    url: https://decoder.cloud/feed/
+    bypass_prefilter: true
+  - name: fox-it
+    url: https://blog.fox-it.com/feed/
+    bypass_prefilter: true
+  - name: connormcgarr
+    url: https://connormcgarr.github.io/feed.xml
+    bypass_prefilter: true
+  - name: itm4n
+    url: https://itm4n.github.io/feed.xml
+    bypass_prefilter: true
+  - name: sensepost
+    url: https://sensepost.com/rss.xml
+    bypass_prefilter: true
+  - name: modexp
+    url: https://modexp.wordpress.com/feed/
+    bypass_prefilter: true
+  - name: xpnsec
+    url: https://blog.xpnsec.com/rss/
+    bypass_prefilter: true
 
 # Cheap keyword prefilter run before any LLM call. An article is sent to the LLM
 # only if its title/summary contains at least one of these terms (case-insensitive).

@@ -1,7 +1,10 @@
 # CyberSecNews
 
-A daily cybersecurity news aggregator. It pulls a handful of security news
-sources once per day, keeps **only** the two things you care about —
+A cybersecurity news aggregator that runs on a short interval (every 4h). It pulls
+from a broad set of fast, high-signal sources — authoritative vulnerability/advisory
+feeds (ZDI, Project Zero, watchTowr, SANS ISC, vendor research …) plus curated
+red-team / offensive-tradecraft blogs (derived from Bad Sector Labs' reading list) —
+and keeps **only** the two things you care about —
 
 1. **Zero-/n-day vulnerabilities**, and
 2. **Red-team / offensive tradecraft** (C2 infrastructure, lateral movement,
@@ -15,7 +18,7 @@ small LLM, and sends a single structured English report to your phone via
 ## How it works
 
 ```
-fetch (RSS connectors) → 24h window → cheap keyword prefilter
+fetch (RSS connectors, concurrent) → look-back window → cheap keyword prefilter
 → LLM classify+extract (category + identity fields)
 → 3-layer dedup against the DB → LLM summarize (new items only)
 → store → build report → send via ntfy → commit DB back
@@ -23,7 +26,9 @@ fetch (RSS connectors) → 24h window → cheap keyword prefilter
 
 - **Two-stage filtering.** A cheap keyword prefilter drops obvious off-topic
   articles before any LLM call; the LLM then makes the final classification and
-  extracts structured fields. Keeps token cost low.
+  extracts structured fields. Keeps token cost low. Curated high-signal feeds set
+  `bypass_prefilter: true` to skip the keyword gate (their posts rarely contain the
+  keywords verbatim) and go straight to the LLM.
 - **CVE-independent dedup.** Zero-days often have *no CVE yet*, so identity is a
   semantic fingerprint (`vendor:product:vuln_class`), not a CVE. Three layers,
   cheapest first:
@@ -72,7 +77,7 @@ python -m cybersecnews
 # Works offline (heuristic stub) if ANTHROPIC_API_KEY is unset.
 python -m cybersecnews --dry-run --verbose
 
-# Look back further than the default 24h (e.g. for a first backfill-free test):
+# Look back further than the default window (e.g. for a first backfill-free test):
 python -m cybersecnews --since 48 --dry-run
 ```
 
@@ -83,9 +88,13 @@ Flags: `--config PATH`, `--since HOURS`, `--dry-run`, `--verbose/-v`.
 Everything non-secret lives in `config.yaml` (falls back to
 `config.example.yaml`). Notable knobs:
 
-- `connectors` — the RSS sources; disable one with `enabled: false`.
+- `connectors` — the RSS sources; disable one with `enabled: false`, or set
+  `bypass_prefilter: true` to send its articles straight to the LLM (used for the
+  curated advisory + red-team feeds).
 - `prefilter` — keyword lists (vuln + red-team) for the cheap gate.
 - `categories` — which classified categories to keep.
+- `since_hours` — look-back window per run (default 6, overlaps the 4h cron).
+- `fetch_timeout` / `fetch_workers` — per-feed timeout and concurrency for fetching.
 - `llm.model` — defaults to `claude-haiku-4-5-20251001`.
 - `llm.semantic_dedup` — toggle the layer-3 LLM dedup call.
 - `dedup_window_days` — how far back layer 3 compares (default 45).
@@ -113,9 +122,9 @@ and **deploy = `git push`**.
 
 1. Add repository **Secrets** (Settings → Secrets and variables → Actions):
    `ANTHROPIC_API_KEY`, `NTFY_TOPIC`, and optionally `NTFY_TOKEN`.
-2. `.github/workflows/daily.yml` runs once a day (06:00 UTC) and on manual
-   dispatch. After each run it commits the updated `data/seen.db` back to the
-   repo, so the "already reported" memory survives between ephemeral runners.
+2. `.github/workflows/daily.yml` runs every 4h (UTC) and on manual dispatch.
+   After each run it commits the updated `data/seen.db` back to the repo, so the
+   "already reported" memory survives between ephemeral runners.
 3. Trigger it manually the first time from the **Actions** tab
    (**Run workflow**) to confirm a report arrives and the DB commit lands.
 

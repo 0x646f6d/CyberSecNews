@@ -7,8 +7,9 @@ quick skim.
 
 ## What this is
 
-**CyberSecNews** is a Python service that aggregates cybersecurity news **once per
-day**, keeps **only two categories** of interest, deduplicates against everything
+**CyberSecNews** is a Python service that aggregates cybersecurity news on a short
+interval (**every 4h** via the workflow), keeps **only two categories** of
+interest, deduplicates against everything
 it has already reported, summarizes each new item with a small LLM, and sends one
 structured English report via **[ntfy.sh](https://ntfy.sh)**.
 
@@ -78,6 +79,15 @@ Tests in `tests/` (see Testing below).
 - **Two-stage filtering:** cheap keyword prefilter (`pipeline._passes_prefilter`,
   terms from `config.prefilter`) gates the LLM to keep token cost low; the LLM
   makes the *final* category decision. Empty prefilter = everything passes.
+  Connectors with `bypass_prefilter: true` skip the keyword gate entirely and go
+  straight to the LLM — used for curated, low-volume, high-signal feeds (fast vuln
+  advisories + red-team research blogs) whose posts rarely contain the keywords
+  verbatim (e.g. "Abusing AD CS ESC13"). High-volume general news outlets keep the
+  prefilter.
+- **Concurrent fetching:** connectors are fetched in parallel
+  (`ThreadPoolExecutor`, `fetch_workers`), each with a per-feed network timeout
+  (`fetch_timeout`), so one slow/hanging source can't stall the run. Each
+  connector still swallows its own errors and returns `[]`.
 - **Store-after-report ordering:** new items are persisted only after the report is
   built (and never on `--dry-run`), so a crash mid-run doesn't silently swallow an
   unreported item.
@@ -116,9 +126,13 @@ python -m pytest -q
 ## Configuration & secrets
 
 - Non-secret settings live in `config.yaml` (falls back to `config.example.yaml`).
-  Key knobs: `connectors[]` (feeds; `enabled: false` to disable), `prefilter`
-  (vuln + red-team keyword lists), `categories`, `llm.model`, `llm.semantic_dedup`
-  (toggle layer 3), `dedup_window_days`, `ntfy.quiet_heartbeat`.
+  Key knobs: `connectors[]` (feeds; `enabled: false` to disable,
+  `bypass_prefilter: true` to skip the keyword gate), `prefilter` (vuln + red-team
+  keyword lists), `categories`, `llm.model`, `llm.semantic_dedup` (toggle layer 3),
+  `dedup_window_days`, `since_hours`, `fetch_timeout`, `fetch_workers`,
+  `ntfy.quiet_heartbeat`. Sources are two-track: high-volume general news outlets
+  (prefilter-gated) plus curated fast vuln feeds + red-team blogs (bypass; the
+  red-team set is derived from Bad Sector Labs' `blogs.txt`).
 - Secrets come from the environment (never commit them). `config.yaml` is
   git-ignored; `config.example.yaml` is the committed template.
 
@@ -132,8 +146,9 @@ python -m pytest -q
 
 Hosting is **GitHub Actions** — no server; **deploy = `git push`**.
 
-- `.github/workflows/daily.yml`: cron `0 6 * * *` + `workflow_dispatch`. Installs,
-  runs `python -m cybersecnews`, then commits `data/seen.db` back (`[skip ci]`).
+- `.github/workflows/daily.yml`: cron `0 */4 * * *` (every 4h; frequency is the
+  main zero-/n-day latency lever) + `workflow_dispatch`. Installs, runs
+  `python -m cybersecnews`, then commits `data/seen.db` back (`[skip ci]`).
   Needs `permissions: contents: write` (already set). Secrets are repo Actions
   secrets: `ANTHROPIC_API_KEY`, `NTFY_TOPIC`, optional `NTFY_TOKEN`.
 - `.github/workflows/ci.yml`: runs `pytest` on push / PR.

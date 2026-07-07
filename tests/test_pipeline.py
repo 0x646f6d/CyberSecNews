@@ -50,7 +50,9 @@ def _patch_connectors(monkeypatch, articles):
         def fetch(self, since):
             return articles
 
-    monkeypatch.setattr(pipeline, "build_connectors", lambda cfgs: [FakeConnector()])
+    monkeypatch.setattr(
+        pipeline, "build_connectors", lambda cfgs, **kwargs: [FakeConnector()]
+    )
 
 
 def test_only_interesting_new_items_reported(tmp_path, monkeypatch):
@@ -126,4 +128,52 @@ def test_prefilter_gates_llm(tmp_path, monkeypatch):
     stats = pipeline.run(config, db, llm, dry_run=True)
     assert stats.prefiltered == 0
     assert stats.new_items == 0
+    db.close()
+
+
+def test_bypass_prefilter_reaches_llm(tmp_path, monkeypatch):
+    # Article has no prefilter keyword, but its source is a bypass feed, so it must
+    # still reach the classifier (the red-team-research use case).
+    articles = [_article("https://n/1", "Abusing AD CS ESC13", "no keywords here")]
+    _patch_connectors(monkeypatch, articles)
+    llm = FakeLLM(
+        classifications={"https://n/1": _cls(CATEGORY_RED_TEAM, "adcs:esc13:abuse")}
+    )
+    config = _config(tmp_path)
+    config.prefilter = {"vulnerability": ["exploit", "cve-"]}  # would drop the article
+    config.connectors = [
+        ConnectorConfig(name="fake", type="fake", url="x", bypass_prefilter=True)
+    ]
+
+    db = Database(config.database)
+    stats = pipeline.run(config, db, llm, dry_run=True)
+    assert stats.prefiltered == 1
+    assert stats.new_items == 1
+    db.close()
+
+
+def test_multiple_connectors_are_aggregated(tmp_path, monkeypatch):
+    class FakeConnector:
+        def __init__(self, arts):
+            self._arts = arts
+
+        def fetch(self, since):
+            return self._arts
+
+    conns = [
+        FakeConnector([_article("https://n/1", "vuln one")]),
+        FakeConnector([_article("https://n/2", "red team tool")]),
+    ]
+    monkeypatch.setattr(pipeline, "build_connectors", lambda cfgs, **kwargs: conns)
+    llm = FakeLLM(
+        classifications={
+            "https://n/1": _cls(CATEGORY_VULNERABILITY, "a:b:rce"),
+            "https://n/2": _cls(CATEGORY_RED_TEAM, "sliver:c2:beacon"),
+        }
+    )
+    config = _config(tmp_path)
+    db = Database(config.database)
+    stats = pipeline.run(config, db, llm, dry_run=True)
+    assert stats.in_window == 2
+    assert stats.new_items == 2
     db.close()

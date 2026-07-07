@@ -4,6 +4,7 @@ report → persist. Emits one log line per stage so runs are traceable.
 
 from __future__ import annotations
 
+from concurrent.futures import ThreadPoolExecutor
 from dataclasses import dataclass, field
 from datetime import datetime, timedelta, timezone
 
@@ -41,15 +42,26 @@ def run(config: Config, db: Database, llm: LLMClient, dry_run: bool = False) -> 
         dry_run,
     )
 
-    # -- fetch -----------------------------------------------------------------
+    # -- fetch (concurrent; each connector swallows its own errors) ------------
+    enabled = config.enabled_connectors()
+    connectors = build_connectors(enabled, timeout=config.fetch_timeout)
     articles: list[Article] = []
-    for connector in build_connectors(config.enabled_connectors()):
-        articles.extend(connector.fetch(since))
+    if connectors:
+        workers = min(config.fetch_workers, len(connectors))
+        with ThreadPoolExecutor(max_workers=workers) as pool:
+            for result in pool.map(lambda c: c.fetch(since), connectors):
+                articles.extend(result)
     stats.in_window = len(articles)
     log.info("fetched %d articles in window across all sources", stats.in_window)
 
     # -- prefilter -------------------------------------------------------------
-    candidates = [a for a in articles if _passes_prefilter(a, config.prefilter)]
+    # Curated, trusted feeds skip the keyword gate and always reach the LLM.
+    bypass = {c.name for c in enabled if c.bypass_prefilter}
+    candidates = [
+        a
+        for a in articles
+        if a.source in bypass or _passes_prefilter(a, config.prefilter)
+    ]
     stats.prefiltered = len(candidates)
     log.info(
         "prefilter kept %d / %d articles", stats.prefiltered, stats.in_window

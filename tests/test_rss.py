@@ -5,6 +5,7 @@ from __future__ import annotations
 from datetime import datetime, timedelta, timezone
 from email.utils import format_datetime
 
+import cybersecnews.connectors.rss as rss
 from cybersecnews.connectors.rss import RSSConnector
 
 
@@ -73,6 +74,58 @@ def test_bad_feed_returns_empty(tmp_path):
     bad = tmp_path / "bad.xml"
     bad.write_text("not xml at all <<<", encoding="utf-8")
     articles = RSSConnector(name="t", url=str(bad)).fetch(
+        since=datetime.now(timezone.utc) - timedelta(hours=24)
+    )
+    assert articles == []
+
+
+class _FakeResponse:
+    def __init__(self, body: bytes) -> None:
+        self._body = body
+
+    def read(self) -> bytes:
+        return self._body
+
+    def __enter__(self):
+        return self
+
+    def __exit__(self, *exc):
+        return False
+
+
+def test_http_url_is_byte_fetched(monkeypatch):
+    now = datetime.now(timezone.utc)
+    xml = (
+        '<?xml version="1.0"?><rss version="2.0"><channel><title>T</title>'
+        + _entry("HTTP vuln", "https://example.com/h", now - timedelta(hours=1))
+        + "</channel></rss>"
+    ).encode("utf-8")
+
+    captured = {}
+
+    def fake_urlopen(request, timeout=None):
+        captured["url"] = request.full_url
+        captured["timeout"] = timeout
+        return _FakeResponse(xml)
+
+    monkeypatch.setattr(rss.urllib.request, "urlopen", fake_urlopen)
+
+    articles = RSSConnector(name="t", url="https://example.com/rss", timeout=7).fetch(
+        since=now - timedelta(hours=24)
+    )
+
+    assert [a.url for a in articles] == ["https://example.com/h"]
+    assert captured["url"] == "https://example.com/rss"
+    assert captured["timeout"] == 7  # per-feed timeout is applied
+
+
+def test_timeout_or_network_error_returns_empty(monkeypatch):
+    def boom(request, timeout=None):
+        raise TimeoutError("timed out")
+
+    monkeypatch.setattr(rss.urllib.request, "urlopen", boom)
+
+    articles = RSSConnector(name="t", url="https://example.com/rss").fetch(
         since=datetime.now(timezone.utc) - timedelta(hours=24)
     )
     assert articles == []
