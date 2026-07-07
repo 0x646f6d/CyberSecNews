@@ -198,6 +198,9 @@ connectors:
   - name: xpnsec
     url: https://blog.xpnsec.com/rss/
     bypass_prefilter: true
+  - name: projectnightcrawler
+    url: https://blog.projectnightcrawler.dev/posts/index.xml
+    bypass_prefilter: true
 
 # Cheap keyword prefilter run before any LLM call. An article is sent to the LLM
 # only if its title/summary contains at least one of these terms (case-insensitive).
