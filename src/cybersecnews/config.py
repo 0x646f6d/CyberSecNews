@@ -44,6 +44,10 @@ class NtfyConfig:
     token: Optional[str] = None  # resolved from env
     priority: str = "default"
     quiet_heartbeat: bool = False
+    # Max UTF-8 bytes per ntfy message body. ntfy.sh turns bodies over 4096 bytes
+    # into an unwieldy attachment.txt, so we split larger reports across several
+    # messages and keep each safely below that with margin for the (i/N) title.
+    max_message_bytes: int = 3800
 
 
 @dataclass
@@ -110,6 +114,7 @@ def load_config(path: Optional[str | Path] = None) -> Config:
         token=os.environ.get(token_env),
         priority=ntfy_raw.get("priority", "default"),
         quiet_heartbeat=ntfy_raw.get("quiet_heartbeat", False),
+        max_message_bytes=ntfy_raw.get("max_message_bytes", 3800),
     )
 
     config = Config(

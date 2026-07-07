@@ -104,3 +104,7 @@ ntfy:
   # If true, send a short "no new items" heartbeat when nothing new was found.
   # If false, stay silent on empty runs (still logged).
   quiet_heartbeat: false
+  # Max UTF-8 bytes per message body. ntfy.sh converts bodies over 4096 bytes
+  # into an attachment.txt (hard to open on mobile), so larger reports are split
+  # across several messages, each kept below this value. Rarely needs changing.
+  max_message_bytes: 3800
