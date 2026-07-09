@@ -7,8 +7,9 @@ import responses
 
 from cybersecnews.config import NtfyConfig
 from cybersecnews.notify import NtfyError, _header_safe, send_report
-from cybersecnews.report import Report, build_report
+from cybersecnews.report import Message, Report, build_report
 from conftest import make_vuln
+from cybersecnews.models import CATEGORY_RED_TEAM, CATEGORY_VULNERABILITY
 
 
 @responses.activate
@@ -21,11 +22,27 @@ def test_send_posts_to_topic_with_headers():
 
     assert len(responses.calls) == 1
     req = responses.calls[0].request
-    assert req.headers["Title"] == report.title
+    msg = report.messages[0]
+    assert req.headers["Title"] == msg.title
     assert req.headers["Markdown"] == "yes"
+    assert req.headers["Tags"] == msg.tags
     assert req.headers["Authorization"] == "Bearer secret"
     # No Click header: a tap must open the message in the ntfy app, not a website.
     assert "Click" not in req.headers
+
+
+@responses.activate
+def test_each_item_is_its_own_notification():
+    responses.add(responses.POST, "https://ntfy.sh/t", status=200)
+    report = build_report(
+        [
+            make_vuln(url="https://a/1", category=CATEGORY_VULNERABILITY),
+            make_vuln(url="https://a/2", category=CATEGORY_RED_TEAM),
+        ]
+    )
+    send_report(report, NtfyConfig(topic="t"))
+    # Two items -> two separate ntfy notifications.
+    assert len(responses.calls) == 2
 
 
 def test_missing_topic_raises():
@@ -53,8 +70,13 @@ def test_send_with_unicode_title_does_not_crash():
     """Regression: an em dash in the Title header must not abort the request."""
     responses.add(responses.POST, "https://ntfy.sh/t", status=200)
     report = Report(
-        title="CyberSecNews 2026-07-06 — 1 new",  # em dash, not Latin-1
-        body="body",
+        messages=[
+            Message(
+                title="CyberSecNews 2026-07-06 — 1 new",  # em dash, not Latin-1
+                body="body",
+                tags="shield",
+            )
+        ],
         count=1,
     )
     send_report(report, NtfyConfig(topic="t"))

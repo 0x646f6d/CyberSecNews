@@ -94,9 +94,12 @@ def main(argv: Optional[list[str]] = None) -> int:
 
     if args.dry_run:
         print("\n" + "=" * 70)
-        print(f"TITLE: {report.title}")
-        print("=" * 70)
-        print(report.body)
+        print(f"{report.count} new item(s) — one notification each:")
+        for msg in report.messages:
+            print("=" * 70)
+            print(f"TITLE: {msg.title}   [tags: {msg.tags}]")
+            print("-" * 70)
+            print(msg.body)
         print("=" * 70)
         return 0
 

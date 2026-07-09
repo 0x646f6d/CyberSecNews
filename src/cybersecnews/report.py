@@ -1,7 +1,13 @@
-"""Build the English ntfy digest from the new items of a run.
+"""Build the ntfy notifications for the new items of a run.
 
-Two markdown sections — vulnerabilities and red-team — each item as a block that
-ends with a link to its source article. Empty sections are omitted.
+One notification **per item** — not one combined digest. The ntfy Android app
+crops long message bodies in its detail view (binwiederhier/ntfy#1515), so a
+single multi-item report is unreadable on the phone even though the web app
+renders it fully. Short, per-item messages always display completely, and each
+tap opens that item's message in the app. Each item keeps its Markdown so the
+web app still renders it nicely.
+
+An empty run produces a single heartbeat message.
 """
 
 from __future__ import annotations
@@ -11,16 +17,30 @@ from datetime import date
 
 from .models import CATEGORY_RED_TEAM, CATEGORY_VULNERABILITY, Vulnerability
 
-_SECTIONS = [
-    (CATEGORY_VULNERABILITY, "🛡️ Vulnerabilities (zero/n-day)"),
-    (CATEGORY_RED_TEAM, "🎯 Red Team / Offensive"),
-]
+# category -> (ntfy emoji tags, sort order). ntfy renders the tags as emoji in
+# front of the title, so the title text itself stays plain ASCII (emoji in the
+# Title header get stripped by Latin-1 encoding).
+_CATEGORY_META = {
+    CATEGORY_VULNERABILITY: ("shield,rotating_light", 0),
+    CATEGORY_RED_TEAM: ("dart,crossed_swords", 1),
+}
+_DEFAULT_META = ("newspaper", 2)
+
+
+@dataclass
+class Message:
+    """A single ntfy notification (one news item, or the empty heartbeat)."""
+
+    title: str
+    body: str
+    tags: str  # comma-separated ntfy emoji tag names
 
 
 @dataclass
 class Report:
-    title: str
-    body: str
+    """All notifications produced by one run, plus the new-item count."""
+
+    messages: list[Message]
     count: int
 
     @property
@@ -30,52 +50,37 @@ class Report:
 
 def build_report(items: list[Vulnerability], report_date: date | None = None) -> Report:
     report_date = report_date or date.today()
-    by_cat: dict[str, list[Vulnerability]] = {c: [] for c, _ in _SECTIONS}
-    for item in items:
-        by_cat.setdefault(item.category, []).append(item)
 
-    n_vuln = len(by_cat.get(CATEGORY_VULNERABILITY, []))
-    n_red = len(by_cat.get(CATEGORY_RED_TEAM, []))
-    total = n_vuln + n_red
+    if not items:
+        title = f"CyberSecNews {report_date.isoformat()} - 0 new"
+        body = "No new vulnerabilities or red-team items in the last run."
+        heartbeat = Message(title=title, body=body, tags="shield")
+        return Report(messages=[heartbeat], count=0)
 
-    title = f"CyberSecNews {report_date.isoformat()} - {total} new"
-    if total:
-        title += f" ({n_vuln} vuln, {n_red} red-team)"
-
-    if total == 0:
-        return Report(
-            title=title,
-            body="No new vulnerabilities or red-team items in the last run.",
-            count=0,
-        )
-
-    blocks: list[str] = []
-    for cat, heading in _SECTIONS:
-        cat_items = by_cat.get(cat, [])
-        if not cat_items:
-            continue
-        blocks.append(f"## {heading} ({len(cat_items)})")
-        for item in cat_items:
-            blocks.append(_format_item(item))
-
-    body = "\n\n".join(blocks).strip()
-    return Report(title=title, body=body, count=total)
+    # Vulnerabilities first, then red-team, then anything else; stable within a
+    # group so notifications arrive in a predictable order.
+    ordered = sorted(items, key=lambda it: _CATEGORY_META.get(it.category, _DEFAULT_META)[1])
+    messages = [_format_item(item) for item in ordered]
+    return Report(messages=messages, count=len(items))
 
 
-def _format_item(item: Vulnerability) -> str:
+def _format_item(item: Vulnerability) -> Message:
     c = item.classification
-    # Headline line: product/tool + severity/technique
-    name = c.product or c.vendor or c.canonical_key or item.article.title
-    tags: list[str] = []
+    tags, _order = _CATEGORY_META.get(c.category, _DEFAULT_META)
+
+    # Title: product/tool identity — short enough to display fully on mobile.
+    # The category emoji is supplied by ntfy from `tags`, not embedded here.
+    title = c.product or c.vendor or c.canonical_key or item.article.title
+
+    meta: list[str] = []
     if c.is_zero_or_nday:
-        tags.append("zero/n-day")
+        meta.append("zero/n-day")
     if c.severity:
-        tags.append(c.severity)
+        meta.append(c.severity)
     if c.vuln_class:
-        tags.append(c.vuln_class)
+        meta.append(c.vuln_class)
     if c.cve_ids:
-        tags.append(", ".join(c.cve_ids))
-    meta = f" — _{' · '.join(tags)}_" if tags else ""
+        meta.append(", ".join(c.cve_ids))
 
     summary = item.summary or c.one_line
 
@@ -88,4 +93,9 @@ def _format_item(item: Vulnerability) -> str:
             f"[{i + 1}]({u})" for i, u in enumerate(links)
         )
 
-    return f"### {name}{meta}\n{summary}\n{link_line}"
+    parts: list[str] = []
+    if meta:
+        parts.append(f"_{' · '.join(meta)}_")
+    parts.append(summary)
+    parts.append(link_line)
+    return Message(title=title, body="\n\n".join(parts), tags=tags)
