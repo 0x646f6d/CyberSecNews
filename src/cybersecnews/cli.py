@@ -95,8 +95,6 @@ def main(argv: Optional[list[str]] = None) -> int:
     if args.dry_run:
         print("\n" + "=" * 70)
         print(f"TITLE: {report.title}")
-        if report.click_url:
-            print(f"CLICK: {report.click_url}")
         print("=" * 70)
         print(report.body)
         print("=" * 70)

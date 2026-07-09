@@ -55,14 +55,15 @@ def send_report(report: Report, config: NtfyConfig) -> None:
         )
 
     url = f"{config.base_url}/{config.topic}"
+    # No Click header: with one set, tapping the notification on the ntfy phone
+    # app opens that URL in the browser instead of the message, so the reader
+    # never sees the report. Without it, a tap opens the message in the app.
     headers = {
         "Title": _header_safe(report.title),
         "Priority": config.priority,
         "Markdown": "yes",
         "Tags": "shield,rotating_light",
     }
-    if report.click_url:
-        headers["Click"] = _header_safe(report.click_url)
     if config.token:
         headers["Authorization"] = f"Bearer {config.token}"
 

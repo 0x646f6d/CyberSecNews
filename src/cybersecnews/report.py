@@ -21,7 +21,6 @@ _SECTIONS = [
 class Report:
     title: str
     body: str
-    click_url: str | None
     count: int
 
     @property
@@ -47,7 +46,6 @@ def build_report(items: list[Vulnerability], report_date: date | None = None) ->
         return Report(
             title=title,
             body="No new vulnerabilities or red-team items in the last run.",
-            click_url=None,
             count=0,
         )
 
@@ -60,9 +58,8 @@ def build_report(items: list[Vulnerability], report_date: date | None = None) ->
         for item in cat_items:
             blocks.append(_format_item(item))
 
-    click_url = items[0].primary_url if items else None
     body = "\n\n".join(blocks).strip()
-    return Report(title=title, body=body, click_url=click_url, count=total)
+    return Report(title=title, body=body, count=total)
 
 
 def _format_item(item: Vulnerability) -> str:

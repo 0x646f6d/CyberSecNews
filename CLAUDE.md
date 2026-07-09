@@ -55,7 +55,7 @@ Orchestrated by `src/cybersecnews/pipeline.py::run()`.
 | `db.py` | SQLite store (`Database`): the `seen` table, lookups, `insert`, `add_cves` (backfill). |
 | `dedup.py` | `DedupEngine` — the 3-layer decision + within-run `_pending` tracking. |
 | `report.py` | `build_report()` → two-section markdown `Report`. |
-| `notify.py` | `send_report()` → POST to ntfy with Title/Priority/Markdown/Click headers. |
+| `notify.py` | `send_report()` → POST to ntfy with Title/Priority/Markdown headers. No `Click` header — a tap opens the message in the ntfy app, not an article's website. |
 | `pipeline.py` | Wires it all together; emits `RunStats`. |
 
 Tests in `tests/` (see Testing below).

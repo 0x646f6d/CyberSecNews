@@ -24,7 +24,8 @@ def test_send_posts_to_topic_with_headers():
     assert req.headers["Title"] == report.title
     assert req.headers["Markdown"] == "yes"
     assert req.headers["Authorization"] == "Bearer secret"
-    assert req.headers["Click"] == "https://a/1"
+    # No Click header: a tap must open the message in the ntfy app, not a website.
+    assert "Click" not in req.headers
 
 
 def test_missing_topic_raises():
@@ -54,7 +55,6 @@ def test_send_with_unicode_title_does_not_crash():
     report = Report(
         title="CyberSecNews 2026-07-06 — 1 new",  # em dash, not Latin-1
         body="body",
-        click_url="https://a/1",
         count=1,
     )
     send_report(report, NtfyConfig(topic="t"))

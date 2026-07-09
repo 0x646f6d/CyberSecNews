@@ -43,8 +43,6 @@ def test_two_sections_and_counts():
     assert "[Read more](https://a/2)" in report.body
     # zero-day tag surfaces.
     assert "zero/n-day" in report.body
-    # Click opens the first item.
-    assert report.click_url == "https://a/1"
 
 
 def test_empty_section_omitted():
