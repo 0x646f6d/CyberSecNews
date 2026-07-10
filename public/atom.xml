@@ -3,7 +3,34 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-07-10T13:48:47.850652+00:00</updated>
+  <updated>2026-07-10T17:39:18.544734+00:00</updated>
+  <entry>
+    <title>Researcher Details WhatsApp-to-Host Attack Chain Using Three OpenClaw Flaws</title>
+    <id>urn:cybersecnews:item:59</id>
+    <published>2026-07-10T17:39:18.544734+00:00</published>
+    <updated>2026-07-10T17:39:18.544734+00:00</updated>
+    <link href="https://thehackernews.com/2026/07/researcher-details-whatsapp-to-host.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;OpenClaw personal AI assistant contains three high-severity vulnerabilities (CVSS 8.8) enabling credential theft, privilege escalation, and arbitrary code execution when chained together in a WhatsApp-to-host attack. The flaws allow attackers to exploit the AI assistant through WhatsApp messages to compromise the underlying host system. All three vulnerabilities have been patched; users should update OpenClaw immediately to the latest version. This attack chain demonstrates the expanded threat surface from integrating AI assistants with messaging platforms and local system access.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/researcher-details-whatsapp-to-host.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Laser Attack Resets Tangem Wallet Passwords on Cards That Can't Be Patched</title>
+    <id>urn:cybersecnews:item:58</id>
+    <published>2026-07-10T17:39:18.543803+00:00</published>
+    <updated>2026-07-10T17:39:18.543803+00:00</updated>
+    <link href="https://thehackernews.com/2026/07/laser-attack-resets-tangem-wallet.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · physical-attack&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Tangem hardware wallet cards are vulnerable to laser-induced fault injection attacks that can reset the device password without requiring the original credentials, enabling complete wallet takeover. The attack is highly specialized, requiring precise laser equipment and physical access to the card's chip, and is not currently exploited in the wild. Since Tangem cards are non-updateable hardware, no patch is available; mitigation relies on physical security measures and users should consider supplementary storage solutions for high-value holdings or transition to patchable hardware wallets.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/laser-attack-resets-tangem-wallet.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Six New U-Boot Flaws Could Let Malicious Images Crash Devices or Run Code at Boot</title>
+    <id>urn:cybersecnews:item:57</id>
+    <published>2026-07-10T17:39:18.541663+00:00</published>
+    <updated>2026-07-10T17:39:18.541663+00:00</updated>
+    <link href="https://thehackernews.com/2026/07/six-new-u-boot-flaws-could-let.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce,dos&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Six vulnerabilities discovered in U-Boot bootloader affecting routers, smart cameras, and data center management controllers. Four flaws enable denial-of-service through device crashes, while two allow arbitrary code execution during boot if an attacker can supply a malicious image before the bootloader executes. No indication of active exploitation in the wild provided. Affected organizations should prioritize patching U-Boot across all devices, particularly network infrastructure and data center management interfaces, and review image validation mechanisms to prevent unauthorized bootloader access.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/six-new-u-boot-flaws-could-let.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Zimbra urges customers to patch critical web client XSS flaw</title>
     <id>urn:cybersecnews:item:56</id>
@@ -236,7 +263,7 @@
     <updated>2026-07-07T19:46:13.532492+00:00</updated>
     <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-56290" rel="alternate" />
     <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · improper-access-control · CVE-2026-56290&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Joomlack Page Builder contains an improper access control vulnerability (CVE-2026-56290) permitting unauthenticated remote code execution through arbitrary file upload. This vulnerability is actively exploited in the wild and listed in CISA's Known Exploited Vulnerabilities catalog. Immediately apply vendor mitigations or patches in accordance with BOD 26-04 prioritization guidance; discontinue use if mitigations are unavailable. Assess internet exposure and evaluate cloud deployments under BOD 26-04 requirements for timely remediation.&lt;/p&gt;&lt;p&gt;&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2026-56290"&gt;Read more&lt;/a&gt; · Source: cisa-kev&lt;/p&gt;</content>
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · improper-access-control · CVE-2026-56290, CVE-2026-56291&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Joomlack Page Builder contains an improper access control vulnerability (CVE-2026-56290) permitting unauthenticated remote code execution through arbitrary file upload. This vulnerability is actively exploited in the wild and listed in CISA's Known Exploited Vulnerabilities catalog. Immediately apply vendor mitigations or patches in accordance with BOD 26-04 prioritization guidance; discontinue use if mitigations are unavailable. Assess internet exposure and evaluate cloud deployments under BOD 26-04 requirements for timely remediation.&lt;/p&gt;&lt;p&gt;&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2026-56290"&gt;Read more&lt;/a&gt; · Source: cisa-kev&lt;/p&gt;</content>
   </entry>
   <entry>
     <title>JoomShaper SP Page Builder: JoomShaper SP Page Builder Unrestricted Upload of File with Dangerous Type Vulnerability (CVE-2026-48908)</title>
@@ -245,7 +272,7 @@
     <updated>2026-07-07T19:46:13.531272+00:00</updated>
     <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-48908" rel="alternate" />
     <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · unrestricted-file-upload · CVE-2026-48908&lt;/em&gt;&lt;/p&gt;&lt;p&gt;JoomShaper SP Page Builder contains an unrestricted file upload vulnerability (CVE-2026-48908) allowing unauthenticated users to upload and execute arbitrary PHP files. This vulnerability is actively exploited in the wild and carries critical severity due to the potential for remote code execution. Apply vendor-supplied patches immediately in accordance with CISA BOD 26-04 guidance; if mitigations are unavailable, discontinue use of the product and consider alternative solutions.&lt;/p&gt;&lt;p&gt;&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2026-48908"&gt;Read more&lt;/a&gt; · Source: cisa-kev&lt;/p&gt;</content>
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · unrestricted-file-upload · CVE-2026-48908, CVE-2026-48939&lt;/em&gt;&lt;/p&gt;&lt;p&gt;JoomShaper SP Page Builder contains an unrestricted file upload vulnerability (CVE-2026-48908) allowing unauthenticated users to upload and execute arbitrary PHP files. This vulnerability is actively exploited in the wild and carries critical severity due to the potential for remote code execution. Apply vendor-supplied patches immediately in accordance with CISA BOD 26-04 guidance; if mitigations are unavailable, discontinue use of the product and consider alternative solutions.&lt;/p&gt;&lt;p&gt;&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2026-48908"&gt;Read more&lt;/a&gt; · Source: cisa-kev&lt;/p&gt;</content>
   </entry>
   <entry>
     <title>Chinese hackers develop LONGLEASH malware to expand ORB network</title>
