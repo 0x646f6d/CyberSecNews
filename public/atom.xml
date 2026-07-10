@@ -3,7 +3,70 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-07-10T17:39:18.544734+00:00</updated>
+  <updated>2026-07-10T20:58:58.206304+00:00</updated>
+  <entry>
+    <title>Bluetooth Low Energy Security Testing, Consolidated: Introducing Caeruleus</title>
+    <id>urn:cybersecnews:item:66</id>
+    <published>2026-07-10T20:58:58.206304+00:00</published>
+    <updated>2026-07-10T20:58:58.206304+00:00</updated>
+    <link href="https://www.praetorian.com/blog/ble-testing-caeruleus/" rel="alternate" />
+    <category term="red-team" />
+    <content type="html">&lt;p&gt;&lt;em&gt;red-team · security-testing&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Caeruleus is a new consolidated Bluetooth Low Energy (BLE) security testing framework addressing fragmentation in existing BLE tools like bettercap and gatttool, which are deprecated or limited in functionality. The tool consolidates reconnaissance, enumeration, characteristic reading/writing, and fuzzing capabilities into a single platform, improving efficiency for security assessments. This is a defensive tooling release rather than a vulnerability disclosure, with no identified exploits or immediate patching requirements. Security teams should consider adopting Caeruleus for streamlined BLE security testing workflows in place of legacy tool chains.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.praetorian.com/blog/ble-testing-caeruleus/"&gt;Read more&lt;/a&gt; · Source: praetorian&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Authorizer: Unvalidated redirect_uri in /authorize leaks OAuth2 tokens to attacker-controlled URL (CVE-2026-54072)</title>
+    <id>urn:cybersecnews:item:65</id>
+    <published>2026-07-10T20:58:58.204837+00:00</published>
+    <updated>2026-07-10T20:58:58.204837+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-h29v-hj44-q8cv" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · unvalidated-redirect · CVE-2026-54072&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Authorizer OAuth2 implementation (CVE-2026-54072) contains an unvalidated redirect_uri vulnerability in the /authorize endpoint that leaks access tokens, ID tokens, and refresh tokens to attacker-controlled URLs when response_type is set to token or id_token. The vulnerability is critical severity as it allows unauthenticated attackers to obtain client_id from a public endpoint and hijack tokens without user interaction. No evidence of in-the-wild exploitation is mentioned. Update to a version with complete redirect_uri validation across all handlers; the partial fix in v2.0.1 is insufficient.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-h29v-hj44-q8cv"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>SiYuan: Unauthenticated Admin API Access via Blanket chrome-extension:// Origin Allowlist (CVE-2026-54069)</title>
+    <id>urn:cybersecnews:item:64</id>
+    <published>2026-07-10T20:58:58.203862+00:00</published>
+    <updated>2026-07-10T20:58:58.203862+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-hvr9-72v2-fff3" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-54069&lt;/em&gt;&lt;/p&gt;&lt;p&gt;SiYuan Note's HTTP kernel server (go/github.com/siyuan-note/siyuan/kernel) grants administrator API access to all chrome-extension:// origins without authentication, allowing any installed browser extension to make fully authenticated admin calls to the local kernel at 127.0.0.1:6806. This critical vulnerability (CVE-2026-54069) enables data exfiltration and modification through compromised or malicious extensions without requiring user interaction or valid credentials. The attack is particularly severe given the default empty AccessAuthCode on desktop installations. SiYuan users should immediately update to a patched version that implements proper origin validation and requires authentication for admin endpoints, and consider restricting chrome-extension:// access or disabling untrusted extensions until patching is complete.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-hvr9-72v2-fff3"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>File Browser: Authentication Bypass via Proxy Auth Header Forgery (CVE-2026-54089)</title>
+    <id>urn:cybersecnews:item:63</id>
+    <published>2026-07-10T20:58:58.202837+00:00</published>
+    <updated>2026-07-10T20:58:58.202837+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-xqp3-jq6g-x3qm" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-54089&lt;/em&gt;&lt;/p&gt;&lt;p&gt;FileBrowser v2 (go/github.com/filebrowser/filebrowser) contains a critical authentication bypass vulnerability when configured with proxy authentication. Attackers can impersonate any user, including administrators, by forging proxy authentication headers without credentials, and can automatically create new accounts by specifying non-existent usernames. This vulnerability is actively exploited in the wild. Organizations using FileBrowser with proxy authentication enabled should immediately upgrade to a patched version or disable proxy authentication mode until a fix is deployed.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-xqp3-jq6g-x3qm"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>`exploration` was removed from crates.io for malicious code</title>
+    <id>urn:cybersecnews:item:62</id>
+    <published>2026-07-10T20:58:58.201818+00:00</published>
+    <updated>2026-07-10T20:58:58.201818+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-99j7-fhr2-xfj4" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · malicious-code&lt;/em&gt;&lt;/p&gt;&lt;p&gt;The `exploration` crate for Rust contained critical malicious code that attempted to download and execute remote payloads. The crate was published on crates.io on 2026-06-02 and removed approximately one hour later with no confirmed downloads or dependents. No mitigation is needed as the package was rapidly removed; however, any projects that may have briefly cached version 1.0 should verify their dependencies and rebuild to ensure no malicious code was included. This incident demonstrates the importance of monitoring dependency sources and using security tools like Rustsec to identify compromised packages.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-99j7-fhr2-xfj4"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>prestashop/ps_facetedsearch: PHP Object Injection in faceted search cache allows unauthenticated RCE (CVE-2026-54159)</title>
+    <id>urn:cybersecnews:item:61</id>
+    <published>2026-07-10T20:58:58.200285+00:00</published>
+    <updated>2026-07-10T20:58:58.200285+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-m5f5-28qr-9g9r" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · php-object-injection · CVE-2026-54159&lt;/em&gt;&lt;/p&gt;&lt;p&gt;PrestaShop ps_facetedsearch module contains a PHP object injection vulnerability in its faceted search cache mechanism. An unauthenticated attacker can craft malicious serialized PHP objects via slider filter values (price/weight) in the request URL, which are cached without proper validation and later unserialized, enabling remote code execution. This is critical severity and actively exploited in the wild. Immediately update ps_facetedsearch to the patched version and implement input validation on slider filter parameters.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-m5f5-28qr-9g9r"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>SiYuan: Stored XSS to RCE via Unsanitized Attribute View Asset Cell Content (CVE-2026-50551)</title>
+    <id>urn:cybersecnews:item:60</id>
+    <published>2026-07-10T20:58:58.197995+00:00</published>
+    <updated>2026-07-10T20:58:58.197995+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-56mp-4f3v-fgj2" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · stored-xss-to-rce · CVE-2026-50551&lt;/em&gt;&lt;/p&gt;&lt;p&gt;SiYuan v3.6.5 and earlier contain a stored XSS vulnerability in Attribute View asset cell rendering that escalates to RCE in the Electron desktop client due to insufficient HTML escaping (CVE-2026-50551). The vulnerability exists because the mitigation for CVE-2026-44588 was incomplete—asset renderers use the weaker `escapeAttr()` function instead of the stronger `escapeAriaLabel()` that was applied elsewhere. This is a critical severity issue likely exploitable in the wild given the ease of injecting malicious content via database asset cells. Immediately upgrade to patched versions beyond v3.6.5 and audit all existing Attribute View assets for suspicious content.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-56mp-4f3v-fgj2"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Researcher Details WhatsApp-to-Host Attack Chain Using Three OpenClaw Flaws</title>
     <id>urn:cybersecnews:item:59</id>
@@ -146,7 +209,7 @@
     <updated>2026-07-08T20:52:41.543307+00:00</updated>
     <link href="https://github.com/advisories/GHSA-v5px-423j-pf7p" rel="alternate" />
     <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · command-injection · CVE-2026-52831&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Nuclio container orchestration framework is vulnerable to persistent remote code execution through unsanitized cron trigger event headers and body parameters that are directly injected into Kubernetes CronJob shell commands (CVE-2026-52831, critical severity). An attacker can craft malicious header keys or event bodies containing shell metacharacters to break out of the intended quoting context and execute arbitrary commands with the privileges of the Nuclio controller. There is no indication of active exploitation in the wild, but the critical severity and ease of exploitation warrant immediate patching to the latest Nuclio version with proper input sanitization applied to trigger event parameters.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-v5px-423j-pf7p"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · command-injection · CVE-2026-52831, CVE-2026-54088&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Nuclio container orchestration framework is vulnerable to persistent remote code execution through unsanitized cron trigger event headers and body parameters that are directly injected into Kubernetes CronJob shell commands (CVE-2026-52831, critical severity). An attacker can craft malicious header keys or event bodies containing shell metacharacters to break out of the intended quoting context and execute arbitrary commands with the privileges of the Nuclio controller. There is no indication of active exploitation in the wild, but the critical severity and ease of exploitation warrant immediate patching to the latest Nuclio version with proper input sanitization applied to trigger event parameters.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-v5px-423j-pf7p"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
   </entry>
   <entry>
     <title>Joro: Unauthenticated Cross-Origin Plugin Upload Leads to RCE (CVE-2026-53649)</title>
