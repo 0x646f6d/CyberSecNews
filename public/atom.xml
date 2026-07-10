@@ -3,7 +3,61 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-07-09T21:09:24.224251+00:00</updated>
+  <updated>2026-07-10T13:48:47.850652+00:00</updated>
+  <entry>
+    <title>Zimbra urges customers to patch critical web client XSS flaw</title>
+    <id>urn:cybersecnews:item:56</id>
+    <published>2026-07-10T13:48:47.850652+00:00</published>
+    <updated>2026-07-10T13:48:47.850652+00:00</updated>
+    <link href="https://www.bleepingcomputer.com/news/security/zimbra-urges-customers-to-patch-critical-web-client-xss-flaw/" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · xss&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Zimbra Collaboration Suite's Classic Web Client contains a critical cross-site scripting (XSS) vulnerability that allows attackers to execute arbitrary code in user browsers and potentially compromise email accounts and sensitive data. The flaw has not been reported as actively exploited in the wild, but given its critical severity rating and ease of exploitation through web interfaces, it poses significant risk to users. Zimbra has released patches for affected versions; customers should apply security updates immediately to all deployments of the Classic Web Client to prevent potential account compromise and data exfiltration.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/zimbra-urges-customers-to-patch-critical-web-client-xss-flaw/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Unpatched XRING Flaw in XQUIC Lets Remote Clients Crash HTTP/3 Servers</title>
+    <id>urn:cybersecnews:item:55</id>
+    <published>2026-07-10T13:48:47.849228+00:00</published>
+    <updated>2026-07-10T13:48:47.849228+00:00</updated>
+    <link href="https://thehackernews.com/2026/07/unpatched-xring-flaw-in-xquic-lets.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · dos&lt;/em&gt;&lt;/p&gt;&lt;p&gt;XQUIC, Alibaba's QUIC and HTTP/3 library, contains an unpatched denial-of-service vulnerability (XRING) where a single variable initialization error allows remote unauthenticated clients to crash HTTP/3 servers using approximately 260 bytes of legitimate QPACK traffic. The vulnerability requires no special privileges, malformed packets, or authentication, and is triggered through normal protocol operations. No patch is currently available as of the disclosure date (July 8). Organizations running XQUIC-based HTTP/3 servers should monitor for available updates from Alibaba and consider implementing network-level rate limiting or traffic filtering for QPACK streams as interim mitigation until a fix is released.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/unpatched-xring-flaw-in-xquic-lets.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>New MODBEACON RAT Uses gRPC Streaming for Encrypted C2 Traffic</title>
+    <id>urn:cybersecnews:item:54</id>
+    <published>2026-07-10T13:48:47.845134+00:00</published>
+    <updated>2026-07-10T13:48:47.845134+00:00</updated>
+    <link href="https://thehackernews.com/2026/07/new-modbeacon-rat-uses-grpc-streaming.html" rel="alternate" />
+    <category term="red-team" />
+    <content type="html">&lt;p&gt;&lt;em&gt;red-team · c2&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Silver Fox threat group has deployed MODBEACON, a new Rust-based RAT that leverages gRPC streaming to encrypt command-and-control communications, making detection more difficult through legitimate protocol abuse. The malware is distributed via SEO poisoning and counterfeit software installers targeting victims in Asia-Pacific regions. No current evidence of widespread exploitation in the wild has been reported, though the sophisticated C2 evasion mechanism suggests active development. Organizations should implement network-level monitoring for gRPC traffic patterns, enforce code signing verification on software installations, and maintain elevated awareness for SEO poisoning campaigns targeting their user base.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/new-modbeacon-rat-uses-grpc-streaming.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Dell BIOS Passwords: Weak XOR Encryption Allows Recovery from SPI Flash (CVE-2026-40639)</title>
+    <id>urn:cybersecnews:item:53</id>
+    <published>2026-07-10T10:42:00.585903+00:00</published>
+    <updated>2026-07-10T10:42:00.585903+00:00</updated>
+    <link href="https://www.mdsec.co.uk/2026/07/dell-bios-passwords-weak-xor-encryption-allows-recovery-from-spi-flash-cve-2026-40639/" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · weak-encryption · CVE-2026-40639&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Dell BIOS firmware uses weak XOR encryption to protect administrator passwords stored in SPI flash memory, allowing attackers with physical access to extract and recover credentials from the flash chip. This affects Dell systems across multiple product lines and carries high severity since BIOS-level access enables complete system compromise, firmware modification, and persistent attacks. There is no indication of active exploitation in the wild, but the attack requires only basic hardware tools and flash dumping capabilities. Dell should issue BIOS updates implementing stronger encryption (AES or similar) for credential storage; affected users should restrict physical access to systems and enable additional firmware security controls where available.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.mdsec.co.uk/2026/07/dell-bios-passwords-weak-xor-encryption-allows-recovery-from-spi-flash-cve-2026-40639/"&gt;Read more&lt;/a&gt; · Source: mdsec&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>"Comment stuffing" in an HTML phishing attachment as a mechanism for evading AI-based detection&amp;#x3f;, (Fri, Jul 10th)</title>
+    <id>urn:cybersecnews:item:52</id>
+    <published>2026-07-10T10:42:00.584482+00:00</published>
+    <updated>2026-07-10T10:42:00.584482+00:00</updated>
+    <link href="https://isc.sans.edu/diary/rss/33144" rel="alternate" />
+    <category term="red-team" />
+    <content type="html">&lt;p&gt;&lt;em&gt;red-team · ai-evasion&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Threat actors are using HTML comment stuffing in phishing attachments to evade AI-based email security detection systems. The technique involves embedding large volumes of benign content within HTML comments to obfuscate malicious code and confuse machine learning models trained to identify phishing patterns. This method demonstrates moderate sophistication and appears to be in active use in the wild with increasing frequency. Organizations should enhance email filtering rules to detect suspicious HTML comment patterns, implement additional analysis layers beyond AI detection, and conduct user awareness training on phishing attachment risks.&lt;/p&gt;&lt;p&gt;&lt;a href="https://isc.sans.edu/diary/rss/33144"&gt;Read more&lt;/a&gt; · Source: sans-isc&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Attackers Exploit 'Ill Bloom' Vulnerability to Drain $3.1 Million From Cryptocurrency Wallets</title>
+    <id>urn:cybersecnews:item:51</id>
+    <published>2026-07-10T10:42:00.581916+00:00</published>
+    <updated>2026-07-10T10:42:00.581916+00:00</updated>
+    <link href="https://thehackernews.com/2026/07/attackers-exploit-ill-bloom.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · weak-randomness&lt;/em&gt;&lt;/p&gt;&lt;p&gt;The "Ill Bloom" vulnerability affects cryptocurrency wallet software that generates recovery phrases using insufficient randomness, allowing attackers to derive wallet seeds and drain funds. The flaw has been actively exploited in the wild, with confirmed attacks stealing $3.1 million from affected wallets. Severity is critical as compromise results in total loss of wallet funds. Affected wallet developers must immediately implement cryptographically secure random number generation for seed phrase generation, and users should migrate funds from potentially affected wallets to those using proper entropy sources.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/attackers-exploit-ill-bloom.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>YesWiki vulnerable to unauthenticated arbitrary page deletion via `{{erasespamedcomments}}` action (CVE-2026-52766)</title>
     <id>urn:cybersecnews:item:50</id>
