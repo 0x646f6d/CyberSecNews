@@ -9,6 +9,7 @@ from typing import Optional
 from . import __version__
 from .config import Config, ConfigError, load_config
 from .db import Database
+from .feed import write_atom_feed
 from .llm.base import LLMClient
 from .logging_setup import configure, get_logger
 from .notify import NtfyError, send_report
@@ -85,6 +86,10 @@ def main(argv: Optional[list[str]] = None) -> int:
     db = Database(config.database)
     try:
         stats = run(config, db, llm, dry_run=args.dry_run)
+        # Regenerate the Atom feed from the full store (new items are already
+        # persisted at this point). Skipped on dry runs, which persist nothing.
+        if config.feed.enabled and not args.dry_run:
+            write_atom_feed(db.latest(config.feed.max_items), config.feed)
     finally:
         db.close()
 
@@ -101,6 +106,11 @@ def main(argv: Optional[list[str]] = None) -> int:
             print("-" * 70)
             print(msg.body)
         print("=" * 70)
+        if config.feed.enabled:
+            print(
+                f"[feed] enabled -> {config.feed.path} "
+                "(regenerated from the DB on real runs only)"
+            )
         return 0
 
     if report.is_empty and not config.ntfy.quiet_heartbeat:

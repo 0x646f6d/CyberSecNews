@@ -39,7 +39,7 @@ Orchestrated by `src/cybersecnews/pipeline.py::run()`.
 |------|----------------|
 | `cli.py` | Entry point. Arg parsing (`--dry-run`, `--since`, `--config`, `--verbose`), builds config/LLM/DB, calls `pipeline.run`, prints (dry-run) or sends the report. |
 | `__main__.py` | Enables `python -m cybersecnews`. |
-| `config.py` | Loads YAML (`config.yaml` → falls back to `config.example.yaml`) + env secrets; validates. Dataclasses `Config`, `ConnectorConfig`, `LLMConfig`, `NtfyConfig`. |
+| `config.py` | Loads YAML (`config.yaml` → falls back to `config.example.yaml`) + env secrets; validates. Dataclasses `Config`, `ConnectorConfig`, `LLMConfig`, `NtfyConfig`, `FeedConfig`. |
 | `models.py` | Core dataclasses: `Article`, `Classification`, `Vulnerability`, `SeenRecord`, and the `CATEGORY_*` constants. |
 | `logging_setup.py` | stdout logging, grep-friendly per-stage lines. `configure(verbose)`. |
 | `connectors/base.py` | `Connector` ABC: `fetch(since) -> list[Article]`. |
@@ -56,6 +56,7 @@ Orchestrated by `src/cybersecnews/pipeline.py::run()`.
 | `dedup.py` | `DedupEngine` — the 3-layer decision + within-run `_pending` tracking. |
 | `report.py` | `build_report()` → a `Report` of one `Message` **per item** (empty run → one heartbeat message). Per-item keeps each ntfy notification short enough to display fully on the Android app, which crops long bodies. |
 | `notify.py` | `send_report()` → POSTs each `Report.message` to ntfy as its own notification (Title/Priority/Markdown/per-category Tags). No `Click` header — a tap opens the message in the ntfy app, not an article's website. |
+| `feed.py` | `build_atom_feed()` / `write_atom_feed()` → render the persisted store (`db.latest`) as a static Atom 1.0 `atom.xml`. A read/unread-capable reading surface (any feed reader tracks read/unread per entry) alongside the ntfy ping. Stable per-item `<id>` (`urn:cybersecnews:item:{db_id}`) preserves reader state across regenerations. Gated by `config.feed.enabled`; written from `cli.py` after a real run, published by the workflow. |
 | `pipeline.py` | Wires it all together; emits `RunStats`. |
 
 Tests in `tests/` (see Testing below).

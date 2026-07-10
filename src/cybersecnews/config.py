@@ -54,6 +54,26 @@ class NtfyConfig:
 
 
 @dataclass
+class FeedConfig:
+    """Atom-feed output settings.
+
+    The feed is a read/unread-capable reading surface (any feed reader tracks
+    that per entry), complementing the ntfy "there's something new" ping. It is
+    rendered from the persisted dedup store and written to `path` for the daily
+    workflow to publish (e.g. to GitHub Pages).
+    """
+
+    enabled: bool = False
+    path: str = "public/atom.xml"
+    max_items: int = 100
+    title: str = "CyberSecNews - zero/n-day & red-team"
+    # Public URL where the feed will be served, e.g.
+    # https://<user>.github.io/<repo>/atom.xml. Used for the <link rel="self">
+    # and the feed id. Optional: a urn is used when unset.
+    site_url: Optional[str] = None
+
+
+@dataclass
 class Config:
     since_hours: int = 24
     categories: list[str] = field(default_factory=lambda: ["vulnerability", "red_team"])
@@ -63,6 +83,7 @@ class Config:
     dedup_window_days: int = 45
     database: str = "data/seen.db"
     ntfy: NtfyConfig = field(default_factory=NtfyConfig)
+    feed: FeedConfig = field(default_factory=FeedConfig)
     # Per-feed network timeout (seconds). Guards against a single hanging source
     # stalling the whole run now that many feeds are fetched concurrently.
     fetch_timeout: int = 15
@@ -126,6 +147,15 @@ def load_config(path: Optional[str | Path] = None) -> Config:
         quiet_heartbeat=ntfy_raw.get("quiet_heartbeat", False),
     )
 
+    feed_raw = raw.get("feed", {})
+    feed = FeedConfig(
+        enabled=feed_raw.get("enabled", False),
+        path=feed_raw.get("path", "public/atom.xml"),
+        max_items=feed_raw.get("max_items", 100),
+        title=feed_raw.get("title", "CyberSecNews - zero/n-day & red-team"),
+        site_url=feed_raw.get("site_url"),
+    )
+
     config = Config(
         since_hours=raw.get("since_hours", 24),
         categories=raw.get("categories", ["vulnerability", "red_team"]),
@@ -135,6 +165,7 @@ def load_config(path: Optional[str | Path] = None) -> Config:
         dedup_window_days=raw.get("dedup_window_days", 45),
         database=raw.get("database", "data/seen.db"),
         ntfy=ntfy,
+        feed=feed,
         fetch_timeout=raw.get("fetch_timeout", 15),
         fetch_workers=raw.get("fetch_workers", 10),
     )

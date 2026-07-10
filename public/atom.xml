@@ -1,0 +1,457 @@
+<?xml version='1.0' encoding='utf-8'?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>CyberSecNews - zero/n-day &amp; red-team</title>
+  <id>urn:cybersecnews:feed</id>
+  <generator>CyberSecNews</generator>
+  <updated>2026-07-09T21:09:24.224251+00:00</updated>
+  <entry>
+    <title>YesWiki vulnerable to unauthenticated arbitrary page deletion via `{{erasespamedcomments}}` action (CVE-2026-52766)</title>
+    <id>urn:cybersecnews:item:50</id>
+    <published>2026-07-09T21:09:24.224251+00:00</published>
+    <updated>2026-07-09T21:09:24.224251+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-6x7x-gcmf-7r8x" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-52766&lt;/em&gt;&lt;/p&gt;&lt;p&gt;YesWiki's `{{erasespamedcomments}}` action in `actions/EraseSpamedCommentsAction.php` allows unauthenticated users to delete arbitrary wiki pages through an unprotected `suppr[]` parameter, with no authorization checks in the deletion path. The vulnerability is critical as it enables permanent data loss on default installations where write access is unrestricted. Users should immediately update to a patched version of YesWiki and restrict default write ACLs to trusted users. There is no indication this is currently exploited in the wild, but the ease of exploitation makes immediate patching essential.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-6x7x-gcmf-7r8x"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>YesWiki Vulnerable to Authenticated PHP Object Injection in BazarImportAction via unserialize (CVE-2026-52777)</title>
+    <id>urn:cybersecnews:item:49</id>
+    <published>2026-07-09T21:09:24.223157+00:00</published>
+    <updated>2026-07-09T21:09:24.223157+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-9369-69wj-7m2f" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · php-object-injection · CVE-2026-52777&lt;/em&gt;&lt;/p&gt;&lt;p&gt;YesWiki's BazarImportAction contains a critical authenticated PHP object injection vulnerability in CSVManager.php where user-supplied base64-encoded data is unserialized without restricting allowed classes (CVE-2026-52777). An authenticated attacker can exploit this to instantiate arbitrary PHP objects and achieve remote code execution. This vulnerability is not currently confirmed as exploited in the wild. Upgrade to a patched version immediately and implement input validation; as a temporary mitigation, restrict access to the bazar import functionality to trusted administrators only.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-9369-69wj-7m2f"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>YesWiki has Unsafe eval() in its Formula Calculato, Leading to Remote Code Execution &amp; Denial of Service (CVE-2026-52778)</title>
+    <id>urn:cybersecnews:item:48</id>
+    <published>2026-07-09T21:09:24.222243+00:00</published>
+    <updated>2026-07-09T21:09:24.222243+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-px5m-h76g-p7p8" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-52778&lt;/em&gt;&lt;/p&gt;&lt;p&gt;YesWiki's Bazar form field calculator (CalcField.php) is vulnerable to remote code execution and denial of service due to unsafe eval() execution of user-supplied mathematical formulas. The application's attempted sanitization via complex recursive regular expressions is bypassable, and the regex itself is susceptible to ReDoS attacks causing server crashes. This is a critical vulnerability likely exploitable in the wild given eval() usage patterns. Immediately update YesWiki to the latest patched version and consider disabling the calculator feature until patching is complete; do not rely on the existing sanitization as security.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-px5m-h76g-p7p8"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>New GigaWiper Windows Backdoor Bundles Disk Wiping, Fake Ransomware, and Spyware</title>
+    <id>urn:cybersecnews:item:47</id>
+    <published>2026-07-09T21:09:24.219382+00:00</published>
+    <updated>2026-07-09T21:09:24.219382+00:00</updated>
+    <link href="https://thehackernews.com/2026/07/new-gigawiper-windows-backdoor-bundles.html" rel="alternate" />
+    <category term="red-team" />
+    <content type="html">&lt;p&gt;&lt;em&gt;red-team · backdoor&lt;/em&gt;&lt;/p&gt;&lt;p&gt;GigaWiper is a Windows backdoor combining multiple destructive capabilities—disk wiping, drive overwriting, and fake ransomware with unrecoverable encryption—delivered as selectable operator commands. The threat demonstrates high severity with destructive intent, though Microsoft's analysis does not confirm active exploitation in the wild. Organizations should prioritize patching Windows systems and implementing defense-in-depth controls including EDR solutions, network segmentation, and restricted administrative access to limit backdoor deployment impact. Monitor for GigaWiper indicators of compromise and suspicious command execution patterns consistent with destructive malware activity.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/new-gigawiper-windows-backdoor-bundles.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>GodDamn Ransomware Uses PoisonX Driver to Disable Endpoint Defenses</title>
+    <id>urn:cybersecnews:item:46</id>
+    <published>2026-07-09T14:21:31.022079+00:00</published>
+    <updated>2026-07-09T14:21:31.022079+00:00</updated>
+    <link href="https://thehackernews.com/2026/07/goddamn-ransomware-uses-poisonx-driver.html" rel="alternate" />
+    <category term="red-team" />
+    <content type="html">&lt;p&gt;&lt;em&gt;red-team · edr-evasion&lt;/em&gt;&lt;/p&gt;&lt;p&gt;GodDamn ransomware, a Beast ransomware rebrand first observed in May 2026, leverages the PoisonX kernel driver to disable endpoint security solutions before encryption. This represents a high-severity threat exploited actively in the wild, combining defense evasion with ransomware deployment capabilities. Organizations should prioritize patching endpoint detection and response (EDR) solutions, implement driver signature enforcement, and maintain immutable backups. Additional mitigation includes blocking unsigned kernel driver execution and monitoring for PoisonX driver IOCs across network infrastructure.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/goddamn-ransomware-uses-poisonx-driver.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Update gegen Rogueplanet: Microsoft reagiert auf gefährlichen Defender-Exploit</title>
+    <id>urn:cybersecnews:item:45</id>
+    <published>2026-07-09T07:26:54.692299+00:00</published>
+    <updated>2026-07-09T07:26:54.692299+00:00</updated>
+    <link href="https://www.golem.de/news/update-gegen-rogueplanet-microsoft-reagiert-auf-gefaehrlichen-defender-exploit-2607-210674.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · privilege-escalation · CVE-2026-50656&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Microsoft Defender contains a privilege escalation vulnerability exploited by the Rogueplanet exploit, which grants attackers elevated system rights on Windows. The vulnerability is actively exploited in the wild. Microsoft has released a security update to patch the flaw. All Windows users should apply this Defender update immediately as the exploit poses high severity risk.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.golem.de/news/update-gegen-rogueplanet-microsoft-reagiert-auf-gefaehrlichen-defender-exploit-2607-210674.html"&gt;Read more&lt;/a&gt; · Source: golem-security&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Nuclio: Unsanitized cron trigger event headers/body injected into CronJob shell command leads to persistent RCE (CVE-2026-52831)</title>
+    <id>urn:cybersecnews:item:44</id>
+    <published>2026-07-08T20:52:41.543307+00:00</published>
+    <updated>2026-07-08T20:52:41.543307+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-v5px-423j-pf7p" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · command-injection · CVE-2026-52831&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Nuclio container orchestration framework is vulnerable to persistent remote code execution through unsanitized cron trigger event headers and body parameters that are directly injected into Kubernetes CronJob shell commands (CVE-2026-52831, critical severity). An attacker can craft malicious header keys or event bodies containing shell metacharacters to break out of the intended quoting context and execute arbitrary commands with the privileges of the Nuclio controller. There is no indication of active exploitation in the wild, but the critical severity and ease of exploitation warrant immediate patching to the latest Nuclio version with proper input sanitization applied to trigger event parameters.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-v5px-423j-pf7p"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Joro: Unauthenticated Cross-Origin Plugin Upload Leads to RCE (CVE-2026-53649)</title>
+    <id>urn:cybersecnews:item:43</id>
+    <published>2026-07-08T20:52:41.541914+00:00</published>
+    <updated>2026-07-08T20:52:41.541914+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-xqhv-chqm-fhcc" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-53649&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Joro proxy mode (versions ≤1.1.0) on Linux/macOS contains a critical remote code execution vulnerability (CVE-2026-53649, CVSS 9.6) where an unauthenticated, CORS-enabled local API endpoint at 127.0.0.1:9090 allows arbitrary plugin uploads without authentication. An attacker can exploit this via cross-origin requests to upload malicious plugins and achieve code execution. There is no indication of active wild exploitation, but immediate patching to version &gt;1.1.0 is strongly recommended, or disable proxy mode if not required. As an interim mitigation, restrict network access to port 9090 to trusted sources only.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-xqhv-chqm-fhcc"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Hackers exploit Roundcube flaw to spy on academic researchers</title>
+    <id>urn:cybersecnews:item:42</id>
+    <published>2026-07-08T20:52:41.539184+00:00</published>
+    <updated>2026-07-08T20:52:41.539184+00:00</updated>
+    <link href="https://www.bleepingcomputer.com/news/security/hackers-exploit-roundcube-flaw-to-spy-on-academic-researchers/" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Roundcube webmail is being actively exploited by Chinese threat actors targeting academic institutions. The vulnerability allows attackers to extract user credentials and deploy persistent backdoor malware on vulnerable servers. This represents a high-severity threat with confirmed active exploitation in the wild against U.S. and Canadian universities. Administrators should immediately patch Roundcube to the latest version, enforce strong authentication controls, and audit affected systems for evidence of credential theft or backdoor installation.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/hackers-exploit-roundcube-flaw-to-spy-on-academic-researchers/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>CVE-2026-9181 | Esri ArcGIS Server Pre-Authentication Path Traversal Vulnerability</title>
+    <id>urn:cybersecnews:item:41</id>
+    <published>2026-07-08T17:15:07.309908+00:00</published>
+    <updated>2026-07-08T17:15:07.309908+00:00</updated>
+    <link href="https://horizon3.ai/attack-research/vulnerabilities/cve-2026-9181/" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · path-traversal · CVE-2026-9181&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Esri ArcGIS Server contains a critical pre-authentication path traversal vulnerability (CVE-2026-9181) enabling unauthenticated attackers to access arbitrary sensitive files on affected systems. The vulnerability is publicly disclosed with no current mitigation available, though exploitation likelihood depends on network exposure. Organizations running ArcGIS Server should immediately restrict network access to the application and monitor Esri's security advisories for patching guidance. Conduct urgent inventory and exposure assessment of all ArcGIS Server instances, particularly those internet-facing or accessible from untrusted networks.&lt;/p&gt;&lt;p&gt;&lt;a href="https://horizon3.ai/attack-research/vulnerabilities/cve-2026-9181/"&gt;Read more&lt;/a&gt; · Source: horizon3&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Ubiquiti Patches Critical UniFi Flaws Across Connect, Talk, Access, Protect, and OS</title>
+    <id>urn:cybersecnews:item:40</id>
+    <published>2026-07-08T17:15:07.306154+00:00</published>
+    <updated>2026-07-08T17:15:07.306154+00:00</updated>
+    <link href="https://thehackernews.com/2026/07/ubiquiti-patches-critical-unifi-flaws.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · privilege-escalation, rce, improper-access-control · CVE-2026-50746&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Ubiquiti released patches for critical vulnerabilities across UniFi Connect, Talk, Access, Protect, and OS platforms, including CVE-2026-50746 (CVSS 10.0) involving improper access control in UniFi Connect that enables privilege escalation and arbitrary command execution. The CVSS 10.0 rating indicates maximum severity with network-exploitable attack vectors requiring no authentication or user interaction. Immediately apply available updates to all affected UniFi products; if patches are unavailable for your version, isolate systems or restrict network access to trusted administrators only until fixes are deployed.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/ubiquiti-patches-critical-unifi-flaws.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>CISA orders feds to prioritize patching Langflow auth bypass flaw</title>
+    <id>urn:cybersecnews:item:39</id>
+    <published>2026-07-08T13:21:13.164355+00:00</published>
+    <updated>2026-07-08T13:21:13.164355+00:00</updated>
+    <link href="https://www.bleepingcomputer.com/news/security/cisa-orders-feds-to-prioritize-patching-langflow-auth-bypass-flaw/" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Langflow, a visual framework for building AI agents, contains an authentication bypass vulnerability that is actively exploited in the wild. The flaw allows attackers to circumvent authentication mechanisms and gain unauthorized access to the system. CISA has issued a mandatory directive requiring federal agencies to patch the vulnerability by Friday, indicating critical severity. Immediately apply available security updates to all Langflow deployments and restrict network access to instances until patching is complete.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/cisa-orders-feds-to-prioritize-patching-langflow-auth-bypass-flaw/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>CERT betont Wichtigkeit: Security-Patch für Geoinformationssystem-Plattform</title>
+    <id>urn:cybersecnews:item:38</id>
+    <published>2026-07-08T13:21:13.161991+00:00</published>
+    <updated>2026-07-08T13:21:13.161991+00:00</updated>
+    <link href="https://www.heise.de/news/ArcGIS-Enterprise-Wichtiger-Patch-sichert-Geoinformationssystem-Plattform-ab-11357947.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Esri's geoinformation system platform contains a vulnerability addressed in June patches that is reportedly being exploited in targeted attacks. CERT recommends administrators apply the June security updates immediately to mitigate active threat. The vulnerability severity warrants urgent patching given observed exploitation in the wild. If not already deployed, prioritize this update to prevent compromise of GIS infrastructure and data.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.heise.de/news/ArcGIS-Enterprise-Wichtiger-Patch-sichert-Geoinformationssystem-Plattform-ab-11357947.html"&gt;Read more&lt;/a&gt; · Source: heise-security&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Ubiquiti warns of new max severity UniFi OS vulnerability</title>
+    <id>urn:cybersecnews:item:37</id>
+    <published>2026-07-08T10:03:14.916961+00:00</published>
+    <updated>2026-07-08T10:03:14.916961+00:00</updated>
+    <link href="https://www.bleepingcomputer.com/news/security/ubiquiti-warns-of-new-max-severity-unifi-os-vulnerability/" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · command-injection&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Ubiquiti UniFi OS is affected by seven critical vulnerabilities, including a maximum-severity command injection flaw that enables remote code execution. The vulnerability allows unauthenticated or low-privilege attackers to execute arbitrary commands on affected systems. Ubiquiti has not indicated active exploitation in the wild, but the maximum CVSS rating and ease of exploitation make this a priority threat. Administrators should immediately apply available security updates to all UniFi OS deployments and restrict network access to UniFi controller interfaces.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/ubiquiti-warns-of-new-max-severity-unifi-os-vulnerability/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>15-Year-Old GhostLock Flaw Enables Root and Container Escape on Most Linux Distros</title>
+    <id>urn:cybersecnews:item:36</id>
+    <published>2026-07-08T10:03:14.914636+00:00</published>
+    <updated>2026-07-08T10:03:14.914636+00:00</updated>
+    <link href="https://thehackernews.com/2026/07/15-year-old-ghostlock-flaw-enables-root.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · privilege-escalation · CVE-2026-43499&lt;/em&gt;&lt;/p&gt;&lt;p&gt;GhostLock (CVE-2026-43499) is a 15-year-old Linux kernel privilege escalation flaw affecting virtually all mainstream distributions since 2011 that allows any logged-in user to gain root access and escape containers without requiring special permissions or network access. The vulnerability is critical due to its widespread presence across default kernel installations and the ease of exploitation by local attackers. While no active exploitation in the wild has been reported, patches should be applied immediately to all affected systems, and distributions should prioritize kernel updates to remediate this long-standing flaw.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/15-year-old-ghostlock-flaw-enables-root.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>ClickFix to Cash-Out: Anatomy of a Mexican Banking-Fraud Toolkit</title>
+    <id>urn:cybersecnews:item:35</id>
+    <published>2026-07-08T01:17:02.481210+00:00</published>
+    <updated>2026-07-08T01:17:02.481210+00:00</updated>
+    <link href="https://www.elastic.co/security-labs/mexican-banking-fraud-scmbanker-ref6045" rel="alternate" />
+    <category term="red-team" />
+    <content type="html">&lt;p&gt;&lt;em&gt;red-team · banking-fraud&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Elastic Security Labs identified REF6045, an operator-assisted banking fraud campaign targeting Mexican financial institutions, fintech platforms, payment processors, and cryptocurrency exchanges using a toolkit called ClickFix. The attack leverages social engineering, fake browser update prompts, and malware delivery to compromise customer credentials and facilitate unauthorized fund transfers. The operation remains actively exploited in the wild with victims experiencing direct financial losses through account takeovers and fraudulent transactions. Organizations should implement multi-factor authentication, employee security awareness training on social engineering tactics, and deploy endpoint detection and response (EDR) solutions to identify suspicious activities associated with this threat actor.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.elastic.co/security-labs/mexican-banking-fraud-scmbanker-ref6045"&gt;Read more&lt;/a&gt; · Source: elastic-security-labs&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Goploy: Cross-namespace IDOR and RCE via body-supplied row id in project and project_file handlers (CVE-2026-53552)</title>
+    <id>urn:cybersecnews:item:34</id>
+    <published>2026-07-08T01:17:02.479303+00:00</published>
+    <updated>2026-07-08T01:17:02.479303+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-26rh-24rg-j3vv" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · idor · CVE-2026-53552&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Goploy's project and project_file handlers (AddFile, EditFile, RemoveFile, Edit functions) suffer from insecure direct object reference (IDOR) allowing cross-namespace access and remote code execution. The vulnerability exists because these handlers accept row IDs from user-supplied JSON body parameters without validating namespace ownership; authenticated users with manager role or FileSync/EditProject permissions can manipulate arbitrary projects across namespaces. This is a critical severity issue; exploitation likelihood in the wild is unknown but the attack requires valid credentials. Update Goploy to a patched version immediately and review access controls to ensure namespace isolation is enforced server-side for all project operations.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-26rh-24rg-j3vv"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Better Auth: OAuth refresh-token replay via missing client authentication on oidc-provider and mcp plugins (CVE-2026-53512)</title>
+    <id>urn:cybersecnews:item:33</id>
+    <published>2026-07-07T21:12:57.544297+00:00</published>
+    <updated>2026-07-07T21:12:57.544297+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-pw9m-5jxm-xr6h" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-53512&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Better-auth's oidc-provider and mcp plugins lack proper client authentication on OAuth refresh token endpoints, allowing attackers to replay refresh tokens without valid credentials. This affects applications with confidential OAuth clients (web, native, or user-agent-based types). The vulnerability is critical severity; there is no indication of active exploitation mentioned. Users should immediately update better-auth to a patched version and review OAuth client configurations and token usage logs for signs of compromise.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-pw9m-5jxm-xr6h"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>@better-auth/sso provider registration has server-side request forgery via unvalidated OIDC endpoints (CVE-2026-53513)</title>
+    <id>urn:cybersecnews:item:32</id>
+    <published>2026-07-07T21:12:57.541319+00:00</published>
+    <updated>2026-07-07T21:12:57.541319+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-5rr4-8452-hf4v" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · ssrf · CVE-2026-53513&lt;/em&gt;&lt;/p&gt;&lt;p&gt;@better-auth/sso versions before 1.6.11 (and 1.7.0-beta.x) contain a critical server-side request forgery vulnerability in the OIDC provider registration endpoint that fails to validate endpoints, allowing authenticated users to trigger requests to arbitrary URLs. The flaw affects applications with the sso() plugin enabled and default access controls, potentially enabling attackers to exfiltrate IAM credentials or access internal services. Patch to version 1.6.11 or later immediately; if immediate patching is unavailable, restrict access to POST /sso/register to trusted users only. No evidence of active exploitation in the wild has been confirmed at this time.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-5rr4-8452-hf4v"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Joomlack Page Builder: Joomlack Page Builder Improper Access Control Vulnerability (CVE-2026-56290)</title>
+    <id>urn:cybersecnews:item:31</id>
+    <published>2026-07-07T19:46:13.532492+00:00</published>
+    <updated>2026-07-07T19:46:13.532492+00:00</updated>
+    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-56290" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · improper-access-control · CVE-2026-56290&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Joomlack Page Builder contains an improper access control vulnerability (CVE-2026-56290) permitting unauthenticated remote code execution through arbitrary file upload. This vulnerability is actively exploited in the wild and listed in CISA's Known Exploited Vulnerabilities catalog. Immediately apply vendor mitigations or patches in accordance with BOD 26-04 prioritization guidance; discontinue use if mitigations are unavailable. Assess internet exposure and evaluate cloud deployments under BOD 26-04 requirements for timely remediation.&lt;/p&gt;&lt;p&gt;&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2026-56290"&gt;Read more&lt;/a&gt; · Source: cisa-kev&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>JoomShaper SP Page Builder: JoomShaper SP Page Builder Unrestricted Upload of File with Dangerous Type Vulnerability (CVE-2026-48908)</title>
+    <id>urn:cybersecnews:item:30</id>
+    <published>2026-07-07T19:46:13.531272+00:00</published>
+    <updated>2026-07-07T19:46:13.531272+00:00</updated>
+    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-48908" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · unrestricted-file-upload · CVE-2026-48908&lt;/em&gt;&lt;/p&gt;&lt;p&gt;JoomShaper SP Page Builder contains an unrestricted file upload vulnerability (CVE-2026-48908) allowing unauthenticated users to upload and execute arbitrary PHP files. This vulnerability is actively exploited in the wild and carries critical severity due to the potential for remote code execution. Apply vendor-supplied patches immediately in accordance with CISA BOD 26-04 guidance; if mitigations are unavailable, discontinue use of the product and consider alternative solutions.&lt;/p&gt;&lt;p&gt;&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2026-48908"&gt;Read more&lt;/a&gt; · Source: cisa-kev&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Chinese hackers develop LONGLEASH malware to expand ORB network</title>
+    <id>urn:cybersecnews:item:29</id>
+    <published>2026-07-07T19:33:08.250024+00:00</published>
+    <updated>2026-07-07T19:33:08.250024+00:00</updated>
+    <link href="https://www.bleepingcomputer.com/news/security/chinese-hackers-develop-longleash-malware-to-expand-orb-network/" rel="alternate" />
+    <category term="red-team" />
+    <content type="html">&lt;p&gt;&lt;em&gt;red-team · c2&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Chinese APT group UAT-7810 is developing LONGLEASH malware targeting unpatched Ruckus networking devices to expand their ORB botnet infrastructure. The malware exploits known vulnerabilities in internet-facing routers to establish persistent command-and-control relay nodes, enabling lateral movement and obfuscation of attack origins. This represents active exploitation in the wild with moderate-to-high severity given the infrastructure targeting and botnet deployment implications. Organizations should immediately patch all Ruckus devices, restrict router management access to trusted networks only, and monitor for suspicious outbound connections from networking equipment.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/chinese-hackers-develop-longleash-malware-to-expand-orb-network/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Rogue Agent Flaw Could Have Let Attackers Hijack Google Dialogflow CX Chatbots</title>
+    <id>urn:cybersecnews:item:28</id>
+    <published>2026-07-07T19:33:08.248734+00:00</published>
+    <updated>2026-07-07T19:33:08.248734+00:00</updated>
+    <link href="https://thehackernews.com/2026/07/rogue-agent-flaw-could-have-let.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · privilege-escalation&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Google Dialogflow CX contained a critical privilege escalation vulnerability allowing authenticated users with edit rights on one Code Block-enabled agent to compromise other Code Block-enabled agents within the same Google Cloud project. Exploited agents could have their conversations monitored, user data exfiltrated, and malicious messages injected to conduct phishing or credential theft attacks. No evidence of active exploitation in the wild has been reported. Google has patched the vulnerability; affected organizations should immediately verify their Dialogflow CX configurations and update to the latest version.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/rogue-agent-flaw-could-have-let.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Threat Actors Probe Gitea Docker Flaw CVE-2026-20896 13 Days After Disclosure</title>
+    <id>urn:cybersecnews:item:27</id>
+    <published>2026-07-07T09:30:19.918816+00:00</published>
+    <updated>2026-07-07T09:30:19.918816+00:00</updated>
+    <link href="https://thehackernews.com/2026/07/threat-actors-probe-gitea-docker-flaw.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-20896&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Gitea Docker images are affected by CVE-2026-20896 (CVSS 9.8), which allows unauthenticated remote attackers to bypass authentication by spoofing the "X-WEBAUTH-USER" header without source IP validation. The vulnerability is actively being exploited in the wild, with threat actors probing vulnerable instances within 13 days of public disclosure. Apply the latest Gitea security patch immediately to all Docker deployments, and implement network-level controls to restrict header manipulation or filter untrusted X-WEBAUTH-USER headers at proxy/load balancer level as interim mitigation.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/threat-actors-probe-gitea-docker-flaw.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>16-Year-Old Linux KVM Flaw Lets Guest VMs Escape to Host on Intel and AMD x86 Systems</title>
+    <id>urn:cybersecnews:item:26</id>
+    <published>2026-07-07T09:30:19.917978+00:00</published>
+    <updated>2026-07-07T09:30:19.917978+00:00</updated>
+    <link href="https://thehackernews.com/2026/07/16-year-old-linux-kvm-flaw-lets-guest.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · use-after-free · CVE-2026-53359&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Linux KVM hypervisor on Intel and AMD x86 systems is vulnerable to CVE-2026-53359, a 16-year-old use-after-free bug in the shadow MMU code that allows guest VMs to corrupt host kernel memory and potentially escape to the host. The flaw can be triggered from unprivileged guest code to cause host kernel panic, with researchers indicating a more severe unreleased exploit exists. This is a critical severity vulnerability affecting virtualization infrastructure; exploit availability in the wild is not yet widespread but PoC exists. Apply available Linux kernel patches immediately to affected systems running KVM, particularly those hosting untrusted guest VMs.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/16-year-old-linux-kvm-flaw-lets-guest.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Iran-Linked Hackers Use New Cavern C2 Framework to Target Israeli Organizations</title>
+    <id>urn:cybersecnews:item:25</id>
+    <published>2026-07-07T09:30:19.916620+00:00</published>
+    <updated>2026-07-07T09:30:19.916620+00:00</updated>
+    <link href="https://thehackernews.com/2026/07/iran-linked-hackers-use-new-cavern-c2.html" rel="alternate" />
+    <category term="red-team" />
+    <content type="html">&lt;p&gt;&lt;em&gt;red-team · c2&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Iranian MOIS-affiliated threat actors are deploying a previously unknown modular C2 framework called Cavern to target Israeli IT providers and government entities. The framework enables remote command execution and data exfiltration capabilities typical of advanced persistent threat operations. While the threat is currently limited to Israeli-focused targeting, organizations should monitor for indicators of compromise associated with Cavern infrastructure and implement network segmentation to restrict lateral movement from potential initial compromises. Coordinate with threat intelligence providers for IOCs and consider elevated monitoring of critical IT infrastructure, particularly for organizations with Israeli operations or sensitive government contracts.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/iran-linked-hackers-use-new-cavern-c2.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>BeyondTrust Patches Critical Auth Bypass Flaws in Remote Support and PRA</title>
+    <id>urn:cybersecnews:item:24</id>
+    <published>2026-07-07T09:30:19.915620+00:00</published>
+    <updated>2026-07-07T09:30:19.915620+00:00</updated>
+    <link href="https://thehackernews.com/2026/07/beyondtrust-patches-critical-auth.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-40138&lt;/em&gt;&lt;/p&gt;&lt;p&gt;BeyondTrust Remote Support and Privileged Remote Access products contain two critical pre-authentication vulnerabilities (CVE-2024-6138 and another unnamed flaw, CVSS 9.2) allowing unauthenticated attackers to bypass authentication and achieve remote code execution on affected systems. These vulnerabilities enable complete device compromise and represent a severe risk to organizations using these widely-deployed support and access tools. Exploitation in the wild has not been confirmed at this time, but given the critical CVSS scores and unauthenticated attack vector, assume active exploitation is imminent. Immediately apply BeyondTrust's security patches to all Remote Support and PRA deployments and isolate affected systems from production networks if patching cannot be completed urgently.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/beyondtrust-patches-critical-auth.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>CERT/CC Warns of Hidden Admin Backdoor in Tenda Router Firmware</title>
+    <id>urn:cybersecnews:item:23</id>
+    <published>2026-07-07T09:30:19.914652+00:00</published>
+    <updated>2026-07-07T09:30:19.914652+00:00</updated>
+    <link href="https://thehackernews.com/2026/07/certcc-warns-of-hidden-admin-backdoor.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-11405&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Tenda router firmware versions contain CVE-2026-11405, an undocumented authentication backdoor enabling unauthenticated administrative access to web management interfaces. The vulnerability allows attackers to completely bypass password verification and gain full device control. CERT/CC has not specified current exploitation in the wild, but the ease of exploitation and severity warrant immediate firmware updates from Tenda for all affected models. Affected organizations should prioritize patching or isolating vulnerable Tenda devices from untrusted networks until updates are available.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/certcc-warns-of-hidden-admin-backdoor.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>OPNsense-Update beseitigt kritische Rootlücke und weitere Sicherheitsrisiken</title>
+    <id>urn:cybersecnews:item:22</id>
+    <published>2026-07-07T09:30:19.913139+00:00</published>
+    <updated>2026-07-07T09:30:19.913139+00:00</updated>
+    <link href="https://www.heise.de/news/OPNsense-Update-beseitigt-kritische-Rootluecke-und-weitere-Sicherheitsrisiken-11355118.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · privilege-escalation&lt;/em&gt;&lt;/p&gt;&lt;p&gt;OPNsense firewall has released patches addressing a critical root-level vulnerability along with additional security flaws. The critical vulnerability allows privilege escalation to root, posing severe risk to affected deployments. There is no indication of active exploitation in the wild at present. Immediate patching is strongly recommended for all OPNsense instances to remediate the root access vulnerability and other identified attack vectors.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.heise.de/news/OPNsense-Update-beseitigt-kritische-Rootluecke-und-weitere-Sicherheitsrisiken-11355118.html"&gt;Read more&lt;/a&gt; · Source: heise-security&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Cisco finally confirms attackers exploiting Unified CM flaw</title>
+    <id>urn:cybersecnews:item:21</id>
+    <published>2026-07-06T09:12:54.138559+00:00</published>
+    <updated>2026-07-06T09:12:54.138559+00:00</updated>
+    <link href="https://www.bleepingcomputer.com/news/security/cisco-finally-confirms-attackers-exploiting-unified-cm-flaw/" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Cisco Unified Communications Manager is vulnerable to authentication bypass allowing unauthenticated attackers to access sensitive system information and potentially execute administrative actions. The flaw was patched in June 2024, but active exploitation has now been confirmed in the wild. Severity is high due to the authentication bypass nature and confirmed active attacks. Organizations running affected Unified CM versions must immediately apply available security patches; those unable to patch should implement network segmentation and access controls to restrict Unified CM exposure.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/cisco-finally-confirms-attackers-exploiting-unified-cm-flaw/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Oracle E-Business Suite Flaw CVE-2026-46817 Actively Exploited in the Wild</title>
+    <id>urn:cybersecnews:item:20</id>
+    <published>2026-07-06T09:12:54.137567+00:00</published>
+    <updated>2026-07-06T09:12:54.137567+00:00</updated>
+    <link href="https://thehackernews.com/2026/06/oracle-e-business-suite-flaw-cve-2026.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · privilege-escalation · CVE-2026-46817&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Oracle E-Business Suite is affected by CVE-2026-46817, a critical improper privilege management and authentication flaw in Oracle Payments (CVSS 9.8) that enables unauthorized instance takeover. The vulnerability is actively exploited in the wild. Immediate patching is essential; organizations running affected Oracle E-Business Suite versions should apply security updates from Oracle and consider network segmentation to limit lateral movement until patches are deployed.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/06/oracle-e-business-suite-flaw-cve-2026.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>AirDrop and Quick Share Flaws Let Nearby Attackers Trigger Crashes and Bypass Checks</title>
+    <id>urn:cybersecnews:item:19</id>
+    <published>2026-07-06T09:12:54.136678+00:00</published>
+    <updated>2026-07-06T09:12:54.136678+00:00</updated>
+    <link href="https://thehackernews.com/2026/06/airdrop-and-quick-share-flaws-let.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · dos,auth-bypass&lt;/em&gt;&lt;/p&gt;&lt;p&gt;AirDrop (Apple) and Quick Share (Google) wireless file-sharing protocols contain six vulnerabilities allowing nearby attackers without prior connection to crash services and bypass security checks on affected devices. An attacker with a laptop within wireless range can trigger denial-of-service conditions on Macs or iPhones configured to receive from anyone, circumventing user prompts. No evidence of active exploitation in the wild has been reported. Affected users should update to patched OS versions when available; in interim, restricting AirDrop/Quick Share to "Contacts Only" mode significantly reduces attack surface.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/06/airdrop-and-quick-share-flaws-let.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Attackers Exploit SimpleHelp CVE-2026-48558 to Deploy TaskWeaver and Djinn Stealer</title>
+    <id>urn:cybersecnews:item:18</id>
+    <published>2026-07-06T09:12:54.135873+00:00</published>
+    <updated>2026-07-06T09:12:54.135873+00:00</updated>
+    <link href="https://thehackernews.com/2026/06/attackers-exploit-simplehelp-cve-2026.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-48558&lt;/em&gt;&lt;/p&gt;&lt;p&gt;SimpleHelp remote support software is affected by CVE-2026-48558, a critical authentication bypass vulnerability (CVSS 10.0) in the OpenID Connect flow that allows unauthenticated attackers to gain unauthorized access. The flaw is actively exploited in the wild to deliver TaskWeaver and Djinn Stealer malware families. Immediate patching is required; administrators should apply available security updates and review systems for indicators of compromise related to these malware deployments.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/06/attackers-exploit-simplehelp-cve-2026.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>GuardFall Exposes Open-Source AI Coding Agents to Decades-Old Shell Injection Risks</title>
+    <id>urn:cybersecnews:item:17</id>
+    <published>2026-07-06T09:12:54.134143+00:00</published>
+    <updated>2026-07-06T09:12:54.134143+00:00</updated>
+    <link href="https://thehackernews.com/2026/06/guardfall-exposes-open-source-ai-coding.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · shell-injection&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Open-source AI coding agents including AutoGPT, Claude Computer Use, and Genie are vulnerable to GuardFall, a shell injection bypass exploiting decades-old command obfuscation techniques that circumvents safety guardrails designed to prevent malicious command execution. The vulnerability affects ten of eleven tested agents and allows attackers to execute arbitrary commands despite safety checks, posing critical risk to systems running these agents. Exploitation in the wild is not yet documented, but the technique is trivial to implement using publicly known shell tricks. Development teams should implement robust input sanitization, avoid shell execution paradigms, and conduct security audits of command-handling logic; users should restrict agent permissions and monitor execution environments closely until patches are available.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/06/guardfall-exposes-open-source-ai-coding.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Citrix Patches Six NetScaler Flaws Allowing File Read and Denial-of-Service</title>
+    <id>urn:cybersecnews:item:16</id>
+    <published>2026-07-06T09:12:54.133194+00:00</published>
+    <updated>2026-07-06T09:12:54.133194+00:00</updated>
+    <link href="https://thehackernews.com/2026/07/citrix-patches-six-netscaler-flaws.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · input-validation,file-read,dos · CVE-2026-8451&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Citrix released patches for six vulnerabilities in NetScaler ADC and NetScaler Gateway, including CVE-2026-8451 (CVSS 8.8) and others enabling arbitrary file reads and denial-of-service attacks through insufficient input validation and similar flaws. These vulnerabilities affect critical infrastructure components and pose significant risk if exploited. Apply Citrix's latest security updates immediately to all affected NetScaler ADC and Gateway deployments. Monitor for exploit activity and verify patches are successfully deployed across your environment.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/citrix-patches-six-netscaler-flaws.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Progress Kemp LoadMaster Pre-Auth RCE Flaw Faces Active Exploitation Attempts</title>
+    <id>urn:cybersecnews:item:15</id>
+    <published>2026-07-06T09:12:54.132174+00:00</published>
+    <updated>2026-07-06T09:12:54.132174+00:00</updated>
+    <link href="https://thehackernews.com/2026/07/latest-progress-kemp-loadmaster-pre.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-8037&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Progress Kemp LoadMaster contains a critical OS command injection vulnerability (CVE-2026-8037, CVSS 9.6) in its pre-authentication functionality that allows unauthenticated remote code execution. Active exploitation attempts have been observed in the wild. Immediate patching is required; organizations should prioritize applying the latest security updates from Progress and consider implementing network segmentation to restrict access to LoadMaster management interfaces if patching cannot be deployed immediately.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/latest-progress-kemp-loadmaster-pre.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Critical Cursor Flaws Could Let Prompt Injection Escape Sandbox and Run Commands</title>
+    <id>urn:cybersecnews:item:14</id>
+    <published>2026-07-06T09:12:54.131173+00:00</published>
+    <updated>2026-07-06T09:12:54.131173+00:00</updated>
+    <link href="https://thehackernews.com/2026/07/critical-cursor-flaws-could-let-prompt.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · prompt-injection · CVE-2026-50548, CVE-2026-50549&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Cursor AI code editor contains two critical sandbox escape vulnerabilities (CVE-2026-50548 and CVE-2026-50549, CVSS 9.8/9.3) that allow prompt injection attacks to execute arbitrary commands on a developer's machine without user interaction or approval. Discovered by Cato AI Labs and named DuneSlide, the flaws enable a malicious prompt to fully bypass the editor's safety sandbox. Immediate patching is required; developers should update Cursor to the latest patched version and consider restricting Cursor's system permissions until patches are applied. These vulnerabilities represent a critical supply chain risk for development environments.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/critical-cursor-flaws-could-let-prompt.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Unpatched Argo CD Repo-Server Flaw Could Let Attackers Take Over Kubernetes Clusters</title>
+    <id>urn:cybersecnews:item:13</id>
+    <published>2026-07-06T09:12:54.129997+00:00</published>
+    <updated>2026-07-06T09:12:54.129997+00:00</updated>
+    <link href="https://thehackernews.com/2026/07/unpatched-argo-cd-repo-server-flaw.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Argo CD repo-server contains an unauthenticated remote code execution vulnerability allowing attackers with network access to the internal repo-server port to achieve full Kubernetes cluster compromise. The flaw remains unpatched with no CVE assigned as of the report date. No evidence of active exploitation in the wild has been disclosed, but severity is critical given the unrestricted code execution capability. Immediate action required: restrict network access to repo-server ports, segment repo-server from untrusted networks, and monitor for available patches from Argo CD maintainers.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/unpatched-argo-cd-repo-server-flaw.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>SharePoint RCE CVE-2026-45659 Added to CISA KEV After Active Exploitation</title>
+    <id>urn:cybersecnews:item:12</id>
+    <published>2026-07-06T09:12:54.129051+00:00</published>
+    <updated>2026-07-06T09:12:54.129051+00:00</updated>
+    <link href="https://thehackernews.com/2026/07/sharepoint-rce-cve-2026-45659-added-to.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-45659&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Microsoft SharePoint Server is affected by CVE-2026-45659, a high-severity (CVSS 8.8) remote code execution vulnerability stemming from unsafe deserialization of untrusted data. This flaw is actively exploited in the wild and has been added to CISA's Known Exploited Vulnerabilities catalog. Organizations should prioritize applying available patches from Microsoft immediately to remediate this critical threat.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/sharepoint-rce-cve-2026-45659-added-to.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>New ChocoPoC RAT Targets Vulnerability Researchers via Fake PoC Exploit Repos</title>
+    <id>urn:cybersecnews:item:11</id>
+    <published>2026-07-06T09:12:54.128166+00:00</published>
+    <updated>2026-07-06T09:12:54.128166+00:00</updated>
+    <link href="https://thehackernews.com/2026/07/new-chocopoc-rat-targets-vulnerability.html" rel="alternate" />
+    <category term="red-team" />
+    <content type="html">&lt;p&gt;&lt;em&gt;red-team · trojan-distribution&lt;/em&gt;&lt;/p&gt;&lt;p&gt;ChocoPoC is a data-stealing trojan distributed via fake proof-of-concept repositories on GitHub targeting vulnerability researchers and security professionals. The malware, delivered through Python scripts masquerading as CVE exploits, steals passwords, browser cookies, and files while establishing remote shell access. No specific CVE is exploited; rather, the attack preys on researchers' trust in PoC code and their motivation to test new vulnerabilities. Recommended actions: verify PoC repository authenticity and maintainer reputation before execution, run suspicious code in isolated environments, use code review practices, and monitor GitHub for fraudulent security-related repositories.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/new-chocopoc-rat-targets-vulnerability.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>AI Agent Exploits Langflow RCE to Automate Database Ransomware Attack</title>
+    <id>urn:cybersecnews:item:10</id>
+    <published>2026-07-06T09:12:54.127299+00:00</published>
+    <updated>2026-07-06T09:12:54.127299+00:00</updated>
+    <link href="https://thehackernews.com/2026/07/ai-agent-exploits-langflow-rce-to.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-55255&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Langflow, an open-source LLM orchestration platform, contains a remote code execution vulnerability that was exploited by an AI agent (JADEPUFFER) to automate a complete ransomware attack chain including credential theft, lateral movement, and database encryption. The vulnerability severity is critical as it enables unauthenticated code execution; this represents the first confirmed end-to-end ransomware operation fully automated by an AI agent and indicates active exploitation in the wild. Organizations running Langflow must immediately patch to the latest version and implement network segmentation to limit lateral movement capabilities from compromised instances. Review access logs for indicators of the attack pattern and consider deploying behavioral detection for unusual AI agent activity and credential access patterns.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/ai-agent-exploits-langflow-rce-to.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Ransomware Groups Turn to Citrix Bleed 2, BYOVD, and Supply Chain Credentials</title>
+    <id>urn:cybersecnews:item:9</id>
+    <published>2026-07-06T09:12:54.125984+00:00</published>
+    <updated>2026-07-06T09:12:54.125984+00:00</updated>
+    <link href="https://thehackernews.com/2026/07/ransomware-groups-turn-to-citrix-bleed.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2025-5777&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Citrix Bleed 2 (CVE-2025-5777) is being actively exploited by Anubis ransomware operators for initial network access, enabling extraction of session tokens and authentication credentials from vulnerable Citrix systems. Threat actors are combining this vulnerability with legitimate RMM tools, credential harvesting, and manual lateral movement techniques to establish persistence before deploying ransomware. This represents a critical severity vulnerability actively exploited in the wild by organized ransomware groups. Organizations should immediately patch Citrix systems to the latest version and implement network segmentation to restrict RMM tool access and monitor for suspicious authentication patterns.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/ransomware-groups-turn-to-citrix-bleed.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>PamStealer Uses Fake Maccy Sites and PAM Checks to Steal Mac Login Passwords</title>
+    <id>urn:cybersecnews:item:8</id>
+    <published>2026-07-06T09:12:54.124975+00:00</published>
+    <updated>2026-07-06T09:12:54.124975+00:00</updated>
+    <link href="https://thehackernews.com/2026/07/pamstealer-uses-fake-maccy-sites-and.html" rel="alternate" />
+    <category term="red-team" />
+    <content type="html">&lt;p&gt;&lt;em&gt;red-team · infostealer&lt;/em&gt;&lt;/p&gt;&lt;p&gt;PamStealer is a macOS information stealer distributed as fake Maccy clipboard manager installers that uses compiled AppleScript to extract login credentials via PAM (Pluggable Authentication Modules) checks. The malware leverages social engineering and trojanization of legitimate software to achieve initial access with no known CVE assigned. Active in-the-wild distribution has been confirmed by Jamf Threat Labs targeting macOS users. Recommended actions include: educate users on software download practices (obtain only from official sources), implement code signing verification, deploy endpoint detection for suspicious AppleScript execution, and monitor for PAM abuse patterns.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/pamstealer-uses-fake-maccy-sites-and.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>New Avalon Malware Framework Packs CrownX Ransomware Capabilities</title>
+    <id>urn:cybersecnews:item:7</id>
+    <published>2026-07-06T09:12:54.124135+00:00</published>
+    <updated>2026-07-06T09:12:54.124135+00:00</updated>
+    <link href="https://thehackernews.com/2026/07/new-avalon-malware-framework-packs.html" rel="alternate" />
+    <category term="red-team" />
+    <content type="html">&lt;p&gt;&lt;em&gt;red-team · c2&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Avalon is a newly discovered modular malware framework delivered via multi-stage phishing that integrates credential theft, lateral movement, remote access, recovery disruption, and CrownX ransomware capabilities to evade traditional security controls. The framework's modular architecture and multi-vector attack chain present high severity risk, though specific exploitation prevalence in the wild is not detailed in the summary provided. Organizations should implement robust email security controls, network segmentation, and endpoint detection/response (EDR) solutions to detect lateral movement attempts and suspicious module loading. Patch systems promptly and maintain offline backups to mitigate ransomware impact.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/new-avalon-malware-framework-packs.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>New "Bad Epoll" Linux Kernel Flaw Lets Unprivileged Users Gain Root, Hits Android</title>
+    <id>urn:cybersecnews:item:6</id>
+    <published>2026-07-06T09:12:54.123354+00:00</published>
+    <updated>2026-07-06T09:12:54.123354+00:00</updated>
+    <link href="https://thehackernews.com/2026/07/new-bad-epoll-linux-kernel-flaw-lets.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · privilege-escalation · CVE-2026-46242&lt;/em&gt;&lt;/p&gt;&lt;p&gt;CVE-2026-46242 ("Bad Epoll") is a Linux kernel privilege escalation vulnerability in epoll handling that allows unprivileged local users to gain root access on affected systems including desktops, servers, and Android devices. The flaw has been patched and requires immediate kernel updates across all affected platforms. Apply available security patches as soon as possible; users unable to patch immediately should restrict local access where feasible. No evidence of active exploitation in the wild is mentioned, but the severity warrants urgent remediation given the trivial attack surface and complete system compromise potential.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/new-bad-epoll-linux-kernel-flaw-lets.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Unpatched Flaws Disclosed in Filesystem Bundled Into Millions of Embedded Devices</title>
+    <id>urn:cybersecnews:item:5</id>
+    <published>2026-07-06T09:12:54.122022+00:00</published>
+    <updated>2026-07-06T09:12:54.122022+00:00</updated>
+    <link href="https://thehackernews.com/2026/07/unpatched-flaws-disclosed-in-filesystem.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · multiple&lt;/em&gt;&lt;/p&gt;&lt;p&gt;runZero disclosed seven vulnerabilities in FatFs, a lightweight filesystem library embedded in millions of devices including security cameras, drones, industrial controllers, and hardware wallets for reading/writing FAT and exFAT formats. The flaws range from memory corruption and integer overflows to path traversal issues that could enable code execution or data manipulation on affected embedded systems. No evidence of active exploitation in the wild has been reported, though the widespread distribution across critical device categories increases risk. Device manufacturers should prioritize patching FatFs in firmware updates, with particular urgency for security-critical applications like hardware wallets and industrial controllers.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/unpatched-flaws-disclosed-in-filesystem.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Exploitarium: Anonymer Sicherheitsforscher veröffentlicht zwei Dutzend Zero-Days</title>
+    <id>urn:cybersecnews:item:4</id>
+    <published>2026-07-06T09:12:54.120894+00:00</published>
+    <updated>2026-07-06T09:12:54.120894+00:00</updated>
+    <link href="https://www.heise.de/news/Exploitarium-Anonymer-Sicherheitsforscher-veroeffentlicht-zwei-Dutzend-Zero-Days-11350036.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · multiple&lt;/em&gt;&lt;/p&gt;&lt;p&gt;An anonymous security researcher published approximately 24 zero-day vulnerabilities across open-source software including PHP and RustDesk, claiming to use AI-assisted discovery methods. The vulnerabilities span multiple software categories and severity levels, though specific CVSS ratings and exploitability details vary by flaw. No evidence of active exploitation in the wild has been reported at this time, though the public disclosure significantly increases risk. Affected projects and users should prioritize patching based on individual vulnerability severity assessments and their exposure to the impacted software versions.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.heise.de/news/Exploitarium-Anonymer-Sicherheitsforscher-veroeffentlicht-zwei-Dutzend-Zero-Days-11350036.html"&gt;Read more&lt;/a&gt; · Source: heise-security&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Lücken in Adobe ColdFusion und Campaign Classic: Patchdayzyklus verdoppelt</title>
+    <id>urn:cybersecnews:item:3</id>
+    <published>2026-07-06T09:12:54.120038+00:00</published>
+    <updated>2026-07-06T09:12:54.120038+00:00</updated>
+    <link href="https://www.heise.de/news/Adobe-Patchday-fuer-ColdFusion-und-Campaign-Classic-fortan-zweimal-im-Monat-11351219.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-48282, CVE-2026-48283, CVE-2026-48313&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Adobe ColdFusion and Campaign Classic are affected by critical remote code execution vulnerabilities that allow unauthenticated attackers to execute arbitrary code. Both products are impacted by exploitable flaws with high severity ratings, and Adobe is increasing patch frequency going forward to address security issues more rapidly. Immediate patching is mandatory for all affected installations, with priority given to internet-facing systems running vulnerable versions of ColdFusion and Campaign Classic. Users should apply the latest security updates from Adobe without delay and enable monitoring for exploitation attempts.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.heise.de/news/Adobe-Patchday-fuer-ColdFusion-und-Campaign-Classic-fortan-zweimal-im-Monat-11351219.html"&gt;Read more&lt;/a&gt; · Source: heise-security&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Schwachstellen in Synology MailPlus Server lassen Angreifer passieren</title>
+    <id>urn:cybersecnews:item:2</id>
+    <published>2026-07-06T09:12:54.118603+00:00</published>
+    <updated>2026-07-06T09:12:54.118603+00:00</updated>
+    <link href="https://www.heise.de/news/Schwachstellen-in-Synology-MailPlus-Server-lassen-Angreifer-passieren-11351331.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · multiple&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Synology MailPlus Server contains multiple vulnerabilities that allow attackers to gain unauthorized access to affected network storage systems. The vulnerabilities include authentication bypass and remote code execution flaws that could permit unauthenticated attackers to compromise mail services and potentially the underlying NAS device. Synology has released security patches to address these issues; immediate patching is recommended for all affected MailPlus Server installations. Administrators should prioritize applying available updates and verify no unauthorized access has occurred on their systems.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.heise.de/news/Schwachstellen-in-Synology-MailPlus-Server-lassen-Angreifer-passieren-11351331.html"&gt;Read more&lt;/a&gt; · Source: heise-security&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Opera GX Flaw Let Malicious Sites Auto-Install Mods to Steal Data From Visited Pages</title>
+    <id>urn:cybersecnews:item:1</id>
+    <published>2026-07-06T09:03:17.194295+00:00</published>
+    <updated>2026-07-06T09:03:17.194295+00:00</updated>
+    <link href="https://thehackernews.com/2026/07/opera-gx-flaw-let-malicious-sites-auto.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · malicious-addon-installation&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Opera GX contained a vulnerability allowing malicious websites to silently install browser add-ons without user interaction, enabling data theft from visited pages including sensitive information like Gmail addresses. The flaw exploited the browser's mod installation mechanism to inject malicious extensions that could exfiltrate user data across multiple sites visited during a session. Opera has released a patch and reported no evidence of active exploitation in the wild. Users should update Opera GX immediately to the patched version to prevent unauthorized add-on installation and data harvesting attacks.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/opera-gx-flaw-let-malicious-sites-auto.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+</feed>

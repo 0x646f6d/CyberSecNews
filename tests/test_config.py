@@ -27,6 +27,11 @@ def test_defaults_when_fields_absent(tmp_path):
     assert config.fetch_workers == 10
     # bypass_prefilter defaults to False so existing configs keep working.
     assert config.connectors[0].bypass_prefilter is False
+    # Feed is off by default so existing configs keep their ntfy-only behaviour.
+    assert config.feed.enabled is False
+    assert config.feed.path == "public/atom.xml"
+    assert config.feed.max_items == 100
+    assert config.feed.site_url is None
 
 
 def test_new_fields_are_loaded(tmp_path):
@@ -54,3 +59,24 @@ def test_new_fields_are_loaded(tmp_path):
     assert config.connectors[0].options == {"severities": ["critical"], "max_pages": 2}
     assert config.connectors[1].bypass_prefilter is False
     assert config.connectors[1].options == {}  # default, backwards-compatible
+
+
+def test_feed_settings_are_loaded(tmp_path):
+    path = _write(
+        tmp_path,
+        """
+        feed:
+          enabled: true
+          path: out/feed.xml
+          max_items: 25
+          site_url: https://user.github.io/repo/atom.xml
+        connectors:
+          - name: a
+            url: https://example.com/a
+        """,
+    )
+    config = load_config(path)
+    assert config.feed.enabled is True
+    assert config.feed.path == "out/feed.xml"
+    assert config.feed.max_items == 25
+    assert config.feed.site_url == "https://user.github.io/repo/atom.xml"

@@ -22,7 +22,7 @@ small LLM, and sends a single structured English report to your phone via
 fetch (RSS connectors, concurrent) → look-back window → cheap keyword prefilter
 → LLM classify+extract (category + identity fields)
 → 3-layer dedup against the DB → LLM summarize (new items only)
-→ store → build report → send via ntfy → commit DB back
+→ store → build report → send via ntfy + render Atom feed → commit DB + feed back
 ```
 
 - **Two-stage filtering.** A cheap keyword prefilter drops obvious off-topic
@@ -101,6 +101,37 @@ Everything non-secret lives in `config.yaml` (falls back to
 - `dedup_window_days` — how far back layer 3 compares (default 45).
 - `ntfy.quiet_heartbeat` — send a "nothing new" message on empty runs, or stay
   silent (default: silent, still logged).
+- `feed.*` — Atom-feed output (see below).
+
+## Reading the news: ntfy ping + Atom feed
+
+ntfy is great as a **push ping** ("there's something new") but it is a
+fire-and-forget notification bus: it has no read/unread state, no archive, no
+search — you can never tell which items you've already looked at. So the service
+also emits a proper **Atom feed** as the reading surface, and keeps ntfy on as
+the lightweight ping. Use any feed reader (NetNewsWire, Feedly, Miniflux,
+FreshRSS, Inoreader…) — they all track read/unread **per item**, star and sync
+across devices for free.
+
+After each real run the feed is rendered from the persisted store to
+`public/atom.xml` and committed back by the workflow (same serverless pattern as
+the dedup DB). Each entry has a stable id derived from the DB row, so
+regenerating the feed never disturbs your reader's read/unread state.
+
+Feed settings (`config.yaml`):
+
+- `feed.enabled` — turn the Atom feed on/off (default: on in the example config).
+- `feed.path` — output file (default `public/atom.xml`).
+- `feed.max_items` — newest N reported items included (default 100).
+- `feed.site_url` — public URL where the feed is served; sets `<link rel="self">`
+  and the feed id. Optional.
+
+**Subscribe:** point your reader at the committed file. With zero extra setup that
+is the raw URL
+`https://raw.githubusercontent.com/<user>/<repo>/<branch>/public/atom.xml`. For a
+nicer URL and correct content-type, enable **GitHub Pages** for the repo (serve
+from the branch), then subscribe to `.../public/atom.xml` and set `feed.site_url`
+to that address.
 
 ## Adding a new source
 
@@ -124,8 +155,9 @@ and **deploy = `git push`**.
 1. Add repository **Secrets** (Settings → Secrets and variables → Actions):
    `ANTHROPIC_API_KEY`, `NTFY_TOPIC`, and optionally `NTFY_TOKEN`.
 2. `.github/workflows/daily.yml` runs every 4h (UTC) and on manual dispatch.
-   After each run it commits the updated `data/seen.db` back to the repo, so the
-   "already reported" memory survives between ephemeral runners.
+   After each run it commits the updated `data/seen.db` **and** `public/atom.xml`
+   back to the repo, so the "already reported" memory survives between ephemeral
+   runners and the feed stays fresh.
 3. Trigger it manually the first time from the **Actions** tab
    (**Run workflow**) to confirm a report arrives and the DB commit lands.
 
