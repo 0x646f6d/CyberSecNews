@@ -275,3 +275,19 @@ ntfy:
   # If true, send a short "no new items" heartbeat when nothing new was found.
   # If false, stay silent on empty runs (still logged).
   quiet_heartbeat: false
+
+# Atom feed output. ntfy is a fire-and-forget ping with no read/unread state; an
+# Atom feed is a proper reading surface — every feed reader (NetNewsWire, Feedly,
+# Miniflux, FreshRSS, Inoreader…) tracks read/unread per item, stars and syncs
+# across devices. The feed is rendered from the persisted dedup DB after each run
+# and written to `path` for the daily workflow to publish (e.g. GitHub Pages).
+# ntfy stays on in parallel as the lightweight "there's something new" ping.
+feed:
+  enabled: true
+  path: public/atom.xml        # written after each real run; published by CI
+  max_items: 100               # newest N reported items included in the feed
+  title: "CyberSecNews - zero/n-day & red-team"
+  # Public URL where the feed will be served. Used for <link rel="self"> and the
+  # feed id. Set this to your Pages URL once known, e.g.
+  # site_url: https://<user>.github.io/<repo>/atom.xml
+  site_url: null

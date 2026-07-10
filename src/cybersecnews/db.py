@@ -86,6 +86,14 @@ class Database:
         )
         return [_row_to_record(r) for r in cur.fetchall()]
 
+    def latest(self, limit: int = 100) -> list[SeenRecord]:
+        """The most recently reported records, newest first (for the Atom feed)."""
+        cur = self._conn.execute(
+            "SELECT * FROM seen ORDER BY first_seen_at DESC, id DESC LIMIT ?",
+            (limit,),
+        )
+        return [_row_to_record(r) for r in cur.fetchall()]
+
     def get(self, record_id: int) -> Optional[SeenRecord]:
         cur = self._conn.execute("SELECT * FROM seen WHERE id = ?", (record_id,))
         row = cur.fetchone()

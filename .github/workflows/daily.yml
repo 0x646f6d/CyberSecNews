@@ -55,14 +55,14 @@ jobs:
             python -m cybersecnews --verbose
           fi
 
-      - name: Commit updated dedup DB
+      - name: Commit updated dedup DB and Atom feed
         run: |
           git config user.name "cybersecnews-bot"
           git config user.email "actions@github.com"
-          if [ -n "$(git status --porcelain data/seen.db)" ]; then
-            git add data/seen.db
-            git commit -m "chore: update seen vulnerabilities DB [skip ci]"
+          git add data/seen.db public/atom.xml 2>/dev/null || git add data/seen.db
+          if [ -n "$(git status --porcelain data/seen.db public/atom.xml)" ]; then
+            git commit -m "chore: update seen DB + Atom feed [skip ci]"
             git push
           else
-            echo "No DB changes to commit."
+            echo "No DB or feed changes to commit."
           fi
