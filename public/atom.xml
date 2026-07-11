@@ -3,7 +3,16 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-07-10T20:58:58.206304+00:00</updated>
+  <updated>2026-07-11T01:16:12.473821+00:00</updated>
+  <entry>
+    <title>TSDProxy: Internal proxy auth token forwarded to backend services enables management API escalation</title>
+    <id>urn:cybersecnews:item:67</id>
+    <published>2026-07-11T01:16:12.473821+00:00</published>
+    <updated>2026-07-11T01:16:12.473821+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-g936-7jqj-mwv8" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass&lt;/em&gt;&lt;/p&gt;&lt;p&gt;TSDProxy (go/github.com/almeidapaulopt/tsdproxy) forwards its internal authentication token used for management API trust to all proxied backend services by default when identityHeaders is enabled. An attacker controlling or compromising a backend service can replay this token to the localhost management HTTP server to escalate privileges and manipulate Tailscale identity claims. This is a critical vulnerability actively exploitable in deployments using default configuration. Immediately disable identityHeaders forwarding, update to a patched version when available, or restrict backend service access to untrusted networks.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-g936-7jqj-mwv8"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Bluetooth Low Energy Security Testing, Consolidated: Introducing Caeruleus</title>
     <id>urn:cybersecnews:item:66</id>
@@ -65,7 +74,7 @@
     <updated>2026-07-10T20:58:58.197995+00:00</updated>
     <link href="https://github.com/advisories/GHSA-56mp-4f3v-fgj2" rel="alternate" />
     <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · stored-xss-to-rce · CVE-2026-50551&lt;/em&gt;&lt;/p&gt;&lt;p&gt;SiYuan v3.6.5 and earlier contain a stored XSS vulnerability in Attribute View asset cell rendering that escalates to RCE in the Electron desktop client due to insufficient HTML escaping (CVE-2026-50551). The vulnerability exists because the mitigation for CVE-2026-44588 was incomplete—asset renderers use the weaker `escapeAttr()` function instead of the stronger `escapeAriaLabel()` that was applied elsewhere. This is a critical severity issue likely exploitable in the wild given the ease of injecting malicious content via database asset cells. Immediately upgrade to patched versions beyond v3.6.5 and audit all existing Attribute View assets for suspicious content.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-56mp-4f3v-fgj2"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · stored-xss-to-rce · CVE-2026-50551, CVE-2026-54067, CVE-2026-54158&lt;/em&gt;&lt;/p&gt;&lt;p&gt;SiYuan v3.6.5 and earlier contain a stored XSS vulnerability in Attribute View asset cell rendering that escalates to RCE in the Electron desktop client due to insufficient HTML escaping (CVE-2026-50551). The vulnerability exists because the mitigation for CVE-2026-44588 was incomplete—asset renderers use the weaker `escapeAttr()` function instead of the stronger `escapeAriaLabel()` that was applied elsewhere. This is a critical severity issue likely exploitable in the wild given the ease of injecting malicious content via database asset cells. Immediately upgrade to patched versions beyond v3.6.5 and audit all existing Attribute View assets for suspicious content.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-56mp-4f3v-fgj2"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
   </entry>
   <entry>
     <title>Researcher Details WhatsApp-to-Host Attack Chain Using Three OpenClaw Flaws</title>
