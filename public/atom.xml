@@ -3,7 +3,16 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-07-11T01:16:12.473821+00:00</updated>
+  <updated>2026-07-11T09:12:42.958409+00:00</updated>
+  <entry>
+    <title>Wireshark 4.6.7 Released, (Sat, Jul 11th)</title>
+    <id>urn:cybersecnews:item:68</id>
+    <published>2026-07-11T09:12:42.958409+00:00</published>
+    <updated>2026-07-11T09:12:42.958409+00:00</updated>
+    <link href="https://isc.sans.edu/diary/rss/33146" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Wireshark 4.6.7 addresses 12 vulnerabilities across the packet analysis tool. The specific vulnerabilities and their severity levels are not detailed in this release notice, but multiple CVE fixes typically include memory corruption, denial of service, or information disclosure issues common in protocol parsers. Update to version 4.6.7 immediately, particularly if Wireshark is deployed in security operations environments or used to analyze untrusted network traffic.&lt;/p&gt;&lt;p&gt;&lt;a href="https://isc.sans.edu/diary/rss/33146"&gt;Read more&lt;/a&gt; · Source: sans-isc&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>TSDProxy: Internal proxy auth token forwarded to backend services enables management API escalation</title>
     <id>urn:cybersecnews:item:67</id>
