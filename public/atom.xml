@@ -3,7 +3,34 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-07-13T13:53:23.049556+00:00</updated>
+  <updated>2026-07-13T17:47:41.440590+00:00</updated>
+  <entry>
+    <title>DIRAC is vulnerable to RCE in RequestManager due to eval on untrusted input (CVE-2026-45579)</title>
+    <id>urn:cybersecnews:item:72</id>
+    <published>2026-07-13T17:47:41.440590+00:00</published>
+    <updated>2026-07-13T17:47:41.440590+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-9jpv-c7p4-997x" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-45579&lt;/em&gt;&lt;/p&gt;&lt;p&gt;DIRAC's RequestManager component contains a critical remote code execution vulnerability (CVE-2026-45579) stemming from unsafe eval() calls on untrusted user input in the export_getRequestCountersWeb function. Any authenticated user can exploit this to execute arbitrary code on the DIRAC server with the privileges of the system user running DIRAC services. There is no indication of active exploitation in the wild. Affected organizations should immediately patch to a patched version and consider restricting network access to DIRAC instances until updates are applied.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-9jpv-c7p4-997x"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Cisco IOS: Cisco IOS Cross-Site Request Forgery Vulnerability (CVE-2008-4128)</title>
+    <id>urn:cybersecnews:item:71</id>
+    <published>2026-07-13T17:47:41.439480+00:00</published>
+    <updated>2026-07-13T17:47:41.439480+00:00</updated>
+    <link href="https://nvd.nist.gov/vuln/detail/CVE-2008-4128" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · csrf · CVE-2008-4128&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Cisco IOS 12.4 contains multiple cross-site request forgery (CSRF) vulnerabilities allowing remote attackers to execute arbitrary commands through specially crafted HTTP requests to the web management interface. This vulnerability is actively exploited in the wild and carries high severity due to the potential for complete device compromise. Administrators must immediately apply vendor-supplied patches or implement mitigations according to Cisco's guidance and CISA BOD 26-04 prioritization; discontinue use of affected systems if patches are unavailable. Prioritize patching for internet-exposed devices and conduct forensic triage on potentially compromised systems.&lt;/p&gt;&lt;p&gt;&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2008-4128"&gt;Read more&lt;/a&gt; · Source: cisa-kev&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>CISA warns of actively exploited RCE flaws in Joomla extensions</title>
+    <id>urn:cybersecnews:item:70</id>
+    <published>2026-07-13T17:47:41.436976+00:00</published>
+    <updated>2026-07-13T17:47:41.436976+00:00</updated>
+    <link href="https://www.bleepingcomputer.com/news/security/cisa-warns-of-actively-exploited-rce-flaws-in-joomla-extensions/" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Two remote code execution vulnerabilities in Joomla extensions—iCagenda and Balbooa Forms—are being actively exploited in the wild through arbitrary file upload mechanisms. These flaws allow unauthenticated attackers to execute arbitrary code on affected systems. CISA has issued a warning confirming active exploitation, indicating high severity. Organizations using these extensions should immediately update to patched versions or disable the affected plugins until patches are available.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/cisa-warns-of-actively-exploited-rce-flaws-in-joomla-extensions/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>(g+) Cybersecurity: Wie eine Erpressergruppe reihenweise Peoplesoft-Systeme abräumt</title>
     <id>urn:cybersecnews:item:69</id>
