@@ -3,7 +3,16 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-07-11T09:12:42.958409+00:00</updated>
+  <updated>2026-07-13T13:53:23.049556+00:00</updated>
+  <entry>
+    <title>(g+) Cybersecurity: Wie eine Erpressergruppe reihenweise Peoplesoft-Systeme abräumt</title>
+    <id>urn:cybersecnews:item:69</id>
+    <published>2026-07-13T13:53:23.049556+00:00</published>
+    <updated>2026-07-13T13:53:23.049556+00:00</updated>
+    <link href="https://www.golem.de/news/cybersecurity-wie-eine-erpressergruppe-reihenweise-peoplesoft-systeme-abraeumt-2607-210692.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · unspecified&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Oracle PeopleSoft systems are being exploited in the wild via an unpatched zero-day vulnerability, with multiple high-profile victims targeted by extortion groups. The flaw allows attackers to compromise systems and extract sensitive data for extortion purposes. Affected organizations should immediately apply the latest Oracle security patches, isolate vulnerable PeopleSoft instances from external network access, and implement enhanced monitoring for suspicious authentication and data exfiltration activity. Consider conducting a forensic investigation to determine if systems have been previously compromised.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.golem.de/news/cybersecurity-wie-eine-erpressergruppe-reihenweise-peoplesoft-systeme-abraeumt-2607-210692.html"&gt;Read more&lt;/a&gt; · Source: golem-security&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Wireshark 4.6.7 Released, (Sat, Jul 11th)</title>
     <id>urn:cybersecnews:item:68</id>
