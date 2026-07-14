@@ -3,7 +3,25 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-07-13T17:47:41.440590+00:00</updated>
+  <updated>2026-07-14T01:08:22.081942+00:00</updated>
+  <entry>
+    <title>FacturaScripts: Account takeover of any 2FA-enabled user (CVE-2026-47677)</title>
+    <id>urn:cybersecnews:item:74</id>
+    <published>2026-07-14T01:08:22.081942+00:00</published>
+    <updated>2026-07-14T01:08:22.081942+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-c67f-gmxw-mj93" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-47677&lt;/em&gt;&lt;/p&gt;&lt;p&gt;FacturaScripts authentication module (Core/Controller/Login.php) contains a critical authentication bypass in two-factor authentication validation that allows account takeover of any 2FA-enabled user. The vulnerable endpoint `/login?action=two-factor-validation` accepts unauthenticated POST requests containing only a username and TOTP code without password verification or CSRF protection, enabling attackers to brute-force valid TOTP codes and obtain valid session tokens. This vulnerability is critical severity and likely exploited given the straightforward attack vector. Immediately patch FacturaScripts to the latest version and implement rate-limiting on the two-factor validation endpoint as a temporary mitigation.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-c67f-gmxw-mj93"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Kimai: Default APP_SECRET in Docker Image Enables Cookie Forgery and Account Takeover (CVE-2026-52824)</title>
+    <id>urn:cybersecnews:item:73</id>
+    <published>2026-07-14T01:08:22.079005+00:00</published>
+    <updated>2026-07-14T01:08:22.079005+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-jr9p-4h4j-6c58" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · insecure-defaults · CVE-2026-52824&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Kimai Docker image ships with a hardcoded default APP_SECRET value, allowing unauthenticated attackers to forge HMAC-signed cookies and authentication tokens to takeover any account including administrators. This affects all Kimai instances deployed via the official Docker image without explicit APP_SECRET configuration. Severity is critical with active exploitation likely given the public nature of the default secret. Immediately regenerate APP_SECRET to a cryptographically unique value in all deployed instances and redeploy using updated Docker image; verify no unauthorized account access has occurred.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-jr9p-4h4j-6c58"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>DIRAC is vulnerable to RCE in RequestManager due to eval on untrusted input (CVE-2026-45579)</title>
     <id>urn:cybersecnews:item:72</id>
