@@ -3,7 +3,70 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-07-14T16:59:23.532353+00:00</updated>
+  <updated>2026-07-14T20:48:47.618234+00:00</updated>
+  <entry>
+    <title>LegacyHive public disclosure</title>
+    <id>urn:cybersecnews:item:85</id>
+    <published>2026-07-14T20:48:47.618234+00:00</published>
+    <updated>2026-07-14T20:48:47.618234+00:00</updated>
+    <link href="https://blog.projectnightcrawler.dev/posts/2026-07-14-legacyhive-public-disclosure/" rel="alternate" />
+    <category term="red-team" />
+    <content type="html">&lt;p&gt;&lt;em&gt;red-team · c2&lt;/em&gt;&lt;/p&gt;&lt;p&gt;LegacyHive is a publicly disclosed tool available on multiple Git repositories that appears to be designed for malicious purposes based on repository naming conventions (ProjectNightcrawler, ChurchofMalware). Without access to the actual repository contents, the specific vulnerability or attack technique cannot be determined, but the public disclosure and deliberate multi-platform hosting suggests active threat actor distribution. Security engineers should monitor for this tool's use in intrusions, examine network/host logs for associated command-and-control communications, and coordinate with threat intelligence teams to understand its capabilities and indicators of compromise. Immediate action should focus on detection rule development and threat hunting rather than patching, as this appears to be attacker-controlled malware rather than a vulnerable software package.&lt;/p&gt;&lt;p&gt;&lt;a href="https://blog.projectnightcrawler.dev/posts/2026-07-14-legacyhive-public-disclosure/"&gt;Read more&lt;/a&gt; · Source: projectnightcrawler&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Anyquery: Arbitrary File Write (AFW) which could lead to Remote Code Execution (RCE) via Unrestricted ATTACH DATABASE in Server Mode (CVE-2026-50006)</title>
+    <id>urn:cybersecnews:item:84</id>
+    <published>2026-07-14T20:48:47.617093+00:00</published>
+    <updated>2026-07-14T20:48:47.617093+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-xrcf-6jh3-ggvx" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · arbitrary-file-write · CVE-2026-50006&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Anyquery's server mode fails to restrict SQLite's ATTACH DATABASE command, allowing unauthenticated attackers to write arbitrary files to the filesystem via the MySQL-compatible port, potentially achieving remote code execution. This critical vulnerability (CVE-2026-50006) is exploitable without authentication and poses immediate risk in exposed deployments. Immediate patching is required; as a mitigation, restrict network access to Anyquery's server port and disable server mode if not required.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-xrcf-6jh3-ggvx"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>TidGi Desktop Remote Code Execution via Malicious TiddlyWiki Repository Import — Tiddler Startup Module Auto-Execution</title>
+    <id>urn:cybersecnews:item:83</id>
+    <published>2026-07-14T20:48:47.615346+00:00</published>
+    <updated>2026-07-14T20:48:47.615346+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-9hc2-hjx8-q6pv" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;TidGi Desktop through version 0.13.0 is vulnerable to critical remote code execution when importing a malicious TiddlyWiki Git repository, as the application automatically executes arbitrary JavaScript code embedded in `.tid` files within the tiddlers directory during wiki initialization. The vulnerability stems from TiddlyWiki's module system auto-discovering and executing JavaScript in startup modules without validation. This is a critical severity issue with active exploitation potential given the ease of weaponization through repository imports. Users should immediately update to a patched version beyond 0.13.0 and avoid importing repositories from untrusted sources; maintainers should implement code signing or sandboxing for tiddler module execution.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-9hc2-hjx8-q6pv"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>SonicWall SMA1000 Appliances: SonicWall SMA1000 Appliances Code Injection Vulnerability (CVE-2026-15410)</title>
+    <id>urn:cybersecnews:item:82</id>
+    <published>2026-07-14T20:48:47.614378+00:00</published>
+    <updated>2026-07-14T20:48:47.614378+00:00</updated>
+    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-15410" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · code-injection · CVE-2026-15410&lt;/em&gt;&lt;/p&gt;&lt;p&gt;SonicWall SMA1000 appliances contain a code injection vulnerability (CVE-2026-15410) that allows remote authenticated administrators to execute arbitrary OS commands under specific conditions. This vulnerability is actively exploited in the wild and carries high severity. Apply vendor mitigations immediately per CISA BOD 26-04 guidance; discontinue use if mitigations are unavailable. Conduct forensic triage on affected systems and evaluate internet exposure to prioritize patching efforts.&lt;/p&gt;&lt;p&gt;&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2026-15410"&gt;Read more&lt;/a&gt; · Source: cisa-kev&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Microsoft Active Directory Federation Services: Microsoft Active Directory Federation Services Insufficient Granularity of Access Control Vulnerability (CVE-2026-56155)</title>
+    <id>urn:cybersecnews:item:81</id>
+    <published>2026-07-14T20:48:47.612871+00:00</published>
+    <updated>2026-07-14T20:48:47.612871+00:00</updated>
+    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-56155" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · privilege-escalation · CVE-2026-56155&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Microsoft Active Directory Federation Services (AD FS) contains an insufficient access control vulnerability (CVE-2026-56155) allowing authorized local attackers to escalate privileges. This vulnerability is actively exploited in the wild and listed on CISA's Known Exploited Vulnerabilities catalog. Apply vendor-supplied patches immediately per CISA BOD 26-04 guidance; if patches are unavailable, implement mitigations or discontinue use. Conduct forensic triage on affected systems and evaluate internet exposure to prioritize remediation efforts.&lt;/p&gt;&lt;p&gt;&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2026-56155"&gt;Read more&lt;/a&gt; · Source: cisa-kev&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Microsoft July 2026 Patch Tuesday fixes massive 570 flaws, 3 zero-days</title>
+    <id>urn:cybersecnews:item:80</id>
+    <published>2026-07-14T20:48:47.611450+00:00</published>
+    <updated>2026-07-14T20:48:47.611450+00:00</updated>
+    <link href="https://www.bleepingcomputer.com/news/microsoft/microsoft-july-2026-patch-tuesday-fixes-massive-570-flaws-3-zero-days/" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · mixed&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Microsoft released patches for 570 vulnerabilities in July 2026 Patch Tuesday, including three zero-days (two actively exploited in the wild and one publicly disclosed prior to patching). Severity levels span critical flaws affecting core Windows and Office components with widespread exploitation potential. Immediate patching is mandatory for all affected Microsoft products; prioritize zero-day CVEs and any critical-rated flaws in internet-facing systems. Organizations unable to patch immediately should implement network segmentation and disable unnecessary services for affected software.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/microsoft/microsoft-july-2026-patch-tuesday-fixes-massive-570-flaws-3-zero-days/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Microsoft releases Windows 10 KB5099539 extended security update</title>
+    <id>urn:cybersecnews:item:79</id>
+    <published>2026-07-14T20:48:47.609900+00:00</published>
+    <updated>2026-07-14T20:48:47.609900+00:00</updated>
+    <link href="https://www.bleepingcomputer.com/news/microsoft/microsoft-releases-windows-10-kb5099539-extended-security-update/" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · multiple&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Windows 10 receives KB5099539 extended security update addressing 570 vulnerabilities including critical remote code execution and elevation of privilege flaws across multiple components. The update covers July 2026 Patch Tuesday issues affecting kernel, graphics drivers, and system services with varying severity levels; some vulnerabilities are actively exploited in the wild. Immediate patching is strongly recommended for all Windows 10 systems still in support, particularly those exposed to network attack surfaces. Organizations should prioritize deployment of this cumulative update to their patch management processes.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/microsoft/microsoft-releases-windows-10-kb5099539-extended-security-update/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Progress confirms ShareFile zero-day flaw behind Storage Zone shutdown</title>
     <id>urn:cybersecnews:item:78</id>
@@ -29,7 +92,7 @@
     <updated>2026-07-14T16:59:23.529136+00:00</updated>
     <link href="https://thehackernews.com/2026/07/rabbitmq-flaws-could-leak-oauth-secrets.html" rel="alternate" />
     <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass,information-disclosure&lt;/em&gt;&lt;/p&gt;&lt;p&gt;RabbitMQ message broker contains two access control vulnerabilities enabling attackers to leak OAuth client secrets and expose cross-tenant queue metadata, potentially compromising enterprise messaging infrastructure and tenant isolation. The flaws allow unauthorized access to sensitive authentication credentials and bypass of tenant boundaries, creating significant security risks in multi-tenant deployments. Severity appears high given the exposure of OAuth secrets and infrastructure metadata, though wild exploitation details were not specified in available reporting. Organizations should immediately patch RabbitMQ to the latest version addressing these access control issues and audit OAuth credential exposure in affected deployments.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/rabbitmq-flaws-could-leak-oauth-secrets.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass,information-disclosure · CVE-2026-54052&lt;/em&gt;&lt;/p&gt;&lt;p&gt;RabbitMQ message broker contains two access control vulnerabilities enabling attackers to leak OAuth client secrets and expose cross-tenant queue metadata, potentially compromising enterprise messaging infrastructure and tenant isolation. The flaws allow unauthorized access to sensitive authentication credentials and bypass of tenant boundaries, creating significant security risks in multi-tenant deployments. Severity appears high given the exposure of OAuth secrets and infrastructure metadata, though wild exploitation details were not specified in available reporting. Organizations should immediately patch RabbitMQ to the latest version addressing these access control issues and audit OAuth credential exposure in affected deployments.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/rabbitmq-flaws-could-leak-oauth-secrets.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
   </entry>
   <entry>
     <title>SAP-Patchday: Teils kritische Sicherheitslücken in mehreren Produkten gefixt</title>
@@ -38,7 +101,7 @@
     <updated>2026-07-14T12:58:24.780031+00:00</updated>
     <link href="https://www.heise.de/news/SAP-Patchday-Teils-kritische-Sicherheitsluecken-in-mehreren-Produkten-gefixt-11363906.html" rel="alternate" />
     <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · multiple&lt;/em&gt;&lt;/p&gt;&lt;p&gt;SAP released patches for 16 vulnerabilities across multiple products in July, with several rated as critical severity. The vulnerabilities span various SAP applications and components, though specific details on attack vectors and exploitation status were not provided in the summary. Organizations running affected SAP systems should prioritize applying the July patches, particularly for critical-rated issues, and review SAP's official security notes to determine which vulnerabilities impact their deployments. No evidence of active wild exploitation was mentioned, but critical SAP vulnerabilities typically warrant expedited patching due to the enterprise nature of these systems.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.heise.de/news/SAP-Patchday-Teils-kritische-Sicherheitsluecken-in-mehreren-Produkten-gefixt-11363906.html"&gt;Read more&lt;/a&gt; · Source: heise-security&lt;/p&gt;</content>
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · multiple · CVE-2026-44747&lt;/em&gt;&lt;/p&gt;&lt;p&gt;SAP released patches for 16 vulnerabilities across multiple products in July, with several rated as critical severity. The vulnerabilities span various SAP applications and components, though specific details on attack vectors and exploitation status were not provided in the summary. Organizations running affected SAP systems should prioritize applying the July patches, particularly for critical-rated issues, and review SAP's official security notes to determine which vulnerabilities impact their deployments. No evidence of active wild exploitation was mentioned, but critical SAP vulnerabilities typically warrant expedited patching due to the enterprise nature of these systems.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.heise.de/news/SAP-Patchday-Teils-kritische-Sicherheitsluecken-in-mehreren-Produkten-gefixt-11363906.html"&gt;Read more&lt;/a&gt; · Source: heise-security&lt;/p&gt;</content>
   </entry>
   <entry>
     <title>FacturaScripts: Account takeover of any 2FA-enabled user (CVE-2026-47677)</title>
@@ -47,7 +110,7 @@
     <updated>2026-07-14T01:08:22.081942+00:00</updated>
     <link href="https://github.com/advisories/GHSA-c67f-gmxw-mj93" rel="alternate" />
     <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-47677&lt;/em&gt;&lt;/p&gt;&lt;p&gt;FacturaScripts authentication module (Core/Controller/Login.php) contains a critical authentication bypass in two-factor authentication validation that allows account takeover of any 2FA-enabled user. The vulnerable endpoint `/login?action=two-factor-validation` accepts unauthenticated POST requests containing only a username and TOTP code without password verification or CSRF protection, enabling attackers to brute-force valid TOTP codes and obtain valid session tokens. This vulnerability is critical severity and likely exploited given the straightforward attack vector. Immediately patch FacturaScripts to the latest version and implement rate-limiting on the two-factor validation endpoint as a temporary mitigation.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-c67f-gmxw-mj93"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-45262, CVE-2026-47677&lt;/em&gt;&lt;/p&gt;&lt;p&gt;FacturaScripts authentication module (Core/Controller/Login.php) contains a critical authentication bypass in two-factor authentication validation that allows account takeover of any 2FA-enabled user. The vulnerable endpoint `/login?action=two-factor-validation` accepts unauthenticated POST requests containing only a username and TOTP code without password verification or CSRF protection, enabling attackers to brute-force valid TOTP codes and obtain valid session tokens. This vulnerability is critical severity and likely exploited given the straightforward attack vector. Immediately patch FacturaScripts to the latest version and implement rate-limiting on the two-factor validation endpoint as a temporary mitigation.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-c67f-gmxw-mj93"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
   </entry>
   <entry>
     <title>Kimai: Default APP_SECRET in Docker Image Enables Cookie Forgery and Account Takeover (CVE-2026-52824)</title>
@@ -425,7 +488,7 @@
     <updated>2026-07-07T21:12:57.541319+00:00</updated>
     <link href="https://github.com/advisories/GHSA-5rr4-8452-hf4v" rel="alternate" />
     <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · ssrf · CVE-2026-53513&lt;/em&gt;&lt;/p&gt;&lt;p&gt;@better-auth/sso versions before 1.6.11 (and 1.7.0-beta.x) contain a critical server-side request forgery vulnerability in the OIDC provider registration endpoint that fails to validate endpoints, allowing authenticated users to trigger requests to arbitrary URLs. The flaw affects applications with the sso() plugin enabled and default access controls, potentially enabling attackers to exfiltrate IAM credentials or access internal services. Patch to version 1.6.11 or later immediately; if immediate patching is unavailable, restrict access to POST /sso/register to trusted users only. No evidence of active exploitation in the wild has been confirmed at this time.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-5rr4-8452-hf4v"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · ssrf · CVE-2026-15409, CVE-2026-53513&lt;/em&gt;&lt;/p&gt;&lt;p&gt;@better-auth/sso versions before 1.6.11 (and 1.7.0-beta.x) contain a critical server-side request forgery vulnerability in the OIDC provider registration endpoint that fails to validate endpoints, allowing authenticated users to trigger requests to arbitrary URLs. The flaw affects applications with the sso() plugin enabled and default access controls, potentially enabling attackers to exfiltrate IAM credentials or access internal services. Patch to version 1.6.11 or later immediately; if immediate patching is unavailable, restrict access to POST /sso/register to trusted users only. No evidence of active exploitation in the wild has been confirmed at this time.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-5rr4-8452-hf4v"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
   </entry>
   <entry>
     <title>Joomlack Page Builder: Joomlack Page Builder Improper Access Control Vulnerability (CVE-2026-56290)</title>
@@ -605,7 +668,7 @@
     <updated>2026-07-06T09:12:54.129051+00:00</updated>
     <link href="https://thehackernews.com/2026/07/sharepoint-rce-cve-2026-45659-added-to.html" rel="alternate" />
     <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-45659, CVE-2026-55040&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Microsoft SharePoint Server is affected by CVE-2026-45659, a high-severity (CVSS 8.8) remote code execution vulnerability stemming from unsafe deserialization of untrusted data. This flaw is actively exploited in the wild and has been added to CISA's Known Exploited Vulnerabilities catalog. Organizations should prioritize applying available patches from Microsoft immediately to remediate this critical threat.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/sharepoint-rce-cve-2026-45659-added-to.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-45659, CVE-2026-48564, CVE-2026-49167, CVE-2026-49173, CVE-2026-49181, CVE-2026-49795, CVE-2026-49798, CVE-2026-49808, CVE-2026-50332, CVE-2026-50354, CVE-2026-50370, CVE-2026-50377, CVE-2026-50390, CVE-2026-50397, CVE-2026-50399, CVE-2026-50423, CVE-2026-50436, CVE-2026-50459, CVE-2026-50477, CVE-2026-50478, CVE-2026-50484, CVE-2026-50518, CVE-2026-50661, CVE-2026-50673, CVE-2026-50683, CVE-2026-50685, CVE-2026-54128, CVE-2026-54132, CVE-2026-55040, CVE-2026-55944, CVE-2026-56155, CVE-2026-56159, CVE-2026-56164, CVE-2026-58532, CVE-2026-58627&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Microsoft SharePoint Server is affected by CVE-2026-45659, a high-severity (CVSS 8.8) remote code execution vulnerability stemming from unsafe deserialization of untrusted data. This flaw is actively exploited in the wild and has been added to CISA's Known Exploited Vulnerabilities catalog. Organizations should prioritize applying available patches from Microsoft immediately to remediate this critical threat.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/sharepoint-rce-cve-2026-45659-added-to.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
   </entry>
   <entry>
     <title>New ChocoPoC RAT Targets Vulnerability Researchers via Fake PoC Exploit Repos</title>
