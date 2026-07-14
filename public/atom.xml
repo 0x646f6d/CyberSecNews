@@ -3,7 +3,34 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-07-14T12:58:24.780031+00:00</updated>
+  <updated>2026-07-14T16:59:23.532353+00:00</updated>
+  <entry>
+    <title>Progress confirms ShareFile zero-day flaw behind Storage Zone shutdown</title>
+    <id>urn:cybersecnews:item:78</id>
+    <published>2026-07-14T16:59:23.532353+00:00</published>
+    <updated>2026-07-14T16:59:23.532353+00:00</updated>
+    <link href="https://www.bleepingcomputer.com/news/security/progress-confirms-sharefile-zero-day-flaw-behind-storage-zone-shutdown/" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Progress Software's ShareFile Storage Zone Controller is affected by a high-severity zero-day vulnerability that prompted emergency service shutdowns. The flaw allows unauthenticated remote code execution, enabling attackers to compromise affected systems. Active exploitation in the wild has been confirmed, making this a critical threat. Organizations must immediately apply the released security patches and verify Storage Zone Controller instances are updated to the patched versions before resuming operations.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/progress-confirms-sharefile-zero-day-flaw-behind-storage-zone-shutdown/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>11 Old Microsoft-Signed Linux UEFI Shims Could Let Attackers Bypass Secure Boot</title>
+    <id>urn:cybersecnews:item:77</id>
+    <published>2026-07-14T16:59:23.530955+00:00</published>
+    <updated>2026-07-14T16:59:23.530955+00:00</updated>
+    <link href="https://thehackernews.com/2026/07/11-old-microsoft-signed-linux-uefi.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · secure-boot-bypass&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Eleven legacy Microsoft-signed UEFI shims used in Linux distributions contain vulnerabilities enabling Secure Boot bypass on systems using these firmware standards. Attackers exploiting these flaws can execute arbitrary code during the boot process, facilitating UEFI bootkit deployment or other pre-OS malware installation. No active exploitation in the wild has been reported; however, severity is high given the fundamental nature of Secure Boot circumvention. Affected systems should update to patched UEFI shim versions and revoke the vulnerable signatures through firmware updates where available.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/11-old-microsoft-signed-linux-uefi.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>RabbitMQ Flaws Could Leak OAuth Secrets and Expose Cross-Tenant Queue Metadata</title>
+    <id>urn:cybersecnews:item:76</id>
+    <published>2026-07-14T16:59:23.529136+00:00</published>
+    <updated>2026-07-14T16:59:23.529136+00:00</updated>
+    <link href="https://thehackernews.com/2026/07/rabbitmq-flaws-could-leak-oauth-secrets.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass,information-disclosure&lt;/em&gt;&lt;/p&gt;&lt;p&gt;RabbitMQ message broker contains two access control vulnerabilities enabling attackers to leak OAuth client secrets and expose cross-tenant queue metadata, potentially compromising enterprise messaging infrastructure and tenant isolation. The flaws allow unauthorized access to sensitive authentication credentials and bypass of tenant boundaries, creating significant security risks in multi-tenant deployments. Severity appears high given the exposure of OAuth secrets and infrastructure metadata, though wild exploitation details were not specified in available reporting. Organizations should immediately patch RabbitMQ to the latest version addressing these access control issues and audit OAuth credential exposure in affected deployments.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/rabbitmq-flaws-could-leak-oauth-secrets.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>SAP-Patchday: Teils kritische Sicherheitslücken in mehreren Produkten gefixt</title>
     <id>urn:cybersecnews:item:75</id>
@@ -578,7 +605,7 @@
     <updated>2026-07-06T09:12:54.129051+00:00</updated>
     <link href="https://thehackernews.com/2026/07/sharepoint-rce-cve-2026-45659-added-to.html" rel="alternate" />
     <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-45659&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Microsoft SharePoint Server is affected by CVE-2026-45659, a high-severity (CVSS 8.8) remote code execution vulnerability stemming from unsafe deserialization of untrusted data. This flaw is actively exploited in the wild and has been added to CISA's Known Exploited Vulnerabilities catalog. Organizations should prioritize applying available patches from Microsoft immediately to remediate this critical threat.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/sharepoint-rce-cve-2026-45659-added-to.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-45659, CVE-2026-55040&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Microsoft SharePoint Server is affected by CVE-2026-45659, a high-severity (CVSS 8.8) remote code execution vulnerability stemming from unsafe deserialization of untrusted data. This flaw is actively exploited in the wild and has been added to CISA's Known Exploited Vulnerabilities catalog. Organizations should prioritize applying available patches from Microsoft immediately to remediate this critical threat.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/sharepoint-rce-cve-2026-45659-added-to.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
   </entry>
   <entry>
     <title>New ChocoPoC RAT Targets Vulnerability Researchers via Fake PoC Exploit Repos</title>
