@@ -9,6 +9,7 @@ description = "Daily cybersecurity news aggregator focused on zero/n-day vulnera
 readme = "README.md"
 requires-python = ">=3.10"
 license = { text = "MIT" }
+license-files = ["LICENSE"]
 dependencies = [
     "feedparser>=6.0",
     "requests>=2.31",
