@@ -185,16 +185,28 @@ required.
 
 ## Acknowledgments
 
-The idea for this project comes straight out of the work of
-[**Bad Sector Labs**](https://github.com/badsectorlabs). Their
-[*Last Week in Security* (LWiS)](https://blog.badsectorlabs.com/) writeups and
-the curated reading list they maintain are exactly the kind of "high signal, no
-noise" security coverage I wanted to keep up with — I liked it so much that I
-wanted a version that lands on my phone the moment something breaks. The curated
-red-team / offensive-tradecraft feed set here is derived from their `blogs.txt`
-reading list. All credit for that source selection is theirs; this project just
-wraps it in an automated fetch → filter → dedup → summarize → notify pipeline.
-Go read their stuff.
+This project exists because of
+[**Bad Sector Labs**](https://github.com/badsectorlabs) and their
+[*Last Week in Security* (LWiS)](https://blog.badsectorlabs.com/) newsletter.
+For over six years LWiS was *the* "high signal, no noise" weekly roundup of
+vulnerabilities, tools, and red-team tradecraft — every edition hand-curated and
+written, no AI, no automated filtering. It's the coverage I relied on to stay
+current.
+
+In 2025 the author [put LWiS on hiatus](https://blog.badsectorlabs.com/) to work
+full-time on [Ludus](https://ludus.cloud), noting that there "isn't a 1 for 1
+replacement" for it. That gap is exactly why I built this: I needed *something*
+to fill the hole LWiS left, so I wired the same public sources into an automated
+fetch → filter → dedup → summarize → notify pipeline that lands on my phone. It
+is **not** a replacement for LWiS — a hand-curated newsletter and a keyword +
+LLM filter are not the same thing — but it keeps the signal flowing until (I
+hope) LWiS returns.
+
+The curated red-team / offensive-tradecraft feed set here is derived directly
+from the [list of every blog LWiS followed](https://blog.badsectorlabs.com/files/blogs.txt).
+All credit for that source selection is theirs. If you miss LWiS too, you can
+[sign up to be notified when it's back](https://subscribe.badsectorlabs.com/subscription/form)
+— and go read the archive in the meantime.
 
 ## License
 
