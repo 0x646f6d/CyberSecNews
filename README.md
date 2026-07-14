@@ -4,7 +4,8 @@ A cybersecurity news aggregator that runs on a short interval (every 4h). It pul
 from a broad set of fast, high-signal sources — authoritative vulnerability/advisory
 feeds (CISA KEV, GitHub critical advisories, ZDI, Project Zero, watchTowr, SANS ISC,
 vendor research …) plus curated red-team / offensive-tradecraft blogs (derived from
-Bad Sector Labs' reading list) —
+[Bad Sector Labs'](https://github.com/BadSectorLabs) reading list —
+see [Acknowledgments](#acknowledgments)) —
 and keeps **only** the two things you care about —
 
 1. **Zero-/n-day vulnerabilities**, and
@@ -181,3 +182,20 @@ required.
 - X/Twitter connector (no free feed; the interface is ready).
 - Local Ollama LLM backend (the protocol is ready).
 - Self-hosted systemd deployment (GitHub Actions is the chosen path).
+
+## Acknowledgments
+
+The idea for this project comes straight out of the work of
+[**Bad Sector Labs**](https://github.com/badsectorlabs). Their
+[*Last Week in Security* (LWiS)](https://blog.badsectorlabs.com/) writeups and
+the curated reading list they maintain are exactly the kind of "high signal, no
+noise" security coverage I wanted to keep up with — I liked it so much that I
+wanted a version that lands on my phone the moment something breaks. The curated
+red-team / offensive-tradecraft feed set here is derived from their `blogs.txt`
+reading list. All credit for that source selection is theirs; this project just
+wraps it in an automated fetch → filter → dedup → summarize → notify pipeline.
+Go read their stuff.
+
+## License
+
+Released under the [MIT License](LICENSE).
