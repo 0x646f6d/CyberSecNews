@@ -3,7 +3,52 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-07-15T13:02:43.003248+00:00</updated>
+  <updated>2026-07-15T17:01:55.097500+00:00</updated>
+  <entry>
+    <title>Investigating Persistence Mechanisms in AWS</title>
+    <id>urn:cybersecnews:item:93</id>
+    <published>2026-07-15T17:01:55.097500+00:00</published>
+    <updated>2026-07-15T17:01:55.097500+00:00</updated>
+    <link href="https://www.rapid7.com/blog/post/dr-investigating-aws-persistence-mechanisms" rel="alternate" />
+    <category term="red-team" />
+    <content type="html">&lt;p&gt;&lt;em&gt;red-team · persistence&lt;/em&gt;&lt;/p&gt;&lt;p&gt;AWS identity and access management features (IAM users, roles, Lambda functions, and federated sessions) are commonly abused for persistence after initial compromise. Attackers establish footholds through techniques including creating backdoored IAM users with credentials and policies, modifying assume role policies to allow external account access, embedding malicious code in Lambda functions with public URLs, and creating federated sessions that survive credential rotation. These are established techniques actively exploited in the wild with high business impact due to difficulty in detection and containment. Organizations should implement deny-all policies on compromised identities immediately, rotate all affected credentials, review IAM permissions and trust policies regularly, and deploy comprehensive CloudTrail monitoring with queries targeting suspicious API calls like iam:CreateUser, iam:UpdateAssumeRolePolicy, lambda:CreateFunctionUrlConfig, and sts:GetFederationToken.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.rapid7.com/blog/post/dr-investigating-aws-persistence-mechanisms"&gt;Read more&lt;/a&gt; · Source: rapid7&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>MantisBT: SOAP API Authentication Bypass with Privilege Escalation to Administrator (CVE-2026-47156)</title>
+    <id>urn:cybersecnews:item:92</id>
+    <published>2026-07-15T17:01:55.094060+00:00</published>
+    <updated>2026-07-15T17:01:55.094060+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-c2xg-qjqw-2v98" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-47156&lt;/em&gt;&lt;/p&gt;&lt;p&gt;MantisBT versions 2.28.3 and earlier contain a critical authentication bypass in the SOAP API's mci_check_login() function allowing privilege escalation to administrator. An attacker can authenticate as any user including administrators by leveraging any valid cookie_string combined with a target username, exploitable by self-registered users on default installations where signup is enabled. This vulnerability is critical severity and likely exploited in the wild given its ease of exploitation. Immediately patch to the latest version beyond 2.28.3 and consider disabling self-registration ($g_allow_signup = OFF) as an interim mitigation.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-c2xg-qjqw-2v98"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>KNX Association KNX Protocol Connection Authorization Option 1: KNX Association KNX Protocol Connection Authorization Option 1 Overly Restrictive Account Lockout Mechanism Vulnerability (CVE-2023-4346)</title>
+    <id>urn:cybersecnews:item:91</id>
+    <published>2026-07-15T17:01:55.090563+00:00</published>
+    <updated>2026-07-15T17:01:55.090563+00:00</updated>
+    <link href="https://nvd.nist.gov/vuln/detail/CVE-2023-4346" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · account-lockout · CVE-2023-4346&lt;/em&gt;&lt;/p&gt;&lt;p&gt;KNX Protocol Connection Authorization Option 1 contains a flaw in its account lockout mechanism that allows attackers to purge all devices and lock BCU keys, effectively denying service to KNX-based building automation systems. This vulnerability is actively exploited in the wild and rated severe by CISA. Organizations must immediately apply vendor-provided mitigations per BOD 26-04 guidance, prioritizing internet-exposed assets, or discontinue use of affected systems if patches are unavailable.&lt;/p&gt;&lt;p&gt;&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2023-4346"&gt;Read more&lt;/a&gt; · Source: cisa-kev&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>We built a vulnerability vending machine: AI tokens in, zero-days out</title>
+    <id>urn:cybersecnews:item:90</id>
+    <published>2026-07-15T17:01:55.086580+00:00</published>
+    <updated>2026-07-15T17:01:55.086580+00:00</updated>
+    <link href="https://www.bleepingcomputer.com/news/security/we-built-a-vulnerability-vending-machine-ai-tokens-in-zero-days-out/" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · unspecified&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Intruder developed an automated system using AI and code slicing techniques to discover zero-day vulnerabilities in software, demonstrating the approach by identifying a previously unknown WordPress plugin vulnerability. The technique leverages large language models to analyze code and uncover complex logical flaws that traditional static analysis tools may miss. While the research is currently academic in nature with findings under responsible disclosure, this represents a significant escalation in vulnerability discovery automation that defenders should monitor. Organizations should prioritize timely patching of WordPress plugins and third-party software, implement runtime application self-protection (RASP) solutions, and consider adopting AI-powered security testing in their development pipelines to identify issues before attackers do.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/we-built-a-vulnerability-vending-machine-ai-tokens-in-zero-days-out/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Firefox, Chrome, Adobe, and VMware Updates Fix Multiple Critical Security Flaws</title>
+    <id>urn:cybersecnews:item:89</id>
+    <published>2026-07-15T17:01:55.080346+00:00</published>
+    <updated>2026-07-15T17:01:55.080346+00:00</updated>
+    <link href="https://thehackernews.com/2026/07/firefox-chrome-adobe-and-vmware-updates.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · memory-safety,site-isolation · CVE-2026-15718, CVE-2026-15719&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Mozilla Firefox addressed two critical vulnerabilities (CVE-2026-15718 in JavaScript/WebAssembly and CVE-2026-15719 in DOM Navigation) with public exploit code available, requiring immediate patching. Chrome, Adobe, and VMware also released updates addressing multiple critical flaws across their respective products. Users should prioritize patching Firefox immediately due to active exploitation risk, and apply updates for other affected software according to vendor severity ratings. Monitor systems for exploitation attempts targeting these vulnerabilities.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/firefox-chrome-adobe-and-vmware-updates.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Cursor Flaw Lets Malicious Cloned Repositories Trigger Windows Code Execution</title>
     <id>urn:cybersecnews:item:88</id>
