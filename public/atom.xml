@@ -3,7 +3,34 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-07-15T17:01:55.097500+00:00</updated>
+  <updated>2026-07-15T20:47:02.584572+00:00</updated>
+  <entry>
+    <title>TELEPUZ: a modular MaaS malware spreading via CLICKFIX-VIDAR chains</title>
+    <id>urn:cybersecnews:item:96</id>
+    <published>2026-07-15T20:47:02.584572+00:00</published>
+    <updated>2026-07-15T20:47:02.584572+00:00</updated>
+    <link href="https://www.elastic.co/security-labs/telepuz-maas-malware-clickfix" rel="alternate" />
+    <category term="red-team" />
+    <content type="html">&lt;p&gt;&lt;em&gt;red-team · malware-distribution&lt;/em&gt;&lt;/p&gt;&lt;p&gt;TELEPUZ is a modular malware-as-a-service platform discovered in April propagating through CLICKFIX social engineering chains that deliver VIDAR credential stealers. The malware employs advanced evasion techniques and maintains a command-and-control infrastructure enabling flexible payload delivery and post-exploitation capabilities. Active exploitation in the wild has been confirmed via widespread CLICKFIX campaigns targeting users through deceptive support scams. Organizations should strengthen email/browser security controls, implement credential guard mechanisms to defend against stealer malware, and conduct employee security awareness training targeting social engineering tactics commonly used in CLICKFIX attacks.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.elastic.co/security-labs/telepuz-maas-malware-clickfix"&gt;Read more&lt;/a&gt; · Source: elastic-security-labs&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>MantisBT: Reflected XSS in admin/install.php via unescaped printf (CVE-2026-52881)</title>
+    <id>urn:cybersecnews:item:95</id>
+    <published>2026-07-15T20:47:02.583357+00:00</published>
+    <updated>2026-07-15T20:47:02.583357+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-vcrw-4xvv-jh49" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · reflected-xss · CVE-2026-52881&lt;/em&gt;&lt;/p&gt;&lt;p&gt;MantisBT versions 2.28.3 and earlier contain critical reflected XSS vulnerabilities in `/admin/install.php` where user-supplied parameters are echoed unescaped via printf format strings, requiring no authentication. The existing Content Security Policy lacks a form-action directive, enabling attackers to inject credential-phishing forms and open redirects despite script-src restrictions. This vulnerability is actively exploitable for credential theft and other attacks. Upgrade to MantisBT 2.28.4 or later immediately, or implement strict input validation and additional CSP directives (form-action 'self') as interim mitigation.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-vcrw-4xvv-jh49"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Google Gemini CLI abused as a hacking agent, malware botnet operator</title>
+    <id>urn:cybersecnews:item:94</id>
+    <published>2026-07-15T20:47:02.578462+00:00</published>
+    <updated>2026-07-15T20:47:02.578462+00:00</updated>
+    <link href="https://www.bleepingcomputer.com/news/security/google-gemini-cli-abused-as-a-hacking-agent-malware-botnet-operator/" rel="alternate" />
+    <category term="red-team" />
+    <content type="html">&lt;p&gt;&lt;em&gt;red-team · ai-misuse&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Google Gemini CLI, an open-source AI tool, has been abused by threat actor "bandcampro" to automate hacking activities and control a botnet infrastructure. The actor leveraged the CLI's capabilities to execute commands and coordinate malicious operations, demonstrating how legitimate AI tools can be repurposed for offensive security operations. While this appears to be a limited-scale operation rather than widespread exploitation, it highlights the risk of AI tools being weaponized by threat actors. Organizations should implement strict access controls, monitor for suspicious AI tool usage patterns, and consider restricting or auditing open-source AI CLI deployments in their environments.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/google-gemini-cli-abused-as-a-hacking-agent-malware-botnet-operator/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Investigating Persistence Mechanisms in AWS</title>
     <id>urn:cybersecnews:item:93</id>
