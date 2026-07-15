@@ -3,7 +3,34 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-07-14T20:48:47.618234+00:00</updated>
+  <updated>2026-07-15T13:02:43.003248+00:00</updated>
+  <entry>
+    <title>Cursor Flaw Lets Malicious Cloned Repositories Trigger Windows Code Execution</title>
+    <id>urn:cybersecnews:item:88</id>
+    <published>2026-07-15T13:02:43.003248+00:00</published>
+    <updated>2026-07-15T13:02:43.003248+00:00</updated>
+    <link href="https://thehackernews.com/2026/07/cursor-flaw-lets-malicious-cloned.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · arbitrary-code-execution&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Cursor IDE on Windows contains a critical arbitrary code execution vulnerability where malicious cloned repositories can execute a git.exe binary placed in the project root without user interaction, approval dialogs, or warnings. The flaw allows attackers to execute code with full user privileges and access to source code, SSH keys, and cloud credentials, with repeated execution occurring as long as the project remains open. This is actively exploited in the wild through social engineering attacks distributing compromised repositories. Cursor users should immediately update to the latest patched version and implement repository scanning practices before opening untrusted projects.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/cursor-flaw-lets-malicious-cloned.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Researcher Drops New Windows Zero-Day PoC Hours After Microsoft Patch Tuesday</title>
+    <id>urn:cybersecnews:item:87</id>
+    <published>2026-07-15T13:02:43.001982+00:00</published>
+    <updated>2026-07-15T13:02:43.001982+00:00</updated>
+    <link href="https://thehackernews.com/2026/07/researcher-drops-new-windows-zero-day.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · privilege-escalation&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Windows User Profile Service (ProfSvc) vulnerability allows arbitrary hive loading leading to local privilege escalation. The flaw was disclosed publicly with a working PoC (LegacyHive) by researcher Chaotic Eclipse shortly after Microsoft's Patch Tuesday, indicating active disclosure risk. Severity appears high given the elevation of privileges capability, though exploitation requires local access and no in-the-wild exploitation has been reported at this time. Organizations should prioritize patching this vulnerability immediately and monitor for related CVE assignment and exploitation attempts.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/researcher-drops-new-windows-zero-day.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Update-Verteilung pausiert: Neue Windows-11-Updates lassen Dell-PCs abstürzen</title>
+    <id>urn:cybersecnews:item:86</id>
+    <published>2026-07-15T13:02:43.000432+00:00</published>
+    <updated>2026-07-15T13:02:43.000432+00:00</updated>
+    <link href="https://www.golem.de/news/update-verteilung-pausiert-neue-windows-11-updates-lassen-dell-pcs-abstuerzen-2607-210895.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · system-crash&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Windows 11 KB5035857 and related updates cause thermal management failures and unexpected shutdowns on Dell systems due to compatibility issues with Dell firmware or drivers. Microsoft has paused distribution of affected updates, severity is high given impact on system stability, and no active exploitation in the wild has been reported. Dell and Microsoft users should avoid manual installation of these KB versions and await corrected updates; alternatively, contact Dell support for firmware/driver guidance or rollback problematic updates via Windows Recovery.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.golem.de/news/update-verteilung-pausiert-neue-windows-11-updates-lassen-dell-pcs-abstuerzen-2607-210895.html"&gt;Read more&lt;/a&gt; · Source: golem-security&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>LegacyHive public disclosure</title>
     <id>urn:cybersecnews:item:85</id>
