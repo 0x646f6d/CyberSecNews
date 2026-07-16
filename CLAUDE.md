@@ -8,7 +8,7 @@ quick skim.
 ## What this is
 
 **CyberSecNews** is a Python service that aggregates cybersecurity news on a short
-interval (**every 4h** via the workflow), keeps **only two categories** of
+interval (**every 8h** via the workflow), keeps **only two categories** of
 interest, deduplicates against everything
 it has already reported, summarizes each new item with a small LLM, and sends one
 structured English report via **[ntfy.sh](https://ntfy.sh)**.
@@ -163,7 +163,7 @@ python -m pytest -q
 
 Hosting is **GitHub Actions** — no server; **deploy = `git push`**.
 
-- `.github/workflows/daily.yml`: cron `0 */4 * * *` (every 4h; frequency is the
+- `.github/workflows/daily.yml`: cron `0 */8 * * *` (every 8h; frequency is the
   main zero-/n-day latency lever) + `workflow_dispatch`. Installs, runs
   `python -m cybersecnews`, then commits `data/seen.db` back (`[skip ci]`).
   Needs `permissions: contents: write` (already set). Secrets are repo Actions

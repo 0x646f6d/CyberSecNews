@@ -3,9 +3,9 @@
 # (see the `env:` markers below) and should NOT be committed.
 
 # How far back to look for news each run. Kept slightly larger than the workflow
-# cron interval (every 4h) so consecutive runs overlap and nothing slips through;
+# cron interval (every 8h) so consecutive runs overlap and nothing slips through;
 # the dedup DB prevents the overlap from causing repeat reports.
-since_hours: 6
+since_hours: 10
 
 # Per-feed network timeout (seconds) and max concurrent feed fetches. Feeds are
 # fetched in parallel, so one slow/hanging source can't stall the whole run.

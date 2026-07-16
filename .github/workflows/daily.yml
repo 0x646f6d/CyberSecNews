@@ -2,9 +2,9 @@ name: CyberSecNews
 
 on:
   schedule:
-    # Every 4 hours (cron is in UTC). Frequent runs keep zero-/n-day latency low;
+    # Every 8 hours (cron is in UTC). Frequent runs keep zero-/n-day latency low;
     # the dedup DB ensures nothing is reported twice across overlapping windows.
-    - cron: "0 */4 * * *"
+    - cron: "0 */8 * * *"
   workflow_dispatch:      # allow manual runs from the Actions tab
     inputs:
       since_hours:
