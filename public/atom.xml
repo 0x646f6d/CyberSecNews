@@ -3,7 +3,43 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-07-16T01:14:46.109654+00:00</updated>
+  <updated>2026-07-16T13:10:29.759146+00:00</updated>
+  <entry>
+    <title>Russian hackers trojanize WebEx, Zoom apps to push Starland malware</title>
+    <id>urn:cybersecnews:item:102</id>
+    <published>2026-07-16T13:10:29.759146+00:00</published>
+    <updated>2026-07-16T13:10:29.759146+00:00</updated>
+    <link href="https://www.bleepingcomputer.com/news/security/russian-hackers-trojanize-webex-zoom-apps-to-push-starland-malware/" rel="alternate" />
+    <category term="red-team" />
+    <content type="html">&lt;p&gt;&lt;em&gt;red-team · c2&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Russian threat actor UAT-11795 is distributing trojanized versions of Webex and Zoom installers to deliver Starland RAT, a new backdoor capable of stealing credentials and cryptocurrency. The malware demonstrates high severity due to its credential-stealing capabilities and remote access functionality, with active exploitation reported in the wild. Organizations should verify software authenticity by downloading directly from official vendor websites, implement credential rotation for potentially compromised accounts, and deploy endpoint detection tools to identify Starland RAT's command-and-control communications. Security awareness training on software distribution risks is recommended to prevent initial compromise vectors.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/russian-hackers-trojanize-webex-zoom-apps-to-push-starland-malware/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>OpenAI’s GPT-Red Automates Prompt Injection Testing to Harden GPT-5.6 Sol</title>
+    <id>urn:cybersecnews:item:101</id>
+    <published>2026-07-16T13:10:29.758300+00:00</published>
+    <updated>2026-07-16T13:10:29.758300+00:00</updated>
+    <link href="https://thehackernews.com/2026/07/openais-gpt-red-automates-prompt.html" rel="alternate" />
+    <category term="red-team" />
+    <content type="html">&lt;p&gt;&lt;em&gt;red-team · prompt-injection-testing&lt;/em&gt;&lt;/p&gt;&lt;p&gt;OpenAI's GPT-Red is an internal automated red-teaming tool designed to identify prompt injection vulnerabilities in large language models at scale before deployment. Prompt injection attacks manipulate LLM behavior by embedding malicious instructions in user inputs, potentially causing models to ignore safety guidelines or leak sensitive information; this represents a moderate-to-high severity threat as these vulnerabilities are actively exploited in production LLM systems. OpenAI reports that earlier model versions were highly vulnerable to GPT-Red's attacks, and the company uses these findings to adversarially train improved versions. Organizations deploying LLMs should implement input sanitization, prompt engineering best practices, and regular adversarial testing; consider adopting similar red-teaming methodologies to identify vulnerabilities in custom LLM deployments.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/openais-gpt-red-automates-prompt.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Unpatched Shark Vacuum Flaw Could Let Attackers Control Other Vacuums Region-Wide</title>
+    <id>urn:cybersecnews:item:100</id>
+    <published>2026-07-16T13:10:29.757126+00:00</published>
+    <updated>2026-07-16T13:10:29.757126+00:00</updated>
+    <link href="https://thehackernews.com/2026/07/unpatched-shark-vacuum-flaw-could-let.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · certificate-extraction,rce,privilege-escalation&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Shark RV2320EDUS robot vacuums contain a critical vulnerability allowing attackers with physical access to extract hardcoded AWS certificates from flash memory, then use those credentials to remotely compromise other vacuums in the same region with full control including camera access, movement, and Wi-Fi credential theft. The flaw affects authentication mechanisms that fail to properly isolate per-device credentials. This is unpatched and the proof-of-concept was publicly disclosed Monday with active exploitation likely imminent. Shark should immediately revoke compromised certificates, implement per-device authentication, and push a firmware update; users should segregate vacuums to restricted network segments pending patches.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/unpatched-shark-vacuum-flaw-could-let.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Daxin Resurfaces in Taiwan Alongside Stupig Pre-Login SYSTEM Backdoor</title>
+    <id>urn:cybersecnews:item:99</id>
+    <published>2026-07-16T13:10:29.755159+00:00</published>
+    <updated>2026-07-16T13:10:29.755159+00:00</updated>
+    <link href="https://thehackernews.com/2026/07/daxin-resurfaces-in-taiwan-alongside.html" rel="alternate" />
+    <category term="red-team" />
+    <content type="html">&lt;p&gt;&lt;em&gt;red-team · rootkit&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Daxin kernel-mode rootkit and newly discovered Stupig pre-login backdoor have re-emerged in a Taiwan manufacturing environment after a four-year hiatus, attributed to China-linked threat actors. Daxin persists in system memory via a malicious driver (srt64.sys) enabling deep system compromise, while Stupig operates at the pre-login stage suggesting persistent access mechanisms. This represents active exploitation in the wild with high severity given the targeted nature against critical infrastructure and manufacturing sectors. Organizations should prioritize threat hunting for these artifacts, implement kernel-mode code signing enforcement, conduct forensic analysis of affected systems, and apply EDR solutions capable of detecting anomalous driver loading and pre-login persistence techniques.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/daxin-resurfaces-in-taiwan-alongside.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>websocket-driver: Message corruption via abuse of protocol length headers (CVE-2026-54466)</title>
     <id>urn:cybersecnews:item:98</id>
@@ -867,23 +903,5 @@
     <link href="https://www.heise.de/news/Adobe-Patchday-fuer-ColdFusion-und-Campaign-Classic-fortan-zweimal-im-Monat-11351219.html" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-48282, CVE-2026-48283, CVE-2026-48313&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Adobe ColdFusion and Campaign Classic are affected by critical remote code execution vulnerabilities that allow unauthenticated attackers to execute arbitrary code. Both products are impacted by exploitable flaws with high severity ratings, and Adobe is increasing patch frequency going forward to address security issues more rapidly. Immediate patching is mandatory for all affected installations, with priority given to internet-facing systems running vulnerable versions of ColdFusion and Campaign Classic. Users should apply the latest security updates from Adobe without delay and enable monitoring for exploitation attempts.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.heise.de/news/Adobe-Patchday-fuer-ColdFusion-und-Campaign-Classic-fortan-zweimal-im-Monat-11351219.html"&gt;Read more&lt;/a&gt; · Source: heise-security&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Schwachstellen in Synology MailPlus Server lassen Angreifer passieren</title>
-    <id>urn:cybersecnews:item:2</id>
-    <published>2026-07-06T09:12:54.118603+00:00</published>
-    <updated>2026-07-06T09:12:54.118603+00:00</updated>
-    <link href="https://www.heise.de/news/Schwachstellen-in-Synology-MailPlus-Server-lassen-Angreifer-passieren-11351331.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · multiple&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Synology MailPlus Server contains multiple vulnerabilities that allow attackers to gain unauthorized access to affected network storage systems. The vulnerabilities include authentication bypass and remote code execution flaws that could permit unauthenticated attackers to compromise mail services and potentially the underlying NAS device. Synology has released security patches to address these issues; immediate patching is recommended for all affected MailPlus Server installations. Administrators should prioritize applying available updates and verify no unauthorized access has occurred on their systems.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.heise.de/news/Schwachstellen-in-Synology-MailPlus-Server-lassen-Angreifer-passieren-11351331.html"&gt;Read more&lt;/a&gt; · Source: heise-security&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Opera GX Flaw Let Malicious Sites Auto-Install Mods to Steal Data From Visited Pages</title>
-    <id>urn:cybersecnews:item:1</id>
-    <published>2026-07-06T09:03:17.194295+00:00</published>
-    <updated>2026-07-06T09:03:17.194295+00:00</updated>
-    <link href="https://thehackernews.com/2026/07/opera-gx-flaw-let-malicious-sites-auto.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · malicious-addon-installation&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Opera GX contained a vulnerability allowing malicious websites to silently install browser add-ons without user interaction, enabling data theft from visited pages including sensitive information like Gmail addresses. The flaw exploited the browser's mod installation mechanism to inject malicious extensions that could exfiltrate user data across multiple sites visited during a session. Opera has released a patch and reported no evidence of active exploitation in the wild. Users should update Opera GX immediately to the patched version to prevent unauthorized add-on installation and data harvesting attacks.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/opera-gx-flaw-let-malicious-sites-auto.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
   </entry>
 </feed>
