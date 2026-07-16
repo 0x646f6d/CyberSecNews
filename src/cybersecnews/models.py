@@ -42,6 +42,12 @@ class Classification:
     affected_component: Optional[str] = None
     cve_ids: list[str] = field(default_factory=list)
     severity: Optional[str] = None
+    # How relevant this item is to *us*, independent of raw CVSS severity: 1
+    # (negligible — obscure/no-name product, tiny install base) .. 5 (critical —
+    # ubiquitous / perimeter / actively exploited, e.g. Windows, VPN appliances).
+    # None when the LLM did not score it (older records / stub); treated as
+    # "unknown", which fails open (never filtered).
+    relevance: Optional[int] = None
 
     @property
     def is_interesting(self) -> bool:

@@ -80,6 +80,12 @@ class Config:
     connectors: list[ConnectorConfig] = field(default_factory=list)
     prefilter: dict[str, list[str]] = field(default_factory=dict)
     llm: LLMConfig = field(default_factory=LLMConfig)
+    # Minimum LLM relevance score (1..5) an item must reach to be reported. 1 (the
+    # default) reports everything; raise it to suppress low-relevance items such as
+    # flaws in obscure/no-name web CMS plugins while keeping Windows/perimeter/
+    # actively-exploited items. Items the LLM did not score (relevance=None) always
+    # pass (fail open).
+    min_relevance: int = 1
     dedup_window_days: int = 45
     database: str = "data/seen.db"
     ntfy: NtfyConfig = field(default_factory=NtfyConfig)
@@ -162,6 +168,7 @@ def load_config(path: Optional[str | Path] = None) -> Config:
         connectors=connectors,
         prefilter=raw.get("prefilter", {}),
         llm=llm,
+        min_relevance=raw.get("min_relevance", 1),
         dedup_window_days=raw.get("dedup_window_days", 45),
         database=raw.get("database", "data/seen.db"),
         ntfy=ntfy,
@@ -180,3 +187,5 @@ def _validate(config: Config) -> None:
         raise ConfigError("since_hours must be positive.")
     if not config.categories:
         raise ConfigError("At least one category must be enabled.")
+    if not 1 <= config.min_relevance <= 5:
+        raise ConfigError("min_relevance must be between 1 and 5.")

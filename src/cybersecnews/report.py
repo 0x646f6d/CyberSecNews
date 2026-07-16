@@ -57,9 +57,16 @@ def build_report(items: list[Vulnerability], report_date: date | None = None) ->
         heartbeat = Message(title=title, body=body, tags="shield")
         return Report(messages=[heartbeat], count=0)
 
-    # Vulnerabilities first, then red-team, then anything else; stable within a
-    # group so notifications arrive in a predictable order.
-    ordered = sorted(items, key=lambda it: _CATEGORY_META.get(it.category, _DEFAULT_META)[1])
+    # Vulnerabilities first, then red-team, then anything else; within a category,
+    # most relevant first (unscored items sort last). Stable otherwise, so
+    # notifications arrive in a predictable order.
+    ordered = sorted(
+        items,
+        key=lambda it: (
+            _CATEGORY_META.get(it.category, _DEFAULT_META)[1],
+            -(it.classification.relevance or 0),
+        ),
+    )
     messages = [_format_item(item) for item in ordered]
     return Report(messages=messages, count=len(items))
 
@@ -75,6 +82,8 @@ def _format_item(item: Vulnerability) -> Message:
     meta: list[str] = []
     if c.is_zero_or_nday:
         meta.append("zero/n-day")
+    if c.relevance:
+        meta.append(f"relevance {c.relevance}/5")
     if c.severity:
         meta.append(c.severity)
     if c.vuln_class:

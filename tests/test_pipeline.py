@@ -39,9 +39,13 @@ def _article(url, title="t", summary="s"):
     )
 
 
-def _cls(category, key, cve=None):
+def _cls(category, key, cve=None, relevance=None):
     return Classification(
-        category=category, canonical_key=key, one_line="x", cve_ids=list(cve or [])
+        category=category,
+        canonical_key=key,
+        one_line="x",
+        cve_ids=list(cve or []),
+        relevance=relevance,
     )
 
 
@@ -148,6 +152,49 @@ def test_bypass_prefilter_reaches_llm(tmp_path, monkeypatch):
     db = Database(config.database)
     stats = pipeline.run(config, db, llm, dry_run=True)
     assert stats.prefiltered == 1
+    assert stats.new_items == 1
+    db.close()
+
+
+def test_min_relevance_filters_low_items(tmp_path, monkeypatch):
+    # A high-relevance Windows flaw and a low-relevance no-name plugin flaw.
+    articles = [
+        _article("https://n/1", "Windows RCE"),
+        _article("https://n/2", "Obscure CMS plugin flaw"),
+    ]
+    _patch_connectors(monkeypatch, articles)
+    llm = FakeLLM(
+        classifications={
+            "https://n/1": _cls(CATEGORY_VULNERABILITY, "microsoft:windows:rce", relevance=5),
+            "https://n/2": _cls(CATEGORY_VULNERABILITY, "noname:plugin:xss", relevance=1),
+        }
+    )
+    config = _config(tmp_path)
+    config.min_relevance = 3
+
+    db = Database(config.database)
+    stats = pipeline.run(config, db, llm, dry_run=True)
+
+    assert stats.classified_interesting == 2
+    assert stats.low_relevance == 1  # the plugin flaw dropped
+    assert stats.new_items == 1
+    assert stats.items[0].canonical_key == "microsoft:windows:rce"
+    db.close()
+
+
+def test_unscored_relevance_fails_open(tmp_path, monkeypatch):
+    # relevance=None (e.g. the LLM didn't score it) must never be filtered.
+    articles = [_article("https://n/1", "some flaw")]
+    _patch_connectors(monkeypatch, articles)
+    llm = FakeLLM(
+        classifications={"https://n/1": _cls(CATEGORY_VULNERABILITY, "a:b:rce")}
+    )
+    config = _config(tmp_path)
+    config.min_relevance = 5
+
+    db = Database(config.database)
+    stats = pipeline.run(config, db, llm, dry_run=True)
+    assert stats.low_relevance == 0
     assert stats.new_items == 1
     db.close()
 

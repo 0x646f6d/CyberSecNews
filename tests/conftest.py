@@ -38,6 +38,7 @@ def make_vuln(
     cve_ids=None,
     is_zero=False,
     summary="Summary text",
+    relevance=None,
 ) -> Vulnerability:
     article = make_article(title=title, url=url)
     classification = Classification(
@@ -46,6 +47,7 @@ def make_vuln(
         one_line=title,
         is_zero_or_nday=is_zero,
         cve_ids=list(cve_ids or []),
+        relevance=relevance,
     )
     return Vulnerability(
         article=article, classification=classification, summary=summary, urls=[url]

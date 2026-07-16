@@ -26,6 +26,7 @@ class RunStats:
     in_window: int = 0
     prefiltered: int = 0
     classified_interesting: int = 0
+    low_relevance: int = 0
     new_items: int = 0
     duplicates: int = 0
     report: Report | None = None
@@ -89,6 +90,23 @@ def run(config: Config, db: Database, llm: LLMClient, dry_run: bool = False) -> 
             continue
         stats.classified_interesting += 1
 
+        # Relevance gate: drop low-relevance items (e.g. a flaw in an obscure web
+        # CMS plugin) while keeping Windows/perimeter/actively-exploited ones.
+        # Items the LLM did not score (relevance=None) fail open.
+        if (
+            classification.relevance is not None
+            and classification.relevance < config.min_relevance
+        ):
+            stats.low_relevance += 1
+            log.info(
+                "[relevance] drop (%d < %d): %s [%s]",
+                classification.relevance,
+                config.min_relevance,
+                article.title,
+                classification.canonical_key,
+            )
+            continue
+
         vuln = Vulnerability(
             article=article, classification=classification, urls=[article.url]
         )
@@ -121,8 +139,9 @@ def run(config: Config, db: Database, llm: LLMClient, dry_run: bool = False) -> 
     stats.new_items = len(new_items)
     stats.items = new_items
     log.info(
-        "classified interesting=%d, new=%d, duplicates=%d",
+        "classified interesting=%d, low_relevance=%d, new=%d, duplicates=%d",
         stats.classified_interesting,
+        stats.low_relevance,
         stats.new_items,
         stats.duplicates,
     )

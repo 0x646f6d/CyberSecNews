@@ -47,6 +47,45 @@ _VULN_TERMS = (
     "patch",
 )
 
+# High-relevance keywords: ubiquitous / perimeter / critical-infrastructure
+# products and in-the-wild exploitation. Crude heuristic only — the real model
+# does a far better job (see CLAUDE.md on the stub's limitations).
+_HIGH_RELEVANCE_TERMS = (
+    "windows",
+    "microsoft",
+    "active directory",
+    "exchange",
+    "linux kernel",
+    "vmware",
+    "esxi",
+    "hypervisor",
+    "chrome",
+    "firefox",
+    "ivanti",
+    "fortinet",
+    "palo alto",
+    "citrix",
+    "cisco",
+    "vpn",
+    "firewall",
+    "exploited in the wild",
+    "actively exploited",
+    "zero-day",
+    "0-day",
+    "zero day",
+)
+# Low-relevance keywords: niche / no-name web add-ons.
+_LOW_RELEVANCE_TERMS = (
+    "plugin",
+    "wordpress",
+    "drupal",
+    "joomla",
+    "theme",
+    "extension",
+    "add-on",
+    "addon",
+)
+
 
 class HeuristicLLM:
     """Implements the LLMClient protocol with simple heuristics."""
@@ -70,6 +109,7 @@ class HeuristicLLM:
             one_line=article.title[:140],
             is_zero_or_nday=is_zero,
             cve_ids=cves,
+            relevance=_guess_relevance(text),
         )
 
     def match_existing(
@@ -83,6 +123,16 @@ class HeuristicLLM:
 
     def summarize(self, article: Article, classification: Classification) -> str:
         return article.summary or classification.one_line
+
+
+def _guess_relevance(text: str) -> int:
+    """Crude 1..5 relevance guess. High for ubiquitous/exploited, low for niche
+    web add-ons, 3 otherwise."""
+    if any(t in text for t in _HIGH_RELEVANCE_TERMS):
+        return 5
+    if any(t in text for t in _LOW_RELEVANCE_TERMS):
+        return 2
+    return 3
 
 
 def _slug(value: str) -> str:

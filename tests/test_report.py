@@ -53,6 +53,35 @@ def test_one_message_per_item_ordered():
     assert red_msg.tags == "dart,crossed_swords"
 
 
+def test_relevance_shown_and_orders_within_category():
+    items = [
+        make_vuln(
+            title="Low relevance plugin",
+            url="https://a/low",
+            category=CATEGORY_VULNERABILITY,
+            canonical_key="noname:plugin:xss",
+            relevance=2,
+        ),
+        make_vuln(
+            title="Windows RCE",
+            url="https://a/high",
+            category=CATEGORY_VULNERABILITY,
+            canonical_key="microsoft:windows:rce",
+            relevance=5,
+        ),
+    ]
+    report = build_report(items, report_date=date(2026, 7, 6))
+
+    # Higher relevance first within the same category.
+    assert [m.title for m in report.messages] == [
+        "microsoft:windows:rce",
+        "noname:plugin:xss",
+    ]
+    # Relevance surfaces in the notification body.
+    assert "relevance 5/5" in report.messages[0].body
+    assert "relevance 2/5" in report.messages[1].body
+
+
 def test_multiple_sources_listed():
     v = make_vuln(url="https://a/1", category=CATEGORY_VULNERABILITY)
     v.urls = ["https://a/1", "https://b/2"]

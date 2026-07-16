@@ -51,9 +51,30 @@ Respond with ONLY a JSON object, no prose, with exactly these keys:
   "affected_component": string|null,
   "cve_ids": [string],             // e.g. ["CVE-2024-1234"], empty if none (common for zero-days)
   "severity": string|null,         // e.g. "critical","high","CVSS 9.8", or null
+  "relevance": integer,            // 1..5, how relevant this item is to a security engineer (see scale below)
   "canonical_key": string,         // lowercase stable identity slug "vendor:product:vuln_class" e.g. "ivanti:connect-secure:auth-bypass". Use best-effort tokens; no spaces.
   "one_line": string               // <= 140 char neutral one-line description
 }
+
+Relevance scale (independent of raw CVSS severity — it measures how much a
+defender/red-teamer should care, driven mainly by how widely the affected thing
+is deployed and how exposed/exploited it is):
+- 5: ubiquitous or perimeter/critical infrastructure, or actively exploited in the
+     wild. Windows, Linux kernel, major browsers, hypervisors (VMware/ESXi),
+     Active Directory, Exchange, and internet-facing enterprise gear — VPNs,
+     firewalls, gateways (Ivanti, Fortinet, Palo Alto, Citrix, Cisco). Also any
+     flaw with confirmed in-the-wild exploitation.
+- 4: widely deployed software / popular frameworks / common server software with a
+     large install base (e.g. WordPress/Drupal core, OpenSSL, popular libraries,
+     mainstream databases).
+- 3: moderately used products; notable but not everywhere.
+- 2: niche or less-common products; limited install base.
+- 1: obscure / no-name products, or minor third-party plugins/extensions/themes
+     with a tiny install base (e.g. an unknown WordPress plugin).
+For red_team items, rate how novel/impactful the tradecraft is (default 3 if
+unclear). Bump the score up when a flaw is remotely and unauthenticated
+exploitable, or exploited in the wild. If genuinely unsure, use 3.
+
 Do not invent CVE numbers. If unsure, prefer "other"."""
 
 MATCH_SYSTEM = """You decide whether a NEW security item describes the SAME
@@ -215,7 +236,19 @@ def _parse_classification(data: dict[str, Any], article: Article) -> Classificat
         affected_component=_opt_str(data.get("affected_component")),
         cve_ids=cve_ids,
         severity=_opt_str(data.get("severity")),
+        relevance=_opt_relevance(data.get("relevance")),
     )
+
+
+def _opt_relevance(value: Any) -> Optional[int]:
+    """Parse the 1..5 relevance score, clamping to range; None if unparseable."""
+    if value is None:
+        return None
+    try:
+        score = int(value)
+    except (TypeError, ValueError):
+        return None
+    return max(1, min(5, score))
 
 
 def _normalize_cve(value: str) -> str:

@@ -95,6 +95,15 @@ Tests in `tests/` (see Testing below).
 - **Store-after-report ordering:** new items are persisted only after the report is
   built (and never on `--dry-run`), so a crash mid-run doesn't silently swallow an
   unreported item.
+- **Relevance scoring.** The classify call also returns a `relevance` score
+  (`Classification.relevance`, 1..5) — how much a defender should care, driven by
+  deployment breadth + exposure/exploitation (Windows/perimeter/actively-exploited
+  = 5; obscure no-name web-CMS plugin = 1). It is *independent* of raw CVSS
+  `severity`. The pipeline drops items below `config.min_relevance` (default 1 =
+  keep everything) *after* classify but *before* dedup/report; `relevance=None`
+  (unscored — older records / stub) fails open. The report shows `relevance N/5`
+  and orders items most-relevant-first within each category. Not persisted to the
+  DB (send-path only).
 - **Persistence = `data/seen.db` committed back by the workflow.** This SQLite file
   is the "already reported" memory and is **intentionally NOT git-ignored**
   (see `.gitignore` note). The daily workflow commits it after each run so state
@@ -133,8 +142,8 @@ python -m pytest -q
   Key knobs: `connectors[]` (feeds; `enabled: false` to disable,
   `bypass_prefilter: true` to skip the keyword gate), `prefilter` (vuln + red-team
   keyword lists), `categories`, `llm.model`, `llm.semantic_dedup` (toggle layer 3),
-  `dedup_window_days`, `since_hours`, `fetch_timeout`, `fetch_workers`,
-  `ntfy.quiet_heartbeat`. Sources are two-track: high-volume general news outlets
+  `dedup_window_days`, `min_relevance` (1..5 gate; 1 = report everything),
+  `since_hours`, `fetch_timeout`, `fetch_workers`, `ntfy.quiet_heartbeat`. Sources are two-track: high-volume general news outlets
   (prefilter-gated) plus curated fast vuln feeds + red-team blogs (bypass; the
   red-team set is derived from Bad Sector Labs' `blogs.txt`). Two of the fast
   sources are **JSON APIs, not RSS** — `cisa_kev` (actively-exploited CVEs) and
