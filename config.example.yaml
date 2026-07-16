@@ -273,7 +273,7 @@ llm:
 # [relevance] drop). Leave at 1 to report everything; raise to e.g. 3 to suppress
 # no-name web-CMS-plugin flaws while keeping Windows/perimeter items. Items the LLM
 # could not score always pass (fail open).
-min_relevance: 1
+min_relevance: 3
 
 # Dedup: how many days back the semantic layer compares against.
 dedup_window_days: 45
