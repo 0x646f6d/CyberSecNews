@@ -3,7 +3,25 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-07-15T20:47:02.584572+00:00</updated>
+  <updated>2026-07-16T01:14:46.109654+00:00</updated>
+  <entry>
+    <title>websocket-driver: Message corruption via abuse of protocol length headers (CVE-2026-54466)</title>
+    <id>urn:cybersecnews:item:98</id>
+    <published>2026-07-16T01:14:46.109654+00:00</published>
+    <updated>2026-07-16T01:14:46.109654+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-xv26-6w52-cph6" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · dos · CVE-2026-54466&lt;/em&gt;&lt;/p&gt;&lt;p&gt;The websocket-driver npm package is vulnerable to message corruption (CVE-2026-54466) where attackers can send malformed WebSocket frame length headers with an indefinite sequence of high-bit-set bytes, causing servers to parse an arbitrarily large integer that exceeds JavaScript's 64-bit floating point precision limits and corrupts subsequent payload parsing. This critical vulnerability is exploitable remotely without authentication and can lead to denial of service or unexpected protocol behavior. Patch to the latest version of websocket-driver immediately, as this affects all versions using the vulnerable frame parsing logic. Monitor for suspicious WebSocket connections with malformed length headers as a temporary mitigation if immediate patching is not feasible.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-xv26-6w52-cph6"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Zoom warns of critical account takeover vulnerability</title>
+    <id>urn:cybersecnews:item:97</id>
+    <published>2026-07-16T01:14:46.106932+00:00</published>
+    <updated>2026-07-16T01:14:46.106932+00:00</updated>
+    <link href="https://www.bleepingcomputer.com/news/security/zoom-warns-of-critical-account-takeover-vulnerability/" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · account-takeover&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Zoom desktop client and SDK for Windows contain a critical account takeover vulnerability (CVE-pending) exploitable by unauthenticated attackers without user interaction. The flaw enables complete compromise of user accounts through a mechanism leveraging improper credential handling or session management. Zoom has not indicated active exploitation in the wild but rates this as critical given the low attack complexity and widespread client deployment. Users should immediately update to the latest patched version of Zoom; administrators should enforce mandatory client updates enterprise-wide.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/zoom-warns-of-critical-account-takeover-vulnerability/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>TELEPUZ: a modular MaaS malware spreading via CLICKFIX-VIDAR chains</title>
     <id>urn:cybersecnews:item:96</id>
