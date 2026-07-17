@@ -3,7 +3,25 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-07-16T13:10:29.759146+00:00</updated>
+  <updated>2026-07-17T02:37:48.355984+00:00</updated>
+  <entry>
+    <title>Envoy Gateway: Authentication Bypass via Improper Input Validation in EnvoyExtensionPolicy Lua Allows Secret Disclosure (CVE-2026-53713)</title>
+    <id>urn:cybersecnews:item:104</id>
+    <published>2026-07-17T02:37:48.355984+00:00</published>
+    <updated>2026-07-17T02:37:48.355984+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-wcrf-9vrr-854f" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-53713&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Envoy Gateway's EnvoyExtensionPolicy Lua extension fails to properly normalize path separators, allowing attackers to bypass file access restrictions via double-slash paths (e.g., `//etc/passwd`) and disclose sensitive files from the controller pod filesystem. The vulnerability is critical with high exploitability due to improper input validation in the `to_absolute_normalized_path` function. No indication of active exploitation in the wild at this time. Apply the patched version of Envoy Gateway immediately; in the interim, restrict who can submit EnvoyExtensionPolicy resources via RBAC controls.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-wcrf-9vrr-854f"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Fortinet FortiSandbox: Fortinet FortiSandbox OS Command Injection Vulnerability (CVE-2026-25089)</title>
+    <id>urn:cybersecnews:item:103</id>
+    <published>2026-07-17T02:37:48.310076+00:00</published>
+    <updated>2026-07-17T02:37:48.310076+00:00</updated>
+    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-25089" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · os-command-injection · CVE-2026-25089&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Fortinet FortiSandbox, FortiSandbox Cloud, and FortiSandbox PaaS contain an unauthenticated OS command injection vulnerability (CVE-2026-25089) exploitable via crafted HTTP requests, allowing arbitrary command execution. This vulnerability is actively exploited in the wild and carries high severity due to its pre-authentication nature and complete system compromise potential. Immediately apply vendor-supplied patches following CISA BOD 26-04 prioritization guidelines; if mitigations are unavailable for cloud deployments, discontinue service use. Conduct forensic triage on affected systems and evaluate internet exposure for all FortiSandbox instances.&lt;/p&gt;&lt;p&gt;&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2026-25089"&gt;Read more&lt;/a&gt; · Source: cisa-kev&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Russian hackers trojanize WebEx, Zoom apps to push Starland malware</title>
     <id>urn:cybersecnews:item:102</id>
@@ -821,7 +839,7 @@
     <updated>2026-07-06T09:12:54.129051+00:00</updated>
     <link href="https://thehackernews.com/2026/07/sharepoint-rce-cve-2026-45659-added-to.html" rel="alternate" />
     <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-45659, CVE-2026-48564, CVE-2026-49167, CVE-2026-49173, CVE-2026-49181, CVE-2026-49795, CVE-2026-49798, CVE-2026-49808, CVE-2026-50332, CVE-2026-50354, CVE-2026-50370, CVE-2026-50377, CVE-2026-50390, CVE-2026-50397, CVE-2026-50399, CVE-2026-50423, CVE-2026-50436, CVE-2026-50459, CVE-2026-50477, CVE-2026-50478, CVE-2026-50484, CVE-2026-50518, CVE-2026-50656, CVE-2026-50661, CVE-2026-50663, CVE-2026-50673, CVE-2026-50683, CVE-2026-50685, CVE-2026-54128, CVE-2026-54132, CVE-2026-55010, CVE-2026-55040, CVE-2026-55944, CVE-2026-56155, CVE-2026-56159, CVE-2026-56164, CVE-2026-57092, CVE-2026-58532, CVE-2026-58627&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Microsoft SharePoint Server is affected by CVE-2026-45659, a high-severity (CVSS 8.8) remote code execution vulnerability stemming from unsafe deserialization of untrusted data. This flaw is actively exploited in the wild and has been added to CISA's Known Exploited Vulnerabilities catalog. Organizations should prioritize applying available patches from Microsoft immediately to remediate this critical threat.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/sharepoint-rce-cve-2026-45659-added-to.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-45659, CVE-2026-48564, CVE-2026-49167, CVE-2026-49173, CVE-2026-49181, CVE-2026-49795, CVE-2026-49798, CVE-2026-49808, CVE-2026-50332, CVE-2026-50354, CVE-2026-50370, CVE-2026-50377, CVE-2026-50390, CVE-2026-50397, CVE-2026-50399, CVE-2026-50423, CVE-2026-50436, CVE-2026-50459, CVE-2026-50477, CVE-2026-50478, CVE-2026-50484, CVE-2026-50518, CVE-2026-50656, CVE-2026-50661, CVE-2026-50663, CVE-2026-50673, CVE-2026-50683, CVE-2026-50685, CVE-2026-54128, CVE-2026-54132, CVE-2026-55010, CVE-2026-55040, CVE-2026-55944, CVE-2026-56155, CVE-2026-56159, CVE-2026-56164, CVE-2026-57092, CVE-2026-58532, CVE-2026-58627, CVE-2026-58644&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Microsoft SharePoint Server is affected by CVE-2026-45659, a high-severity (CVSS 8.8) remote code execution vulnerability stemming from unsafe deserialization of untrusted data. This flaw is actively exploited in the wild and has been added to CISA's Known Exploited Vulnerabilities catalog. Organizations should prioritize applying available patches from Microsoft immediately to remediate this critical threat.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/sharepoint-rce-cve-2026-45659-added-to.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
   </entry>
   <entry>
     <title>New ChocoPoC RAT Targets Vulnerability Researchers via Fake PoC Exploit Repos</title>
@@ -885,23 +903,5 @@
     <link href="https://thehackernews.com/2026/07/unpatched-flaws-disclosed-in-filesystem.html" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · multiple&lt;/em&gt;&lt;/p&gt;&lt;p&gt;runZero disclosed seven vulnerabilities in FatFs, a lightweight filesystem library embedded in millions of devices including security cameras, drones, industrial controllers, and hardware wallets for reading/writing FAT and exFAT formats. The flaws range from memory corruption and integer overflows to path traversal issues that could enable code execution or data manipulation on affected embedded systems. No evidence of active exploitation in the wild has been reported, though the widespread distribution across critical device categories increases risk. Device manufacturers should prioritize patching FatFs in firmware updates, with particular urgency for security-critical applications like hardware wallets and industrial controllers.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/unpatched-flaws-disclosed-in-filesystem.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Exploitarium: Anonymer Sicherheitsforscher veröffentlicht zwei Dutzend Zero-Days</title>
-    <id>urn:cybersecnews:item:4</id>
-    <published>2026-07-06T09:12:54.120894+00:00</published>
-    <updated>2026-07-06T09:12:54.120894+00:00</updated>
-    <link href="https://www.heise.de/news/Exploitarium-Anonymer-Sicherheitsforscher-veroeffentlicht-zwei-Dutzend-Zero-Days-11350036.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · multiple&lt;/em&gt;&lt;/p&gt;&lt;p&gt;An anonymous security researcher published approximately 24 zero-day vulnerabilities across open-source software including PHP and RustDesk, claiming to use AI-assisted discovery methods. The vulnerabilities span multiple software categories and severity levels, though specific CVSS ratings and exploitability details vary by flaw. No evidence of active exploitation in the wild has been reported at this time, though the public disclosure significantly increases risk. Affected projects and users should prioritize patching based on individual vulnerability severity assessments and their exposure to the impacted software versions.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.heise.de/news/Exploitarium-Anonymer-Sicherheitsforscher-veroeffentlicht-zwei-Dutzend-Zero-Days-11350036.html"&gt;Read more&lt;/a&gt; · Source: heise-security&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Lücken in Adobe ColdFusion und Campaign Classic: Patchdayzyklus verdoppelt</title>
-    <id>urn:cybersecnews:item:3</id>
-    <published>2026-07-06T09:12:54.120038+00:00</published>
-    <updated>2026-07-06T09:12:54.120038+00:00</updated>
-    <link href="https://www.heise.de/news/Adobe-Patchday-fuer-ColdFusion-und-Campaign-Classic-fortan-zweimal-im-Monat-11351219.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-48282, CVE-2026-48283, CVE-2026-48313&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Adobe ColdFusion and Campaign Classic are affected by critical remote code execution vulnerabilities that allow unauthenticated attackers to execute arbitrary code. Both products are impacted by exploitable flaws with high severity ratings, and Adobe is increasing patch frequency going forward to address security issues more rapidly. Immediate patching is mandatory for all affected installations, with priority given to internet-facing systems running vulnerable versions of ColdFusion and Campaign Classic. Users should apply the latest security updates from Adobe without delay and enable monitoring for exploitation attempts.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.heise.de/news/Adobe-Patchday-fuer-ColdFusion-und-Campaign-Classic-fortan-zweimal-im-Monat-11351219.html"&gt;Read more&lt;/a&gt; · Source: heise-security&lt;/p&gt;</content>
   </entry>
 </feed>
