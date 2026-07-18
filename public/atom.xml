@@ -3,7 +3,43 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-07-17T02:37:48.355984+00:00</updated>
+  <updated>2026-07-18T02:29:18.660576+00:00</updated>
+  <entry>
+    <title>New North Korean campaign uses fake coding interviews to steal developer credentials</title>
+    <id>urn:cybersecnews:item:108</id>
+    <published>2026-07-18T02:29:18.660576+00:00</published>
+    <updated>2026-07-18T02:29:18.660576+00:00</updated>
+    <link href="https://www.elastic.co/security-labs/contagious-interview-malware-svg-steganography" rel="alternate" />
+    <category term="red-team" />
+    <content type="html">&lt;p&gt;&lt;em&gt;red-team · social-engineering&lt;/em&gt;&lt;/p&gt;&lt;p&gt;North Korean threat actors are conducting targeted recruitment fraud against software developers, embedding malware within SVG image files embedded in fake coding interview platforms to harvest credentials and establish system access. The attack leverages social engineering combined with steganography to evade signature-based detection—no major antivirus products detected the malicious payloads. This campaign actively targets developers at tech firms and represents a high-severity threat given the potential for supply chain compromise. Recommend implementing strict controls on interview platform usage, scanning SVG files with behavior-based detection tools, enforcing multi-factor authentication for developers, and alerting on suspicious recruitment outreach patterns.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.elastic.co/security-labs/contagious-interview-malware-svg-steganography"&gt;Read more&lt;/a&gt; · Source: elastic-security-labs&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Metasploit Wrap Up: An HTTP to SMB relay plus Payload Improvements</title>
+    <id>urn:cybersecnews:item:107</id>
+    <published>2026-07-18T02:29:18.659304+00:00</published>
+    <updated>2026-07-18T02:29:18.659304+00:00</updated>
+    <link href="https://www.rapid7.com/blog/post/pt-metasploit-wrap-up-an-http-to-smb-relay-plus-payload-improvements" rel="alternate" />
+    <category term="red-team" />
+    <content type="html">&lt;p&gt;&lt;em&gt;red-team · payload-enhancement,relay-attack&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Metasploit Framework received new HTTP to SMB relay capability and enhanced Linux payload delivery mechanisms. The HTTP to SMB relay module (auxiliary/server/relay/http_to_smb) enables relaying NTLM HTTP authentication requests to multiple SMB servers for session establishment. Added Linux Fetch Multi payloads with automatic architecture detection for mipsel, mips64, aarch64, and other targets, plus RISC-V 32/64-bit payload support with XOR encoders. No active exploitation in the wild reported; users should update via msfupdate to access expanded post-exploitation capabilities and cross-architecture flexibility.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.rapid7.com/blog/post/pt-metasploit-wrap-up-an-http-to-smb-relay-plus-payload-improvements"&gt;Read more&lt;/a&gt; · Source: rapid7&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>OpenSSL HollowByte Flaw Could Freeze Server Memory with 11-Byte TLS Requests</title>
+    <id>urn:cybersecnews:item:106</id>
+    <published>2026-07-18T02:29:18.658177+00:00</published>
+    <updated>2026-07-18T02:29:18.658177+00:00</updated>
+    <link href="https://thehackernews.com/2026/07/openssl-hollowbyte-flaw-could-freeze.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · dos&lt;/em&gt;&lt;/p&gt;&lt;p&gt;OpenSSL versions prior to 1.1.1w, 3.0.x before 3.0.13, and 3.1.x before 3.1.1 are affected by the HollowByte denial-of-service vulnerability, which allows remote attackers to exhaust server memory by sending specially crafted 11-byte TLS requests that cause OpenSSL to allocate up to 131 KB per request without proper cleanup. The flaw is a memory exhaustion issue that can freeze or degrade server performance on glibc systems, and allocated memory persists until process restart. No known active exploitation has been reported; however, the fix was silently deployed in June without CVE assignment or security advisory. Immediately patch to OpenSSL 1.1.1w, 3.0.13, or 3.1.1 or later, and monitor servers for suspicious TLS connection patterns prior to patching.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/openssl-hollowbyte-flaw-could-freeze.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>New wp2shell WordPress Core Flaw Lets Unauthenticated Attackers Run Code</title>
+    <id>urn:cybersecnews:item:105</id>
+    <published>2026-07-18T02:29:18.655123+00:00</published>
+    <updated>2026-07-18T02:29:18.655123+00:00</updated>
+    <link href="https://thehackernews.com/2026/07/new-wp2shell-wordpress-core-flaw-lets.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;WordPress versions 6.9 and 7.0 contain a critical unauthenticated remote code execution vulnerability in core functionality that affects all installations regardless of plugin configuration. An attacker can execute arbitrary code via anonymous HTTP requests without authentication. WordPress addressed this with forced auto-updates deploying versions 6.9.5 and 7.0.2 on Friday; administrators should immediately verify their installations are patched, as the vulnerability has clear exploitation potential given its unauthenticated nature and core impact.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/new-wp2shell-wordpress-core-flaw-lets.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Envoy Gateway: Authentication Bypass via Improper Input Validation in EnvoyExtensionPolicy Lua Allows Secret Disclosure (CVE-2026-53713)</title>
     <id>urn:cybersecnews:item:104</id>
@@ -867,41 +903,5 @@
     <link href="https://thehackernews.com/2026/07/ransomware-groups-turn-to-citrix-bleed.html" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2025-5777&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Citrix Bleed 2 (CVE-2025-5777) is being actively exploited by Anubis ransomware operators for initial network access, enabling extraction of session tokens and authentication credentials from vulnerable Citrix systems. Threat actors are combining this vulnerability with legitimate RMM tools, credential harvesting, and manual lateral movement techniques to establish persistence before deploying ransomware. This represents a critical severity vulnerability actively exploited in the wild by organized ransomware groups. Organizations should immediately patch Citrix systems to the latest version and implement network segmentation to restrict RMM tool access and monitor for suspicious authentication patterns.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/ransomware-groups-turn-to-citrix-bleed.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>PamStealer Uses Fake Maccy Sites and PAM Checks to Steal Mac Login Passwords</title>
-    <id>urn:cybersecnews:item:8</id>
-    <published>2026-07-06T09:12:54.124975+00:00</published>
-    <updated>2026-07-06T09:12:54.124975+00:00</updated>
-    <link href="https://thehackernews.com/2026/07/pamstealer-uses-fake-maccy-sites-and.html" rel="alternate" />
-    <category term="red-team" />
-    <content type="html">&lt;p&gt;&lt;em&gt;red-team · infostealer&lt;/em&gt;&lt;/p&gt;&lt;p&gt;PamStealer is a macOS information stealer distributed as fake Maccy clipboard manager installers that uses compiled AppleScript to extract login credentials via PAM (Pluggable Authentication Modules) checks. The malware leverages social engineering and trojanization of legitimate software to achieve initial access with no known CVE assigned. Active in-the-wild distribution has been confirmed by Jamf Threat Labs targeting macOS users. Recommended actions include: educate users on software download practices (obtain only from official sources), implement code signing verification, deploy endpoint detection for suspicious AppleScript execution, and monitor for PAM abuse patterns.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/pamstealer-uses-fake-maccy-sites-and.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>New Avalon Malware Framework Packs CrownX Ransomware Capabilities</title>
-    <id>urn:cybersecnews:item:7</id>
-    <published>2026-07-06T09:12:54.124135+00:00</published>
-    <updated>2026-07-06T09:12:54.124135+00:00</updated>
-    <link href="https://thehackernews.com/2026/07/new-avalon-malware-framework-packs.html" rel="alternate" />
-    <category term="red-team" />
-    <content type="html">&lt;p&gt;&lt;em&gt;red-team · c2&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Avalon is a newly discovered modular malware framework delivered via multi-stage phishing that integrates credential theft, lateral movement, remote access, recovery disruption, and CrownX ransomware capabilities to evade traditional security controls. The framework's modular architecture and multi-vector attack chain present high severity risk, though specific exploitation prevalence in the wild is not detailed in the summary provided. Organizations should implement robust email security controls, network segmentation, and endpoint detection/response (EDR) solutions to detect lateral movement attempts and suspicious module loading. Patch systems promptly and maintain offline backups to mitigate ransomware impact.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/new-avalon-malware-framework-packs.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>New "Bad Epoll" Linux Kernel Flaw Lets Unprivileged Users Gain Root, Hits Android</title>
-    <id>urn:cybersecnews:item:6</id>
-    <published>2026-07-06T09:12:54.123354+00:00</published>
-    <updated>2026-07-06T09:12:54.123354+00:00</updated>
-    <link href="https://thehackernews.com/2026/07/new-bad-epoll-linux-kernel-flaw-lets.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · privilege-escalation · CVE-2026-46242&lt;/em&gt;&lt;/p&gt;&lt;p&gt;CVE-2026-46242 ("Bad Epoll") is a Linux kernel privilege escalation vulnerability in epoll handling that allows unprivileged local users to gain root access on affected systems including desktops, servers, and Android devices. The flaw has been patched and requires immediate kernel updates across all affected platforms. Apply available security patches as soon as possible; users unable to patch immediately should restrict local access where feasible. No evidence of active exploitation in the wild is mentioned, but the severity warrants urgent remediation given the trivial attack surface and complete system compromise potential.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/new-bad-epoll-linux-kernel-flaw-lets.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Unpatched Flaws Disclosed in Filesystem Bundled Into Millions of Embedded Devices</title>
-    <id>urn:cybersecnews:item:5</id>
-    <published>2026-07-06T09:12:54.122022+00:00</published>
-    <updated>2026-07-06T09:12:54.122022+00:00</updated>
-    <link href="https://thehackernews.com/2026/07/unpatched-flaws-disclosed-in-filesystem.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · multiple&lt;/em&gt;&lt;/p&gt;&lt;p&gt;runZero disclosed seven vulnerabilities in FatFs, a lightweight filesystem library embedded in millions of devices including security cameras, drones, industrial controllers, and hardware wallets for reading/writing FAT and exFAT formats. The flaws range from memory corruption and integer overflows to path traversal issues that could enable code execution or data manipulation on affected embedded systems. No evidence of active exploitation in the wild has been reported, though the widespread distribution across critical device categories increases risk. Device manufacturers should prioritize patching FatFs in firmware updates, with particular urgency for security-critical applications like hardware wallets and industrial controllers.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/unpatched-flaws-disclosed-in-filesystem.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
   </entry>
 </feed>
