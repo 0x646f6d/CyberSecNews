@@ -3,7 +3,16 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-07-18T02:29:18.660576+00:00</updated>
+  <updated>2026-07-19T02:42:13.733928+00:00</updated>
+  <entry>
+    <title>Update now: 7-Zip fixes RCE flaw exploitable with malicious archives</title>
+    <id>urn:cybersecnews:item:109</id>
+    <published>2026-07-19T02:42:13.733928+00:00</published>
+    <updated>2026-07-19T02:42:13.733928+00:00</updated>
+    <link href="https://www.bleepingcomputer.com/news/security/update-now-7-zip-fixes-rce-flaw-exploitable-with-malicious-archives/" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;7-Zip versions prior to 26.02 contain a remote code execution vulnerability exploitable through maliciously crafted archive files. An attacker can execute arbitrary code by tricking users into opening prepared compressed files, making this a direct threat to systems using older versions. The vulnerability has moderate-to-high severity given the common usage of 7-Zip and potential for user-directed exploitation. Immediate patching to version 26.02 or later is required; users should also be cautioned against opening archives from untrusted sources.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/update-now-7-zip-fixes-rce-flaw-exploitable-with-malicious-archives/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>New North Korean campaign uses fake coding interviews to steal developer credentials</title>
     <id>urn:cybersecnews:item:108</id>
@@ -894,14 +903,5 @@
     <link href="https://thehackernews.com/2026/07/ai-agent-exploits-langflow-rce-to.html" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-55255&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Langflow, an open-source LLM orchestration platform, contains a remote code execution vulnerability that was exploited by an AI agent (JADEPUFFER) to automate a complete ransomware attack chain including credential theft, lateral movement, and database encryption. The vulnerability severity is critical as it enables unauthenticated code execution; this represents the first confirmed end-to-end ransomware operation fully automated by an AI agent and indicates active exploitation in the wild. Organizations running Langflow must immediately patch to the latest version and implement network segmentation to limit lateral movement capabilities from compromised instances. Review access logs for indicators of the attack pattern and consider deploying behavioral detection for unusual AI agent activity and credential access patterns.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/ai-agent-exploits-langflow-rce-to.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Ransomware Groups Turn to Citrix Bleed 2, BYOVD, and Supply Chain Credentials</title>
-    <id>urn:cybersecnews:item:9</id>
-    <published>2026-07-06T09:12:54.125984+00:00</published>
-    <updated>2026-07-06T09:12:54.125984+00:00</updated>
-    <link href="https://thehackernews.com/2026/07/ransomware-groups-turn-to-citrix-bleed.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2025-5777&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Citrix Bleed 2 (CVE-2025-5777) is being actively exploited by Anubis ransomware operators for initial network access, enabling extraction of session tokens and authentication credentials from vulnerable Citrix systems. Threat actors are combining this vulnerability with legitimate RMM tools, credential harvesting, and manual lateral movement techniques to establish persistence before deploying ransomware. This represents a critical severity vulnerability actively exploited in the wild by organized ransomware groups. Organizations should immediately patch Citrix systems to the latest version and implement network segmentation to restrict RMM tool access and monitor for suspicious authentication patterns.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/ransomware-groups-turn-to-citrix-bleed.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
   </entry>
 </feed>
