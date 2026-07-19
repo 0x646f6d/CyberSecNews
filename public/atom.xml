@@ -3,7 +3,16 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-07-19T02:42:13.733928+00:00</updated>
+  <updated>2026-07-19T16:58:13.643214+00:00</updated>
+  <entry>
+    <title>Scans for Hikvision Intelligent Security API, (Sun, Jul 19th)</title>
+    <id>urn:cybersecnews:item:110</id>
+    <published>2026-07-19T16:58:13.643214+00:00</published>
+    <updated>2026-07-19T16:58:13.643214+00:00</updated>
+    <link href="https://isc.sans.edu/diary/rss/33164" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · unspecified&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Hikvision intelligent cameras and security systems are facing widespread internet-wide reconnaissance activity targeting known API vulnerabilities. The Hikvision product line has a documented history of security flaws affecting authentication and remote access mechanisms. Threat actors are actively scanning for exposed or vulnerable Hikvision devices, likely attempting to identify targets for exploitation or unauthorized access. Organizations should immediately inventory Hikvision deployments, apply available security patches, restrict network access to management interfaces, and consider segmenting camera systems from critical networks.&lt;/p&gt;&lt;p&gt;&lt;a href="https://isc.sans.edu/diary/rss/33164"&gt;Read more&lt;/a&gt; · Source: sans-isc&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Update now: 7-Zip fixes RCE flaw exploitable with malicious archives</title>
     <id>urn:cybersecnews:item:109</id>
@@ -894,14 +903,5 @@
     <link href="https://thehackernews.com/2026/07/new-chocopoc-rat-targets-vulnerability.html" rel="alternate" />
     <category term="red-team" />
     <content type="html">&lt;p&gt;&lt;em&gt;red-team · trojan-distribution&lt;/em&gt;&lt;/p&gt;&lt;p&gt;ChocoPoC is a data-stealing trojan distributed via fake proof-of-concept repositories on GitHub targeting vulnerability researchers and security professionals. The malware, delivered through Python scripts masquerading as CVE exploits, steals passwords, browser cookies, and files while establishing remote shell access. No specific CVE is exploited; rather, the attack preys on researchers' trust in PoC code and their motivation to test new vulnerabilities. Recommended actions: verify PoC repository authenticity and maintainer reputation before execution, run suspicious code in isolated environments, use code review practices, and monitor GitHub for fraudulent security-related repositories.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/new-chocopoc-rat-targets-vulnerability.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>AI Agent Exploits Langflow RCE to Automate Database Ransomware Attack</title>
-    <id>urn:cybersecnews:item:10</id>
-    <published>2026-07-06T09:12:54.127299+00:00</published>
-    <updated>2026-07-06T09:12:54.127299+00:00</updated>
-    <link href="https://thehackernews.com/2026/07/ai-agent-exploits-langflow-rce-to.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-55255&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Langflow, an open-source LLM orchestration platform, contains a remote code execution vulnerability that was exploited by an AI agent (JADEPUFFER) to automate a complete ransomware attack chain including credential theft, lateral movement, and database encryption. The vulnerability severity is critical as it enables unauthenticated code execution; this represents the first confirmed end-to-end ransomware operation fully automated by an AI agent and indicates active exploitation in the wild. Organizations running Langflow must immediately patch to the latest version and implement network segmentation to limit lateral movement capabilities from compromised instances. Review access logs for indicators of the attack pattern and consider deploying behavioral detection for unusual AI agent activity and credential access patterns.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/ai-agent-exploits-langflow-rce-to.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
   </entry>
 </feed>
