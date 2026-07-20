@@ -3,7 +3,16 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-07-20T02:57:58.454691+00:00</updated>
+  <updated>2026-07-20T10:52:42.364666+00:00</updated>
+  <entry>
+    <title>Critical ServiceNow code execution flaw now exploited in attacks</title>
+    <id>urn:cybersecnews:item:112</id>
+    <published>2026-07-20T10:52:42.364666+00:00</published>
+    <updated>2026-07-20T10:52:42.364666+00:00</updated>
+    <link href="https://www.bleepingcomputer.com/news/security/critical-servicenow-code-execution-flaw-now-exploited-in-attacks/" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-6875&lt;/em&gt;&lt;/p&gt;&lt;p&gt;ServiceNow AI Platform is vulnerable to unauthenticated remote code execution (CVE-2026-6875), allowing attackers to execute arbitrary code without authentication. The vulnerability is critical in severity and is actively being exploited in the wild. Organizations running affected ServiceNow instances should immediately apply available patches and implement network-based access controls to restrict exposure of AI Platform components to untrusted networks.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/critical-servicenow-code-execution-flaw-now-exploited-in-attacks/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Critical NGINX Vulnerability Can Crash Workers and May Allow Remote Code Execution</title>
     <id>urn:cybersecnews:item:111</id>
@@ -29,7 +38,7 @@
     <updated>2026-07-19T02:42:13.733928+00:00</updated>
     <link href="https://www.bleepingcomputer.com/news/security/update-now-7-zip-fixes-rce-flaw-exploitable-with-malicious-archives/" rel="alternate" />
     <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;7-Zip versions prior to 26.02 contain a remote code execution vulnerability exploitable through maliciously crafted archive files. An attacker can execute arbitrary code by tricking users into opening prepared compressed files, making this a direct threat to systems using older versions. The vulnerability has moderate-to-high severity given the common usage of 7-Zip and potential for user-directed exploitation. Immediate patching to version 26.02 or later is required; users should also be cautioned against opening archives from untrusted sources.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/update-now-7-zip-fixes-rce-flaw-exploitable-with-malicious-archives/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-14266&lt;/em&gt;&lt;/p&gt;&lt;p&gt;7-Zip versions prior to 26.02 contain a remote code execution vulnerability exploitable through maliciously crafted archive files. An attacker can execute arbitrary code by tricking users into opening prepared compressed files, making this a direct threat to systems using older versions. The vulnerability has moderate-to-high severity given the common usage of 7-Zip and potential for user-directed exploitation. Immediate patching to version 26.02 or later is required; users should also be cautioned against opening archives from untrusted sources.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/update-now-7-zip-fixes-rce-flaw-exploitable-with-malicious-archives/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
   </entry>
   <entry>
     <title>New North Korean campaign uses fake coding interviews to steal developer credentials</title>
@@ -894,14 +903,5 @@
     <link href="https://thehackernews.com/2026/07/unpatched-argo-cd-repo-server-flaw.html" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Argo CD repo-server contains an unauthenticated remote code execution vulnerability allowing attackers with network access to the internal repo-server port to achieve full Kubernetes cluster compromise. The flaw remains unpatched with no CVE assigned as of the report date. No evidence of active exploitation in the wild has been disclosed, but severity is critical given the unrestricted code execution capability. Immediate action required: restrict network access to repo-server ports, segment repo-server from untrusted networks, and monitor for available patches from Argo CD maintainers.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/unpatched-argo-cd-repo-server-flaw.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>SharePoint RCE CVE-2026-45659 Added to CISA KEV After Active Exploitation</title>
-    <id>urn:cybersecnews:item:12</id>
-    <published>2026-07-06T09:12:54.129051+00:00</published>
-    <updated>2026-07-06T09:12:54.129051+00:00</updated>
-    <link href="https://thehackernews.com/2026/07/sharepoint-rce-cve-2026-45659-added-to.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-45659, CVE-2026-48564, CVE-2026-49167, CVE-2026-49173, CVE-2026-49181, CVE-2026-49795, CVE-2026-49798, CVE-2026-49808, CVE-2026-50332, CVE-2026-50354, CVE-2026-50370, CVE-2026-50377, CVE-2026-50390, CVE-2026-50397, CVE-2026-50399, CVE-2026-50423, CVE-2026-50436, CVE-2026-50459, CVE-2026-50477, CVE-2026-50478, CVE-2026-50484, CVE-2026-50518, CVE-2026-50656, CVE-2026-50661, CVE-2026-50663, CVE-2026-50673, CVE-2026-50683, CVE-2026-50685, CVE-2026-54128, CVE-2026-54132, CVE-2026-55010, CVE-2026-55040, CVE-2026-55944, CVE-2026-56155, CVE-2026-56159, CVE-2026-56164, CVE-2026-57092, CVE-2026-58532, CVE-2026-58627, CVE-2026-58644&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Microsoft SharePoint Server is affected by CVE-2026-45659, a high-severity (CVSS 8.8) remote code execution vulnerability stemming from unsafe deserialization of untrusted data. This flaw is actively exploited in the wild and has been added to CISA's Known Exploited Vulnerabilities catalog. Organizations should prioritize applying available patches from Microsoft immediately to remediate this critical threat.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/sharepoint-rce-cve-2026-45659-added-to.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
   </entry>
 </feed>
