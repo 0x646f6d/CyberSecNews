@@ -3,7 +3,34 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-07-20T10:52:42.364666+00:00</updated>
+  <updated>2026-07-20T18:03:55.753467+00:00</updated>
+  <entry>
+    <title>Targeted Attack on Government Entities in the Middle East | Part 1</title>
+    <id>urn:cybersecnews:item:115</id>
+    <published>2026-07-20T18:03:55.753467+00:00</published>
+    <updated>2026-07-20T18:03:55.753467+00:00</updated>
+    <link href="https://www.zscaler.com/blogs/security-research/targeted-attack-government-entities-middle-east-part-1" rel="alternate" />
+    <category term="red-team" />
+    <content type="html">&lt;p&gt;&lt;em&gt;red-team · c2,edr-evasion,lateral-movement&lt;/em&gt;&lt;/p&gt;&lt;p&gt;East Asia-linked threat actor targeted Middle Eastern government entities via multi-stage attack chain deploying three previously undocumented malware families: TELESHIM (backdoor abusing Telegram API for C2), MIXEDKEY (reflective loader with mixed boolean arithmetic obfuscation), and BINDCLOAK (C2 implant). Attack initiates with ISO containing legitimate ASUSTek executable sideloading malicious DLL; subsequent stages use heavy code obfuscation (control flow flattening, opaque predicates), anti-analysis techniques, and environmental keying tied to victim machine volume serial numbers to prevent execution outside intended targets. While no active exploitation of zero-days reported, the sophistication and targeting of government entities represents elevated threat; immediate patching of systems is secondary to network monitoring for Telegram API abuse, scheduled task creation at 6/10-minute intervals, and staging directories under C:\ProgramData\ containing suspicious DLLs alongside legitimate binaries.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.zscaler.com/blogs/security-research/targeted-attack-government-entities-middle-east-part-1"&gt;Read more&lt;/a&gt; · Source: zscaler-threatlabz&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>New HollowGraph malware uses Microsoft Graph for stealthy C2 comms</title>
+    <id>urn:cybersecnews:item:114</id>
+    <published>2026-07-20T18:03:55.751740+00:00</published>
+    <updated>2026-07-20T18:03:55.751740+00:00</updated>
+    <link href="https://www.bleepingcomputer.com/news/security/new-hollowgraph-malware-uses-microsoft-graph-for-stealthy-c2-comms/" rel="alternate" />
+    <category term="red-team" />
+    <content type="html">&lt;p&gt;&lt;em&gt;red-team · c2&lt;/em&gt;&lt;/p&gt;&lt;p&gt;HollowGraph malware leverages Microsoft Graph API to abuse the calendar feature in compromised Microsoft 365 mailboxes for stealthy command-and-control communications and data exfiltration. This technique is particularly dangerous because it blends malicious traffic with legitimate Microsoft Graph activity, evading traditional network-based detection. While no specific exploitation data is provided, the novel use of trusted Microsoft infrastructure indicates potential for widespread adoption. Organizations should enforce strong MFA on Microsoft 365 accounts, implement conditional access policies to restrict Graph API usage, monitor calendar API activity for suspicious patterns, and conduct credential audits to identify compromised accounts.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/new-hollowgraph-malware-uses-microsoft-graph-for-stealthy-c2-comms/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>HollowGraph Malware Hides C2 and Stolen Files in Microsoft 365 Events Dated 2050</title>
+    <id>urn:cybersecnews:item:113</id>
+    <published>2026-07-20T18:03:55.749774+00:00</published>
+    <updated>2026-07-20T18:03:55.749774+00:00</updated>
+    <link href="https://thehackernews.com/2026/07/hollowgraph-malware-hides-c2-and-stolen.html" rel="alternate" />
+    <category term="red-team" />
+    <content type="html">&lt;p&gt;&lt;em&gt;red-team · c2&lt;/em&gt;&lt;/p&gt;&lt;p&gt;HollowGraph, a new espionage implant, abuses Microsoft 365 calendar events dated 2050 as a covert command-and-control channel and data exfiltration mechanism via the Microsoft Graph API. The malware leverages legitimate Microsoft 365 traffic to hide operator instructions and stolen file attachments, evading standard detection by blending into authorized API activity. While severity and active exploitation in the wild are not specified in the provided summary, the technique represents a sophisticated approach to persistent command channels. Organizations should review M365 audit logs for suspicious calendar event creation patterns, enforce strict API permissions policies, and monitor for anomalous Graph API usage outside expected patterns.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/hollowgraph-malware-hides-c2-and-stolen.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Critical ServiceNow code execution flaw now exploited in attacks</title>
     <id>urn:cybersecnews:item:112</id>
@@ -74,7 +101,7 @@
     <updated>2026-07-18T02:29:18.655123+00:00</updated>
     <link href="https://thehackernews.com/2026/07/new-wp2shell-wordpress-core-flaw-lets.html" rel="alternate" />
     <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;WordPress versions 6.9 and 7.0 contain a critical unauthenticated remote code execution vulnerability in core functionality that affects all installations regardless of plugin configuration. An attacker can execute arbitrary code via anonymous HTTP requests without authentication. WordPress addressed this with forced auto-updates deploying versions 6.9.5 and 7.0.2 on Friday; administrators should immediately verify their installations are patched, as the vulnerability has clear exploitation potential given its unauthenticated nature and core impact.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/new-wp2shell-wordpress-core-flaw-lets.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-60137, CVE-2026-63030&lt;/em&gt;&lt;/p&gt;&lt;p&gt;WordPress versions 6.9 and 7.0 contain a critical unauthenticated remote code execution vulnerability in core functionality that affects all installations regardless of plugin configuration. An attacker can execute arbitrary code via anonymous HTTP requests without authentication. WordPress addressed this with forced auto-updates deploying versions 6.9.5 and 7.0.2 on Friday; administrators should immediately verify their installations are patched, as the vulnerability has clear exploitation potential given its unauthenticated nature and core impact.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/new-wp2shell-wordpress-core-flaw-lets.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
   </entry>
   <entry>
     <title>Envoy Gateway: Authentication Bypass via Improper Input Validation in EnvoyExtensionPolicy Lua Allows Secret Disclosure (CVE-2026-53713)</title>
@@ -876,32 +903,5 @@
     <link href="https://thehackernews.com/2026/07/citrix-patches-six-netscaler-flaws.html" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · input-validation,file-read,dos · CVE-2026-8451&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Citrix released patches for six vulnerabilities in NetScaler ADC and NetScaler Gateway, including CVE-2026-8451 (CVSS 8.8) and others enabling arbitrary file reads and denial-of-service attacks through insufficient input validation and similar flaws. These vulnerabilities affect critical infrastructure components and pose significant risk if exploited. Apply Citrix's latest security updates immediately to all affected NetScaler ADC and Gateway deployments. Monitor for exploit activity and verify patches are successfully deployed across your environment.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/citrix-patches-six-netscaler-flaws.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Progress Kemp LoadMaster Pre-Auth RCE Flaw Faces Active Exploitation Attempts</title>
-    <id>urn:cybersecnews:item:15</id>
-    <published>2026-07-06T09:12:54.132174+00:00</published>
-    <updated>2026-07-06T09:12:54.132174+00:00</updated>
-    <link href="https://thehackernews.com/2026/07/latest-progress-kemp-loadmaster-pre.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-8037&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Progress Kemp LoadMaster contains a critical OS command injection vulnerability (CVE-2026-8037, CVSS 9.6) in its pre-authentication functionality that allows unauthenticated remote code execution. Active exploitation attempts have been observed in the wild. Immediate patching is required; organizations should prioritize applying the latest security updates from Progress and consider implementing network segmentation to restrict access to LoadMaster management interfaces if patching cannot be deployed immediately.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/latest-progress-kemp-loadmaster-pre.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Critical Cursor Flaws Could Let Prompt Injection Escape Sandbox and Run Commands</title>
-    <id>urn:cybersecnews:item:14</id>
-    <published>2026-07-06T09:12:54.131173+00:00</published>
-    <updated>2026-07-06T09:12:54.131173+00:00</updated>
-    <link href="https://thehackernews.com/2026/07/critical-cursor-flaws-could-let-prompt.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · prompt-injection · CVE-2026-50548, CVE-2026-50549&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Cursor AI code editor contains two critical sandbox escape vulnerabilities (CVE-2026-50548 and CVE-2026-50549, CVSS 9.8/9.3) that allow prompt injection attacks to execute arbitrary commands on a developer's machine without user interaction or approval. Discovered by Cato AI Labs and named DuneSlide, the flaws enable a malicious prompt to fully bypass the editor's safety sandbox. Immediate patching is required; developers should update Cursor to the latest patched version and consider restricting Cursor's system permissions until patches are applied. These vulnerabilities represent a critical supply chain risk for development environments.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/critical-cursor-flaws-could-let-prompt.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Unpatched Argo CD Repo-Server Flaw Could Let Attackers Take Over Kubernetes Clusters</title>
-    <id>urn:cybersecnews:item:13</id>
-    <published>2026-07-06T09:12:54.129997+00:00</published>
-    <updated>2026-07-06T09:12:54.129997+00:00</updated>
-    <link href="https://thehackernews.com/2026/07/unpatched-argo-cd-repo-server-flaw.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Argo CD repo-server contains an unauthenticated remote code execution vulnerability allowing attackers with network access to the internal repo-server port to achieve full Kubernetes cluster compromise. The flaw remains unpatched with no CVE assigned as of the report date. No evidence of active exploitation in the wild has been disclosed, but severity is critical given the unrestricted code execution capability. Immediate action required: restrict network access to repo-server ports, segment repo-server from untrusted networks, and monitor for available patches from Argo CD maintainers.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/unpatched-argo-cd-repo-server-flaw.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
   </entry>
 </feed>
