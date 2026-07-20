@@ -3,7 +3,16 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-07-19T16:58:13.643214+00:00</updated>
+  <updated>2026-07-20T02:57:58.454691+00:00</updated>
+  <entry>
+    <title>Critical NGINX Vulnerability Can Crash Workers and May Allow Remote Code Execution</title>
+    <id>urn:cybersecnews:item:111</id>
+    <published>2026-07-20T02:57:58.454691+00:00</published>
+    <updated>2026-07-20T02:57:58.454691+00:00</updated>
+    <link href="https://thehackernews.com/2026/07/critical-nginx-vulnerability-can-crash.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · heap-buffer-overflow · CVE-2026-42533&lt;/em&gt;&lt;/p&gt;&lt;p&gt;NGINX versions prior to 1.30.4 (stable) and 1.31.3 (mainline) contain a critical heap buffer overflow (CVE-2024-42533) triggered by crafted HTTP requests to unauthenticated remote attackers. The vulnerability can crash or restart worker processes, causing denial of service, with potential for remote code execution depending on heap layout and environment. There is no indication of active exploitation in the wild at this time. Immediate patching to nginx 1.30.4, 1.31.3, or NGINX Plus 37.0.3.1 is required; organizations unable to patch immediately should implement strict input validation and request filtering on reverse proxies.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/critical-nginx-vulnerability-can-crash.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Scans for Hikvision Intelligent Security API, (Sun, Jul 19th)</title>
     <id>urn:cybersecnews:item:110</id>
@@ -894,14 +903,5 @@
     <link href="https://thehackernews.com/2026/07/sharepoint-rce-cve-2026-45659-added-to.html" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-45659, CVE-2026-48564, CVE-2026-49167, CVE-2026-49173, CVE-2026-49181, CVE-2026-49795, CVE-2026-49798, CVE-2026-49808, CVE-2026-50332, CVE-2026-50354, CVE-2026-50370, CVE-2026-50377, CVE-2026-50390, CVE-2026-50397, CVE-2026-50399, CVE-2026-50423, CVE-2026-50436, CVE-2026-50459, CVE-2026-50477, CVE-2026-50478, CVE-2026-50484, CVE-2026-50518, CVE-2026-50656, CVE-2026-50661, CVE-2026-50663, CVE-2026-50673, CVE-2026-50683, CVE-2026-50685, CVE-2026-54128, CVE-2026-54132, CVE-2026-55010, CVE-2026-55040, CVE-2026-55944, CVE-2026-56155, CVE-2026-56159, CVE-2026-56164, CVE-2026-57092, CVE-2026-58532, CVE-2026-58627, CVE-2026-58644&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Microsoft SharePoint Server is affected by CVE-2026-45659, a high-severity (CVSS 8.8) remote code execution vulnerability stemming from unsafe deserialization of untrusted data. This flaw is actively exploited in the wild and has been added to CISA's Known Exploited Vulnerabilities catalog. Organizations should prioritize applying available patches from Microsoft immediately to remediate this critical threat.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/sharepoint-rce-cve-2026-45659-added-to.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>New ChocoPoC RAT Targets Vulnerability Researchers via Fake PoC Exploit Repos</title>
-    <id>urn:cybersecnews:item:11</id>
-    <published>2026-07-06T09:12:54.128166+00:00</published>
-    <updated>2026-07-06T09:12:54.128166+00:00</updated>
-    <link href="https://thehackernews.com/2026/07/new-chocopoc-rat-targets-vulnerability.html" rel="alternate" />
-    <category term="red-team" />
-    <content type="html">&lt;p&gt;&lt;em&gt;red-team · trojan-distribution&lt;/em&gt;&lt;/p&gt;&lt;p&gt;ChocoPoC is a data-stealing trojan distributed via fake proof-of-concept repositories on GitHub targeting vulnerability researchers and security professionals. The malware, delivered through Python scripts masquerading as CVE exploits, steals passwords, browser cookies, and files while establishing remote shell access. No specific CVE is exploited; rather, the attack preys on researchers' trust in PoC code and their motivation to test new vulnerabilities. Recommended actions: verify PoC repository authenticity and maintainer reputation before execution, run suspicious code in isolated environments, use code review practices, and monitor GitHub for fraudulent security-related repositories.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/new-chocopoc-rat-targets-vulnerability.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
   </entry>
 </feed>
