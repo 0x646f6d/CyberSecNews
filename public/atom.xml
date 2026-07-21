@@ -3,7 +3,34 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-07-20T18:03:55.753467+00:00</updated>
+  <updated>2026-07-21T02:40:32.918429+00:00</updated>
+  <entry>
+    <title>LightRAG: CORS Wildcard + Credentials Enables Any-Origin Credentialed Requests (CVE-2026-61736)</title>
+    <id>urn:cybersecnews:item:118</id>
+    <published>2026-07-21T02:40:32.918429+00:00</published>
+    <updated>2026-07-21T02:40:32.918429+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-6x6h-qqr7-855w" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · cors-misconfiguration · CVE-2026-61736&lt;/em&gt;&lt;/p&gt;&lt;p&gt;LightRAG (pip package lightrag-hku) is vulnerable to critical CORS misconfiguration (CVE-2026-61736) where the default settings combine CORS_ORIGINS=* with allow_credentials=True, allowing any website to perform authenticated API calls on behalf of logged-in users. Starlette's CORSMiddleware echoes the requesting origin in preflight responses when credentials are enabled, effectively whitelisting all origins for credentialed requests. This vulnerability is critical severity and likely exploitable in the wild given the default insecure configuration. Immediately update to a patched version and configure CORS_ORIGINS to specific trusted domains, or disable credentials in CORS responses if not required for functionality.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-6x6h-qqr7-855w"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>LightRAG is Vulnerable to Authentication Bypass: hardcoded DEFAULT_TOKEN_SECRET and public /auth-status defeat LIGHTRAG_API_KEY protection (CVE-2026-61740)</title>
+    <id>urn:cybersecnews:item:117</id>
+    <published>2026-07-21T02:40:32.917187+00:00</published>
+    <updated>2026-07-21T02:40:32.917187+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-f4vv-55c2-5789" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-61740&lt;/em&gt;&lt;/p&gt;&lt;p&gt;LightRAG (pip/lightrag-hku) contains a critical authentication bypass vulnerability (CVE-2026-61740) affecting deployments using API-Key authentication mode. The vulnerability stems from a hardcoded DEFAULT_TOKEN_SECRET in the codebase combined with a public /auth-status endpoint that reveals authentication details, allowing unauthenticated attackers to forge valid JWT tokens offline and bypass X-API-Key protections. No patch status or wild exploitation details are provided in the advisory. Immediately upgrade to a patched version once available, and consider rotating any hardcoded secrets and implementing additional network-level access controls until a fix is deployed.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-f4vv-55c2-5789"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>node-tar: Decompression/parse DoS via unlimited input (CVE-2026-59873)</title>
+    <id>urn:cybersecnews:item:116</id>
+    <published>2026-07-21T02:40:32.915669+00:00</published>
+    <updated>2026-07-21T02:40:32.915669+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-23hp-3jrh-7fpw" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · dos · CVE-2026-59873&lt;/em&gt;&lt;/p&gt;&lt;p&gt;The node-tar library (npm/tar) is vulnerable to decompression denial-of-service attacks via gzip bombs (CVE-2026-59873, critical severity). The library lacks hard upper bounds on decompressed data volume or entry counts, allowing attackers to exhaust disk space and CPU resources with small, maliciously crafted compressed archives. This vulnerability is likely being exploited in the wild given its critical rating and simplicity of attack. Update node-tar to the latest patched version immediately and consider implementing external decompression limits and resource quotas as interim mitigations.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-23hp-3jrh-7fpw"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Targeted Attack on Government Entities in the Middle East | Part 1</title>
     <id>urn:cybersecnews:item:115</id>
@@ -876,32 +903,5 @@
     <link href="https://thehackernews.com/2026/06/airdrop-and-quick-share-flaws-let.html" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · dos,auth-bypass&lt;/em&gt;&lt;/p&gt;&lt;p&gt;AirDrop (Apple) and Quick Share (Google) wireless file-sharing protocols contain six vulnerabilities allowing nearby attackers without prior connection to crash services and bypass security checks on affected devices. An attacker with a laptop within wireless range can trigger denial-of-service conditions on Macs or iPhones configured to receive from anyone, circumventing user prompts. No evidence of active exploitation in the wild has been reported. Affected users should update to patched OS versions when available; in interim, restricting AirDrop/Quick Share to "Contacts Only" mode significantly reduces attack surface.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/06/airdrop-and-quick-share-flaws-let.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Attackers Exploit SimpleHelp CVE-2026-48558 to Deploy TaskWeaver and Djinn Stealer</title>
-    <id>urn:cybersecnews:item:18</id>
-    <published>2026-07-06T09:12:54.135873+00:00</published>
-    <updated>2026-07-06T09:12:54.135873+00:00</updated>
-    <link href="https://thehackernews.com/2026/06/attackers-exploit-simplehelp-cve-2026.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-48558&lt;/em&gt;&lt;/p&gt;&lt;p&gt;SimpleHelp remote support software is affected by CVE-2026-48558, a critical authentication bypass vulnerability (CVSS 10.0) in the OpenID Connect flow that allows unauthenticated attackers to gain unauthorized access. The flaw is actively exploited in the wild to deliver TaskWeaver and Djinn Stealer malware families. Immediate patching is required; administrators should apply available security updates and review systems for indicators of compromise related to these malware deployments.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/06/attackers-exploit-simplehelp-cve-2026.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>GuardFall Exposes Open-Source AI Coding Agents to Decades-Old Shell Injection Risks</title>
-    <id>urn:cybersecnews:item:17</id>
-    <published>2026-07-06T09:12:54.134143+00:00</published>
-    <updated>2026-07-06T09:12:54.134143+00:00</updated>
-    <link href="https://thehackernews.com/2026/06/guardfall-exposes-open-source-ai-coding.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · shell-injection&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Open-source AI coding agents including AutoGPT, Claude Computer Use, and Genie are vulnerable to GuardFall, a shell injection bypass exploiting decades-old command obfuscation techniques that circumvents safety guardrails designed to prevent malicious command execution. The vulnerability affects ten of eleven tested agents and allows attackers to execute arbitrary commands despite safety checks, posing critical risk to systems running these agents. Exploitation in the wild is not yet documented, but the technique is trivial to implement using publicly known shell tricks. Development teams should implement robust input sanitization, avoid shell execution paradigms, and conduct security audits of command-handling logic; users should restrict agent permissions and monitor execution environments closely until patches are available.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/06/guardfall-exposes-open-source-ai-coding.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Citrix Patches Six NetScaler Flaws Allowing File Read and Denial-of-Service</title>
-    <id>urn:cybersecnews:item:16</id>
-    <published>2026-07-06T09:12:54.133194+00:00</published>
-    <updated>2026-07-06T09:12:54.133194+00:00</updated>
-    <link href="https://thehackernews.com/2026/07/citrix-patches-six-netscaler-flaws.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · input-validation,file-read,dos · CVE-2026-8451&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Citrix released patches for six vulnerabilities in NetScaler ADC and NetScaler Gateway, including CVE-2026-8451 (CVSS 8.8) and others enabling arbitrary file reads and denial-of-service attacks through insufficient input validation and similar flaws. These vulnerabilities affect critical infrastructure components and pose significant risk if exploited. Apply Citrix's latest security updates immediately to all affected NetScaler ADC and Gateway deployments. Monitor for exploit activity and verify patches are successfully deployed across your environment.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/citrix-patches-six-netscaler-flaws.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
   </entry>
 </feed>
