@@ -3,7 +3,25 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-07-21T02:40:32.918429+00:00</updated>
+  <updated>2026-07-21T10:25:54.891694+00:00</updated>
+  <entry>
+    <title>Critical Palo Alto VPN bug now exploited by Qilin ransomware gang</title>
+    <id>urn:cybersecnews:item:120</id>
+    <published>2026-07-21T10:25:54.891694+00:00</published>
+    <updated>2026-07-21T10:25:54.891694+00:00</updated>
+    <link href="https://www.bleepingcomputer.com/news/security/critical-globalprotect-vpn-bug-now-exploited-in-ransomware-attacks/" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Palo Alto Networks PAN-OS GlobalProtect is vulnerable to a critical authentication bypass flaw (CVE-2024-21893) that the Qilin ransomware gang actively exploits for network intrusion. The vulnerability allows unauthenticated attackers to bypass authentication mechanisms and gain unauthorized access to protected networks. This is a severe, actively exploited vulnerability affecting critical VPN infrastructure. Organizations must immediately apply available patches from Palo Alto Networks and monitor for signs of compromise in their GlobalProtect logs and access patterns.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/critical-globalprotect-vpn-bug-now-exploited-in-ransomware-attacks/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Sicherheitspatch Grafana: Angreifer können sensible Daten abgreifen</title>
+    <id>urn:cybersecnews:item:119</id>
+    <published>2026-07-21T10:25:54.889092+00:00</published>
+    <updated>2026-07-21T10:25:54.889092+00:00</updated>
+    <link href="https://www.heise.de/news/Sicherheitspatch-Grafana-Angreifer-koennen-sensible-Daten-abgreifen-11371859.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · information-disclosure&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Grafana contains a critical vulnerability allowing attackers to extract sensitive data through unauthorized access. The flaw impacts the open-source visualization and monitoring platform's security posture. Patch availability has been released by developers and immediate application is recommended for all affected deployments. Users should prioritize updates to prevent potential exposure of monitoring data and credentials stored within Grafana instances.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.heise.de/news/Sicherheitspatch-Grafana-Angreifer-koennen-sensible-Daten-abgreifen-11371859.html"&gt;Read more&lt;/a&gt; · Source: heise-security&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>LightRAG: CORS Wildcard + Credentials Enables Any-Origin Credentialed Requests (CVE-2026-61736)</title>
     <id>urn:cybersecnews:item:118</id>
@@ -885,23 +903,5 @@
     <link href="https://www.bleepingcomputer.com/news/security/cisco-finally-confirms-attackers-exploiting-unified-cm-flaw/" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Cisco Unified Communications Manager is vulnerable to authentication bypass allowing unauthenticated attackers to access sensitive system information and potentially execute administrative actions. The flaw was patched in June 2024, but active exploitation has now been confirmed in the wild. Severity is high due to the authentication bypass nature and confirmed active attacks. Organizations running affected Unified CM versions must immediately apply available security patches; those unable to patch should implement network segmentation and access controls to restrict Unified CM exposure.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/cisco-finally-confirms-attackers-exploiting-unified-cm-flaw/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Oracle E-Business Suite Flaw CVE-2026-46817 Actively Exploited in the Wild</title>
-    <id>urn:cybersecnews:item:20</id>
-    <published>2026-07-06T09:12:54.137567+00:00</published>
-    <updated>2026-07-06T09:12:54.137567+00:00</updated>
-    <link href="https://thehackernews.com/2026/06/oracle-e-business-suite-flaw-cve-2026.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · privilege-escalation · CVE-2026-46817&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Oracle E-Business Suite is affected by CVE-2026-46817, a critical improper privilege management and authentication flaw in Oracle Payments (CVSS 9.8) that enables unauthorized instance takeover. The vulnerability is actively exploited in the wild. Immediate patching is essential; organizations running affected Oracle E-Business Suite versions should apply security updates from Oracle and consider network segmentation to limit lateral movement until patches are deployed.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/06/oracle-e-business-suite-flaw-cve-2026.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>AirDrop and Quick Share Flaws Let Nearby Attackers Trigger Crashes and Bypass Checks</title>
-    <id>urn:cybersecnews:item:19</id>
-    <published>2026-07-06T09:12:54.136678+00:00</published>
-    <updated>2026-07-06T09:12:54.136678+00:00</updated>
-    <link href="https://thehackernews.com/2026/06/airdrop-and-quick-share-flaws-let.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · dos,auth-bypass&lt;/em&gt;&lt;/p&gt;&lt;p&gt;AirDrop (Apple) and Quick Share (Google) wireless file-sharing protocols contain six vulnerabilities allowing nearby attackers without prior connection to crash services and bypass security checks on affected devices. An attacker with a laptop within wireless range can trigger denial-of-service conditions on Macs or iPhones configured to receive from anyone, circumventing user prompts. No evidence of active exploitation in the wild has been reported. Affected users should update to patched OS versions when available; in interim, restricting AirDrop/Quick Share to "Contacts Only" mode significantly reduces attack surface.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/06/airdrop-and-quick-share-flaws-let.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
   </entry>
 </feed>
