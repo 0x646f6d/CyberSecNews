@@ -3,7 +3,70 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-07-21T10:25:54.891694+00:00</updated>
+  <updated>2026-07-21T17:21:17.714208+00:00</updated>
+  <entry>
+    <title>CVE-2026-8933: Local Privilege Escalation in Set-Capabilities snap-confine</title>
+    <id>urn:cybersecnews:item:127</id>
+    <published>2026-07-21T17:21:17.714208+00:00</published>
+    <updated>2026-07-21T17:21:17.714208+00:00</updated>
+    <link href="https://blog.qualys.com/category/vulnerabilities-threat-research" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · lpe · CVE-2026-8933&lt;/em&gt;&lt;/p&gt;&lt;p&gt;CVE-2026-8933 affects snap-confine across Ubuntu Desktop 24.04, 25.10, and 26.04, allowing unprivileged local users to escalate privileges to root via a race condition in sandbox capability-setting mechanisms. The vulnerability is critical in severity and exploitation status is not specified in the provided summary. Immediate patching of snap-confine is recommended for affected Ubuntu systems; users should apply security updates as soon as available from Canonical.&lt;/p&gt;&lt;p&gt;&lt;a href="https://blog.qualys.com/category/vulnerabilities-threat-research"&gt;Read more&lt;/a&gt; · Source: qualys&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Your AI agent’s config is now the payload: How attackers are targeting the developer agent harness</title>
+    <id>urn:cybersecnews:item:126</id>
+    <published>2026-07-21T17:21:17.713066+00:00</published>
+    <updated>2026-07-21T17:21:17.713066+00:00</updated>
+    <link href="https://www.tenable.com/blog/ai-coding-assistant-agent-harness-attacks" rel="alternate" />
+    <category term="red-team" />
+    <content type="html">&lt;p&gt;&lt;em&gt;red-team · persistence,config-injection,supply-chain&lt;/em&gt;&lt;/p&gt;&lt;p&gt;AI coding assistant configuration files (settings.json, .cursorrules, .windsurfrules, .github/copilot-instructions.md) are now explicit supply-chain attack targets, with the Mini Shai-Hulud worm and variants injecting persistent hooks and prompt injections to achieve silent execution with developer-level trust. The worm scans for AI tool configs across npm, PyPI, and other registries, injects SessionStart hooks or LLM-instruction payloads, and uses model refusal evasion (clear-bomb technique) to blind AI-based scanners while spreading via stolen GitHub tokens. This represents high-severity threats actively exploited in the wild that shift compromise from package installation to the persistent agent harness layer. Defenders must treat harness config files as code requiring mandatory reviews and SHA-hash pinning in CI/CD, enforce --ignore-scripts on package installs, flag alwaysApply rules with broad globs as critical findings, rotate GitHub tokens immediately post-install, proxy LLM API traffic with egress filtering, and treat AI scanner refusals as suspicious signals requiring escalation to non-AI analysis.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.tenable.com/blog/ai-coding-assistant-agent-harness-attacks"&gt;Read more&lt;/a&gt; · Source: tenable&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>DD-WRT DD-WRT: DD-WRT Stack-Based Buffer Overflow Vulnerability (CVE-2021-27137)</title>
+    <id>urn:cybersecnews:item:125</id>
+    <published>2026-07-21T17:21:17.712304+00:00</published>
+    <updated>2026-07-21T17:21:17.712304+00:00</updated>
+    <link href="https://nvd.nist.gov/vuln/detail/CVE-2021-27137" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · buffer-overflow · CVE-2021-27137&lt;/em&gt;&lt;/p&gt;&lt;p&gt;DD-WRT firmware contains a stack-based buffer overflow in the UPnP service (CVE-2021-27137) allowing unauthenticated remote code execution. This vulnerability is actively exploited in the wild with high severity. Apply vendor patches immediately per CISA BOD 26-04 prioritization guidance; if mitigations are unavailable, discontinue use of affected devices. Assess internet exposure of all DD-WRT deployments and enforce expedited patching timelines.&lt;/p&gt;&lt;p&gt;&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2021-27137"&gt;Read more&lt;/a&gt; · Source: cisa-kev&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>New Bit2Watt Attack Could Let Cloud Tenants Disrupt Power Grids Without an Exploit</title>
+    <id>urn:cybersecnews:item:124</id>
+    <published>2026-07-21T17:21:17.711375+00:00</published>
+    <updated>2026-07-21T17:21:17.711375+00:00</updated>
+    <link href="https://thehackernews.com/2026/07/new-bit2watt-attack-could-let-cloud.html" rel="alternate" />
+    <category term="red-team" />
+    <content type="html">&lt;p&gt;&lt;em&gt;red-team · side-channel&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Bit2Watt is a side-channel attack leveraging GPU workload manipulation in cloud environments to induce rapid power fluctuations in data centers, potentially destabilizing connected power grids. The attack requires no vulnerability exploitation or system compromise—a standard cloud tenant can intentionally modulate GPU compute patterns to create dangerous frequency variations. Severity is significant as it represents a denial-of-service vector against critical infrastructure, though active wild exploitation has not been documented. Mitigation includes power smoothing mechanisms, rate-limiting GPU resource allocation per tenant, enhanced power monitoring with anomaly detection, and coordination with grid operators on data center load variability constraints.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/new-bit2watt-attack-could-let-cloud.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Open-Source Android AI Agents Could Let Invisible Screen Text Run Code on Host PCs</title>
+    <id>urn:cybersecnews:item:123</id>
+    <published>2026-07-21T17:21:17.710580+00:00</published>
+    <updated>2026-07-21T17:21:17.710580+00:00</updated>
+    <link href="https://thehackernews.com/2026/07/open-source-android-ai-agents-could-let.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · prompt-injection&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Open-source Android AI agent frameworks (AppAgent, AppAgentX, and three others) are vulnerable to privilege escalation attacks where malicious Android apps can inject invisible on-screen text and shared storage instructions to compromise the agent's host PC. An attacker needs only basic Android permissions (overlay and storage write access) to execute arbitrary commands on the controlling computer through a multi-step exploitation chain. Severity is high as demonstrated by researchers with proof-of-concept attacks, though no in-the-wild exploitation is reported. Developers should immediately restrict agent framework access to only trusted applications, implement input validation/sanitization for all screen text processing, disable agent execution of suspicious commands, and update frameworks when patches become available.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/open-source-android-ai-agents-could-let.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Zimbra Patches Critical SNMP Command Injection and Four XSS Vulnerabilities</title>
+    <id>urn:cybersecnews:item:122</id>
+    <published>2026-07-21T17:21:17.709359+00:00</published>
+    <updated>2026-07-21T17:21:17.709359+00:00</updated>
+    <link href="https://thehackernews.com/2026/07/zimbra-patches-critical-snmp-command.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · command-injection&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Zimbra Collaboration Suite addressed nine vulnerabilities in version 10.1.20, including a critical SNMP command injection flaw in its monitoring component that allows remote code execution when SNMP notifications are enabled, plus four XSS vulnerabilities. The SNMP command injection is rated critical severity and poses significant risk to affected deployments. Immediate patching to version 10.1.20 or later is strongly recommended for all Zimbra installations with SNMP monitoring enabled.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/zimbra-patches-critical-snmp-command.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>AWS Kiro Flaw Let a Poisoned Web Page Rewrite Its Config and Run Code</title>
+    <id>urn:cybersecnews:item:121</id>
+    <published>2026-07-21T17:21:17.707850+00:00</published>
+    <updated>2026-07-21T17:21:17.707850+00:00</updated>
+    <link href="https://thehackernews.com/2026/07/aws-kiro-flaw-let-poisoned-web-page.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;AWS's Kiro agentic IDE was vulnerable to remote code execution through poisoned web pages containing hidden text that could trick the agent into rewriting its configuration and executing arbitrary code without user approval. An attacker could achieve RCE through seemingly benign requests like asking Kiro to summarize a webpage. AWS has already patched the vulnerability, and while severity was high due to the direct path to code execution on developer machines, there is no indication of active exploitation in the wild. Developers using Kiro should ensure they are running the latest patched version and exercise caution when processing untrusted web content.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/aws-kiro-flaw-let-poisoned-web-page.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Critical Palo Alto VPN bug now exploited by Qilin ransomware gang</title>
     <id>urn:cybersecnews:item:120</id>
@@ -11,7 +74,7 @@
     <updated>2026-07-21T10:25:54.891694+00:00</updated>
     <link href="https://www.bleepingcomputer.com/news/security/critical-globalprotect-vpn-bug-now-exploited-in-ransomware-attacks/" rel="alternate" />
     <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Palo Alto Networks PAN-OS GlobalProtect is vulnerable to a critical authentication bypass flaw (CVE-2024-21893) that the Qilin ransomware gang actively exploits for network intrusion. The vulnerability allows unauthenticated attackers to bypass authentication mechanisms and gain unauthorized access to protected networks. This is a severe, actively exploited vulnerability affecting critical VPN infrastructure. Organizations must immediately apply available patches from Palo Alto Networks and monitor for signs of compromise in their GlobalProtect logs and access patterns.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/critical-globalprotect-vpn-bug-now-exploited-in-ransomware-attacks/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-0257&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Palo Alto Networks PAN-OS GlobalProtect is vulnerable to a critical authentication bypass flaw (CVE-2024-21893) that the Qilin ransomware gang actively exploits for network intrusion. The vulnerability allows unauthenticated attackers to bypass authentication mechanisms and gain unauthorized access to protected networks. This is a severe, actively exploited vulnerability affecting critical VPN infrastructure. Organizations must immediately apply available patches from Palo Alto Networks and monitor for signs of compromise in their GlobalProtect logs and access patterns.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/critical-globalprotect-vpn-bug-now-exploited-in-ransomware-attacks/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
   </entry>
   <entry>
     <title>Sicherheitspatch Grafana: Angreifer können sensible Daten abgreifen</title>
@@ -840,68 +903,5 @@
     <link href="https://thehackernews.com/2026/07/rogue-agent-flaw-could-have-let.html" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · privilege-escalation&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Google Dialogflow CX contained a critical privilege escalation vulnerability allowing authenticated users with edit rights on one Code Block-enabled agent to compromise other Code Block-enabled agents within the same Google Cloud project. Exploited agents could have their conversations monitored, user data exfiltrated, and malicious messages injected to conduct phishing or credential theft attacks. No evidence of active exploitation in the wild has been reported. Google has patched the vulnerability; affected organizations should immediately verify their Dialogflow CX configurations and update to the latest version.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/rogue-agent-flaw-could-have-let.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Threat Actors Probe Gitea Docker Flaw CVE-2026-20896 13 Days After Disclosure</title>
-    <id>urn:cybersecnews:item:27</id>
-    <published>2026-07-07T09:30:19.918816+00:00</published>
-    <updated>2026-07-07T09:30:19.918816+00:00</updated>
-    <link href="https://thehackernews.com/2026/07/threat-actors-probe-gitea-docker-flaw.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-20896&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Gitea Docker images are affected by CVE-2026-20896 (CVSS 9.8), which allows unauthenticated remote attackers to bypass authentication by spoofing the "X-WEBAUTH-USER" header without source IP validation. The vulnerability is actively being exploited in the wild, with threat actors probing vulnerable instances within 13 days of public disclosure. Apply the latest Gitea security patch immediately to all Docker deployments, and implement network-level controls to restrict header manipulation or filter untrusted X-WEBAUTH-USER headers at proxy/load balancer level as interim mitigation.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/threat-actors-probe-gitea-docker-flaw.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>16-Year-Old Linux KVM Flaw Lets Guest VMs Escape to Host on Intel and AMD x86 Systems</title>
-    <id>urn:cybersecnews:item:26</id>
-    <published>2026-07-07T09:30:19.917978+00:00</published>
-    <updated>2026-07-07T09:30:19.917978+00:00</updated>
-    <link href="https://thehackernews.com/2026/07/16-year-old-linux-kvm-flaw-lets-guest.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · use-after-free · CVE-2026-53359&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Linux KVM hypervisor on Intel and AMD x86 systems is vulnerable to CVE-2026-53359, a 16-year-old use-after-free bug in the shadow MMU code that allows guest VMs to corrupt host kernel memory and potentially escape to the host. The flaw can be triggered from unprivileged guest code to cause host kernel panic, with researchers indicating a more severe unreleased exploit exists. This is a critical severity vulnerability affecting virtualization infrastructure; exploit availability in the wild is not yet widespread but PoC exists. Apply available Linux kernel patches immediately to affected systems running KVM, particularly those hosting untrusted guest VMs.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/16-year-old-linux-kvm-flaw-lets-guest.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Iran-Linked Hackers Use New Cavern C2 Framework to Target Israeli Organizations</title>
-    <id>urn:cybersecnews:item:25</id>
-    <published>2026-07-07T09:30:19.916620+00:00</published>
-    <updated>2026-07-07T09:30:19.916620+00:00</updated>
-    <link href="https://thehackernews.com/2026/07/iran-linked-hackers-use-new-cavern-c2.html" rel="alternate" />
-    <category term="red-team" />
-    <content type="html">&lt;p&gt;&lt;em&gt;red-team · c2&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Iranian MOIS-affiliated threat actors are deploying a previously unknown modular C2 framework called Cavern to target Israeli IT providers and government entities. The framework enables remote command execution and data exfiltration capabilities typical of advanced persistent threat operations. While the threat is currently limited to Israeli-focused targeting, organizations should monitor for indicators of compromise associated with Cavern infrastructure and implement network segmentation to restrict lateral movement from potential initial compromises. Coordinate with threat intelligence providers for IOCs and consider elevated monitoring of critical IT infrastructure, particularly for organizations with Israeli operations or sensitive government contracts.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/iran-linked-hackers-use-new-cavern-c2.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>BeyondTrust Patches Critical Auth Bypass Flaws in Remote Support and PRA</title>
-    <id>urn:cybersecnews:item:24</id>
-    <published>2026-07-07T09:30:19.915620+00:00</published>
-    <updated>2026-07-07T09:30:19.915620+00:00</updated>
-    <link href="https://thehackernews.com/2026/07/beyondtrust-patches-critical-auth.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-40138&lt;/em&gt;&lt;/p&gt;&lt;p&gt;BeyondTrust Remote Support and Privileged Remote Access products contain two critical pre-authentication vulnerabilities (CVE-2024-6138 and another unnamed flaw, CVSS 9.2) allowing unauthenticated attackers to bypass authentication and achieve remote code execution on affected systems. These vulnerabilities enable complete device compromise and represent a severe risk to organizations using these widely-deployed support and access tools. Exploitation in the wild has not been confirmed at this time, but given the critical CVSS scores and unauthenticated attack vector, assume active exploitation is imminent. Immediately apply BeyondTrust's security patches to all Remote Support and PRA deployments and isolate affected systems from production networks if patching cannot be completed urgently.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/beyondtrust-patches-critical-auth.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>CERT/CC Warns of Hidden Admin Backdoor in Tenda Router Firmware</title>
-    <id>urn:cybersecnews:item:23</id>
-    <published>2026-07-07T09:30:19.914652+00:00</published>
-    <updated>2026-07-07T09:30:19.914652+00:00</updated>
-    <link href="https://thehackernews.com/2026/07/certcc-warns-of-hidden-admin-backdoor.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-11405&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Tenda router firmware versions contain CVE-2026-11405, an undocumented authentication backdoor enabling unauthenticated administrative access to web management interfaces. The vulnerability allows attackers to completely bypass password verification and gain full device control. CERT/CC has not specified current exploitation in the wild, but the ease of exploitation and severity warrant immediate firmware updates from Tenda for all affected models. Affected organizations should prioritize patching or isolating vulnerable Tenda devices from untrusted networks until updates are available.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/certcc-warns-of-hidden-admin-backdoor.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>OPNsense-Update beseitigt kritische Rootlücke und weitere Sicherheitsrisiken</title>
-    <id>urn:cybersecnews:item:22</id>
-    <published>2026-07-07T09:30:19.913139+00:00</published>
-    <updated>2026-07-07T09:30:19.913139+00:00</updated>
-    <link href="https://www.heise.de/news/OPNsense-Update-beseitigt-kritische-Rootluecke-und-weitere-Sicherheitsrisiken-11355118.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · privilege-escalation&lt;/em&gt;&lt;/p&gt;&lt;p&gt;OPNsense firewall has released patches addressing a critical root-level vulnerability along with additional security flaws. The critical vulnerability allows privilege escalation to root, posing severe risk to affected deployments. There is no indication of active exploitation in the wild at present. Immediate patching is strongly recommended for all OPNsense instances to remediate the root access vulnerability and other identified attack vectors.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.heise.de/news/OPNsense-Update-beseitigt-kritische-Rootluecke-und-weitere-Sicherheitsrisiken-11355118.html"&gt;Read more&lt;/a&gt; · Source: heise-security&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Cisco finally confirms attackers exploiting Unified CM flaw</title>
-    <id>urn:cybersecnews:item:21</id>
-    <published>2026-07-06T09:12:54.138559+00:00</published>
-    <updated>2026-07-06T09:12:54.138559+00:00</updated>
-    <link href="https://www.bleepingcomputer.com/news/security/cisco-finally-confirms-attackers-exploiting-unified-cm-flaw/" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Cisco Unified Communications Manager is vulnerable to authentication bypass allowing unauthenticated attackers to access sensitive system information and potentially execute administrative actions. The flaw was patched in June 2024, but active exploitation has now been confirmed in the wild. Severity is high due to the authentication bypass nature and confirmed active attacks. Organizations running affected Unified CM versions must immediately apply available security patches; those unable to patch should implement network segmentation and access controls to restrict Unified CM exposure.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/cisco-finally-confirms-attackers-exploiting-unified-cm-flaw/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
   </entry>
 </feed>
