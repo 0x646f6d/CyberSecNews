@@ -3,7 +3,16 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-07-22T02:38:25.408710+00:00</updated>
+  <updated>2026-07-22T10:25:28.605905+00:00</updated>
+  <entry>
+    <title>Oracle Critical Patch Update: 1449 Softwareflicken im Juli</title>
+    <id>urn:cybersecnews:item:134</id>
+    <published>2026-07-22T10:25:28.605905+00:00</published>
+    <updated>2026-07-22T10:25:28.605905+00:00</updated>
+    <link href="https://www.heise.de/news/Oracle-Critical-Patch-Update-1449-Softwareflicken-im-Juli-11372857.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · multiple&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Oracle released 1,449 security patches in July, a record number covering vulnerabilities across its product portfolio including Java, WebLogic, Database, and Enterprise applications. The updates address critical remote code execution flaws, SQL injection vulnerabilities, and authentication bypass issues, with multiple CVEs rated CVSS 9.0 or higher indicating severe impact. Several vulnerabilities are exploited in the wild or have public exploits available, particularly affecting WebLogic and Java components. Immediate patching is mandatory, prioritizing critical-rated CVEs in Internet-facing systems such as WebLogic and Java Runtime Environment, followed by systematic deployment of remaining updates across the enterprise infrastructure.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.heise.de/news/Oracle-Critical-Patch-Update-1449-Softwareflicken-im-Juli-11372857.html"&gt;Read more&lt;/a&gt; · Source: heise-security&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Credential confusion in @sigstore/oci can leak registry credentials to an attacker-controlled registry (CVE-2026-59891)</title>
     <id>urn:cybersecnews:item:133</id>
@@ -894,14 +903,5 @@
     <link href="https://www.elastic.co/security-labs/mexican-banking-fraud-scmbanker-ref6045" rel="alternate" />
     <category term="red-team" />
     <content type="html">&lt;p&gt;&lt;em&gt;red-team · banking-fraud&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Elastic Security Labs identified REF6045, an operator-assisted banking fraud campaign targeting Mexican financial institutions, fintech platforms, payment processors, and cryptocurrency exchanges using a toolkit called ClickFix. The attack leverages social engineering, fake browser update prompts, and malware delivery to compromise customer credentials and facilitate unauthorized fund transfers. The operation remains actively exploited in the wild with victims experiencing direct financial losses through account takeovers and fraudulent transactions. Organizations should implement multi-factor authentication, employee security awareness training on social engineering tactics, and deploy endpoint detection and response (EDR) solutions to identify suspicious activities associated with this threat actor.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.elastic.co/security-labs/mexican-banking-fraud-scmbanker-ref6045"&gt;Read more&lt;/a&gt; · Source: elastic-security-labs&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Goploy: Cross-namespace IDOR and RCE via body-supplied row id in project and project_file handlers (CVE-2026-53552)</title>
-    <id>urn:cybersecnews:item:34</id>
-    <published>2026-07-08T01:17:02.479303+00:00</published>
-    <updated>2026-07-08T01:17:02.479303+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-26rh-24rg-j3vv" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · idor · CVE-2026-53552&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Goploy's project and project_file handlers (AddFile, EditFile, RemoveFile, Edit functions) suffer from insecure direct object reference (IDOR) allowing cross-namespace access and remote code execution. The vulnerability exists because these handlers accept row IDs from user-supplied JSON body parameters without validating namespace ownership; authenticated users with manager role or FileSync/EditProject permissions can manipulate arbitrary projects across namespaces. This is a critical severity issue; exploitation likelihood in the wild is unknown but the attack requires valid credentials. Update Goploy to a patched version immediately and review access controls to ensure namespace isolation is enforced server-side for all project operations.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-26rh-24rg-j3vv"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
   </entry>
 </feed>
