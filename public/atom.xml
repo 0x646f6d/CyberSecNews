@@ -3,7 +3,25 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-07-22T10:25:28.605905+00:00</updated>
+  <updated>2026-07-22T17:20:51.722850+00:00</updated>
+  <entry>
+    <title>Intercepting Android WebView traffic under new certificate validity requirement by Chromium</title>
+    <id>urn:cybersecnews:item:136</id>
+    <published>2026-07-22T17:20:51.722850+00:00</published>
+    <updated>2026-07-22T17:20:51.722850+00:00</updated>
+    <link href="https://blog.nviso.eu/2026/07/22/intercepting-android-webview-traffic-under-new-certificate-validity-requirement-by-chromium/" rel="alternate" />
+    <category term="red-team" />
+    <content type="html">&lt;p&gt;&lt;em&gt;red-team · mitm-interception&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Android WebView and Chromium-based browsers now enforce stricter certificate validity requirements that prevent interception of HTTPS traffic using self-signed or expired certificates, even when certificate pinning is not implemented. This change affects penetration testing and security assessments where analysts previously relied on proxy certificates for traffic inspection. While this is a security hardening measure rather than a vulnerability, it complicates legitimate security testing workflows. Security teams should use alternative testing methods such as device-level network analysis, application-level logging, or work with application developers to implement debug-mode certificate acceptance rather than attempting to bypass these validity checks.&lt;/p&gt;&lt;p&gt;&lt;a href="https://blog.nviso.eu/2026/07/22/intercepting-android-webview-traffic-under-new-certificate-validity-requirement-by-chromium/"&gt;Read more&lt;/a&gt; · Source: nviso-labs&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Adobe Chrome extension flaw let sites access private WhatsApp chats</title>
+    <id>urn:cybersecnews:item:135</id>
+    <published>2026-07-22T17:20:51.721179+00:00</published>
+    <updated>2026-07-22T17:20:51.721179+00:00</updated>
+    <link href="https://www.bleepingcomputer.com/news/security/adobe-chrome-extension-flaw-let-sites-access-private-whatsapp-chats/" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Adobe Acrobat Chrome extension contained a vulnerability allowing unauthorized access to WhatsApp Web conversations and private data without authentication through improper content script permissions. The flaw affected the extension's ability to isolate content across different web domains, exposing sensitive communications. Severity is high given the personal nature of WhatsApp data and lack of authentication requirement; exploitation likelihood in the wild is moderate as it requires users to have both the extension and WhatsApp Web active. Adobe has patched the vulnerability; users should immediately update the Adobe Acrobat extension to the latest version and review browser extension permissions.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/adobe-chrome-extension-flaw-let-sites-access-private-whatsapp-chats/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Oracle Critical Patch Update: 1449 Softwareflicken im Juli</title>
     <id>urn:cybersecnews:item:134</id>
@@ -848,7 +866,7 @@
     <updated>2026-07-08T17:15:07.309908+00:00</updated>
     <link href="https://horizon3.ai/attack-research/vulnerabilities/cve-2026-9181/" rel="alternate" />
     <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · path-traversal · CVE-2026-9181&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Esri ArcGIS Server contains a critical pre-authentication path traversal vulnerability (CVE-2026-9181) enabling unauthenticated attackers to access arbitrary sensitive files on affected systems. The vulnerability is publicly disclosed with no current mitigation available, though exploitation likelihood depends on network exposure. Organizations running ArcGIS Server should immediately restrict network access to the application and monitor Esri's security advisories for patching guidance. Conduct urgent inventory and exposure assessment of all ArcGIS Server instances, particularly those internet-facing or accessible from untrusted networks.&lt;/p&gt;&lt;p&gt;&lt;a href="https://horizon3.ai/attack-research/vulnerabilities/cve-2026-9181/"&gt;Read more&lt;/a&gt; · Source: horizon3&lt;/p&gt;</content>
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · path-traversal · CVE-2026-29059, CVE-2026-9181&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Esri ArcGIS Server contains a critical pre-authentication path traversal vulnerability (CVE-2026-9181) enabling unauthenticated attackers to access arbitrary sensitive files on affected systems. The vulnerability is publicly disclosed with no current mitigation available, though exploitation likelihood depends on network exposure. Organizations running ArcGIS Server should immediately restrict network access to the application and monitor Esri's security advisories for patching guidance. Conduct urgent inventory and exposure assessment of all ArcGIS Server instances, particularly those internet-facing or accessible from untrusted networks.&lt;/p&gt;&lt;p&gt;&lt;a href="https://horizon3.ai/attack-research/vulnerabilities/cve-2026-9181/"&gt;Read more&lt;/a&gt; · Source: horizon3&lt;/p&gt;</content>
   </entry>
   <entry>
     <title>Ubiquiti Patches Critical UniFi Flaws Across Connect, Talk, Access, Protect, and OS</title>
@@ -885,23 +903,5 @@
     <link href="https://www.bleepingcomputer.com/news/security/ubiquiti-warns-of-new-max-severity-unifi-os-vulnerability/" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · command-injection&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Ubiquiti UniFi OS is affected by seven critical vulnerabilities, including a maximum-severity command injection flaw that enables remote code execution. The vulnerability allows unauthenticated or low-privilege attackers to execute arbitrary commands on affected systems. Ubiquiti has not indicated active exploitation in the wild, but the maximum CVSS rating and ease of exploitation make this a priority threat. Administrators should immediately apply available security updates to all UniFi OS deployments and restrict network access to UniFi controller interfaces.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/ubiquiti-warns-of-new-max-severity-unifi-os-vulnerability/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>15-Year-Old GhostLock Flaw Enables Root and Container Escape on Most Linux Distros</title>
-    <id>urn:cybersecnews:item:36</id>
-    <published>2026-07-08T10:03:14.914636+00:00</published>
-    <updated>2026-07-08T10:03:14.914636+00:00</updated>
-    <link href="https://thehackernews.com/2026/07/15-year-old-ghostlock-flaw-enables-root.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · privilege-escalation · CVE-2026-43499&lt;/em&gt;&lt;/p&gt;&lt;p&gt;GhostLock (CVE-2026-43499) is a 15-year-old Linux kernel privilege escalation flaw affecting virtually all mainstream distributions since 2011 that allows any logged-in user to gain root access and escape containers without requiring special permissions or network access. The vulnerability is critical due to its widespread presence across default kernel installations and the ease of exploitation by local attackers. While no active exploitation in the wild has been reported, patches should be applied immediately to all affected systems, and distributions should prioritize kernel updates to remediate this long-standing flaw.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/15-year-old-ghostlock-flaw-enables-root.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>ClickFix to Cash-Out: Anatomy of a Mexican Banking-Fraud Toolkit</title>
-    <id>urn:cybersecnews:item:35</id>
-    <published>2026-07-08T01:17:02.481210+00:00</published>
-    <updated>2026-07-08T01:17:02.481210+00:00</updated>
-    <link href="https://www.elastic.co/security-labs/mexican-banking-fraud-scmbanker-ref6045" rel="alternate" />
-    <category term="red-team" />
-    <content type="html">&lt;p&gt;&lt;em&gt;red-team · banking-fraud&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Elastic Security Labs identified REF6045, an operator-assisted banking fraud campaign targeting Mexican financial institutions, fintech platforms, payment processors, and cryptocurrency exchanges using a toolkit called ClickFix. The attack leverages social engineering, fake browser update prompts, and malware delivery to compromise customer credentials and facilitate unauthorized fund transfers. The operation remains actively exploited in the wild with victims experiencing direct financial losses through account takeovers and fraudulent transactions. Organizations should implement multi-factor authentication, employee security awareness training on social engineering tactics, and deploy endpoint detection and response (EDR) solutions to identify suspicious activities associated with this threat actor.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.elastic.co/security-labs/mexican-banking-fraud-scmbanker-ref6045"&gt;Read more&lt;/a&gt; · Source: elastic-security-labs&lt;/p&gt;</content>
   </entry>
 </feed>
