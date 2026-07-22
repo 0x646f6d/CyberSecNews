@@ -3,7 +3,61 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-07-21T17:21:17.714208+00:00</updated>
+  <updated>2026-07-22T02:38:25.408710+00:00</updated>
+  <entry>
+    <title>Credential confusion in @sigstore/oci can leak registry credentials to an attacker-controlled registry (CVE-2026-59891)</title>
+    <id>urn:cybersecnews:item:133</id>
+    <published>2026-07-22T02:38:25.408710+00:00</published>
+    <updated>2026-07-22T02:38:25.408710+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-pf56-329r-95rw" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · credential-exposure · CVE-2026-59891&lt;/em&gt;&lt;/p&gt;&lt;p&gt;The @sigstore/oci npm package contains a critical credential confusion vulnerability (CVE-2026-59891) in the `getRegistryCredentials()` function, which uses substring matching instead of exact hostname matching to select Docker credentials from ~/.docker/config.json. An attacker can craft a registry URL containing a legitimate registry's hostname as a substring to trick the function into leaking credentials intended for that legitimate registry. This vulnerability is critical severity; patch to the latest version immediately. No evidence of active exploitation in the wild is mentioned, but the high severity and ease of exploitation warrant urgent patching.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-pf56-329r-95rw"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>@vitest/browser: Browser Mode provider commands bypass the file-access permission gate</title>
+    <id>urn:cybersecnews:item:132</id>
+    <published>2026-07-22T02:38:25.408031+00:00</published>
+    <updated>2026-07-22T02:38:25.408031+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-p63j-vcc4-9vmv" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Vitest's @vitest/browser package contains a critical vulnerability where Browser Mode provider commands bypass file-access permission checks, allowing unauthenticated clients to read/write arbitrary files on the host system. Commands for screenshot management, Playwright traces, and file uploads do not validate the `allowWrite` permission gate or confine operations to the project directory. This vulnerability is critical in severity and could enable full filesystem compromise on systems running Vitest Browser Mode. Immediately update @vitest/browser to the patched version and restrict network access to Browser Mode APIs to trusted networks only.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-p63j-vcc4-9vmv"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Gitea: Incomplete SSRF Protection in Webhook and Migration Allow-list Default Filter (CVE-2026-22874)</title>
+    <id>urn:cybersecnews:item:131</id>
+    <published>2026-07-22T02:38:25.407347+00:00</published>
+    <updated>2026-07-22T02:38:25.407347+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-2r5c-gw76-rh3w" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · ssrf · CVE-2026-22874&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Gitea's webhook and migration functionality uses an incomplete SSRF allow-list that relies solely on Go's `net.IP.IsPrivate()` function, which does not block access to cloud metadata services, certain internal network ranges, and IPv6 transition mechanisms beyond RFC 1918 and RFC 4193. This allows attackers to bypass intended restrictions and access sensitive internal services or cloud metadata endpoints. The vulnerability is critical in severity. Users should upgrade to a patched version of Gitea that implements a more comprehensive SSRF filter covering additional reserved IP ranges and protocols.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-2r5c-gw76-rh3w"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Gitea Actions Artifacts V4 signed URL HMAC ambiguity allows cross-repository artifact read and cross-task upload-state write (CVE-2026-58426)</title>
+    <id>urn:cybersecnews:item:130</id>
+    <published>2026-07-22T02:38:25.406701+00:00</published>
+    <updated>2026-07-22T02:38:25.406701+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-hg5r-vq93-9fv6" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · hmac-bypass · CVE-2026-58426&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Gitea Actions Artifacts V4 is vulnerable to HMAC signature ambiguity (CVE-2026-58426) allowing attackers with Actions job permissions to rewrite signed URLs to access artifacts across repositories and tasks while maintaining valid signatures. An attacker can read artifacts from arbitrary task contexts or write malicious data to another task's staging area, including in private repositories. This critical vulnerability is currently being exploited in the wild. Affected organizations should immediately patch Gitea to the latest version addressing this HMAC validation flaw.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-hg5r-vq93-9fv6"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Gitea: Public-only repository tokens can update private PR head branches (CVE-2026-58443)</title>
+    <id>urn:cybersecnews:item:129</id>
+    <published>2026-07-22T02:38:25.405224+00:00</published>
+    <updated>2026-07-22T02:38:25.405224+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-xxjv-752h-3vp2" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-58443&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Gitea versions prior to the fix contain a critical authorization bypass (CVE-2026-58443) where public-only repository tokens with write:repository permissions can update private pull request head branches by exploiting the `/api/v1/repos/{public-owner}/{public-repo}/pulls/{index}/update` endpoint. The vulnerability stems from insufficient permission validation—the system checks the public-only restriction against the public base repository but fails to properly restrict operations on the private head repository. This is a critical severity issue likely exploitable in the wild given its straightforward exploitation path. Administrators should immediately apply available patches and review logs for token misuse; consider rotating any public-only tokens with repository write permissions until patched.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-xxjv-752h-3vp2"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Apple Fixes Hide My Email Bug That Exposed Real Addresses in Mail Logs</title>
+    <id>urn:cybersecnews:item:128</id>
+    <published>2026-07-22T02:38:25.403760+00:00</published>
+    <updated>2026-07-22T02:38:25.403760+00:00</updated>
+    <link href="https://thehackernews.com/2026/07/apple-fixes-hide-my-email-bug-that.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · information-disclosure&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Apple patched a privacy vulnerability in its Hide My Email service that exposed users' real email addresses in mail logs despite the masking feature being enabled. The flaw allowed real addresses to leak in email headers and server logs, directly undermining the privacy protection users relied on. Apple deployed the fix on July 3, 2026, over a year after the vulnerability was reported by a security researcher. While no evidence of active exploitation in the wild was mentioned, users should verify their Hide My Email implementation is updated to restore the intended privacy guarantees.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/apple-fixes-hide-my-email-bug-that.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>CVE-2026-8933: Local Privilege Escalation in Set-Capabilities snap-confine</title>
     <id>urn:cybersecnews:item:127</id>
@@ -849,59 +903,5 @@
     <link href="https://github.com/advisories/GHSA-26rh-24rg-j3vv" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · idor · CVE-2026-53552&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Goploy's project and project_file handlers (AddFile, EditFile, RemoveFile, Edit functions) suffer from insecure direct object reference (IDOR) allowing cross-namespace access and remote code execution. The vulnerability exists because these handlers accept row IDs from user-supplied JSON body parameters without validating namespace ownership; authenticated users with manager role or FileSync/EditProject permissions can manipulate arbitrary projects across namespaces. This is a critical severity issue; exploitation likelihood in the wild is unknown but the attack requires valid credentials. Update Goploy to a patched version immediately and review access controls to ensure namespace isolation is enforced server-side for all project operations.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-26rh-24rg-j3vv"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Better Auth: OAuth refresh-token replay via missing client authentication on oidc-provider and mcp plugins (CVE-2026-53512)</title>
-    <id>urn:cybersecnews:item:33</id>
-    <published>2026-07-07T21:12:57.544297+00:00</published>
-    <updated>2026-07-07T21:12:57.544297+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-pw9m-5jxm-xr6h" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-53512&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Better-auth's oidc-provider and mcp plugins lack proper client authentication on OAuth refresh token endpoints, allowing attackers to replay refresh tokens without valid credentials. This affects applications with confidential OAuth clients (web, native, or user-agent-based types). The vulnerability is critical severity; there is no indication of active exploitation mentioned. Users should immediately update better-auth to a patched version and review OAuth client configurations and token usage logs for signs of compromise.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-pw9m-5jxm-xr6h"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>@better-auth/sso provider registration has server-side request forgery via unvalidated OIDC endpoints (CVE-2026-53513)</title>
-    <id>urn:cybersecnews:item:32</id>
-    <published>2026-07-07T21:12:57.541319+00:00</published>
-    <updated>2026-07-07T21:12:57.541319+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-5rr4-8452-hf4v" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · ssrf · CVE-2026-15409, CVE-2026-15410, CVE-2026-53513&lt;/em&gt;&lt;/p&gt;&lt;p&gt;@better-auth/sso versions before 1.6.11 (and 1.7.0-beta.x) contain a critical server-side request forgery vulnerability in the OIDC provider registration endpoint that fails to validate endpoints, allowing authenticated users to trigger requests to arbitrary URLs. The flaw affects applications with the sso() plugin enabled and default access controls, potentially enabling attackers to exfiltrate IAM credentials or access internal services. Patch to version 1.6.11 or later immediately; if immediate patching is unavailable, restrict access to POST /sso/register to trusted users only. No evidence of active exploitation in the wild has been confirmed at this time.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-5rr4-8452-hf4v"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Joomlack Page Builder: Joomlack Page Builder Improper Access Control Vulnerability (CVE-2026-56290)</title>
-    <id>urn:cybersecnews:item:31</id>
-    <published>2026-07-07T19:46:13.532492+00:00</published>
-    <updated>2026-07-07T19:46:13.532492+00:00</updated>
-    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-56290" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · improper-access-control · CVE-2026-56290, CVE-2026-56291&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Joomlack Page Builder contains an improper access control vulnerability (CVE-2026-56290) permitting unauthenticated remote code execution through arbitrary file upload. This vulnerability is actively exploited in the wild and listed in CISA's Known Exploited Vulnerabilities catalog. Immediately apply vendor mitigations or patches in accordance with BOD 26-04 prioritization guidance; discontinue use if mitigations are unavailable. Assess internet exposure and evaluate cloud deployments under BOD 26-04 requirements for timely remediation.&lt;/p&gt;&lt;p&gt;&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2026-56290"&gt;Read more&lt;/a&gt; · Source: cisa-kev&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>JoomShaper SP Page Builder: JoomShaper SP Page Builder Unrestricted Upload of File with Dangerous Type Vulnerability (CVE-2026-48908)</title>
-    <id>urn:cybersecnews:item:30</id>
-    <published>2026-07-07T19:46:13.531272+00:00</published>
-    <updated>2026-07-07T19:46:13.531272+00:00</updated>
-    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-48908" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · unrestricted-file-upload · CVE-2026-48908, CVE-2026-48939&lt;/em&gt;&lt;/p&gt;&lt;p&gt;JoomShaper SP Page Builder contains an unrestricted file upload vulnerability (CVE-2026-48908) allowing unauthenticated users to upload and execute arbitrary PHP files. This vulnerability is actively exploited in the wild and carries critical severity due to the potential for remote code execution. Apply vendor-supplied patches immediately in accordance with CISA BOD 26-04 guidance; if mitigations are unavailable, discontinue use of the product and consider alternative solutions.&lt;/p&gt;&lt;p&gt;&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2026-48908"&gt;Read more&lt;/a&gt; · Source: cisa-kev&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Chinese hackers develop LONGLEASH malware to expand ORB network</title>
-    <id>urn:cybersecnews:item:29</id>
-    <published>2026-07-07T19:33:08.250024+00:00</published>
-    <updated>2026-07-07T19:33:08.250024+00:00</updated>
-    <link href="https://www.bleepingcomputer.com/news/security/chinese-hackers-develop-longleash-malware-to-expand-orb-network/" rel="alternate" />
-    <category term="red-team" />
-    <content type="html">&lt;p&gt;&lt;em&gt;red-team · c2&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Chinese APT group UAT-7810 is developing LONGLEASH malware targeting unpatched Ruckus networking devices to expand their ORB botnet infrastructure. The malware exploits known vulnerabilities in internet-facing routers to establish persistent command-and-control relay nodes, enabling lateral movement and obfuscation of attack origins. This represents active exploitation in the wild with moderate-to-high severity given the infrastructure targeting and botnet deployment implications. Organizations should immediately patch all Ruckus devices, restrict router management access to trusted networks only, and monitor for suspicious outbound connections from networking equipment.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/chinese-hackers-develop-longleash-malware-to-expand-orb-network/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Rogue Agent Flaw Could Have Let Attackers Hijack Google Dialogflow CX Chatbots</title>
-    <id>urn:cybersecnews:item:28</id>
-    <published>2026-07-07T19:33:08.248734+00:00</published>
-    <updated>2026-07-07T19:33:08.248734+00:00</updated>
-    <link href="https://thehackernews.com/2026/07/rogue-agent-flaw-could-have-let.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · privilege-escalation&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Google Dialogflow CX contained a critical privilege escalation vulnerability allowing authenticated users with edit rights on one Code Block-enabled agent to compromise other Code Block-enabled agents within the same Google Cloud project. Exploited agents could have their conversations monitored, user data exfiltrated, and malicious messages injected to conduct phishing or credential theft attacks. No evidence of active exploitation in the wild has been reported. Google has patched the vulnerability; affected organizations should immediately verify their Dialogflow CX configurations and update to the latest version.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/rogue-agent-flaw-could-have-let.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
   </entry>
 </feed>
