@@ -3,7 +3,16 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-07-22T17:20:51.722850+00:00</updated>
+  <updated>2026-07-23T02:43:17.611516+00:00</updated>
+  <entry>
+    <title>Check Point SmartConsole: Check Point SmartConsole Improper Authentication Vulnerability (CVE-2026-16232)</title>
+    <id>urn:cybersecnews:item:137</id>
+    <published>2026-07-23T02:43:17.611516+00:00</published>
+    <updated>2026-07-23T02:43:17.611516+00:00</updated>
+    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-16232" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-16232&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Check Point SmartConsole contains an improper authentication flaw (CVE-2026-16232) allowing unauthenticated remote attackers to obtain valid administrative login tokens without credentials. This vulnerability is actively exploited in the wild and carries critical severity due to the ability to gain full administrative access to the console. Apply vendor-supplied patches immediately per CISA BOD 26-04 guidance; if mitigations are unavailable, discontinue use of the product or migrate to cloud alternatives with proper controls. Conduct forensics triage on affected systems to identify compromise and unauthorized administrative activity.&lt;/p&gt;&lt;p&gt;&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2026-16232"&gt;Read more&lt;/a&gt; · Source: cisa-kev&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Intercepting Android WebView traffic under new certificate validity requirement by Chromium</title>
     <id>urn:cybersecnews:item:136</id>
@@ -227,7 +236,7 @@
     <updated>2026-07-20T10:52:42.364666+00:00</updated>
     <link href="https://www.bleepingcomputer.com/news/security/critical-servicenow-code-execution-flaw-now-exploited-in-attacks/" rel="alternate" />
     <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-6875&lt;/em&gt;&lt;/p&gt;&lt;p&gt;ServiceNow AI Platform is vulnerable to unauthenticated remote code execution (CVE-2026-6875), allowing attackers to execute arbitrary code without authentication. The vulnerability is critical in severity and is actively being exploited in the wild. Organizations running affected ServiceNow instances should immediately apply available patches and implement network-based access controls to restrict exposure of AI Platform components to untrusted networks.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/critical-servicenow-code-execution-flaw-now-exploited-in-attacks/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-60167, CVE-2026-60168, CVE-2026-60169, CVE-2026-60170, CVE-2026-6875&lt;/em&gt;&lt;/p&gt;&lt;p&gt;ServiceNow AI Platform is vulnerable to unauthenticated remote code execution (CVE-2026-6875), allowing attackers to execute arbitrary code without authentication. The vulnerability is critical in severity and is actively being exploited in the wild. Organizations running affected ServiceNow instances should immediately apply available patches and implement network-based access controls to restrict exposure of AI Platform components to untrusted networks.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/critical-servicenow-code-execution-flaw-now-exploited-in-attacks/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
   </entry>
   <entry>
     <title>Critical NGINX Vulnerability Can Crash Workers and May Allow Remote Code Execution</title>
@@ -894,14 +903,5 @@
     <link href="https://www.heise.de/news/ArcGIS-Enterprise-Wichtiger-Patch-sichert-Geoinformationssystem-Plattform-ab-11357947.html" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Esri's geoinformation system platform contains a vulnerability addressed in June patches that is reportedly being exploited in targeted attacks. CERT recommends administrators apply the June security updates immediately to mitigate active threat. The vulnerability severity warrants urgent patching given observed exploitation in the wild. If not already deployed, prioritize this update to prevent compromise of GIS infrastructure and data.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.heise.de/news/ArcGIS-Enterprise-Wichtiger-Patch-sichert-Geoinformationssystem-Plattform-ab-11357947.html"&gt;Read more&lt;/a&gt; · Source: heise-security&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Ubiquiti warns of new max severity UniFi OS vulnerability</title>
-    <id>urn:cybersecnews:item:37</id>
-    <published>2026-07-08T10:03:14.916961+00:00</published>
-    <updated>2026-07-08T10:03:14.916961+00:00</updated>
-    <link href="https://www.bleepingcomputer.com/news/security/ubiquiti-warns-of-new-max-severity-unifi-os-vulnerability/" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · command-injection&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Ubiquiti UniFi OS is affected by seven critical vulnerabilities, including a maximum-severity command injection flaw that enables remote code execution. The vulnerability allows unauthenticated or low-privilege attackers to execute arbitrary commands on affected systems. Ubiquiti has not indicated active exploitation in the wild, but the maximum CVSS rating and ease of exploitation make this a priority threat. Administrators should immediately apply available security updates to all UniFi OS deployments and restrict network access to UniFi controller interfaces.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/ubiquiti-warns-of-new-max-severity-unifi-os-vulnerability/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
   </entry>
 </feed>
