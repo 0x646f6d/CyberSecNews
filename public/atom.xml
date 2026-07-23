@@ -3,7 +3,16 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-07-23T02:43:17.611516+00:00</updated>
+  <updated>2026-07-23T10:23:32.497466+00:00</updated>
+  <entry>
+    <title>Nine-Year-Old RefluXFS Linux Flaw Gives Local Users Root on Default RHEL Installs</title>
+    <id>urn:cybersecnews:item:138</id>
+    <published>2026-07-23T10:23:32.497466+00:00</published>
+    <updated>2026-07-23T10:23:32.497466+00:00</updated>
+    <link href="https://thehackernews.com/2026/07/nine-year-old-refluxfs-linux-flaw-gives.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · privilege-escalation · CVE-2026-64600&lt;/em&gt;&lt;/p&gt;&lt;p&gt;RefluXFS (CVE-2026-64600) is a nine-year-old Linux kernel race condition in XFS filesystem handling that allows unprivileged local users to overwrite root-owned files and achieve persistent root access on affected systems. Default installations of RHEL, Fedora Server, and Amazon Linux are vulnerable. The flaw is critical severity; no evidence of wild exploitation has been reported as of disclosure. Patch immediately via kernel updates from your respective Linux distributions.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/nine-year-old-refluxfs-linux-flaw-gives.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Check Point SmartConsole: Check Point SmartConsole Improper Authentication Vulnerability (CVE-2026-16232)</title>
     <id>urn:cybersecnews:item:137</id>
@@ -894,14 +903,5 @@
     <link href="https://www.bleepingcomputer.com/news/security/cisa-orders-feds-to-prioritize-patching-langflow-auth-bypass-flaw/" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Langflow, a visual framework for building AI agents, contains an authentication bypass vulnerability that is actively exploited in the wild. The flaw allows attackers to circumvent authentication mechanisms and gain unauthorized access to the system. CISA has issued a mandatory directive requiring federal agencies to patch the vulnerability by Friday, indicating critical severity. Immediately apply available security updates to all Langflow deployments and restrict network access to instances until patching is complete.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/cisa-orders-feds-to-prioritize-patching-langflow-auth-bypass-flaw/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>CERT betont Wichtigkeit: Security-Patch für Geoinformationssystem-Plattform</title>
-    <id>urn:cybersecnews:item:38</id>
-    <published>2026-07-08T13:21:13.161991+00:00</published>
-    <updated>2026-07-08T13:21:13.161991+00:00</updated>
-    <link href="https://www.heise.de/news/ArcGIS-Enterprise-Wichtiger-Patch-sichert-Geoinformationssystem-Plattform-ab-11357947.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Esri's geoinformation system platform contains a vulnerability addressed in June patches that is reportedly being exploited in targeted attacks. CERT recommends administrators apply the June security updates immediately to mitigate active threat. The vulnerability severity warrants urgent patching given observed exploitation in the wild. If not already deployed, prioritize this update to prevent compromise of GIS infrastructure and data.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.heise.de/news/ArcGIS-Enterprise-Wichtiger-Patch-sichert-Geoinformationssystem-Plattform-ab-11357947.html"&gt;Read more&lt;/a&gt; · Source: heise-security&lt;/p&gt;</content>
   </entry>
 </feed>
