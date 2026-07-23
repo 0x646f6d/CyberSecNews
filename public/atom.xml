@@ -3,7 +3,43 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-07-23T10:23:32.497466+00:00</updated>
+  <updated>2026-07-23T17:24:16.557417+00:00</updated>
+  <entry>
+    <title>Auth.js: Email normalizer validates the address before Unicode normalization, allowing a homoglyph @ bypass</title>
+    <id>urn:cybersecnews:item:142</id>
+    <published>2026-07-23T17:24:16.557417+00:00</published>
+    <updated>2026-07-23T17:24:16.557417+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-7rqj-j65f-68wh" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Auth.js (affected versions of @auth/core and next-auth) contains a critical vulnerability in the email normalizer for magic-link authentication, which validates email addresses before applying Unicode normalization. An attacker can bypass the single-@ symbol validation by using Unicode characters that canonicalize to @ under NFKC/NFKD normalization, potentially allowing account takeover through homoglyph attacks. This vulnerability is actively exploited and affects both @auth/core and next-auth packages. Immediately update to patched versions that perform Unicode normalization before validation.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-7rqj-j65f-68wh"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Auth.js: Configuration errors can cause existence-based auth checks to fail open (auth object populated with an error)</title>
+    <id>urn:cybersecnews:item:141</id>
+    <published>2026-07-23T17:24:16.556317+00:00</published>
+    <updated>2026-07-23T17:24:16.556317+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-8fpg-xm3f-6cx3" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Auth.js (next-auth) v5 is affected by a critical configuration error that causes the `auth()` function to return an error object instead of null, breaking existence-based authentication checks in middleware and route handlers. Applications using the documented pattern of gating access by checking only for the `auth` object's presence will fail open, allowing unauthenticated access when server-side configuration errors occur. This vulnerability is being exploited in the wild. Update to the latest patched version of next-auth immediately and review all authentication gates to ensure proper null-checking rather than relying solely on object existence.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-8fpg-xm3f-6cx3"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Hackers abuse Notepad++ plugins to stealthily install malware</title>
+    <id>urn:cybersecnews:item:140</id>
+    <published>2026-07-23T17:24:16.554108+00:00</published>
+    <updated>2026-07-23T17:24:16.554108+00:00</updated>
+    <link href="https://www.bleepingcomputer.com/news/security/hackers-abuse-notepad-plus-plus-plugins-to-stealthily-install-malware/" rel="alternate" />
+    <category term="red-team" />
+    <content type="html">&lt;p&gt;&lt;em&gt;red-team · malware-distribution&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Notepad++ is being weaponized through malicious plugins disguised as legitimate extensions to achieve persistent malware installation. The LunchPoke malware masquerades as a Notepad++ plugin and establishes persistence on compromised systems, with the attack vector involving distribution of archives containing both legitimate Notepad++ and the malicious component. This represents a moderate-to-high severity threat with active exploitation confirmed by Ukraine's CERT. Users should avoid downloading Notepad++ from untrusted sources, validate plugin authenticity through official channels only, and consider disabling auto-loading of plugins if not actively used.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/hackers-abuse-notepad-plus-plus-plugins-to-stealthily-install-malware/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Claude Cowork Flaw Could Let AI Agent Escape Its VM and Access Mac Files</title>
+    <id>urn:cybersecnews:item:139</id>
+    <published>2026-07-23T17:24:16.499996+00:00</published>
+    <updated>2026-07-23T17:24:16.499996+00:00</updated>
+    <link href="https://thehackernews.com/2026/07/claude-cowork-flaw-could-let-ai-agent.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · sandbox-escape&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Anthropic's Claude Cowork AI agent contains a sandbox escape vulnerability allowing attackers to break out of the Linux VM sandbox and access arbitrary files on the host macOS system. The flaw enables reading and writing of files outside the intended sandbox boundaries, affecting approximately 500,000 macOS users. Severity and exploitation status are not specified in the provided summary, but sandbox escapes are typically critical as they defeat the primary security boundary. Users should immediately update Claude Cowork to the patched version and consider restricting the agent's file access permissions until a fix is applied.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/claude-cowork-flaw-could-let-ai-agent.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Nine-Year-Old RefluXFS Linux Flaw Gives Local Users Root on Default RHEL Installs</title>
     <id>urn:cybersecnews:item:138</id>
@@ -867,41 +903,5 @@
     <link href="https://github.com/advisories/GHSA-xqhv-chqm-fhcc" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-53649&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Joro proxy mode (versions ≤1.1.0) on Linux/macOS contains a critical remote code execution vulnerability (CVE-2026-53649, CVSS 9.6) where an unauthenticated, CORS-enabled local API endpoint at 127.0.0.1:9090 allows arbitrary plugin uploads without authentication. An attacker can exploit this via cross-origin requests to upload malicious plugins and achieve code execution. There is no indication of active wild exploitation, but immediate patching to version &gt;1.1.0 is strongly recommended, or disable proxy mode if not required. As an interim mitigation, restrict network access to port 9090 to trusted sources only.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-xqhv-chqm-fhcc"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Hackers exploit Roundcube flaw to spy on academic researchers</title>
-    <id>urn:cybersecnews:item:42</id>
-    <published>2026-07-08T20:52:41.539184+00:00</published>
-    <updated>2026-07-08T20:52:41.539184+00:00</updated>
-    <link href="https://www.bleepingcomputer.com/news/security/hackers-exploit-roundcube-flaw-to-spy-on-academic-researchers/" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Roundcube webmail is being actively exploited by Chinese threat actors targeting academic institutions. The vulnerability allows attackers to extract user credentials and deploy persistent backdoor malware on vulnerable servers. This represents a high-severity threat with confirmed active exploitation in the wild against U.S. and Canadian universities. Administrators should immediately patch Roundcube to the latest version, enforce strong authentication controls, and audit affected systems for evidence of credential theft or backdoor installation.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/hackers-exploit-roundcube-flaw-to-spy-on-academic-researchers/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>CVE-2026-9181 | Esri ArcGIS Server Pre-Authentication Path Traversal Vulnerability</title>
-    <id>urn:cybersecnews:item:41</id>
-    <published>2026-07-08T17:15:07.309908+00:00</published>
-    <updated>2026-07-08T17:15:07.309908+00:00</updated>
-    <link href="https://horizon3.ai/attack-research/vulnerabilities/cve-2026-9181/" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · path-traversal · CVE-2026-29059, CVE-2026-9181&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Esri ArcGIS Server contains a critical pre-authentication path traversal vulnerability (CVE-2026-9181) enabling unauthenticated attackers to access arbitrary sensitive files on affected systems. The vulnerability is publicly disclosed with no current mitigation available, though exploitation likelihood depends on network exposure. Organizations running ArcGIS Server should immediately restrict network access to the application and monitor Esri's security advisories for patching guidance. Conduct urgent inventory and exposure assessment of all ArcGIS Server instances, particularly those internet-facing or accessible from untrusted networks.&lt;/p&gt;&lt;p&gt;&lt;a href="https://horizon3.ai/attack-research/vulnerabilities/cve-2026-9181/"&gt;Read more&lt;/a&gt; · Source: horizon3&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Ubiquiti Patches Critical UniFi Flaws Across Connect, Talk, Access, Protect, and OS</title>
-    <id>urn:cybersecnews:item:40</id>
-    <published>2026-07-08T17:15:07.306154+00:00</published>
-    <updated>2026-07-08T17:15:07.306154+00:00</updated>
-    <link href="https://thehackernews.com/2026/07/ubiquiti-patches-critical-unifi-flaws.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · privilege-escalation, rce, improper-access-control · CVE-2026-50746&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Ubiquiti released patches for critical vulnerabilities across UniFi Connect, Talk, Access, Protect, and OS platforms, including CVE-2026-50746 (CVSS 10.0) involving improper access control in UniFi Connect that enables privilege escalation and arbitrary command execution. The CVSS 10.0 rating indicates maximum severity with network-exploitable attack vectors requiring no authentication or user interaction. Immediately apply available updates to all affected UniFi products; if patches are unavailable for your version, isolate systems or restrict network access to trusted administrators only until fixes are deployed.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/ubiquiti-patches-critical-unifi-flaws.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>CISA orders feds to prioritize patching Langflow auth bypass flaw</title>
-    <id>urn:cybersecnews:item:39</id>
-    <published>2026-07-08T13:21:13.164355+00:00</published>
-    <updated>2026-07-08T13:21:13.164355+00:00</updated>
-    <link href="https://www.bleepingcomputer.com/news/security/cisa-orders-feds-to-prioritize-patching-langflow-auth-bypass-flaw/" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Langflow, a visual framework for building AI agents, contains an authentication bypass vulnerability that is actively exploited in the wild. The flaw allows attackers to circumvent authentication mechanisms and gain unauthorized access to the system. CISA has issued a mandatory directive requiring federal agencies to patch the vulnerability by Friday, indicating critical severity. Immediately apply available security updates to all Langflow deployments and restrict network access to instances until patching is complete.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/cisa-orders-feds-to-prioritize-patching-langflow-auth-bypass-flaw/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
   </entry>
 </feed>
