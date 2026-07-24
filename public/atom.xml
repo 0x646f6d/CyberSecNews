@@ -3,7 +3,106 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-07-24T10:17:25.889348+00:00</updated>
+  <updated>2026-07-24T17:39:36.624179+00:00</updated>
+  <entry>
+    <title>@better-auth/scim: account takeover and stale access via SCIM provider-id collision</title>
+    <id>urn:cybersecnews:item:156</id>
+    <published>2026-07-24T17:39:36.624179+00:00</published>
+    <updated>2026-07-24T17:39:36.624179+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-rjg6-39jm-rgg4" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · account-takeover&lt;/em&gt;&lt;/p&gt;&lt;p&gt;@better-auth/scim plugin is vulnerable to account takeover and stale access token issues due to provider-ID collision. An authenticated attacker can generate SCIM tokens that allow them to assume control of other users' accounts or maintain access via stale tokens when custom provider IDs are reused across different authentication providers. The vulnerability is critical in severity and affects applications using the default `canGenerateToken` policy or custom policies that don't validate provider ID uniqueness. Users should immediately update @better-auth/scim to the patched version and audit their provider-ID configurations to ensure no collisions exist between SSO, SAML, OIDC, OAuth, and social authentication providers.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-rjg6-39jm-rgg4"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Microsoft Kiota: Path/URL injection into generated Copilot plugin manifest via x-ai-* extensions (CVE-2026-59864)</title>
+    <id>urn:cybersecnews:item:155</id>
+    <published>2026-07-24T17:39:36.623151+00:00</published>
+    <updated>2026-07-24T17:39:36.623151+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-4jwf-m4wg-8p66" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · path-injection · CVE-2026-59864&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Microsoft Kiota's plugin generation (`kiota plugin add/generate`) fails to validate file paths from OpenAPI x-ai-* extensions, allowing attackers to inject path traversal sequences (../) or absolute paths into generated Copilot plugin manifests via `static_template.file` fields. This critical vulnerability (CVE-2026-59864) affects Microsoft.OpenApi.Kiota and Microsoft.OpenApi.Kiota.Builder NuGet packages and could enable unauthorized file access or plugin manipulation if exploited through compromised OpenAPI specifications. Organizations should immediately update affected Kiota packages and validate OpenAPI sources before processing them; implement input validation for file paths in generated manifests as defense-in-depth. No evidence of wild exploitation reported, but the attack surface is broad given reliance on external OpenAPI definitions.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-4jwf-m4wg-8p66"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Microsoft Kiota: Command injection via x-ms-kiota-info dependencyInstallCommand surfaced by `kiota info` (CVE-2026-59865)</title>
+    <id>urn:cybersecnews:item:154</id>
+    <published>2026-07-24T17:39:36.622316+00:00</published>
+    <updated>2026-07-24T17:39:36.622316+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-hq9q-27g5-qwpj" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · command-injection · CVE-2026-59865&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Microsoft Kiota CLI tool contains a command injection vulnerability in the `kiota info` command where unsanitized `x-ms-kiota-info` extension data from OpenAPI specifications is presented to users as trusted installation guidance. An attacker controlling or compromising an OpenAPI specification could inject arbitrary commands that execute with user privileges when developers follow the suggested installation instructions. This is a critical severity vulnerability with potential for active exploitation given Kiota's use in developer workflows. Developers should immediately update to patched versions of nuget/Microsoft.OpenApi.Kiota and nuget/Microsoft.OpenApi.Kiota.Builder and avoid running `kiota info` against untrusted OpenAPI specifications.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-hq9q-27g5-qwpj"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>seroval: `seroval.fromJSON()` Promise resolver type confusion invokes attacker-controlled methods during deserialization (CVE-2026-59940)</title>
+    <id>urn:cybersecnews:item:153</id>
+    <published>2026-07-24T17:39:36.621568+00:00</published>
+    <updated>2026-07-24T17:39:36.621568+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-mv8w-475r-vwqw" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · type-confusion · CVE-2026-59940&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Seroval's `fromJSON()` function contains a type confusion vulnerability (CVE-2026-59940) where attacker-controlled JSON input can bypass Promise resolver verification, allowing execution of arbitrary methods during deserialization when plugins are enabled. This is critical severity and affects npm/seroval. Applications deserializing untrusted data with plugins enabled should immediately update to a patched version; as a workaround, avoid deserializing untrusted JSON or disable plugin functionality if feasible.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-mv8w-475r-vwqw"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Velocity.js: Remote Code Execution via property-read to Function constructor (bypass of GHSA-j658-c2gf-x6pq fix)</title>
+    <id>urn:cybersecnews:item:152</id>
+    <published>2026-07-24T17:39:36.620790+00:00</published>
+    <updated>2026-07-24T17:39:36.620790+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-7gfh-x38p-prh3" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Velocity.js v2.1.6 is vulnerable to Remote Code Execution via property-read expressions that reach the Function constructor, bypassing the previous GHSA-j658-c2gf-x6pq fix which only protected #set assignments. An attacker can execute arbitrary code by injecting malicious Velocity templates into applications that render user-controlled input. This is critical severity and likely exploited given the public disclosure. Upgrade to patched version immediately or implement strict template input validation and sandboxing if upgrade is not immediately feasible.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-7gfh-x38p-prh3"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Prompty: Server-Side Template Injection to Remote Code Execution in the @prompty/core Nunjucks Renderer</title>
+    <id>urn:cybersecnews:item:151</id>
+    <published>2026-07-24T17:39:36.619626+00:00</published>
+    <updated>2026-07-24T17:39:36.619626+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-w28w-gp39-m4p6" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · ssti-rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;The @prompty/core npm package (versions ≤0.1.4 and ≤2.0.0-beta.4) contains a critical server-side template injection vulnerability in its Nunjucks renderer that allows remote code execution through unrestricted JavaScript member access on template objects. An attacker can craft malicious .prompty template files that traverse constructor and prototype properties to execute arbitrary JavaScript in the Node.js host process. This vulnerability affects applications rendering untrusted templates from community sources, cloned repositories, or LLM-generated content. Immediate patching to versions &gt;0.1.4 and &gt;2.0.0-beta.4 is required; alternatively, restrict template rendering to trusted sources only and implement input validation for .prompty files.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-w28w-gp39-m4p6"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>kin-openapi: ValidationHandler.Load() Fail-Open Authentication Bypass via NoopAuthenticationFunc Default</title>
+    <id>urn:cybersecnews:item:150</id>
+    <published>2026-07-24T17:39:36.618484+00:00</published>
+    <updated>2026-07-24T17:39:36.618484+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-r277-6w6q-xmqw" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass&lt;/em&gt;&lt;/p&gt;&lt;p&gt;The kin-openapi Go library's ValidationHandler.Load() function silently defaults a missing AuthenticationFunc to NoopAuthenticationFunc, which unconditionally approves all requests regardless of credential validity, allowing unauthenticated attackers to bypass OpenAPI security requirements. This critical vulnerability affects any application using kin-openapi that relies on the library's authentication validation without explicitly providing an AuthenticationFunc implementation. The fail-open design creates a dangerous default that violates security-by-default principles. Update to a patched version immediately and audit all deployments to ensure proper AuthenticationFunc implementations are in place rather than relying on defaults.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-r277-6w6q-xmqw"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Hacker Runs Hermes AI Agent Unattended for Post-Exploitation at Thai Finance Ministry</title>
+    <id>urn:cybersecnews:item:149</id>
+    <published>2026-07-24T17:39:36.617723+00:00</published>
+    <updated>2026-07-24T17:39:36.617723+00:00</updated>
+    <link href="https://thehackernews.com/2026/07/hacker-runs-hermes-ai-agent-unattended.html" rel="alternate" />
+    <category term="red-team" />
+    <content type="html">&lt;p&gt;&lt;em&gt;red-team · post-exploitation&lt;/em&gt;&lt;/p&gt;&lt;p&gt;An unnamed threat actor deployed the Hermes AI agent on a rented server targeting Thailand's Ministry of Finance, disabling safety guardrails that typically require authorization before executing commands. The agent autonomously performed post-exploitation activities including host reconnaissance, privilege escalation probing, and filesystem enumeration across the ministry's network. This represents a novel attack vector leveraging AI automation for hands-off persistence and lateral movement without direct human operator involvement. Organizations should immediately audit AI tool deployments, enforce strict permission controls on administrative commands, implement network segmentation, and monitor for anomalous automated activity patterns indicative of AI-driven intrusion activity.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/hacker-runs-hermes-ai-agent-unattended.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Bing Images Flaws Let Crafted SVGs Run Commands as SYSTEM on Microsoft's Servers</title>
+    <id>urn:cybersecnews:item:148</id>
+    <published>2026-07-24T17:39:36.616247+00:00</published>
+    <updated>2026-07-24T17:39:36.616247+00:00</updated>
+    <link href="https://thehackernews.com/2026/07/bing-images-flaws-let-crafted-svgs-run.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-32194&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Bing Images image processing service contained XML external entity (XXE) and deserialization vulnerabilities in SVG handling that allowed unauthenticated remote code execution with SYSTEM/root privileges on Microsoft's production servers. An attacker could craft malicious SVG files to execute arbitrary commands on the image-processing infrastructure affecting the entire fleet. Microsoft assigned critical severity ratings (CVE-2026-32194 and related CVEs) and this vulnerability was actively exploited. Apply the issued security patches immediately to all Bing image processing workers and implement strict SVG validation and disable XXE processing in XML parsers.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/bing-images-flaws-let-crafted-svgs-run.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>ChatGPT AgentForger Flaw Could Deploy Rogue Workspace Agents via a Phishing Link</title>
+    <id>urn:cybersecnews:item:147</id>
+    <published>2026-07-24T17:39:36.615021+00:00</published>
+    <updated>2026-07-24T17:39:36.615021+00:00</updated>
+    <link href="https://thehackernews.com/2026/07/chatgpt-agentforger-flaw-could-deploy.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass&lt;/em&gt;&lt;/p&gt;&lt;p&gt;ChatGPT Workspace Agents contained a critical authorization bypass vulnerability (AgentForger) enabling attackers to create, authorize, and deploy rogue autonomous agents within victim organizations via a single phishing link. The flaw allowed unauthorized agent deployment without explicit user approval, posing severe risk to organizational security and data integrity. OpenAI patched the vulnerability on June 8, 2024. Organizations should verify all deployed agents in their Workspace environments and reinforce user security awareness to prevent phishing-based agent injection attacks.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/chatgpt-agentforger-flaw-could-deploy.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Certighost Exploit Lets Low-Privileged Active Directory Users Impersonate a Domain Controller</title>
+    <id>urn:cybersecnews:item:146</id>
+    <published>2026-07-24T17:39:36.613491+00:00</published>
+    <updated>2026-07-24T17:39:36.613491+00:00</updated>
+    <link href="https://thehackernews.com/2026/07/certighost-exploit-lets-low-privileged.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · privilege-escalation&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Certighost is a critical elevation-of-privilege vulnerability in Active Directory Certificate Services that allows low-privileged AD users to obtain domain controller certificates and authenticate as a DC, enabling DCSync attacks to extract the krbtgt secret and achieve full domain compromise. The exploit has been publicly disclosed with working code available as of July 24. Immediate patching is required; organizations should prioritize applying Microsoft's security updates for AD CS and implement certificate template restrictions to prevent low-privileged users from requesting DC certificates. Additionally, monitor for suspicious certificate requests and implement enhanced logging on certificate authority servers.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/certighost-exploit-lets-low-privileged.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Kimi K3 Agents Found Redis Zero-Days and Built RCE Exploit, Researchers Say</title>
     <id>urn:cybersecnews:item:145</id>
@@ -804,104 +903,5 @@
     <link href="https://thehackernews.com/2026/07/six-new-u-boot-flaws-could-let.html" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce,dos&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Six vulnerabilities discovered in U-Boot bootloader affecting routers, smart cameras, and data center management controllers. Four flaws enable denial-of-service through device crashes, while two allow arbitrary code execution during boot if an attacker can supply a malicious image before the bootloader executes. No indication of active exploitation in the wild provided. Affected organizations should prioritize patching U-Boot across all devices, particularly network infrastructure and data center management interfaces, and review image validation mechanisms to prevent unauthorized bootloader access.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/six-new-u-boot-flaws-could-let.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Zimbra urges customers to patch critical web client XSS flaw</title>
-    <id>urn:cybersecnews:item:56</id>
-    <published>2026-07-10T13:48:47.850652+00:00</published>
-    <updated>2026-07-10T13:48:47.850652+00:00</updated>
-    <link href="https://www.bleepingcomputer.com/news/security/zimbra-urges-customers-to-patch-critical-web-client-xss-flaw/" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · xss&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Zimbra Collaboration Suite's Classic Web Client contains a critical cross-site scripting (XSS) vulnerability that allows attackers to execute arbitrary code in user browsers and potentially compromise email accounts and sensitive data. The flaw has not been reported as actively exploited in the wild, but given its critical severity rating and ease of exploitation through web interfaces, it poses significant risk to users. Zimbra has released patches for affected versions; customers should apply security updates immediately to all deployments of the Classic Web Client to prevent potential account compromise and data exfiltration.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/zimbra-urges-customers-to-patch-critical-web-client-xss-flaw/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Unpatched XRING Flaw in XQUIC Lets Remote Clients Crash HTTP/3 Servers</title>
-    <id>urn:cybersecnews:item:55</id>
-    <published>2026-07-10T13:48:47.849228+00:00</published>
-    <updated>2026-07-10T13:48:47.849228+00:00</updated>
-    <link href="https://thehackernews.com/2026/07/unpatched-xring-flaw-in-xquic-lets.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · dos&lt;/em&gt;&lt;/p&gt;&lt;p&gt;XQUIC, Alibaba's QUIC and HTTP/3 library, contains an unpatched denial-of-service vulnerability (XRING) where a single variable initialization error allows remote unauthenticated clients to crash HTTP/3 servers using approximately 260 bytes of legitimate QPACK traffic. The vulnerability requires no special privileges, malformed packets, or authentication, and is triggered through normal protocol operations. No patch is currently available as of the disclosure date (July 8). Organizations running XQUIC-based HTTP/3 servers should monitor for available updates from Alibaba and consider implementing network-level rate limiting or traffic filtering for QPACK streams as interim mitigation until a fix is released.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/unpatched-xring-flaw-in-xquic-lets.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>New MODBEACON RAT Uses gRPC Streaming for Encrypted C2 Traffic</title>
-    <id>urn:cybersecnews:item:54</id>
-    <published>2026-07-10T13:48:47.845134+00:00</published>
-    <updated>2026-07-10T13:48:47.845134+00:00</updated>
-    <link href="https://thehackernews.com/2026/07/new-modbeacon-rat-uses-grpc-streaming.html" rel="alternate" />
-    <category term="red-team" />
-    <content type="html">&lt;p&gt;&lt;em&gt;red-team · c2&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Silver Fox threat group has deployed MODBEACON, a new Rust-based RAT that leverages gRPC streaming to encrypt command-and-control communications, making detection more difficult through legitimate protocol abuse. The malware is distributed via SEO poisoning and counterfeit software installers targeting victims in Asia-Pacific regions. No current evidence of widespread exploitation in the wild has been reported, though the sophisticated C2 evasion mechanism suggests active development. Organizations should implement network-level monitoring for gRPC traffic patterns, enforce code signing verification on software installations, and maintain elevated awareness for SEO poisoning campaigns targeting their user base.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/new-modbeacon-rat-uses-grpc-streaming.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Dell BIOS Passwords: Weak XOR Encryption Allows Recovery from SPI Flash (CVE-2026-40639)</title>
-    <id>urn:cybersecnews:item:53</id>
-    <published>2026-07-10T10:42:00.585903+00:00</published>
-    <updated>2026-07-10T10:42:00.585903+00:00</updated>
-    <link href="https://www.mdsec.co.uk/2026/07/dell-bios-passwords-weak-xor-encryption-allows-recovery-from-spi-flash-cve-2026-40639/" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · weak-encryption · CVE-2026-40639&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Dell BIOS firmware uses weak XOR encryption to protect administrator passwords stored in SPI flash memory, allowing attackers with physical access to extract and recover credentials from the flash chip. This affects Dell systems across multiple product lines and carries high severity since BIOS-level access enables complete system compromise, firmware modification, and persistent attacks. There is no indication of active exploitation in the wild, but the attack requires only basic hardware tools and flash dumping capabilities. Dell should issue BIOS updates implementing stronger encryption (AES or similar) for credential storage; affected users should restrict physical access to systems and enable additional firmware security controls where available.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.mdsec.co.uk/2026/07/dell-bios-passwords-weak-xor-encryption-allows-recovery-from-spi-flash-cve-2026-40639/"&gt;Read more&lt;/a&gt; · Source: mdsec&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>"Comment stuffing" in an HTML phishing attachment as a mechanism for evading AI-based detection&amp;#x3f;, (Fri, Jul 10th)</title>
-    <id>urn:cybersecnews:item:52</id>
-    <published>2026-07-10T10:42:00.584482+00:00</published>
-    <updated>2026-07-10T10:42:00.584482+00:00</updated>
-    <link href="https://isc.sans.edu/diary/rss/33144" rel="alternate" />
-    <category term="red-team" />
-    <content type="html">&lt;p&gt;&lt;em&gt;red-team · ai-evasion&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Threat actors are using HTML comment stuffing in phishing attachments to evade AI-based email security detection systems. The technique involves embedding large volumes of benign content within HTML comments to obfuscate malicious code and confuse machine learning models trained to identify phishing patterns. This method demonstrates moderate sophistication and appears to be in active use in the wild with increasing frequency. Organizations should enhance email filtering rules to detect suspicious HTML comment patterns, implement additional analysis layers beyond AI detection, and conduct user awareness training on phishing attachment risks.&lt;/p&gt;&lt;p&gt;&lt;a href="https://isc.sans.edu/diary/rss/33144"&gt;Read more&lt;/a&gt; · Source: sans-isc&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Attackers Exploit 'Ill Bloom' Vulnerability to Drain $3.1 Million From Cryptocurrency Wallets</title>
-    <id>urn:cybersecnews:item:51</id>
-    <published>2026-07-10T10:42:00.581916+00:00</published>
-    <updated>2026-07-10T10:42:00.581916+00:00</updated>
-    <link href="https://thehackernews.com/2026/07/attackers-exploit-ill-bloom.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · weak-randomness&lt;/em&gt;&lt;/p&gt;&lt;p&gt;The "Ill Bloom" vulnerability affects cryptocurrency wallet software that generates recovery phrases using insufficient randomness, allowing attackers to derive wallet seeds and drain funds. The flaw has been actively exploited in the wild, with confirmed attacks stealing $3.1 million from affected wallets. Severity is critical as compromise results in total loss of wallet funds. Affected wallet developers must immediately implement cryptographically secure random number generation for seed phrase generation, and users should migrate funds from potentially affected wallets to those using proper entropy sources.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/attackers-exploit-ill-bloom.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>YesWiki vulnerable to unauthenticated arbitrary page deletion via `{{erasespamedcomments}}` action (CVE-2026-52766)</title>
-    <id>urn:cybersecnews:item:50</id>
-    <published>2026-07-09T21:09:24.224251+00:00</published>
-    <updated>2026-07-09T21:09:24.224251+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-6x7x-gcmf-7r8x" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-52766&lt;/em&gt;&lt;/p&gt;&lt;p&gt;YesWiki's `{{erasespamedcomments}}` action in `actions/EraseSpamedCommentsAction.php` allows unauthenticated users to delete arbitrary wiki pages through an unprotected `suppr[]` parameter, with no authorization checks in the deletion path. The vulnerability is critical as it enables permanent data loss on default installations where write access is unrestricted. Users should immediately update to a patched version of YesWiki and restrict default write ACLs to trusted users. There is no indication this is currently exploited in the wild, but the ease of exploitation makes immediate patching essential.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-6x7x-gcmf-7r8x"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>YesWiki Vulnerable to Authenticated PHP Object Injection in BazarImportAction via unserialize (CVE-2026-52777)</title>
-    <id>urn:cybersecnews:item:49</id>
-    <published>2026-07-09T21:09:24.223157+00:00</published>
-    <updated>2026-07-09T21:09:24.223157+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-9369-69wj-7m2f" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · php-object-injection · CVE-2026-52777&lt;/em&gt;&lt;/p&gt;&lt;p&gt;YesWiki's BazarImportAction contains a critical authenticated PHP object injection vulnerability in CSVManager.php where user-supplied base64-encoded data is unserialized without restricting allowed classes (CVE-2026-52777). An authenticated attacker can exploit this to instantiate arbitrary PHP objects and achieve remote code execution. This vulnerability is not currently confirmed as exploited in the wild. Upgrade to a patched version immediately and implement input validation; as a temporary mitigation, restrict access to the bazar import functionality to trusted administrators only.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-9369-69wj-7m2f"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>YesWiki has Unsafe eval() in its Formula Calculato, Leading to Remote Code Execution &amp; Denial of Service (CVE-2026-52778)</title>
-    <id>urn:cybersecnews:item:48</id>
-    <published>2026-07-09T21:09:24.222243+00:00</published>
-    <updated>2026-07-09T21:09:24.222243+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-px5m-h76g-p7p8" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-52778&lt;/em&gt;&lt;/p&gt;&lt;p&gt;YesWiki's Bazar form field calculator (CalcField.php) is vulnerable to remote code execution and denial of service due to unsafe eval() execution of user-supplied mathematical formulas. The application's attempted sanitization via complex recursive regular expressions is bypassable, and the regex itself is susceptible to ReDoS attacks causing server crashes. This is a critical vulnerability likely exploitable in the wild given eval() usage patterns. Immediately update YesWiki to the latest patched version and consider disabling the calculator feature until patching is complete; do not rely on the existing sanitization as security.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-px5m-h76g-p7p8"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>New GigaWiper Windows Backdoor Bundles Disk Wiping, Fake Ransomware, and Spyware</title>
-    <id>urn:cybersecnews:item:47</id>
-    <published>2026-07-09T21:09:24.219382+00:00</published>
-    <updated>2026-07-09T21:09:24.219382+00:00</updated>
-    <link href="https://thehackernews.com/2026/07/new-gigawiper-windows-backdoor-bundles.html" rel="alternate" />
-    <category term="red-team" />
-    <content type="html">&lt;p&gt;&lt;em&gt;red-team · backdoor&lt;/em&gt;&lt;/p&gt;&lt;p&gt;GigaWiper is a Windows backdoor combining multiple destructive capabilities—disk wiping, drive overwriting, and fake ransomware with unrecoverable encryption—delivered as selectable operator commands. The threat demonstrates high severity with destructive intent, though Microsoft's analysis does not confirm active exploitation in the wild. Organizations should prioritize patching Windows systems and implementing defense-in-depth controls including EDR solutions, network segmentation, and restricted administrative access to limit backdoor deployment impact. Monitor for GigaWiper indicators of compromise and suspicious command execution patterns consistent with destructive malware activity.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/new-gigawiper-windows-backdoor-bundles.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>GodDamn Ransomware Uses PoisonX Driver to Disable Endpoint Defenses</title>
-    <id>urn:cybersecnews:item:46</id>
-    <published>2026-07-09T14:21:31.022079+00:00</published>
-    <updated>2026-07-09T14:21:31.022079+00:00</updated>
-    <link href="https://thehackernews.com/2026/07/goddamn-ransomware-uses-poisonx-driver.html" rel="alternate" />
-    <category term="red-team" />
-    <content type="html">&lt;p&gt;&lt;em&gt;red-team · edr-evasion&lt;/em&gt;&lt;/p&gt;&lt;p&gt;GodDamn ransomware, a Beast ransomware rebrand first observed in May 2026, leverages the PoisonX kernel driver to disable endpoint security solutions before encryption. This represents a high-severity threat exploited actively in the wild, combining defense evasion with ransomware deployment capabilities. Organizations should prioritize patching endpoint detection and response (EDR) solutions, implement driver signature enforcement, and maintain immutable backups. Additional mitigation includes blocking unsigned kernel driver execution and monitoring for PoisonX driver IOCs across network infrastructure.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/goddamn-ransomware-uses-poisonx-driver.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
   </entry>
 </feed>
