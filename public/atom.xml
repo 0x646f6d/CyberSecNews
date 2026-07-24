@@ -3,7 +3,34 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-07-23T17:24:16.557417+00:00</updated>
+  <updated>2026-07-24T10:17:25.889348+00:00</updated>
+  <entry>
+    <title>Kimi K3 Agents Found Redis Zero-Days and Built RCE Exploit, Researchers Say</title>
+    <id>urn:cybersecnews:item:145</id>
+    <published>2026-07-24T10:17:25.889348+00:00</published>
+    <updated>2026-07-24T10:17:25.889348+00:00</updated>
+    <link href="https://thehackernews.com/2026/07/kimi-k3-agents-found-redis-zero-days.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Redis versions 6.2.22, 7.4.9, 8.6.4, and 8.8.0 contain memory corruption vulnerabilities exploitable for authenticated remote code execution via the RESTORE command, with additional chains requiring EVAL, XGROUP, or the RedisBloom module. Researchers have published proof-of-concept exploits for these zero-days, indicating active security research and potential wild exploitation risk. Redis has released patches (6.2.23, 7.2.15, 7.4.10, and corresponding 8.x versions) to address the underlying memory flaws. Organizations should immediately update Redis instances, particularly those exposed to untrusted authenticated users.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/kimi-k3-agents-found-redis-zero-days.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>NodeBB Patches Eight AI-Found Flaws Exposing Admin Access and Private Chats</title>
+    <id>urn:cybersecnews:item:144</id>
+    <published>2026-07-24T10:17:25.886842+00:00</published>
+    <updated>2026-07-24T10:17:25.886842+00:00</updated>
+    <link href="https://thehackernews.com/2026/07/nodebb-patches-eight-ai-found-flaws.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · multiple&lt;/em&gt;&lt;/p&gt;&lt;p&gt;NodeBB forum software versions prior to 4.14.0 contain eight high-severity vulnerabilities discovered by AI-driven penetration testing that expose admin access and private chat messages. The flaws enable authentication bypass, privilege escalation, and unauthorized data access, with exploit code publicly released. All issues are patched in version 4.14.2 and there is no indication of active exploitation in the wild. NodeBB administrators should immediately upgrade to 4.14.2 or apply available mitigations for those unable to patch immediately.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/nodebb-patches-eight-ai-found-flaws.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Kimi K3: Chinesische KI findet mehrere Zero-Day-Lücken in redis-Datenbank</title>
+    <id>urn:cybersecnews:item:143</id>
+    <published>2026-07-24T10:17:25.884749+00:00</published>
+    <updated>2026-07-24T10:17:25.884749+00:00</updated>
+    <link href="https://www.heise.de/news/Kimi-K3-Chinesische-KI-findet-mehrere-Zero-Day-Luecken-in-redis-Datenbank-11377360.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · multiple&lt;/em&gt;&lt;/p&gt;&lt;p&gt;A Chinese AI model (Kimi K3) identified multiple zero-day vulnerabilities in Redis database software. The vulnerabilities have been confirmed by Redis updates, indicating they represent genuine security flaws in widely-deployed caching infrastructure. Redis users should prioritize applying the latest security patches immediately to remediate these zero-days. This incident demonstrates the increasing capability of AI systems in vulnerability discovery and highlights the need for expedited patching cycles.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.heise.de/news/Kimi-K3-Chinesische-KI-findet-mehrere-Zero-Day-Luecken-in-redis-Datenbank-11377360.html"&gt;Read more&lt;/a&gt; · Source: heise-security&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Auth.js: Email normalizer validates the address before Unicode normalization, allowing a homoglyph @ bypass</title>
     <id>urn:cybersecnews:item:142</id>
@@ -876,32 +903,5 @@
     <link href="https://thehackernews.com/2026/07/goddamn-ransomware-uses-poisonx-driver.html" rel="alternate" />
     <category term="red-team" />
     <content type="html">&lt;p&gt;&lt;em&gt;red-team · edr-evasion&lt;/em&gt;&lt;/p&gt;&lt;p&gt;GodDamn ransomware, a Beast ransomware rebrand first observed in May 2026, leverages the PoisonX kernel driver to disable endpoint security solutions before encryption. This represents a high-severity threat exploited actively in the wild, combining defense evasion with ransomware deployment capabilities. Organizations should prioritize patching endpoint detection and response (EDR) solutions, implement driver signature enforcement, and maintain immutable backups. Additional mitigation includes blocking unsigned kernel driver execution and monitoring for PoisonX driver IOCs across network infrastructure.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/goddamn-ransomware-uses-poisonx-driver.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Update gegen Rogueplanet: Microsoft reagiert auf gefährlichen Defender-Exploit</title>
-    <id>urn:cybersecnews:item:45</id>
-    <published>2026-07-09T07:26:54.692299+00:00</published>
-    <updated>2026-07-09T07:26:54.692299+00:00</updated>
-    <link href="https://www.golem.de/news/update-gegen-rogueplanet-microsoft-reagiert-auf-gefaehrlichen-defender-exploit-2607-210674.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · privilege-escalation · CVE-2026-50656&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Microsoft Defender contains a privilege escalation vulnerability exploited by the Rogueplanet exploit, which grants attackers elevated system rights on Windows. The vulnerability is actively exploited in the wild. Microsoft has released a security update to patch the flaw. All Windows users should apply this Defender update immediately as the exploit poses high severity risk.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.golem.de/news/update-gegen-rogueplanet-microsoft-reagiert-auf-gefaehrlichen-defender-exploit-2607-210674.html"&gt;Read more&lt;/a&gt; · Source: golem-security&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Nuclio: Unsanitized cron trigger event headers/body injected into CronJob shell command leads to persistent RCE (CVE-2026-52831)</title>
-    <id>urn:cybersecnews:item:44</id>
-    <published>2026-07-08T20:52:41.543307+00:00</published>
-    <updated>2026-07-08T20:52:41.543307+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-v5px-423j-pf7p" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · command-injection · CVE-2026-52831, CVE-2026-54088&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Nuclio container orchestration framework is vulnerable to persistent remote code execution through unsanitized cron trigger event headers and body parameters that are directly injected into Kubernetes CronJob shell commands (CVE-2026-52831, critical severity). An attacker can craft malicious header keys or event bodies containing shell metacharacters to break out of the intended quoting context and execute arbitrary commands with the privileges of the Nuclio controller. There is no indication of active exploitation in the wild, but the critical severity and ease of exploitation warrant immediate patching to the latest Nuclio version with proper input sanitization applied to trigger event parameters.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-v5px-423j-pf7p"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Joro: Unauthenticated Cross-Origin Plugin Upload Leads to RCE (CVE-2026-53649)</title>
-    <id>urn:cybersecnews:item:43</id>
-    <published>2026-07-08T20:52:41.541914+00:00</published>
-    <updated>2026-07-08T20:52:41.541914+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-xqhv-chqm-fhcc" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-53649&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Joro proxy mode (versions ≤1.1.0) on Linux/macOS contains a critical remote code execution vulnerability (CVE-2026-53649, CVSS 9.6) where an unauthenticated, CORS-enabled local API endpoint at 127.0.0.1:9090 allows arbitrary plugin uploads without authentication. An attacker can exploit this via cross-origin requests to upload malicious plugins and achieve code execution. There is no indication of active wild exploitation, but immediate patching to version &gt;1.1.0 is strongly recommended, or disable proxy mode if not required. As an interim mitigation, restrict network access to port 9090 to trusted sources only.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-xqhv-chqm-fhcc"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
   </entry>
 </feed>
