@@ -3,7 +3,16 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-07-25T02:38:15.418190+00:00</updated>
+  <updated>2026-07-25T09:47:22.045520+00:00</updated>
+  <entry>
+    <title>Researcher Publishes GitLab RCE PoC Letting Authenticated Users Run Commands as Git</title>
+    <id>urn:cybersecnews:item:166</id>
+    <published>2026-07-25T09:47:22.045520+00:00</published>
+    <updated>2026-07-25T09:47:22.045520+00:00</updated>
+    <link href="https://thehackernews.com/2026/07/researcher-publishes-gitlab-rce-poc.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;A researcher disclosed a proof-of-concept for an authenticated RCE vulnerability in GitLab self-managed 18.11.3 and earlier versions that allows unprivileged users to execute arbitrary commands as the git user via a Jupyter notebook diff processing flaw. The vulnerability requires no admin rights or victim interaction, only the ability to commit code and trigger a diff comparison. This is a critical severity issue being exploited in the wild against unpatched instances. Administrators should immediately update to patched versions (18.11.4 or later, or 18.12.0+) and review recent commits for exploitation indicators.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/researcher-publishes-gitlab-rce-poc.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>OpenAM: WebAuthn Java deserialization RCE via ObjectInputFilter depth&gt;1 bypass (CVE-2026-62263)</title>
     <id>urn:cybersecnews:item:165</id>
@@ -894,14 +903,5 @@
     <link href="https://github.com/advisories/GHSA-g936-7jqj-mwv8" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass&lt;/em&gt;&lt;/p&gt;&lt;p&gt;TSDProxy (go/github.com/almeidapaulopt/tsdproxy) forwards its internal authentication token used for management API trust to all proxied backend services by default when identityHeaders is enabled. An attacker controlling or compromising a backend service can replay this token to the localhost management HTTP server to escalate privileges and manipulate Tailscale identity claims. This is a critical vulnerability actively exploitable in deployments using default configuration. Immediately disable identityHeaders forwarding, update to a patched version when available, or restrict backend service access to untrusted networks.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-g936-7jqj-mwv8"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Bluetooth Low Energy Security Testing, Consolidated: Introducing Caeruleus</title>
-    <id>urn:cybersecnews:item:66</id>
-    <published>2026-07-10T20:58:58.206304+00:00</published>
-    <updated>2026-07-10T20:58:58.206304+00:00</updated>
-    <link href="https://www.praetorian.com/blog/ble-testing-caeruleus/" rel="alternate" />
-    <category term="red-team" />
-    <content type="html">&lt;p&gt;&lt;em&gt;red-team · security-testing&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Caeruleus is a new consolidated Bluetooth Low Energy (BLE) security testing framework addressing fragmentation in existing BLE tools like bettercap and gatttool, which are deprecated or limited in functionality. The tool consolidates reconnaissance, enumeration, characteristic reading/writing, and fuzzing capabilities into a single platform, improving efficiency for security assessments. This is a defensive tooling release rather than a vulnerability disclosure, with no identified exploits or immediate patching requirements. Security teams should consider adopting Caeruleus for streamlined BLE security testing workflows in place of legacy tool chains.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.praetorian.com/blog/ble-testing-caeruleus/"&gt;Read more&lt;/a&gt; · Source: praetorian&lt;/p&gt;</content>
   </entry>
 </feed>
