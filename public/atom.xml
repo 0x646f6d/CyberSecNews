@@ -3,7 +3,16 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-07-25T16:57:39.296407+00:00</updated>
+  <updated>2026-07-27T11:21:19.970323+00:00</updated>
+  <entry>
+    <title>Java Spring Boot "heapdump" scans, (Mon, Jul 27th)</title>
+    <id>urn:cybersecnews:item:169</id>
+    <published>2026-07-27T11:21:19.970323+00:00</published>
+    <updated>2026-07-27T11:21:19.970323+00:00</updated>
+    <link href="https://isc.sans.edu/diary/rss/33188" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · information-disclosure&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Spring Boot applications expose the "/actuator/heapdump" endpoint by default, which returns a binary memory dump (heapdump.hprof) containing the application's runtime state including sensitive data such as API keys, database credentials, and other secrets. This is a high-severity information disclosure vulnerability actively exploited in the wild through automated scanning. Organizations should immediately disable the heapdump endpoint in production environments by setting "management.endpoints.web.exposure.exclude=heapdump" in application configuration, or restrict access to actuator endpoints through network controls and authentication mechanisms.&lt;/p&gt;&lt;p&gt;&lt;a href="https://isc.sans.edu/diary/rss/33188"&gt;Read more&lt;/a&gt; · Source: sans-isc&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Cl0p Affiliates Target Internet-Exposed PTC Windchill and FlexPLM with Unauthenticated RCE</title>
     <id>urn:cybersecnews:item:168</id>
@@ -894,14 +903,5 @@
     <link href="https://www.bleepingcomputer.com/news/security/cisa-warns-of-actively-exploited-rce-flaws-in-joomla-extensions/" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Two remote code execution vulnerabilities in Joomla extensions—iCagenda and Balbooa Forms—are being actively exploited in the wild through arbitrary file upload mechanisms. These flaws allow unauthenticated attackers to execute arbitrary code on affected systems. CISA has issued a warning confirming active exploitation, indicating high severity. Organizations using these extensions should immediately update to patched versions or disable the affected plugins until patches are available.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/cisa-warns-of-actively-exploited-rce-flaws-in-joomla-extensions/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>(g+) Cybersecurity: Wie eine Erpressergruppe reihenweise Peoplesoft-Systeme abräumt</title>
-    <id>urn:cybersecnews:item:69</id>
-    <published>2026-07-13T13:53:23.049556+00:00</published>
-    <updated>2026-07-13T13:53:23.049556+00:00</updated>
-    <link href="https://www.golem.de/news/cybersecurity-wie-eine-erpressergruppe-reihenweise-peoplesoft-systeme-abraeumt-2607-210692.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · unspecified&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Oracle PeopleSoft systems are being exploited in the wild via an unpatched zero-day vulnerability, with multiple high-profile victims targeted by extortion groups. The flaw allows attackers to compromise systems and extract sensitive data for extortion purposes. Affected organizations should immediately apply the latest Oracle security patches, isolate vulnerable PeopleSoft instances from external network access, and implement enhanced monitoring for suspicious authentication and data exfiltration activity. Consider conducting a forensic investigation to determine if systems have been previously compromised.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.golem.de/news/cybersecurity-wie-eine-erpressergruppe-reihenweise-peoplesoft-systeme-abraeumt-2607-210692.html"&gt;Read more&lt;/a&gt; · Source: golem-security&lt;/p&gt;</content>
   </entry>
 </feed>
