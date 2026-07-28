@@ -3,7 +3,34 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-07-28T02:31:45.828468+00:00</updated>
+  <updated>2026-07-28T10:35:21.743540+00:00</updated>
+  <entry>
+    <title>AutoIT Payload Injector , (Tue, Jul 28th)</title>
+    <id>urn:cybersecnews:item:179</id>
+    <published>2026-07-28T10:35:21.743540+00:00</published>
+    <updated>2026-07-28T10:35:21.743540+00:00</updated>
+    <link href="https://isc.sans.edu/diary/rss/33192" rel="alternate" />
+    <category term="red-team" />
+    <content type="html">&lt;p&gt;&lt;em&gt;red-team · payload-injection&lt;/em&gt;&lt;/p&gt;&lt;p&gt;AutoIT scripting language is being actively exploited by threat actors for payload injection into remote processes due to its ease of use and powerful capabilities. This technique leverages AutoIT's native functions to execute arbitrary code and maintain persistence, making it a favored tool in the malware ecosystem. The threat is HIGH severity given continued active exploitation in the wild by multiple threat actors. Mitigation should focus on restricting AutoIT script execution through application whitelisting, disabling unnecessary scripting engines, and monitoring for suspicious AutoIT process behavior and inter-process injection attempts.&lt;/p&gt;&lt;p&gt;&lt;a href="https://isc.sans.edu/diary/rss/33192"&gt;Read more&lt;/a&gt; · Source: sans-isc&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Researcher Says AI Helped Develop Linux Traffic-Control Race Into Root Exploit</title>
+    <id>urn:cybersecnews:item:178</id>
+    <published>2026-07-28T10:35:21.742321+00:00</published>
+    <updated>2026-07-28T10:35:21.742321+00:00</updated>
+    <link href="https://thehackernews.com/2026/07/researcher-says-ai-helped-develop-linux.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · use-after-free · CVE-2026-53264&lt;/em&gt;&lt;/p&gt;&lt;p&gt;A use-after-free race condition (CVE-2026-53264, CVSS 7.8) in the Linux kernel's traffic-control subsystem allows local attackers to escalate privileges to root on affected systems, with the vulnerability reportedly discovered and exploited using AI-assisted techniques. The flaw affects CentOS Stream 9 and likely other distributions running vulnerable kernel versions, though no evidence of widespread wild exploitation has been reported. Users should apply kernel security patches from their distribution vendor as soon as they become available, and system administrators should restrict local user access where possible as a temporary mitigation. This case demonstrates AI's emerging role in both vulnerability discovery and exploit development, underscoring the need for rapid patching cycles.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/researcher-says-ai-helped-develop-linux.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Critical TeamCity Flaw Could Let Attackers Run OS Commands Without Logging In</title>
+    <id>urn:cybersecnews:item:177</id>
+    <published>2026-07-28T10:35:21.740334+00:00</published>
+    <updated>2026-07-28T10:35:21.740334+00:00</updated>
+    <link href="https://thehackernews.com/2026/07/critical-teamcity-flaw-could-let.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-63077&lt;/em&gt;&lt;/p&gt;&lt;p&gt;JetBrains TeamCity On-Premises is vulnerable to CVE-2026-63077, a critical pre-authentication remote code execution flaw (CVSS 9.8) allowing unauthenticated attackers to execute arbitrary OS commands. The vulnerability affects all on-premises versions and has been actively exploited in the wild. Immediately upgrade to TeamCity 2025.11.7 or 2026.1.3; TeamCity Cloud instances are already patched.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/critical-teamcity-flaw-could-let.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Arista VeloCloud Orchestrator: Arista VeloCloud Orchestrator On-Prem OS Command Injection Vulnerability (CVE-2026-16812)</title>
     <id>urn:cybersecnews:item:176</id>
@@ -876,32 +903,5 @@
     <link href="https://www.bleepingcomputer.com/news/microsoft/microsoft-july-2026-patch-tuesday-fixes-massive-570-flaws-3-zero-days/" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · mixed&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Microsoft released patches for 570 vulnerabilities in July 2026 Patch Tuesday, including three zero-days (two actively exploited in the wild and one publicly disclosed prior to patching). Severity levels span critical flaws affecting core Windows and Office components with widespread exploitation potential. Immediate patching is mandatory for all affected Microsoft products; prioritize zero-day CVEs and any critical-rated flaws in internet-facing systems. Organizations unable to patch immediately should implement network segmentation and disable unnecessary services for affected software.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/microsoft/microsoft-july-2026-patch-tuesday-fixes-massive-570-flaws-3-zero-days/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Microsoft releases Windows 10 KB5099539 extended security update</title>
-    <id>urn:cybersecnews:item:79</id>
-    <published>2026-07-14T20:48:47.609900+00:00</published>
-    <updated>2026-07-14T20:48:47.609900+00:00</updated>
-    <link href="https://www.bleepingcomputer.com/news/microsoft/microsoft-releases-windows-10-kb5099539-extended-security-update/" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · multiple&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Windows 10 receives KB5099539 extended security update addressing 570 vulnerabilities including critical remote code execution and elevation of privilege flaws across multiple components. The update covers July 2026 Patch Tuesday issues affecting kernel, graphics drivers, and system services with varying severity levels; some vulnerabilities are actively exploited in the wild. Immediate patching is strongly recommended for all Windows 10 systems still in support, particularly those exposed to network attack surfaces. Organizations should prioritize deployment of this cumulative update to their patch management processes.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/microsoft/microsoft-releases-windows-10-kb5099539-extended-security-update/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Progress confirms ShareFile zero-day flaw behind Storage Zone shutdown</title>
-    <id>urn:cybersecnews:item:78</id>
-    <published>2026-07-14T16:59:23.532353+00:00</published>
-    <updated>2026-07-14T16:59:23.532353+00:00</updated>
-    <link href="https://www.bleepingcomputer.com/news/security/progress-confirms-sharefile-zero-day-flaw-behind-storage-zone-shutdown/" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Progress Software's ShareFile Storage Zone Controller is affected by a high-severity zero-day vulnerability that prompted emergency service shutdowns. The flaw allows unauthenticated remote code execution, enabling attackers to compromise affected systems. Active exploitation in the wild has been confirmed, making this a critical threat. Organizations must immediately apply the released security patches and verify Storage Zone Controller instances are updated to the patched versions before resuming operations.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/progress-confirms-sharefile-zero-day-flaw-behind-storage-zone-shutdown/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>11 Old Microsoft-Signed Linux UEFI Shims Could Let Attackers Bypass Secure Boot</title>
-    <id>urn:cybersecnews:item:77</id>
-    <published>2026-07-14T16:59:23.530955+00:00</published>
-    <updated>2026-07-14T16:59:23.530955+00:00</updated>
-    <link href="https://thehackernews.com/2026/07/11-old-microsoft-signed-linux-uefi.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · secure-boot-bypass&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Eleven legacy Microsoft-signed UEFI shims used in Linux distributions contain vulnerabilities enabling Secure Boot bypass on systems using these firmware standards. Attackers exploiting these flaws can execute arbitrary code during the boot process, facilitating UEFI bootkit deployment or other pre-OS malware installation. No active exploitation in the wild has been reported; however, severity is high given the fundamental nature of Secure Boot circumvention. Affected systems should update to patched UEFI shim versions and revoke the vulnerable signatures through firmware updates where available.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/11-old-microsoft-signed-linux-uefi.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
   </entry>
 </feed>
