@@ -3,7 +3,52 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-07-29T10:39:37.100017+00:00</updated>
+  <updated>2026-07-29T17:15:43.414677+00:00</updated>
+  <entry>
+    <title>prebid-server's request forgery vulnerability allows for possible host environment data extraction (CVE-2026-54735)</title>
+    <id>urn:cybersecnews:item:199</id>
+    <published>2026-07-29T17:15:43.414677+00:00</published>
+    <updated>2026-07-29T17:15:43.414677+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-4p3g-4hcj-wpvx" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · ssrf · CVE-2026-54735&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Prebid Server bidder adapters contain a request forgery vulnerability (CVE-2026-54735) where user-supplied parameters are interpolated into outbound URLs without proper validation, allowing attackers to redirect HTTP requests to unintended destinations and potentially access internal network services or sensitive endpoints. This critical-severity flaw affects versions prior to v4.4.0 across all major version branches (v1-v4). The vulnerability enables Server-Side Request Forgery (SSRF) attacks that could expose host environment data or internal services. Immediately upgrade to Prebid Server v4.4.0 or later; no workaround is mentioned for users unable to patch immediately.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-4p3g-4hcj-wpvx"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Logging operator has Fluentd configuration injection that allows remote code execution (CVE-2026-54680)</title>
+    <id>urn:cybersecnews:item:198</id>
+    <published>2026-07-29T17:15:43.413656+00:00</published>
+    <updated>2026-07-29T17:15:43.413656+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-mjqf-28ph-426h" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · config-injection · CVE-2026-54680&lt;/em&gt;&lt;/p&gt;&lt;p&gt;The Logging operator for Kubernetes (github.com/kube-logging/logging-operator) contains a critical configuration injection vulnerability (CVE-2026-54680) where the Fluentd configuration renderer fails to escape strings from CRD resources, allowing any user who can create Flow resources to inject arbitrary Fluentd configuration. An attacker can exploit this by injecting newlines into fields like `record_transformer.records` to close configuration blocks and inject a `&lt;match **&gt;` block with Fluentd's `@type exec` plugin, achieving remote code execution. This vulnerability is critical and should be patched immediately; apply the latest security update to the Logging operator and restrict RBAC permissions for Flow resource creation to trusted users only.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-mjqf-28ph-426h"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Researchers Show a Single Malicious Webpage Visit Can Compromise Tor Browser</title>
+    <id>urn:cybersecnews:item:197</id>
+    <published>2026-07-29T17:15:43.412863+00:00</published>
+    <updated>2026-07-29T17:15:43.412863+00:00</updated>
+    <link href="https://thehackernews.com/2026/07/researchers-show-single-malicious.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-10702&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Firefox/Tor Browser affected by CVE-2024-10702, a high-severity JIT compiler vulnerability enabling arbitrary code execution via malicious webpage visit without user interaction. Nebula Security demonstrated the flaw can compromise Tor Browser despite its security model, with Mozilla patching in Firefox 151.0.3. Users must update Firefox and Tor Browser immediately; no workarounds available given the passive exploitation vector.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/researchers-show-single-malicious.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Three Critical VMware Flaws Allow Auth Bypass, Code Execution, and VM Escape</title>
+    <id>urn:cybersecnews:item:196</id>
+    <published>2026-07-29T17:15:43.412048+00:00</published>
+    <updated>2026-07-29T17:15:43.412048+00:00</updated>
+    <link href="https://thehackernews.com/2026/07/three-critical-vmware-flaws-allow-auth.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass, rce, vm-escape · CVE-2026-59309&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Three critical VMware vulnerabilities affect vCenter, ESX, Workstation, and Fusion: CVE-2024-59309 (CVSS 9.8) enables authentication bypass in vCenter, while additional flaws permit code execution and VM escape. These vulnerabilities require network access but allow unauthenticated attackers to compromise virtualization infrastructure with maximum impact. Immediate patching with Broadcom's released security updates is mandatory; prioritize vCenter instances exposed to untrusted networks. Monitor for exploitation attempts and verify patch deployment across all affected VMware products.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/three-critical-vmware-flaws-allow-auth.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Ruflo MCP Flaw Lets Unauthenticated Attackers Run Commands and Poison AI Memory</title>
+    <id>urn:cybersecnews:item:195</id>
+    <published>2026-07-29T17:15:43.410542+00:00</published>
+    <updated>2026-07-29T17:15:43.410542+00:00</updated>
+    <link href="https://thehackernews.com/2026/07/ruflo-mcp-flaw-lets-unauthenticated.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-59726&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Ruflo, an open-source agent meta-harness for Anthropic Claude and OpenAI Codex, contains a critical unauthenticated remote code execution vulnerability (CVE-2026-59726, CVSS 10.0) affecting all versions prior to 3.16.3. The flaw allows attackers to execute arbitrary commands and manipulate AI model memory without authentication. There is no indication of active exploitation in the wild at this time. Immediately upgrade to Ruflo version 3.16.3 or later; if immediate patching is not feasible, restrict network access to Ruflo instances to trusted networks only.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/ruflo-mcp-flaw-lets-unauthenticated.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Coordinated “cyberattack” on Minnesota water utilities: What you need to know</title>
     <id>urn:cybersecnews:item:194</id>
@@ -858,50 +903,5 @@
     <link href="https://thehackernews.com/2026/07/unpatched-shark-vacuum-flaw-could-let.html" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · certificate-extraction,rce,privilege-escalation&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Shark RV2320EDUS robot vacuums contain a critical vulnerability allowing attackers with physical access to extract hardcoded AWS certificates from flash memory, then use those credentials to remotely compromise other vacuums in the same region with full control including camera access, movement, and Wi-Fi credential theft. The flaw affects authentication mechanisms that fail to properly isolate per-device credentials. This is unpatched and the proof-of-concept was publicly disclosed Monday with active exploitation likely imminent. Shark should immediately revoke compromised certificates, implement per-device authentication, and push a firmware update; users should segregate vacuums to restricted network segments pending patches.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/unpatched-shark-vacuum-flaw-could-let.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Daxin Resurfaces in Taiwan Alongside Stupig Pre-Login SYSTEM Backdoor</title>
-    <id>urn:cybersecnews:item:99</id>
-    <published>2026-07-16T13:10:29.755159+00:00</published>
-    <updated>2026-07-16T13:10:29.755159+00:00</updated>
-    <link href="https://thehackernews.com/2026/07/daxin-resurfaces-in-taiwan-alongside.html" rel="alternate" />
-    <category term="red-team" />
-    <content type="html">&lt;p&gt;&lt;em&gt;red-team · rootkit&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Daxin kernel-mode rootkit and newly discovered Stupig pre-login backdoor have re-emerged in a Taiwan manufacturing environment after a four-year hiatus, attributed to China-linked threat actors. Daxin persists in system memory via a malicious driver (srt64.sys) enabling deep system compromise, while Stupig operates at the pre-login stage suggesting persistent access mechanisms. This represents active exploitation in the wild with high severity given the targeted nature against critical infrastructure and manufacturing sectors. Organizations should prioritize threat hunting for these artifacts, implement kernel-mode code signing enforcement, conduct forensic analysis of affected systems, and apply EDR solutions capable of detecting anomalous driver loading and pre-login persistence techniques.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/daxin-resurfaces-in-taiwan-alongside.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>websocket-driver: Message corruption via abuse of protocol length headers (CVE-2026-54466)</title>
-    <id>urn:cybersecnews:item:98</id>
-    <published>2026-07-16T01:14:46.109654+00:00</published>
-    <updated>2026-07-16T01:14:46.109654+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-xv26-6w52-cph6" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · dos · CVE-2026-54466&lt;/em&gt;&lt;/p&gt;&lt;p&gt;The websocket-driver npm package is vulnerable to message corruption (CVE-2026-54466) where attackers can send malformed WebSocket frame length headers with an indefinite sequence of high-bit-set bytes, causing servers to parse an arbitrarily large integer that exceeds JavaScript's 64-bit floating point precision limits and corrupts subsequent payload parsing. This critical vulnerability is exploitable remotely without authentication and can lead to denial of service or unexpected protocol behavior. Patch to the latest version of websocket-driver immediately, as this affects all versions using the vulnerable frame parsing logic. Monitor for suspicious WebSocket connections with malformed length headers as a temporary mitigation if immediate patching is not feasible.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-xv26-6w52-cph6"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Zoom warns of critical account takeover vulnerability</title>
-    <id>urn:cybersecnews:item:97</id>
-    <published>2026-07-16T01:14:46.106932+00:00</published>
-    <updated>2026-07-16T01:14:46.106932+00:00</updated>
-    <link href="https://www.bleepingcomputer.com/news/security/zoom-warns-of-critical-account-takeover-vulnerability/" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · account-takeover · CVE-2026-53412&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Zoom desktop client and SDK for Windows contain a critical account takeover vulnerability (CVE-pending) exploitable by unauthenticated attackers without user interaction. The flaw enables complete compromise of user accounts through a mechanism leveraging improper credential handling or session management. Zoom has not indicated active exploitation in the wild but rates this as critical given the low attack complexity and widespread client deployment. Users should immediately update to the latest patched version of Zoom; administrators should enforce mandatory client updates enterprise-wide.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/zoom-warns-of-critical-account-takeover-vulnerability/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>TELEPUZ: a modular MaaS malware spreading via CLICKFIX-VIDAR chains</title>
-    <id>urn:cybersecnews:item:96</id>
-    <published>2026-07-15T20:47:02.584572+00:00</published>
-    <updated>2026-07-15T20:47:02.584572+00:00</updated>
-    <link href="https://www.elastic.co/security-labs/telepuz-maas-malware-clickfix" rel="alternate" />
-    <category term="red-team" />
-    <content type="html">&lt;p&gt;&lt;em&gt;red-team · malware-distribution&lt;/em&gt;&lt;/p&gt;&lt;p&gt;TELEPUZ is a modular malware-as-a-service platform discovered in April propagating through CLICKFIX social engineering chains that deliver VIDAR credential stealers. The malware employs advanced evasion techniques and maintains a command-and-control infrastructure enabling flexible payload delivery and post-exploitation capabilities. Active exploitation in the wild has been confirmed via widespread CLICKFIX campaigns targeting users through deceptive support scams. Organizations should strengthen email/browser security controls, implement credential guard mechanisms to defend against stealer malware, and conduct employee security awareness training targeting social engineering tactics commonly used in CLICKFIX attacks.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.elastic.co/security-labs/telepuz-maas-malware-clickfix"&gt;Read more&lt;/a&gt; · Source: elastic-security-labs&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>MantisBT: Reflected XSS in admin/install.php via unescaped printf (CVE-2026-52881)</title>
-    <id>urn:cybersecnews:item:95</id>
-    <published>2026-07-15T20:47:02.583357+00:00</published>
-    <updated>2026-07-15T20:47:02.583357+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-vcrw-4xvv-jh49" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · reflected-xss · CVE-2026-52881&lt;/em&gt;&lt;/p&gt;&lt;p&gt;MantisBT versions 2.28.3 and earlier contain critical reflected XSS vulnerabilities in `/admin/install.php` where user-supplied parameters are echoed unescaped via printf format strings, requiring no authentication. The existing Content Security Policy lacks a form-action directive, enabling attackers to inject credential-phishing forms and open redirects despite script-src restrictions. This vulnerability is actively exploitable for credential theft and other attacks. Upgrade to MantisBT 2.28.4 or later immediately, or implement strict input validation and additional CSP directives (form-action 'self') as interim mitigation.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-vcrw-4xvv-jh49"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
   </entry>
 </feed>
