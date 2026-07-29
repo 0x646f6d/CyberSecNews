@@ -3,7 +3,25 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-07-28T17:29:02.198152+00:00</updated>
+  <updated>2026-07-29T02:36:34.332323+00:00</updated>
+  <entry>
+    <title>@hypequery/clickhouse has SQL Injection in parameter escaping that allows arbitrary SQL execution (CVE-2026-54658)</title>
+    <id>urn:cybersecnews:item:189</id>
+    <published>2026-07-29T02:36:34.332323+00:00</published>
+    <updated>2026-07-29T02:36:34.332323+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-6wcc-39rp-hh9p" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · sqli · CVE-2026-54658&lt;/em&gt;&lt;/p&gt;&lt;p&gt;The @hypequery/clickhouse npm package prior to version 2.0.2 contains a critical SQL injection vulnerability in the `escapeValue()` function used for parameter substitution. Attackers controlling parameter values can inject arbitrary SQL by exploiting improper escaping of trailing backslashes before closing quotes. There is no indication of active exploitation in the wild, but the critical severity warrants immediate action. Update to version 2.0.2 or later immediately, and audit applications using this package with user-controlled query parameters for potential compromise.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-6wcc-39rp-hh9p"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Claude AI Just Cracked a Post-Quantum Test Scheme and Found a Faster 7-Round AES Attack</title>
+    <id>urn:cybersecnews:item:188</id>
+    <published>2026-07-29T02:36:34.329993+00:00</published>
+    <updated>2026-07-29T02:36:34.329993+00:00</updated>
+    <link href="https://thehackernews.com/2026/07/claude-ai-just-cracked-post-quantum.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · key-recovery&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Claude AI discovered cryptanalytic attacks against post-quantum signature scheme HAWK-256 and seven-round AES-128, achieving 200-800x speedup improvements over prior methods. The HAWK attack exploits unused lattice symmetries while the AES attack demonstrates theoretical vulnerabilities in reduced-round variants. These are research findings against limited-round AES (not full AES) and a candidate post-quantum scheme; full AES-128 remains secure and is not exploited in the wild. Organizations should continue using full AES-128 and monitor HAWK's standardization status, as it may influence post-quantum cryptography selections, but no immediate patching is required for deployed systems.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/claude-ai-just-cracked-post-quantum.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>COFF Mixing - Hiding in Plain Sight</title>
     <id>urn:cybersecnews:item:187</id>
@@ -885,23 +903,5 @@
     <link href="https://www.bleepingcomputer.com/news/security/we-built-a-vulnerability-vending-machine-ai-tokens-in-zero-days-out/" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · unspecified&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Intruder developed an automated system using AI and code slicing techniques to discover zero-day vulnerabilities in software, demonstrating the approach by identifying a previously unknown WordPress plugin vulnerability. The technique leverages large language models to analyze code and uncover complex logical flaws that traditional static analysis tools may miss. While the research is currently academic in nature with findings under responsible disclosure, this represents a significant escalation in vulnerability discovery automation that defenders should monitor. Organizations should prioritize timely patching of WordPress plugins and third-party software, implement runtime application self-protection (RASP) solutions, and consider adopting AI-powered security testing in their development pipelines to identify issues before attackers do.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/we-built-a-vulnerability-vending-machine-ai-tokens-in-zero-days-out/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Firefox, Chrome, Adobe, and VMware Updates Fix Multiple Critical Security Flaws</title>
-    <id>urn:cybersecnews:item:89</id>
-    <published>2026-07-15T17:01:55.080346+00:00</published>
-    <updated>2026-07-15T17:01:55.080346+00:00</updated>
-    <link href="https://thehackernews.com/2026/07/firefox-chrome-adobe-and-vmware-updates.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · memory-safety,site-isolation · CVE-2026-15718, CVE-2026-15719&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Mozilla Firefox addressed two critical vulnerabilities (CVE-2026-15718 in JavaScript/WebAssembly and CVE-2026-15719 in DOM Navigation) with public exploit code available, requiring immediate patching. Chrome, Adobe, and VMware also released updates addressing multiple critical flaws across their respective products. Users should prioritize patching Firefox immediately due to active exploitation risk, and apply updates for other affected software according to vendor severity ratings. Monitor systems for exploitation attempts targeting these vulnerabilities.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/firefox-chrome-adobe-and-vmware-updates.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Cursor Flaw Lets Malicious Cloned Repositories Trigger Windows Code Execution</title>
-    <id>urn:cybersecnews:item:88</id>
-    <published>2026-07-15T13:02:43.003248+00:00</published>
-    <updated>2026-07-15T13:02:43.003248+00:00</updated>
-    <link href="https://thehackernews.com/2026/07/cursor-flaw-lets-malicious-cloned.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · arbitrary-code-execution&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Cursor IDE on Windows contains a critical arbitrary code execution vulnerability where malicious cloned repositories can execute a git.exe binary placed in the project root without user interaction, approval dialogs, or warnings. The flaw allows attackers to execute code with full user privileges and access to source code, SSH keys, and cloud credentials, with repeated execution occurring as long as the project remains open. This is actively exploited in the wild through social engineering attacks distributing compromised repositories. Cursor users should immediately update to the latest patched version and implement repository scanning practices before opening untrusted projects.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/cursor-flaw-lets-malicious-cloned.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
   </entry>
 </feed>
