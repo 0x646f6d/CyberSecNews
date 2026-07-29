@@ -3,7 +3,52 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-07-29T02:36:34.332323+00:00</updated>
+  <updated>2026-07-29T10:39:37.100017+00:00</updated>
+  <entry>
+    <title>Coordinated “cyberattack” on Minnesota water utilities: What you need to know</title>
+    <id>urn:cybersecnews:item:194</id>
+    <published>2026-07-29T10:39:37.100017+00:00</published>
+    <updated>2026-07-29T10:39:37.100017+00:00</updated>
+    <link href="https://www.tenable.com/blog/coordinated-cyberattack-on-minnesota-water-utilities-what-you-need-to-know" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2021-22681, CVE-2023-3595, CVE-2024-6242&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Iranian-affiliated CyberAv3ngers actors exploited CVE-2021-22681, a critical authentication bypass (CVSS 9.8) in internet-exposed Rockwell Automation, Schneider Electric, and Siemens PLCs, to disrupt water systems across 30+ Minnesota communities in late July 2026; the vulnerability is actively exploited in the wild with no vendor patch available. The five-year-old vulnerability enables unauthenticated remote access through compromised cryptographic keys in engineering software; attackers modified PLC logic and disabled safety systems while manipulating HMI displays to prevent operator detection. Organizations must immediately disconnect internet-exposed PLCs, implement network segmentation isolating engineering workstations, enable physical mode switches set to "Run," deploy CIP Security, and maintain offline backups since architecture-level controls are the only remediation path. Ingest CISA AA26-097A indicators of compromise and monitor ports 44818, 2222, 102, 502, and 22 for connections from foreign hosting providers.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.tenable.com/blog/coordinated-cyberattack-on-minnesota-water-utilities-what-you-need-to-know"&gt;Read more&lt;/a&gt; · Source: tenable&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Apple Patches Everything (July 2026), (Wed, Jul 29th)</title>
+    <id>urn:cybersecnews:item:193</id>
+    <published>2026-07-29T10:39:37.099017+00:00</published>
+    <updated>2026-07-29T10:39:37.099017+00:00</updated>
+    <link href="https://isc.sans.edu/diary/rss/33196" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Apple released security patches across all major operating systems and Safari in July 2026, addressing vulnerabilities in macOS 14, 15, and 26, iOS/iPadOS 26, and Safari. The briefing lacks specific vulnerability details, affected features, or severity ratings required for proper risk assessment. Recommend obtaining detailed CVE information from Apple's security bulletins to identify which vulnerabilities pose critical risk to your environment. Patch immediately for current OS versions (macOS 26, iOS/iPadOS 26) and prioritize legacy systems (macOS 14-15) based on deployment scope and criticality assessment.&lt;/p&gt;&lt;p&gt;&lt;a href="https://isc.sans.edu/diary/rss/33196"&gt;Read more&lt;/a&gt; · Source: sans-isc&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Two Compromised joyfill npm Packages Run RAT When Imported Into Node.js</title>
+    <id>urn:cybersecnews:item:192</id>
+    <published>2026-07-29T10:39:37.097981+00:00</published>
+    <updated>2026-07-29T10:39:37.097981+00:00</updated>
+    <link href="https://thehackernews.com/2026/07/two-compromised-joyfill-npm-packages.html" rel="alternate" />
+    <category term="red-team" />
+    <content type="html">&lt;p&gt;&lt;em&gt;red-team · supply-chain-attack&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Two npm packages in the @joyfill namespace (@joyfill/layouts@0.1.2-2773.beta.0 and @joyfill/components@4.0.0-rc24-2773-beta.4) have been compromised to deliver the DEV#POPPER remote access trojan, which executes malicious code at import time in Node.js environments. The attack employs encrypted payloads that are decrypted and executed during module initialization, providing attackers full system access. This threat is actively exploited in the wild as evidenced by the compromise of official package repositories. Immediately audit Node.js projects for these specific beta versions, remove affected packages, and restore from clean dependencies; consider implementing package pinning policies and monitoring for similar supply chain compromises in your dependency tree.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/two-compromised-joyfill-npm-packages.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Flying Eagle Android RAT Traces Found on 170 Servers as Source Code Circulates</title>
+    <id>urn:cybersecnews:item:191</id>
+    <published>2026-07-29T10:39:37.096914+00:00</published>
+    <updated>2026-07-29T10:39:37.096914+00:00</updated>
+    <link href="https://thehackernews.com/2026/07/flying-eagle-android-rat-traces-found.html" rel="alternate" />
+    <category term="red-team" />
+    <content type="html">&lt;p&gt;&lt;em&gt;red-team · c2&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Flying Eagle Android RAT framework source code is actively circulating in criminal channels with control infrastructure identified on 170 servers. The malware masquerades as Chinese Public Security services and provides remote access capabilities including payment credential theft on Android devices. Exploitation appears active in the wild with targeting focused on China-based victims. Organizations should deploy network detection signatures for command-and-control communications and advise users to avoid sideloading applications from untrusted sources, verifying apps only from official Android app stores.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/flying-eagle-android-rat-traces-found.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>New Gitea RCE Lets Repository Writers Plant a Git Hook to Run Shell Commands</title>
+    <id>urn:cybersecnews:item:190</id>
+    <published>2026-07-29T10:39:37.094685+00:00</published>
+    <updated>2026-07-29T10:39:37.094685+00:00</updated>
+    <link href="https://thehackernews.com/2026/07/new-gitea-rce-lets-repository-writers.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-60004&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Gitea versions 1.17 through 1.27.0 contain a critical RCE vulnerability (CVE-2024-60004, CVSS 9.8) allowing repository writers to execute arbitrary shell commands as the Gitea service account by injecting malicious Git hooks through patch content. The vulnerability has not been reported as actively exploited in the wild but poses severe risk due to the low privilege requirement for exploitation. Immediately upgrade to Gitea 1.27.1 or later, and review repository access controls to restrict write permissions where possible.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/new-gitea-rce-lets-repository-writers.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>@hypequery/clickhouse has SQL Injection in parameter escaping that allows arbitrary SQL execution (CVE-2026-54658)</title>
     <id>urn:cybersecnews:item:189</id>
@@ -858,50 +903,5 @@
     <link href="https://github.com/advisories/GHSA-vcrw-4xvv-jh49" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · reflected-xss · CVE-2026-52881&lt;/em&gt;&lt;/p&gt;&lt;p&gt;MantisBT versions 2.28.3 and earlier contain critical reflected XSS vulnerabilities in `/admin/install.php` where user-supplied parameters are echoed unescaped via printf format strings, requiring no authentication. The existing Content Security Policy lacks a form-action directive, enabling attackers to inject credential-phishing forms and open redirects despite script-src restrictions. This vulnerability is actively exploitable for credential theft and other attacks. Upgrade to MantisBT 2.28.4 or later immediately, or implement strict input validation and additional CSP directives (form-action 'self') as interim mitigation.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-vcrw-4xvv-jh49"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Google Gemini CLI abused as a hacking agent, malware botnet operator</title>
-    <id>urn:cybersecnews:item:94</id>
-    <published>2026-07-15T20:47:02.578462+00:00</published>
-    <updated>2026-07-15T20:47:02.578462+00:00</updated>
-    <link href="https://www.bleepingcomputer.com/news/security/google-gemini-cli-abused-as-a-hacking-agent-malware-botnet-operator/" rel="alternate" />
-    <category term="red-team" />
-    <content type="html">&lt;p&gt;&lt;em&gt;red-team · ai-misuse&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Google Gemini CLI, an open-source AI tool, has been abused by threat actor "bandcampro" to automate hacking activities and control a botnet infrastructure. The actor leveraged the CLI's capabilities to execute commands and coordinate malicious operations, demonstrating how legitimate AI tools can be repurposed for offensive security operations. While this appears to be a limited-scale operation rather than widespread exploitation, it highlights the risk of AI tools being weaponized by threat actors. Organizations should implement strict access controls, monitor for suspicious AI tool usage patterns, and consider restricting or auditing open-source AI CLI deployments in their environments.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/google-gemini-cli-abused-as-a-hacking-agent-malware-botnet-operator/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Investigating Persistence Mechanisms in AWS</title>
-    <id>urn:cybersecnews:item:93</id>
-    <published>2026-07-15T17:01:55.097500+00:00</published>
-    <updated>2026-07-15T17:01:55.097500+00:00</updated>
-    <link href="https://www.rapid7.com/blog/post/dr-investigating-aws-persistence-mechanisms" rel="alternate" />
-    <category term="red-team" />
-    <content type="html">&lt;p&gt;&lt;em&gt;red-team · persistence&lt;/em&gt;&lt;/p&gt;&lt;p&gt;AWS identity and access management features (IAM users, roles, Lambda functions, and federated sessions) are commonly abused for persistence after initial compromise. Attackers establish footholds through techniques including creating backdoored IAM users with credentials and policies, modifying assume role policies to allow external account access, embedding malicious code in Lambda functions with public URLs, and creating federated sessions that survive credential rotation. These are established techniques actively exploited in the wild with high business impact due to difficulty in detection and containment. Organizations should implement deny-all policies on compromised identities immediately, rotate all affected credentials, review IAM permissions and trust policies regularly, and deploy comprehensive CloudTrail monitoring with queries targeting suspicious API calls like iam:CreateUser, iam:UpdateAssumeRolePolicy, lambda:CreateFunctionUrlConfig, and sts:GetFederationToken.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.rapid7.com/blog/post/dr-investigating-aws-persistence-mechanisms"&gt;Read more&lt;/a&gt; · Source: rapid7&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>MantisBT: SOAP API Authentication Bypass with Privilege Escalation to Administrator (CVE-2026-47156)</title>
-    <id>urn:cybersecnews:item:92</id>
-    <published>2026-07-15T17:01:55.094060+00:00</published>
-    <updated>2026-07-15T17:01:55.094060+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-c2xg-qjqw-2v98" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-47156&lt;/em&gt;&lt;/p&gt;&lt;p&gt;MantisBT versions 2.28.3 and earlier contain a critical authentication bypass in the SOAP API's mci_check_login() function allowing privilege escalation to administrator. An attacker can authenticate as any user including administrators by leveraging any valid cookie_string combined with a target username, exploitable by self-registered users on default installations where signup is enabled. This vulnerability is critical severity and likely exploited in the wild given its ease of exploitation. Immediately patch to the latest version beyond 2.28.3 and consider disabling self-registration ($g_allow_signup = OFF) as an interim mitigation.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-c2xg-qjqw-2v98"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>KNX Association KNX Protocol Connection Authorization Option 1: KNX Association KNX Protocol Connection Authorization Option 1 Overly Restrictive Account Lockout Mechanism Vulnerability (CVE-2023-4346)</title>
-    <id>urn:cybersecnews:item:91</id>
-    <published>2026-07-15T17:01:55.090563+00:00</published>
-    <updated>2026-07-15T17:01:55.090563+00:00</updated>
-    <link href="https://nvd.nist.gov/vuln/detail/CVE-2023-4346" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · account-lockout · CVE-2023-4346&lt;/em&gt;&lt;/p&gt;&lt;p&gt;KNX Protocol Connection Authorization Option 1 contains a flaw in its account lockout mechanism that allows attackers to purge all devices and lock BCU keys, effectively denying service to KNX-based building automation systems. This vulnerability is actively exploited in the wild and rated severe by CISA. Organizations must immediately apply vendor-provided mitigations per BOD 26-04 guidance, prioritizing internet-exposed assets, or discontinue use of affected systems if patches are unavailable.&lt;/p&gt;&lt;p&gt;&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2023-4346"&gt;Read more&lt;/a&gt; · Source: cisa-kev&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>We built a vulnerability vending machine: AI tokens in, zero-days out</title>
-    <id>urn:cybersecnews:item:90</id>
-    <published>2026-07-15T17:01:55.086580+00:00</published>
-    <updated>2026-07-15T17:01:55.086580+00:00</updated>
-    <link href="https://www.bleepingcomputer.com/news/security/we-built-a-vulnerability-vending-machine-ai-tokens-in-zero-days-out/" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · unspecified&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Intruder developed an automated system using AI and code slicing techniques to discover zero-day vulnerabilities in software, demonstrating the approach by identifying a previously unknown WordPress plugin vulnerability. The technique leverages large language models to analyze code and uncover complex logical flaws that traditional static analysis tools may miss. While the research is currently academic in nature with findings under responsible disclosure, this represents a significant escalation in vulnerability discovery automation that defenders should monitor. Organizations should prioritize timely patching of WordPress plugins and third-party software, implement runtime application self-protection (RASP) solutions, and consider adopting AI-powered security testing in their development pipelines to identify issues before attackers do.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/we-built-a-vulnerability-vending-machine-ai-tokens-in-zero-days-out/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
   </entry>
 </feed>
