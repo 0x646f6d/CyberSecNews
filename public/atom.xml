@@ -3,7 +3,34 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-07-30T02:24:33.181905+00:00</updated>
+  <updated>2026-07-30T17:28:23.310718+00:00</updated>
+  <entry>
+    <title>After the Break-In: What Attackers Do Once They're Already Inside</title>
+    <id>urn:cybersecnews:item:206</id>
+    <published>2026-07-30T17:28:23.310718+00:00</published>
+    <updated>2026-07-30T17:28:23.310718+00:00</updated>
+    <link href="https://www.bleepingcomputer.com/news/security/after-the-break-in-what-attackers-do-once-theyre-already-inside/" rel="alternate" />
+    <category term="red-team" />
+    <content type="html">&lt;p&gt;&lt;em&gt;red-team · post-exploitation&lt;/em&gt;&lt;/p&gt;&lt;p&gt;This article examines post-compromise attacker behavior rather than a specific vulnerability, focusing on persistence mechanisms, defense evasion, and lateral movement tactics observed during real intrusions. The analysis demonstrates that attackers systematically disable security controls, establish backdoors, and modify system configurations to maintain access—highlighting why incident response must address root cause rather than just removing detected malware. While not describing a specific exploitable vulnerability, the techniques discussed are widely employed in active intrusions and present high severity due to their ability to undermine remediation efforts. Defenders should implement continuous monitoring of system changes, prioritize investigation of initial compromise vectors, maintain immutable audit logs, and ensure comprehensive artifact analysis during incident response rather than focusing solely on malware removal.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/after-the-break-in-what-attackers-do-once-theyre-already-inside/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Hackers Exploit AnySign4PC via Hacked Korean Sites to Install Backdoors Without Prompts</title>
+    <id>urn:cybersecnews:item:205</id>
+    <published>2026-07-30T17:28:23.309322+00:00</published>
+    <updated>2026-07-30T17:28:23.309322+00:00</updated>
+    <link href="https://thehackernews.com/2026/07/hackers-exploit-anysign4pc-via-hacked.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;AnySign4PC, a Korean financial-security software, contains a vulnerability allowing remote code execution without user prompts when visiting compromised websites. The exploit is part of a state-sponsored campaign attributed to North Korean threat actors targeting South Korean users through watering-hole attacks on trusted domestic sites, delivering SIGNBT and COPPERHEDGE backdoors. Severity is high given the lack of user interaction required and active exploitation in the wild. Affected organizations should immediately patch AnySign4PC to the latest version and implement network-level controls to restrict access to compromised sites.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/hackers-exploit-anysign4pc-via-hacked.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Azure Cosmos DB Flaw Exposed Platform-Wide Key That Could Access Any Database</title>
+    <id>urn:cybersecnews:item:204</id>
+    <published>2026-07-30T17:28:23.307849+00:00</published>
+    <updated>2026-07-30T17:28:23.307849+00:00</updated>
+    <link href="https://thehackernews.com/2026/07/azure-cosmos-db-flaw-exposed-platform.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · sandbox-escape,rce,privilege-escalation&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Azure Cosmos DB contained a sandbox escape vulnerability in the Gremlin query engine that allowed attackers to execute arbitrary code and obtain platform-wide master keys granting read/write access across all customer databases and tenants. The vulnerability, designated CosmosEscape by Wiz researchers, was triggered through specially crafted Gremlin queries and could have compromised the entire multi-tenant platform. Microsoft has patched the flaw; customers should verify patches are applied and review access logs for potential exploitation. No evidence of exploitation in the wild was reported at the time of disclosure.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/azure-cosmos-db-flaw-exposed-platform.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Reconnaissance First: An SSH Bot That Sizes Up Your Hardware Before Deploying a Miner &amp;#x5b;Guest Diary&amp;#x5d;, (Thu, Jul 30th)</title>
     <id>urn:cybersecnews:item:203</id>
@@ -74,7 +101,7 @@
     <updated>2026-07-29T17:15:43.412048+00:00</updated>
     <link href="https://thehackernews.com/2026/07/three-critical-vmware-flaws-allow-auth.html" rel="alternate" />
     <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass, rce, vm-escape · CVE-2026-59309&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Three critical VMware vulnerabilities affect vCenter, ESX, Workstation, and Fusion: CVE-2024-59309 (CVSS 9.8) enables authentication bypass in vCenter, while additional flaws permit code execution and VM escape. These vulnerabilities require network access but allow unauthenticated attackers to compromise virtualization infrastructure with maximum impact. Immediate patching with Broadcom's released security updates is mandatory; prioritize vCenter instances exposed to untrusted networks. Monitor for exploitation attempts and verify patch deployment across all affected VMware products.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/three-critical-vmware-flaws-allow-auth.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass, rce, vm-escape · CVE-2026-59309, CVE-2026-59310&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Three critical VMware vulnerabilities affect vCenter, ESX, Workstation, and Fusion: CVE-2024-59309 (CVSS 9.8) enables authentication bypass in vCenter, while additional flaws permit code execution and VM escape. These vulnerabilities require network access but allow unauthenticated attackers to compromise virtualization infrastructure with maximum impact. Immediate patching with Broadcom's released security updates is mandatory; prioritize vCenter instances exposed to untrusted networks. Monitor for exploitation attempts and verify patch deployment across all affected VMware products.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/three-critical-vmware-flaws-allow-auth.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
   </entry>
   <entry>
     <title>Ruflo MCP Flaw Lets Unauthenticated Attackers Run Commands and Poison AI Memory</title>
@@ -876,32 +903,5 @@
     <link href="https://www.rapid7.com/blog/post/pt-metasploit-wrap-up-an-http-to-smb-relay-plus-payload-improvements" rel="alternate" />
     <category term="red-team" />
     <content type="html">&lt;p&gt;&lt;em&gt;red-team · payload-enhancement,relay-attack&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Metasploit Framework received new HTTP to SMB relay capability and enhanced Linux payload delivery mechanisms. The HTTP to SMB relay module (auxiliary/server/relay/http_to_smb) enables relaying NTLM HTTP authentication requests to multiple SMB servers for session establishment. Added Linux Fetch Multi payloads with automatic architecture detection for mipsel, mips64, aarch64, and other targets, plus RISC-V 32/64-bit payload support with XOR encoders. No active exploitation in the wild reported; users should update via msfupdate to access expanded post-exploitation capabilities and cross-architecture flexibility.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.rapid7.com/blog/post/pt-metasploit-wrap-up-an-http-to-smb-relay-plus-payload-improvements"&gt;Read more&lt;/a&gt; · Source: rapid7&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>OpenSSL HollowByte Flaw Could Freeze Server Memory with 11-Byte TLS Requests</title>
-    <id>urn:cybersecnews:item:106</id>
-    <published>2026-07-18T02:29:18.658177+00:00</published>
-    <updated>2026-07-18T02:29:18.658177+00:00</updated>
-    <link href="https://thehackernews.com/2026/07/openssl-hollowbyte-flaw-could-freeze.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · dos&lt;/em&gt;&lt;/p&gt;&lt;p&gt;OpenSSL versions prior to 1.1.1w, 3.0.x before 3.0.13, and 3.1.x before 3.1.1 are affected by the HollowByte denial-of-service vulnerability, which allows remote attackers to exhaust server memory by sending specially crafted 11-byte TLS requests that cause OpenSSL to allocate up to 131 KB per request without proper cleanup. The flaw is a memory exhaustion issue that can freeze or degrade server performance on glibc systems, and allocated memory persists until process restart. No known active exploitation has been reported; however, the fix was silently deployed in June without CVE assignment or security advisory. Immediately patch to OpenSSL 1.1.1w, 3.0.13, or 3.1.1 or later, and monitor servers for suspicious TLS connection patterns prior to patching.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/openssl-hollowbyte-flaw-could-freeze.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>New wp2shell WordPress Core Flaw Lets Unauthenticated Attackers Run Code</title>
-    <id>urn:cybersecnews:item:105</id>
-    <published>2026-07-18T02:29:18.655123+00:00</published>
-    <updated>2026-07-18T02:29:18.655123+00:00</updated>
-    <link href="https://thehackernews.com/2026/07/new-wp2shell-wordpress-core-flaw-lets.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-60137, CVE-2026-63030&lt;/em&gt;&lt;/p&gt;&lt;p&gt;WordPress versions 6.9 and 7.0 contain a critical unauthenticated remote code execution vulnerability in core functionality that affects all installations regardless of plugin configuration. An attacker can execute arbitrary code via anonymous HTTP requests without authentication. WordPress addressed this with forced auto-updates deploying versions 6.9.5 and 7.0.2 on Friday; administrators should immediately verify their installations are patched, as the vulnerability has clear exploitation potential given its unauthenticated nature and core impact.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/new-wp2shell-wordpress-core-flaw-lets.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Envoy Gateway: Authentication Bypass via Improper Input Validation in EnvoyExtensionPolicy Lua Allows Secret Disclosure (CVE-2026-53713)</title>
-    <id>urn:cybersecnews:item:104</id>
-    <published>2026-07-17T02:37:48.355984+00:00</published>
-    <updated>2026-07-17T02:37:48.355984+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-wcrf-9vrr-854f" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-53713&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Envoy Gateway's EnvoyExtensionPolicy Lua extension fails to properly normalize path separators, allowing attackers to bypass file access restrictions via double-slash paths (e.g., `//etc/passwd`) and disclose sensitive files from the controller pod filesystem. The vulnerability is critical with high exploitability due to improper input validation in the `to_absolute_normalized_path` function. No indication of active exploitation in the wild at this time. Apply the patched version of Envoy Gateway immediately; in the interim, restrict who can submit EnvoyExtensionPolicy resources via RBAC controls.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-wcrf-9vrr-854f"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
   </entry>
 </feed>
