@@ -3,7 +3,43 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-07-29T17:15:43.414677+00:00</updated>
+  <updated>2026-07-30T02:24:33.181905+00:00</updated>
+  <entry>
+    <title>Reconnaissance First: An SSH Bot That Sizes Up Your Hardware Before Deploying a Miner &amp;#x5b;Guest Diary&amp;#x5d;, (Thu, Jul 30th)</title>
+    <id>urn:cybersecnews:item:203</id>
+    <published>2026-07-30T02:24:33.181905+00:00</published>
+    <updated>2026-07-30T02:24:33.181905+00:00</updated>
+    <link href="https://isc.sans.edu/diary/rss/33198" rel="alternate" />
+    <category term="red-team" />
+    <content type="html">&lt;p&gt;&lt;em&gt;red-team · lateral-movement&lt;/em&gt;&lt;/p&gt;&lt;p&gt;An SSH-based botnet is actively performing host reconnaissance before deploying cryptocurrency miners, targeting systems with weak or default SSH credentials. The malware enumerates hardware capabilities to optimize miner deployment and avoid detection on unsuitable targets. This represents moderate severity with confirmed active exploitation in the wild. Implement SSH hardening measures including key-based authentication, disable root login, change default ports, enforce strong passwords, and deploy SSH intrusion detection to block brute-force attempts.&lt;/p&gt;&lt;p&gt;&lt;a href="https://isc.sans.edu/diary/rss/33198"&gt;Read more&lt;/a&gt; · Source: sans-isc&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Cisco warns of FMC static credential flaw exploited in zero-day attacks</title>
+    <id>urn:cybersecnews:item:202</id>
+    <published>2026-07-30T02:24:33.180802+00:00</published>
+    <updated>2026-07-30T02:24:33.180802+00:00</updated>
+    <link href="https://www.bleepingcomputer.com/news/security/cisco-warns-of-fmc-static-credential-flaw-exploited-in-zero-day-attacks/" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · static-credentials · CVE-2026-20316&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Cisco Secure Firewall Management Center (FMC) contains a high-severity hardcoded credential vulnerability (CVE-2026-20316) that allows unauthenticated attackers to gain unauthorized administrative access to affected systems. The flaw has been actively exploited in the wild as a zero-day attack. Cisco has released security patches to address the issue. Organizations running vulnerable FMC versions should immediately apply available updates and consider implementing network segmentation to restrict administrative access to FMC instances.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/cisco-warns-of-fmc-static-credential-flaw-exploited-in-zero-day-attacks/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Russian hackers exploit Exchange OWA zero-day for long-term mailbox access</title>
+    <id>urn:cybersecnews:item:201</id>
+    <published>2026-07-30T02:24:33.179338+00:00</published>
+    <updated>2026-07-30T02:24:33.179338+00:00</updated>
+    <link href="https://www.bleepingcomputer.com/news/security/russian-hackers-exploit-exchange-owa-zero-day-for-long-term-mailbox-access/" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Laundry Bear (Void Blizzard) is actively exploiting a zero-day vulnerability in Microsoft Exchange Outlook Web Access (OWA) to deliver the OWAReaper backdoor for persistent mailbox access. The vulnerability enables attackers to bypass authentication and establish long-term control over compromised email accounts. This is a critical severity issue being actively exploited in the wild by a Russian state-sponsored threat actor. Apply available patches immediately and conduct incident response on any systems running vulnerable Exchange versions; monitor OWA logs for anomalous authentication patterns and consider implementing network segmentation for email infrastructure.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/russian-hackers-exploit-exchange-owa-zero-day-for-long-term-mailbox-access/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Critical Rails Flaw Could Let Unauthenticated Attackers Read Server Files via Image Uploads</title>
+    <id>urn:cybersecnews:item:200</id>
+    <published>2026-07-30T02:24:33.176578+00:00</published>
+    <updated>2026-07-30T02:24:33.176578+00:00</updated>
+    <link href="https://thehackernews.com/2026/07/critical-rails-flaw-could-let.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · arbitrary-file-read · CVE-2026-66066&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Rails Active Storage contains a critical arbitrary file read vulnerability (CVE-2026-66066, CVSS 9.5) allowing unauthenticated attackers to access sensitive server files including secrets, credentials, and environment variables through malicious image uploads. The vulnerability is actively exploitable and poses severe risk to production Rails applications storing sensitive data. Affected applications should immediately update to patched Rails versions and review access logs for exploitation attempts. As immediate mitigation, consider restricting image upload functionality or implementing additional authentication controls pending patch deployment.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/critical-rails-flaw-could-let.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>prebid-server's request forgery vulnerability allows for possible host environment data extraction (CVE-2026-54735)</title>
     <id>urn:cybersecnews:item:199</id>
@@ -209,7 +245,7 @@
     <updated>2026-07-28T10:35:21.740334+00:00</updated>
     <link href="https://thehackernews.com/2026/07/critical-teamcity-flaw-could-let.html" rel="alternate" />
     <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-63077&lt;/em&gt;&lt;/p&gt;&lt;p&gt;JetBrains TeamCity On-Premises is vulnerable to CVE-2026-63077, a critical pre-authentication remote code execution flaw (CVSS 9.8) allowing unauthenticated attackers to execute arbitrary OS commands. The vulnerability affects all on-premises versions and has been actively exploited in the wild. Immediately upgrade to TeamCity 2025.11.7 or 2026.1.3; TeamCity Cloud instances are already patched.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/critical-teamcity-flaw-could-let.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-63077, CVE-2026-6516&lt;/em&gt;&lt;/p&gt;&lt;p&gt;JetBrains TeamCity On-Premises is vulnerable to CVE-2026-63077, a critical pre-authentication remote code execution flaw (CVSS 9.8) allowing unauthenticated attackers to execute arbitrary OS commands. The vulnerability affects all on-premises versions and has been actively exploited in the wild. Immediately upgrade to TeamCity 2025.11.7 or 2026.1.3; TeamCity Cloud instances are already patched.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/critical-teamcity-flaw-could-let.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
   </entry>
   <entry>
     <title>Arista VeloCloud Orchestrator: Arista VeloCloud Orchestrator On-Prem OS Command Injection Vulnerability (CVE-2026-16812)</title>
@@ -867,41 +903,5 @@
     <link href="https://github.com/advisories/GHSA-wcrf-9vrr-854f" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-53713&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Envoy Gateway's EnvoyExtensionPolicy Lua extension fails to properly normalize path separators, allowing attackers to bypass file access restrictions via double-slash paths (e.g., `//etc/passwd`) and disclose sensitive files from the controller pod filesystem. The vulnerability is critical with high exploitability due to improper input validation in the `to_absolute_normalized_path` function. No indication of active exploitation in the wild at this time. Apply the patched version of Envoy Gateway immediately; in the interim, restrict who can submit EnvoyExtensionPolicy resources via RBAC controls.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-wcrf-9vrr-854f"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Fortinet FortiSandbox: Fortinet FortiSandbox OS Command Injection Vulnerability (CVE-2026-25089)</title>
-    <id>urn:cybersecnews:item:103</id>
-    <published>2026-07-17T02:37:48.310076+00:00</published>
-    <updated>2026-07-17T02:37:48.310076+00:00</updated>
-    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-25089" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · os-command-injection · CVE-2026-25089, CVE-2026-39808&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Fortinet FortiSandbox, FortiSandbox Cloud, and FortiSandbox PaaS contain an unauthenticated OS command injection vulnerability (CVE-2026-25089) exploitable via crafted HTTP requests, allowing arbitrary command execution. This vulnerability is actively exploited in the wild and carries high severity due to its pre-authentication nature and complete system compromise potential. Immediately apply vendor-supplied patches following CISA BOD 26-04 prioritization guidelines; if mitigations are unavailable for cloud deployments, discontinue service use. Conduct forensic triage on affected systems and evaluate internet exposure for all FortiSandbox instances.&lt;/p&gt;&lt;p&gt;&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2026-25089"&gt;Read more&lt;/a&gt; · Source: cisa-kev&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Russian hackers trojanize WebEx, Zoom apps to push Starland malware</title>
-    <id>urn:cybersecnews:item:102</id>
-    <published>2026-07-16T13:10:29.759146+00:00</published>
-    <updated>2026-07-16T13:10:29.759146+00:00</updated>
-    <link href="https://www.bleepingcomputer.com/news/security/russian-hackers-trojanize-webex-zoom-apps-to-push-starland-malware/" rel="alternate" />
-    <category term="red-team" />
-    <content type="html">&lt;p&gt;&lt;em&gt;red-team · c2&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Russian threat actor UAT-11795 is distributing trojanized versions of Webex and Zoom installers to deliver Starland RAT, a new backdoor capable of stealing credentials and cryptocurrency. The malware demonstrates high severity due to its credential-stealing capabilities and remote access functionality, with active exploitation reported in the wild. Organizations should verify software authenticity by downloading directly from official vendor websites, implement credential rotation for potentially compromised accounts, and deploy endpoint detection tools to identify Starland RAT's command-and-control communications. Security awareness training on software distribution risks is recommended to prevent initial compromise vectors.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/russian-hackers-trojanize-webex-zoom-apps-to-push-starland-malware/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>OpenAI’s GPT-Red Automates Prompt Injection Testing to Harden GPT-5.6 Sol</title>
-    <id>urn:cybersecnews:item:101</id>
-    <published>2026-07-16T13:10:29.758300+00:00</published>
-    <updated>2026-07-16T13:10:29.758300+00:00</updated>
-    <link href="https://thehackernews.com/2026/07/openais-gpt-red-automates-prompt.html" rel="alternate" />
-    <category term="red-team" />
-    <content type="html">&lt;p&gt;&lt;em&gt;red-team · prompt-injection-testing&lt;/em&gt;&lt;/p&gt;&lt;p&gt;OpenAI's GPT-Red is an internal automated red-teaming tool designed to identify prompt injection vulnerabilities in large language models at scale before deployment. Prompt injection attacks manipulate LLM behavior by embedding malicious instructions in user inputs, potentially causing models to ignore safety guidelines or leak sensitive information; this represents a moderate-to-high severity threat as these vulnerabilities are actively exploited in production LLM systems. OpenAI reports that earlier model versions were highly vulnerable to GPT-Red's attacks, and the company uses these findings to adversarially train improved versions. Organizations deploying LLMs should implement input sanitization, prompt engineering best practices, and regular adversarial testing; consider adopting similar red-teaming methodologies to identify vulnerabilities in custom LLM deployments.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/openais-gpt-red-automates-prompt.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Unpatched Shark Vacuum Flaw Could Let Attackers Control Other Vacuums Region-Wide</title>
-    <id>urn:cybersecnews:item:100</id>
-    <published>2026-07-16T13:10:29.757126+00:00</published>
-    <updated>2026-07-16T13:10:29.757126+00:00</updated>
-    <link href="https://thehackernews.com/2026/07/unpatched-shark-vacuum-flaw-could-let.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · certificate-extraction,rce,privilege-escalation&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Shark RV2320EDUS robot vacuums contain a critical vulnerability allowing attackers with physical access to extract hardcoded AWS certificates from flash memory, then use those credentials to remotely compromise other vacuums in the same region with full control including camera access, movement, and Wi-Fi credential theft. The flaw affects authentication mechanisms that fail to properly isolate per-device credentials. This is unpatched and the proof-of-concept was publicly disclosed Monday with active exploitation likely imminent. Shark should immediately revoke compromised certificates, implement per-device authentication, and push a firmware update; users should segregate vacuums to restricted network segments pending patches.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/unpatched-shark-vacuum-flaw-could-let.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
   </entry>
 </feed>
