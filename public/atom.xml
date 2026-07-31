@@ -3,7 +3,34 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-07-31T02:48:17.769957+00:00</updated>
+  <updated>2026-07-31T17:30:04.674254+00:00</updated>
+  <entry>
+    <title>Wings exposes node configuration secrets through egg configuration-file templating (CVE-2026-52855)</title>
+    <id>urn:cybersecnews:item:210</id>
+    <published>2026-07-31T17:30:04.674254+00:00</published>
+    <updated>2026-07-31T17:30:04.674254+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-pfvc-3p5h-x7h6" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · information-disclosure · CVE-2026-52855&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Wings daemon exposes its entire configuration to egg templating without path restrictions, allowing attackers to read sensitive daemon secrets via `{{config.&lt;path&gt;}}` placeholders in server configuration files. This critical vulnerability enables privilege escalation and full node compromise through credential exposure. The issue affects Pterodactyl Wings and is actively exploited in the wild. Immediately patch Wings to the latest version implementing path-based access controls on configuration templating.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-pfvc-3p5h-x7h6"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Researchers Report 84 Flaws in 4G and 5G Cores, Including a Session Hijacking Flaw</title>
+    <id>urn:cybersecnews:item:209</id>
+    <published>2026-07-31T17:30:04.673072+00:00</published>
+    <updated>2026-07-31T17:30:04.673072+00:00</updated>
+    <link href="https://thehackernews.com/2026/07/researchers-report-84-flaws-in-4g-and.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · session-hijacking,dos&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Researchers identified 84 vulnerabilities across 4G and 5G core network implementations, including session hijacking and denial-of-service flaws stemming from improper handling of network protocol messages. The vulnerabilities affect multiple telecom vendors' core network infrastructure with varying severity levels; session hijacking represents the most critical risk, potentially allowing attackers to intercept and control user sessions. No evidence of active exploitation in the wild has been reported at this time. Affected telecom operators should coordinate with equipment vendors on patches and implement network segmentation and enhanced monitoring of core network signaling traffic as interim mitigations.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/researchers-report-84-flaws-in-4g-and.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Three Recent Chrome Releases Fix 1,442 Flaws, More Than Prior 23 Updates Combined</title>
+    <id>urn:cybersecnews:item:208</id>
+    <published>2026-07-31T17:30:04.669320+00:00</published>
+    <updated>2026-07-31T17:30:04.669320+00:00</updated>
+    <link href="https://thehackernews.com/2026/07/three-recent-chrome-releases-fix-1442.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · multiple&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Google released Chrome 149, 150, and 151 with a combined 1,442 security fixes—1,072 in versions 149-150 and 370 in version 151—exceeding the total vulnerabilities patched in the previous 23 updates combined. The releases address a broad range of flaws across Chrome's codebase, with the majority reported internally by Google's security team. Users should immediately update to the latest Chrome version to receive these critical patches. Given the unprecedented volume of fixes, this update is essential for all Chrome users regardless of their risk profile.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/three-recent-chrome-releases-fix-1442.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>AWS Amplify Studio UI Component Properties Has an Input Validation Issue (CVE-2025-4318)</title>
     <id>urn:cybersecnews:item:207</id>
@@ -876,32 +903,5 @@
     <link href="https://thehackernews.com/2026/07/critical-nginx-vulnerability-can-crash.html" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · heap-buffer-overflow · CVE-2026-42533&lt;/em&gt;&lt;/p&gt;&lt;p&gt;NGINX versions prior to 1.30.4 (stable) and 1.31.3 (mainline) contain a critical heap buffer overflow (CVE-2024-42533) triggered by crafted HTTP requests to unauthenticated remote attackers. The vulnerability can crash or restart worker processes, causing denial of service, with potential for remote code execution depending on heap layout and environment. There is no indication of active exploitation in the wild at this time. Immediate patching to nginx 1.30.4, 1.31.3, or NGINX Plus 37.0.3.1 is required; organizations unable to patch immediately should implement strict input validation and request filtering on reverse proxies.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/critical-nginx-vulnerability-can-crash.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Scans for Hikvision Intelligent Security API, (Sun, Jul 19th)</title>
-    <id>urn:cybersecnews:item:110</id>
-    <published>2026-07-19T16:58:13.643214+00:00</published>
-    <updated>2026-07-19T16:58:13.643214+00:00</updated>
-    <link href="https://isc.sans.edu/diary/rss/33164" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · unspecified&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Hikvision intelligent cameras and security systems are facing widespread internet-wide reconnaissance activity targeting known API vulnerabilities. The Hikvision product line has a documented history of security flaws affecting authentication and remote access mechanisms. Threat actors are actively scanning for exposed or vulnerable Hikvision devices, likely attempting to identify targets for exploitation or unauthorized access. Organizations should immediately inventory Hikvision deployments, apply available security patches, restrict network access to management interfaces, and consider segmenting camera systems from critical networks.&lt;/p&gt;&lt;p&gt;&lt;a href="https://isc.sans.edu/diary/rss/33164"&gt;Read more&lt;/a&gt; · Source: sans-isc&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Update now: 7-Zip fixes RCE flaw exploitable with malicious archives</title>
-    <id>urn:cybersecnews:item:109</id>
-    <published>2026-07-19T02:42:13.733928+00:00</published>
-    <updated>2026-07-19T02:42:13.733928+00:00</updated>
-    <link href="https://www.bleepingcomputer.com/news/security/update-now-7-zip-fixes-rce-flaw-exploitable-with-malicious-archives/" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-14266&lt;/em&gt;&lt;/p&gt;&lt;p&gt;7-Zip versions prior to 26.02 contain a remote code execution vulnerability exploitable through maliciously crafted archive files. An attacker can execute arbitrary code by tricking users into opening prepared compressed files, making this a direct threat to systems using older versions. The vulnerability has moderate-to-high severity given the common usage of 7-Zip and potential for user-directed exploitation. Immediate patching to version 26.02 or later is required; users should also be cautioned against opening archives from untrusted sources.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/update-now-7-zip-fixes-rce-flaw-exploitable-with-malicious-archives/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>New North Korean campaign uses fake coding interviews to steal developer credentials</title>
-    <id>urn:cybersecnews:item:108</id>
-    <published>2026-07-18T02:29:18.660576+00:00</published>
-    <updated>2026-07-18T02:29:18.660576+00:00</updated>
-    <link href="https://www.elastic.co/security-labs/contagious-interview-malware-svg-steganography" rel="alternate" />
-    <category term="red-team" />
-    <content type="html">&lt;p&gt;&lt;em&gt;red-team · social-engineering&lt;/em&gt;&lt;/p&gt;&lt;p&gt;North Korean threat actors are conducting targeted recruitment fraud against software developers, embedding malware within SVG image files embedded in fake coding interview platforms to harvest credentials and establish system access. The attack leverages social engineering combined with steganography to evade signature-based detection—no major antivirus products detected the malicious payloads. This campaign actively targets developers at tech firms and represents a high-severity threat given the potential for supply chain compromise. Recommend implementing strict controls on interview platform usage, scanning SVG files with behavior-based detection tools, enforcing multi-factor authentication for developers, and alerting on suspicious recruitment outreach patterns.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.elastic.co/security-labs/contagious-interview-malware-svg-steganography"&gt;Read more&lt;/a&gt; · Source: elastic-security-labs&lt;/p&gt;</content>
   </entry>
 </feed>
