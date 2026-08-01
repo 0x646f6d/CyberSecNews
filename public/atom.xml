@@ -3,7 +3,25 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-07-31T17:30:04.674254+00:00</updated>
+  <updated>2026-08-01T02:46:36.805883+00:00</updated>
+  <entry>
+    <title>NocoBase: SQL injection in /api/myInAppChannels:list filter to PG-superuser RCE (CVE-2026-52887)</title>
+    <id>urn:cybersecnews:item:212</id>
+    <published>2026-08-01T02:46:36.805883+00:00</published>
+    <updated>2026-08-01T02:46:36.805883+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-p849-8hwh-84j9" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · sqli · CVE-2026-52887&lt;/em&gt;&lt;/p&gt;&lt;p&gt;NocoBase's in-app notification plugin (npm/@nocobase/plugin-notification-in-app-message) contains a SQL injection vulnerability in the GET /api/myInAppChannels:list endpoint where the filter parameter's latestMsgReceiveTimestamp field is unsafely spliced into a Sequelize query without escaping or parameterization. Any authenticated user, easily obtained through default signup functionality, can exploit this to inject arbitrary SQL and achieve remote code execution with PostgreSQL superuser privileges. This is critical severity with likely active exploitation potential. Apply the security patch immediately; if unavailable, disable the in-app messaging plugin or restrict signup functionality until remediation is available.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-p849-8hwh-84j9"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Apostrophe has Server-Side Prototype Pollution in apos.util.set via patch operators that leads to process-wide authorization bypass (CVE-2026-53609)</title>
+    <id>urn:cybersecnews:item:211</id>
+    <published>2026-08-01T02:46:36.803833+00:00</published>
+    <updated>2026-08-01T02:46:36.803833+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-6h5j-32cf-4253" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · prototype-pollution · CVE-2026-53609&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Apostrophe CMS's apos.util.set() function is vulnerable to server-side prototype pollution via the $pullAll patch operator, allowing authenticated editors to modify Object.prototype by exploiting unsanitized dot-notation paths. This critical vulnerability (CVE-2026-53609) enables process-wide authorization bypass on all piece-type REST API endpoints through a gadget chain in publicApiCheck(), affecting subsequent unauthenticated requests. The vulnerability is confirmed as exploitable and requires immediate patching; update Apostrophe via npm to the latest patched version immediately and restrict editor access pending updates.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-6h5j-32cf-4253"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Wings exposes node configuration secrets through egg configuration-file templating (CVE-2026-52855)</title>
     <id>urn:cybersecnews:item:210</id>
@@ -110,7 +128,7 @@
     <updated>2026-07-29T17:15:43.414677+00:00</updated>
     <link href="https://github.com/advisories/GHSA-4p3g-4hcj-wpvx" rel="alternate" />
     <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · ssrf · CVE-2026-54735&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Prebid Server bidder adapters contain a request forgery vulnerability (CVE-2026-54735) where user-supplied parameters are interpolated into outbound URLs without proper validation, allowing attackers to redirect HTTP requests to unintended destinations and potentially access internal network services or sensitive endpoints. This critical-severity flaw affects versions prior to v4.4.0 across all major version branches (v1-v4). The vulnerability enables Server-Side Request Forgery (SSRF) attacks that could expose host environment data or internal services. Immediately upgrade to Prebid Server v4.4.0 or later; no workaround is mentioned for users unable to patch immediately.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-4p3g-4hcj-wpvx"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · ssrf · CVE-2026-54725, CVE-2026-54735&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Prebid Server bidder adapters contain a request forgery vulnerability (CVE-2026-54735) where user-supplied parameters are interpolated into outbound URLs without proper validation, allowing attackers to redirect HTTP requests to unintended destinations and potentially access internal network services or sensitive endpoints. This critical-severity flaw affects versions prior to v4.4.0 across all major version branches (v1-v4). The vulnerability enables Server-Side Request Forgery (SSRF) attacks that could expose host environment data or internal services. Immediately upgrade to Prebid Server v4.4.0 or later; no workaround is mentioned for users unable to patch immediately.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-4p3g-4hcj-wpvx"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
   </entry>
   <entry>
     <title>Logging operator has Fluentd configuration injection that allows remote code execution (CVE-2026-54680)</title>
@@ -885,23 +903,5 @@
     <link href="https://thehackernews.com/2026/07/hollowgraph-malware-hides-c2-and-stolen.html" rel="alternate" />
     <category term="red-team" />
     <content type="html">&lt;p&gt;&lt;em&gt;red-team · c2&lt;/em&gt;&lt;/p&gt;&lt;p&gt;HollowGraph, a new espionage implant, abuses Microsoft 365 calendar events dated 2050 as a covert command-and-control channel and data exfiltration mechanism via the Microsoft Graph API. The malware leverages legitimate Microsoft 365 traffic to hide operator instructions and stolen file attachments, evading standard detection by blending into authorized API activity. While severity and active exploitation in the wild are not specified in the provided summary, the technique represents a sophisticated approach to persistent command channels. Organizations should review M365 audit logs for suspicious calendar event creation patterns, enforce strict API permissions policies, and monitor for anomalous Graph API usage outside expected patterns.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/hollowgraph-malware-hides-c2-and-stolen.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Critical ServiceNow code execution flaw now exploited in attacks</title>
-    <id>urn:cybersecnews:item:112</id>
-    <published>2026-07-20T10:52:42.364666+00:00</published>
-    <updated>2026-07-20T10:52:42.364666+00:00</updated>
-    <link href="https://www.bleepingcomputer.com/news/security/critical-servicenow-code-execution-flaw-now-exploited-in-attacks/" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-60167, CVE-2026-60168, CVE-2026-60169, CVE-2026-60170, CVE-2026-6875&lt;/em&gt;&lt;/p&gt;&lt;p&gt;ServiceNow AI Platform is vulnerable to unauthenticated remote code execution (CVE-2026-6875), allowing attackers to execute arbitrary code without authentication. The vulnerability is critical in severity and is actively being exploited in the wild. Organizations running affected ServiceNow instances should immediately apply available patches and implement network-based access controls to restrict exposure of AI Platform components to untrusted networks.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/critical-servicenow-code-execution-flaw-now-exploited-in-attacks/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Critical NGINX Vulnerability Can Crash Workers and May Allow Remote Code Execution</title>
-    <id>urn:cybersecnews:item:111</id>
-    <published>2026-07-20T02:57:58.454691+00:00</published>
-    <updated>2026-07-20T02:57:58.454691+00:00</updated>
-    <link href="https://thehackernews.com/2026/07/critical-nginx-vulnerability-can-crash.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · heap-buffer-overflow · CVE-2026-42533&lt;/em&gt;&lt;/p&gt;&lt;p&gt;NGINX versions prior to 1.30.4 (stable) and 1.31.3 (mainline) contain a critical heap buffer overflow (CVE-2024-42533) triggered by crafted HTTP requests to unauthenticated remote attackers. The vulnerability can crash or restart worker processes, causing denial of service, with potential for remote code execution depending on heap layout and environment. There is no indication of active exploitation in the wild at this time. Immediate patching to nginx 1.30.4, 1.31.3, or NGINX Plus 37.0.3.1 is required; organizations unable to patch immediately should implement strict input validation and request filtering on reverse proxies.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/critical-nginx-vulnerability-can-crash.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
   </entry>
 </feed>
