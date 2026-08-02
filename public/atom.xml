@@ -3,7 +3,16 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-08-01T10:00:04.820570+00:00</updated>
+  <updated>2026-08-02T02:45:35.747372+00:00</updated>
+  <entry>
+    <title>Coldcard Hardware Wallet Flaw Linked to $70 Million Bitcoin Theft in 41 Minutes</title>
+    <id>urn:cybersecnews:item:215</id>
+    <published>2026-08-02T02:45:35.747372+00:00</published>
+    <updated>2026-08-02T02:45:35.747372+00:00</updated>
+    <link href="https://thehackernews.com/2026/08/coldcard-hardware-wallet-flaw-linked-to.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · weak-rng&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Coldcard hardware wallet firmware versions prior to the March 2021 update contain a seed generation vulnerability where the device routes private key generation to a deterministic software PRNG instead of a true random number generator, allowing attackers to derive wallet seeds and compromise funds. An attacker exploited this flaw to steal approximately 1,082.65 BTC ($70.2 million) from 1,196 addresses in 41 minutes on July 30, demonstrating active exploitation in the wild. Users must immediately upgrade Coldcard firmware to the patched version released after March 2021; affected users should transfer funds from wallets generated with vulnerable firmware versions to new secure wallets created with the current firmware. This is a critical severity vulnerability given the demonstrated large-scale theft and the fundamental compromise of cryptographic randomness in key generation.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/08/coldcard-hardware-wallet-flaw-linked-to.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>ZDI-CAN-31909: Adobe</title>
     <id>urn:cybersecnews:item:214</id>
@@ -894,14 +903,5 @@
     <link href="https://github.com/advisories/GHSA-23hp-3jrh-7fpw" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · dos · CVE-2026-59873&lt;/em&gt;&lt;/p&gt;&lt;p&gt;The node-tar library (npm/tar) is vulnerable to decompression denial-of-service attacks via gzip bombs (CVE-2026-59873, critical severity). The library lacks hard upper bounds on decompressed data volume or entry counts, allowing attackers to exhaust disk space and CPU resources with small, maliciously crafted compressed archives. This vulnerability is likely being exploited in the wild given its critical rating and simplicity of attack. Update node-tar to the latest patched version immediately and consider implementing external decompression limits and resource quotas as interim mitigations.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-23hp-3jrh-7fpw"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Targeted Attack on Government Entities in the Middle East | Part 1</title>
-    <id>urn:cybersecnews:item:115</id>
-    <published>2026-07-20T18:03:55.753467+00:00</published>
-    <updated>2026-07-20T18:03:55.753467+00:00</updated>
-    <link href="https://www.zscaler.com/blogs/security-research/targeted-attack-government-entities-middle-east-part-1" rel="alternate" />
-    <category term="red-team" />
-    <content type="html">&lt;p&gt;&lt;em&gt;red-team · c2,edr-evasion,lateral-movement&lt;/em&gt;&lt;/p&gt;&lt;p&gt;East Asia-linked threat actor targeted Middle Eastern government entities via multi-stage attack chain deploying three previously undocumented malware families: TELESHIM (backdoor abusing Telegram API for C2), MIXEDKEY (reflective loader with mixed boolean arithmetic obfuscation), and BINDCLOAK (C2 implant). Attack initiates with ISO containing legitimate ASUSTek executable sideloading malicious DLL; subsequent stages use heavy code obfuscation (control flow flattening, opaque predicates), anti-analysis techniques, and environmental keying tied to victim machine volume serial numbers to prevent execution outside intended targets. While no active exploitation of zero-days reported, the sophistication and targeting of government entities represents elevated threat; immediate patching of systems is secondary to network monitoring for Telegram API abuse, scheduled task creation at 6/10-minute intervals, and staging directories under C:\ProgramData\ containing suspicious DLLs alongside legitimate binaries.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.zscaler.com/blogs/security-research/targeted-attack-government-entities-middle-east-part-1"&gt;Read more&lt;/a&gt; · Source: zscaler-threatlabz&lt;/p&gt;</content>
   </entry>
 </feed>
