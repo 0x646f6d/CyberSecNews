@@ -3,7 +3,16 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-08-02T02:45:35.747372+00:00</updated>
+  <updated>2026-08-02T09:56:59.175128+00:00</updated>
+  <entry>
+    <title>Atomic MacOS (AMOS) stealer infection, (Sun, Aug 2nd)</title>
+    <id>urn:cybersecnews:item:216</id>
+    <published>2026-08-02T09:56:59.175128+00:00</published>
+    <updated>2026-08-02T09:56:59.175128+00:00</updated>
+    <link href="https://isc.sans.edu/diary/rss/33208" rel="alternate" />
+    <category term="red-team" />
+    <content type="html">&lt;p&gt;&lt;em&gt;red-team · malware&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Atomic macOS Stealer (AMOS) is malware targeting macOS systems that exfiltrates sensitive data including passwords, cryptocurrency wallets, and browser credentials. The threat is actively exploited in the wild with confirmed infections documented as of August 2nd. Severity is high due to the breadth of data compromise and targeting of financial assets. Mitigation includes disabling suspicious browser extensions, monitoring for unauthorized credential access, running updated antivirus on macOS systems, and implementing application whitelisting where feasible; users should also reset passwords and review financial accounts for unauthorized access.&lt;/p&gt;&lt;p&gt;&lt;a href="https://isc.sans.edu/diary/rss/33208"&gt;Read more&lt;/a&gt; · Source: sans-isc&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Coldcard Hardware Wallet Flaw Linked to $70 Million Bitcoin Theft in 41 Minutes</title>
     <id>urn:cybersecnews:item:215</id>
@@ -894,14 +903,5 @@
     <link href="https://github.com/advisories/GHSA-f4vv-55c2-5789" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-61740&lt;/em&gt;&lt;/p&gt;&lt;p&gt;LightRAG (pip/lightrag-hku) contains a critical authentication bypass vulnerability (CVE-2026-61740) affecting deployments using API-Key authentication mode. The vulnerability stems from a hardcoded DEFAULT_TOKEN_SECRET in the codebase combined with a public /auth-status endpoint that reveals authentication details, allowing unauthenticated attackers to forge valid JWT tokens offline and bypass X-API-Key protections. No patch status or wild exploitation details are provided in the advisory. Immediately upgrade to a patched version once available, and consider rotating any hardcoded secrets and implementing additional network-level access controls until a fix is deployed.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-f4vv-55c2-5789"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>node-tar: Decompression/parse DoS via unlimited input (CVE-2026-59873)</title>
-    <id>urn:cybersecnews:item:116</id>
-    <published>2026-07-21T02:40:32.915669+00:00</published>
-    <updated>2026-07-21T02:40:32.915669+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-23hp-3jrh-7fpw" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · dos · CVE-2026-59873&lt;/em&gt;&lt;/p&gt;&lt;p&gt;The node-tar library (npm/tar) is vulnerable to decompression denial-of-service attacks via gzip bombs (CVE-2026-59873, critical severity). The library lacks hard upper bounds on decompressed data volume or entry counts, allowing attackers to exhaust disk space and CPU resources with small, maliciously crafted compressed archives. This vulnerability is likely being exploited in the wild given its critical rating and simplicity of attack. Update node-tar to the latest patched version immediately and consider implementing external decompression limits and resource quotas as interim mitigations.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-23hp-3jrh-7fpw"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
   </entry>
 </feed>
