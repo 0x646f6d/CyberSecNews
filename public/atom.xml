@@ -3,7 +3,25 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-08-03T11:23:48.924546+00:00</updated>
+  <updated>2026-08-03T17:51:31.822301+00:00</updated>
+  <entry>
+    <title>Metasploit Pro 5.1 Released</title>
+    <id>urn:cybersecnews:item:222</id>
+    <published>2026-08-03T17:51:31.822301+00:00</published>
+    <updated>2026-08-03T17:51:31.822301+00:00</updated>
+    <link href="https://www.rapid7.com/blog/post/pt-metasploit-pro-5-1-released" rel="alternate" />
+    <category term="red-team" />
+    <content type="html">&lt;p&gt;&lt;em&gt;red-team · c2,evasion&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Metasploit Pro 5.1 is a red-team toolset update featuring Malleable C2 profile support for HTTP Meterpreter payload evasion across Windows, Linux, Java, Python, and PHP platforms, along with service hierarchy tracking and enhanced network topology visualization. This is a capability release rather than a vulnerability fix, enabling operators to better blend malicious traffic with legitimate patterns and improve infrastructure reconnaissance. The update carries inherent offensive security risks as it improves evasion and payload obfuscation techniques used in active engagements. Organizations running Metasploit Pro should review their policies on authorized red-team activities; there is no security patch or remediation required for this tool release.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.rapid7.com/blog/post/pt-metasploit-pro-5-1-released"&gt;Read more&lt;/a&gt; · Source: rapid7&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Inside the Underground Business of the Android BTMOB RAT malware</title>
+    <id>urn:cybersecnews:item:221</id>
+    <published>2026-08-03T17:51:31.820756+00:00</published>
+    <updated>2026-08-03T17:51:31.820756+00:00</updated>
+    <link href="https://www.bleepingcomputer.com/news/security/inside-the-underground-business-of-btmob-rat/" rel="alternate" />
+    <category term="red-team" />
+    <content type="html">&lt;p&gt;&lt;em&gt;red-team · malware-as-a-service&lt;/em&gt;&lt;/p&gt;&lt;p&gt;BTMOB is a remote access trojan (RAT) targeting Android devices that operates as a fragmented underground ecosystem with resellers, source-code vendors, and custom variants. The malware enables attackers to remotely control infected devices and is actively exploited in the wild through multiple competing sales channels and distribution networks. Users should install security updates immediately and use reputable mobile security software; organizations should enforce device management policies, disable installation from unknown sources, and monitor for suspicious app behavior. Additionally, consider restricting access to underground marketplaces and educating users to avoid sideloaded applications outside official app stores.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/inside-the-underground-business-of-btmob-rat/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Hugging Face Diffusers Flaws Could Let Model Repositories Execute Arbitrary Code</title>
     <id>urn:cybersecnews:item:220</id>
@@ -885,23 +903,5 @@
     <link href="https://thehackernews.com/2026/07/open-source-android-ai-agents-could-let.html" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · prompt-injection&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Open-source Android AI agent frameworks (AppAgent, AppAgentX, and three others) are vulnerable to privilege escalation attacks where malicious Android apps can inject invisible on-screen text and shared storage instructions to compromise the agent's host PC. An attacker needs only basic Android permissions (overlay and storage write access) to execute arbitrary commands on the controlling computer through a multi-step exploitation chain. Severity is high as demonstrated by researchers with proof-of-concept attacks, though no in-the-wild exploitation is reported. Developers should immediately restrict agent framework access to only trusted applications, implement input validation/sanitization for all screen text processing, disable agent execution of suspicious commands, and update frameworks when patches become available.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/open-source-android-ai-agents-could-let.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Zimbra Patches Critical SNMP Command Injection and Four XSS Vulnerabilities</title>
-    <id>urn:cybersecnews:item:122</id>
-    <published>2026-07-21T17:21:17.709359+00:00</published>
-    <updated>2026-07-21T17:21:17.709359+00:00</updated>
-    <link href="https://thehackernews.com/2026/07/zimbra-patches-critical-snmp-command.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · command-injection&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Zimbra Collaboration Suite addressed nine vulnerabilities in version 10.1.20, including a critical SNMP command injection flaw in its monitoring component that allows remote code execution when SNMP notifications are enabled, plus four XSS vulnerabilities. The SNMP command injection is rated critical severity and poses significant risk to affected deployments. Immediate patching to version 10.1.20 or later is strongly recommended for all Zimbra installations with SNMP monitoring enabled.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/zimbra-patches-critical-snmp-command.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>AWS Kiro Flaw Let a Poisoned Web Page Rewrite Its Config and Run Code</title>
-    <id>urn:cybersecnews:item:121</id>
-    <published>2026-07-21T17:21:17.707850+00:00</published>
-    <updated>2026-07-21T17:21:17.707850+00:00</updated>
-    <link href="https://thehackernews.com/2026/07/aws-kiro-flaw-let-poisoned-web-page.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;AWS's Kiro agentic IDE was vulnerable to remote code execution through poisoned web pages containing hidden text that could trick the agent into rewriting its configuration and executing arbitrary code without user approval. An attacker could achieve RCE through seemingly benign requests like asking Kiro to summarize a webpage. AWS has already patched the vulnerability, and while severity was high due to the direct path to code execution on developer machines, there is no indication of active exploitation in the wild. Developers using Kiro should ensure they are running the latest patched version and exercise caution when processing untrusted web content.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/aws-kiro-flaw-let-poisoned-web-page.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
   </entry>
 </feed>
