@@ -3,7 +3,43 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-08-02T09:56:59.175128+00:00</updated>
+  <updated>2026-08-03T11:23:48.924546+00:00</updated>
+  <entry>
+    <title>Hugging Face Diffusers Flaws Could Let Model Repositories Execute Arbitrary Code</title>
+    <id>urn:cybersecnews:item:220</id>
+    <published>2026-08-03T11:23:48.924546+00:00</published>
+    <updated>2026-08-03T11:23:48.924546+00:00</updated>
+    <link href="https://thehackernews.com/2026/08/hugging-face-diffusers-flaws-could-let.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · arbitrary-code-execution&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Hugging Face Diffusers library contains three high-severity vulnerabilities that bypass the trust_remote_code safety mechanism, allowing malicious model repositories to execute arbitrary code during model loading. The flaws exploit unsafe deserialization in pickle and safetensors handling, compromising the AI supply chain security model. No active exploitation in the wild has been reported, but the attack surface is significant given the widespread use of model sharing. Immediate patching is critical; users should update to the latest Diffusers version and avoid loading models from untrusted sources until patches are applied.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/08/hugging-face-diffusers-flaws-could-let.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>N-able Says Attackers Take Over N-central Servers After Initial Fix Proves Incomplete</title>
+    <id>urn:cybersecnews:item:219</id>
+    <published>2026-08-03T11:23:48.923792+00:00</published>
+    <updated>2026-08-03T11:23:48.923792+00:00</updated>
+    <link href="https://thehackernews.com/2026/08/n-able-says-attackers-take-over-n.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-18577&lt;/em&gt;&lt;/p&gt;&lt;p&gt;N-able N-central remote monitoring and management platform contains an authentication bypass vulnerability (CVE-2026-18577) in builds prior to 2026.3.1.7 that allows attackers to gain remote administrative access to the platform and subsequently to managed customer systems. The vulnerability has been actively exploited in the wild, with N-able's initial patch proving incomplete and requiring customers to upgrade to build 2026.3.1.7 released August 2 or later. This is a critical severity issue given the administrative access scope and impact on downstream managed infrastructure. Immediately update all N-central deployments to build 2026.3.1.7 or later and conduct forensic analysis of any instances that may have been compromised during the window between vulnerability discovery and patch deployment.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/08/n-able-says-attackers-take-over-n.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Thermo Fisher Patches Flaw That Could Make DNA File Tampering Nearly Undetectable</title>
+    <id>urn:cybersecnews:item:218</id>
+    <published>2026-08-03T11:23:48.922939+00:00</published>
+    <updated>2026-08-03T11:23:48.922939+00:00</updated>
+    <link href="https://thehackernews.com/2026/08/thermo-fisher-patches-flaw-that-could.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · data-tampering · CVE-2026-17583&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Thermo Fisher Scientific patched CVE-2026-17583 affecting Applied Biosystems human identification software, which allowed attackers to tamper with DNA analysis data files (.fsa and .hid) in ways that evade detection if lab controls were bypassed. The vulnerability could enable nearly undetectable alterations to forensic or genetic analysis results before processing. No active exploitation in the wild has been reported. Affected organizations should apply Thermo Fisher's July 31 patch immediately, particularly laboratories handling forensic DNA analysis or critical identification work.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/08/thermo-fisher-patches-flaw-that-could.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Chinese Threat Actor Uses Leaked DarkSword Kit to Deploy GHOSTBLADE on iOS</title>
+    <id>urn:cybersecnews:item:217</id>
+    <published>2026-08-03T11:23:48.920486+00:00</published>
+    <updated>2026-08-03T11:23:48.920486+00:00</updated>
+    <link href="https://thehackernews.com/2026/08/chinese-threat-actor-uses-leaked.html" rel="alternate" />
+    <category term="red-team" />
+    <content type="html">&lt;p&gt;&lt;em&gt;red-team · c2&lt;/em&gt;&lt;/p&gt;&lt;p&gt;A Chinese threat actor is deploying the GHOSTBLADE malware on iOS devices using the publicly leaked DarkSword exploit kit through over 100 phishing infrastructure nodes, primarily spoofed AWS login pages. The campaign represents moderate risk as it requires user interaction (credential harvesting via phishing) to succeed, though successful compromises could lead to full device compromise. There is no indication of zero-day exploitation; the attack relies on the leaked toolkit and social engineering. Organizations should educate users on phishing indicators, enable multi-factor authentication on cloud service accounts, and monitor for infrastructure associated with these campaigns; Apple should continue security patching for known vulnerabilities exploited by DarkSword.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/08/chinese-threat-actor-uses-leaked.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Atomic MacOS (AMOS) stealer infection, (Sun, Aug 2nd)</title>
     <id>urn:cybersecnews:item:216</id>
@@ -867,41 +903,5 @@
     <link href="https://thehackernews.com/2026/07/aws-kiro-flaw-let-poisoned-web-page.html" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;AWS's Kiro agentic IDE was vulnerable to remote code execution through poisoned web pages containing hidden text that could trick the agent into rewriting its configuration and executing arbitrary code without user approval. An attacker could achieve RCE through seemingly benign requests like asking Kiro to summarize a webpage. AWS has already patched the vulnerability, and while severity was high due to the direct path to code execution on developer machines, there is no indication of active exploitation in the wild. Developers using Kiro should ensure they are running the latest patched version and exercise caution when processing untrusted web content.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/aws-kiro-flaw-let-poisoned-web-page.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Critical Palo Alto VPN bug now exploited by Qilin ransomware gang</title>
-    <id>urn:cybersecnews:item:120</id>
-    <published>2026-07-21T10:25:54.891694+00:00</published>
-    <updated>2026-07-21T10:25:54.891694+00:00</updated>
-    <link href="https://www.bleepingcomputer.com/news/security/critical-globalprotect-vpn-bug-now-exploited-in-ransomware-attacks/" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-0257&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Palo Alto Networks PAN-OS GlobalProtect is vulnerable to a critical authentication bypass flaw (CVE-2024-21893) that the Qilin ransomware gang actively exploits for network intrusion. The vulnerability allows unauthenticated attackers to bypass authentication mechanisms and gain unauthorized access to protected networks. This is a severe, actively exploited vulnerability affecting critical VPN infrastructure. Organizations must immediately apply available patches from Palo Alto Networks and monitor for signs of compromise in their GlobalProtect logs and access patterns.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/critical-globalprotect-vpn-bug-now-exploited-in-ransomware-attacks/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Sicherheitspatch Grafana: Angreifer können sensible Daten abgreifen</title>
-    <id>urn:cybersecnews:item:119</id>
-    <published>2026-07-21T10:25:54.889092+00:00</published>
-    <updated>2026-07-21T10:25:54.889092+00:00</updated>
-    <link href="https://www.heise.de/news/Sicherheitspatch-Grafana-Angreifer-koennen-sensible-Daten-abgreifen-11371859.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · information-disclosure&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Grafana contains a critical vulnerability allowing attackers to extract sensitive data through unauthorized access. The flaw impacts the open-source visualization and monitoring platform's security posture. Patch availability has been released by developers and immediate application is recommended for all affected deployments. Users should prioritize updates to prevent potential exposure of monitoring data and credentials stored within Grafana instances.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.heise.de/news/Sicherheitspatch-Grafana-Angreifer-koennen-sensible-Daten-abgreifen-11371859.html"&gt;Read more&lt;/a&gt; · Source: heise-security&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>LightRAG: CORS Wildcard + Credentials Enables Any-Origin Credentialed Requests (CVE-2026-61736)</title>
-    <id>urn:cybersecnews:item:118</id>
-    <published>2026-07-21T02:40:32.918429+00:00</published>
-    <updated>2026-07-21T02:40:32.918429+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-6x6h-qqr7-855w" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · cors-misconfiguration · CVE-2026-61736&lt;/em&gt;&lt;/p&gt;&lt;p&gt;LightRAG (pip package lightrag-hku) is vulnerable to critical CORS misconfiguration (CVE-2026-61736) where the default settings combine CORS_ORIGINS=* with allow_credentials=True, allowing any website to perform authenticated API calls on behalf of logged-in users. Starlette's CORSMiddleware echoes the requesting origin in preflight responses when credentials are enabled, effectively whitelisting all origins for credentialed requests. This vulnerability is critical severity and likely exploitable in the wild given the default insecure configuration. Immediately update to a patched version and configure CORS_ORIGINS to specific trusted domains, or disable credentials in CORS responses if not required for functionality.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-6x6h-qqr7-855w"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>LightRAG is Vulnerable to Authentication Bypass: hardcoded DEFAULT_TOKEN_SECRET and public /auth-status defeat LIGHTRAG_API_KEY protection (CVE-2026-61740)</title>
-    <id>urn:cybersecnews:item:117</id>
-    <published>2026-07-21T02:40:32.917187+00:00</published>
-    <updated>2026-07-21T02:40:32.917187+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-f4vv-55c2-5789" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-61740&lt;/em&gt;&lt;/p&gt;&lt;p&gt;LightRAG (pip/lightrag-hku) contains a critical authentication bypass vulnerability (CVE-2026-61740) affecting deployments using API-Key authentication mode. The vulnerability stems from a hardcoded DEFAULT_TOKEN_SECRET in the codebase combined with a public /auth-status endpoint that reveals authentication details, allowing unauthenticated attackers to forge valid JWT tokens offline and bypass X-API-Key protections. No patch status or wild exploitation details are provided in the advisory. Immediately upgrade to a patched version once available, and consider rotating any hardcoded secrets and implementing additional network-level access controls until a fix is deployed.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-f4vv-55c2-5789"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
   </entry>
 </feed>
