@@ -3,7 +3,70 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-08-04T02:30:13.691320+00:00</updated>
+  <updated>2026-08-04T17:50:13.427622+00:00</updated>
+  <entry>
+    <title>Flowise Sandbox Escape to RCE (CVE-2026-69253)</title>
+    <id>urn:cybersecnews:item:230</id>
+    <published>2026-08-04T17:50:13.427622+00:00</published>
+    <updated>2026-08-04T17:50:13.427622+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-wg86-r78f-74mp" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · sandbox-escape,rce · CVE-2026-69253&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Flowise versions 3.1.1 and nodevm 3.9.25 contain a critical sandbox escape vulnerability (CVE-2026-69253) that allows remote code execution through unsafe JavaScript execution contexts. The vulnerability enables attackers to break out of the intended sandbox restrictions and execute arbitrary commands on the host system. This issue is critical in severity and should be patched immediately; organizations should update Flowise to the latest patched version and nodevm to 3.9.26 or later. Given the critical nature and potential for weaponization, this vulnerability may already be exploited in the wild and requires urgent remediation.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-wg86-r78f-74mp"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Flowise: RCE via NodeVM Sandbox Escape in executeJavaScriptCode() nodeVMOptions Override (CVE-2026-69254)</title>
+    <id>urn:cybersecnews:item:229</id>
+    <published>2026-08-04T17:50:13.426850+00:00</published>
+    <updated>2026-08-04T17:50:13.426850+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-3769-jgqc-cxm7" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-69254&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Flowise (npm packages flowise and flowise-components) contains a critical remote code execution vulnerability in the `executeJavaScriptCode()` function that allows authenticated users to escape the NodeVM sandbox. The function improperly allows caller-provided `nodeVMOptions` to override default security settings via JavaScript spread operators, enabling attackers to re-enable blocked modules like `child_process` and `fs` for arbitrary command execution as root. This vulnerability is critical in severity and the recommended action is to immediately patch to a patched version once available, and restrict administrative access to Flowise instances in the interim.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-3769-jgqc-cxm7"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Flowise RCE via SQLite Record Manager Node (CVE-2026-69259)</title>
+    <id>urn:cybersecnews:item:228</id>
+    <published>2026-08-04T17:50:13.425657+00:00</published>
+    <updated>2026-08-04T17:50:13.425657+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-x3hf-7cj6-3r4m" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-69259&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Flowise AI versions up to 3.1.2 contain a critical remote code execution vulnerability in the SQLite Record Manager Node that allows unauthenticated attackers to execute arbitrary code. The vulnerability stems from insufficient input validation when processing SQLite database operations, enabling command injection through specially crafted payloads. This is a critical severity issue with active exploitation likely given the simplicity of the attack vector. Immediately patch to the latest version beyond 3.1.2 or disable the SQLite Record Manager Node if immediate patching is unavailable.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-x3hf-7cj6-3r4m"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Flowise: Pyodide validator Unicode homoglyph bypass leads to RCE (CVE-2026-70470)</title>
+    <id>urn:cybersecnews:item:227</id>
+    <published>2026-08-04T17:50:13.425022+00:00</published>
+    <updated>2026-08-04T17:50:13.425022+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-52fh-8v99-63c2" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-70470&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Flowise's Python code validator in pyodide integration contains a critical remote code execution vulnerability (CVE-2026-70470) where Unicode homoglyph characters bypass blacklist restrictions, allowing arbitrary Python execution and OS command execution on the host system. The vulnerability affects npm/flowise and npm/flowise-components packages and reopens previously patched RCE attack paths through Pyodide's JavaScript interoperability module. This is an active bypass of existing security controls with critical severity and likely exploitation potential. Immediate patching is required; users should update Flowise to the latest version and review any systems using Pyodide integration for unauthorized access.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-52fh-8v99-63c2"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Flowise: RCE via CSVAgent csvFile data URI base64 segment is interpolated into Python source without validation (CVE-2026-69264)</title>
+    <id>urn:cybersecnews:item:226</id>
+    <published>2026-08-04T17:50:13.424167+00:00</published>
+    <updated>2026-08-04T17:50:13.424167+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-4j8x-x6v7-w9rq" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-69264&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Flowise's CSVAgent feature contains a critical remote code execution vulnerability (CVE-2026-69264) where attacker-controlled data from CSV file data URIs is interpolated directly into Python source code without validation, then executed via Pyodide. An attacker can break out of the Python string literal and use Pyodide's JavaScript bridge to call `js.eval()`, dynamically import Node.js modules like `fs` or `child_process`, and achieve arbitrary code execution including file I/O and command execution. This vulnerability affects npm packages flowise and flowise-components and is likely being exploited given its critical severity and ease of exploitation. Update both flowise and flowise-components to patched versions immediately and disable or restrict CSVAgent functionality until fully patched.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-4j8x-x6v7-w9rq"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Apache Tomcat: Apache Tomcat Missing Encryption of Sensitive Data Vulnerability (CVE-2026-34486)</title>
+    <id>urn:cybersecnews:item:225</id>
+    <published>2026-08-04T17:50:13.423421+00:00</published>
+    <updated>2026-08-04T17:50:13.423421+00:00</updated>
+    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-34486" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · missing-encryption · CVE-2026-34486&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Apache Tomcat's EncryptInterceptor can be bypassed due to improper encryption of sensitive data in CVE-2026-34486, potentially exposing unencrypted communications. This vulnerability is actively exploited in the wild and listed on CISA's Known Exploited Vulnerabilities catalog. Apply vendor-supplied patches immediately per BOD 26-04 prioritization guidance; for cloud deployments without available mitigations, discontinue service use. Organizations must assess internet exposure and confirm patch compliance within CISA's required timelines.&lt;/p&gt;&lt;p&gt;&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2026-34486"&gt;Read more&lt;/a&gt; · Source: cisa-kev&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>New cPanel Critical Flaw Could Let Hosting Customers Run SQL as Database Root</title>
+    <id>urn:cybersecnews:item:224</id>
+    <published>2026-08-04T17:50:13.422048+00:00</published>
+    <updated>2026-08-04T17:50:13.422048+00:00</updated>
+    <link href="https://thehackernews.com/2026/08/new-cpanel-critical-flaw-could-let.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · privilege-escalation · CVE-2026-58048&lt;/em&gt;&lt;/p&gt;&lt;p&gt;cPanel versions prior to the patched release contain CVE-2026-58048, allowing authenticated customers to execute arbitrary SQL commands with database root privileges, bypassing account isolation boundaries. The vulnerability carries a CVSS 9.4 score indicating critical severity; no indication provided of active exploitation in the wild. Administrators should immediately patch cPanel to the latest security release, which also addresses two additional privilege escalation routes between customer accounts and server infrastructure. This requires urgent action due to the direct risk of complete database compromise.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/08/new-cpanel-critical-flaw-could-let.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Sequelize: SQL Injection (Oracle DB) (CVE-2026-69240)</title>
     <id>urn:cybersecnews:item:223</id>
@@ -840,68 +903,5 @@
     <link href="https://github.com/advisories/GHSA-2r5c-gw76-rh3w" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · ssrf · CVE-2026-22874&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Gitea's webhook and migration functionality uses an incomplete SSRF allow-list that relies solely on Go's `net.IP.IsPrivate()` function, which does not block access to cloud metadata services, certain internal network ranges, and IPv6 transition mechanisms beyond RFC 1918 and RFC 4193. This allows attackers to bypass intended restrictions and access sensitive internal services or cloud metadata endpoints. The vulnerability is critical in severity. Users should upgrade to a patched version of Gitea that implements a more comprehensive SSRF filter covering additional reserved IP ranges and protocols.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-2r5c-gw76-rh3w"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Gitea Actions Artifacts V4 signed URL HMAC ambiguity allows cross-repository artifact read and cross-task upload-state write (CVE-2026-58426)</title>
-    <id>urn:cybersecnews:item:130</id>
-    <published>2026-07-22T02:38:25.406701+00:00</published>
-    <updated>2026-07-22T02:38:25.406701+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-hg5r-vq93-9fv6" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · hmac-bypass · CVE-2026-58426&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Gitea Actions Artifacts V4 is vulnerable to HMAC signature ambiguity (CVE-2026-58426) allowing attackers with Actions job permissions to rewrite signed URLs to access artifacts across repositories and tasks while maintaining valid signatures. An attacker can read artifacts from arbitrary task contexts or write malicious data to another task's staging area, including in private repositories. This critical vulnerability is currently being exploited in the wild. Affected organizations should immediately patch Gitea to the latest version addressing this HMAC validation flaw.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-hg5r-vq93-9fv6"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Gitea: Public-only repository tokens can update private PR head branches (CVE-2026-58443)</title>
-    <id>urn:cybersecnews:item:129</id>
-    <published>2026-07-22T02:38:25.405224+00:00</published>
-    <updated>2026-07-22T02:38:25.405224+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-xxjv-752h-3vp2" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-58443&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Gitea versions prior to the fix contain a critical authorization bypass (CVE-2026-58443) where public-only repository tokens with write:repository permissions can update private pull request head branches by exploiting the `/api/v1/repos/{public-owner}/{public-repo}/pulls/{index}/update` endpoint. The vulnerability stems from insufficient permission validation—the system checks the public-only restriction against the public base repository but fails to properly restrict operations on the private head repository. This is a critical severity issue likely exploitable in the wild given its straightforward exploitation path. Administrators should immediately apply available patches and review logs for token misuse; consider rotating any public-only tokens with repository write permissions until patched.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-xxjv-752h-3vp2"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Apple Fixes Hide My Email Bug That Exposed Real Addresses in Mail Logs</title>
-    <id>urn:cybersecnews:item:128</id>
-    <published>2026-07-22T02:38:25.403760+00:00</published>
-    <updated>2026-07-22T02:38:25.403760+00:00</updated>
-    <link href="https://thehackernews.com/2026/07/apple-fixes-hide-my-email-bug-that.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · information-disclosure&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Apple patched a privacy vulnerability in its Hide My Email service that exposed users' real email addresses in mail logs despite the masking feature being enabled. The flaw allowed real addresses to leak in email headers and server logs, directly undermining the privacy protection users relied on. Apple deployed the fix on July 3, 2026, over a year after the vulnerability was reported by a security researcher. While no evidence of active exploitation in the wild was mentioned, users should verify their Hide My Email implementation is updated to restore the intended privacy guarantees.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/apple-fixes-hide-my-email-bug-that.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>CVE-2026-8933: Local Privilege Escalation in Set-Capabilities snap-confine</title>
-    <id>urn:cybersecnews:item:127</id>
-    <published>2026-07-21T17:21:17.714208+00:00</published>
-    <updated>2026-07-21T17:21:17.714208+00:00</updated>
-    <link href="https://blog.qualys.com/category/vulnerabilities-threat-research" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · lpe · CVE-2026-8933&lt;/em&gt;&lt;/p&gt;&lt;p&gt;CVE-2026-8933 affects snap-confine across Ubuntu Desktop 24.04, 25.10, and 26.04, allowing unprivileged local users to escalate privileges to root via a race condition in sandbox capability-setting mechanisms. The vulnerability is critical in severity and exploitation status is not specified in the provided summary. Immediate patching of snap-confine is recommended for affected Ubuntu systems; users should apply security updates as soon as available from Canonical.&lt;/p&gt;&lt;p&gt;&lt;a href="https://blog.qualys.com/category/vulnerabilities-threat-research"&gt;Read more&lt;/a&gt; · Source: qualys&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Your AI agent’s config is now the payload: How attackers are targeting the developer agent harness</title>
-    <id>urn:cybersecnews:item:126</id>
-    <published>2026-07-21T17:21:17.713066+00:00</published>
-    <updated>2026-07-21T17:21:17.713066+00:00</updated>
-    <link href="https://www.tenable.com/blog/ai-coding-assistant-agent-harness-attacks" rel="alternate" />
-    <category term="red-team" />
-    <content type="html">&lt;p&gt;&lt;em&gt;red-team · persistence,config-injection,supply-chain&lt;/em&gt;&lt;/p&gt;&lt;p&gt;AI coding assistant configuration files (settings.json, .cursorrules, .windsurfrules, .github/copilot-instructions.md) are now explicit supply-chain attack targets, with the Mini Shai-Hulud worm and variants injecting persistent hooks and prompt injections to achieve silent execution with developer-level trust. The worm scans for AI tool configs across npm, PyPI, and other registries, injects SessionStart hooks or LLM-instruction payloads, and uses model refusal evasion (clear-bomb technique) to blind AI-based scanners while spreading via stolen GitHub tokens. This represents high-severity threats actively exploited in the wild that shift compromise from package installation to the persistent agent harness layer. Defenders must treat harness config files as code requiring mandatory reviews and SHA-hash pinning in CI/CD, enforce --ignore-scripts on package installs, flag alwaysApply rules with broad globs as critical findings, rotate GitHub tokens immediately post-install, proxy LLM API traffic with egress filtering, and treat AI scanner refusals as suspicious signals requiring escalation to non-AI analysis.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.tenable.com/blog/ai-coding-assistant-agent-harness-attacks"&gt;Read more&lt;/a&gt; · Source: tenable&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>DD-WRT DD-WRT: DD-WRT Stack-Based Buffer Overflow Vulnerability (CVE-2021-27137)</title>
-    <id>urn:cybersecnews:item:125</id>
-    <published>2026-07-21T17:21:17.712304+00:00</published>
-    <updated>2026-07-21T17:21:17.712304+00:00</updated>
-    <link href="https://nvd.nist.gov/vuln/detail/CVE-2021-27137" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · buffer-overflow · CVE-2021-27137&lt;/em&gt;&lt;/p&gt;&lt;p&gt;DD-WRT firmware contains a stack-based buffer overflow in the UPnP service (CVE-2021-27137) allowing unauthenticated remote code execution. This vulnerability is actively exploited in the wild with high severity. Apply vendor patches immediately per CISA BOD 26-04 prioritization guidance; if mitigations are unavailable, discontinue use of affected devices. Assess internet exposure of all DD-WRT deployments and enforce expedited patching timelines.&lt;/p&gt;&lt;p&gt;&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2021-27137"&gt;Read more&lt;/a&gt; · Source: cisa-kev&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>New Bit2Watt Attack Could Let Cloud Tenants Disrupt Power Grids Without an Exploit</title>
-    <id>urn:cybersecnews:item:124</id>
-    <published>2026-07-21T17:21:17.711375+00:00</published>
-    <updated>2026-07-21T17:21:17.711375+00:00</updated>
-    <link href="https://thehackernews.com/2026/07/new-bit2watt-attack-could-let-cloud.html" rel="alternate" />
-    <category term="red-team" />
-    <content type="html">&lt;p&gt;&lt;em&gt;red-team · side-channel&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Bit2Watt is a side-channel attack leveraging GPU workload manipulation in cloud environments to induce rapid power fluctuations in data centers, potentially destabilizing connected power grids. The attack requires no vulnerability exploitation or system compromise—a standard cloud tenant can intentionally modulate GPU compute patterns to create dangerous frequency variations. Severity is significant as it represents a denial-of-service vector against critical infrastructure, though active wild exploitation has not been documented. Mitigation includes power smoothing mechanisms, rate-limiting GPU resource allocation per tenant, enhanced power monitoring with anomaly detection, and coordination with grid operators on data center load variability constraints.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/new-bit2watt-attack-could-let-cloud.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
   </entry>
 </feed>
