@@ -3,7 +3,25 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-08-04T17:50:13.427622+00:00</updated>
+  <updated>2026-08-05T02:30:04.955101+00:00</updated>
+  <entry>
+    <title>Flowise: Unauthenticated OAuth2 token refresh endpoint returns access tokens — enables token theft for any connected service (CVE-2026-70478)</title>
+    <id>urn:cybersecnews:item:232</id>
+    <published>2026-08-05T02:30:04.955101+00:00</published>
+    <updated>2026-08-05T02:30:04.955101+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-qgvm-j2hm-6m38" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-70478&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Flowise OAuth2 token refresh endpoint (POST /api/v1/oauth2-credential/refresh/:credentialId) is unauthenticated and returns access tokens in plaintext responses, enabling attackers to steal tokens for any connected OAuth service. This is a critical vulnerability because the endpoint lacks authentication checks and exposes sensitive tokens without rate limiting or additional validation. There is no indication of active exploitation in the wild, but the ease of exploitation is high. Immediate patching is essential; update Flowise to a patched version that implements proper authentication on this endpoint and avoids returning tokens in response bodies, or implement strict network-level access controls as a temporary mitigation.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-qgvm-j2hm-6m38"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>TP-Link patches Omada ZTP flaws allowing hackers to breach networks</title>
+    <id>urn:cybersecnews:item:231</id>
+    <published>2026-08-05T02:30:04.655040+00:00</published>
+    <updated>2026-08-05T02:30:04.655040+00:00</updated>
+    <link href="https://www.bleepingcomputer.com/news/security/tp-link-patches-omada-ztp-flaws-allowing-hackers-to-breach-networks/" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;TP-Link Omada network devices contain 15 vulnerabilities in the zero-touch provisioning (ZTP) mechanism that enable remote code execution when chained with previously disclosed flaws, representing a critical severity risk. These flaws are actively exploitable and bypass authentication protections in the device provisioning workflow. Organizations must immediately apply TP-Link's security patches to all affected Omada devices. Review network access controls for ZTP traffic and monitor for suspicious provisioning activity.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/tp-link-patches-omada-ztp-flaws-allowing-hackers-to-breach-networks/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Flowise Sandbox Escape to RCE (CVE-2026-69253)</title>
     <id>urn:cybersecnews:item:230</id>
@@ -47,7 +65,7 @@
     <updated>2026-08-04T17:50:13.424167+00:00</updated>
     <link href="https://github.com/advisories/GHSA-4j8x-x6v7-w9rq" rel="alternate" />
     <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-69264&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Flowise's CSVAgent feature contains a critical remote code execution vulnerability (CVE-2026-69264) where attacker-controlled data from CSV file data URIs is interpolated directly into Python source code without validation, then executed via Pyodide. An attacker can break out of the Python string literal and use Pyodide's JavaScript bridge to call `js.eval()`, dynamically import Node.js modules like `fs` or `child_process`, and achieve arbitrary code execution including file I/O and command execution. This vulnerability affects npm packages flowise and flowise-components and is likely being exploited given its critical severity and ease of exploitation. Update both flowise and flowise-components to patched versions immediately and disable or restrict CSVAgent functionality until fully patched.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-4j8x-x6v7-w9rq"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-69264, CVE-2026-70477&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Flowise's CSVAgent feature contains a critical remote code execution vulnerability (CVE-2026-69264) where attacker-controlled data from CSV file data URIs is interpolated directly into Python source code without validation, then executed via Pyodide. An attacker can break out of the Python string literal and use Pyodide's JavaScript bridge to call `js.eval()`, dynamically import Node.js modules like `fs` or `child_process`, and achieve arbitrary code execution including file I/O and command execution. This vulnerability affects npm packages flowise and flowise-components and is likely being exploited given its critical severity and ease of exploitation. Update both flowise and flowise-components to patched versions immediately and disable or restrict CSVAgent functionality until fully patched.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-4j8x-x6v7-w9rq"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
   </entry>
   <entry>
     <title>Apache Tomcat: Apache Tomcat Missing Encryption of Sensitive Data Vulnerability (CVE-2026-34486)</title>
@@ -885,23 +903,5 @@
     <link href="https://github.com/advisories/GHSA-pf56-329r-95rw" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · credential-exposure · CVE-2026-59891&lt;/em&gt;&lt;/p&gt;&lt;p&gt;The @sigstore/oci npm package contains a critical credential confusion vulnerability (CVE-2026-59891) in the `getRegistryCredentials()` function, which uses substring matching instead of exact hostname matching to select Docker credentials from ~/.docker/config.json. An attacker can craft a registry URL containing a legitimate registry's hostname as a substring to trick the function into leaking credentials intended for that legitimate registry. This vulnerability is critical severity; patch to the latest version immediately. No evidence of active exploitation in the wild is mentioned, but the high severity and ease of exploitation warrant urgent patching.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-pf56-329r-95rw"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>@vitest/browser: Browser Mode provider commands bypass the file-access permission gate</title>
-    <id>urn:cybersecnews:item:132</id>
-    <published>2026-07-22T02:38:25.408031+00:00</published>
-    <updated>2026-07-22T02:38:25.408031+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-p63j-vcc4-9vmv" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Vitest's @vitest/browser package contains a critical vulnerability where Browser Mode provider commands bypass file-access permission checks, allowing unauthenticated clients to read/write arbitrary files on the host system. Commands for screenshot management, Playwright traces, and file uploads do not validate the `allowWrite` permission gate or confine operations to the project directory. This vulnerability is critical in severity and could enable full filesystem compromise on systems running Vitest Browser Mode. Immediately update @vitest/browser to the patched version and restrict network access to Browser Mode APIs to trusted networks only.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-p63j-vcc4-9vmv"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Gitea: Incomplete SSRF Protection in Webhook and Migration Allow-list Default Filter (CVE-2026-22874)</title>
-    <id>urn:cybersecnews:item:131</id>
-    <published>2026-07-22T02:38:25.407347+00:00</published>
-    <updated>2026-07-22T02:38:25.407347+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-2r5c-gw76-rh3w" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · ssrf · CVE-2026-22874&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Gitea's webhook and migration functionality uses an incomplete SSRF allow-list that relies solely on Go's `net.IP.IsPrivate()` function, which does not block access to cloud metadata services, certain internal network ranges, and IPv6 transition mechanisms beyond RFC 1918 and RFC 4193. This allows attackers to bypass intended restrictions and access sensitive internal services or cloud metadata endpoints. The vulnerability is critical in severity. Users should upgrade to a patched version of Gitea that implements a more comprehensive SSRF filter covering additional reserved IP ranges and protocols.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-2r5c-gw76-rh3w"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
   </entry>
 </feed>
