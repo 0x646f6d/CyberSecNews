@@ -3,7 +3,52 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-08-05T02:30:04.955101+00:00</updated>
+  <updated>2026-08-05T17:38:03.469364+00:00</updated>
+  <entry>
+    <title>Borrowing Windows Hello keys for authentication and persistence</title>
+    <id>urn:cybersecnews:item:237</id>
+    <published>2026-08-05T17:38:03.469364+00:00</published>
+    <updated>2026-08-05T17:38:03.469364+00:00</updated>
+    <link href="https://dirkjanm.io/borrowing-windows-hello-keys/" rel="alternate" />
+    <category term="red-team" />
+    <content type="html">&lt;p&gt;&lt;em&gt;red-team · auth-bypass&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Windows Hello for Business (WHFB) key material can be extracted from an authenticated user session and leveraged for single sign-on and device registration without requiring PIN verification or user presence validation, enabling authentication and persistence attacks against Entra ID. This technique exploits inherent WHFB design rather than a specific vulnerability, allowing attackers with session access to obtain Primary Refresh Tokens and register new devices using stolen cryptographic keys. No patch is available as Microsoft considers this a design consequence of WHFB architecture; mitigation requires enforcing strict session isolation, privileged access workstation (PAW) policies, and monitoring for unusual Entra ID authentication patterns and device registrations.&lt;/p&gt;&lt;p&gt;&lt;a href="https://dirkjanm.io/borrowing-windows-hello-keys/"&gt;Read more&lt;/a&gt; · Source: dirkjanm&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Kali365 Weaponizes Microsoft Authentication Against US Companies: New Enterprise Risk</title>
+    <id>urn:cybersecnews:item:236</id>
+    <published>2026-08-05T17:38:03.468374+00:00</published>
+    <updated>2026-08-05T17:38:03.468374+00:00</updated>
+    <link href="https://thehackernews.com/2026/08/kali365-weaponizes-microsoft.html" rel="alternate" />
+    <category term="red-team" />
+    <content type="html">&lt;p&gt;&lt;em&gt;red-team · phishing&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Kali365 is an active phishing kit exploiting Microsoft's device code OAuth flow to compromise US enterprise accounts. The attack weaponizes legitimate Microsoft authentication by tricking users into approving attacker-controlled device codes, yielding access and refresh tokens for email, documents, and cloud resources. This technique is being actively exploited in the wild with moderate-to-high severity due to broad organizational impact and persistent token-based access. Recommended mitigations include enforcing conditional access policies to restrict unusual sign-in locations, enabling passwordless authentication where possible, deploying advanced phishing detection, and educating users to reject unexpected authentication prompts.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/08/kali365-weaponizes-microsoft.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>New OVSwrap Linux Kernel Flaw Lets Local Users Gain Root via Open vSwitch</title>
+    <id>urn:cybersecnews:item:235</id>
+    <published>2026-08-05T17:38:03.467416+00:00</published>
+    <updated>2026-08-05T17:38:03.467416+00:00</updated>
+    <link href="https://thehackernews.com/2026/08/new-ovswrap-linux-kernel-flaw-lets.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · memory-corruption · CVE-2026-64531&lt;/em&gt;&lt;/p&gt;&lt;p&gt;CVE-2026-64531 (OVSwrap) is a memory corruption vulnerability in the Linux kernel's Open vSwitch datapath that allows local users to escalate privileges to root on default-configured systems. The flaw has a CVSS score of 7.8 and is actively exploited with public exploit code containing pre-built records for approximately 800 kernel builds. Affected systems running Open vSwitch should prioritize patching the kernel immediately. Administrators unable to patch promptly should restrict local user access and disable Open vSwitch if not operationally required.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/08/new-ovswrap-linux-kernel-flaw-lets.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Trojanized npm Packages Employ NullReceiver Tactic to Decode C2 IP from Blockchain</title>
+    <id>urn:cybersecnews:item:234</id>
+    <published>2026-08-05T17:38:03.466548+00:00</published>
+    <updated>2026-08-05T17:38:03.466548+00:00</updated>
+    <link href="https://thehackernews.com/2026/08/trojanized-npm-packages-decode-c2-ip.html" rel="alternate" />
+    <category term="red-team" />
+    <content type="html">&lt;p&gt;&lt;em&gt;red-team · c2&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Two trojanized npm packages (bianira-ui and fluid-type-ui) employ the NullReceiver technique to decode C2 infrastructure from Ethereum blockchain transactions, evolving the EtherHiding C2 obfuscation method. This supply chain attack leverages null-value Ethereum transfers to conceal command server IP addresses, making detection more difficult than traditional DNS/IP-based C2 callbacks. Severity is high given the npm ecosystem's broad reach; exploitation in the wild has been confirmed with these packages. Immediate action: remove affected packages from environments, audit npm dependencies for similar patterns, implement software composition analysis tooling, and monitor for artifacts indicating NullReceiver C2 communication (blockchain transaction analysis or network egress to Ethereum RPC endpoints).&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/08/trojanized-npm-packages-decode-c2-ip.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Veeam, Terraform MCP, Django Patch Critical Flaws, Led by CVSS 10.0 Cross-Tenant Bug</title>
+    <id>urn:cybersecnews:item:233</id>
+    <published>2026-08-05T17:38:03.465077+00:00</published>
+    <updated>2026-08-05T17:38:03.465077+00:00</updated>
+    <link href="https://thehackernews.com/2026/08/veeam-terraform-mcp-django-patch.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass|credential-disclosure|cross-tenant&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Veeam Service Provider Console, HashiCorp Terraform MCP Server, and Django have patched critical vulnerabilities including a CVSS 9.5 unauthenticated credential disclosure in Veeam's console and a CVSS 10.0 cross-tenant authentication bypass in Terraform MCP Server allowing token reuse between users. The Veeam flaw exposes managed agent credentials without authentication while the Terraform MCP vulnerability permits lateral access to other users' infrastructure through token misuse. Both vulnerabilities are likely being exploited given their severity and ease of exploitation; immediate patching is critical for organizations running these services. Prioritize updates for Veeam console and Terraform MCP Server, and verify no unauthorized credential access or cross-tenant token usage has occurred in logs.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/08/veeam-terraform-mcp-django-patch.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Flowise: Unauthenticated OAuth2 token refresh endpoint returns access tokens — enables token theft for any connected service (CVE-2026-70478)</title>
     <id>urn:cybersecnews:item:232</id>
@@ -299,7 +344,7 @@
     <updated>2026-07-30T02:24:33.176578+00:00</updated>
     <link href="https://thehackernews.com/2026/07/critical-rails-flaw-could-let.html" rel="alternate" />
     <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · arbitrary-file-read · CVE-2026-66066&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Rails Active Storage contains a critical arbitrary file read vulnerability (CVE-2026-66066, CVSS 9.5) allowing unauthenticated attackers to access sensitive server files including secrets, credentials, and environment variables through malicious image uploads. The vulnerability is actively exploitable and poses severe risk to production Rails applications storing sensitive data. Affected applications should immediately update to patched Rails versions and review access logs for exploitation attempts. As immediate mitigation, consider restricting image upload functionality or implementing additional authentication controls pending patch deployment.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/critical-rails-flaw-could-let.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · arbitrary-file-read · CVE-2026-59774, CVE-2026-66066&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Rails Active Storage contains a critical arbitrary file read vulnerability (CVE-2026-66066, CVSS 9.5) allowing unauthenticated attackers to access sensitive server files including secrets, credentials, and environment variables through malicious image uploads. The vulnerability is actively exploitable and poses severe risk to production Rails applications storing sensitive data. Affected applications should immediately update to patched Rails versions and review access logs for exploitation attempts. As immediate mitigation, consider restricting image upload functionality or implementing additional authentication controls pending patch deployment.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/critical-rails-flaw-could-let.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
   </entry>
   <entry>
     <title>prebid-server's request forgery vulnerability allows for possible host environment data extraction (CVE-2026-54735)</title>
@@ -858,50 +903,5 @@
     <link href="https://thehackernews.com/2026/07/nine-year-old-refluxfs-linux-flaw-gives.html" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · privilege-escalation · CVE-2026-64600&lt;/em&gt;&lt;/p&gt;&lt;p&gt;RefluXFS (CVE-2026-64600) is a nine-year-old Linux kernel race condition in XFS filesystem handling that allows unprivileged local users to overwrite root-owned files and achieve persistent root access on affected systems. Default installations of RHEL, Fedora Server, and Amazon Linux are vulnerable. The flaw is critical severity; no evidence of wild exploitation has been reported as of disclosure. Patch immediately via kernel updates from your respective Linux distributions.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/nine-year-old-refluxfs-linux-flaw-gives.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Check Point SmartConsole: Check Point SmartConsole Improper Authentication Vulnerability (CVE-2026-16232)</title>
-    <id>urn:cybersecnews:item:137</id>
-    <published>2026-07-23T02:43:17.611516+00:00</published>
-    <updated>2026-07-23T02:43:17.611516+00:00</updated>
-    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-16232" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-16232&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Check Point SmartConsole contains an improper authentication flaw (CVE-2026-16232) allowing unauthenticated remote attackers to obtain valid administrative login tokens without credentials. This vulnerability is actively exploited in the wild and carries critical severity due to the ability to gain full administrative access to the console. Apply vendor-supplied patches immediately per CISA BOD 26-04 guidance; if mitigations are unavailable, discontinue use of the product or migrate to cloud alternatives with proper controls. Conduct forensics triage on affected systems to identify compromise and unauthorized administrative activity.&lt;/p&gt;&lt;p&gt;&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2026-16232"&gt;Read more&lt;/a&gt; · Source: cisa-kev&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Intercepting Android WebView traffic under new certificate validity requirement by Chromium</title>
-    <id>urn:cybersecnews:item:136</id>
-    <published>2026-07-22T17:20:51.722850+00:00</published>
-    <updated>2026-07-22T17:20:51.722850+00:00</updated>
-    <link href="https://blog.nviso.eu/2026/07/22/intercepting-android-webview-traffic-under-new-certificate-validity-requirement-by-chromium/" rel="alternate" />
-    <category term="red-team" />
-    <content type="html">&lt;p&gt;&lt;em&gt;red-team · mitm-interception&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Android WebView and Chromium-based browsers now enforce stricter certificate validity requirements that prevent interception of HTTPS traffic using self-signed or expired certificates, even when certificate pinning is not implemented. This change affects penetration testing and security assessments where analysts previously relied on proxy certificates for traffic inspection. While this is a security hardening measure rather than a vulnerability, it complicates legitimate security testing workflows. Security teams should use alternative testing methods such as device-level network analysis, application-level logging, or work with application developers to implement debug-mode certificate acceptance rather than attempting to bypass these validity checks.&lt;/p&gt;&lt;p&gt;&lt;a href="https://blog.nviso.eu/2026/07/22/intercepting-android-webview-traffic-under-new-certificate-validity-requirement-by-chromium/"&gt;Read more&lt;/a&gt; · Source: nviso-labs&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Adobe Chrome extension flaw let sites access private WhatsApp chats</title>
-    <id>urn:cybersecnews:item:135</id>
-    <published>2026-07-22T17:20:51.721179+00:00</published>
-    <updated>2026-07-22T17:20:51.721179+00:00</updated>
-    <link href="https://www.bleepingcomputer.com/news/security/adobe-chrome-extension-flaw-let-sites-access-private-whatsapp-chats/" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Adobe Acrobat Chrome extension contained a vulnerability allowing unauthorized access to WhatsApp Web conversations and private data without authentication through improper content script permissions. The flaw affected the extension's ability to isolate content across different web domains, exposing sensitive communications. Severity is high given the personal nature of WhatsApp data and lack of authentication requirement; exploitation likelihood in the wild is moderate as it requires users to have both the extension and WhatsApp Web active. Adobe has patched the vulnerability; users should immediately update the Adobe Acrobat extension to the latest version and review browser extension permissions.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/adobe-chrome-extension-flaw-let-sites-access-private-whatsapp-chats/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Oracle Critical Patch Update: 1449 Softwareflicken im Juli</title>
-    <id>urn:cybersecnews:item:134</id>
-    <published>2026-07-22T10:25:28.605905+00:00</published>
-    <updated>2026-07-22T10:25:28.605905+00:00</updated>
-    <link href="https://www.heise.de/news/Oracle-Critical-Patch-Update-1449-Softwareflicken-im-Juli-11372857.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · multiple&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Oracle released 1,449 security patches in July, a record number covering vulnerabilities across its product portfolio including Java, WebLogic, Database, and Enterprise applications. The updates address critical remote code execution flaws, SQL injection vulnerabilities, and authentication bypass issues, with multiple CVEs rated CVSS 9.0 or higher indicating severe impact. Several vulnerabilities are exploited in the wild or have public exploits available, particularly affecting WebLogic and Java components. Immediate patching is mandatory, prioritizing critical-rated CVEs in Internet-facing systems such as WebLogic and Java Runtime Environment, followed by systematic deployment of remaining updates across the enterprise infrastructure.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.heise.de/news/Oracle-Critical-Patch-Update-1449-Softwareflicken-im-Juli-11372857.html"&gt;Read more&lt;/a&gt; · Source: heise-security&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Credential confusion in @sigstore/oci can leak registry credentials to an attacker-controlled registry (CVE-2026-59891)</title>
-    <id>urn:cybersecnews:item:133</id>
-    <published>2026-07-22T02:38:25.408710+00:00</published>
-    <updated>2026-07-22T02:38:25.408710+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-pf56-329r-95rw" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · credential-exposure · CVE-2026-59891&lt;/em&gt;&lt;/p&gt;&lt;p&gt;The @sigstore/oci npm package contains a critical credential confusion vulnerability (CVE-2026-59891) in the `getRegistryCredentials()` function, which uses substring matching instead of exact hostname matching to select Docker credentials from ~/.docker/config.json. An attacker can craft a registry URL containing a legitimate registry's hostname as a substring to trick the function into leaking credentials intended for that legitimate registry. This vulnerability is critical severity; patch to the latest version immediately. No evidence of active exploitation in the wild is mentioned, but the high severity and ease of exploitation warrant urgent patching.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-pf56-329r-95rw"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
   </entry>
 </feed>
