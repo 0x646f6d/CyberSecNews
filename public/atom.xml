@@ -3,7 +3,25 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-08-05T17:38:03.469364+00:00</updated>
+  <updated>2026-08-06T02:32:50.699664+00:00</updated>
+  <entry>
+    <title>Unauthenticated Nuxt DevTools RPC allows arbitrary command execution on the developer's host (CVE-2026-71319)</title>
+    <id>urn:cybersecnews:item:239</id>
+    <published>2026-08-06T02:32:50.699664+00:00</published>
+    <updated>2026-08-06T02:32:50.699664+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-279x-mwfv-vcqv" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-71319&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Nuxt DevTools in development mode exposes an unauthenticated bidirectional RPC channel over Vite HMR WebSocket that allows arbitrary command execution on the developer's host. The vulnerability (CVE-2026-71319) affects npm/@nuxt/devtools and is critical severity, with no authentication, token validation, or origin checks protecting methods like `updateOptions()`, `clearOptions()`, and `openInEditor()`. While no evidence of wild exploitation is indicated in this advisory, developers should immediately upgrade Nuxt DevTools to a patched version and consider disabling DevTools in development environments exposed to untrusted networks.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-279x-mwfv-vcqv"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Hackers run khunt post-exploitation toolkit from Oracle database</title>
+    <id>urn:cybersecnews:item:238</id>
+    <published>2026-08-06T02:32:50.698113+00:00</published>
+    <updated>2026-08-06T02:32:50.698113+00:00</updated>
+    <link href="https://www.bleepingcomputer.com/news/security/hackers-run-khunt-post-exploitation-toolkit-from-oracle-database/" rel="alternate" />
+    <category term="red-team" />
+    <content type="html">&lt;p&gt;&lt;em&gt;red-team · post-exploitation&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Oracle database deployments vulnerable to SQL injection attacks are at risk of direct post-exploitation toolkit installation through the khunt toolkit. Attackers can execute arbitrary code within the database context to establish persistence and lateral movement capabilities without requiring traditional external command execution. Exploitation is actively occurring in the wild targeting vulnerable Oracle instances. Immediate action required: patch all Oracle databases to the latest security updates, implement Web Application Firewall rules to block SQL injection payloads, conduct network segmentation to restrict database access, and audit existing databases for indicators of khunt toolkit presence.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/hackers-run-khunt-post-exploitation-toolkit-from-oracle-database/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Borrowing Windows Hello keys for authentication and persistence</title>
     <id>urn:cybersecnews:item:237</id>
@@ -885,23 +903,5 @@
     <link href="https://www.bleepingcomputer.com/news/security/hackers-abuse-notepad-plus-plus-plugins-to-stealthily-install-malware/" rel="alternate" />
     <category term="red-team" />
     <content type="html">&lt;p&gt;&lt;em&gt;red-team · malware-distribution&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Notepad++ is being weaponized through malicious plugins disguised as legitimate extensions to achieve persistent malware installation. The LunchPoke malware masquerades as a Notepad++ plugin and establishes persistence on compromised systems, with the attack vector involving distribution of archives containing both legitimate Notepad++ and the malicious component. This represents a moderate-to-high severity threat with active exploitation confirmed by Ukraine's CERT. Users should avoid downloading Notepad++ from untrusted sources, validate plugin authenticity through official channels only, and consider disabling auto-loading of plugins if not actively used.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/hackers-abuse-notepad-plus-plus-plugins-to-stealthily-install-malware/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Claude Cowork Flaw Could Let AI Agent Escape Its VM and Access Mac Files</title>
-    <id>urn:cybersecnews:item:139</id>
-    <published>2026-07-23T17:24:16.499996+00:00</published>
-    <updated>2026-07-23T17:24:16.499996+00:00</updated>
-    <link href="https://thehackernews.com/2026/07/claude-cowork-flaw-could-let-ai-agent.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · sandbox-escape&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Anthropic's Claude Cowork AI agent contains a sandbox escape vulnerability allowing attackers to break out of the Linux VM sandbox and access arbitrary files on the host macOS system. The flaw enables reading and writing of files outside the intended sandbox boundaries, affecting approximately 500,000 macOS users. Severity and exploitation status are not specified in the provided summary, but sandbox escapes are typically critical as they defeat the primary security boundary. Users should immediately update Claude Cowork to the patched version and consider restricting the agent's file access permissions until a fix is applied.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/claude-cowork-flaw-could-let-ai-agent.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Nine-Year-Old RefluXFS Linux Flaw Gives Local Users Root on Default RHEL Installs</title>
-    <id>urn:cybersecnews:item:138</id>
-    <published>2026-07-23T10:23:32.497466+00:00</published>
-    <updated>2026-07-23T10:23:32.497466+00:00</updated>
-    <link href="https://thehackernews.com/2026/07/nine-year-old-refluxfs-linux-flaw-gives.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · privilege-escalation · CVE-2026-64600&lt;/em&gt;&lt;/p&gt;&lt;p&gt;RefluXFS (CVE-2026-64600) is a nine-year-old Linux kernel race condition in XFS filesystem handling that allows unprivileged local users to overwrite root-owned files and achieve persistent root access on affected systems. Default installations of RHEL, Fedora Server, and Amazon Linux are vulnerable. The flaw is critical severity; no evidence of wild exploitation has been reported as of disclosure. Patch immediately via kernel updates from your respective Linux distributions.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/nine-year-old-refluxfs-linux-flaw-gives.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
   </entry>
 </feed>
