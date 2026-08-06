@@ -3,7 +3,25 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-08-06T02:32:50.699664+00:00</updated>
+  <updated>2026-08-06T10:39:04.643942+00:00</updated>
+  <entry>
+    <title>Chinese-Made Zbtlink Routers Ship With Backdoor That Opens Unauthenticated Root Shells</title>
+    <id>urn:cybersecnews:item:241</id>
+    <published>2026-08-06T10:39:04.643942+00:00</published>
+    <updated>2026-08-06T10:39:04.643942+00:00</updated>
+    <link href="https://thehackernews.com/2026/08/chinese-made-zbtlink-routers-ship-with.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · backdoor&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Zbtlink routers contain a factory-shipped backdoor present across at least 20 models and all 21 available firmware images spanning 2+ years. The backdoor provides unauthenticated root shell access and automatically beacons to external command and control infrastructure. This represents a critical severity vulnerability affecting network perimeter security with high likelihood of active exploitation given the widespread deployment of these devices. Affected organizations should immediately identify and isolate Zbtlink routers from networks, replace them with devices from trusted vendors, and monitor for unauthorized access or data exfiltration.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/08/chinese-made-zbtlink-routers-ship-with.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>AWS, Google, and Vercel Agent Flaws Let Attackers Trigger Tools Without Running the Model</title>
+    <id>urn:cybersecnews:item:240</id>
+    <published>2026-08-06T10:39:04.635382+00:00</published>
+    <updated>2026-08-06T10:39:04.635382+00:00</updated>
+    <link href="https://thehackernews.com/2026/08/aws-google-and-vercel-patch-agent-flaws.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass,tool-invocation-bypass&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Agent infrastructure in AWS Bedrock, Google Vertex AI, and Vercel AI SDK permits direct invocation of tool functions without model authorization or execution. Attackers can bypass system prompts and content filters by forging or injecting instructions directly to agent tools, potentially enabling unauthorized actions like data exfiltration or system compromise. Severity and exploitation status not specified in provided summary. AWS, Google, and Vercel have been notified; immediate patching recommended where available, and users should implement strict input validation and access controls on agent tool endpoints.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/08/aws-google-and-vercel-patch-agent-flaws.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Unauthenticated Nuxt DevTools RPC allows arbitrary command execution on the developer's host (CVE-2026-71319)</title>
     <id>urn:cybersecnews:item:239</id>
@@ -885,23 +903,5 @@
     <link href="https://github.com/advisories/GHSA-7rqj-j65f-68wh" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Auth.js (affected versions of @auth/core and next-auth) contains a critical vulnerability in the email normalizer for magic-link authentication, which validates email addresses before applying Unicode normalization. An attacker can bypass the single-@ symbol validation by using Unicode characters that canonicalize to @ under NFKC/NFKD normalization, potentially allowing account takeover through homoglyph attacks. This vulnerability is actively exploited and affects both @auth/core and next-auth packages. Immediately update to patched versions that perform Unicode normalization before validation.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-7rqj-j65f-68wh"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Auth.js: Configuration errors can cause existence-based auth checks to fail open (auth object populated with an error)</title>
-    <id>urn:cybersecnews:item:141</id>
-    <published>2026-07-23T17:24:16.556317+00:00</published>
-    <updated>2026-07-23T17:24:16.556317+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-8fpg-xm3f-6cx3" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Auth.js (next-auth) v5 is affected by a critical configuration error that causes the `auth()` function to return an error object instead of null, breaking existence-based authentication checks in middleware and route handlers. Applications using the documented pattern of gating access by checking only for the `auth` object's presence will fail open, allowing unauthenticated access when server-side configuration errors occur. This vulnerability is being exploited in the wild. Update to the latest patched version of next-auth immediately and review all authentication gates to ensure proper null-checking rather than relying solely on object existence.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-8fpg-xm3f-6cx3"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Hackers abuse Notepad++ plugins to stealthily install malware</title>
-    <id>urn:cybersecnews:item:140</id>
-    <published>2026-07-23T17:24:16.554108+00:00</published>
-    <updated>2026-07-23T17:24:16.554108+00:00</updated>
-    <link href="https://www.bleepingcomputer.com/news/security/hackers-abuse-notepad-plus-plus-plugins-to-stealthily-install-malware/" rel="alternate" />
-    <category term="red-team" />
-    <content type="html">&lt;p&gt;&lt;em&gt;red-team · malware-distribution&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Notepad++ is being weaponized through malicious plugins disguised as legitimate extensions to achieve persistent malware installation. The LunchPoke malware masquerades as a Notepad++ plugin and establishes persistence on compromised systems, with the attack vector involving distribution of archives containing both legitimate Notepad++ and the malicious component. This represents a moderate-to-high severity threat with active exploitation confirmed by Ukraine's CERT. Users should avoid downloading Notepad++ from untrusted sources, validate plugin authenticity through official channels only, and consider disabling auto-loading of plugins if not actively used.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/hackers-abuse-notepad-plus-plus-plugins-to-stealthily-install-malware/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
   </entry>
 </feed>
