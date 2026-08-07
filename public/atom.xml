@@ -3,7 +3,43 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-08-06T10:39:04.643942+00:00</updated>
+  <updated>2026-08-07T02:39:28.477256+00:00</updated>
+  <entry>
+    <title>Traefik: Authentication Bypass via Path Traversal in ReplacePathRegex Middleware (CVE-2026-65600)</title>
+    <id>urn:cybersecnews:item:245</id>
+    <published>2026-08-07T02:39:28.477256+00:00</published>
+    <updated>2026-08-07T02:39:28.477256+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-cxjq-mrr5-89rv" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-65600&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Traefik's ReplacePathRegex middleware contains a critical authentication bypass vulnerability (CVE-2026-65600) where improperly configured regex replacements allow path traversal attacks to bypass security controls. Crafted requests can generate unnormalized paths like `/../admin` that forward to backends without validation, potentially exposing protected resources when the backend normalizes the path. This affects Traefik v2 and v3. Users must update to patched versions and review ReplacePathRegex configurations to ensure regex patterns include mandatory separators between captured segments; consider alternative middleware if traversal patterns are unavoidable.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-cxjq-mrr5-89rv"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>New TONTOU CPU attack bypasses Spectre v2 fixes, leaks Linux password hashes</title>
+    <id>urn:cybersecnews:item:244</id>
+    <published>2026-08-07T02:39:28.476366+00:00</published>
+    <updated>2026-08-07T02:39:28.476366+00:00</updated>
+    <link href="https://www.bleepingcomputer.com/news/security/new-tontou-cpu-attack-bypasses-spectre-v2-fixes-leaks-linux-password-hashes/" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · speculative-execution-sidechannel&lt;/em&gt;&lt;/p&gt;&lt;p&gt;TONTOU is a new speculative execution attack targeting CPUs that circumvents existing Spectre v2 mitigations by exploiting Time-of-Check-Time-of-Use (TOCTOU) race conditions in kernel defenses. The attack has been demonstrated to leak sensitive data including Linux password hashes from affected systems. Severity is high as it defeats current protections, though wild exploitation likelihood is currently unknown given the technical sophistication required. Mitigation requires updated CPU microcode and kernel patches; users should monitor vendor advisories from Intel, AMD, and Linux distributions for available fixes and apply them promptly.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/new-tontou-cpu-attack-bypasses-spectre-v2-fixes-leaks-linux-password-hashes/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Cisco Patches 12 SD-WAN and IOS XE Flaws, Including Three 9.8 CVSS Score Bugs</title>
+    <id>urn:cybersecnews:item:243</id>
+    <published>2026-08-07T02:39:28.474646+00:00</published>
+    <updated>2026-08-07T02:39:28.474646+00:00</updated>
+    <link href="https://thehackernews.com/2026/08/cisco-patches-12-sd-wan-and-ios-xe.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · multiple&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Cisco released patches for 12 vulnerabilities in Catalyst SD-WAN and IOS XE software, including three critical flaws with CVSS 9.8 scores affecting authentication and access control mechanisms. The vulnerabilities impact SD-WAN software regardless of device configuration and IOS XE in autonomous or controller modes, potentially allowing attackers to bypass security controls or gain unauthorized access. No evidence of active exploitation in the wild has been reported. Organizations running affected Cisco SD-WAN or IOS XE deployments should prioritize applying the latest security updates immediately given the critical severity ratings.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/08/cisco-patches-12-sd-wan-and-ios-xe.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>New Zapscape KVM Flaw Could Let Privileged L1 Guest Code Escape to Linux Hosts</title>
+    <id>urn:cybersecnews:item:242</id>
+    <published>2026-08-07T02:39:28.471820+00:00</published>
+    <updated>2026-08-07T02:39:28.471820+00:00</updated>
+    <link href="https://thehackernews.com/2026/08/new-zapscape-kvm-flaw-could-let.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · vm-escape · CVE-2026-64561&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Zapscape (CVE-2026-64561) is a privilege escalation vulnerability in Linux KVM/x86's shadow MMU that allows an attacker with kernel-level access in a nested L1 guest VM to escape to the host system. The flaw affects systems with nested virtualization enabled and exposed to untrusted guests; severity is high due to escape from isolation boundary but exploitation requires pre-existing kernel privileges within guest. A kernel patch addressing the shadow MMU handling is required; systems should disable nested virtualization for untrusted workloads until patched. No evidence of in-the-wild exploitation reported at this time.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/08/new-zapscape-kvm-flaw-could-let.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Chinese-Made Zbtlink Routers Ship With Backdoor That Opens Unauthenticated Root Shells</title>
     <id>urn:cybersecnews:item:241</id>
@@ -867,41 +903,5 @@
     <link href="https://thehackernews.com/2026/07/certighost-exploit-lets-low-privileged.html" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · privilege-escalation · CVE-2024-33650&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Certighost is a critical elevation-of-privilege vulnerability in Active Directory Certificate Services that allows low-privileged AD users to obtain domain controller certificates and authenticate as a DC, enabling DCSync attacks to extract the krbtgt secret and achieve full domain compromise. The exploit has been publicly disclosed with working code available as of July 24. Immediate patching is required; organizations should prioritize applying Microsoft's security updates for AD CS and implement certificate template restrictions to prevent low-privileged users from requesting DC certificates. Additionally, monitor for suspicious certificate requests and implement enhanced logging on certificate authority servers.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/certighost-exploit-lets-low-privileged.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Kimi K3 Agents Found Redis Zero-Days and Built RCE Exploit, Researchers Say</title>
-    <id>urn:cybersecnews:item:145</id>
-    <published>2026-07-24T10:17:25.889348+00:00</published>
-    <updated>2026-07-24T10:17:25.889348+00:00</updated>
-    <link href="https://thehackernews.com/2026/07/kimi-k3-agents-found-redis-zero-days.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Redis versions 6.2.22, 7.4.9, 8.6.4, and 8.8.0 contain memory corruption vulnerabilities exploitable for authenticated remote code execution via the RESTORE command, with additional chains requiring EVAL, XGROUP, or the RedisBloom module. Researchers have published proof-of-concept exploits for these zero-days, indicating active security research and potential wild exploitation risk. Redis has released patches (6.2.23, 7.2.15, 7.4.10, and corresponding 8.x versions) to address the underlying memory flaws. Organizations should immediately update Redis instances, particularly those exposed to untrusted authenticated users.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/kimi-k3-agents-found-redis-zero-days.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>NodeBB Patches Eight AI-Found Flaws Exposing Admin Access and Private Chats</title>
-    <id>urn:cybersecnews:item:144</id>
-    <published>2026-07-24T10:17:25.886842+00:00</published>
-    <updated>2026-07-24T10:17:25.886842+00:00</updated>
-    <link href="https://thehackernews.com/2026/07/nodebb-patches-eight-ai-found-flaws.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · multiple&lt;/em&gt;&lt;/p&gt;&lt;p&gt;NodeBB forum software versions prior to 4.14.0 contain eight high-severity vulnerabilities discovered by AI-driven penetration testing that expose admin access and private chat messages. The flaws enable authentication bypass, privilege escalation, and unauthorized data access, with exploit code publicly released. All issues are patched in version 4.14.2 and there is no indication of active exploitation in the wild. NodeBB administrators should immediately upgrade to 4.14.2 or apply available mitigations for those unable to patch immediately.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/nodebb-patches-eight-ai-found-flaws.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Kimi K3: Chinesische KI findet mehrere Zero-Day-Lücken in redis-Datenbank</title>
-    <id>urn:cybersecnews:item:143</id>
-    <published>2026-07-24T10:17:25.884749+00:00</published>
-    <updated>2026-07-24T10:17:25.884749+00:00</updated>
-    <link href="https://www.heise.de/news/Kimi-K3-Chinesische-KI-findet-mehrere-Zero-Day-Luecken-in-redis-Datenbank-11377360.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · multiple&lt;/em&gt;&lt;/p&gt;&lt;p&gt;A Chinese AI model (Kimi K3) identified multiple zero-day vulnerabilities in Redis database software. The vulnerabilities have been confirmed by Redis updates, indicating they represent genuine security flaws in widely-deployed caching infrastructure. Redis users should prioritize applying the latest security patches immediately to remediate these zero-days. This incident demonstrates the increasing capability of AI systems in vulnerability discovery and highlights the need for expedited patching cycles.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.heise.de/news/Kimi-K3-Chinesische-KI-findet-mehrere-Zero-Day-Luecken-in-redis-Datenbank-11377360.html"&gt;Read more&lt;/a&gt; · Source: heise-security&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Auth.js: Email normalizer validates the address before Unicode normalization, allowing a homoglyph @ bypass</title>
-    <id>urn:cybersecnews:item:142</id>
-    <published>2026-07-23T17:24:16.557417+00:00</published>
-    <updated>2026-07-23T17:24:16.557417+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-7rqj-j65f-68wh" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Auth.js (affected versions of @auth/core and next-auth) contains a critical vulnerability in the email normalizer for magic-link authentication, which validates email addresses before applying Unicode normalization. An attacker can bypass the single-@ symbol validation by using Unicode characters that canonicalize to @ under NFKC/NFKD normalization, potentially allowing account takeover through homoglyph attacks. This vulnerability is actively exploited and affects both @auth/core and next-auth packages. Immediately update to patched versions that perform Unicode normalization before validation.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-7rqj-j65f-68wh"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
   </entry>
 </feed>
