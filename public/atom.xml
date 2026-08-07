@@ -3,7 +3,16 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-08-07T02:39:28.477256+00:00</updated>
+  <updated>2026-08-07T08:58:57.714667+00:00</updated>
+  <entry>
+    <title>Screen Sharing: Gefährliche MacOS-Lücke lässt Angreifer Apple-Systeme kapern</title>
+    <id>urn:cybersecnews:item:246</id>
+    <published>2026-08-07T08:58:57.714667+00:00</published>
+    <updated>2026-08-07T08:58:57.714667+00:00</updated>
+    <link href="https://www.golem.de/news/screen-sharing-gefaehrliche-macos-luecke-laesst-angreifer-apple-systeme-kapern-2608-211694.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;A critical vulnerability in macOS screen sharing functionality allows unauthenticated remote attackers to gain full control of affected systems without credentials. The flaw affects Apple's screen sharing implementation across macOS devices and represents a severe privilege escalation risk. Users should apply available security patches immediately, and administrators should prioritize deployment across their macOS fleet. There is no indication the vulnerability is currently exploited in the wild, but the unauthenticated nature of the exploit makes it a high-priority threat.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.golem.de/news/screen-sharing-gefaehrliche-macos-luecke-laesst-angreifer-apple-systeme-kapern-2608-211694.html"&gt;Read more&lt;/a&gt; · Source: golem-security&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Traefik: Authentication Bypass via Path Traversal in ReplacePathRegex Middleware (CVE-2026-65600)</title>
     <id>urn:cybersecnews:item:245</id>
@@ -894,14 +903,5 @@
     <link href="https://thehackernews.com/2026/07/chatgpt-agentforger-flaw-could-deploy.html" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass&lt;/em&gt;&lt;/p&gt;&lt;p&gt;ChatGPT Workspace Agents contained a critical authorization bypass vulnerability (AgentForger) enabling attackers to create, authorize, and deploy rogue autonomous agents within victim organizations via a single phishing link. The flaw allowed unauthorized agent deployment without explicit user approval, posing severe risk to organizational security and data integrity. OpenAI patched the vulnerability on June 8, 2024. Organizations should verify all deployed agents in their Workspace environments and reinforce user security awareness to prevent phishing-based agent injection attacks.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/chatgpt-agentforger-flaw-could-deploy.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Certighost Exploit Lets Low-Privileged Active Directory Users Impersonate a Domain Controller</title>
-    <id>urn:cybersecnews:item:146</id>
-    <published>2026-07-24T17:39:36.613491+00:00</published>
-    <updated>2026-07-24T17:39:36.613491+00:00</updated>
-    <link href="https://thehackernews.com/2026/07/certighost-exploit-lets-low-privileged.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · privilege-escalation · CVE-2024-33650&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Certighost is a critical elevation-of-privilege vulnerability in Active Directory Certificate Services that allows low-privileged AD users to obtain domain controller certificates and authenticate as a DC, enabling DCSync attacks to extract the krbtgt secret and achieve full domain compromise. The exploit has been publicly disclosed with working code available as of July 24. Immediate patching is required; organizations should prioritize applying Microsoft's security updates for AD CS and implement certificate template restrictions to prevent low-privileged users from requesting DC certificates. Additionally, monitor for suspicious certificate requests and implement enhanced logging on certificate authority servers.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/certighost-exploit-lets-low-privileged.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
   </entry>
 </feed>
