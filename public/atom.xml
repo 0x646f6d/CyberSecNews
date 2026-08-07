@@ -3,7 +3,52 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-08-07T08:58:57.714667+00:00</updated>
+  <updated>2026-08-07T16:55:10.328295+00:00</updated>
+  <entry>
+    <title>Living off the coding agent: Two tales of tunnels and LaunchAgents</title>
+    <id>urn:cybersecnews:item:251</id>
+    <published>2026-08-07T16:55:10.328295+00:00</published>
+    <updated>2026-08-07T16:55:10.328295+00:00</updated>
+    <link href="https://www.elastic.co/security-labs/coding-agent-launchagent-tunnel-detection" rel="alternate" />
+    <category term="red-team" />
+    <content type="html">&lt;p&gt;&lt;em&gt;red-team · lateral-movement&lt;/em&gt;&lt;/p&gt;&lt;p&gt;macOS LaunchAgents and agent-generated reverse tunnels can enable local admin applications to be exposed to the internet, creating unauthorized remote access pathways. This technique exploits legitimate system automation features to establish persistence and external connectivity without requiring traditional malware signatures, making detection difficult for endpoint tools. The severity is high due to potential for unauthorized system access and lateral movement, though exploitation in the wild remains tied to targeted operations rather than mass campaigns. Organizations should implement strict LaunchAgent monitoring, restrict outbound tunnel creation, enforce network segmentation for admin applications, and treat suspicious reverse tunnel activity as security incidents regardless of whether it appears to be "vibe-coded" rather than confirmed malicious.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.elastic.co/security-labs/coding-agent-launchagent-tunnel-detection"&gt;Read more&lt;/a&gt; · Source: elastic-security-labs&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Craft CMS: Passkey login accepts replayed WebAuthn assertions</title>
+    <id>urn:cybersecnews:item:250</id>
+    <published>2026-08-07T16:55:10.327452+00:00</published>
+    <updated>2026-08-07T16:55:10.327452+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-wg23-69c2-gjc8" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Craft CMS 5.10.3 and earlier versions contain a critical vulnerability in passkey/WebAuthn login that accepts user-supplied `PublicKeyCredentialRequestOptions` and fails to update stored credential counters, allowing captured login requests to be replayed indefinitely. An unauthenticated attacker who obtains a single passkey assertion can authenticate as the victim by replaying the captured request, bypassing WebAuthn's replay protection mechanism. This vulnerability is likely exploitable in the wild given its straightforward nature. Immediately upgrade to a patched version and audit login logs for suspicious WebAuthn activity; consider temporarily disabling passkey authentication until patching is completed.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-wg23-69c2-gjc8"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>AI-Assisted HTTP Terminator Finds Novel HTTP Desync Techniques and Apache Zero-Day</title>
+    <id>urn:cybersecnews:item:249</id>
+    <published>2026-08-07T16:55:10.326640+00:00</published>
+    <updated>2026-08-07T16:55:10.326640+00:00</updated>
+    <link href="https://thehackernews.com/2026/08/ai-assisted-http-terminator-finds-novel.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · http-desync&lt;/em&gt;&lt;/p&gt;&lt;p&gt;HTTP Terminator, an AI-assisted research tool, discovered novel HTTP request smuggling and desynchronization techniques through automated testing of 30,000 candidate vectors, expanding the attack surface beyond previously known methods. The research also identified a zero-day vulnerability in Apache Traffic Server, though specific severity details were not disclosed. Organizations running Apache Traffic Server should monitor for patches and consider implementing HTTP request validation and normalization controls. Practitioners should review their HTTP parsing implementations and request handling logic, as these newly discovered desync techniques may bypass existing security controls.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/08/ai-assisted-http-terminator-finds-novel.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>18-Year-Old Linux SCTP Flaw Could Let Local Users Gain Root and Escape Containers</title>
+    <id>urn:cybersecnews:item:248</id>
+    <published>2026-08-07T16:55:10.325821+00:00</published>
+    <updated>2026-08-07T16:55:10.325821+00:00</updated>
+    <link href="https://thehackernews.com/2026/08/18-year-old-linux-sctp-flaw-could-let.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · use-after-free&lt;/em&gt;&lt;/p&gt;&lt;p&gt;A use-after-free vulnerability in Linux SCTP (Stream Control Transmission Protocol) networking subsystem, present since 2008, enables local privilege escalation to root and container escape. The flaw has been actively exploited by researchers and likely in the wild given its age and severity. Update immediately to patched stable kernels (7.1.6, 6.18.42, 6.12.101, or 6.6.148 released August 3, 2024), or disable SCTP if the protocol is not required in your environment. Prioritize systems where untrusted users have local access or where containerization is deployed.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/08/18-year-old-linux-sctp-flaw-could-let.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>New WordPress Pre-Auth XSS Could Lead to PHP Code Execution - Patch ASAP</title>
+    <id>urn:cybersecnews:item:247</id>
+    <published>2026-08-07T16:55:10.324092+00:00</published>
+    <updated>2026-08-07T16:55:10.324092+00:00</updated>
+    <link href="https://thehackernews.com/2026/08/new-wordpress-pre-auth-xss-could-lead.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · xss · CVE-2026-64638&lt;/em&gt;&lt;/p&gt;&lt;p&gt;WordPress versions prior to the latest patch contain a pre-authentication reflected XSS vulnerability in the login screen (CVE-2026-64638, CVSS 8.9) affecting all versions of the CMS. The flaw can be chained to achieve PHP code execution when an administrator visits an attacker-controlled page, representing a critical risk to site integrity and data. There is evidence of active exploitation in the wild. Immediate patching to the latest WordPress release is mandatory; additionally, restrict admin access and implement Web Application Firewall (WAF) rules to block malicious payloads targeting the login endpoint.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/08/new-wordpress-pre-auth-xss-could-lead.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Screen Sharing: Gefährliche MacOS-Lücke lässt Angreifer Apple-Systeme kapern</title>
     <id>urn:cybersecnews:item:246</id>
@@ -858,50 +903,5 @@
     <link href="https://github.com/advisories/GHSA-7gfh-x38p-prh3" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Velocity.js v2.1.6 is vulnerable to Remote Code Execution via property-read expressions that reach the Function constructor, bypassing the previous GHSA-j658-c2gf-x6pq fix which only protected #set assignments. An attacker can execute arbitrary code by injecting malicious Velocity templates into applications that render user-controlled input. This is critical severity and likely exploited given the public disclosure. Upgrade to patched version immediately or implement strict template input validation and sandboxing if upgrade is not immediately feasible.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-7gfh-x38p-prh3"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Prompty: Server-Side Template Injection to Remote Code Execution in the @prompty/core Nunjucks Renderer</title>
-    <id>urn:cybersecnews:item:151</id>
-    <published>2026-07-24T17:39:36.619626+00:00</published>
-    <updated>2026-07-24T17:39:36.619626+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-w28w-gp39-m4p6" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · ssti-rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;The @prompty/core npm package (versions ≤0.1.4 and ≤2.0.0-beta.4) contains a critical server-side template injection vulnerability in its Nunjucks renderer that allows remote code execution through unrestricted JavaScript member access on template objects. An attacker can craft malicious .prompty template files that traverse constructor and prototype properties to execute arbitrary JavaScript in the Node.js host process. This vulnerability affects applications rendering untrusted templates from community sources, cloned repositories, or LLM-generated content. Immediate patching to versions &gt;0.1.4 and &gt;2.0.0-beta.4 is required; alternatively, restrict template rendering to trusted sources only and implement input validation for .prompty files.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-w28w-gp39-m4p6"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>kin-openapi: ValidationHandler.Load() Fail-Open Authentication Bypass via NoopAuthenticationFunc Default</title>
-    <id>urn:cybersecnews:item:150</id>
-    <published>2026-07-24T17:39:36.618484+00:00</published>
-    <updated>2026-07-24T17:39:36.618484+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-r277-6w6q-xmqw" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass&lt;/em&gt;&lt;/p&gt;&lt;p&gt;The kin-openapi Go library's ValidationHandler.Load() function silently defaults a missing AuthenticationFunc to NoopAuthenticationFunc, which unconditionally approves all requests regardless of credential validity, allowing unauthenticated attackers to bypass OpenAPI security requirements. This critical vulnerability affects any application using kin-openapi that relies on the library's authentication validation without explicitly providing an AuthenticationFunc implementation. The fail-open design creates a dangerous default that violates security-by-default principles. Update to a patched version immediately and audit all deployments to ensure proper AuthenticationFunc implementations are in place rather than relying on defaults.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-r277-6w6q-xmqw"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Hacker Runs Hermes AI Agent Unattended for Post-Exploitation at Thai Finance Ministry</title>
-    <id>urn:cybersecnews:item:149</id>
-    <published>2026-07-24T17:39:36.617723+00:00</published>
-    <updated>2026-07-24T17:39:36.617723+00:00</updated>
-    <link href="https://thehackernews.com/2026/07/hacker-runs-hermes-ai-agent-unattended.html" rel="alternate" />
-    <category term="red-team" />
-    <content type="html">&lt;p&gt;&lt;em&gt;red-team · post-exploitation&lt;/em&gt;&lt;/p&gt;&lt;p&gt;An unnamed threat actor deployed the Hermes AI agent on a rented server targeting Thailand's Ministry of Finance, disabling safety guardrails that typically require authorization before executing commands. The agent autonomously performed post-exploitation activities including host reconnaissance, privilege escalation probing, and filesystem enumeration across the ministry's network. This represents a novel attack vector leveraging AI automation for hands-off persistence and lateral movement without direct human operator involvement. Organizations should immediately audit AI tool deployments, enforce strict permission controls on administrative commands, implement network segmentation, and monitor for anomalous automated activity patterns indicative of AI-driven intrusion activity.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/hacker-runs-hermes-ai-agent-unattended.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Bing Images Flaws Let Crafted SVGs Run Commands as SYSTEM on Microsoft's Servers</title>
-    <id>urn:cybersecnews:item:148</id>
-    <published>2026-07-24T17:39:36.616247+00:00</published>
-    <updated>2026-07-24T17:39:36.616247+00:00</updated>
-    <link href="https://thehackernews.com/2026/07/bing-images-flaws-let-crafted-svgs-run.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-32194&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Bing Images image processing service contained XML external entity (XXE) and deserialization vulnerabilities in SVG handling that allowed unauthenticated remote code execution with SYSTEM/root privileges on Microsoft's production servers. An attacker could craft malicious SVG files to execute arbitrary commands on the image-processing infrastructure affecting the entire fleet. Microsoft assigned critical severity ratings (CVE-2026-32194 and related CVEs) and this vulnerability was actively exploited. Apply the issued security patches immediately to all Bing image processing workers and implement strict SVG validation and disable XXE processing in XML parsers.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/bing-images-flaws-let-crafted-svgs-run.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>ChatGPT AgentForger Flaw Could Deploy Rogue Workspace Agents via a Phishing Link</title>
-    <id>urn:cybersecnews:item:147</id>
-    <published>2026-07-24T17:39:36.615021+00:00</published>
-    <updated>2026-07-24T17:39:36.615021+00:00</updated>
-    <link href="https://thehackernews.com/2026/07/chatgpt-agentforger-flaw-could-deploy.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass&lt;/em&gt;&lt;/p&gt;&lt;p&gt;ChatGPT Workspace Agents contained a critical authorization bypass vulnerability (AgentForger) enabling attackers to create, authorize, and deploy rogue autonomous agents within victim organizations via a single phishing link. The flaw allowed unauthorized agent deployment without explicit user approval, posing severe risk to organizational security and data integrity. OpenAI patched the vulnerability on June 8, 2024. Organizations should verify all deployed agents in their Workspace environments and reinforce user security awareness to prevent phishing-based agent injection attacks.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/chatgpt-agentforger-flaw-could-deploy.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
   </entry>
 </feed>
