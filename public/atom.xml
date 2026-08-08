@@ -3,7 +3,43 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-08-07T16:55:10.328295+00:00</updated>
+  <updated>2026-08-08T01:38:09.871057+00:00</updated>
+  <entry>
+    <title>CodeIgniter: SQL injection in Query Builder deleteBatch() when used with where() conditions (CVE-2026-63221)</title>
+    <id>urn:cybersecnews:item:255</id>
+    <published>2026-08-08T01:38:09.871057+00:00</published>
+    <updated>2026-08-08T01:38:09.871057+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-c9w5-rwh3-7pm9" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · sqli · CVE-2026-63221&lt;/em&gt;&lt;/p&gt;&lt;p&gt;CodeIgniter 4's Query Builder deleteBatch() method contains a critical SQL injection vulnerability when combined with where() conditions, as bound values from WHERE clauses are substituted without proper escaping or quoting. Applications using user-controlled input in where() statements before calling deleteBatch() are vulnerable to SQL injection attacks. There is no indication this is currently exploited in the wild. Affected applications should immediately upgrade to a patched version and audit any deleteBatch() calls preceded by where() conditions for potential exploitation.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-c9w5-rwh3-7pm9"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>CodeIgniter: Uploaded file extension validation bypass in `is_image` and `mime_in` rules (CVE-2026-63223)</title>
+    <id>urn:cybersecnews:item:254</id>
+    <published>2026-08-08T01:38:09.869742+00:00</published>
+    <updated>2026-08-08T01:38:09.869742+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-mmj4-63m4-r6h5" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · file-upload-bypass · CVE-2026-63223&lt;/em&gt;&lt;/p&gt;&lt;p&gt;CodeIgniter 4 framework (before v4.7.4) contains an unsafe file upload validation bypass in the `is_image` and `mime_in` validation rules that allows attackers to upload executable files with image MIME types, leading to remote code execution when files are saved with client-supplied names in web-accessible directories. This is critical severity and likely exploited in the wild given the common misconfiguration patterns involved. Immediately upgrade to v4.7.4 or later; as a workaround, implement independent safe extension validation using `ext_in` rule, avoid using client-supplied filenames, and store uploads outside web-accessible directories.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-mmj4-63m4-r6h5"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>crypto-js: Insufficient Entropy in Cryptographic Secret Generation via Vulnerable CryptoJS Dependency Chain (CVE-2026-71851)</title>
+    <id>urn:cybersecnews:item:253</id>
+    <published>2026-08-08T01:38:09.868407+00:00</published>
+    <updated>2026-08-08T01:38:09.868407+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-rg76-677x-56q9" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · insufficient-entropy · CVE-2026-71851&lt;/em&gt;&lt;/p&gt;&lt;p&gt;CryptoJS library versions containing `WordArray.random()` suffer from insufficient entropy in cryptographic secret generation, producing only ~2^39 bits of effective entropy for 128-bit requests and ~2^47 for 256-bit requests instead of the full keyspace. This vulnerability is critical as it allows attackers to enumerate possible cryptographic secrets on commodity hardware, and is exploited in the wild with downstream wallet applications using the function for BIP39 recovery phrase generation. Immediate action required: update CryptoJS to a patched version and audit any applications using this library for key generation, particularly cryptocurrency wallets and sensitive credential systems, regenerating compromised secrets.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-rg76-677x-56q9"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Metabase SQLi zero-day exploited in customer data-theft attacks</title>
+    <id>urn:cybersecnews:item:252</id>
+    <published>2026-08-08T01:38:09.865796+00:00</published>
+    <updated>2026-08-08T01:38:09.865796+00:00</updated>
+    <link href="https://www.bleepingcomputer.com/news/security/framework-tally-disclose-metabase-data-theft-attacks/" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · sqli&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Metabase is affected by a critical SQL injection zero-day vulnerability currently exploited in the wild for unauthorized data theft from customer instances. The flaw allows unauthenticated attackers to execute arbitrary SQL queries and exfiltrate sensitive data, with confirmed compromises at Framework and Tally. Immediate patching is strongly recommended; monitor for indicators of compromise including unusual database queries and data access patterns. If patching is delayed, implement network segmentation and access controls to restrict Metabase instance exposure.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/framework-tally-disclose-metabase-data-theft-attacks/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Living off the coding agent: Two tales of tunnels and LaunchAgents</title>
     <id>urn:cybersecnews:item:251</id>
@@ -867,41 +903,5 @@
     <link href="https://github.com/advisories/GHSA-rjg6-39jm-rgg4" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · account-takeover&lt;/em&gt;&lt;/p&gt;&lt;p&gt;@better-auth/scim plugin is vulnerable to account takeover and stale access token issues due to provider-ID collision. An authenticated attacker can generate SCIM tokens that allow them to assume control of other users' accounts or maintain access via stale tokens when custom provider IDs are reused across different authentication providers. The vulnerability is critical in severity and affects applications using the default `canGenerateToken` policy or custom policies that don't validate provider ID uniqueness. Users should immediately update @better-auth/scim to the patched version and audit their provider-ID configurations to ensure no collisions exist between SSO, SAML, OIDC, OAuth, and social authentication providers.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-rjg6-39jm-rgg4"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Microsoft Kiota: Path/URL injection into generated Copilot plugin manifest via x-ai-* extensions (CVE-2026-59864)</title>
-    <id>urn:cybersecnews:item:155</id>
-    <published>2026-07-24T17:39:36.623151+00:00</published>
-    <updated>2026-07-24T17:39:36.623151+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-4jwf-m4wg-8p66" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · path-injection · CVE-2026-59864&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Microsoft Kiota's plugin generation (`kiota plugin add/generate`) fails to validate file paths from OpenAPI x-ai-* extensions, allowing attackers to inject path traversal sequences (../) or absolute paths into generated Copilot plugin manifests via `static_template.file` fields. This critical vulnerability (CVE-2026-59864) affects Microsoft.OpenApi.Kiota and Microsoft.OpenApi.Kiota.Builder NuGet packages and could enable unauthorized file access or plugin manipulation if exploited through compromised OpenAPI specifications. Organizations should immediately update affected Kiota packages and validate OpenAPI sources before processing them; implement input validation for file paths in generated manifests as defense-in-depth. No evidence of wild exploitation reported, but the attack surface is broad given reliance on external OpenAPI definitions.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-4jwf-m4wg-8p66"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Microsoft Kiota: Command injection via x-ms-kiota-info dependencyInstallCommand surfaced by `kiota info` (CVE-2026-59865)</title>
-    <id>urn:cybersecnews:item:154</id>
-    <published>2026-07-24T17:39:36.622316+00:00</published>
-    <updated>2026-07-24T17:39:36.622316+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-hq9q-27g5-qwpj" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · command-injection · CVE-2026-59865&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Microsoft Kiota CLI tool contains a command injection vulnerability in the `kiota info` command where unsanitized `x-ms-kiota-info` extension data from OpenAPI specifications is presented to users as trusted installation guidance. An attacker controlling or compromising an OpenAPI specification could inject arbitrary commands that execute with user privileges when developers follow the suggested installation instructions. This is a critical severity vulnerability with potential for active exploitation given Kiota's use in developer workflows. Developers should immediately update to patched versions of nuget/Microsoft.OpenApi.Kiota and nuget/Microsoft.OpenApi.Kiota.Builder and avoid running `kiota info` against untrusted OpenAPI specifications.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-hq9q-27g5-qwpj"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>seroval: `seroval.fromJSON()` Promise resolver type confusion invokes attacker-controlled methods during deserialization (CVE-2026-59940)</title>
-    <id>urn:cybersecnews:item:153</id>
-    <published>2026-07-24T17:39:36.621568+00:00</published>
-    <updated>2026-07-24T17:39:36.621568+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-mv8w-475r-vwqw" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · type-confusion · CVE-2026-59940&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Seroval's `fromJSON()` function contains a type confusion vulnerability (CVE-2026-59940) where attacker-controlled JSON input can bypass Promise resolver verification, allowing execution of arbitrary methods during deserialization when plugins are enabled. This is critical severity and affects npm/seroval. Applications deserializing untrusted data with plugins enabled should immediately update to a patched version; as a workaround, avoid deserializing untrusted JSON or disable plugin functionality if feasible.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-mv8w-475r-vwqw"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Velocity.js: Remote Code Execution via property-read to Function constructor (bypass of GHSA-j658-c2gf-x6pq fix)</title>
-    <id>urn:cybersecnews:item:152</id>
-    <published>2026-07-24T17:39:36.620790+00:00</published>
-    <updated>2026-07-24T17:39:36.620790+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-7gfh-x38p-prh3" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Velocity.js v2.1.6 is vulnerable to Remote Code Execution via property-read expressions that reach the Function constructor, bypassing the previous GHSA-j658-c2gf-x6pq fix which only protected #set assignments. An attacker can execute arbitrary code by injecting malicious Velocity templates into applications that render user-controlled input. This is critical severity and likely exploited given the public disclosure. Upgrade to patched version immediately or implement strict template input validation and sandboxing if upgrade is not immediately feasible.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-7gfh-x38p-prh3"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
   </entry>
 </feed>
