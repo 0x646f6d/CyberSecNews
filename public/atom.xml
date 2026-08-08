@@ -3,7 +3,16 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-08-08T01:38:09.871057+00:00</updated>
+  <updated>2026-08-08T16:32:51.324315+00:00</updated>
+  <entry>
+    <title>Hackers breach TrueConf to trojanize client installers with backdoors</title>
+    <id>urn:cybersecnews:item:256</id>
+    <published>2026-08-08T16:32:51.324315+00:00</published>
+    <updated>2026-08-08T16:32:51.324315+00:00</updated>
+    <link href="https://www.bleepingcomputer.com/news/security/hackers-breach-trueconf-to-trojanize-client-installers-with-backdoors/" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · unpatched-server-vulnerability&lt;/em&gt;&lt;/p&gt;&lt;p&gt;TrueConf video conferencing software is affected by vulnerabilities in unpatched servers that allow attackers to replace legitimate client installers with trojanized versions containing backdoors. The Head Mare hacktivist group is actively exploiting these flaws in the wild to deliver persistent remote access capabilities. This represents high severity risk as compromised installers can affect multiple endpoints organization-wide. Immediately patch all TrueConf servers to the latest version and verify installer integrity before deployment; consider revoking and reissuing client installations if compromise is suspected.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/hackers-breach-trueconf-to-trojanize-client-installers-with-backdoors/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>CodeIgniter: SQL injection in Query Builder deleteBatch() when used with where() conditions (CVE-2026-63221)</title>
     <id>urn:cybersecnews:item:255</id>
@@ -894,14 +903,5 @@
     <link href="https://github.com/advisories/GHSA-w4hw-qcx7-56pr" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · shell-injection&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Shescape on Windows with CMD shell is vulnerable to shell injection via unescaped parentheses in the escape and escapeAll APIs, allowing attackers to break out of quoted contexts and execute arbitrary commands. The vulnerability affects users who explicitly configure the shell parameter to CMD or rely on CMD as the default shell. This is a critical severity issue that could enable unauthenticated remote code execution depending on how the library is used. Users should update to the patched version immediately and review any applications using Shescape with CMD shells to assess exposure.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-w4hw-qcx7-56pr"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>@better-auth/scim: account takeover and stale access via SCIM provider-id collision</title>
-    <id>urn:cybersecnews:item:156</id>
-    <published>2026-07-24T17:39:36.624179+00:00</published>
-    <updated>2026-07-24T17:39:36.624179+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-rjg6-39jm-rgg4" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · account-takeover&lt;/em&gt;&lt;/p&gt;&lt;p&gt;@better-auth/scim plugin is vulnerable to account takeover and stale access token issues due to provider-ID collision. An authenticated attacker can generate SCIM tokens that allow them to assume control of other users' accounts or maintain access via stale tokens when custom provider IDs are reused across different authentication providers. The vulnerability is critical in severity and affects applications using the default `canGenerateToken` policy or custom policies that don't validate provider ID uniqueness. Users should immediately update @better-auth/scim to the patched version and audit their provider-ID configurations to ensure no collisions exist between SSO, SAML, OIDC, OAuth, and social authentication providers.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-rjg6-39jm-rgg4"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
   </entry>
 </feed>
