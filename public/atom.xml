@@ -3,7 +3,25 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-08-08T16:32:51.324315+00:00</updated>
+  <updated>2026-08-10T16:54:20.839888+00:00</updated>
+  <entry>
+    <title>Abyssos: Technical Analysis of a New Modular RAT</title>
+    <id>urn:cybersecnews:item:258</id>
+    <published>2026-08-10T16:54:20.839888+00:00</published>
+    <updated>2026-08-10T16:54:20.839888+00:00</updated>
+    <link href="https://www.zscaler.com/blogs/security-research/abyssos-technical-analysis-new-modular-rat" rel="alternate" />
+    <category term="red-team" />
+    <content type="html">&lt;p&gt;&lt;em&gt;red-team · c2&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Abyssos is a modular remote access trojan (RAT) written in C++ targeting Windows systems with capabilities including credential theft, file exfiltration, VNC-based remote access, keylogging, and UAC bypass. The malware uses LLVM-based obfuscation (control flow flattening, string encryption), AES-GCM encryption for C2 communication, and employs anti-analysis techniques including hypervisor detection and process name checking. While currently in active development with limited observed deployment, Abyssos represents a significant threat due to its modular architecture enabling ongoing capability expansion and evasion techniques. Organizations should implement endpoint detection and response (EDR) tools with behavioral analysis capabilities, monitor for suspicious VNC and remote shell sessions, block identified C2 IP addresses (213.145.86.42, 209.99.184.223), and maintain updated antivirus/anti-malware solutions with Zscaler's threat definitions (Win64.PWS.Abyssos).&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.zscaler.com/blogs/security-research/abyssos-technical-analysis-new-modular-rat"&gt;Read more&lt;/a&gt; · Source: zscaler-threatlabz&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Schadcode-Attacken auf Progress LoadMaster im Gange</title>
+    <id>urn:cybersecnews:item:257</id>
+    <published>2026-08-10T16:54:20.838326+00:00</published>
+    <updated>2026-08-10T16:54:20.838326+00:00</updated>
+    <link href="https://www.heise.de/news/Schadcode-Attacken-auf-Progress-LoadMaster-im-Gange-11404612.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Progress LoadMaster is actively under attack by threat actors exploiting unspecified vulnerabilities. Exploitation is confirmed in the wild. Security patches are available and should be applied immediately to all affected LoadMaster instances. Organizations running LoadMaster should prioritize patching and monitor for indicators of compromise, as active attacks indicate high risk.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.heise.de/news/Schadcode-Attacken-auf-Progress-LoadMaster-im-Gange-11404612.html"&gt;Read more&lt;/a&gt; · Source: heise-security&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Hackers breach TrueConf to trojanize client installers with backdoors</title>
     <id>urn:cybersecnews:item:256</id>
@@ -885,23 +903,5 @@
     <link href="https://github.com/advisories/GHSA-p279-2cqp-84jg" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass&lt;/em&gt;&lt;/p&gt;&lt;p&gt;OpenDJ's SASL PLAIN mechanism improperly validates proxy authorization requests by checking only the PROXIED_AUTH privilege while bypassing the mayProxy ACI scope check, allowing any account with proxied-auth privilege to assume any resolvable non-root identity. This vulnerability is critical as it circumvents access control restrictions that are properly enforced by all other proxy paths in OpenDJ. The issue affects org.openidentityplatform.opendj:opendj-server-legacy and should be patched immediately by upgrading to a patched version that validates both PROXIED_AUTH privilege and mayProxy ACI checks for SASL PLAIN authzid resolution.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-p279-2cqp-84jg"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>sm-crypto: Predictable SM2 key generation in Node.js: default RNG uses Math.random + wall clock</title>
-    <id>urn:cybersecnews:item:158</id>
-    <published>2026-07-25T02:38:15.410893+00:00</published>
-    <updated>2026-07-25T02:38:15.410893+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-vh45-f885-3848" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · weak-rng&lt;/em&gt;&lt;/p&gt;&lt;p&gt;sm-crypto npm package (version 0.4.0) generates SM2 private keys and signing ephemeral scalars using an inadequate RNG that defaults to Math.random() and wall clock timing in Node.js environments because window.crypto.getRandomValues is unavailable. This critical vulnerability makes SM2 key generation predictable and allows recovery of private keys and forging of signatures. There is no evidence of active exploitation, but immediate patching is essential; users should upgrade to a patched version and consider regenerating any keys created with sm-crypto 0.4.0 in Node.js.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-vh45-f885-3848"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Shescape: Shell injection via unescaped parentheses on Windows with CMD</title>
-    <id>urn:cybersecnews:item:157</id>
-    <published>2026-07-25T02:38:15.408776+00:00</published>
-    <updated>2026-07-25T02:38:15.408776+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-w4hw-qcx7-56pr" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · shell-injection&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Shescape on Windows with CMD shell is vulnerable to shell injection via unescaped parentheses in the escape and escapeAll APIs, allowing attackers to break out of quoted contexts and execute arbitrary commands. The vulnerability affects users who explicitly configure the shell parameter to CMD or rely on CMD as the default shell. This is a critical severity issue that could enable unauthenticated remote code execution depending on how the library is used. Users should update to the patched version immediately and review any applications using Shescape with CMD shells to assess exposure.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-w4hw-qcx7-56pr"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
   </entry>
 </feed>
