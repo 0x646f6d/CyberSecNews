@@ -3,7 +3,16 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-08-10T16:54:20.839888+00:00</updated>
+  <updated>2026-08-11T08:55:56.660353+00:00</updated>
+  <entry>
+    <title>Sicherheitslücken: Angreifer können Wachdienst von ClamAV stören</title>
+    <id>urn:cybersecnews:item:259</id>
+    <published>2026-08-11T08:55:56.660353+00:00</published>
+    <updated>2026-08-11T08:55:56.660353+00:00</updated>
+    <link href="https://www.heise.de/news/Sicherheitsluecken-Angreifer-koennen-Wachdienst-von-ClamAV-stoeren-11409730.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · code-execution&lt;/em&gt;&lt;/p&gt;&lt;p&gt;ClamAV open-source antivirus scanner contains vulnerabilities allowing attackers to disrupt the scanning daemon and potentially execute malicious code on affected systems. The vulnerabilities affect the core scanning functionality and daemon operations, with high severity impact including potential code execution. No indication provided of active exploitation in the wild. Apply available security patches immediately and verify ClamAV installations are updated to the latest patched version.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.heise.de/news/Sicherheitsluecken-Angreifer-koennen-Wachdienst-von-ClamAV-stoeren-11409730.html"&gt;Read more&lt;/a&gt; · Source: heise-security&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Abyssos: Technical Analysis of a New Modular RAT</title>
     <id>urn:cybersecnews:item:258</id>
@@ -894,14 +903,5 @@
     <link href="https://github.com/advisories/GHSA-68r5-9hpg-7qw9" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · ssrf&lt;/em&gt;&lt;/p&gt;&lt;p&gt;OpenDJ DSML-servlet versions through 5.1.1 contain a critical unauthenticated SSRF vulnerability in the DSMLv2 SOAP gateway that allows attackers to dereference arbitrary URIs without scheme validation or egress filtering. Attackers can exploit this to perform server-side request forgery against internal services and cloud metadata endpoints, read local files via file: URIs, and trigger unbounded-read denial of service attacks. The vulnerability is reachable by default without authentication and affects the opendj-dsml-servlet component. Immediate patching is required; upgrade to a version beyond 5.1.1 if available, or disable the DSMLv2 gateway and implement strict egress filtering and authentication controls as interim mitigation.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-68r5-9hpg-7qw9"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>OpenDJ SASL PLAIN authzid bypassing the proxy ACI scope check</title>
-    <id>urn:cybersecnews:item:159</id>
-    <published>2026-07-25T02:38:15.412413+00:00</published>
-    <updated>2026-07-25T02:38:15.412413+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-p279-2cqp-84jg" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass&lt;/em&gt;&lt;/p&gt;&lt;p&gt;OpenDJ's SASL PLAIN mechanism improperly validates proxy authorization requests by checking only the PROXIED_AUTH privilege while bypassing the mayProxy ACI scope check, allowing any account with proxied-auth privilege to assume any resolvable non-root identity. This vulnerability is critical as it circumvents access control restrictions that are properly enforced by all other proxy paths in OpenDJ. The issue affects org.openidentityplatform.opendj:opendj-server-legacy and should be patched immediately by upgrading to a patched version that validates both PROXIED_AUTH privilege and mayProxy ACI checks for SASL PLAIN authzid resolution.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-p279-2cqp-84jg"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
   </entry>
 </feed>
