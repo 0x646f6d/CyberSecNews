@@ -3,7 +3,34 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-08-11T08:55:56.660353+00:00</updated>
+  <updated>2026-08-11T16:58:15.849141+00:00</updated>
+  <entry>
+    <title>SeaweedFS: Unauthenticated SSRF with response read-back via VolumeServer.FetchAndWriteNeedle (CVE-2026-73080)</title>
+    <id>urn:cybersecnews:item:262</id>
+    <published>2026-08-11T16:58:15.849141+00:00</published>
+    <updated>2026-08-11T16:58:15.849141+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-87fv-vqqr-m4jr" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · ssrf · CVE-2026-73080&lt;/em&gt;&lt;/p&gt;&lt;p&gt;SeaweedFS versions before 4.24 contain a critical unauthenticated Server-Side Request Forgery (SSRF) vulnerability in the VolumeServer.FetchAndWriteNeedle RPC endpoint that allows remote attackers to request arbitrary URLs and read responses, including cloud metadata endpoints. The vulnerability has no authentication or target validation, enabling disclosure of sensitive instance credentials and internal network information on affected systems. This is actively exploitable by any network-accessible attacker reaching the gRPC port. Upgrade to SeaweedFS 4.24 or later immediately; restrict network access to volume server gRPC ports as a interim mitigation.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-87fv-vqqr-m4jr"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Gunra Ransomware Exploits Fortinet and Schneider Electric Flaws to Breach Networks</title>
+    <id>urn:cybersecnews:item:261</id>
+    <published>2026-08-11T16:58:15.848074+00:00</published>
+    <updated>2026-08-11T16:58:15.848074+00:00</updated>
+    <link href="https://thehackernews.com/2026/08/gunra-ransomware-exploits-fortinet-and.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Gunra ransomware exploits unpatched vulnerabilities in Fortinet FortiOS and Schneider Electric EcoStruxure products to establish network access, targeting critical infrastructure sectors including healthcare, finance, and government. The attacks leverage CVE-2024-21762 (Fortinet) and Schneider Electric authentication bypass flaws, with confirmed active exploitation in the wild. Organizations should immediately patch affected Fortinet and Schneider Electric systems, implement network segmentation to isolate critical assets, and enhance monitoring for lateral movement and ransomware deployment indicators. Prioritize external-facing systems and conduct forensic analysis on potentially compromised networks to identify persistence mechanisms.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/08/gunra-ransomware-exploits-fortinet-and.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Patchday: SAP Commerce Cloud komplett kompromittierbar</title>
+    <id>urn:cybersecnews:item:260</id>
+    <published>2026-08-11T16:58:15.846938+00:00</published>
+    <updated>2026-08-11T16:58:15.846938+00:00</updated>
+    <link href="https://www.heise.de/news/Patchday-SAP-Commerce-Cloud-komplett-kompromittierbar-11410169.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · multiple&lt;/em&gt;&lt;/p&gt;&lt;p&gt;SAP has patched multiple critical vulnerabilities across its Commerce Cloud and broader product portfolio. The vulnerabilities could allow complete compromise of affected SAP Commerce Cloud instances through various attack vectors including authentication bypass and code execution. These are actively being exploited or have high exploitation risk in the wild. Organizations running SAP Commerce Cloud should apply all available security updates immediately, prioritizing critical-rated patches, and review SAP Security Notes for their specific deployments.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.heise.de/news/Patchday-SAP-Commerce-Cloud-komplett-kompromittierbar-11410169.html"&gt;Read more&lt;/a&gt; · Source: heise-security&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Sicherheitslücken: Angreifer können Wachdienst von ClamAV stören</title>
     <id>urn:cybersecnews:item:259</id>
@@ -876,32 +903,5 @@
     <link href="https://github.com/advisories/GHSA-q6x4-v3qx-85qw" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · sqli&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Budibase's MySQL integration (npm/@budibase/server) contains a critical SQL injection vulnerability exploitable through the `multipleStatements: true` configuration, which allows attackers to execute arbitrary SQL commands via user input and potentially compromise entire databases. This vulnerability is actively exploitable and likely being targeted in the wild given its critical severity rating. Immediate patching is required; disable `multipleStatements: true` in MySQL connection configurations as a temporary mitigation while awaiting the vendor security patch. Review application logs and database access patterns for signs of exploitation.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-q6x4-v3qx-85qw"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Budibase: OIDC SSO account takeover: incoming identity linked by email without checking email_verified</title>
-    <id>urn:cybersecnews:item:162</id>
-    <published>2026-07-25T02:38:15.415408+00:00</published>
-    <updated>2026-07-25T02:38:15.415408+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-hp6v-6jw7-gv2f" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Budibase's OIDC SSO implementation (npm/@budibase/server) links incoming identities to existing accounts by email address alone without validating the OIDC `email_verified` claim, allowing account takeover. An attacker can create an OIDC identity with an unverified email matching a victim's Budibase account and gain full access to that account with all existing roles preserved. This is critical severity and exploitable in the wild. Upgrade Budibase immediately to a patched version that enforces `email_verified` validation before linking OIDC identities to existing accounts.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-hp6v-6jw7-gv2f"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Budibase: Unauthenticated REST Datasource Credential Theft via Cross-Origin Auth Leak</title>
-    <id>urn:cybersecnews:item:161</id>
-    <published>2026-07-25T02:38:15.414533+00:00</published>
-    <updated>2026-07-25T02:38:15.414533+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-mqhr-6j6h-74p5" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · credential-theft&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Budibase npm package prior to patched versions contains a critical vulnerability in REST datasource handling where stored credentials (Bearer tokens, Basic auth, static headers) are attached to outgoing requests before destination validation occurs. An attacker can redirect datasource queries to arbitrary hosts via absolute URLs or parameters, exfiltrating credentials to attacker-controlled servers; exploitation is trivial since queries can be published with PUBLIC role requiring no authentication. This vulnerability is likely being exploited given the ease of weaponization and public disclosure. Immediately update @budibase/server to the patched version and rotate all stored REST datasource credentials; review query configurations for suspicious host redirections.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-mqhr-6j6h-74p5"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>OpenDJ unauthenticated SSRF, local file read and unbounded-read DoS in the DSMLv2 gateway</title>
-    <id>urn:cybersecnews:item:160</id>
-    <published>2026-07-25T02:38:15.413652+00:00</published>
-    <updated>2026-07-25T02:38:15.413652+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-68r5-9hpg-7qw9" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · ssrf&lt;/em&gt;&lt;/p&gt;&lt;p&gt;OpenDJ DSML-servlet versions through 5.1.1 contain a critical unauthenticated SSRF vulnerability in the DSMLv2 SOAP gateway that allows attackers to dereference arbitrary URIs without scheme validation or egress filtering. Attackers can exploit this to perform server-side request forgery against internal services and cloud metadata endpoints, read local files via file: URIs, and trigger unbounded-read denial of service attacks. The vulnerability is reachable by default without authentication and affects the opendj-dsml-servlet component. Immediate patching is required; upgrade to a version beyond 5.1.1 if available, or disable the DSMLv2 gateway and implement strict egress filtering and authentication controls as interim mitigation.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-68r5-9hpg-7qw9"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
   </entry>
 </feed>
