@@ -3,7 +3,70 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-08-11T16:58:15.849141+00:00</updated>
+  <updated>2026-08-12T01:55:41.248083+00:00</updated>
+  <entry>
+    <title>ShieldBreak - August 2026 disclosure</title>
+    <id>urn:cybersecnews:item:269</id>
+    <published>2026-08-12T01:55:41.248083+00:00</published>
+    <updated>2026-08-12T01:55:41.248083+00:00</updated>
+    <link href="https://blog.projectnightcrawler.dev/posts/2026-08-11-shieldbreak-august-2026-disclosure/" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · unknown&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Windows Defender is affected by a critical zero-day vulnerability disclosed as ShieldBreak in August 2026. The exploit appears to be actively shared across public repositories, indicating active development and potential in-the-wild exploitation risk. Immediate action required: deploy emergency patching from Microsoft or implement temporary mitigation controls such as behavioral monitoring on Defender processes and network segmentation. Escalate to threat intelligence teams for detailed technical analysis of shared PoC code to assess impact scope and exploitation likelihood in your environment.&lt;/p&gt;&lt;p&gt;&lt;a href="https://blog.projectnightcrawler.dev/posts/2026-08-11-shieldbreak-august-2026-disclosure/"&gt;Read more&lt;/a&gt; · Source: projectnightcrawler&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Shattering the Dream – When a Job Offer Becomes a Zero-Day Attack</title>
+    <id>urn:cybersecnews:item:268</id>
+    <published>2026-08-12T01:55:41.247029+00:00</published>
+    <updated>2026-08-12T01:55:41.247029+00:00</updated>
+    <link href="https://research.checkpoint.com/2026/shattering-the-dream-when-a-job-offer-becomes-a-zero-day-attack/" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Operation Dream Job campaign targets defense, aerospace, and aviation sectors using trojanized PDF viewers that execute malicious payloads—a technique leveraging social engineering via fake job offers to distribute modified legitimate software. The attack exploits the trust users place in standard applications, with zero-day implications through custom payload delivery mechanisms. This threat is actively exploited in the wild and primarily affects Windows-based systems in critical infrastructure sectors. Organizations should enforce strict application whitelisting, disable unnecessary file type associations, implement email security controls to block suspicious job recruitment communications, and maintain updated endpoint detection and response solutions to identify anomalous PDF viewer behavior.&lt;/p&gt;&lt;p&gt;&lt;a href="https://research.checkpoint.com/2026/shattering-the-dream-when-a-job-offer-becomes-a-zero-day-attack/"&gt;Read more&lt;/a&gt; · Source: checkpoint-research&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Microsoft Patch Tuesday August 2026, (Tue, Aug 11th)</title>
+    <id>urn:cybersecnews:item:267</id>
+    <published>2026-08-12T01:55:41.245165+00:00</published>
+    <updated>2026-08-12T01:55:41.245165+00:00</updated>
+    <link href="https://isc.sans.edu/diary/rss/33236" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · multiple&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Microsoft released patches for 418 vulnerabilities in August 2026 Patch Tuesday, including 62 critical issues affecting Windows, container environments, QUIC protocol implementation, and DNS Server. One vulnerability is confirmed exploited in the wild and two were publicly disclosed zero-days prior to patching. Critical remote code execution flaws in QUIC and DNS Server, along with Windows privilege escalation and container tampering vulnerabilities, pose significant risk. Immediate patching is strongly recommended, prioritizing the actively exploited vulnerability and critical RCE issues.&lt;/p&gt;&lt;p&gt;&lt;a href="https://isc.sans.edu/diary/rss/33236"&gt;Read more&lt;/a&gt; · Source: sans-isc&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Microsoft August 2026 Patch Tuesday fixes 400 flaws, 3 zero-days</title>
+    <id>urn:cybersecnews:item:266</id>
+    <published>2026-08-12T01:55:41.244048+00:00</published>
+    <updated>2026-08-12T01:55:41.244048+00:00</updated>
+    <link href="https://www.bleepingcomputer.com/news/microsoft/microsoft-august-2026-patch-tuesday-fixes-400-flaws-3-zero-days/" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Microsoft released patches for 400 vulnerabilities across its product suite on August 2026 Patch Tuesday, including three zero-day flaws—one actively exploited in the wild and two publicly disclosed. Critical severity vulnerabilities affecting Windows, Office, and other core products are present in this batch. Immediate patching of all affected Microsoft systems is strongly recommended, particularly for the actively exploited zero-day, to prevent imminent compromise.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/microsoft/microsoft-august-2026-patch-tuesday-fixes-400-flaws-3-zero-days/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Microsoft releases Windows 10 KB5120249 extended security update</title>
+    <id>urn:cybersecnews:item:265</id>
+    <published>2026-08-12T01:55:41.242379+00:00</published>
+    <updated>2026-08-12T01:55:41.242379+00:00</updated>
+    <link href="https://www.bleepingcomputer.com/news/microsoft/windows-10-kb5120249-cumulative-update-released-with-fixes/" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · multiple&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Windows 10 versions 22H2 and 21H2 are affected by unspecified security vulnerabilities addressed in Extended Security Update KB5120249. The update patches multiple security issues whose specific details and severity levels are not disclosed in the summary provided. Microsoft recommends immediate installation of KB5120249 to maintain security posture for systems still running Windows 10 beyond mainstream support. Apply the patch promptly via Windows Update or manual download from Microsoft's support portal.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/microsoft/windows-10-kb5120249-cumulative-update-released-with-fixes/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Cisco warns of ASA and FTD VPN flaw exploited to crash devices</title>
+    <id>urn:cybersecnews:item:264</id>
+    <published>2026-08-12T01:55:41.241102+00:00</published>
+    <updated>2026-08-12T01:55:41.241102+00:00</updated>
+    <link href="https://www.bleepingcomputer.com/news/security/cisco-warns-of-asa-and-ftd-vpn-flaw-exploited-to-crash-devices/" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · dos&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Cisco Secure Firewall ASA and Threat Defense (FTD) are affected by a high-severity denial-of-service vulnerability in VPN functionality that is actively exploited in the wild to remotely crash devices. The vulnerability allows unauthenticated attackers to send specially crafted packets to the VPN service, causing immediate device failure without requiring authentication or user interaction. Cisco has released security updates addressing this flaw and recommends immediate patching of all affected ASA and FTD deployments. Organizations unable to patch immediately should apply network-level mitigations to restrict VPN access to trusted sources only.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/cisco-warns-of-asa-and-ftd-vpn-flaw-exploited-to-crash-devices/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Patch seit Mai verfügbar: Ransomware attackiert Microsoft Sharepoint</title>
+    <id>urn:cybersecnews:item:263</id>
+    <published>2026-08-12T01:55:41.146276+00:00</published>
+    <updated>2026-08-12T01:55:41.146276+00:00</updated>
+    <link href="https://www.heise.de/news/Ransomware-attackiert-ungepatchte-Sharepoint-Instanzen-11410721.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Microsoft SharePoint vulnerability CVE-2024-21625 is being actively exploited by ransomware operators in the wild. The flaw allows unauthenticated remote code execution on affected SharePoint Server installations. A patch has been available since May 2024; organizations must immediately apply this critical update or implement the available workarounds to prevent ransomware compromise. Prioritize patching all internet-facing SharePoint Server instances.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.heise.de/news/Ransomware-attackiert-ungepatchte-Sharepoint-Instanzen-11410721.html"&gt;Read more&lt;/a&gt; · Source: heise-security&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>SeaweedFS: Unauthenticated SSRF with response read-back via VolumeServer.FetchAndWriteNeedle (CVE-2026-73080)</title>
     <id>urn:cybersecnews:item:262</id>
@@ -101,7 +164,7 @@
     <updated>2026-08-08T01:38:09.865796+00:00</updated>
     <link href="https://www.bleepingcomputer.com/news/security/framework-tally-disclose-metabase-data-theft-attacks/" rel="alternate" />
     <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · sqli&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Metabase is affected by a critical SQL injection zero-day vulnerability currently exploited in the wild for unauthorized data theft from customer instances. The flaw allows unauthenticated attackers to execute arbitrary SQL queries and exfiltrate sensitive data, with confirmed compromises at Framework and Tally. Immediate patching is strongly recommended; monitor for indicators of compromise including unusual database queries and data access patterns. If patching is delayed, implement network segmentation and access controls to restrict Metabase instance exposure.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/framework-tally-disclose-metabase-data-theft-attacks/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · sqli · CVE-2026-72898&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Metabase is affected by a critical SQL injection zero-day vulnerability currently exploited in the wild for unauthorized data theft from customer instances. The flaw allows unauthenticated attackers to execute arbitrary SQL queries and exfiltrate sensitive data, with confirmed compromises at Framework and Tally. Immediate patching is strongly recommended; monitor for indicators of compromise including unusual database queries and data access patterns. If patching is delayed, implement network segmentation and access controls to restrict Metabase instance exposure.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/framework-tally-disclose-metabase-data-theft-attacks/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
   </entry>
   <entry>
     <title>Living off the coding agent: Two tales of tunnels and LaunchAgents</title>
@@ -840,68 +903,5 @@
     <link href="https://thehackernews.com/2026/07/public-exploit-released-for-patched.html" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;vBulletin 6.2.1 and earlier, and 6.1.6 and earlier, contain a pre-authentication remote code execution vulnerability allowing unauthenticated attackers to reach PHP's eval() function and execute arbitrary code without user interaction or administrative access. Public exploit details were released July 27, 2024, indicating active exploitation risk. This is critical severity with confirmed wild exploitation potential given public POC availability. Immediately patch to patched versions or implement network-level access controls restricting requests to affected code paths while patching is deployed.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/public-exploit-released-for-patched.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Java Spring Boot "heapdump" scans, (Mon, Jul 27th)</title>
-    <id>urn:cybersecnews:item:169</id>
-    <published>2026-07-27T11:21:19.970323+00:00</published>
-    <updated>2026-07-27T11:21:19.970323+00:00</updated>
-    <link href="https://isc.sans.edu/diary/rss/33188" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · information-disclosure&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Spring Boot applications expose the "/actuator/heapdump" endpoint by default, which returns a binary memory dump (heapdump.hprof) containing the application's runtime state including sensitive data such as API keys, database credentials, and other secrets. This is a high-severity information disclosure vulnerability actively exploited in the wild through automated scanning. Organizations should immediately disable the heapdump endpoint in production environments by setting "management.endpoints.web.exposure.exclude=heapdump" in application configuration, or restrict access to actuator endpoints through network controls and authentication mechanisms.&lt;/p&gt;&lt;p&gt;&lt;a href="https://isc.sans.edu/diary/rss/33188"&gt;Read more&lt;/a&gt; · Source: sans-isc&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Cl0p Affiliates Target Internet-Exposed PTC Windchill and FlexPLM with Unauthenticated RCE</title>
-    <id>urn:cybersecnews:item:168</id>
-    <published>2026-07-25T16:57:39.296407+00:00</published>
-    <updated>2026-07-25T16:57:39.296407+00:00</updated>
-    <link href="https://thehackernews.com/2026/07/cl0p-affiliates-target-internet-exposed.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;PTC Windchill and FlexPLM are vulnerable to unauthenticated remote code execution via a pre-authentication information disclosure in FlexPLM's WSDL endpoint chained with a server-side flaw in Windchill's login servlet. The Cl0p-affiliated threat group is actively exploiting these vulnerabilities in the wild for data extortion operations targeting internet-exposed deployments. This is a critical risk requiring immediate patching; organizations should apply vendor patches immediately and restrict network access to these applications to trusted networks only. Assess your environment for internet-exposed PTC instances and prioritize remediation for any identified systems.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/cl0p-affiliates-target-internet-exposed.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Fastjson 1.x RCE Vulnerability Targeted in Attacks With No Patched Available</title>
-    <id>urn:cybersecnews:item:167</id>
-    <published>2026-07-25T16:57:39.289014+00:00</published>
-    <updated>2026-07-25T16:57:39.289014+00:00</updated>
-    <link href="https://thehackernews.com/2026/07/fastjson-1x-rce-vulnerability-targeted.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-16723&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Fastjson 1.x (Alibaba's JSON library for Java) contains a critical remote code execution vulnerability (CVE-2026-16723, CVSS 9.0) exploitable via malicious JSON requests in Spring Boot applications without authentication, executing code with Java process privileges. The vulnerability is actively exploited in the wild with no patch currently available from Alibaba. Affected organizations should immediately implement network controls to restrict JSON deserialization requests, consider switching to alternative JSON libraries, and monitor for suspicious JSON payloads targeting Fastjson endpoints. Upgrade to patched versions when released or apply input validation and disable dangerous Fastjson features if patching is not immediately feasible.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/fastjson-1x-rce-vulnerability-targeted.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Researcher Publishes GitLab RCE PoC Letting Authenticated Users Run Commands as Git</title>
-    <id>urn:cybersecnews:item:166</id>
-    <published>2026-07-25T09:47:22.045520+00:00</published>
-    <updated>2026-07-25T09:47:22.045520+00:00</updated>
-    <link href="https://thehackernews.com/2026/07/researcher-publishes-gitlab-rce-poc.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;A researcher disclosed a proof-of-concept for an authenticated RCE vulnerability in GitLab self-managed 18.11.3 and earlier versions that allows unprivileged users to execute arbitrary commands as the git user via a Jupyter notebook diff processing flaw. The vulnerability requires no admin rights or victim interaction, only the ability to commit code and trigger a diff comparison. This is a critical severity issue being exploited in the wild against unpatched instances. Administrators should immediately update to patched versions (18.11.4 or later, or 18.12.0+) and review recent commits for exploitation indicators.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/researcher-publishes-gitlab-rce-poc.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>OpenAM: WebAuthn Java deserialization RCE via ObjectInputFilter depth&gt;1 bypass (CVE-2026-62263)</title>
-    <id>urn:cybersecnews:item:165</id>
-    <published>2026-07-25T02:38:15.418190+00:00</published>
-    <updated>2026-07-25T02:38:15.418190+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-gf8h-gq53-288j" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-62263&lt;/em&gt;&lt;/p&gt;&lt;p&gt;OpenAM's WebAuthn authentication module contains a Java deserialization remote code execution vulnerability (CVE-2026-62263) where an incomplete ObjectInputFilter bypass allows attackers to execute arbitrary code by crafting malicious serialized objects with nested gadget chains. The filter only validates the root object at depth 1, leaving all nested classes unchecked. This is critical severity and requires immediate patching of affected org.openidentityplatform.openam:openam-auth-webauthn versions to implement proper depth-aware deserialization filtering or use a safer serialization mechanism.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-gf8h-gq53-288j"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>OpenAM: Unauthenticated Remote Code Execution via Class.forName in AuthXMLUtils.createCustomCallback (CVE-2026-62379)</title>
-    <id>urn:cybersecnews:item:164</id>
-    <published>2026-07-25T02:38:15.417311+00:00</published>
-    <updated>2026-07-25T02:38:15.417311+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-wg5r-wc3x-39vc" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-62379&lt;/em&gt;&lt;/p&gt;&lt;p&gt;OpenAM's AuthXMLUtils.createCustomCallback function contains a critical unauthenticated remote code execution vulnerability (CVE-2026-62379) in the `/authservice` authentication endpoint, which unsafely loads and instantiates arbitrary Java classes specified in XML input without validation. This pre-authentication flaw allows complete server compromise on default OpenAM configurations and affects openam-core. Immediate patching is required; if patches are unavailable, disable or restrict access to the `/authservice` endpoint at the network level pending vendor remediation.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-wg5r-wc3x-39vc"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Budibase: SQL Injection via `multipleStatements: true`</title>
-    <id>urn:cybersecnews:item:163</id>
-    <published>2026-07-25T02:38:15.416227+00:00</published>
-    <updated>2026-07-25T02:38:15.416227+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-q6x4-v3qx-85qw" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · sqli&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Budibase's MySQL integration (npm/@budibase/server) contains a critical SQL injection vulnerability exploitable through the `multipleStatements: true` configuration, which allows attackers to execute arbitrary SQL commands via user input and potentially compromise entire databases. This vulnerability is actively exploitable and likely being targeted in the wild given its critical severity rating. Immediate patching is required; disable `multipleStatements: true` in MySQL connection configurations as a temporary mitigation while awaiting the vendor security patch. Review application logs and database access patterns for signs of exploitation.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-q6x4-v3qx-85qw"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
   </entry>
 </feed>
