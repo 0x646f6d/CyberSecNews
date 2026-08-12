@@ -3,7 +3,16 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-08-12T01:55:41.248083+00:00</updated>
+  <updated>2026-08-12T16:57:28.046664+00:00</updated>
+  <entry>
+    <title>OpenAI, Anthropic, Google API Flaw Let Weaker AI Models Decode Stronger Models' Reasoning</title>
+    <id>urn:cybersecnews:item:270</id>
+    <published>2026-08-12T16:57:28.046664+00:00</published>
+    <updated>2026-08-12T16:57:28.046664+00:00</updated>
+    <link href="https://thehackernews.com/2026/08/openai-anthropic-google-api-flaw-let.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · crypto-weakness&lt;/em&gt;&lt;/p&gt;&lt;p&gt;OpenAI, Anthropic, and Google's reasoning APIs contain a cryptographic flaw allowing attackers to replay encrypted reasoning blocks across sessions to extract internal model reasoning, API keys, and passwords from session logs. The vulnerability affects the encrypted objects used to pass hidden reasoning between API calls, where weak session isolation permits cross-session replay attacks. Severity is high given exposure of credentials and proprietary reasoning; exploitation likelihood in the wild is unknown but the technique is straightforward once discovered. Affected organizations should immediately implement strict session binding for encrypted reasoning objects, rotate exposed credentials, and audit logs for replay attempts.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/08/openai-anthropic-google-api-flaw-let.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>ShieldBreak - August 2026 disclosure</title>
     <id>urn:cybersecnews:item:269</id>
@@ -515,7 +524,7 @@
     <updated>2026-08-01T10:00:04.818481+00:00</updated>
     <link href="https://thehackernews.com/2026/08/adobe-campaign-classic-cvss-100-flaw.html" rel="alternate" />
     <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-48449&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Adobe Campaign Classic contains a critical authorization bypass vulnerability (CVE-2026-48449, CVSS 10.0) enabling unauthenticated arbitrary code execution without user interaction. The flaw stems from improper authorization controls in the marketing automation platform. There is no indication of active exploitation in the wild at this time. Immediate patching is required; administrators should apply Adobe's released security updates to all affected Campaign Classic instances without delay.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/08/adobe-campaign-classic-cvss-100-flaw.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-48362, CVE-2026-48449&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Adobe Campaign Classic contains a critical authorization bypass vulnerability (CVE-2026-48449, CVSS 10.0) enabling unauthenticated arbitrary code execution without user interaction. The flaw stems from improper authorization controls in the marketing automation platform. There is no indication of active exploitation in the wild at this time. Immediate patching is required; administrators should apply Adobe's released security updates to all affected Campaign Classic instances without delay.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/08/adobe-campaign-classic-cvss-100-flaw.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
   </entry>
   <entry>
     <title>NocoBase: SQL injection in /api/myInAppChannels:list filter to PG-superuser RCE (CVE-2026-52887)</title>
@@ -894,14 +903,5 @@
     <link href="https://thehackernews.com/2026/07/n8n-sandbox-escape-lets-workflow.html" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · sandbox-escape&lt;/em&gt;&lt;/p&gt;&lt;p&gt;n8n workflow automation platform versions below 2.31.5 and 2.32.0-2.32.0 contain a high-severity sandbox escape vulnerability allowing authenticated users with workflow editor privileges to execute arbitrary OS commands with n8n process permissions. This is a bypass of a previous sandbox escape fix (CVE-2026-27577) discovered during security research and there is no indication of active exploitation in the wild. Immediately update to n8n 2.31.5 or 2.32.1 and later; restrict workflow editor access to trusted users only until patching is possible.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/n8n-sandbox-escape-lets-workflow.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Public Exploit Released for Patched vBulletin Pre-Auth Code Execution Flaw</title>
-    <id>urn:cybersecnews:item:170</id>
-    <published>2026-07-27T17:43:20.459726+00:00</published>
-    <updated>2026-07-27T17:43:20.459726+00:00</updated>
-    <link href="https://thehackernews.com/2026/07/public-exploit-released-for-patched.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;vBulletin 6.2.1 and earlier, and 6.1.6 and earlier, contain a pre-authentication remote code execution vulnerability allowing unauthenticated attackers to reach PHP's eval() function and execute arbitrary code without user interaction or administrative access. Public exploit details were released July 27, 2024, indicating active exploitation risk. This is critical severity with confirmed wild exploitation potential given public POC availability. Immediately patch to patched versions or implement network-level access controls restricting requests to affected code paths while patching is deployed.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/public-exploit-released-for-patched.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
   </entry>
 </feed>
