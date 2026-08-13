@@ -3,7 +3,16 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-08-12T16:57:28.046664+00:00</updated>
+  <updated>2026-08-13T01:57:03.286433+00:00</updated>
+  <entry>
+    <title>Hackers exploit critical Adobe Commerce flaw to hijack customer accounts</title>
+    <id>urn:cybersecnews:item:271</id>
+    <published>2026-08-13T01:57:03.286433+00:00</published>
+    <updated>2026-08-13T01:57:03.286433+00:00</updated>
+    <link href="https://www.bleepingcomputer.com/news/security/hackers-exploit-critical-adobe-commerce-flaw-to-hijack-customer-accounts/" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · account-hijacking · CVE-2026-71362&lt;/em&gt;&lt;/p&gt;&lt;p&gt;CVE-2026-71362 affects Adobe Commerce and Magento e-commerce platforms, enabling account hijacking through a critical vulnerability in authentication mechanisms. Active exploitation has been detected in the wild, with attackers leveraging this flaw to compromise customer accounts and potentially access sensitive transaction data. Immediate patching is required; administrators should apply Adobe's security updates without delay and monitor affected systems for unauthorized account access or modifications. Consider implementing additional authentication controls such as multi-factor authentication and IP whitelisting as interim mitigations pending patch deployment.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/hackers-exploit-critical-adobe-commerce-flaw-to-hijack-customer-accounts/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>OpenAI, Anthropic, Google API Flaw Let Weaker AI Models Decode Stronger Models' Reasoning</title>
     <id>urn:cybersecnews:item:270</id>
@@ -894,14 +903,5 @@
     <link href="https://nvd.nist.gov/vuln/detail/CVE-2025-68686" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · information-disclosure · CVE-2025-68686&lt;/em&gt;&lt;/p&gt;&lt;p&gt;FortiOS is affected by CVE-2025-68686, an exposure of sensitive information vulnerability that allows remote unauthenticated attackers to bypass previous patches for symbolic link persistence mechanisms through crafted HTTP requests, requiring prior filesystem-level compromise. This vulnerability is actively exploited in the wild and rated high severity by CISA. Fortinet has released mitigations that must be applied immediately per BOD 26-04 guidance; organizations unable to remediate should discontinue use. All affected systems require forensic triage and evaluation of internet exposure to prioritize patching according to risk assessment protocols.&lt;/p&gt;&lt;p&gt;&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2025-68686"&gt;Read more&lt;/a&gt; · Source: cisa-kev&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>n8n Sandbox Escape Lets Workflow Editors Run OS Commands as the n8n Process</title>
-    <id>urn:cybersecnews:item:171</id>
-    <published>2026-07-27T17:43:20.461435+00:00</published>
-    <updated>2026-07-27T17:43:20.461435+00:00</updated>
-    <link href="https://thehackernews.com/2026/07/n8n-sandbox-escape-lets-workflow.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · sandbox-escape&lt;/em&gt;&lt;/p&gt;&lt;p&gt;n8n workflow automation platform versions below 2.31.5 and 2.32.0-2.32.0 contain a high-severity sandbox escape vulnerability allowing authenticated users with workflow editor privileges to execute arbitrary OS commands with n8n process permissions. This is a bypass of a previous sandbox escape fix (CVE-2026-27577) discovered during security research and there is no indication of active exploitation in the wild. Immediately update to n8n 2.31.5 or 2.32.1 and later; restrict workflow editor access to trusted users only until patching is possible.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/n8n-sandbox-escape-lets-workflow.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
   </entry>
 </feed>
