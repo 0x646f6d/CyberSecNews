@@ -3,7 +3,25 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-08-13T01:57:03.286433+00:00</updated>
+  <updated>2026-08-14T16:52:50.009681+00:00</updated>
+  <entry>
+    <title>Remember CVE-2010-2743 ?</title>
+    <id>urn:cybersecnews:item:273</id>
+    <published>2026-08-14T16:52:50.009681+00:00</published>
+    <updated>2026-08-14T16:52:50.009681+00:00</updated>
+    <link href="https://blog.projectnightcrawler.dev/posts/2026-08-14-remember-cve-2010-2743/" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · privilege-escalation · CVE-2010-2743&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Win32k keyboard layout loading (CVE-2010-2743 and related) remains exploitable through alternative data streams (ADS) in trusted directories despite MS12-034 mitigations. The vulnerability allows unprivileged users to create malicious .kbd files via ADS in C:\Windows\System32\Tasks, bypassing directory trust checks and triggering kernel-mode memory corruption when the layout is loaded. Though no current in-the-wild exploitation is reported, this represents a high-severity kernel vulnerability with potential for privilege escalation. Microsoft should implement validation to reject keyboard layout files loaded from ADS or enforce stricter file integrity checks beyond directory path validation.&lt;/p&gt;&lt;p&gt;&lt;a href="https://blog.projectnightcrawler.dev/posts/2026-08-14-remember-cve-2010-2743/"&gt;Read more&lt;/a&gt; · Source: projectnightcrawler&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>ARM64 stack internals and obfuscation on Apple Silicon</title>
+    <id>urn:cybersecnews:item:272</id>
+    <published>2026-08-14T16:52:50.008146+00:00</published>
+    <updated>2026-08-14T16:52:50.008146+00:00</updated>
+    <link href="https://www.mdsec.co.uk/2026/08/arm64-stack-internals-and-obfuscation-on-apple-silicon/" rel="alternate" />
+    <category term="red-team" />
+    <content type="html">&lt;p&gt;&lt;em&gt;red-team · edr-evasion&lt;/em&gt;&lt;/p&gt;&lt;p&gt;This article discusses ARM64 stack internals and obfuscation techniques on Apple Silicon platforms, focusing on how EDR detection mechanisms work rather than describing a specific vulnerability. The content appears to be educational research into stack-based obfuscation methods and how security tools detect suspicious activity on macOS systems. No specific severity rating or active exploitation is mentioned as this is defensive security research examining detection evasion techniques. Security engineers should review the detailed technical analysis to understand potential blind spots in their EDR deployments and ensure adequate monitoring of ARM64-specific obfuscation behaviors on Apple Silicon systems.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.mdsec.co.uk/2026/08/arm64-stack-internals-and-obfuscation-on-apple-silicon/"&gt;Read more&lt;/a&gt; · Source: mdsec&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Hackers exploit critical Adobe Commerce flaw to hijack customer accounts</title>
     <id>urn:cybersecnews:item:271</id>
@@ -885,23 +903,5 @@
     <link href="https://thehackernews.com/2026/07/dysphoria-iot-botnet-adds-blockchain-c2.html" rel="alternate" />
     <category term="red-team" />
     <content type="html">&lt;p&gt;&lt;em&gt;red-team · c2&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Dysphoria IoT botnet has implemented blockchain-based command-and-control infrastructure and victim device relays following law-enforcement disruption of its JackSkid infrastructure in March. The botnet targets IoT devices and employs decentralized C2 mechanisms designed to increase resilience against takedown operations. Severity is high given the botnet's operational persistence and evolving evasion techniques, though specific exploitation trends in the wild are not detailed. Organizations should prioritize firmware updates for IoT devices, implement network segmentation to isolate IoT assets, and monitor for suspicious blockchain-related DNS queries and peer-to-peer communications from connected devices.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/dysphoria-iot-botnet-adds-blockchain-c2.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Helpdesk Hijackers: Teams Vishing, Quick Assist, and GoGRPC Backdoor</title>
-    <id>urn:cybersecnews:item:173</id>
-    <published>2026-07-27T17:43:20.463951+00:00</published>
-    <updated>2026-07-27T17:43:20.463951+00:00</updated>
-    <link href="https://www.zscaler.com/blogs/security-research/helpdesk-hijackers-teams-vishing-quick-assist-and-gogrpc-backdoor" rel="alternate" />
-    <category term="red-team" />
-    <content type="html">&lt;p&gt;&lt;em&gt;red-team · c2&lt;/em&gt;&lt;/p&gt;&lt;p&gt;This article details a sustained campaign by a likely initial access broker using Microsoft Teams vishing and Windows Quick Assist to compromise organizations since January 2026, deploying GoGRPC (a Go-based gRPC backdoor with four variants: Lep, Giver, Pet, and Kind) alongside supplementary tools including BlindDoor, RevSocket, PyGRPC, RSOX, and S3Siphon for reconnaissance, lateral movement, and data exfiltration. The threat actor has progressively increased operational sophistication, shifting from broad targeting to selective focus on corporate environments, with recent payloads utilizing more advanced obfuscation, TLS encryption, and environment-specific reconnaissance scripts. Severity is high given the confirmed ransomware group affiliation, active exploitation, and continuous tool evolution; recommended immediate actions include blocking identified C2 infrastructure, implementing email controls and authentication for Teams/Quick Assist access, training users on vishing tactics, hunting for GoGRPC and related indicators, and deploying behavioral detection for PowerShell-based staging and suspicious process execution patterns.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.zscaler.com/blogs/security-research/helpdesk-hijackers-teams-vishing-quick-assist-and-gogrpc-backdoor"&gt;Read more&lt;/a&gt; · Source: zscaler-threatlabz&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Fortinet FortiOS: Fortinet FortiOS Exposure of Sensitive Information to an Unauthorized Actor Vulnerability (CVE-2025-68686)</title>
-    <id>urn:cybersecnews:item:172</id>
-    <published>2026-07-27T17:43:20.463052+00:00</published>
-    <updated>2026-07-27T17:43:20.463052+00:00</updated>
-    <link href="https://nvd.nist.gov/vuln/detail/CVE-2025-68686" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · information-disclosure · CVE-2025-68686&lt;/em&gt;&lt;/p&gt;&lt;p&gt;FortiOS is affected by CVE-2025-68686, an exposure of sensitive information vulnerability that allows remote unauthenticated attackers to bypass previous patches for symbolic link persistence mechanisms through crafted HTTP requests, requiring prior filesystem-level compromise. This vulnerability is actively exploited in the wild and rated high severity by CISA. Fortinet has released mitigations that must be applied immediately per BOD 26-04 guidance; organizations unable to remediate should discontinue use. All affected systems require forensic triage and evaluation of internet exposure to prioritize patching according to risk assessment protocols.&lt;/p&gt;&lt;p&gt;&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2025-68686"&gt;Read more&lt;/a&gt; · Source: cisa-kev&lt;/p&gt;</content>
   </entry>
 </feed>
