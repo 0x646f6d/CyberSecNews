@@ -3,7 +3,52 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-08-14T16:52:50.009681+00:00</updated>
+  <updated>2026-08-17T16:28:00.808193+00:00</updated>
+  <entry>
+    <title>C2Looper: A New Backdoor Likely Tied To Ransomware With GitHub C2</title>
+    <id>urn:cybersecnews:item:278</id>
+    <published>2026-08-17T16:28:00.808193+00:00</published>
+    <updated>2026-08-17T16:28:00.808193+00:00</updated>
+    <link href="https://www.zscaler.com/blogs/security-research/c2looper-new-backdoor-likely-tied-ransomware-github-c2" rel="alternate" />
+    <category term="red-team" />
+    <content type="html">&lt;p&gt;&lt;em&gt;red-team · c2&lt;/em&gt;&lt;/p&gt;&lt;p&gt;C2Looper is a new Rust-based backdoor malware likely deployed by ransomware threat actors, distributed through ClickFix infection chains, with capabilities including arbitrary command execution, reconnaissance, and second-stage payload deployment. The malware supports typical backdoor functionality and is under active development, with a version 2 variant incorporating GitHub-based command-and-control communications to evade traditional network detection. While severity is moderate to high given its ransomware association, exploitation in the wild appears limited to targeted campaigns rather than widespread attacks. Organizations should monitor for C2Looper indicators of compromise, block identified C2 infrastructure (45.158.196[.]23:8888 and 45.158.196.184:8888), implement application whitelisting to prevent ClickFix delivery chains, and ensure endpoint detection and response tools are configured to detect Win64.Trojan.C2Looper variants.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.zscaler.com/blogs/security-research/c2looper-new-backdoor-likely-tied-ransomware-github-c2"&gt;Read more&lt;/a&gt; · Source: zscaler-threatlabz&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>conflibot vulnerable to command injection via crafted pull request branch names under pull_request_target (CVE-2026-55158)</title>
+    <id>urn:cybersecnews:item:277</id>
+    <published>2026-08-17T16:28:00.807224+00:00</published>
+    <updated>2026-08-17T16:28:00.807224+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-2qvg-qr73-mqxp" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · command-injection · CVE-2026-55158&lt;/em&gt;&lt;/p&gt;&lt;p&gt;conflibot versions before 1.2.1 are vulnerable to command injection via crafted pull request branch names when used with the `pull_request_target` event (CVE-2026-55158). The vulnerability stems from constructing git commands through string interpolation of attacker-controlled branch names without proper escaping, allowing shell metacharacters to break out and execute arbitrary commands with base repository access. This is a critical severity issue with high impact given the typical use of `pull_request_target` in workflows. Upgrade conflibot to version 1.2.1 or later immediately; additionally, review workflow permissions and consider using branch name validation or moving to safer event triggers if feasible.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-2qvg-qr73-mqxp"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Ray-Project Ray: Ray-Project Ray Code Injection Vulnerability (CVE-2025-62593)</title>
+    <id>urn:cybersecnews:item:276</id>
+    <published>2026-08-17T16:28:00.806152+00:00</published>
+    <updated>2026-08-17T16:28:00.806152+00:00</updated>
+    <link href="https://nvd.nist.gov/vuln/detail/CVE-2025-62593" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · code-injection · CVE-2025-62593&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Ray-Project Ray is vulnerable to CVE-2025-62593, a code injection flaw enabling remote code execution affecting developers using Ray as a development tool, exploitable through Firefox and Safari browsers. This vulnerability is actively exploited in the wild and carries high severity due to RCE potential. Immediately apply vendor-supplied patches per CISA BOD 26-04 guidance; if mitigations are unavailable, discontinue use of the product. Conduct forensic triage on affected systems and evaluate internet exposure to prioritize patching according to risk assessment protocols.&lt;/p&gt;&lt;p&gt;&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2025-62593"&gt;Read more&lt;/a&gt; · Source: cisa-kev&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Evooo1Bot Linux Botnet Exploits Known Flaws to Turn Edge Devices Into SOCKS5 Proxies</title>
+    <id>urn:cybersecnews:item:275</id>
+    <published>2026-08-17T16:28:00.804628+00:00</published>
+    <updated>2026-08-17T16:28:00.804628+00:00</updated>
+    <link href="https://thehackernews.com/2026/08/evooo1bot-linux-botnet-exploits-known.html" rel="alternate" />
+    <category term="red-team" />
+    <content type="html">&lt;p&gt;&lt;em&gt;red-team · botnet&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Evooo1Bot is a Linux botnet targeting edge devices, leveraging publicly available Mirai source code with extended functionality to establish SOCKS5 proxies for malicious traffic routing. The malware exploits known vulnerabilities in IoT and edge devices to gain initial access, though specific CVEs are not detailed in available reporting. Active exploitation in the wild has been confirmed by security researchers monitoring the botnet's distribution. Organizations should prioritize patching edge devices, disabling default credentials, implementing network segmentation to isolate IoT/edge infrastructure, and monitoring for SOCKS proxy connections on managed devices.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/08/evooo1bot-linux-botnet-exploits-known.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Unisoc VoLTE Video Call Exploit Chain Can Give Attackers Full Android Kernel Access</title>
+    <id>urn:cybersecnews:item:274</id>
+    <published>2026-08-17T16:28:00.802852+00:00</published>
+    <updated>2026-08-17T16:28:00.802852+00:00</updated>
+    <link href="https://thehackernews.com/2026/08/unisoc-volte-video-call-exploit-chain.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Unisoc modem firmware used in Android devices is vulnerable to a two-stage exploit chain triggered via VoLTE video calls that achieves full Android kernel access. The vulnerability chain combines remote code execution disclosed in March 2026 with a second-stage exploit published in August 2026, enabling attackers to gain complete kernel-level control. No patch has been released by Unisoc as of the advisory publication date, and exploitation in the wild is unknown but likely given the public disclosure. Affected device users should contact their OEM for firmware updates, disable VoLTE if possible, or apply network-level mitigations to restrict malicious video call traffic until patches become available.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/08/unisoc-volte-video-call-exploit-chain.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Remember CVE-2010-2743 ?</title>
     <id>urn:cybersecnews:item:273</id>
@@ -47,7 +92,7 @@
     <updated>2026-08-12T01:55:41.248083+00:00</updated>
     <link href="https://blog.projectnightcrawler.dev/posts/2026-08-11-shieldbreak-august-2026-disclosure/" rel="alternate" />
     <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · unknown&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Windows Defender is affected by a critical zero-day vulnerability disclosed as ShieldBreak in August 2026. The exploit appears to be actively shared across public repositories, indicating active development and potential in-the-wild exploitation risk. Immediate action required: deploy emergency patching from Microsoft or implement temporary mitigation controls such as behavioral monitoring on Defender processes and network segmentation. Escalate to threat intelligence teams for detailed technical analysis of shared PoC code to assess impact scope and exploitation likelihood in your environment.&lt;/p&gt;&lt;p&gt;&lt;a href="https://blog.projectnightcrawler.dev/posts/2026-08-11-shieldbreak-august-2026-disclosure/"&gt;Read more&lt;/a&gt; · Source: projectnightcrawler&lt;/p&gt;</content>
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · unknown · CVE-2026-69414&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Windows Defender is affected by a critical zero-day vulnerability disclosed as ShieldBreak in August 2026. The exploit appears to be actively shared across public repositories, indicating active development and potential in-the-wild exploitation risk. Immediate action required: deploy emergency patching from Microsoft or implement temporary mitigation controls such as behavioral monitoring on Defender processes and network segmentation. Escalate to threat intelligence teams for detailed technical analysis of shared PoC code to assess impact scope and exploitation likelihood in your environment.&lt;/p&gt;&lt;p&gt;&lt;a href="https://blog.projectnightcrawler.dev/posts/2026-08-11-shieldbreak-august-2026-disclosure/"&gt;Read more&lt;/a&gt; · Source: projectnightcrawler&lt;/p&gt;</content>
   </entry>
   <entry>
     <title>Shattering the Dream – When a Job Offer Becomes a Zero-Day Attack</title>
@@ -858,50 +903,5 @@
     <link href="https://isc.sans.edu/diary/rss/33192" rel="alternate" />
     <category term="red-team" />
     <content type="html">&lt;p&gt;&lt;em&gt;red-team · payload-injection&lt;/em&gt;&lt;/p&gt;&lt;p&gt;AutoIT scripting language is being actively exploited by threat actors for payload injection into remote processes due to its ease of use and powerful capabilities. This technique leverages AutoIT's native functions to execute arbitrary code and maintain persistence, making it a favored tool in the malware ecosystem. The threat is HIGH severity given continued active exploitation in the wild by multiple threat actors. Mitigation should focus on restricting AutoIT script execution through application whitelisting, disabling unnecessary scripting engines, and monitoring for suspicious AutoIT process behavior and inter-process injection attempts.&lt;/p&gt;&lt;p&gt;&lt;a href="https://isc.sans.edu/diary/rss/33192"&gt;Read more&lt;/a&gt; · Source: sans-isc&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Researcher Says AI Helped Develop Linux Traffic-Control Race Into Root Exploit</title>
-    <id>urn:cybersecnews:item:178</id>
-    <published>2026-07-28T10:35:21.742321+00:00</published>
-    <updated>2026-07-28T10:35:21.742321+00:00</updated>
-    <link href="https://thehackernews.com/2026/07/researcher-says-ai-helped-develop-linux.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · use-after-free · CVE-2026-53264&lt;/em&gt;&lt;/p&gt;&lt;p&gt;A use-after-free race condition (CVE-2026-53264, CVSS 7.8) in the Linux kernel's traffic-control subsystem allows local attackers to escalate privileges to root on affected systems, with the vulnerability reportedly discovered and exploited using AI-assisted techniques. The flaw affects CentOS Stream 9 and likely other distributions running vulnerable kernel versions, though no evidence of widespread wild exploitation has been reported. Users should apply kernel security patches from their distribution vendor as soon as they become available, and system administrators should restrict local user access where possible as a temporary mitigation. This case demonstrates AI's emerging role in both vulnerability discovery and exploit development, underscoring the need for rapid patching cycles.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/researcher-says-ai-helped-develop-linux.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Critical TeamCity Flaw Could Let Attackers Run OS Commands Without Logging In</title>
-    <id>urn:cybersecnews:item:177</id>
-    <published>2026-07-28T10:35:21.740334+00:00</published>
-    <updated>2026-07-28T10:35:21.740334+00:00</updated>
-    <link href="https://thehackernews.com/2026/07/critical-teamcity-flaw-could-let.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-63077, CVE-2026-6516&lt;/em&gt;&lt;/p&gt;&lt;p&gt;JetBrains TeamCity On-Premises is vulnerable to CVE-2026-63077, a critical pre-authentication remote code execution flaw (CVSS 9.8) allowing unauthenticated attackers to execute arbitrary OS commands. The vulnerability affects all on-premises versions and has been actively exploited in the wild. Immediately upgrade to TeamCity 2025.11.7 or 2026.1.3; TeamCity Cloud instances are already patched.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/critical-teamcity-flaw-could-let.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Arista VeloCloud Orchestrator: Arista VeloCloud Orchestrator On-Prem OS Command Injection Vulnerability (CVE-2026-16812)</title>
-    <id>urn:cybersecnews:item:176</id>
-    <published>2026-07-28T02:31:45.828468+00:00</published>
-    <updated>2026-07-28T02:31:45.828468+00:00</updated>
-    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-16812" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · os-command-injection · CVE-2026-16812&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Arista VeloCloud Orchestrator On-Prem is vulnerable to OS command injection (CVE-2026-16812) allowing remote attackers to execute privileged commands and compromise confidentiality, integrity, and availability of the orchestrator and managed data. This vulnerability is actively exploited in the wild and listed on CISA's Known Exploited Vulnerabilities catalog. Apply vendor-supplied mitigations immediately per BOD 26-04 guidance; if mitigations are unavailable, discontinue use of affected systems. Conduct forensic triage on internet-exposed instances and prioritize patching based on asset exposure and risk assessment.&lt;/p&gt;&lt;p&gt;&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2026-16812"&gt;Read more&lt;/a&gt; · Source: cisa-kev&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Arista patches VeloCloud Orchestrator zero-day exploited in attacks</title>
-    <id>urn:cybersecnews:item:175</id>
-    <published>2026-07-28T02:31:45.827652+00:00</published>
-    <updated>2026-07-28T02:31:45.827652+00:00</updated>
-    <link href="https://www.bleepingcomputer.com/news/security/arista-patches-velocloud-orchestrator-zero-day-exploited-in-attacks/" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · command-injection&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Arista has patched a CVSS 10.0 command injection vulnerability in VeloCloud Orchestrator on-premises deployments that allows unauthenticated remote code execution. The flaw is actively exploited in the wild and requires immediate patching. All users of on-premises VeloCloud Orchestrator should apply the available security updates immediately. Organizations unable to patch quickly should restrict network access to the Orchestrator management interface.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/arista-patches-velocloud-orchestrator-zero-day-exploited-in-attacks/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Dysphoria IoT Botnet Adds Blockchain C2 and Victim Relays After JackSkid Disruption</title>
-    <id>urn:cybersecnews:item:174</id>
-    <published>2026-07-28T02:31:45.824116+00:00</published>
-    <updated>2026-07-28T02:31:45.824116+00:00</updated>
-    <link href="https://thehackernews.com/2026/07/dysphoria-iot-botnet-adds-blockchain-c2.html" rel="alternate" />
-    <category term="red-team" />
-    <content type="html">&lt;p&gt;&lt;em&gt;red-team · c2&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Dysphoria IoT botnet has implemented blockchain-based command-and-control infrastructure and victim device relays following law-enforcement disruption of its JackSkid infrastructure in March. The botnet targets IoT devices and employs decentralized C2 mechanisms designed to increase resilience against takedown operations. Severity is high given the botnet's operational persistence and evolving evasion techniques, though specific exploitation trends in the wild are not detailed. Organizations should prioritize firmware updates for IoT devices, implement network segmentation to isolate IoT assets, and monitor for suspicious blockchain-related DNS queries and peer-to-peer communications from connected devices.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/dysphoria-iot-botnet-adds-blockchain-c2.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
   </entry>
 </feed>
