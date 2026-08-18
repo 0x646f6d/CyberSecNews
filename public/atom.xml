@@ -3,7 +3,16 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-08-18T01:12:17.638720+00:00</updated>
+  <updated>2026-08-18T16:31:04.372660+00:00</updated>
+  <entry>
+    <title>CISA: Windows Task Host flaw now exploited by ransomware gangs</title>
+    <id>urn:cybersecnews:item:283</id>
+    <published>2026-08-18T16:31:04.372660+00:00</published>
+    <updated>2026-08-18T16:31:04.372660+00:00</updated>
+    <link href="https://www.bleepingcomputer.com/news/security/cisa-windows-task-host-flaw-now-exploited-by-ransomware-gangs/" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · privilege-escalation&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Windows Task Host (taskhostw.exe) contains a high-severity privilege escalation vulnerability (CVE-2024-21888) that ransomware gangs are actively exploiting in the wild. The flaw allows attackers with local access to escalate privileges and execute arbitrary code with system-level permissions. CISA has added this vulnerability to its Known Exploited Vulnerabilities catalog, confirming active exploitation by ransomware operators. Immediate patching through Windows Update is critical; organizations should prioritize this vulnerability in their patch management processes.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/cisa-windows-task-host-flaw-now-exploited-by-ransomware-gangs/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>New API: Integer overflow in quota billing yields negative charges (self-crediting) (CVE-2026-71479)</title>
     <id>urn:cybersecnews:item:282</id>
@@ -894,14 +903,5 @@
     <link href="https://www.bleepingcomputer.com/news/security/over-24-000-exposed-server-bmcs-leak-password-hash-via-decades-old-flaw/" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Over 24,000 internet-exposed servers are vulnerable to password hash disclosure through a two-decade-old flaw in their Baseboard Management Controller (BMC) interfaces. The vulnerability allows unauthenticated remote attackers to extract authentication credentials without requiring valid access, potentially enabling lateral movement and infrastructure compromise. The flaw appears actively exploited given the widespread exposure and age of the vulnerability. Organizations must immediately audit internet-facing BMCs, disable unnecessary network access, implement strong firewall rules restricting BMC connectivity, and apply available firmware patches to affected devices.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/over-24-000-exposed-server-bmcs-leak-password-hash-via-decades-old-flaw/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Nimbus Manticore Deploys NightLedger and Turns Victim Systems Into Covert Relays</title>
-    <id>urn:cybersecnews:item:183</id>
-    <published>2026-07-28T17:29:02.014945+00:00</published>
-    <updated>2026-07-28T17:29:02.014945+00:00</updated>
-    <link href="https://thehackernews.com/2026/07/nimbus-manticore-deploys-nightledger.html" rel="alternate" />
-    <category term="red-team" />
-    <content type="html">&lt;p&gt;&lt;em&gt;red-team · c2&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Iranian state-sponsored group Nimbus Manticore is deploying a novel Windows backdoor named NightLedger alongside custom WebSocket tunnelers to compromise targets across Middle East, Africa, and South Asia. The malware establishes persistence and converts victim systems into covert relay infrastructure for further network propagation. This represents an active, evolving threat with likely high severity given the actor's state backing and targeting scope. Organizations should enhance endpoint detection and response capabilities, implement network segmentation to limit lateral movement, and monitor for indicators of compromise associated with NightLedger and WebSocket tunneling traffic patterns.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/nimbus-manticore-deploys-nightledger.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
   </entry>
 </feed>
