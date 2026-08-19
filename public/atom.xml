@@ -3,7 +3,52 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-08-18T16:31:04.372660+00:00</updated>
+  <updated>2026-08-19T01:13:46.148793+00:00</updated>
+  <entry>
+    <title>kobako Sandbox Escape: guest eval reaches host RCE via method_missing → public_send (any bound Service) (CVE-2026-55107)</title>
+    <id>urn:cybersecnews:item:288</id>
+    <published>2026-08-19T01:13:46.148793+00:00</published>
+    <updated>2026-08-19T01:13:46.148793+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-7pwq-q9jf-539h" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · sandbox-escape · CVE-2026-55107&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Kobako sandbox (Ruby gem) suffers a critical sandbox escape vulnerability where guest mruby scripts can achieve arbitrary code execution in the host process by exploiting unfiltered `public_send` calls on bound Service objects, allowing access to any publicly callable method regardless of intended interface restrictions. An attacker can leverage `method_missing` to invoke arbitrary host methods through the wasm transport dispatcher without authentication or validation. This vulnerability is critical severity and active exploitation in the wild is possible given the attack surface. Update to the latest patched version of rubygems/kobako immediately and review any deployments exposing bound Service objects to untrusted guest scripts.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-7pwq-q9jf-539h"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>jmespath.php has CompilerRuntime code injection via unescaped function names (CVE-2026-54133)</title>
+    <id>urn:cybersecnews:item:287</id>
+    <published>2026-08-19T01:13:46.146536+00:00</published>
+    <updated>2026-08-19T01:13:46.146536+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-pcw8-m77r-2528" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · code-injection · CVE-2026-54133&lt;/em&gt;&lt;/p&gt;&lt;p&gt;The jmespath.php library (mtdowling/jmespath.php) contains a critical code injection vulnerability (CVE-2026-54133) where unescaped JMESPath function names are directly compiled into PHP source code without proper sanitization. An attacker can craft malicious JMESPath expressions that cause the compiler runtime to generate and execute arbitrary PHP code through poisoned cache files. This vulnerability is critical and likely exploitable in production environments where user-controlled JMESPath expressions are processed. Affected users should immediately update to a patched version and review any applications accepting untrusted JMESPath input for potential compromise.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-pcw8-m77r-2528"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Froxlor: Credential and 2FA secret disclosure via Froxlor API endpoints (CVE-2026-62988)</title>
+    <id>urn:cybersecnews:item:286</id>
+    <published>2026-08-19T01:13:46.144656+00:00</published>
+    <updated>2026-08-19T01:13:46.144656+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-7788-ghfq-c6mh" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · information-disclosure · CVE-2026-62988&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Froxlor API endpoints expose sensitive authentication material including password hashes and TOTP 2FA seeds through JSON responses without field filtering. The vulnerability affects Froxlor versions prior to patched releases and is rated critical severity, with no indication of active exploitation in the wild. Credentials for customers, administrators, and FTP users are exposed via full database row returns in multiple API command classes. Immediate patching to the latest Froxlor version is required; review API access logs for credential exposure and rotate all compromised credentials.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-7788-ghfq-c6mh"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Microsoft Internet Key Exchange (IKE) Service Extensions: Microsoft Internet Key Exchange (IKE) Service Extensions Double Free Vulnerability (CVE-2026-33824)</title>
+    <id>urn:cybersecnews:item:285</id>
+    <published>2026-08-19T01:13:46.138500+00:00</published>
+    <updated>2026-08-19T01:13:46.138500+00:00</updated>
+    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-33824" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · double-free · CVE-2026-33824&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Microsoft Internet Key Exchange (IKE) Service Extensions contains a double free vulnerability (CVE-2026-33824) enabling remote code execution. This vulnerability is actively exploited in the wild and carries critical severity. Organizations must apply vendor-supplied patches immediately in accordance with CISA BOD 26-04 prioritization guidance; for cloud services without available mitigations, discontinuation of the product is required. Conduct forensic triage on affected systems and assess internet exposure to determine patch deployment priority.&lt;/p&gt;&lt;p&gt;&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2026-33824"&gt;Read more&lt;/a&gt; · Source: cisa-kev&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Microsoft Copilot Personal Flaws Could Let One Click Exfiltrate Data From Connected Apps</title>
+    <id>urn:cybersecnews:item:284</id>
+    <published>2026-08-19T01:13:46.135224+00:00</published>
+    <updated>2026-08-19T01:13:46.135224+00:00</updated>
+    <link href="https://thehackernews.com/2026/08/microsoft-copilot-personal-flaws-could.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · data-exfiltration&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Microsoft Copilot Personal contains three vulnerabilities (CoSnitch) affecting data exfiltration from connected applications through specially crafted links requiring only a single click from victims. The flaws exploit an undocumented URL parameter to silently extract data available within the victim's Copilot session and connected apps. Varonis Threat Labs has disclosed the vulnerabilities; exploitation status in the wild is not explicitly confirmed in available reporting. Microsoft users should await and apply security patches promptly, avoid clicking suspicious links directing to Copilot, and review connected app permissions for least privilege access.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/08/microsoft-copilot-personal-flaws-could.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>CISA: Windows Task Host flaw now exploited by ransomware gangs</title>
     <id>urn:cybersecnews:item:283</id>
@@ -344,7 +389,7 @@
     <updated>2026-08-07T08:58:57.714667+00:00</updated>
     <link href="https://www.golem.de/news/screen-sharing-gefaehrliche-macos-luecke-laesst-angreifer-apple-systeme-kapern-2608-211694.html" rel="alternate" />
     <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;A critical vulnerability in macOS screen sharing functionality allows unauthenticated remote attackers to gain full control of affected systems without credentials. The flaw affects Apple's screen sharing implementation across macOS devices and represents a severe privilege escalation risk. Users should apply available security patches immediately, and administrators should prioritize deployment across their macOS fleet. There is no indication the vulnerability is currently exploited in the wild, but the unauthenticated nature of the exploit makes it a high-priority threat.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.golem.de/news/screen-sharing-gefaehrliche-macos-luecke-laesst-angreifer-apple-systeme-kapern-2608-211694.html"&gt;Read more&lt;/a&gt; · Source: golem-security&lt;/p&gt;</content>
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-65400&lt;/em&gt;&lt;/p&gt;&lt;p&gt;A critical vulnerability in macOS screen sharing functionality allows unauthenticated remote attackers to gain full control of affected systems without credentials. The flaw affects Apple's screen sharing implementation across macOS devices and represents a severe privilege escalation risk. Users should apply available security patches immediately, and administrators should prioritize deployment across their macOS fleet. There is no indication the vulnerability is currently exploited in the wild, but the unauthenticated nature of the exploit makes it a high-priority threat.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.golem.de/news/screen-sharing-gefaehrliche-macos-luecke-laesst-angreifer-apple-systeme-kapern-2608-211694.html"&gt;Read more&lt;/a&gt; · Source: golem-security&lt;/p&gt;</content>
   </entry>
   <entry>
     <title>Traefik: Authentication Bypass via Path Traversal in ReplacePathRegex Middleware (CVE-2026-65600)</title>
@@ -858,50 +903,5 @@
     <link href="https://github.com/advisories/GHSA-6wcc-39rp-hh9p" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · sqli · CVE-2026-54658&lt;/em&gt;&lt;/p&gt;&lt;p&gt;The @hypequery/clickhouse npm package prior to version 2.0.2 contains a critical SQL injection vulnerability in the `escapeValue()` function used for parameter substitution. Attackers controlling parameter values can inject arbitrary SQL by exploiting improper escaping of trailing backslashes before closing quotes. There is no indication of active exploitation in the wild, but the critical severity warrants immediate action. Update to version 2.0.2 or later immediately, and audit applications using this package with user-controlled query parameters for potential compromise.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-6wcc-39rp-hh9p"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Claude AI Just Cracked a Post-Quantum Test Scheme and Found a Faster 7-Round AES Attack</title>
-    <id>urn:cybersecnews:item:188</id>
-    <published>2026-07-29T02:36:34.329993+00:00</published>
-    <updated>2026-07-29T02:36:34.329993+00:00</updated>
-    <link href="https://thehackernews.com/2026/07/claude-ai-just-cracked-post-quantum.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · key-recovery&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Claude AI discovered cryptanalytic attacks against post-quantum signature scheme HAWK-256 and seven-round AES-128, achieving 200-800x speedup improvements over prior methods. The HAWK attack exploits unused lattice symmetries while the AES attack demonstrates theoretical vulnerabilities in reduced-round variants. These are research findings against limited-round AES (not full AES) and a candidate post-quantum scheme; full AES-128 remains secure and is not exploited in the wild. Organizations should continue using full AES-128 and monitor HAWK's standardization status, as it may influence post-quantum cryptography selections, but no immediate patching is required for deployed systems.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/claude-ai-just-cracked-post-quantum.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>COFF Mixing - Hiding in Plain Sight</title>
-    <id>urn:cybersecnews:item:187</id>
-    <published>2026-07-28T17:29:02.198152+00:00</published>
-    <updated>2026-07-28T17:29:02.198152+00:00</updated>
-    <link href="https://rastamouse.me/coff-mixing/" rel="alternate" />
-    <category term="red-team" />
-    <content type="html">&lt;p&gt;&lt;em&gt;red-team · evasion&lt;/em&gt;&lt;/p&gt;&lt;p&gt;COFF Mixing describes a technique where adversaries weaponize Common Object File Format (COFF) binaries as an evasion method by leveraging legitimate COFF/BOF (Beacon Object File) runners to execute malicious code while evading detection. The technique exploits the flexibility of capability output formats (PIC/PICO/COFF) that require in-memory runners, making detection difficult since the malicious payload executes entirely in memory without touching disk. Severity is moderate-to-high as this is an active evasion technique observed in red team operations and likely exploited by advanced threat actors to bypass endpoint detection and response (EDR) solutions. Organizations should implement memory scanning capabilities, monitor COFF loader execution, restrict access to legitimate COFF/BOF runners (such as those in Cobalt Strike), and enforce application whitelisting on development and administrative systems.&lt;/p&gt;&lt;p&gt;&lt;a href="https://rastamouse.me/coff-mixing/"&gt;Read more&lt;/a&gt; · Source: rastamouse&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>lettre has TLS hostname verification disabled when using Boring TLS backend (CVE-2026-46428)</title>
-    <id>urn:cybersecnews:item:186</id>
-    <published>2026-07-28T17:29:02.186220+00:00</published>
-    <updated>2026-07-28T17:29:02.186220+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-4pj9-g833-qx53" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · tls-verification-bypass · CVE-2026-46428&lt;/em&gt;&lt;/p&gt;&lt;p&gt;The lettre email library's `boring-tls` backend contains a critical inverted-boolean bug that disables TLS hostname verification by default, allowing on-path attackers to intercept SMTP connections with any valid certificate regardless of domain. This affects only users with the `boring-tls` feature enabled; `native-tls` and `rustls` backends are unaffected. An attacker can capture credentials and message contents. Users should immediately upgrade to a patched version of lettre and consider switching to alternative TLS backends if immediate patching is unavailable.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-4pj9-g833-qx53"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Poweradmin has Host Header Injection in OIDC redirect_uri, SAML ACS/SLO URL, and Logout Redirect Construction. (CVE-2026-54588)</title>
-    <id>urn:cybersecnews:item:185</id>
-    <published>2026-07-28T17:29:02.116848+00:00</published>
-    <updated>2026-07-28T17:29:02.116848+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-3735-5339-xfwx" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · host-header-injection · CVE-2026-54588&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Poweradmin v4.3.2 is affected by a critical host header injection vulnerability (CVE-2026-54588) in OIDC redirect_uri, SAML ACS/SLO URLs, and logout redirect construction. An unauthenticated attacker can poison the HTTP_HOST header to redirect authorization codes to attacker-controlled servers, enabling account takeover without credentials. No evidence of in-the-wild exploitation is reported in the advisory. Immediate patching to a version addressing this vulnerability is critical; apply input validation on host headers and consider implementing host allowlisting as interim mitigation if patching is delayed.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-3735-5339-xfwx"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Over 24,000 exposed server BMCs leak password hash via decades-old flaw</title>
-    <id>urn:cybersecnews:item:184</id>
-    <published>2026-07-28T17:29:02.024756+00:00</published>
-    <updated>2026-07-28T17:29:02.024756+00:00</updated>
-    <link href="https://www.bleepingcomputer.com/news/security/over-24-000-exposed-server-bmcs-leak-password-hash-via-decades-old-flaw/" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Over 24,000 internet-exposed servers are vulnerable to password hash disclosure through a two-decade-old flaw in their Baseboard Management Controller (BMC) interfaces. The vulnerability allows unauthenticated remote attackers to extract authentication credentials without requiring valid access, potentially enabling lateral movement and infrastructure compromise. The flaw appears actively exploited given the widespread exposure and age of the vulnerability. Organizations must immediately audit internet-facing BMCs, disable unnecessary network access, implement strong firewall rules restricting BMC connectivity, and apply available firmware patches to affected devices.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/over-24-000-exposed-server-bmcs-leak-password-hash-via-decades-old-flaw/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
   </entry>
 </feed>
