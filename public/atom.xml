@@ -3,7 +3,34 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-08-19T08:36:55.215864+00:00</updated>
+  <updated>2026-08-19T16:31:25.338712+00:00</updated>
+  <entry>
+    <title>Simple Scans for Cloud Metadata Service, (Wed, Aug 19th)</title>
+    <id>urn:cybersecnews:item:293</id>
+    <published>2026-08-19T16:31:25.338712+00:00</published>
+    <updated>2026-08-19T16:31:25.338712+00:00</updated>
+    <link href="https://isc.sans.edu/diary/rss/33260" rel="alternate" />
+    <category term="red-team" />
+    <content type="html">&lt;p&gt;&lt;em&gt;red-team · credential-theft&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Cloud metadata services (accessible via 169.254.169.254) across AWS, Azure, and GCP expose sensitive credentials including IAM role credentials and service account tokens to any code executing on compromised virtual machines. This represents a critical risk vector for lateral movement and privilege escalation, as attackers with initial VM access can trivially extract temporary credentials with broad permissions. This technique is actively exploited in the wild by adversaries targeting misconfigured cloud environments and supply chain compromises. Organizations should implement IMDSv2 (mandatory token authentication), network segmentation restricting metadata service access, and IAM policies limiting credential scope to mitigate exposure.&lt;/p&gt;&lt;p&gt;&lt;a href="https://isc.sans.edu/diary/rss/33260"&gt;Read more&lt;/a&gt; · Source: sans-isc&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Hackers Compromised 14,500+ Dahua Devices Using Credential Attacks, Auth Bypasses, and P2P</title>
+    <id>urn:cybersecnews:item:292</id>
+    <published>2026-08-19T16:31:25.337881+00:00</published>
+    <updated>2026-08-19T16:31:25.337881+00:00</updated>
+    <link href="https://thehackernews.com/2026/08/hackers-compromised-14500-dahua-devices.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Dahua IP cameras and DVRs/NVRs were compromised in Operation CameraSwarm (June-July 2026) through credential attacks, two authentication-bypass vulnerabilities, and P2P relay exploitation, affecting 14,530+ devices. The campaign exploited weak credentials combined with unpatched auth flaws to gain device access and establish persistence through Dahua's P2P communication mechanism. This represents high severity given the scale of compromise and exposure of security infrastructure. Immediate actions include applying available security patches for the authentication-bypass flaws, enforcing strong credential policies, disabling P2P functionality if unused, and conducting network segmentation for camera/monitoring infrastructure.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/08/hackers-compromised-14500-dahua-devices.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Slowakei: Russische Backdoor in Verkehrskameras entdeckt</title>
+    <id>urn:cybersecnews:item:291</id>
+    <published>2026-08-19T16:31:25.334737+00:00</published>
+    <updated>2026-08-19T16:31:25.334737+00:00</updated>
+    <link href="https://www.golem.de/news/slowakei-russische-backdoor-in-verkehrskameras-entdeckt-2608-212088.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · backdoor&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Slovak traffic camera systems compromised with Russian backdoor malware during procurement of 279 new devices. The backdoor provides unauthorized remote access to camera infrastructure, compromising traffic monitoring systems and potentially enabling surveillance manipulation or network pivoting attacks. Severity is high due to critical infrastructure impact and confirmed presence in deployed systems. Immediate actions required: isolate affected cameras from primary networks, conduct forensic analysis to determine backdoor scope and capabilities, implement network segmentation for camera systems, and replace compromised hardware with verified vendors.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.golem.de/news/slowakei-russische-backdoor-in-verkehrskameras-entdeckt-2608-212088.html"&gt;Read more&lt;/a&gt; · Source: golem-security&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Oracle August 2026 Critical Security Patch Update Addresses 925 CVEs</title>
     <id>urn:cybersecnews:item:290</id>
@@ -876,32 +903,5 @@
     <link href="https://www.tenable.com/blog/coordinated-cyberattack-on-minnesota-water-utilities-what-you-need-to-know" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2021-22681, CVE-2023-3595, CVE-2024-6242&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Iranian-affiliated CyberAv3ngers actors exploited CVE-2021-22681, a critical authentication bypass (CVSS 9.8) in internet-exposed Rockwell Automation, Schneider Electric, and Siemens PLCs, to disrupt water systems across 30+ Minnesota communities in late July 2026; the vulnerability is actively exploited in the wild with no vendor patch available. The five-year-old vulnerability enables unauthenticated remote access through compromised cryptographic keys in engineering software; attackers modified PLC logic and disabled safety systems while manipulating HMI displays to prevent operator detection. Organizations must immediately disconnect internet-exposed PLCs, implement network segmentation isolating engineering workstations, enable physical mode switches set to "Run," deploy CIP Security, and maintain offline backups since architecture-level controls are the only remediation path. Ingest CISA AA26-097A indicators of compromise and monitor ports 44818, 2222, 102, 502, and 22 for connections from foreign hosting providers.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.tenable.com/blog/coordinated-cyberattack-on-minnesota-water-utilities-what-you-need-to-know"&gt;Read more&lt;/a&gt; · Source: tenable&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Apple Patches Everything (July 2026), (Wed, Jul 29th)</title>
-    <id>urn:cybersecnews:item:193</id>
-    <published>2026-07-29T10:39:37.099017+00:00</published>
-    <updated>2026-07-29T10:39:37.099017+00:00</updated>
-    <link href="https://isc.sans.edu/diary/rss/33196" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Apple released security patches across all major operating systems and Safari in July 2026, addressing vulnerabilities in macOS 14, 15, and 26, iOS/iPadOS 26, and Safari. The briefing lacks specific vulnerability details, affected features, or severity ratings required for proper risk assessment. Recommend obtaining detailed CVE information from Apple's security bulletins to identify which vulnerabilities pose critical risk to your environment. Patch immediately for current OS versions (macOS 26, iOS/iPadOS 26) and prioritize legacy systems (macOS 14-15) based on deployment scope and criticality assessment.&lt;/p&gt;&lt;p&gt;&lt;a href="https://isc.sans.edu/diary/rss/33196"&gt;Read more&lt;/a&gt; · Source: sans-isc&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Two Compromised joyfill npm Packages Run RAT When Imported Into Node.js</title>
-    <id>urn:cybersecnews:item:192</id>
-    <published>2026-07-29T10:39:37.097981+00:00</published>
-    <updated>2026-07-29T10:39:37.097981+00:00</updated>
-    <link href="https://thehackernews.com/2026/07/two-compromised-joyfill-npm-packages.html" rel="alternate" />
-    <category term="red-team" />
-    <content type="html">&lt;p&gt;&lt;em&gt;red-team · supply-chain-attack&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Two npm packages in the @joyfill namespace (@joyfill/layouts@0.1.2-2773.beta.0 and @joyfill/components@4.0.0-rc24-2773-beta.4) have been compromised to deliver the DEV#POPPER remote access trojan, which executes malicious code at import time in Node.js environments. The attack employs encrypted payloads that are decrypted and executed during module initialization, providing attackers full system access. This threat is actively exploited in the wild as evidenced by the compromise of official package repositories. Immediately audit Node.js projects for these specific beta versions, remove affected packages, and restore from clean dependencies; consider implementing package pinning policies and monitoring for similar supply chain compromises in your dependency tree.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/two-compromised-joyfill-npm-packages.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Flying Eagle Android RAT Traces Found on 170 Servers as Source Code Circulates</title>
-    <id>urn:cybersecnews:item:191</id>
-    <published>2026-07-29T10:39:37.096914+00:00</published>
-    <updated>2026-07-29T10:39:37.096914+00:00</updated>
-    <link href="https://thehackernews.com/2026/07/flying-eagle-android-rat-traces-found.html" rel="alternate" />
-    <category term="red-team" />
-    <content type="html">&lt;p&gt;&lt;em&gt;red-team · c2&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Flying Eagle Android RAT framework source code is actively circulating in criminal channels with control infrastructure identified on 170 servers. The malware masquerades as Chinese Public Security services and provides remote access capabilities including payment credential theft on Android devices. Exploitation appears active in the wild with targeting focused on China-based victims. Organizations should deploy network detection signatures for command-and-control communications and advise users to avoid sideloading applications from untrusted sources, verifying apps only from official Android app stores.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/flying-eagle-android-rat-traces-found.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
   </entry>
 </feed>
