@@ -3,7 +3,25 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-08-19T01:13:46.148793+00:00</updated>
+  <updated>2026-08-19T08:36:55.215864+00:00</updated>
+  <entry>
+    <title>Oracle August 2026 Critical Security Patch Update Addresses 925 CVEs</title>
+    <id>urn:cybersecnews:item:290</id>
+    <published>2026-08-19T08:36:55.215864+00:00</published>
+    <updated>2026-08-19T08:36:55.215864+00:00</updated>
+    <link href="https://www.tenable.com/blog/oracle-august-2026-critical-security-patch-update-cspu-addresses-925-cves" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · multiple&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Oracle released 943 security patches addressing 925 CVEs across 23 product families in its August 2026 Critical Security Patch Update, with 154 critical-severity issues (16.3% of total patches). Oracle Fusion Middleware and Oracle Hyperion received the highest patch volumes at 262 patches each, with 182 and 107 vulnerabilities respectively exploitable remotely without authentication. No indication of active exploitation in the wild is provided in this advisory. Organizations should prioritize patching critical and high-severity vulnerabilities (75.3% of patches) in Fusion Middleware and Hyperion immediately, with particular attention to remotely exploitable issues.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.tenable.com/blog/oracle-august-2026-critical-security-patch-update-cspu-addresses-925-cves"&gt;Read more&lt;/a&gt; · Source: tenable&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Oracle-Patchday: Updates für weniger als tausend Schwachstellen</title>
+    <id>urn:cybersecnews:item:289</id>
+    <published>2026-08-19T08:36:55.213499+00:00</published>
+    <updated>2026-08-19T08:36:55.213499+00:00</updated>
+    <link href="https://www.heise.de/news/Oracle-Patchday-Updates-fuer-weniger-als-tausend-Schwachstellen-11418883.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Oracle released its latest Critical Security Patch Update addressing approximately 1000 vulnerabilities across its product suite, including Oracle Database, WebLogic Server, and other enterprise software. The patch volume represents a decrease from the previous regular CPU cycle, indicating a temporary reduction in newly disclosed critical issues. Severity ratings span from critical to medium-risk flaws affecting authentication, remote code execution, and data access mechanisms. Organizations running Oracle products should prioritize patching critical and high-severity vulnerabilities identified for their specific deployments, with immediate attention to internet-facing systems like WebLogic Server.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.heise.de/news/Oracle-Patchday-Updates-fuer-weniger-als-tausend-Schwachstellen-11418883.html"&gt;Read more&lt;/a&gt; · Source: heise-security&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>kobako Sandbox Escape: guest eval reaches host RCE via method_missing → public_send (any bound Service) (CVE-2026-55107)</title>
     <id>urn:cybersecnews:item:288</id>
@@ -885,23 +903,5 @@
     <link href="https://thehackernews.com/2026/07/flying-eagle-android-rat-traces-found.html" rel="alternate" />
     <category term="red-team" />
     <content type="html">&lt;p&gt;&lt;em&gt;red-team · c2&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Flying Eagle Android RAT framework source code is actively circulating in criminal channels with control infrastructure identified on 170 servers. The malware masquerades as Chinese Public Security services and provides remote access capabilities including payment credential theft on Android devices. Exploitation appears active in the wild with targeting focused on China-based victims. Organizations should deploy network detection signatures for command-and-control communications and advise users to avoid sideloading applications from untrusted sources, verifying apps only from official Android app stores.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/flying-eagle-android-rat-traces-found.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>New Gitea RCE Lets Repository Writers Plant a Git Hook to Run Shell Commands</title>
-    <id>urn:cybersecnews:item:190</id>
-    <published>2026-07-29T10:39:37.094685+00:00</published>
-    <updated>2026-07-29T10:39:37.094685+00:00</updated>
-    <link href="https://thehackernews.com/2026/07/new-gitea-rce-lets-repository-writers.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-60004&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Gitea versions 1.17 through 1.27.0 contain a critical RCE vulnerability (CVE-2024-60004, CVSS 9.8) allowing repository writers to execute arbitrary shell commands as the Gitea service account by injecting malicious Git hooks through patch content. The vulnerability has not been reported as actively exploited in the wild but poses severe risk due to the low privilege requirement for exploitation. Immediately upgrade to Gitea 1.27.1 or later, and review repository access controls to restrict write permissions where possible.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/new-gitea-rce-lets-repository-writers.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>@hypequery/clickhouse has SQL Injection in parameter escaping that allows arbitrary SQL execution (CVE-2026-54658)</title>
-    <id>urn:cybersecnews:item:189</id>
-    <published>2026-07-29T02:36:34.332323+00:00</published>
-    <updated>2026-07-29T02:36:34.332323+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-6wcc-39rp-hh9p" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · sqli · CVE-2026-54658&lt;/em&gt;&lt;/p&gt;&lt;p&gt;The @hypequery/clickhouse npm package prior to version 2.0.2 contains a critical SQL injection vulnerability in the `escapeValue()` function used for parameter substitution. Attackers controlling parameter values can inject arbitrary SQL by exploiting improper escaping of trailing backslashes before closing quotes. There is no indication of active exploitation in the wild, but the critical severity warrants immediate action. Update to version 2.0.2 or later immediately, and audit applications using this package with user-controlled query parameters for potential compromise.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-6wcc-39rp-hh9p"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
   </entry>
 </feed>
