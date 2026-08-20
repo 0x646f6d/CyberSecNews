@@ -3,7 +3,70 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-08-20T01:12:17.843015+00:00</updated>
+  <updated>2026-08-20T16:35:25.858382+00:00</updated>
+  <entry>
+    <title>BTR Reforged: Weaponizing Defender’s Remediation Driver as a Kernel Operation Primitive</title>
+    <id>urn:cybersecnews:item:302</id>
+    <published>2026-08-20T16:35:25.858382+00:00</published>
+    <updated>2026-08-20T16:35:25.858382+00:00</updated>
+    <link href="https://research.checkpoint.com/2026/btr-reforged-weaponizing-defenders-remediation-driver-as-a-kernel-operation-primitive/" rel="alternate" />
+    <category term="red-team" />
+    <content type="html">&lt;p&gt;&lt;em&gt;red-team · privilege-escalation&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Windows Defender's remediation driver (MpCmdRun.exe and associated kernel components) can be abused as a kernel operation primitive to perform arbitrary file and registry operations at Ring 0 without requiring memory corruption or exploits. An attacker with local access can weaponize this signed, trusted Microsoft component to bypass security controls and execute privileged operations. This technique, dubbed BTR Reforged, is a privilege escalation and defense evasion method of high severity. Mitigation involves restricting access to Defender's remediation interfaces, applying principle of least privilege for driver execution, and monitoring for suspicious abuse patterns; no patch details are specified in the abstract, so coordination with Microsoft security teams is recommended.&lt;/p&gt;&lt;p&gt;&lt;a href="https://research.checkpoint.com/2026/btr-reforged-weaponizing-defenders-remediation-driver-as-a-kernel-operation-primitive/"&gt;Read more&lt;/a&gt; · Source: checkpoint-research&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Using Microsoft Graph and Powershell to Mine for Information - Stale Accounts and Licenses, (Thu, Aug 20th)</title>
+    <id>urn:cybersecnews:item:301</id>
+    <published>2026-08-20T16:35:25.857484+00:00</published>
+    <updated>2026-08-20T16:35:25.857484+00:00</updated>
+    <link href="https://isc.sans.edu/diary/rss/33264" rel="alternate" />
+    <category term="red-team" />
+    <content type="html">&lt;p&gt;&lt;em&gt;red-team · reconnaissance&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Microsoft Graph API via PowerShell enables comprehensive querying of M365, Entra ID users, and managed devices to identify stale accounts and unused licenses. This technique is not a vulnerability but rather a legitimate administrative capability that attackers can abuse if they gain sufficient API permissions or valid credentials. The risk is moderate to high depending on organizational access controls, as adversaries with compromised admin accounts or overly permissive application permissions can perform reconnaissance, enumerate inactive accounts for targeted attacks, or discover license misconfigurations. Organizations should enforce principle of least privilege for Microsoft Graph API permissions, implement conditional access policies, enable MFA for administrative accounts, audit API usage logs, and regularly review application consent permissions to limit exposure.&lt;/p&gt;&lt;p&gt;&lt;a href="https://isc.sans.edu/diary/rss/33264"&gt;Read more&lt;/a&gt; · Source: sans-isc&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Critical Zimbra RCE flaw now actively exploited in attacks</title>
+    <id>urn:cybersecnews:item:300</id>
+    <published>2026-08-20T16:35:25.853304+00:00</published>
+    <updated>2026-08-20T16:35:25.853304+00:00</updated>
+    <link href="https://www.bleepingcomputer.com/news/security/critical-zimbra-rce-flaw-now-actively-exploited-in-attacks/" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Zimbra Collaboration Suite contains a critical remote code execution vulnerability (CVE-2022-27925) that allows unauthenticated attackers to execute arbitrary code through improper validation in the webmail component. The flaw is actively exploited in the wild with public proof-of-concept code available. Administrators should immediately patch to the latest Zimbra version or apply vendor-supplied hotfixes; if patching is not immediately possible, disable webmail access or restrict it to trusted IP addresses as interim mitigation.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/critical-zimbra-rce-flaw-now-actively-exploited-in-attacks/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>CISA warns of hackers exploiting critical MLflow vulnerability</title>
+    <id>urn:cybersecnews:item:299</id>
+    <published>2026-08-20T16:35:25.852075+00:00</published>
+    <updated>2026-08-20T16:35:25.852075+00:00</updated>
+    <link href="https://www.bleepingcomputer.com/news/security/cisa-warns-of-hackers-exploiting-critical-mlflow-vulnerability/" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;MLflow open-source AI engineering platform is vulnerable to remote code execution via inadequate access controls in its API endpoints. The vulnerability is critical severity and is currently being actively exploited in the wild. Federal agencies and organizations using MLflow should immediately patch to the latest patched version and review access logs for signs of compromise. Additionally, restrict network access to MLflow instances and implement proper authentication controls on all API endpoints.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/cisa-warns-of-hackers-exploiting-critical-mlflow-vulnerability/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>NASA AIT-GUI Flaws Could Let Unauthenticated Attackers Issue Spacecraft Commands</title>
+    <id>urn:cybersecnews:item:298</id>
+    <published>2026-08-20T16:35:25.851171+00:00</published>
+    <updated>2026-08-20T16:35:25.851171+00:00</updated>
+    <link href="https://thehackernews.com/2026/08/nasa-ait-gui-flaws-could-let.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass,rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;NASA/JPL's AMMOS Instrument Toolkit (AIT-GUI) browser-based operator console contains a critical authentication bypass chain (GHSA-p9r8-2q67-fp86, CVSS 9.4) allowing unauthenticated attackers to issue arbitrary commands to spacecraft and instrument command buses. The vulnerability stems from missing authentication controls on sensitive operational endpoints. No indication of active exploitation in the wild has been reported. Immediate patching is required; users should upgrade to patched versions and restrict network access to AIT-GUI instances to trusted networks only.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/08/nasa-ait-gui-flaws-could-let.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>CDN Tsunami Attack Abuses HTTP/3 Translation for Up to 350x DoS Amplification</title>
+    <id>urn:cybersecnews:item:297</id>
+    <published>2026-08-20T16:35:25.850106+00:00</published>
+    <updated>2026-08-20T16:35:25.850106+00:00</updated>
+    <link href="https://thehackernews.com/2026/08/cdn-tsunami-attack-abuses-http3.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · dos-amplification&lt;/em&gt;&lt;/p&gt;&lt;p&gt;CDN Tsunami exploits HTTP/3 to HTTP/1.1 translation mechanisms in major CDNs (Alibaba, Baidu, and others) to amplify DoS attacks up to 350x against origin servers. The vulnerability stems from how CDNs convert client HTTP/3 requests into backend HTTP/1.1 calls, allowing attackers to generate disproportionate load with minimal bandwidth. This is a high-severity attack technique with potential for real-world exploitation given the widespread use of affected CDNs. Organizations should coordinate with their CDN providers on request rate limiting, implement origin-side rate controls, and monitor for anomalous traffic patterns from CDN sources.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/08/cdn-tsunami-attack-abuses-http3.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Isolated-vm Flaw Lets Sandboxed JavaScript Escape to Host for Potential RCE</title>
+    <id>urn:cybersecnews:item:296</id>
+    <published>2026-08-20T16:35:25.848498+00:00</published>
+    <updated>2026-08-20T16:35:25.848498+00:00</updated>
+    <link href="https://thehackernews.com/2026/08/isolated-vm-flaw-lets-sandboxed.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · sandbox-escape&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Isolated-vm, a popular Node.js sandboxing library (all versions through 7.0.0), contains a critical escape vulnerability (GHSA-864f-rcv7-6rh4) allowing attackers to break out of the sandbox and achieve potential remote code execution on the host system. The flaw affects JavaScript execution isolation, undermining the core security premise of the library. No CVE has been assigned yet, and exploitability in the wild is not mentioned. Immediately upgrade to the patched version beyond 7.0.0 and assess any applications using isolated-vm for unauthorized access or code execution.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/08/isolated-vm-flaw-lets-sandboxed.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>CVE-2026-19490: Critical Vulnerability Affecting Citrix NetScaler ADC and NetScaler Gateway</title>
     <id>urn:cybersecnews:item:295</id>
@@ -840,68 +903,5 @@
     <link href="https://isc.sans.edu/diary/rss/33198" rel="alternate" />
     <category term="red-team" />
     <content type="html">&lt;p&gt;&lt;em&gt;red-team · lateral-movement&lt;/em&gt;&lt;/p&gt;&lt;p&gt;An SSH-based botnet is actively performing host reconnaissance before deploying cryptocurrency miners, targeting systems with weak or default SSH credentials. The malware enumerates hardware capabilities to optimize miner deployment and avoid detection on unsuitable targets. This represents moderate severity with confirmed active exploitation in the wild. Implement SSH hardening measures including key-based authentication, disable root login, change default ports, enforce strong passwords, and deploy SSH intrusion detection to block brute-force attempts.&lt;/p&gt;&lt;p&gt;&lt;a href="https://isc.sans.edu/diary/rss/33198"&gt;Read more&lt;/a&gt; · Source: sans-isc&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Cisco warns of FMC static credential flaw exploited in zero-day attacks</title>
-    <id>urn:cybersecnews:item:202</id>
-    <published>2026-07-30T02:24:33.180802+00:00</published>
-    <updated>2026-07-30T02:24:33.180802+00:00</updated>
-    <link href="https://www.bleepingcomputer.com/news/security/cisco-warns-of-fmc-static-credential-flaw-exploited-in-zero-day-attacks/" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · static-credentials · CVE-2026-20316&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Cisco Secure Firewall Management Center (FMC) contains a high-severity hardcoded credential vulnerability (CVE-2026-20316) that allows unauthenticated attackers to gain unauthorized administrative access to affected systems. The flaw has been actively exploited in the wild as a zero-day attack. Cisco has released security patches to address the issue. Organizations running vulnerable FMC versions should immediately apply available updates and consider implementing network segmentation to restrict administrative access to FMC instances.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/cisco-warns-of-fmc-static-credential-flaw-exploited-in-zero-day-attacks/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Russian hackers exploit Exchange OWA zero-day for long-term mailbox access</title>
-    <id>urn:cybersecnews:item:201</id>
-    <published>2026-07-30T02:24:33.179338+00:00</published>
-    <updated>2026-07-30T02:24:33.179338+00:00</updated>
-    <link href="https://www.bleepingcomputer.com/news/security/russian-hackers-exploit-exchange-owa-zero-day-for-long-term-mailbox-access/" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Laundry Bear (Void Blizzard) is actively exploiting a zero-day vulnerability in Microsoft Exchange Outlook Web Access (OWA) to deliver the OWAReaper backdoor for persistent mailbox access. The vulnerability enables attackers to bypass authentication and establish long-term control over compromised email accounts. This is a critical severity issue being actively exploited in the wild by a Russian state-sponsored threat actor. Apply available patches immediately and conduct incident response on any systems running vulnerable Exchange versions; monitor OWA logs for anomalous authentication patterns and consider implementing network segmentation for email infrastructure.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/russian-hackers-exploit-exchange-owa-zero-day-for-long-term-mailbox-access/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Critical Rails Flaw Could Let Unauthenticated Attackers Read Server Files via Image Uploads</title>
-    <id>urn:cybersecnews:item:200</id>
-    <published>2026-07-30T02:24:33.176578+00:00</published>
-    <updated>2026-07-30T02:24:33.176578+00:00</updated>
-    <link href="https://thehackernews.com/2026/07/critical-rails-flaw-could-let.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · arbitrary-file-read · CVE-2026-59774, CVE-2026-66066&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Rails Active Storage contains a critical arbitrary file read vulnerability (CVE-2026-66066, CVSS 9.5) allowing unauthenticated attackers to access sensitive server files including secrets, credentials, and environment variables through malicious image uploads. The vulnerability is actively exploitable and poses severe risk to production Rails applications storing sensitive data. Affected applications should immediately update to patched Rails versions and review access logs for exploitation attempts. As immediate mitigation, consider restricting image upload functionality or implementing additional authentication controls pending patch deployment.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/critical-rails-flaw-could-let.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>prebid-server's request forgery vulnerability allows for possible host environment data extraction (CVE-2026-54735)</title>
-    <id>urn:cybersecnews:item:199</id>
-    <published>2026-07-29T17:15:43.414677+00:00</published>
-    <updated>2026-07-29T17:15:43.414677+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-4p3g-4hcj-wpvx" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · ssrf · CVE-2026-54725, CVE-2026-54735&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Prebid Server bidder adapters contain a request forgery vulnerability (CVE-2026-54735) where user-supplied parameters are interpolated into outbound URLs without proper validation, allowing attackers to redirect HTTP requests to unintended destinations and potentially access internal network services or sensitive endpoints. This critical-severity flaw affects versions prior to v4.4.0 across all major version branches (v1-v4). The vulnerability enables Server-Side Request Forgery (SSRF) attacks that could expose host environment data or internal services. Immediately upgrade to Prebid Server v4.4.0 or later; no workaround is mentioned for users unable to patch immediately.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-4p3g-4hcj-wpvx"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Logging operator has Fluentd configuration injection that allows remote code execution (CVE-2026-54680)</title>
-    <id>urn:cybersecnews:item:198</id>
-    <published>2026-07-29T17:15:43.413656+00:00</published>
-    <updated>2026-07-29T17:15:43.413656+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-mjqf-28ph-426h" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · config-injection · CVE-2026-54680&lt;/em&gt;&lt;/p&gt;&lt;p&gt;The Logging operator for Kubernetes (github.com/kube-logging/logging-operator) contains a critical configuration injection vulnerability (CVE-2026-54680) where the Fluentd configuration renderer fails to escape strings from CRD resources, allowing any user who can create Flow resources to inject arbitrary Fluentd configuration. An attacker can exploit this by injecting newlines into fields like `record_transformer.records` to close configuration blocks and inject a `&lt;match **&gt;` block with Fluentd's `@type exec` plugin, achieving remote code execution. This vulnerability is critical and should be patched immediately; apply the latest security update to the Logging operator and restrict RBAC permissions for Flow resource creation to trusted users only.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-mjqf-28ph-426h"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Researchers Show a Single Malicious Webpage Visit Can Compromise Tor Browser</title>
-    <id>urn:cybersecnews:item:197</id>
-    <published>2026-07-29T17:15:43.412863+00:00</published>
-    <updated>2026-07-29T17:15:43.412863+00:00</updated>
-    <link href="https://thehackernews.com/2026/07/researchers-show-single-malicious.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-10702&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Firefox/Tor Browser affected by CVE-2024-10702, a high-severity JIT compiler vulnerability enabling arbitrary code execution via malicious webpage visit without user interaction. Nebula Security demonstrated the flaw can compromise Tor Browser despite its security model, with Mozilla patching in Firefox 151.0.3. Users must update Firefox and Tor Browser immediately; no workarounds available given the passive exploitation vector.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/researchers-show-single-malicious.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Three Critical VMware Flaws Allow Auth Bypass, Code Execution, and VM Escape</title>
-    <id>urn:cybersecnews:item:196</id>
-    <published>2026-07-29T17:15:43.412048+00:00</published>
-    <updated>2026-07-29T17:15:43.412048+00:00</updated>
-    <link href="https://thehackernews.com/2026/07/three-critical-vmware-flaws-allow-auth.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass, rce, vm-escape · CVE-2026-59309, CVE-2026-59310&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Three critical VMware vulnerabilities affect vCenter, ESX, Workstation, and Fusion: CVE-2024-59309 (CVSS 9.8) enables authentication bypass in vCenter, while additional flaws permit code execution and VM escape. These vulnerabilities require network access but allow unauthenticated attackers to compromise virtualization infrastructure with maximum impact. Immediate patching with Broadcom's released security updates is mandatory; prioritize vCenter instances exposed to untrusted networks. Monitor for exploitation attempts and verify patch deployment across all affected VMware products.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/three-critical-vmware-flaws-allow-auth.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
   </entry>
 </feed>
