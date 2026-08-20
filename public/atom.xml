@@ -3,7 +3,25 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-08-19T16:31:25.338712+00:00</updated>
+  <updated>2026-08-20T01:12:17.843015+00:00</updated>
+  <entry>
+    <title>CVE-2026-19490: Critical Vulnerability Affecting Citrix NetScaler ADC and NetScaler Gateway</title>
+    <id>urn:cybersecnews:item:295</id>
+    <published>2026-08-20T01:12:17.843015+00:00</published>
+    <updated>2026-08-20T01:12:17.843015+00:00</updated>
+    <link href="https://www.rapid7.com/blog/post/etr-cve-2026-19490-critical-vulnerability-affecting-citrix-netscaler-adc-and-netscaler-gateway" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-19490&lt;/em&gt;&lt;/p&gt;&lt;p&gt;CVE-2026-19490 is a critical authentication bypass vulnerability (CVSS 9.3) affecting Citrix NetScaler ADC and NetScaler Gateway versions 14.1 prior to 14.1-73.32 and 13.1 prior to 13.1-63.21, exploitable remotely by unauthenticated attackers without user interaction. While not yet observed in active exploitation as of August 19, 2026, these perimeter-deployed systems are high-value targets with historical patterns of rapid weaponization. Organizations must emergency-patch affected appliances immediately to the specified fixed versions and review configurations for SAML authentication or VPN vserver settings to identify vulnerable instances. Mitigation involves updating to NetScaler ADC/Gateway 14.1-73.32 or later, 13.1-63.21 or later, or corresponding FIPS versions.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.rapid7.com/blog/post/etr-cve-2026-19490-critical-vulnerability-affecting-citrix-netscaler-adc-and-netscaler-gateway"&gt;Read more&lt;/a&gt; · Source: rapid7&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>US warns of AI-powered attacks on Siemens PLCs in critical infrastructure</title>
+    <id>urn:cybersecnews:item:294</id>
+    <published>2026-08-20T01:12:17.840330+00:00</published>
+    <updated>2026-08-20T01:12:17.840330+00:00</updated>
+    <link href="https://www.bleepingcomputer.com/news/security/us-warns-of-ai-powered-attacks-on-siemens-plcs-in-critical-infrastructure/" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Siemens S7 Series PLCs are targeted by threat actors using AI-generated exploit scripts to compromise critical infrastructure systems. The attack leverages automated payload generation to identify and exploit vulnerabilities in these industrial control devices. No specific CVE or severity rating provided, but active exploitation in critical infrastructure sectors indicates high risk with confirmed wild deployment. Immediate action required: patch all exposed Siemens PLCs to latest firmware versions, implement network segmentation isolating PLCs from untrusted networks, and deploy anomaly detection monitoring for unusual PLC communications.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/us-warns-of-ai-powered-attacks-on-siemens-plcs-in-critical-infrastructure/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Simple Scans for Cloud Metadata Service, (Wed, Aug 19th)</title>
     <id>urn:cybersecnews:item:293</id>
@@ -885,23 +903,5 @@
     <link href="https://thehackernews.com/2026/07/three-critical-vmware-flaws-allow-auth.html" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass, rce, vm-escape · CVE-2026-59309, CVE-2026-59310&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Three critical VMware vulnerabilities affect vCenter, ESX, Workstation, and Fusion: CVE-2024-59309 (CVSS 9.8) enables authentication bypass in vCenter, while additional flaws permit code execution and VM escape. These vulnerabilities require network access but allow unauthenticated attackers to compromise virtualization infrastructure with maximum impact. Immediate patching with Broadcom's released security updates is mandatory; prioritize vCenter instances exposed to untrusted networks. Monitor for exploitation attempts and verify patch deployment across all affected VMware products.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/three-critical-vmware-flaws-allow-auth.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Ruflo MCP Flaw Lets Unauthenticated Attackers Run Commands and Poison AI Memory</title>
-    <id>urn:cybersecnews:item:195</id>
-    <published>2026-07-29T17:15:43.410542+00:00</published>
-    <updated>2026-07-29T17:15:43.410542+00:00</updated>
-    <link href="https://thehackernews.com/2026/07/ruflo-mcp-flaw-lets-unauthenticated.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-59726&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Ruflo, an open-source agent meta-harness for Anthropic Claude and OpenAI Codex, contains a critical unauthenticated remote code execution vulnerability (CVE-2026-59726, CVSS 10.0) affecting all versions prior to 3.16.3. The flaw allows attackers to execute arbitrary commands and manipulate AI model memory without authentication. There is no indication of active exploitation in the wild at this time. Immediately upgrade to Ruflo version 3.16.3 or later; if immediate patching is not feasible, restrict network access to Ruflo instances to trusted networks only.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/ruflo-mcp-flaw-lets-unauthenticated.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Coordinated “cyberattack” on Minnesota water utilities: What you need to know</title>
-    <id>urn:cybersecnews:item:194</id>
-    <published>2026-07-29T10:39:37.100017+00:00</published>
-    <updated>2026-07-29T10:39:37.100017+00:00</updated>
-    <link href="https://www.tenable.com/blog/coordinated-cyberattack-on-minnesota-water-utilities-what-you-need-to-know" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2021-22681, CVE-2023-3595, CVE-2024-6242&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Iranian-affiliated CyberAv3ngers actors exploited CVE-2021-22681, a critical authentication bypass (CVSS 9.8) in internet-exposed Rockwell Automation, Schneider Electric, and Siemens PLCs, to disrupt water systems across 30+ Minnesota communities in late July 2026; the vulnerability is actively exploited in the wild with no vendor patch available. The five-year-old vulnerability enables unauthenticated remote access through compromised cryptographic keys in engineering software; attackers modified PLC logic and disabled safety systems while manipulating HMI displays to prevent operator detection. Organizations must immediately disconnect internet-exposed PLCs, implement network segmentation isolating engineering workstations, enable physical mode switches set to "Run," deploy CIP Security, and maintain offline backups since architecture-level controls are the only remediation path. Ingest CISA AA26-097A indicators of compromise and monitor ports 44818, 2222, 102, 502, and 22 for connections from foreign hosting providers.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.tenable.com/blog/coordinated-cyberattack-on-minnesota-water-utilities-what-you-need-to-know"&gt;Read more&lt;/a&gt; · Source: tenable&lt;/p&gt;</content>
   </entry>
 </feed>
