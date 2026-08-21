@@ -3,7 +3,34 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-08-21T08:39:48.497618+00:00</updated>
+  <updated>2026-08-21T16:34:11.841400+00:00</updated>
+  <entry>
+    <title>Microsoft warns of max severity Entra ID flaw exploited in attacks</title>
+    <id>urn:cybersecnews:item:307</id>
+    <published>2026-08-21T16:34:11.841400+00:00</published>
+    <updated>2026-08-21T16:34:11.841400+00:00</updated>
+    <link href="https://www.bleepingcomputer.com/news/microsoft/microsoft-warns-of-max-severity-entra-id-flaw-exploited-in-attacks/" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Microsoft Entra ID is affected by a critical vulnerability (CVSS 9.8) in its identity and access management functionality that is actively exploited in the wild. The flaw allows attackers to bypass authentication controls and gain unauthorized access to cloud resources and applications relying on Entra ID. Immediate patching is required; organizations should prioritize applying Microsoft's security updates and review access logs for indicators of compromise.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/microsoft/microsoft-warns-of-max-severity-entra-id-flaw-exploited-in-attacks/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Cisco Patches Nine Crosswork and Secure Workload Flaws, Five Scoring CVSS 10.0</title>
+    <id>urn:cybersecnews:item:306</id>
+    <published>2026-08-21T16:34:11.840019+00:00</published>
+    <updated>2026-08-21T16:34:11.840019+00:00</updated>
+    <link href="https://thehackernews.com/2026/08/cisco-patches-nine-crosswork-and-secure.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Cisco released security patches addressing nine vulnerabilities across Crosswork and Secure Workload products, with five flaws receiving CVSS 10.0 ratings indicating critical severity. The vulnerabilities affect Crosswork Data Gateway, Crosswork Network Controller, Crosswork Planning, and Secure Workload Software across multiple versions regardless of device configuration. No indication of active exploitation in the wild has been reported. Affected organizations should apply Cisco's published patches immediately given the critical CVSS scores and broad applicability across configurations.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/08/cisco-patches-nine-crosswork-and-secure.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Supply-Chain-Angriff: Backdoor in millionenfach geladene Rust Crates eingeschleust</title>
+    <id>urn:cybersecnews:item:305</id>
+    <published>2026-08-21T16:34:11.836698+00:00</published>
+    <updated>2026-08-21T16:34:11.836698+00:00</updated>
+    <link href="https://www.golem.de/news/supply-chain-angriff-backdoor-in-millionenfach-geladene-rust-crates-eingeschleust-2608-212158.html" rel="alternate" />
+    <category term="red-team" />
+    <content type="html">&lt;p&gt;&lt;em&gt;red-team · supply-chain-attack&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Multiple popular Rust crates were compromised in a supply chain attack injecting backdoor malware affecting potentially millions of downstream users. The attack targeted the Rust package ecosystem, allowing attackers to distribute malicious code through trusted dependencies. Severity is critical given the widespread distribution and persistence risk through legitimate package channels. Developers must immediately audit dependencies, update to patched versions once available, and review any suspicious package updates from these crates; consider pinning versions and implementing dependency scanning in build pipelines as interim protective measures.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.golem.de/news/supply-chain-angriff-backdoor-in-millionenfach-geladene-rust-crates-eingeschleust-2608-212158.html"&gt;Read more&lt;/a&gt; · Source: golem-security&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Microsoft Entra ID Flaw (CVSS 10.0) Exploited in Wild, Allows Remote Code Execution</title>
     <id>urn:cybersecnews:item:304</id>
@@ -876,32 +903,5 @@
     <link href="https://thehackernews.com/2026/07/three-recent-chrome-releases-fix-1442.html" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · multiple&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Google released Chrome 149, 150, and 151 with a combined 1,442 security fixes—1,072 in versions 149-150 and 370 in version 151—exceeding the total vulnerabilities patched in the previous 23 updates combined. The releases address a broad range of flaws across Chrome's codebase, with the majority reported internally by Google's security team. Users should immediately update to the latest Chrome version to receive these critical patches. Given the unprecedented volume of fixes, this update is essential for all Chrome users regardless of their risk profile.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/three-recent-chrome-releases-fix-1442.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>AWS Amplify Studio UI Component Properties Has an Input Validation Issue (CVE-2025-4318)</title>
-    <id>urn:cybersecnews:item:207</id>
-    <published>2026-07-31T02:48:17.769957+00:00</published>
-    <updated>2026-07-31T02:48:17.769957+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-hf3j-86p7-mfw8" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · input-validation · CVE-2025-4318&lt;/em&gt;&lt;/p&gt;&lt;p&gt;AWS Amplify Studio's amplify-codegen-ui package contains an input validation flaw in its property binding process that could allow code injection through improperly validated UI component properties. This critical vulnerability (CVE-2025-4318) affects the npm/@aws-amplify/codegen-ui-react package used for generating front-end code from the UI Builder. There is no indication the vulnerability is currently exploited in the wild. AWS customers should immediately update to the latest patched version of amplify-codegen-ui and review any components generated with potentially untrusted property bindings.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-hf3j-86p7-mfw8"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>After the Break-In: What Attackers Do Once They're Already Inside</title>
-    <id>urn:cybersecnews:item:206</id>
-    <published>2026-07-30T17:28:23.310718+00:00</published>
-    <updated>2026-07-30T17:28:23.310718+00:00</updated>
-    <link href="https://www.bleepingcomputer.com/news/security/after-the-break-in-what-attackers-do-once-theyre-already-inside/" rel="alternate" />
-    <category term="red-team" />
-    <content type="html">&lt;p&gt;&lt;em&gt;red-team · post-exploitation&lt;/em&gt;&lt;/p&gt;&lt;p&gt;This article examines post-compromise attacker behavior rather than a specific vulnerability, focusing on persistence mechanisms, defense evasion, and lateral movement tactics observed during real intrusions. The analysis demonstrates that attackers systematically disable security controls, establish backdoors, and modify system configurations to maintain access—highlighting why incident response must address root cause rather than just removing detected malware. While not describing a specific exploitable vulnerability, the techniques discussed are widely employed in active intrusions and present high severity due to their ability to undermine remediation efforts. Defenders should implement continuous monitoring of system changes, prioritize investigation of initial compromise vectors, maintain immutable audit logs, and ensure comprehensive artifact analysis during incident response rather than focusing solely on malware removal.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/after-the-break-in-what-attackers-do-once-theyre-already-inside/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Hackers Exploit AnySign4PC via Hacked Korean Sites to Install Backdoors Without Prompts</title>
-    <id>urn:cybersecnews:item:205</id>
-    <published>2026-07-30T17:28:23.309322+00:00</published>
-    <updated>2026-07-30T17:28:23.309322+00:00</updated>
-    <link href="https://thehackernews.com/2026/07/hackers-exploit-anysign4pc-via-hacked.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;AnySign4PC, a Korean financial-security software, contains a vulnerability allowing remote code execution without user prompts when visiting compromised websites. The exploit is part of a state-sponsored campaign attributed to North Korean threat actors targeting South Korean users through watering-hole attacks on trusted domestic sites, delivering SIGNBT and COPPERHEDGE backdoors. Severity is high given the lack of user interaction required and active exploitation in the wild. Affected organizations should immediately patch AnySign4PC to the latest version and implement network-level controls to restrict access to compromised sites.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/hackers-exploit-anysign4pc-via-hacked.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
   </entry>
 </feed>
