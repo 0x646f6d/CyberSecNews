@@ -3,7 +3,16 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-08-20T16:35:25.858382+00:00</updated>
+  <updated>2026-08-21T01:16:05.674051+00:00</updated>
+  <entry>
+    <title>Dgraph Alpha group stores can be replaced via unauthenticated external snapshot import (CVE-2026-54061)</title>
+    <id>urn:cybersecnews:item:303</id>
+    <published>2026-08-21T01:16:05.674051+00:00</published>
+    <updated>2026-08-21T01:16:05.674051+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-rrwh-6jrq-wp5v" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-54061&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Dgraph Alpha versions up to v25 expose unauthenticated external snapshot import RPCs (StreamExtSnapshot) on the public gRPC port 9080, allowing remote attackers to replace group stores with arbitrary data without credentials. An attacker can send malicious Badger stream data that triggers Prepare() operations, completely deleting and overwriting the target database. This is a critical vulnerability with high likelihood of exploitation due to the complete lack of authentication controls. Organizations running Dgraph Alpha should immediately upgrade to a patched version and restrict network access to port 9080 if an update is unavailable.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-rrwh-6jrq-wp5v"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>BTR Reforged: Weaponizing Defender’s Remediation Driver as a Kernel Operation Primitive</title>
     <id>urn:cybersecnews:item:302</id>
@@ -425,7 +434,7 @@
     <updated>2026-08-08T16:32:51.324315+00:00</updated>
     <link href="https://www.bleepingcomputer.com/news/security/hackers-breach-trueconf-to-trojanize-client-installers-with-backdoors/" rel="alternate" />
     <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · unpatched-server-vulnerability&lt;/em&gt;&lt;/p&gt;&lt;p&gt;TrueConf video conferencing software is affected by vulnerabilities in unpatched servers that allow attackers to replace legitimate client installers with trojanized versions containing backdoors. The Head Mare hacktivist group is actively exploiting these flaws in the wild to deliver persistent remote access capabilities. This represents high severity risk as compromised installers can affect multiple endpoints organization-wide. Immediately patch all TrueConf servers to the latest version and verify installer integrity before deployment; consider revoking and reissuing client installations if compromise is suspected.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/hackers-breach-trueconf-to-trojanize-client-installers-with-backdoors/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · unpatched-server-vulnerability · CVE-2026-72529, CVE-2026-72530&lt;/em&gt;&lt;/p&gt;&lt;p&gt;TrueConf video conferencing software is affected by vulnerabilities in unpatched servers that allow attackers to replace legitimate client installers with trojanized versions containing backdoors. The Head Mare hacktivist group is actively exploiting these flaws in the wild to deliver persistent remote access capabilities. This represents high severity risk as compromised installers can affect multiple endpoints organization-wide. Immediately patch all TrueConf servers to the latest version and verify installer integrity before deployment; consider revoking and reissuing client installations if compromise is suspected.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/hackers-breach-trueconf-to-trojanize-client-installers-with-backdoors/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
   </entry>
   <entry>
     <title>CodeIgniter: SQL injection in Query Builder deleteBatch() when used with where() conditions (CVE-2026-63221)</title>
@@ -758,7 +767,7 @@
     <updated>2026-08-03T11:23:48.923792+00:00</updated>
     <link href="https://thehackernews.com/2026/08/n-able-says-attackers-take-over-n.html" rel="alternate" />
     <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-18556, CVE-2026-18577&lt;/em&gt;&lt;/p&gt;&lt;p&gt;N-able N-central remote monitoring and management platform contains an authentication bypass vulnerability (CVE-2026-18577) in builds prior to 2026.3.1.7 that allows attackers to gain remote administrative access to the platform and subsequently to managed customer systems. The vulnerability has been actively exploited in the wild, with N-able's initial patch proving incomplete and requiring customers to upgrade to build 2026.3.1.7 released August 2 or later. This is a critical severity issue given the administrative access scope and impact on downstream managed infrastructure. Immediately update all N-central deployments to build 2026.3.1.7 or later and conduct forensic analysis of any instances that may have been compromised during the window between vulnerability discovery and patch deployment.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/08/n-able-says-attackers-take-over-n.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-18556, CVE-2026-18577, CVE-2026-55445&lt;/em&gt;&lt;/p&gt;&lt;p&gt;N-able N-central remote monitoring and management platform contains an authentication bypass vulnerability (CVE-2026-18577) in builds prior to 2026.3.1.7 that allows attackers to gain remote administrative access to the platform and subsequently to managed customer systems. The vulnerability has been actively exploited in the wild, with N-able's initial patch proving incomplete and requiring customers to upgrade to build 2026.3.1.7 released August 2 or later. This is a critical severity issue given the administrative access scope and impact on downstream managed infrastructure. Immediately update all N-central deployments to build 2026.3.1.7 or later and conduct forensic analysis of any instances that may have been compromised during the window between vulnerability discovery and patch deployment.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/08/n-able-says-attackers-take-over-n.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
   </entry>
   <entry>
     <title>Thermo Fisher Patches Flaw That Could Make DNA File Tampering Nearly Undetectable</title>
@@ -894,14 +903,5 @@
     <link href="https://thehackernews.com/2026/07/azure-cosmos-db-flaw-exposed-platform.html" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · sandbox-escape,rce,privilege-escalation&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Azure Cosmos DB contained a sandbox escape vulnerability in the Gremlin query engine that allowed attackers to execute arbitrary code and obtain platform-wide master keys granting read/write access across all customer databases and tenants. The vulnerability, designated CosmosEscape by Wiz researchers, was triggered through specially crafted Gremlin queries and could have compromised the entire multi-tenant platform. Microsoft has patched the flaw; customers should verify patches are applied and review access logs for potential exploitation. No evidence of exploitation in the wild was reported at the time of disclosure.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/07/azure-cosmos-db-flaw-exposed-platform.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Reconnaissance First: An SSH Bot That Sizes Up Your Hardware Before Deploying a Miner &amp;#x5b;Guest Diary&amp;#x5d;, (Thu, Jul 30th)</title>
-    <id>urn:cybersecnews:item:203</id>
-    <published>2026-07-30T02:24:33.181905+00:00</published>
-    <updated>2026-07-30T02:24:33.181905+00:00</updated>
-    <link href="https://isc.sans.edu/diary/rss/33198" rel="alternate" />
-    <category term="red-team" />
-    <content type="html">&lt;p&gt;&lt;em&gt;red-team · lateral-movement&lt;/em&gt;&lt;/p&gt;&lt;p&gt;An SSH-based botnet is actively performing host reconnaissance before deploying cryptocurrency miners, targeting systems with weak or default SSH credentials. The malware enumerates hardware capabilities to optimize miner deployment and avoid detection on unsuitable targets. This represents moderate severity with confirmed active exploitation in the wild. Implement SSH hardening measures including key-based authentication, disable root login, change default ports, enforce strong passwords, and deploy SSH intrusion detection to block brute-force attempts.&lt;/p&gt;&lt;p&gt;&lt;a href="https://isc.sans.edu/diary/rss/33198"&gt;Read more&lt;/a&gt; · Source: sans-isc&lt;/p&gt;</content>
   </entry>
 </feed>
