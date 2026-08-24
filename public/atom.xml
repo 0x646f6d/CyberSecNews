@@ -3,7 +3,25 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-08-22T01:12:04.850703+00:00</updated>
+  <updated>2026-08-24T16:37:45.866344+00:00</updated>
+  <entry>
+    <title>Microsoft: August updates break printing, PDF export in WPF apps</title>
+    <id>urn:cybersecnews:item:312</id>
+    <published>2026-08-24T16:37:45.866344+00:00</published>
+    <updated>2026-08-24T16:37:45.866344+00:00</updated>
+    <link href="https://www.bleepingcomputer.com/news/microsoft/microsoft-august-updates-break-printing-pdf-export-in-wpf-apps/" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · regression&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Microsoft's August 2026 .NET Framework updates are causing printing and PDF export failures in Windows Presentation Foundation (WPF) applications. The issue affects core rendering functionality within the WPF subsystem, though no active exploitation in the wild has been reported. Severity appears moderate as it impacts application functionality rather than security posture. Microsoft recommends either deferring the August updates, reverting to previous builds, or applying any available hotfixes once released—security teams should coordinate with application owners running WPF-based tools to assess impact before mandatory patching.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/microsoft/microsoft-august-updates-break-printing-pdf-export-in-wpf-apps/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Zahlreiche Sicherheitslücken bedrohen VMware-Tanzu-Spring-Software</title>
+    <id>urn:cybersecnews:item:311</id>
+    <published>2026-08-24T16:37:45.864377+00:00</published>
+    <updated>2026-08-24T16:37:45.864377+00:00</updated>
+    <link href="https://www.heise.de/news/Zahlreiche-Sicherheitsluecken-bedrohen-VMware-Tanzu-Spring-Software-11423459.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · multiple&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Multiple high-severity vulnerabilities affect VMware Tanzu Spring software components including Spring AI, Integration, and Security, allowing remote attackers to execute arbitrary code or bypass authentication controls. The vulnerabilities span remote code execution, deserialization flaws, and authentication bypass issues across multiple Spring modules. Patch availability has been released by VMware, and immediate patching is strongly recommended given the critical nature of these flaws and likelihood of exploitation. Affected organizations should prioritize updating all vulnerable Spring components to the latest patched versions without delay.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.heise.de/news/Zahlreiche-Sicherheitsluecken-bedrohen-VMware-Tanzu-Spring-Software-11423459.html"&gt;Read more&lt;/a&gt; · Source: heise-security&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>GeoTools has unauthenticated SQL injection in the jsonArrayContains filter function against PostGIS layers (CVE-2026-76904)</title>
     <id>urn:cybersecnews:item:310</id>
@@ -830,7 +848,7 @@
     <updated>2026-08-03T11:23:48.923792+00:00</updated>
     <link href="https://thehackernews.com/2026/08/n-able-says-attackers-take-over-n.html" rel="alternate" />
     <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-18556, CVE-2026-18577, CVE-2026-55445&lt;/em&gt;&lt;/p&gt;&lt;p&gt;N-able N-central remote monitoring and management platform contains an authentication bypass vulnerability (CVE-2026-18577) in builds prior to 2026.3.1.7 that allows attackers to gain remote administrative access to the platform and subsequently to managed customer systems. The vulnerability has been actively exploited in the wild, with N-able's initial patch proving incomplete and requiring customers to upgrade to build 2026.3.1.7 released August 2 or later. This is a critical severity issue given the administrative access scope and impact on downstream managed infrastructure. Immediately update all N-central deployments to build 2026.3.1.7 or later and conduct forensic analysis of any instances that may have been compromised during the window between vulnerability discovery and patch deployment.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/08/n-able-says-attackers-take-over-n.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-18556, CVE-2026-18577, CVE-2026-18963, CVE-2026-55445&lt;/em&gt;&lt;/p&gt;&lt;p&gt;N-able N-central remote monitoring and management platform contains an authentication bypass vulnerability (CVE-2026-18577) in builds prior to 2026.3.1.7 that allows attackers to gain remote administrative access to the platform and subsequently to managed customer systems. The vulnerability has been actively exploited in the wild, with N-able's initial patch proving incomplete and requiring customers to upgrade to build 2026.3.1.7 released August 2 or later. This is a critical severity issue given the administrative access scope and impact on downstream managed infrastructure. Immediately update all N-central deployments to build 2026.3.1.7 or later and conduct forensic analysis of any instances that may have been compromised during the window between vulnerability discovery and patch deployment.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/08/n-able-says-attackers-take-over-n.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
   </entry>
   <entry>
     <title>Thermo Fisher Patches Flaw That Could Make DNA File Tampering Nearly Undetectable</title>
@@ -885,23 +903,5 @@
     <link href="https://thehackernews.com/2026/08/adobe-campaign-classic-cvss-100-flaw.html" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-48362, CVE-2026-48449&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Adobe Campaign Classic contains a critical authorization bypass vulnerability (CVE-2026-48449, CVSS 10.0) enabling unauthenticated arbitrary code execution without user interaction. The flaw stems from improper authorization controls in the marketing automation platform. There is no indication of active exploitation in the wild at this time. Immediate patching is required; administrators should apply Adobe's released security updates to all affected Campaign Classic instances without delay.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/08/adobe-campaign-classic-cvss-100-flaw.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>NocoBase: SQL injection in /api/myInAppChannels:list filter to PG-superuser RCE (CVE-2026-52887)</title>
-    <id>urn:cybersecnews:item:212</id>
-    <published>2026-08-01T02:46:36.805883+00:00</published>
-    <updated>2026-08-01T02:46:36.805883+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-p849-8hwh-84j9" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · sqli · CVE-2026-52887&lt;/em&gt;&lt;/p&gt;&lt;p&gt;NocoBase's in-app notification plugin (npm/@nocobase/plugin-notification-in-app-message) contains a SQL injection vulnerability in the GET /api/myInAppChannels:list endpoint where the filter parameter's latestMsgReceiveTimestamp field is unsafely spliced into a Sequelize query without escaping or parameterization. Any authenticated user, easily obtained through default signup functionality, can exploit this to inject arbitrary SQL and achieve remote code execution with PostgreSQL superuser privileges. This is critical severity with likely active exploitation potential. Apply the security patch immediately; if unavailable, disable the in-app messaging plugin or restrict signup functionality until remediation is available.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-p849-8hwh-84j9"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Apostrophe has Server-Side Prototype Pollution in apos.util.set via patch operators that leads to process-wide authorization bypass (CVE-2026-53609)</title>
-    <id>urn:cybersecnews:item:211</id>
-    <published>2026-08-01T02:46:36.803833+00:00</published>
-    <updated>2026-08-01T02:46:36.803833+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-6h5j-32cf-4253" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · prototype-pollution · CVE-2026-53609&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Apostrophe CMS's apos.util.set() function is vulnerable to server-side prototype pollution via the $pullAll patch operator, allowing authenticated editors to modify Object.prototype by exploiting unsanitized dot-notation paths. This critical vulnerability (CVE-2026-53609) enables process-wide authorization bypass on all piece-type REST API endpoints through a gadget chain in publicApiCheck(), affecting subsequent unauthenticated requests. The vulnerability is confirmed as exploitable and requires immediate patching; update Apostrophe via npm to the latest patched version immediately and restrict editor access pending updates.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-6h5j-32cf-4253"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
   </entry>
 </feed>
