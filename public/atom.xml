@@ -3,7 +3,16 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-08-25T01:13:48.532512+00:00</updated>
+  <updated>2026-08-25T16:37:12.786606+00:00</updated>
+  <entry>
+    <title>nextcloud-mcp-server: Unauthenticated `POST /webhooks/nextcloud` allows arbitrary vector data deletion when `WEBHOOK_SECRET` is unset ( default ) (CVE-2026-55640)</title>
+    <id>urn:cybersecnews:item:315</id>
+    <published>2026-08-25T16:37:12.786606+00:00</published>
+    <updated>2026-08-25T16:37:12.786606+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-8vh3-g2qg-2h2c" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-55640&lt;/em&gt;&lt;/p&gt;&lt;p&gt;The nextcloud-mcp-server webhook receiver endpoint (`POST /webhooks/nextcloud`) lacks authentication by default, with `WEBHOOK_SECRET` unset and unenforced. An unauthenticated attacker can submit arbitrary POST requests containing any user ID to delete or corrupt vector embeddings in Qdrant, resulting in data loss across all users. This is critical severity and likely exploitable in the wild given the default insecure configuration. Immediately set a strong `WEBHOOK_SECRET` environment variable, validate it at startup, and upgrade to a patched version that enforces authentication; consider restricting webhook endpoint access by IP or network controls as an interim mitigation.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-8vh3-g2qg-2h2c"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Hackers target WordPress sites in miniOrange auth bypass attacks</title>
     <id>urn:cybersecnews:item:314</id>
@@ -11,7 +20,7 @@
     <updated>2026-08-25T01:13:48.532512+00:00</updated>
     <link href="https://www.bleepingcomputer.com/news/security/hackers-target-wordpress-sites-in-miniorange-auth-bypass-attacks/" rel="alternate" />
     <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass&lt;/em&gt;&lt;/p&gt;&lt;p&gt;The miniOrange SAML 2.0 Single Sign On WordPress plugin contains two critical authentication bypass vulnerabilities allowing attackers to forge SAML responses and gain administrative access. These flaws are being actively exploited in the wild against WordPress installations. Immediate patching to the latest plugin version is essential; administrators should also review access logs for unauthorized logins and consider temporarily disabling the plugin if updates are unavailable.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/hackers-target-wordpress-sites-in-miniorange-auth-bypass-attacks/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-61979&lt;/em&gt;&lt;/p&gt;&lt;p&gt;The miniOrange SAML 2.0 Single Sign On WordPress plugin contains two critical authentication bypass vulnerabilities allowing attackers to forge SAML responses and gain administrative access. These flaws are being actively exploited in the wild against WordPress installations. Immediate patching to the latest plugin version is essential; administrators should also review access logs for unauthorized logins and consider temporarily disabling the plugin if updates are unavailable.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/hackers-target-wordpress-sites-in-miniorange-auth-bypass-attacks/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
   </entry>
   <entry>
     <title>Unpatched Calix flaw lets hackers bypass NAT to expose internal devices</title>
@@ -894,14 +903,5 @@
     <link href="https://isc.sans.edu/diary/rss/33208" rel="alternate" />
     <category term="red-team" />
     <content type="html">&lt;p&gt;&lt;em&gt;red-team · malware&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Atomic macOS Stealer (AMOS) is malware targeting macOS systems that exfiltrates sensitive data including passwords, cryptocurrency wallets, and browser credentials. The threat is actively exploited in the wild with confirmed infections documented as of August 2nd. Severity is high due to the breadth of data compromise and targeting of financial assets. Mitigation includes disabling suspicious browser extensions, monitoring for unauthorized credential access, running updated antivirus on macOS systems, and implementing application whitelisting where feasible; users should also reset passwords and review financial accounts for unauthorized access.&lt;/p&gt;&lt;p&gt;&lt;a href="https://isc.sans.edu/diary/rss/33208"&gt;Read more&lt;/a&gt; · Source: sans-isc&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Coldcard Hardware Wallet Flaw Linked to $70 Million Bitcoin Theft in 41 Minutes</title>
-    <id>urn:cybersecnews:item:215</id>
-    <published>2026-08-02T02:45:35.747372+00:00</published>
-    <updated>2026-08-02T02:45:35.747372+00:00</updated>
-    <link href="https://thehackernews.com/2026/08/coldcard-hardware-wallet-flaw-linked-to.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · weak-rng&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Coldcard hardware wallet firmware versions prior to the March 2021 update contain a seed generation vulnerability where the device routes private key generation to a deterministic software PRNG instead of a true random number generator, allowing attackers to derive wallet seeds and compromise funds. An attacker exploited this flaw to steal approximately 1,082.65 BTC ($70.2 million) from 1,196 addresses in 41 minutes on July 30, demonstrating active exploitation in the wild. Users must immediately upgrade Coldcard firmware to the patched version released after March 2021; affected users should transfer funds from wallets generated with vulnerable firmware versions to new secure wallets created with the current firmware. This is a critical severity vulnerability given the demonstrated large-scale theft and the fundamental compromise of cryptographic randomness in key generation.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/08/coldcard-hardware-wallet-flaw-linked-to.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
   </entry>
 </feed>
