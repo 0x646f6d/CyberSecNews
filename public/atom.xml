@@ -3,7 +3,34 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-08-25T16:37:12.786606+00:00</updated>
+  <updated>2026-08-26T01:16:29.792765+00:00</updated>
+  <entry>
+    <title>gRPC Erlang package vulnerable to Remote Code Execution with attacker-controlled gRPC payloads (CVE-2026-48853)</title>
+    <id>urn:cybersecnews:item:318</id>
+    <published>2026-08-26T01:16:29.792765+00:00</published>
+    <updated>2026-08-26T01:16:29.792765+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-grp7-v8xh-rj7h" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-48853&lt;/em&gt;&lt;/p&gt;&lt;p&gt;gRPC Erlang package (CVE-2026-48853) contains a critical remote code execution vulnerability in GRPC.Codec.Erlpack.decode/2, which calls erlang.binary_to_term/1 without the :safe option on untrusted gRPC message bodies. An unauthenticated attacker sending malicious gRPC payloads with Content-Type: application/grpc+erlpack can crash the BEAM node via atom table exhaustion or achieve remote code execution if decoded fun terms reach callable code paths. Exploit exists in the wild. Immediately patch erlang/grpc to the latest version and restrict network access to gRPC endpoints if patching is delayed.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-grp7-v8xh-rj7h"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>AshAuthentication vulnerable to OAuth2/OIDC account takeover via email-based user matching (CVE-2026-49757)</title>
+    <id>urn:cybersecnews:item:317</id>
+    <published>2026-08-26T01:16:29.791746+00:00</published>
+    <updated>2026-08-26T01:16:29.791746+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-777c-2fxx-qr28" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-49757&lt;/em&gt;&lt;/p&gt;&lt;p&gt;AshAuthentication's OAuth2 and OIDC strategies (Erlang package) use email-based user matching instead of the recommended iss/sub claim combination, allowing account takeover. An unauthenticated attacker can register an account on any accepted OAuth provider using a victim's email address and gain full access to the victim's local account. This is critical severity and likely exploitable in the wild given the simplicity of the attack vector. Immediately update to a patched version that implements proper iss/sub claim-based user matching and audit existing OAuth/OIDC integrations for compromise.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-777c-2fxx-qr28"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Chainlit has command injection via MCP stdio transport that allows unauthenticated remote code execution (CVE-2026-45018)</title>
+    <id>urn:cybersecnews:item:316</id>
+    <published>2026-08-26T01:16:29.789224+00:00</published>
+    <updated>2026-08-26T01:16:29.789224+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-w3fx-mc44-mf6j" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · command-injection · CVE-2026-45018&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Chainlit versions with MCP (Model Context Protocol) stdio transport enabled are vulnerable to unauthenticated remote code injection via the `/mcp` endpoint, which accepts unsanitized user-controlled command strings despite validation checks. This critical vulnerability (CVE-2026-45018) allows unauthenticated remote code execution on affected systems and is exploitable in the wild. MCP has been disabled by default since v2.7.0, so most deployments are unaffected, but organizations running earlier versions with `features.mcp.enabled = true` should immediately disable MCP or upgrade to the patched version. Verify your `.chainlit/config.toml` configuration and restrict access to the `/mcp` endpoint as an interim mitigation.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-w3fx-mc44-mf6j"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>nextcloud-mcp-server: Unauthenticated `POST /webhooks/nextcloud` allows arbitrary vector data deletion when `WEBHOOK_SECRET` is unset ( default ) (CVE-2026-55640)</title>
     <id>urn:cybersecnews:item:315</id>
@@ -876,32 +903,5 @@
     <link href="https://thehackernews.com/2026/08/n-able-says-attackers-take-over-n.html" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-18556, CVE-2026-18577, CVE-2026-18963, CVE-2026-55445&lt;/em&gt;&lt;/p&gt;&lt;p&gt;N-able N-central remote monitoring and management platform contains an authentication bypass vulnerability (CVE-2026-18577) in builds prior to 2026.3.1.7 that allows attackers to gain remote administrative access to the platform and subsequently to managed customer systems. The vulnerability has been actively exploited in the wild, with N-able's initial patch proving incomplete and requiring customers to upgrade to build 2026.3.1.7 released August 2 or later. This is a critical severity issue given the administrative access scope and impact on downstream managed infrastructure. Immediately update all N-central deployments to build 2026.3.1.7 or later and conduct forensic analysis of any instances that may have been compromised during the window between vulnerability discovery and patch deployment.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/08/n-able-says-attackers-take-over-n.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Thermo Fisher Patches Flaw That Could Make DNA File Tampering Nearly Undetectable</title>
-    <id>urn:cybersecnews:item:218</id>
-    <published>2026-08-03T11:23:48.922939+00:00</published>
-    <updated>2026-08-03T11:23:48.922939+00:00</updated>
-    <link href="https://thehackernews.com/2026/08/thermo-fisher-patches-flaw-that-could.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · data-tampering · CVE-2026-17583&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Thermo Fisher Scientific patched CVE-2026-17583 affecting Applied Biosystems human identification software, which allowed attackers to tamper with DNA analysis data files (.fsa and .hid) in ways that evade detection if lab controls were bypassed. The vulnerability could enable nearly undetectable alterations to forensic or genetic analysis results before processing. No active exploitation in the wild has been reported. Affected organizations should apply Thermo Fisher's July 31 patch immediately, particularly laboratories handling forensic DNA analysis or critical identification work.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/08/thermo-fisher-patches-flaw-that-could.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Chinese Threat Actor Uses Leaked DarkSword Kit to Deploy GHOSTBLADE on iOS</title>
-    <id>urn:cybersecnews:item:217</id>
-    <published>2026-08-03T11:23:48.920486+00:00</published>
-    <updated>2026-08-03T11:23:48.920486+00:00</updated>
-    <link href="https://thehackernews.com/2026/08/chinese-threat-actor-uses-leaked.html" rel="alternate" />
-    <category term="red-team" />
-    <content type="html">&lt;p&gt;&lt;em&gt;red-team · c2&lt;/em&gt;&lt;/p&gt;&lt;p&gt;A Chinese threat actor is deploying the GHOSTBLADE malware on iOS devices using the publicly leaked DarkSword exploit kit through over 100 phishing infrastructure nodes, primarily spoofed AWS login pages. The campaign represents moderate risk as it requires user interaction (credential harvesting via phishing) to succeed, though successful compromises could lead to full device compromise. There is no indication of zero-day exploitation; the attack relies on the leaked toolkit and social engineering. Organizations should educate users on phishing indicators, enable multi-factor authentication on cloud service accounts, and monitor for infrastructure associated with these campaigns; Apple should continue security patching for known vulnerabilities exploited by DarkSword.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/08/chinese-threat-actor-uses-leaked.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Atomic MacOS (AMOS) stealer infection, (Sun, Aug 2nd)</title>
-    <id>urn:cybersecnews:item:216</id>
-    <published>2026-08-02T09:56:59.175128+00:00</published>
-    <updated>2026-08-02T09:56:59.175128+00:00</updated>
-    <link href="https://isc.sans.edu/diary/rss/33208" rel="alternate" />
-    <category term="red-team" />
-    <content type="html">&lt;p&gt;&lt;em&gt;red-team · malware&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Atomic macOS Stealer (AMOS) is malware targeting macOS systems that exfiltrates sensitive data including passwords, cryptocurrency wallets, and browser credentials. The threat is actively exploited in the wild with confirmed infections documented as of August 2nd. Severity is high due to the breadth of data compromise and targeting of financial assets. Mitigation includes disabling suspicious browser extensions, monitoring for unauthorized credential access, running updated antivirus on macOS systems, and implementing application whitelisting where feasible; users should also reset passwords and review financial accounts for unauthorized access.&lt;/p&gt;&lt;p&gt;&lt;a href="https://isc.sans.edu/diary/rss/33208"&gt;Read more&lt;/a&gt; · Source: sans-isc&lt;/p&gt;</content>
   </entry>
 </feed>
