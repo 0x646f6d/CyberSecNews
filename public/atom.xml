@@ -3,7 +3,52 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-08-26T08:42:23.918171+00:00</updated>
+  <updated>2026-08-26T16:48:54.197374+00:00</updated>
+  <entry>
+    <title>A GUID is Not a Credential: Unauthenticated RCE in Veeam Service Provider Console</title>
+    <id>urn:cybersecnews:item:324</id>
+    <published>2026-08-26T16:48:54.197374+00:00</published>
+    <updated>2026-08-26T16:48:54.197374+00:00</updated>
+    <link href="https://bishopfox.com/blog/a-guid-is-not-a-credential-unauthenticated-rce-in-veeam-service-provider-console" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Veeam Service Provider Console contains two chained critical vulnerabilities enabling unauthenticated remote code execution on the management server. The first vulnerability treats a GUID as authentication, allowing attackers to bypass authentication; the second enables code execution once authenticated. This is actively exploited in the wild and affects organizations managing backup infrastructure for multiple tenants. Apply available security patches immediately and implement network segmentation to restrict access to the Service Provider Console management interface.&lt;/p&gt;&lt;p&gt;&lt;a href="https://bishopfox.com/blog/a-guid-is-not-a-credential-unauthenticated-rce-in-veeam-service-provider-console"&gt;Read more&lt;/a&gt; · Source: bishop-fox&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Kyverno's NamespacedGeneratingPolicy generator.apply() namespace argument unvalidated -- background controller creates RoleBindings in any namespace including kube-system (CVE-2026-54523)</title>
+    <id>urn:cybersecnews:item:323</id>
+    <published>2026-08-26T16:48:54.196007+00:00</published>
+    <updated>2026-08-26T16:48:54.196007+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-79gf-7frw-68m9" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · privilege-escalation · CVE-2026-54523&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Kyverno v1.18.1's NamespacedMutatingPolicy allows tenants to generate resources in arbitrary namespaces, including kube-system, by passing unvalidated namespace strings to the CEL generator.apply() function. An attacker with policy creation permissions in their own namespace can exploit this to create RoleBindings or other resources in sensitive namespaces, escalating privileges cluster-wide. This is a critical vulnerability being actively exploited. Upgrade to a patched version immediately and audit existing policies for malicious generator.apply() calls with namespace arguments.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-79gf-7frw-68m9"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Hackers now exploit critical Gitea flaw in code injection attacks</title>
+    <id>urn:cybersecnews:item:322</id>
+    <published>2026-08-26T16:48:54.195032+00:00</published>
+    <updated>2026-08-26T16:48:54.195032+00:00</updated>
+    <link href="https://www.bleepingcomputer.com/news/security/hackers-now-exploit-critical-gitea-flaw-in-code-injection-attacks/" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · code-injection&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Gitea self-hosted Git service is affected by a critical-severity code injection vulnerability now actively exploited in the wild. The flaw allows remote attackers to execute arbitrary code on affected instances. CISA has confirmed active exploitation, indicating this is a high-priority threat. Administrators should immediately update Gitea to the latest patched version and review access logs for signs of compromise.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/hackers-now-exploit-critical-gitea-flaw-in-code-injection-attacks/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Ubiquiti patches three max severity security vulnerabilities</title>
+    <id>urn:cybersecnews:item:321</id>
+    <published>2026-08-26T16:48:54.193369+00:00</published>
+    <updated>2026-08-26T16:48:54.193369+00:00</updated>
+    <link href="https://www.bleepingcomputer.com/news/security/ubiquiti-patches-three-max-severity-security-vulnerabilities/" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Ubiquiti has patched three critical remote code execution vulnerabilities (CVSS 9.8+) affecting its networking products that require no authentication or user interaction for exploitation. These flaws enable unauthenticated attackers to gain full system compromise on affected devices. There is no indication of active exploitation in the wild at this time. Organizations running vulnerable Ubiquiti equipment should apply available patches immediately and prioritize systems exposed to untrusted networks.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/ubiquiti-patches-three-max-severity-security-vulnerabilities/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Unpatched Kaltura mwEmbed Flaws Could Let Remote Attackers Read Files and Run Code</title>
+    <id>urn:cybersecnews:item:320</id>
+    <published>2026-08-26T16:48:54.191785+00:00</published>
+    <updated>2026-08-26T16:48:54.191785+00:00</updated>
+    <link href="https://thehackernews.com/2026/08/unpatched-kaltura-mwembed-flaws-could.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · unsafe-deserialization · CVE-2026-19912, CVE-2026-19913&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Kaltura's mwEmbed HTML5 video player library contains two critical unpatched vulnerabilities (CVE-2026-19913, CVE-2026-19912) in the mwEmbedLoader.php endpoint stemming from unsafe deserialization, allowing unauthenticated remote attackers to read arbitrary files and execute code. These flaws pose severe risk as they require no authentication and can lead to complete system compromise. No evidence of active exploitation in the wild has been reported at this time, though the public disclosure elevates risk significantly. Organizations using Kaltura should immediately contact vendor support for patches or implement network-level access restrictions to the affected endpoint until updates are available.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/08/unpatched-kaltura-mwembed-flaws-could.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Jetzt updaten: 327 Sicherheitslücken in Google Chrome gepatcht</title>
     <id>urn:cybersecnews:item:319</id>
@@ -101,7 +146,7 @@
     <updated>2026-08-22T01:12:04.849711+00:00</updated>
     <link href="https://github.com/advisories/GHSA-x2rj-828p-hx9m" rel="alternate" />
     <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-61539&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Xinference versions prior to patching contain a critical remote code execution vulnerability (CVE-2026-61539) in Llama3 tool-call parsing that uses unsafe `eval()` on model-generated output. An unauthenticated attacker can craft prompts to the chat completion API that cause the LLM to return arbitrary Python expressions, which are then executed server-side during post-processing. This is critical severity and likely exploitable in the wild given the default lack of authentication in typical deployments. Immediately update Xinference to a patched version and implement authentication controls on the chat completion API endpoint.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-x2rj-828p-hx9m"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-54569, CVE-2026-61539&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Xinference versions prior to patching contain a critical remote code execution vulnerability (CVE-2026-61539) in Llama3 tool-call parsing that uses unsafe `eval()` on model-generated output. An unauthenticated attacker can craft prompts to the chat completion API that cause the LLM to return arbitrary Python expressions, which are then executed server-side during post-processing. This is critical severity and likely exploitable in the wild given the default lack of authentication in typical deployments. Immediately update Xinference to a patched version and implement authentication controls on the chat completion API endpoint.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-x2rj-828p-hx9m"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
   </entry>
   <entry>
     <title>14 Trojanized npm Packages Drop RedC2 4.0 Linux Backdoor With AI-Assisted C2</title>
@@ -858,50 +903,5 @@
     <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-34486" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · missing-encryption · CVE-2026-34486&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Apache Tomcat's EncryptInterceptor can be bypassed due to improper encryption of sensitive data in CVE-2026-34486, potentially exposing unencrypted communications. This vulnerability is actively exploited in the wild and listed on CISA's Known Exploited Vulnerabilities catalog. Apply vendor-supplied patches immediately per BOD 26-04 prioritization guidance; for cloud deployments without available mitigations, discontinue service use. Organizations must assess internet exposure and confirm patch compliance within CISA's required timelines.&lt;/p&gt;&lt;p&gt;&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2026-34486"&gt;Read more&lt;/a&gt; · Source: cisa-kev&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>New cPanel Critical Flaw Could Let Hosting Customers Run SQL as Database Root</title>
-    <id>urn:cybersecnews:item:224</id>
-    <published>2026-08-04T17:50:13.422048+00:00</published>
-    <updated>2026-08-04T17:50:13.422048+00:00</updated>
-    <link href="https://thehackernews.com/2026/08/new-cpanel-critical-flaw-could-let.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · privilege-escalation · CVE-2026-58048&lt;/em&gt;&lt;/p&gt;&lt;p&gt;cPanel versions prior to the patched release contain CVE-2026-58048, allowing authenticated customers to execute arbitrary SQL commands with database root privileges, bypassing account isolation boundaries. The vulnerability carries a CVSS 9.4 score indicating critical severity; no indication provided of active exploitation in the wild. Administrators should immediately patch cPanel to the latest security release, which also addresses two additional privilege escalation routes between customer accounts and server infrastructure. This requires urgent action due to the direct risk of complete database compromise.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/08/new-cpanel-critical-flaw-could-let.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Sequelize: SQL Injection (Oracle DB) (CVE-2026-69240)</title>
-    <id>urn:cybersecnews:item:223</id>
-    <published>2026-08-04T02:30:13.691320+00:00</published>
-    <updated>2026-08-04T02:30:13.691320+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-v8fg-2rw7-q452" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · sqli · CVE-2026-69240&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Sequelize ORM (v6.37.3 and likely others) contains a critical SQL injection vulnerability in Oracle dialect mode where the escape function fails to properly sanitize strings beginning with TO_TIMESTAMP or TO_DATE functions, allowing attackers to inject arbitrary SQL. This vulnerability is specific to Oracle database configurations and has not been reported as exploited in the wild. Users should immediately upgrade to a patched version once available; as a temporary mitigation, avoid using Sequelize with Oracle dialect or implement input validation at the application layer to reject user-supplied strings starting with TO_TIMESTAMP or TO_DATE.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-v8fg-2rw7-q452"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Metasploit Pro 5.1 Released</title>
-    <id>urn:cybersecnews:item:222</id>
-    <published>2026-08-03T17:51:31.822301+00:00</published>
-    <updated>2026-08-03T17:51:31.822301+00:00</updated>
-    <link href="https://www.rapid7.com/blog/post/pt-metasploit-pro-5-1-released" rel="alternate" />
-    <category term="red-team" />
-    <content type="html">&lt;p&gt;&lt;em&gt;red-team · c2,evasion&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Metasploit Pro 5.1 is a red-team toolset update featuring Malleable C2 profile support for HTTP Meterpreter payload evasion across Windows, Linux, Java, Python, and PHP platforms, along with service hierarchy tracking and enhanced network topology visualization. This is a capability release rather than a vulnerability fix, enabling operators to better blend malicious traffic with legitimate patterns and improve infrastructure reconnaissance. The update carries inherent offensive security risks as it improves evasion and payload obfuscation techniques used in active engagements. Organizations running Metasploit Pro should review their policies on authorized red-team activities; there is no security patch or remediation required for this tool release.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.rapid7.com/blog/post/pt-metasploit-pro-5-1-released"&gt;Read more&lt;/a&gt; · Source: rapid7&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Inside the Underground Business of the Android BTMOB RAT malware</title>
-    <id>urn:cybersecnews:item:221</id>
-    <published>2026-08-03T17:51:31.820756+00:00</published>
-    <updated>2026-08-03T17:51:31.820756+00:00</updated>
-    <link href="https://www.bleepingcomputer.com/news/security/inside-the-underground-business-of-btmob-rat/" rel="alternate" />
-    <category term="red-team" />
-    <content type="html">&lt;p&gt;&lt;em&gt;red-team · malware-as-a-service&lt;/em&gt;&lt;/p&gt;&lt;p&gt;BTMOB is a remote access trojan (RAT) targeting Android devices that operates as a fragmented underground ecosystem with resellers, source-code vendors, and custom variants. The malware enables attackers to remotely control infected devices and is actively exploited in the wild through multiple competing sales channels and distribution networks. Users should install security updates immediately and use reputable mobile security software; organizations should enforce device management policies, disable installation from unknown sources, and monitor for suspicious app behavior. Additionally, consider restricting access to underground marketplaces and educating users to avoid sideloaded applications outside official app stores.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/inside-the-underground-business-of-btmob-rat/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Hugging Face Diffusers Flaws Could Let Model Repositories Execute Arbitrary Code</title>
-    <id>urn:cybersecnews:item:220</id>
-    <published>2026-08-03T11:23:48.924546+00:00</published>
-    <updated>2026-08-03T11:23:48.924546+00:00</updated>
-    <link href="https://thehackernews.com/2026/08/hugging-face-diffusers-flaws-could-let.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · arbitrary-code-execution&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Hugging Face Diffusers library contains three high-severity vulnerabilities that bypass the trust_remote_code safety mechanism, allowing malicious model repositories to execute arbitrary code during model loading. The flaws exploit unsafe deserialization in pickle and safetensors handling, compromising the AI supply chain security model. No active exploitation in the wild has been reported, but the attack surface is significant given the widespread use of model sharing. Immediate patching is critical; users should update to the latest Diffusers version and avoid loading models from untrusted sources until patches are applied.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/08/hugging-face-diffusers-flaws-could-let.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
   </entry>
 </feed>
