@@ -3,7 +3,52 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-08-27T07:47:20.348081+00:00</updated>
+  <updated>2026-08-27T18:54:11.239285+00:00</updated>
+  <entry>
+    <title>JFrog Artifactory: JFrog Artifactory Improper Limitation of a Pathname to a Restricted Directory Vulnerability (CVE-2026-66384)</title>
+    <id>urn:cybersecnews:item:331</id>
+    <published>2026-08-27T18:54:11.239285+00:00</published>
+    <updated>2026-08-27T18:54:11.239285+00:00</updated>
+    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-66384" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · path-traversal · CVE-2026-66384&lt;/em&gt;&lt;/p&gt;&lt;p&gt;JFrog Artifactory is vulnerable to CVE-2026-66384, a path traversal flaw allowing authenticated users to write data outside the intended Docker cache directory under specific remote repository conditions. This vulnerability is actively exploited in the wild and carries high severity due to potential unauthorized file writes. Apply vendor-provided patches or mitigations immediately per CISA BOD 26-04 guidance; discontinue use if mitigations are unavailable. Prioritize patching based on internet exposure and ensure compliance with federal security update requirements.&lt;/p&gt;&lt;p&gt;&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2026-66384"&gt;Read more&lt;/a&gt; · Source: cisa-kev&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>ownCloud ownCloud: ownCloud Improper Authentication Vulnerability (CVE-2023-49105)</title>
+    <id>urn:cybersecnews:item:330</id>
+    <published>2026-08-27T18:54:11.238406+00:00</published>
+    <updated>2026-08-27T18:54:11.238406+00:00</updated>
+    <link href="https://nvd.nist.gov/vuln/detail/CVE-2023-49105" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2023-49105&lt;/em&gt;&lt;/p&gt;&lt;p&gt;ownCloud is vulnerable to improper authentication (CVE-2023-49105) allowing unauthenticated attackers to access, modify, or delete files if the victim's username is known and no signing key is configured. This vulnerability is actively exploited in the wild and rated high severity. Immediately apply vendor mitigations per CISA BOD 26-04 prioritization guidance, or discontinue use if patches are unavailable; conduct forensic triage on potentially exposed instances.&lt;/p&gt;&lt;p&gt;&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2023-49105"&gt;Read more&lt;/a&gt; · Source: cisa-kev&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>PaperCut warns of NG, MF flaw exploited in zero-day attacks</title>
+    <id>urn:cybersecnews:item:329</id>
+    <published>2026-08-27T18:54:11.237483+00:00</published>
+    <updated>2026-08-27T18:54:11.237483+00:00</updated>
+    <link href="https://www.bleepingcomputer.com/news/security/papercut-warns-of-ng-mf-flaw-exploited-in-zero-day-attacks/" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;PaperCut NG and MF print management software are affected by an actively exploited zero-day vulnerability. The flaw allows unauthenticated attackers to achieve remote code execution on vulnerable systems. Given the zero-day status and active exploitation in the wild, immediate patching is critical. Apply the latest security updates from PaperCut as soon as they become available, and consider implementing network segmentation to isolate affected systems while patches are deployed.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/papercut-warns-of-ng-mf-flaw-exploited-in-zero-day-attacks/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Next.js Patches Critical AVIF and Windows Flaws Enabling Unauthenticated RCE</title>
+    <id>urn:cybersecnews:item:328</id>
+    <published>2026-08-27T18:54:11.236765+00:00</published>
+    <updated>2026-08-27T18:54:11.236765+00:00</updated>
+    <link href="https://thehackernews.com/2026/08/nextjs-patches-critical-avif-and.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-75604&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Next.js web framework contains two critical unauthenticated RCE vulnerabilities: one via malicious AVIF image processing and one through Windows path traversal (CVE-2024-50383). Both vulnerabilities allow remote code execution without authentication and represent high-severity risks. Patches have been released by Vercel and should be applied immediately to all affected Next.js deployments. There is no indication these are currently exploited in the wild, but given the critical nature and ease of exploitation, immediate patching is essential.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/08/nextjs-patches-critical-avif-and.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Exchange-Sicherheitslücke: Wegen Proof-of-Concept Angriffe wahrscheinlich</title>
+    <id>urn:cybersecnews:item:327</id>
+    <published>2026-08-27T18:54:11.235012+00:00</published>
+    <updated>2026-08-27T18:54:11.235012+00:00</updated>
+    <link href="https://www.heise.de/news/Angriffe-erwartbar-Proof-of-Concept-fuer-Exchange-Luecke-veroeffentlicht-11431561.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Microsoft Exchange is vulnerable to a critical remote code execution flaw enabling full system compromise. Exploit proof-of-concept code is now public, making active exploitation in the wild highly probable. This vulnerability affects Exchange Server installations and requires immediate patching. Administrators must apply available security updates without delay to prevent unauthorized system access.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.heise.de/news/Angriffe-erwartbar-Proof-of-Concept-fuer-Exchange-Luecke-veroeffentlicht-11431561.html"&gt;Read more&lt;/a&gt; · Source: heise-security&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Citrix NetScaler ADC and NetScaler Gateway: Citrix NetScaler ADC and NetScaler Gateway Improper Restriction of Operations within the Bounds of a Memory Buffer Vulnerability (CVE-2026-8452)</title>
     <id>urn:cybersecnews:item:326</id>
@@ -858,50 +903,5 @@
     <link href="https://github.com/advisories/GHSA-qgvm-j2hm-6m38" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-70478&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Flowise OAuth2 token refresh endpoint (POST /api/v1/oauth2-credential/refresh/:credentialId) is unauthenticated and returns access tokens in plaintext responses, enabling attackers to steal tokens for any connected OAuth service. This is a critical vulnerability because the endpoint lacks authentication checks and exposes sensitive tokens without rate limiting or additional validation. There is no indication of active exploitation in the wild, but the ease of exploitation is high. Immediate patching is essential; update Flowise to a patched version that implements proper authentication on this endpoint and avoids returning tokens in response bodies, or implement strict network-level access controls as a temporary mitigation.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-qgvm-j2hm-6m38"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>TP-Link patches Omada ZTP flaws allowing hackers to breach networks</title>
-    <id>urn:cybersecnews:item:231</id>
-    <published>2026-08-05T02:30:04.655040+00:00</published>
-    <updated>2026-08-05T02:30:04.655040+00:00</updated>
-    <link href="https://www.bleepingcomputer.com/news/security/tp-link-patches-omada-ztp-flaws-allowing-hackers-to-breach-networks/" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;TP-Link Omada network devices contain 15 vulnerabilities in the zero-touch provisioning (ZTP) mechanism that enable remote code execution when chained with previously disclosed flaws, representing a critical severity risk. These flaws are actively exploitable and bypass authentication protections in the device provisioning workflow. Organizations must immediately apply TP-Link's security patches to all affected Omada devices. Review network access controls for ZTP traffic and monitor for suspicious provisioning activity.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/tp-link-patches-omada-ztp-flaws-allowing-hackers-to-breach-networks/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Flowise Sandbox Escape to RCE (CVE-2026-69253)</title>
-    <id>urn:cybersecnews:item:230</id>
-    <published>2026-08-04T17:50:13.427622+00:00</published>
-    <updated>2026-08-04T17:50:13.427622+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-wg86-r78f-74mp" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · sandbox-escape,rce · CVE-2026-47686, CVE-2026-47698, CVE-2026-69253&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Flowise versions 3.1.1 and nodevm 3.9.25 contain a critical sandbox escape vulnerability (CVE-2026-69253) that allows remote code execution through unsafe JavaScript execution contexts. The vulnerability enables attackers to break out of the intended sandbox restrictions and execute arbitrary commands on the host system. This issue is critical in severity and should be patched immediately; organizations should update Flowise to the latest patched version and nodevm to 3.9.26 or later. Given the critical nature and potential for weaponization, this vulnerability may already be exploited in the wild and requires urgent remediation.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-wg86-r78f-74mp"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Flowise: RCE via NodeVM Sandbox Escape in executeJavaScriptCode() nodeVMOptions Override (CVE-2026-69254)</title>
-    <id>urn:cybersecnews:item:229</id>
-    <published>2026-08-04T17:50:13.426850+00:00</published>
-    <updated>2026-08-04T17:50:13.426850+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-3769-jgqc-cxm7" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-69254&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Flowise (npm packages flowise and flowise-components) contains a critical remote code execution vulnerability in the `executeJavaScriptCode()` function that allows authenticated users to escape the NodeVM sandbox. The function improperly allows caller-provided `nodeVMOptions` to override default security settings via JavaScript spread operators, enabling attackers to re-enable blocked modules like `child_process` and `fs` for arbitrary command execution as root. This vulnerability is critical in severity and the recommended action is to immediately patch to a patched version once available, and restrict administrative access to Flowise instances in the interim.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-3769-jgqc-cxm7"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Flowise RCE via SQLite Record Manager Node (CVE-2026-69259)</title>
-    <id>urn:cybersecnews:item:228</id>
-    <published>2026-08-04T17:50:13.425657+00:00</published>
-    <updated>2026-08-04T17:50:13.425657+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-x3hf-7cj6-3r4m" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-69259&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Flowise AI versions up to 3.1.2 contain a critical remote code execution vulnerability in the SQLite Record Manager Node that allows unauthenticated attackers to execute arbitrary code. The vulnerability stems from insufficient input validation when processing SQLite database operations, enabling command injection through specially crafted payloads. This is a critical severity issue with active exploitation likely given the simplicity of the attack vector. Immediately patch to the latest version beyond 3.1.2 or disable the SQLite Record Manager Node if immediate patching is unavailable.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-x3hf-7cj6-3r4m"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Flowise: Pyodide validator Unicode homoglyph bypass leads to RCE (CVE-2026-70470)</title>
-    <id>urn:cybersecnews:item:227</id>
-    <published>2026-08-04T17:50:13.425022+00:00</published>
-    <updated>2026-08-04T17:50:13.425022+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-52fh-8v99-63c2" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-70470&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Flowise's Python code validator in pyodide integration contains a critical remote code execution vulnerability (CVE-2026-70470) where Unicode homoglyph characters bypass blacklist restrictions, allowing arbitrary Python execution and OS command execution on the host system. The vulnerability affects npm/flowise and npm/flowise-components packages and reopens previously patched RCE attack paths through Pyodide's JavaScript interoperability module. This is an active bypass of existing security controls with critical severity and likely exploitation potential. Immediate patching is required; users should update Flowise to the latest version and review any systems using Pyodide integration for unauthorized access.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-52fh-8v99-63c2"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
   </entry>
 </feed>
