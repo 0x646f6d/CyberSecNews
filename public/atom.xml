@@ -3,7 +3,16 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-08-27T18:54:11.239285+00:00</updated>
+  <updated>2026-08-28T09:51:42.761181+00:00</updated>
+  <entry>
+    <title>APT28-Linked HOOKEDGE Backdoor Targets European Government and Diplomatic Organizations</title>
+    <id>urn:cybersecnews:item:332</id>
+    <published>2026-08-28T09:51:42.761181+00:00</published>
+    <updated>2026-08-28T09:51:42.761181+00:00</updated>
+    <link href="https://thehackernews.com/2026/08/apt28-linked-hookedge-backdoor-targets.html" rel="alternate" />
+    <category term="red-team" />
+    <content type="html">&lt;p&gt;&lt;em&gt;red-team · backdoor&lt;/em&gt;&lt;/p&gt;&lt;p&gt;APT28 is deploying HOOKEDGE, a previously undocumented Windows batch script backdoor, against European government and diplomatic entities in Romania, Spain, and Türkiye since September 2025. The backdoor provides remote access and command execution capabilities, representing a moderate-to-high severity threat given the sensitive nature of targeted organizations and APT28's advanced capabilities. Active exploitation in the wild is confirmed through ongoing campaigns across multiple countries. Organizations should immediately patch systems, implement network segmentation for diplomatic/government networks, enhance endpoint detection and response (EDR) capabilities, and conduct forensic investigations for potential compromise indicators related to batch script execution and command-and-control communications.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/08/apt28-linked-hookedge-backdoor-targets.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>JFrog Artifactory: JFrog Artifactory Improper Limitation of a Pathname to a Restricted Directory Vulnerability (CVE-2026-66384)</title>
     <id>urn:cybersecnews:item:331</id>
@@ -894,14 +903,5 @@
     <link href="https://thehackernews.com/2026/08/veeam-terraform-mcp-django-patch.html" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass|credential-disclosure|cross-tenant&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Veeam Service Provider Console, HashiCorp Terraform MCP Server, and Django have patched critical vulnerabilities including a CVSS 9.5 unauthenticated credential disclosure in Veeam's console and a CVSS 10.0 cross-tenant authentication bypass in Terraform MCP Server allowing token reuse between users. The Veeam flaw exposes managed agent credentials without authentication while the Terraform MCP vulnerability permits lateral access to other users' infrastructure through token misuse. Both vulnerabilities are likely being exploited given their severity and ease of exploitation; immediate patching is critical for organizations running these services. Prioritize updates for Veeam console and Terraform MCP Server, and verify no unauthorized credential access or cross-tenant token usage has occurred in logs.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/08/veeam-terraform-mcp-django-patch.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Flowise: Unauthenticated OAuth2 token refresh endpoint returns access tokens — enables token theft for any connected service (CVE-2026-70478)</title>
-    <id>urn:cybersecnews:item:232</id>
-    <published>2026-08-05T02:30:04.955101+00:00</published>
-    <updated>2026-08-05T02:30:04.955101+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-qgvm-j2hm-6m38" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-70478&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Flowise OAuth2 token refresh endpoint (POST /api/v1/oauth2-credential/refresh/:credentialId) is unauthenticated and returns access tokens in plaintext responses, enabling attackers to steal tokens for any connected OAuth service. This is a critical vulnerability because the endpoint lacks authentication checks and exposes sensitive tokens without rate limiting or additional validation. There is no indication of active exploitation in the wild, but the ease of exploitation is high. Immediate patching is essential; update Flowise to a patched version that implements proper authentication on this endpoint and avoids returning tokens in response bodies, or implement strict network-level access controls as a temporary mitigation.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-qgvm-j2hm-6m38"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
   </entry>
 </feed>
