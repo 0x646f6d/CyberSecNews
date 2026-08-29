@@ -3,7 +3,79 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-08-28T09:51:42.761181+00:00</updated>
+  <updated>2026-08-29T00:27:03.530696+00:00</updated>
+  <entry>
+    <title>Klever: Integer overflow in split-royalty validation enables unbounded minting of KLV (native token) (CVE-2026-54755)</title>
+    <id>urn:cybersecnews:item:340</id>
+    <published>2026-08-29T00:27:03.530696+00:00</published>
+    <updated>2026-08-29T00:27:03.530696+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-cgc5-v3f2-8m2v" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · integer-overflow · CVE-2026-54755&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Klever Go SDK's split-royalty validation contains a critical integer overflow vulnerability in the uint32 accumulator used to verify per-entry percentages (CVE-2026-54755). An attacker can craft two split entries with percentages summing over 2^32 to bypass validation while storing astronomically large individual values, enabling unbounded minting of KLV tokens during royalty payout. This is critical severity with no current indication of wild exploitation but represents complete loss of token supply integrity. Immediate patching required: upgrade to a fixed version that implements proper bounds checking on individual percentage entries before accumulation or uses uint64 for accumulator validation.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-cgc5-v3f2-8m2v"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>free5GC NRF nnrf-nfm lacks NF Profile input validation — enables NF Registration Poisoning with arbitrary service endpoints (CVE-2026-55068)</title>
+    <id>urn:cybersecnews:item:339</id>
+    <published>2026-08-29T00:27:03.529874+00:00</published>
+    <updated>2026-08-29T00:27:03.529874+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-x8mj-6p3q-g5pp" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · input-validation · CVE-2026-55068&lt;/em&gt;&lt;/p&gt;&lt;p&gt;free5GC NRF (Network Repository Function) in versions up to latest lacks input validation on NF Profile registration, allowing unauthenticated attackers to inject malicious NF profiles with arbitrary service endpoints that violate 3GPP TS 29.510 constraints. This NF Registration Poisoning vulnerability has critical severity and enables control-plane traffic hijacking through fake endpoint discovery. No evidence of active exploitation provided. Immediately patch free5gc to the latest version implementing full NF Profile validation per 3GPP specifications and enforce authentication/authorization on the nnrf-nfm endpoint; consider network segmentation to restrict NRF access.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-x8mj-6p3q-g5pp"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Yamcs vulnerable to Remote Code Execution via instance-template argument YAML injection (createInstance) (CVE-2026-55559)</title>
+    <id>urn:cybersecnews:item:338</id>
+    <published>2026-08-29T00:27:03.529062+00:00</published>
+    <updated>2026-08-29T00:27:03.529062+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-73mf-m39p-wpm9" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · yaml-injection-rce · CVE-2026-55559&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Yamcs (yamcs-core) is vulnerable to remote code execution via YAML injection in the `templateArgs` parameter of the `POST /api/instances` and `PATCH /api/instances/{instance}` endpoints (CVE-2026-55559). An authenticated attacker with the `CreateInstances` privilege can inject malicious YAML to add a `ProcessRunner` service entry and execute arbitrary commands on the host. This is a critical severity vulnerability that appears exploitable in the wild. Apply the latest security patch immediately and restrict `CreateInstances` privilege to trusted administrators only.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-73mf-m39p-wpm9"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Yamcs vulnerable to authenticated remote code execution via unescaped StreamSQL `LIKE` pattern compiled by Janino (`LikeExpression`) (CVE-2026-55565)</title>
+    <id>urn:cybersecnews:item:337</id>
+    <published>2026-08-29T00:27:03.528029+00:00</published>
+    <updated>2026-08-29T00:27:03.528029+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-c64q-hj4j-375f" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-55565&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Yamcs (org.yamcs:yamcs-core) contains a critical authenticated remote code execution vulnerability in StreamSQL `LIKE` operator handling. User-supplied LIKE patterns are inserted unescaped into Java code compiled by Janino, allowing an attacker to break out of string literals and inject arbitrary Java code (such as static blocks executing OS commands) when the compiled filter class loads. The vulnerability affects all versions and is exploitable by authenticated users; no public exploitation in the wild has been reported yet. Patch immediately by upgrading to a patched version when available, or apply input validation/escaping for LIKE patterns as a temporary mitigation.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-c64q-hj4j-375f"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>plone.app.event vulnerable to denial of service via iCalendar import (CVE-2026-55247)</title>
+    <id>urn:cybersecnews:item:336</id>
+    <published>2026-08-29T00:27:03.526961+00:00</published>
+    <updated>2026-08-29T00:27:03.526961+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-r82h-mqw3-fc56" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · dos,ssrf,xss · CVE-2026-55247&lt;/em&gt;&lt;/p&gt;&lt;p&gt;plone.app.event iCalendar import functionality contains a critical vulnerability (CVE-2026-55247) allowing authenticated editors to cause denial of service, perform server-side request forgery (SSRF) to access internal networks and disk files, and store persistent XSS payloads. There is no indication of active exploitation in the wild. Immediately upgrade plone.app.event to version 6.0.1 (Plone 6.2) or 5.2.4 (Plone 6.0/6.1) to patch the vulnerability.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-r82h-mqw3-fc56"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Pimcore Vulnerable to Remote Code Execution via DataObject Class-Definition Field Name (CVE-2026-55634)</title>
+    <id>urn:cybersecnews:item:335</id>
+    <published>2026-08-29T00:27:03.526051+00:00</published>
+    <updated>2026-08-29T00:27:03.526051+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-9x44-4gxf-8c25" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-55634&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Pimcore is vulnerable to remote code execution through improper validation of DataObject class-definition field names (CVE-2026-55634). Users with basic `objects` permission can inject arbitrary PHP code by crafting malicious field names that break out of property declarations during class file generation. This is a critical vulnerability actively exploitable without special privileges. Administrators should immediately update Pimcore to the patched version and restrict DataObject import functionality until patching is complete.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-9x44-4gxf-8c25"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>GiveWP WordPress donation plugin flaw lets hackers execute server commands</title>
+    <id>urn:cybersecnews:item:334</id>
+    <published>2026-08-29T00:27:03.525182+00:00</published>
+    <updated>2026-08-29T00:27:03.525182+00:00</updated>
+    <link href="https://www.bleepingcomputer.com/news/security/givewp-wordpress-donation-plugin-flaw-lets-hackers-execute-server-commands/" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;GiveWP WordPress donation plugin contains a critical remote code execution (RCE) vulnerability allowing unauthenticated attackers to execute arbitrary server commands. The flaw has a CVSS score indicating maximum severity and poses immediate risk to all affected installations. Update GiveWP to the patched version immediately; additionally, restrict access to the plugin files and monitor server logs for exploitation attempts. If patching cannot be deployed immediately, disable or remove the plugin as a temporary mitigation measure.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/givewp-wordpress-donation-plugin-flaw-lets-hackers-execute-server-commands/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Cosmos EVM Flaw Exploited After Cosmos Labs Knew Every Blockchain Running It Was Vulnerable</title>
+    <id>urn:cybersecnews:item:333</id>
+    <published>2026-08-29T00:27:03.523186+00:00</published>
+    <updated>2026-08-29T00:27:03.523186+00:00</updated>
+    <link href="https://thehackernews.com/2026/08/cosmos-evm-flaw-exploited-after-cosmos.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · balance-handling-flaw&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Cosmos EVM module versions prior to 0.6.2 contain a critical balance-handling flaw that has been actively exploited in the wild to drain funds from at least six blockchains. The vulnerability allows attackers to manipulate account balances, with confirmed exploitation occurring between August 20-25, 2026, after Cosmos Labs was aware of the risk to all affected chains. This is rated Critical severity with active ongoing exploitation. All operators of Cosmos EVM-based blockchains must immediately patch to version 0.6.2 or later; operators unable to patch immediately should consider halting affected chains or implementing emergency governance measures to freeze vulnerable accounts.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/08/cosmos-evm-flaw-exploited-after-cosmos.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>APT28-Linked HOOKEDGE Backdoor Targets European Government and Diplomatic Organizations</title>
     <id>urn:cybersecnews:item:332</id>
@@ -119,7 +191,7 @@
     <updated>2026-08-26T16:48:54.191785+00:00</updated>
     <link href="https://thehackernews.com/2026/08/unpatched-kaltura-mwembed-flaws-could.html" rel="alternate" />
     <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · unsafe-deserialization · CVE-2021-23758, CVE-2026-19912, CVE-2026-19913&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Kaltura's mwEmbed HTML5 video player library contains two critical unpatched vulnerabilities (CVE-2026-19913, CVE-2026-19912) in the mwEmbedLoader.php endpoint stemming from unsafe deserialization, allowing unauthenticated remote attackers to read arbitrary files and execute code. These flaws pose severe risk as they require no authentication and can lead to complete system compromise. No evidence of active exploitation in the wild has been reported at this time, though the public disclosure elevates risk significantly. Organizations using Kaltura should immediately contact vendor support for patches or implement network-level access restrictions to the affected endpoint until updates are available.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/08/unpatched-kaltura-mwembed-flaws-could.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · unsafe-deserialization · CVE-2021-23758, CVE-2026-19912, CVE-2026-19913, CVE-2026-55220&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Kaltura's mwEmbed HTML5 video player library contains two critical unpatched vulnerabilities (CVE-2026-19913, CVE-2026-19912) in the mwEmbedLoader.php endpoint stemming from unsafe deserialization, allowing unauthenticated remote attackers to read arbitrary files and execute code. These flaws pose severe risk as they require no authentication and can lead to complete system compromise. No evidence of active exploitation in the wild has been reported at this time, though the public disclosure elevates risk significantly. Organizations using Kaltura should immediately contact vendor support for patches or implement network-level access restrictions to the affected endpoint until updates are available.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/08/unpatched-kaltura-mwembed-flaws-could.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
   </entry>
   <entry>
     <title>Jetzt updaten: 327 Sicherheitslücken in Google Chrome gepatcht</title>
@@ -831,77 +903,5 @@
     <link href="https://thehackernews.com/2026/08/chinese-made-zbtlink-routers-ship-with.html" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · backdoor&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Zbtlink routers contain a factory-shipped backdoor present across at least 20 models and all 21 available firmware images spanning 2+ years. The backdoor provides unauthenticated root shell access and automatically beacons to external command and control infrastructure. This represents a critical severity vulnerability affecting network perimeter security with high likelihood of active exploitation given the widespread deployment of these devices. Affected organizations should immediately identify and isolate Zbtlink routers from networks, replace them with devices from trusted vendors, and monitor for unauthorized access or data exfiltration.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/08/chinese-made-zbtlink-routers-ship-with.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>AWS, Google, and Vercel Agent Flaws Let Attackers Trigger Tools Without Running the Model</title>
-    <id>urn:cybersecnews:item:240</id>
-    <published>2026-08-06T10:39:04.635382+00:00</published>
-    <updated>2026-08-06T10:39:04.635382+00:00</updated>
-    <link href="https://thehackernews.com/2026/08/aws-google-and-vercel-patch-agent-flaws.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass,tool-invocation-bypass&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Agent infrastructure in AWS Bedrock, Google Vertex AI, and Vercel AI SDK permits direct invocation of tool functions without model authorization or execution. Attackers can bypass system prompts and content filters by forging or injecting instructions directly to agent tools, potentially enabling unauthorized actions like data exfiltration or system compromise. Severity and exploitation status not specified in provided summary. AWS, Google, and Vercel have been notified; immediate patching recommended where available, and users should implement strict input validation and access controls on agent tool endpoints.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/08/aws-google-and-vercel-patch-agent-flaws.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Unauthenticated Nuxt DevTools RPC allows arbitrary command execution on the developer's host (CVE-2026-71319)</title>
-    <id>urn:cybersecnews:item:239</id>
-    <published>2026-08-06T02:32:50.699664+00:00</published>
-    <updated>2026-08-06T02:32:50.699664+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-279x-mwfv-vcqv" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-71319&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Nuxt DevTools in development mode exposes an unauthenticated bidirectional RPC channel over Vite HMR WebSocket that allows arbitrary command execution on the developer's host. The vulnerability (CVE-2026-71319) affects npm/@nuxt/devtools and is critical severity, with no authentication, token validation, or origin checks protecting methods like `updateOptions()`, `clearOptions()`, and `openInEditor()`. While no evidence of wild exploitation is indicated in this advisory, developers should immediately upgrade Nuxt DevTools to a patched version and consider disabling DevTools in development environments exposed to untrusted networks.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-279x-mwfv-vcqv"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Hackers run khunt post-exploitation toolkit from Oracle database</title>
-    <id>urn:cybersecnews:item:238</id>
-    <published>2026-08-06T02:32:50.698113+00:00</published>
-    <updated>2026-08-06T02:32:50.698113+00:00</updated>
-    <link href="https://www.bleepingcomputer.com/news/security/hackers-run-khunt-post-exploitation-toolkit-from-oracle-database/" rel="alternate" />
-    <category term="red-team" />
-    <content type="html">&lt;p&gt;&lt;em&gt;red-team · post-exploitation&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Oracle database deployments vulnerable to SQL injection attacks are at risk of direct post-exploitation toolkit installation through the khunt toolkit. Attackers can execute arbitrary code within the database context to establish persistence and lateral movement capabilities without requiring traditional external command execution. Exploitation is actively occurring in the wild targeting vulnerable Oracle instances. Immediate action required: patch all Oracle databases to the latest security updates, implement Web Application Firewall rules to block SQL injection payloads, conduct network segmentation to restrict database access, and audit existing databases for indicators of khunt toolkit presence.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/hackers-run-khunt-post-exploitation-toolkit-from-oracle-database/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Borrowing Windows Hello keys for authentication and persistence</title>
-    <id>urn:cybersecnews:item:237</id>
-    <published>2026-08-05T17:38:03.469364+00:00</published>
-    <updated>2026-08-05T17:38:03.469364+00:00</updated>
-    <link href="https://dirkjanm.io/borrowing-windows-hello-keys/" rel="alternate" />
-    <category term="red-team" />
-    <content type="html">&lt;p&gt;&lt;em&gt;red-team · auth-bypass&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Windows Hello for Business (WHFB) key material can be extracted from an authenticated user session and leveraged for single sign-on and device registration without requiring PIN verification or user presence validation, enabling authentication and persistence attacks against Entra ID. This technique exploits inherent WHFB design rather than a specific vulnerability, allowing attackers with session access to obtain Primary Refresh Tokens and register new devices using stolen cryptographic keys. No patch is available as Microsoft considers this a design consequence of WHFB architecture; mitigation requires enforcing strict session isolation, privileged access workstation (PAW) policies, and monitoring for unusual Entra ID authentication patterns and device registrations.&lt;/p&gt;&lt;p&gt;&lt;a href="https://dirkjanm.io/borrowing-windows-hello-keys/"&gt;Read more&lt;/a&gt; · Source: dirkjanm&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Kali365 Weaponizes Microsoft Authentication Against US Companies: New Enterprise Risk</title>
-    <id>urn:cybersecnews:item:236</id>
-    <published>2026-08-05T17:38:03.468374+00:00</published>
-    <updated>2026-08-05T17:38:03.468374+00:00</updated>
-    <link href="https://thehackernews.com/2026/08/kali365-weaponizes-microsoft.html" rel="alternate" />
-    <category term="red-team" />
-    <content type="html">&lt;p&gt;&lt;em&gt;red-team · phishing&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Kali365 is an active phishing kit exploiting Microsoft's device code OAuth flow to compromise US enterprise accounts. The attack weaponizes legitimate Microsoft authentication by tricking users into approving attacker-controlled device codes, yielding access and refresh tokens for email, documents, and cloud resources. This technique is being actively exploited in the wild with moderate-to-high severity due to broad organizational impact and persistent token-based access. Recommended mitigations include enforcing conditional access policies to restrict unusual sign-in locations, enabling passwordless authentication where possible, deploying advanced phishing detection, and educating users to reject unexpected authentication prompts.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/08/kali365-weaponizes-microsoft.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>New OVSwrap Linux Kernel Flaw Lets Local Users Gain Root via Open vSwitch</title>
-    <id>urn:cybersecnews:item:235</id>
-    <published>2026-08-05T17:38:03.467416+00:00</published>
-    <updated>2026-08-05T17:38:03.467416+00:00</updated>
-    <link href="https://thehackernews.com/2026/08/new-ovswrap-linux-kernel-flaw-lets.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · memory-corruption · CVE-2026-64531&lt;/em&gt;&lt;/p&gt;&lt;p&gt;CVE-2026-64531 (OVSwrap) is a memory corruption vulnerability in the Linux kernel's Open vSwitch datapath that allows local users to escalate privileges to root on default-configured systems. The flaw has a CVSS score of 7.8 and is actively exploited with public exploit code containing pre-built records for approximately 800 kernel builds. Affected systems running Open vSwitch should prioritize patching the kernel immediately. Administrators unable to patch promptly should restrict local user access and disable Open vSwitch if not operationally required.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/08/new-ovswrap-linux-kernel-flaw-lets.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Trojanized npm Packages Employ NullReceiver Tactic to Decode C2 IP from Blockchain</title>
-    <id>urn:cybersecnews:item:234</id>
-    <published>2026-08-05T17:38:03.466548+00:00</published>
-    <updated>2026-08-05T17:38:03.466548+00:00</updated>
-    <link href="https://thehackernews.com/2026/08/trojanized-npm-packages-decode-c2-ip.html" rel="alternate" />
-    <category term="red-team" />
-    <content type="html">&lt;p&gt;&lt;em&gt;red-team · c2&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Two trojanized npm packages (bianira-ui and fluid-type-ui) employ the NullReceiver technique to decode C2 infrastructure from Ethereum blockchain transactions, evolving the EtherHiding C2 obfuscation method. This supply chain attack leverages null-value Ethereum transfers to conceal command server IP addresses, making detection more difficult than traditional DNS/IP-based C2 callbacks. Severity is high given the npm ecosystem's broad reach; exploitation in the wild has been confirmed with these packages. Immediate action: remove affected packages from environments, audit npm dependencies for similar patterns, implement software composition analysis tooling, and monitor for artifacts indicating NullReceiver C2 communication (blockchain transaction analysis or network egress to Ethereum RPC endpoints).&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/08/trojanized-npm-packages-decode-c2-ip.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Veeam, Terraform MCP, Django Patch Critical Flaws, Led by CVSS 10.0 Cross-Tenant Bug</title>
-    <id>urn:cybersecnews:item:233</id>
-    <published>2026-08-05T17:38:03.465077+00:00</published>
-    <updated>2026-08-05T17:38:03.465077+00:00</updated>
-    <link href="https://thehackernews.com/2026/08/veeam-terraform-mcp-django-patch.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass|credential-disclosure|cross-tenant&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Veeam Service Provider Console, HashiCorp Terraform MCP Server, and Django have patched critical vulnerabilities including a CVSS 9.5 unauthenticated credential disclosure in Veeam's console and a CVSS 10.0 cross-tenant authentication bypass in Terraform MCP Server allowing token reuse between users. The Veeam flaw exposes managed agent credentials without authentication while the Terraform MCP vulnerability permits lateral access to other users' infrastructure through token misuse. Both vulnerabilities are likely being exploited given their severity and ease of exploitation; immediate patching is critical for organizations running these services. Prioritize updates for Veeam console and Terraform MCP Server, and verify no unauthorized credential access or cross-tenant token usage has occurred in logs.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/08/veeam-terraform-mcp-django-patch.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
   </entry>
 </feed>
