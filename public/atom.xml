@@ -3,7 +3,16 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-08-29T00:27:03.530696+00:00</updated>
+  <updated>2026-08-30T13:36:05.459111+00:00</updated>
+  <entry>
+    <title>TerminalFix Uses Fake Cloudflare CAPTCHAs to Deploy Reverse-Tunnel Backdoor</title>
+    <id>urn:cybersecnews:item:341</id>
+    <published>2026-08-30T13:36:05.459111+00:00</published>
+    <updated>2026-08-30T13:36:05.459111+00:00</updated>
+    <link href="https://thehackernews.com/2026/08/terminalfix-uses-fake-cloudflare.html" rel="alternate" />
+    <category term="red-team" />
+    <content type="html">&lt;p&gt;&lt;em&gt;red-team · social-engineering&lt;/em&gt;&lt;/p&gt;&lt;p&gt;TerminalFix is a ClickFix variant that uses fake Cloudflare CAPTCHA prompts to socially engineer users into executing malicious commands in Windows Terminal or PowerShell, ultimately deploying a reverse-tunnel backdoor. This technique increases effectiveness over traditional ClickFix by leveraging terminal applications to execute complex payloads that Run dialogs cannot handle. Severity is moderate-to-high as it enables backdoor installation and is actively exploited in the wild through social engineering. Recommended actions include user awareness training on suspicious CAPTCHA prompts outside normal browser contexts, blocking execution policies via Group Policy where feasible, and monitoring for suspicious terminal/PowerShell command execution patterns.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/08/terminalfix-uses-fake-cloudflare.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Klever: Integer overflow in split-royalty validation enables unbounded minting of KLV (native token) (CVE-2026-54755)</title>
     <id>urn:cybersecnews:item:340</id>
@@ -894,14 +903,5 @@
     <link href="https://thehackernews.com/2026/08/new-zapscape-kvm-flaw-could-let.html" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · vm-escape · CVE-2026-64561&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Zapscape (CVE-2026-64561) is a privilege escalation vulnerability in Linux KVM/x86's shadow MMU that allows an attacker with kernel-level access in a nested L1 guest VM to escape to the host system. The flaw affects systems with nested virtualization enabled and exposed to untrusted guests; severity is high due to escape from isolation boundary but exploitation requires pre-existing kernel privileges within guest. A kernel patch addressing the shadow MMU handling is required; systems should disable nested virtualization for untrusted workloads until patched. No evidence of in-the-wild exploitation reported at this time.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/08/new-zapscape-kvm-flaw-could-let.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Chinese-Made Zbtlink Routers Ship With Backdoor That Opens Unauthenticated Root Shells</title>
-    <id>urn:cybersecnews:item:241</id>
-    <published>2026-08-06T10:39:04.643942+00:00</published>
-    <updated>2026-08-06T10:39:04.643942+00:00</updated>
-    <link href="https://thehackernews.com/2026/08/chinese-made-zbtlink-routers-ship-with.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · backdoor&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Zbtlink routers contain a factory-shipped backdoor present across at least 20 models and all 21 available firmware images spanning 2+ years. The backdoor provides unauthenticated root shell access and automatically beacons to external command and control infrastructure. This represents a critical severity vulnerability affecting network perimeter security with high likelihood of active exploitation given the widespread deployment of these devices. Affected organizations should immediately identify and isolate Zbtlink routers from networks, replace them with devices from trusted vendors, and monitor for unauthorized access or data exfiltration.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/08/chinese-made-zbtlink-routers-ship-with.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
   </entry>
 </feed>
