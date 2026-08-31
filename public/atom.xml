@@ -3,7 +3,25 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-08-30T13:36:05.459111+00:00</updated>
+  <updated>2026-08-31T21:19:59.489400+00:00</updated>
+  <entry>
+    <title>Traefik | Version Through 3.7.11</title>
+    <id>urn:cybersecnews:item:343</id>
+    <published>2026-08-31T21:19:59.489400+00:00</published>
+    <updated>2026-08-31T21:19:59.489400+00:00</updated>
+    <link href="https://bishopfox.com/blog/traefik-version-through-3-7-11" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · dos&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Traefik HTTP/3 requests are not subject to the configured read timeout, allowing attackers to establish connections and hold them open indefinitely, potentially enabling slowloris-style denial-of-service attacks. This vulnerability affects all Traefik versions through 3.7.11 and has existed for at least four years without being exploited in the wild. Update to the patched version immediately, as the vendor has released a fix within two weeks of disclosure. Review HTTP/3 listener configurations and consider implementing network-level timeouts as a temporary mitigation if immediate patching is not feasible.&lt;/p&gt;&lt;p&gt;&lt;a href="https://bishopfox.com/blog/traefik-version-through-3-7-11"&gt;Read more&lt;/a&gt; · Source: bishop-fox&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Breaking the Seal: Static Deobfuscation of JSCeal’s Compiled V8 Bytecode</title>
+    <id>urn:cybersecnews:item:342</id>
+    <published>2026-08-31T21:19:59.476585+00:00</published>
+    <updated>2026-08-31T21:19:59.476585+00:00</updated>
+    <link href="https://research.checkpoint.com/2026/breaking-the-seal-static-deobfuscation-of-jsceals-compiled-v8-bytecode/" rel="alternate" />
+    <category term="red-team" />
+    <content type="html">&lt;p&gt;&lt;em&gt;red-team · deobfuscation&lt;/em&gt;&lt;/p&gt;&lt;p&gt;JSCeal is a stealer malware distributed as obfuscated V8 bytecode (.jsc files) executed via bundled Node.js runtime, primarily targeting cryptocurrency applications and also tracked as WEEVILPROXY or MeadowLocust. The malware has been active since March 2024 and employs bytecode compilation as an obfuscation technique to evade detection, though researchers have demonstrated static deobfuscation methods are effective against it. This represents a moderate-to-high severity threat given its cryptocurrency targeting and active campaign status; current exploitation appears limited to targeted financial entities. Organizations should implement detection signatures for .jsc files and V8 bytecode execution, restrict Node.js runtime execution to trusted sources only, and monitor for suspicious cryptocurrency wallet application access.&lt;/p&gt;&lt;p&gt;&lt;a href="https://research.checkpoint.com/2026/breaking-the-seal-static-deobfuscation-of-jsceals-compiled-v8-bytecode/"&gt;Read more&lt;/a&gt; · Source: checkpoint-research&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>TerminalFix Uses Fake Cloudflare CAPTCHAs to Deploy Reverse-Tunnel Backdoor</title>
     <id>urn:cybersecnews:item:341</id>
@@ -885,23 +903,5 @@
     <link href="https://www.bleepingcomputer.com/news/security/new-tontou-cpu-attack-bypasses-spectre-v2-fixes-leaks-linux-password-hashes/" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · speculative-execution-sidechannel&lt;/em&gt;&lt;/p&gt;&lt;p&gt;TONTOU is a new speculative execution attack targeting CPUs that circumvents existing Spectre v2 mitigations by exploiting Time-of-Check-Time-of-Use (TOCTOU) race conditions in kernel defenses. The attack has been demonstrated to leak sensitive data including Linux password hashes from affected systems. Severity is high as it defeats current protections, though wild exploitation likelihood is currently unknown given the technical sophistication required. Mitigation requires updated CPU microcode and kernel patches; users should monitor vendor advisories from Intel, AMD, and Linux distributions for available fixes and apply them promptly.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/new-tontou-cpu-attack-bypasses-spectre-v2-fixes-leaks-linux-password-hashes/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Cisco Patches 12 SD-WAN and IOS XE Flaws, Including Three 9.8 CVSS Score Bugs</title>
-    <id>urn:cybersecnews:item:243</id>
-    <published>2026-08-07T02:39:28.474646+00:00</published>
-    <updated>2026-08-07T02:39:28.474646+00:00</updated>
-    <link href="https://thehackernews.com/2026/08/cisco-patches-12-sd-wan-and-ios-xe.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · multiple&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Cisco released patches for 12 vulnerabilities in Catalyst SD-WAN and IOS XE software, including three critical flaws with CVSS 9.8 scores affecting authentication and access control mechanisms. The vulnerabilities impact SD-WAN software regardless of device configuration and IOS XE in autonomous or controller modes, potentially allowing attackers to bypass security controls or gain unauthorized access. No evidence of active exploitation in the wild has been reported. Organizations running affected Cisco SD-WAN or IOS XE deployments should prioritize applying the latest security updates immediately given the critical severity ratings.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/08/cisco-patches-12-sd-wan-and-ios-xe.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>New Zapscape KVM Flaw Could Let Privileged L1 Guest Code Escape to Linux Hosts</title>
-    <id>urn:cybersecnews:item:242</id>
-    <published>2026-08-07T02:39:28.471820+00:00</published>
-    <updated>2026-08-07T02:39:28.471820+00:00</updated>
-    <link href="https://thehackernews.com/2026/08/new-zapscape-kvm-flaw-could-let.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · vm-escape · CVE-2026-64561&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Zapscape (CVE-2026-64561) is a privilege escalation vulnerability in Linux KVM/x86's shadow MMU that allows an attacker with kernel-level access in a nested L1 guest VM to escape to the host system. The flaw affects systems with nested virtualization enabled and exposed to untrusted guests; severity is high due to escape from isolation boundary but exploitation requires pre-existing kernel privileges within guest. A kernel patch addressing the shadow MMU handling is required; systems should disable nested virtualization for untrusted workloads until patched. No evidence of in-the-wild exploitation reported at this time.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/08/new-zapscape-kvm-flaw-could-let.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
   </entry>
 </feed>
