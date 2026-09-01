@@ -3,7 +3,16 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-09-01T13:09:31.861633+00:00</updated>
+  <updated>2026-09-01T19:14:24.668515+00:00</updated>
+  <entry>
+    <title>Nearly 22,000 Microsoft Exchange servers vulnerable to hijack attacks</title>
+    <id>urn:cybersecnews:item:346</id>
+    <published>2026-09-01T19:14:24.668515+00:00</published>
+    <updated>2026-09-01T19:14:24.668515+00:00</updated>
+    <link href="https://www.bleepingcomputer.com/news/security/nearly-22-000-microsoft-exchange-servers-vulnerable-to-hijack-attacks/" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Nearly 22,000 unpatched Microsoft Exchange servers are vulnerable to a high-severity authentication bypass flaw enabling complete mailbox compromise. The vulnerability allows remote attackers to bypass authentication mechanisms and gain unauthorized access to all user mailboxes without credentials. No active exploitation in the wild has been confirmed at this time, though the exposure of 22,000 internet-facing instances presents significant risk. Immediate patching of all Exchange servers is critical; administrators should prioritize applying the latest security updates and consider implementing network access controls to restrict Exchange exposure to trusted networks only.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/nearly-22-000-microsoft-exchange-servers-vulnerable-to-hijack-attacks/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Off the Hook: Discovering and Observing Active Exploitation of Sangoma Switchvox CVE-2026-9586</title>
     <id>urn:cybersecnews:item:345</id>
@@ -137,7 +146,7 @@
     <updated>2026-08-27T18:54:11.239285+00:00</updated>
     <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-66384" rel="alternate" />
     <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · path-traversal · CVE-2026-66384&lt;/em&gt;&lt;/p&gt;&lt;p&gt;JFrog Artifactory is vulnerable to CVE-2026-66384, a path traversal flaw allowing authenticated users to write data outside the intended Docker cache directory under specific remote repository conditions. This vulnerability is actively exploited in the wild and carries high severity due to potential unauthorized file writes. Apply vendor-provided patches or mitigations immediately per CISA BOD 26-04 guidance; discontinue use if mitigations are unavailable. Prioritize patching based on internet exposure and ensure compliance with federal security update requirements.&lt;/p&gt;&lt;p&gt;&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2026-66384"&gt;Read more&lt;/a&gt; · Source: cisa-kev&lt;/p&gt;</content>
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · path-traversal · CVE-2026-66384, CVE-2026-82329&lt;/em&gt;&lt;/p&gt;&lt;p&gt;JFrog Artifactory is vulnerable to CVE-2026-66384, a path traversal flaw allowing authenticated users to write data outside the intended Docker cache directory under specific remote repository conditions. This vulnerability is actively exploited in the wild and carries high severity due to potential unauthorized file writes. Apply vendor-provided patches or mitigations immediately per CISA BOD 26-04 guidance; discontinue use if mitigations are unavailable. Prioritize patching based on internet exposure and ensure compliance with federal security update requirements.&lt;/p&gt;&lt;p&gt;&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2026-66384"&gt;Read more&lt;/a&gt; · Source: cisa-kev&lt;/p&gt;</content>
   </entry>
   <entry>
     <title>ownCloud ownCloud: ownCloud Improper Authentication Vulnerability (CVE-2023-49105)</title>
@@ -894,14 +903,5 @@
     <link href="https://thehackernews.com/2026/08/new-wordpress-pre-auth-xss-could-lead.html" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · xss · CVE-2026-64638&lt;/em&gt;&lt;/p&gt;&lt;p&gt;WordPress versions prior to the latest patch contain a pre-authentication reflected XSS vulnerability in the login screen (CVE-2026-64638, CVSS 8.9) affecting all versions of the CMS. The flaw can be chained to achieve PHP code execution when an administrator visits an attacker-controlled page, representing a critical risk to site integrity and data. There is evidence of active exploitation in the wild. Immediate patching to the latest WordPress release is mandatory; additionally, restrict admin access and implement Web Application Firewall (WAF) rules to block malicious payloads targeting the login endpoint.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/08/new-wordpress-pre-auth-xss-could-lead.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Screen Sharing: Gefährliche MacOS-Lücke lässt Angreifer Apple-Systeme kapern</title>
-    <id>urn:cybersecnews:item:246</id>
-    <published>2026-08-07T08:58:57.714667+00:00</published>
-    <updated>2026-08-07T08:58:57.714667+00:00</updated>
-    <link href="https://www.golem.de/news/screen-sharing-gefaehrliche-macos-luecke-laesst-angreifer-apple-systeme-kapern-2608-211694.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-65400&lt;/em&gt;&lt;/p&gt;&lt;p&gt;A critical vulnerability in macOS screen sharing functionality allows unauthenticated remote attackers to gain full control of affected systems without credentials. The flaw affects Apple's screen sharing implementation across macOS devices and represents a severe privilege escalation risk. Users should apply available security patches immediately, and administrators should prioritize deployment across their macOS fleet. There is no indication the vulnerability is currently exploited in the wild, but the unauthenticated nature of the exploit makes it a high-priority threat.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.golem.de/news/screen-sharing-gefaehrliche-macos-luecke-laesst-angreifer-apple-systeme-kapern-2608-211694.html"&gt;Read more&lt;/a&gt; · Source: golem-security&lt;/p&gt;</content>
   </entry>
 </feed>
