@@ -3,7 +3,25 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-08-31T21:19:59.489400+00:00</updated>
+  <updated>2026-09-01T13:09:31.861633+00:00</updated>
+  <entry>
+    <title>Off the Hook: Discovering and Observing Active Exploitation of Sangoma Switchvox CVE-2026-9586</title>
+    <id>urn:cybersecnews:item:345</id>
+    <published>2026-09-01T13:09:31.861633+00:00</published>
+    <updated>2026-09-01T13:09:31.861633+00:00</updated>
+    <link href="https://horizon3.ai/attack-research/disclosures/cve-2026-9586-sangoma-switchvox-rce/" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · sqli-rce · CVE-2026-9586&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Sangoma Switchvox is affected by CVE-2026-9586, an unauthenticated SQL injection vulnerability that allows remote code execution. The flaw is actively exploited in the wild. Organizations running Switchvox should apply available patches immediately and implement network-level access controls to restrict exposure of the affected application.&lt;/p&gt;&lt;p&gt;&lt;a href="https://horizon3.ai/attack-research/disclosures/cve-2026-9586-sangoma-switchvox-rce/"&gt;Read more&lt;/a&gt; · Source: horizon3&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>waf-fu, or Some Log Replay Nonsense</title>
+    <id>urn:cybersecnews:item:344</id>
+    <published>2026-09-01T13:09:31.859168+00:00</published>
+    <updated>2026-09-01T13:09:31.859168+00:00</updated>
+    <link href="https://trustedsec.com/blog/waf-fu-or-some-log-replay-nonsense" rel="alternate" />
+    <category term="red-team" />
+    <content type="html">&lt;p&gt;&lt;em&gt;red-team · post-exploitation&lt;/em&gt;&lt;/p&gt;&lt;p&gt;AWS CloudWatch logs can be replayed to extract exposed credentials when WAF (Web Application Firewall) rules fail to sanitize sensitive data in request/response logs. This technique exploits insufficient logging controls and WAF bypass methods to capture plaintext credentials from historical log entries, potentially granting unauthorized access to AWS resources and services. Severity is medium-to-high depending on credential scope and environment sensitivity; exploitation requires existing CloudWatch log access and is primarily a manual post-compromise technique rather than widespread automated exploitation. Recommended mitigations: implement strict WAF rules to redact sensitive patterns (passwords, tokens, keys) before logging, enforce principle of least privilege on CloudWatch log access, enable log encryption at rest and in transit, and conduct regular log audits for exposed credentials.&lt;/p&gt;&lt;p&gt;&lt;a href="https://trustedsec.com/blog/waf-fu-or-some-log-replay-nonsense"&gt;Read more&lt;/a&gt; · Source: trustedsec&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Traefik | Version Through 3.7.11</title>
     <id>urn:cybersecnews:item:343</id>
@@ -885,23 +903,5 @@
     <link href="https://www.golem.de/news/screen-sharing-gefaehrliche-macos-luecke-laesst-angreifer-apple-systeme-kapern-2608-211694.html" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-65400&lt;/em&gt;&lt;/p&gt;&lt;p&gt;A critical vulnerability in macOS screen sharing functionality allows unauthenticated remote attackers to gain full control of affected systems without credentials. The flaw affects Apple's screen sharing implementation across macOS devices and represents a severe privilege escalation risk. Users should apply available security patches immediately, and administrators should prioritize deployment across their macOS fleet. There is no indication the vulnerability is currently exploited in the wild, but the unauthenticated nature of the exploit makes it a high-priority threat.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.golem.de/news/screen-sharing-gefaehrliche-macos-luecke-laesst-angreifer-apple-systeme-kapern-2608-211694.html"&gt;Read more&lt;/a&gt; · Source: golem-security&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Traefik: Authentication Bypass via Path Traversal in ReplacePathRegex Middleware (CVE-2026-65600)</title>
-    <id>urn:cybersecnews:item:245</id>
-    <published>2026-08-07T02:39:28.477256+00:00</published>
-    <updated>2026-08-07T02:39:28.477256+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-cxjq-mrr5-89rv" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-65600&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Traefik's ReplacePathRegex middleware contains a critical authentication bypass vulnerability (CVE-2026-65600) where improperly configured regex replacements allow path traversal attacks to bypass security controls. Crafted requests can generate unnormalized paths like `/../admin` that forward to backends without validation, potentially exposing protected resources when the backend normalizes the path. This affects Traefik v2 and v3. Users must update to patched versions and review ReplacePathRegex configurations to ensure regex patterns include mandatory separators between captured segments; consider alternative middleware if traversal patterns are unavoidable.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-cxjq-mrr5-89rv"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>New TONTOU CPU attack bypasses Spectre v2 fixes, leaks Linux password hashes</title>
-    <id>urn:cybersecnews:item:244</id>
-    <published>2026-08-07T02:39:28.476366+00:00</published>
-    <updated>2026-08-07T02:39:28.476366+00:00</updated>
-    <link href="https://www.bleepingcomputer.com/news/security/new-tontou-cpu-attack-bypasses-spectre-v2-fixes-leaks-linux-password-hashes/" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · speculative-execution-sidechannel&lt;/em&gt;&lt;/p&gt;&lt;p&gt;TONTOU is a new speculative execution attack targeting CPUs that circumvents existing Spectre v2 mitigations by exploiting Time-of-Check-Time-of-Use (TOCTOU) race conditions in kernel defenses. The attack has been demonstrated to leak sensitive data including Linux password hashes from affected systems. Severity is high as it defeats current protections, though wild exploitation likelihood is currently unknown given the technical sophistication required. Mitigation requires updated CPU microcode and kernel patches; users should monitor vendor advisories from Intel, AMD, and Linux distributions for available fixes and apply them promptly.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/new-tontou-cpu-attack-bypasses-spectre-v2-fixes-leaks-linux-password-hashes/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
   </entry>
 </feed>
