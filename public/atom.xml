@@ -3,7 +3,88 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-09-02T12:36:13.955500+00:00</updated>
+  <updated>2026-09-02T19:16:02.715076+00:00</updated>
+  <entry>
+    <title>Red Team AI Skills</title>
+    <id>urn:cybersecnews:item:358</id>
+    <published>2026-09-02T19:16:02.715076+00:00</published>
+    <updated>2026-09-02T19:16:02.715076+00:00</updated>
+    <link href="https://www.outflank.nl/blog/2026/09/02/red-team-ai-skills/" rel="alternate" />
+    <category term="red-team" />
+    <content type="html">&lt;p&gt;&lt;em&gt;red-team · c2&lt;/em&gt;&lt;/p&gt;&lt;p&gt;SpecterOps released an open-source AI skills marketplace for red team operations and offensive security research, with initial support for Cobalt Strike and Outflank C2 frameworks. This is a legitimate security research tool designed to enhance offensive capabilities for authorized penetration testing and red team exercises, not a vulnerability disclosure. No patching or mitigation is required; organizations should evaluate whether to permit or restrict access to such tools based on their security policies and whether authorized red team activities are underway. This represents a tooling advancement rather than a security threat requiring immediate action.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.outflank.nl/blog/2026/09/02/red-team-ai-skills/"&gt;Read more&lt;/a&gt; · Source: outflank&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Gaming the system: how a Chinese-speaking actor turned Brazilian government sites into an SEO weapon</title>
+    <id>urn:cybersecnews:item:357</id>
+    <published>2026-09-02T19:16:02.714298+00:00</published>
+    <updated>2026-09-02T19:16:02.714298+00:00</updated>
+    <link href="https://research.checkpoint.com/2026/gaming-the-system-how-a-chinese-speaking-actor-turned-brazilian-government-sites-into-an-seo-weapon/" rel="alternate" />
+    <category term="red-team" />
+    <content type="html">&lt;p&gt;&lt;em&gt;red-team · initial-access,c2,persistence&lt;/em&gt;&lt;/p&gt;&lt;p&gt;A Chinese-speaking cybercrime group linked to Earth Berberoka has conducted a sustained campaign against Brazilian government organizations since mid-2025, using compromised sites for SEO manipulation and deploying a custom Linux toolkit including backdoors and downloaders. The attack demonstrates moderate-to-high severity given the targeting of government infrastructure and the deployment of persistent remote access capabilities. Organizations should immediately audit web server access logs for suspicious activity, patch Linux systems against known vulnerabilities, implement network segmentation to limit lateral movement, and conduct forensic analysis on affected systems to identify backdoor indicators of compromise.&lt;/p&gt;&lt;p&gt;&lt;a href="https://research.checkpoint.com/2026/gaming-the-system-how-a-chinese-speaking-actor-turned-brazilian-government-sites-into-an-seo-weapon/"&gt;Read more&lt;/a&gt; · Source: checkpoint-research&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Anatomy of a Silent Domain Takeover</title>
+    <id>urn:cybersecnews:item:356</id>
+    <published>2026-09-02T19:16:02.713464+00:00</published>
+    <updated>2026-09-02T19:16:02.713464+00:00</updated>
+    <link href="https://blog.qualys.com/category/product-tech" rel="alternate" />
+    <category term="red-team" />
+    <content type="html">&lt;p&gt;&lt;em&gt;red-team · lateral-movement&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Active Directory exploitation techniques using legitimate Windows protocols and credentials to achieve domain takeover without malware or exploits. Attack chain leverages benign AD operations (password changes, privilege escalation, credential delegation) that evade signature-based detection; full compromise demonstrated in 54 minutes. Severity is critical as attacks leave minimal forensic indicators and bypass traditional security tools. Recommended actions: implement behavioral analytics and logging correlation to detect anomalous AD activity patterns, enforce MFA on sensitive AD accounts, apply principle of least privilege for service accounts, and conduct threat hunting focused on suspicious credential delegation and unexpected privilege changes in event logs.&lt;/p&gt;&lt;p&gt;&lt;a href="https://blog.qualys.com/category/product-tech"&gt;Read more&lt;/a&gt; · Source: qualys&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Orval: Import-time RCE via schema property name -&gt; computed-property-key injection in the zod client (CVE-2026-71866)</title>
+    <id>urn:cybersecnews:item:355</id>
+    <published>2026-09-02T19:16:02.712460+00:00</published>
+    <updated>2026-09-02T19:16:02.712460+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-6mr6-jvcr-2f25" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · code-injection · CVE-2026-71866&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Orval (npm package, versions including 8.19.0) is vulnerable to remote code execution during module import when generating Zod validation clients. The vulnerability exists because property names from OpenAPI/JSON schemas are embedded unescaped as double-quoted keys in generated zod.object() definitions; an attacker can inject a malicious property name containing a quote character and computed property syntax (e.g., `["malicious code"]`) to achieve code execution at import time when the generated module is loaded. This is critical severity and likely exploited given the simplicity of the attack vector and public disclosure. Immediately update orval to a patched version and regenerate any client code from untrusted or externally-sourced schemas; validate and sanitize all property names in input schemas as a temporary mitigation.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-6mr6-jvcr-2f25"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Orval: Import-time RCE via query-parameter default -&gt; zod module-level template literal (CVE-2026-72716)</title>
+    <id>urn:cybersecnews:item:354</id>
+    <published>2026-09-02T19:16:02.711617+00:00</published>
+    <updated>2026-09-02T19:16:02.711617+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-p4cg-3328-rvfg" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-72716&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Orval (npm package) versions up to 8.19.0 contain a critical remote code execution vulnerability in zod schema generation. When processing OpenAPI specifications, Orval unsafely embeds query-parameter default values into module-level template literals without escaping backticks or `${` sequences, allowing an attacker to inject arbitrary JavaScript expressions that execute at import time. This vulnerability is critical severity, requires no user interaction beyond importing a malicious schema, bypasses default OpenAPI validation, and is likely exploited in the wild given its trivial trigger mechanism. Immediately patch Orval to the latest version and regenerate all zod schemas from potentially untrusted or attacker-controlled OpenAPI specifications.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-p4cg-3328-rvfg"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Kestra Kestra OSS: Kestra OSS OS Command Injection Vulnerability (CVE-2026-49869)</title>
+    <id>urn:cybersecnews:item:353</id>
+    <published>2026-09-02T19:16:02.710864+00:00</published>
+    <updated>2026-09-02T19:16:02.710864+00:00</updated>
+    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-49869" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · os-command-injection · CVE-2026-49869&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Kestra OSS is affected by CVE-2026-49869, an OS command injection vulnerability allowing unauthenticated remote attackers to create and execute arbitrary workflows without credentials. This vulnerability is actively exploited in the wild and carries high severity due to the lack of authentication requirements and potential for complete system compromise. Apply vendor-supplied patches immediately per CISA BOD 26-04 guidance; organizations unable to patch should implement network segmentation to restrict Kestra OSS internet exposure or discontinue use. Document system forensics and maintain evidence per CISA's Forensics Triage Requirements if prior compromise is suspected.&lt;/p&gt;&lt;p&gt;&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2026-49869"&gt;Read more&lt;/a&gt; · Source: cisa-kev&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Kludex Starlette: Kludex Starlette HTTP Request/Response Smuggling Vulnerability (CVE-2026-48710)</title>
+    <id>urn:cybersecnews:item:352</id>
+    <published>2026-09-02T19:16:02.709665+00:00</published>
+    <updated>2026-09-02T19:16:02.709665+00:00</updated>
+    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-48710" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · http-request-smuggling · CVE-2026-48710&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Starlette web framework contains an HTTP request/response smuggling vulnerability (CVE-2026-48710) allowing attackers to inject paths into the host header, potentially bypassing authentication mechanisms that rely on reconstructed URL paths. This vulnerability is actively exploited in the wild and can be chained with CVE-2026-42271 for compound impact. Apply vendor-supplied patches immediately per CISA BOD 26-04 guidance; if unavailable, discontinue use or implement compensating controls and document internet exposure. Assess all affected instances for exploitation and follow forensic triage requirements per CISA guidance.&lt;/p&gt;&lt;p&gt;&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2026-48710"&gt;Read more&lt;/a&gt; · Source: cisa-kev&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>GeoNetwork Fixes Unauthenticated RCE Chain Affecting Government Geoportal Backends</title>
+    <id>urn:cybersecnews:item:351</id>
+    <published>2026-09-02T19:16:02.708590+00:00</published>
+    <updated>2026-09-02T19:16:02.708590+00:00</updated>
+    <link href="https://thehackernews.com/2026/09/geonetwork-fixes-unauthenticated-rce.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;GeoNetwork geospatial metadata catalog software affected by an unauthenticated RCE vulnerability chain exploitable without authentication. Two chained vulnerabilities allow remote code execution on systems running versions prior to 4.4.12 and 4.2.17, with particular impact to government and agency geoportal backends. Severity is critical given the widespread government deployment and lack of authentication requirement; exploit status in the wild is unknown at publication. Immediate patching to versions 4.4.12 or 4.2.17 is required; organizations should prioritize this update given the deployment landscape and verify no exploitation has occurred during the disclosure lag period.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/09/geonetwork-fixes-unauthenticated-rce.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Malicious .git Configs Can Make Claude, Codex, Cursor, and Other AI Agents Run Attacker Code</title>
+    <id>urn:cybersecnews:item:350</id>
+    <published>2026-09-02T19:16:02.607410+00:00</published>
+    <updated>2026-09-02T19:16:02.607410+00:00</updated>
+    <link href="https://thehackernews.com/2026/09/malicious-git-configs-can-make-claude.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · code-injection&lt;/em&gt;&lt;/p&gt;&lt;p&gt;AI coding agents (Claude, Codex, Cursor, and others) are vulnerable to arbitrary code execution via malicious .git configurations that trigger execution of attacker-specified commands with user privileges outside sandboxed environments. The vulnerabilities stem from agents parsing Git config files and executing referenced commands without validation or user approval. Severity is high as exploitation requires only committing a malicious .git file to a repository; no patching at publication for four of seven affected tools. Developers should avoid cloning untrusted repositories into agent environments and security teams should contact vendors for patches or workarounds; users should review Git configuration files in repositories before processing with AI agents.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/09/malicious-git-configs-can-make-claude.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>SonicWall warns of actively exploited SMA1000 zero-day flaws</title>
     <id>urn:cybersecnews:item:349</id>
@@ -11,7 +92,7 @@
     <updated>2026-09-02T12:36:13.955500+00:00</updated>
     <link href="https://www.bleepingcomputer.com/news/security/sonicwall-warns-of-actively-exploited-sma1000-zero-day-flaws/" rel="alternate" />
     <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;SonicWall SMA1000 zero-day RCE flaws actively exploited in chained attacks&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/sonicwall-warns-of-actively-exploited-sma1000-zero-day-flaws/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-72920, CVE-2026-83549&lt;/em&gt;&lt;/p&gt;&lt;p&gt;SonicWall SMA1000 zero-day RCE flaws actively exploited in chained attacks&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/sonicwall-warns-of-actively-exploited-sma1000-zero-day-flaws/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
   </entry>
   <entry>
     <title>Dropbox accounts breached through Lenovo email verification flaw</title>
@@ -128,7 +209,7 @@
     <updated>2026-08-29T00:27:03.526961+00:00</updated>
     <link href="https://github.com/advisories/GHSA-r82h-mqw3-fc56" rel="alternate" />
     <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · dos,ssrf,xss · CVE-2026-55247, CVE-2026-83548&lt;/em&gt;&lt;/p&gt;&lt;p&gt;plone.app.event iCalendar import functionality contains a critical vulnerability (CVE-2026-55247) allowing authenticated editors to cause denial of service, perform server-side request forgery (SSRF) to access internal networks and disk files, and store persistent XSS payloads. There is no indication of active exploitation in the wild. Immediately upgrade plone.app.event to version 6.0.1 (Plone 6.2) or 5.2.4 (Plone 6.0/6.1) to patch the vulnerability.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-r82h-mqw3-fc56"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · dos,ssrf,xss · CVE-2026-55247, CVE-2026-83548, CVE-2026-83549&lt;/em&gt;&lt;/p&gt;&lt;p&gt;plone.app.event iCalendar import functionality contains a critical vulnerability (CVE-2026-55247) allowing authenticated editors to cause denial of service, perform server-side request forgery (SSRF) to access internal networks and disk files, and store persistent XSS payloads. There is no indication of active exploitation in the wild. Immediately upgrade plone.app.event to version 6.0.1 (Plone 6.2) or 5.2.4 (Plone 6.0/6.1) to patch the vulnerability.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-r82h-mqw3-fc56"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
   </entry>
   <entry>
     <title>Pimcore Vulnerable to Remote Code Execution via DataObject Class-Definition Field Name (CVE-2026-55634)</title>
@@ -317,7 +398,7 @@
     <updated>2026-08-25T16:37:12.786606+00:00</updated>
     <link href="https://github.com/advisories/GHSA-8vh3-g2qg-2h2c" rel="alternate" />
     <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-55640&lt;/em&gt;&lt;/p&gt;&lt;p&gt;The nextcloud-mcp-server webhook receiver endpoint (`POST /webhooks/nextcloud`) lacks authentication by default, with `WEBHOOK_SECRET` unset and unenforced. An unauthenticated attacker can submit arbitrary POST requests containing any user ID to delete or corrupt vector embeddings in Qdrant, resulting in data loss across all users. This is critical severity and likely exploitable in the wild given the default insecure configuration. Immediately set a strong `WEBHOOK_SECRET` environment variable, validate it at startup, and upgrade to a patched version that enforces authentication; consider restricting webhook endpoint access by IP or network controls as an interim mitigation.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-8vh3-g2qg-2h2c"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-55640, CVE-2026-59822&lt;/em&gt;&lt;/p&gt;&lt;p&gt;The nextcloud-mcp-server webhook receiver endpoint (`POST /webhooks/nextcloud`) lacks authentication by default, with `WEBHOOK_SECRET` unset and unenforced. An unauthenticated attacker can submit arbitrary POST requests containing any user ID to delete or corrupt vector embeddings in Qdrant, resulting in data loss across all users. This is critical severity and likely exploitable in the wild given the default insecure configuration. Immediately set a strong `WEBHOOK_SECRET` environment variable, validate it at startup, and upgrade to a patched version that enforces authentication; consider restricting webhook endpoint access by IP or network controls as an interim mitigation.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-8vh3-g2qg-2h2c"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
   </entry>
   <entry>
     <title>Hackers target WordPress sites in miniOrange auth bypass attacks</title>
@@ -822,86 +903,5 @@
     <link href="https://www.heise.de/news/Sicherheitsluecken-Angreifer-koennen-Wachdienst-von-ClamAV-stoeren-11409730.html" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · code-execution&lt;/em&gt;&lt;/p&gt;&lt;p&gt;ClamAV open-source antivirus scanner contains vulnerabilities allowing attackers to disrupt the scanning daemon and potentially execute malicious code on affected systems. The vulnerabilities affect the core scanning functionality and daemon operations, with high severity impact including potential code execution. No indication provided of active exploitation in the wild. Apply available security patches immediately and verify ClamAV installations are updated to the latest patched version.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.heise.de/news/Sicherheitsluecken-Angreifer-koennen-Wachdienst-von-ClamAV-stoeren-11409730.html"&gt;Read more&lt;/a&gt; · Source: heise-security&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Abyssos: Technical Analysis of a New Modular RAT</title>
-    <id>urn:cybersecnews:item:258</id>
-    <published>2026-08-10T16:54:20.839888+00:00</published>
-    <updated>2026-08-10T16:54:20.839888+00:00</updated>
-    <link href="https://www.zscaler.com/blogs/security-research/abyssos-technical-analysis-new-modular-rat" rel="alternate" />
-    <category term="red-team" />
-    <content type="html">&lt;p&gt;&lt;em&gt;red-team · c2&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Abyssos is a modular remote access trojan (RAT) written in C++ targeting Windows systems with capabilities including credential theft, file exfiltration, VNC-based remote access, keylogging, and UAC bypass. The malware uses LLVM-based obfuscation (control flow flattening, string encryption), AES-GCM encryption for C2 communication, and employs anti-analysis techniques including hypervisor detection and process name checking. While currently in active development with limited observed deployment, Abyssos represents a significant threat due to its modular architecture enabling ongoing capability expansion and evasion techniques. Organizations should implement endpoint detection and response (EDR) tools with behavioral analysis capabilities, monitor for suspicious VNC and remote shell sessions, block identified C2 IP addresses (213.145.86.42, 209.99.184.223), and maintain updated antivirus/anti-malware solutions with Zscaler's threat definitions (Win64.PWS.Abyssos).&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.zscaler.com/blogs/security-research/abyssos-technical-analysis-new-modular-rat"&gt;Read more&lt;/a&gt; · Source: zscaler-threatlabz&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Schadcode-Attacken auf Progress LoadMaster im Gange</title>
-    <id>urn:cybersecnews:item:257</id>
-    <published>2026-08-10T16:54:20.838326+00:00</published>
-    <updated>2026-08-10T16:54:20.838326+00:00</updated>
-    <link href="https://www.heise.de/news/Schadcode-Attacken-auf-Progress-LoadMaster-im-Gange-11404612.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Progress LoadMaster is actively under attack by threat actors exploiting unspecified vulnerabilities. Exploitation is confirmed in the wild. Security patches are available and should be applied immediately to all affected LoadMaster instances. Organizations running LoadMaster should prioritize patching and monitor for indicators of compromise, as active attacks indicate high risk.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.heise.de/news/Schadcode-Attacken-auf-Progress-LoadMaster-im-Gange-11404612.html"&gt;Read more&lt;/a&gt; · Source: heise-security&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Hackers breach TrueConf to trojanize client installers with backdoors</title>
-    <id>urn:cybersecnews:item:256</id>
-    <published>2026-08-08T16:32:51.324315+00:00</published>
-    <updated>2026-08-08T16:32:51.324315+00:00</updated>
-    <link href="https://www.bleepingcomputer.com/news/security/hackers-breach-trueconf-to-trojanize-client-installers-with-backdoors/" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · unpatched-server-vulnerability · CVE-2026-72529, CVE-2026-72530&lt;/em&gt;&lt;/p&gt;&lt;p&gt;TrueConf video conferencing software is affected by vulnerabilities in unpatched servers that allow attackers to replace legitimate client installers with trojanized versions containing backdoors. The Head Mare hacktivist group is actively exploiting these flaws in the wild to deliver persistent remote access capabilities. This represents high severity risk as compromised installers can affect multiple endpoints organization-wide. Immediately patch all TrueConf servers to the latest version and verify installer integrity before deployment; consider revoking and reissuing client installations if compromise is suspected.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/hackers-breach-trueconf-to-trojanize-client-installers-with-backdoors/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>CodeIgniter: SQL injection in Query Builder deleteBatch() when used with where() conditions (CVE-2026-63221)</title>
-    <id>urn:cybersecnews:item:255</id>
-    <published>2026-08-08T01:38:09.871057+00:00</published>
-    <updated>2026-08-08T01:38:09.871057+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-c9w5-rwh3-7pm9" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · sqli · CVE-2026-63221&lt;/em&gt;&lt;/p&gt;&lt;p&gt;CodeIgniter 4's Query Builder deleteBatch() method contains a critical SQL injection vulnerability when combined with where() conditions, as bound values from WHERE clauses are substituted without proper escaping or quoting. Applications using user-controlled input in where() statements before calling deleteBatch() are vulnerable to SQL injection attacks. There is no indication this is currently exploited in the wild. Affected applications should immediately upgrade to a patched version and audit any deleteBatch() calls preceded by where() conditions for potential exploitation.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-c9w5-rwh3-7pm9"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>CodeIgniter: Uploaded file extension validation bypass in `is_image` and `mime_in` rules (CVE-2026-63223)</title>
-    <id>urn:cybersecnews:item:254</id>
-    <published>2026-08-08T01:38:09.869742+00:00</published>
-    <updated>2026-08-08T01:38:09.869742+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-mmj4-63m4-r6h5" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · file-upload-bypass · CVE-2026-63223&lt;/em&gt;&lt;/p&gt;&lt;p&gt;CodeIgniter 4 framework (before v4.7.4) contains an unsafe file upload validation bypass in the `is_image` and `mime_in` validation rules that allows attackers to upload executable files with image MIME types, leading to remote code execution when files are saved with client-supplied names in web-accessible directories. This is critical severity and likely exploited in the wild given the common misconfiguration patterns involved. Immediately upgrade to v4.7.4 or later; as a workaround, implement independent safe extension validation using `ext_in` rule, avoid using client-supplied filenames, and store uploads outside web-accessible directories.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-mmj4-63m4-r6h5"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>crypto-js: Insufficient Entropy in Cryptographic Secret Generation via Vulnerable CryptoJS Dependency Chain (CVE-2026-71851)</title>
-    <id>urn:cybersecnews:item:253</id>
-    <published>2026-08-08T01:38:09.868407+00:00</published>
-    <updated>2026-08-08T01:38:09.868407+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-rg76-677x-56q9" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · insufficient-entropy · CVE-2026-71851&lt;/em&gt;&lt;/p&gt;&lt;p&gt;CryptoJS library versions containing `WordArray.random()` suffer from insufficient entropy in cryptographic secret generation, producing only ~2^39 bits of effective entropy for 128-bit requests and ~2^47 for 256-bit requests instead of the full keyspace. This vulnerability is critical as it allows attackers to enumerate possible cryptographic secrets on commodity hardware, and is exploited in the wild with downstream wallet applications using the function for BIP39 recovery phrase generation. Immediate action required: update CryptoJS to a patched version and audit any applications using this library for key generation, particularly cryptocurrency wallets and sensitive credential systems, regenerating compromised secrets.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-rg76-677x-56q9"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Metabase SQLi zero-day exploited in customer data-theft attacks</title>
-    <id>urn:cybersecnews:item:252</id>
-    <published>2026-08-08T01:38:09.865796+00:00</published>
-    <updated>2026-08-08T01:38:09.865796+00:00</updated>
-    <link href="https://www.bleepingcomputer.com/news/security/framework-tally-disclose-metabase-data-theft-attacks/" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · sqli · CVE-2026-72898&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Metabase is affected by a critical SQL injection zero-day vulnerability currently exploited in the wild for unauthorized data theft from customer instances. The flaw allows unauthenticated attackers to execute arbitrary SQL queries and exfiltrate sensitive data, with confirmed compromises at Framework and Tally. Immediate patching is strongly recommended; monitor for indicators of compromise including unusual database queries and data access patterns. If patching is delayed, implement network segmentation and access controls to restrict Metabase instance exposure.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/framework-tally-disclose-metabase-data-theft-attacks/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Living off the coding agent: Two tales of tunnels and LaunchAgents</title>
-    <id>urn:cybersecnews:item:251</id>
-    <published>2026-08-07T16:55:10.328295+00:00</published>
-    <updated>2026-08-07T16:55:10.328295+00:00</updated>
-    <link href="https://www.elastic.co/security-labs/coding-agent-launchagent-tunnel-detection" rel="alternate" />
-    <category term="red-team" />
-    <content type="html">&lt;p&gt;&lt;em&gt;red-team · lateral-movement&lt;/em&gt;&lt;/p&gt;&lt;p&gt;macOS LaunchAgents and agent-generated reverse tunnels can enable local admin applications to be exposed to the internet, creating unauthorized remote access pathways. This technique exploits legitimate system automation features to establish persistence and external connectivity without requiring traditional malware signatures, making detection difficult for endpoint tools. The severity is high due to potential for unauthorized system access and lateral movement, though exploitation in the wild remains tied to targeted operations rather than mass campaigns. Organizations should implement strict LaunchAgent monitoring, restrict outbound tunnel creation, enforce network segmentation for admin applications, and treat suspicious reverse tunnel activity as security incidents regardless of whether it appears to be "vibe-coded" rather than confirmed malicious.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.elastic.co/security-labs/coding-agent-launchagent-tunnel-detection"&gt;Read more&lt;/a&gt; · Source: elastic-security-labs&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Craft CMS: Passkey login accepts replayed WebAuthn assertions</title>
-    <id>urn:cybersecnews:item:250</id>
-    <published>2026-08-07T16:55:10.327452+00:00</published>
-    <updated>2026-08-07T16:55:10.327452+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-wg23-69c2-gjc8" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Craft CMS 5.10.3 and earlier versions contain a critical vulnerability in passkey/WebAuthn login that accepts user-supplied `PublicKeyCredentialRequestOptions` and fails to update stored credential counters, allowing captured login requests to be replayed indefinitely. An unauthenticated attacker who obtains a single passkey assertion can authenticate as the victim by replaying the captured request, bypassing WebAuthn's replay protection mechanism. This vulnerability is likely exploitable in the wild given its straightforward nature. Immediately upgrade to a patched version and audit login logs for suspicious WebAuthn activity; consider temporarily disabling passkey authentication until patching is completed.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-wg23-69c2-gjc8"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
   </entry>
 </feed>
