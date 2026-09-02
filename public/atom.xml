@@ -3,7 +3,25 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-09-02T03:08:52.141923+00:00</updated>
+  <updated>2026-09-02T12:36:13.955500+00:00</updated>
+  <entry>
+    <title>SonicWall warns of actively exploited SMA1000 zero-day flaws</title>
+    <id>urn:cybersecnews:item:349</id>
+    <published>2026-09-02T12:36:13.955500+00:00</published>
+    <updated>2026-09-02T12:36:13.955500+00:00</updated>
+    <link href="https://www.bleepingcomputer.com/news/security/sonicwall-warns-of-actively-exploited-sma1000-zero-day-flaws/" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;SonicWall SMA1000 zero-day RCE flaws actively exploited in chained attacks&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/sonicwall-warns-of-actively-exploited-sma1000-zero-day-flaws/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Dropbox accounts breached through Lenovo email verification flaw</title>
+    <id>urn:cybersecnews:item:348</id>
+    <published>2026-09-02T12:36:13.954051+00:00</published>
+    <updated>2026-09-02T12:36:13.954051+00:00</updated>
+    <link href="https://www.bleepingcomputer.com/news/security/dropbox-accounts-breached-through-lenovo-email-verification-flaw/" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Lenovo email verification flaw allowed unauthorized Dropbox account access via fraudulent Lenovo IDs&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/dropbox-accounts-breached-through-lenovo-email-verification-flaw/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>NLTK: JVM argument injection bypass via per-call options in the NLTK Stanford wrappers (incomplete fix of CVE-2026-12841) (CVE-2026-79675)</title>
     <id>urn:cybersecnews:item:347</id>
@@ -110,7 +128,7 @@
     <updated>2026-08-29T00:27:03.526961+00:00</updated>
     <link href="https://github.com/advisories/GHSA-r82h-mqw3-fc56" rel="alternate" />
     <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · dos,ssrf,xss · CVE-2026-55247&lt;/em&gt;&lt;/p&gt;&lt;p&gt;plone.app.event iCalendar import functionality contains a critical vulnerability (CVE-2026-55247) allowing authenticated editors to cause denial of service, perform server-side request forgery (SSRF) to access internal networks and disk files, and store persistent XSS payloads. There is no indication of active exploitation in the wild. Immediately upgrade plone.app.event to version 6.0.1 (Plone 6.2) or 5.2.4 (Plone 6.0/6.1) to patch the vulnerability.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-r82h-mqw3-fc56"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · dos,ssrf,xss · CVE-2026-55247, CVE-2026-83548&lt;/em&gt;&lt;/p&gt;&lt;p&gt;plone.app.event iCalendar import functionality contains a critical vulnerability (CVE-2026-55247) allowing authenticated editors to cause denial of service, perform server-side request forgery (SSRF) to access internal networks and disk files, and store persistent XSS payloads. There is no indication of active exploitation in the wild. Immediately upgrade plone.app.event to version 6.0.1 (Plone 6.2) or 5.2.4 (Plone 6.0/6.1) to patch the vulnerability.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-r82h-mqw3-fc56"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
   </entry>
   <entry>
     <title>Pimcore Vulnerable to Remote Code Execution via DataObject Class-Definition Field Name (CVE-2026-55634)</title>
@@ -885,23 +903,5 @@
     <link href="https://github.com/advisories/GHSA-wg23-69c2-gjc8" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Craft CMS 5.10.3 and earlier versions contain a critical vulnerability in passkey/WebAuthn login that accepts user-supplied `PublicKeyCredentialRequestOptions` and fails to update stored credential counters, allowing captured login requests to be replayed indefinitely. An unauthenticated attacker who obtains a single passkey assertion can authenticate as the victim by replaying the captured request, bypassing WebAuthn's replay protection mechanism. This vulnerability is likely exploitable in the wild given its straightforward nature. Immediately upgrade to a patched version and audit login logs for suspicious WebAuthn activity; consider temporarily disabling passkey authentication until patching is completed.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-wg23-69c2-gjc8"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>AI-Assisted HTTP Terminator Finds Novel HTTP Desync Techniques and Apache Zero-Day</title>
-    <id>urn:cybersecnews:item:249</id>
-    <published>2026-08-07T16:55:10.326640+00:00</published>
-    <updated>2026-08-07T16:55:10.326640+00:00</updated>
-    <link href="https://thehackernews.com/2026/08/ai-assisted-http-terminator-finds-novel.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · http-desync&lt;/em&gt;&lt;/p&gt;&lt;p&gt;HTTP Terminator, an AI-assisted research tool, discovered novel HTTP request smuggling and desynchronization techniques through automated testing of 30,000 candidate vectors, expanding the attack surface beyond previously known methods. The research also identified a zero-day vulnerability in Apache Traffic Server, though specific severity details were not disclosed. Organizations running Apache Traffic Server should monitor for patches and consider implementing HTTP request validation and normalization controls. Practitioners should review their HTTP parsing implementations and request handling logic, as these newly discovered desync techniques may bypass existing security controls.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/08/ai-assisted-http-terminator-finds-novel.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>18-Year-Old Linux SCTP Flaw Could Let Local Users Gain Root and Escape Containers</title>
-    <id>urn:cybersecnews:item:248</id>
-    <published>2026-08-07T16:55:10.325821+00:00</published>
-    <updated>2026-08-07T16:55:10.325821+00:00</updated>
-    <link href="https://thehackernews.com/2026/08/18-year-old-linux-sctp-flaw-could-let.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · use-after-free&lt;/em&gt;&lt;/p&gt;&lt;p&gt;A use-after-free vulnerability in Linux SCTP (Stream Control Transmission Protocol) networking subsystem, present since 2008, enables local privilege escalation to root and container escape. The flaw has been actively exploited by researchers and likely in the wild given its age and severity. Update immediately to patched stable kernels (7.1.6, 6.18.42, 6.12.101, or 6.6.148 released August 3, 2024), or disable SCTP if the protocol is not required in your environment. Prioritize systems where untrusted users have local access or where containerization is deployed.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/08/18-year-old-linux-sctp-flaw-could-let.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
   </entry>
 </feed>
