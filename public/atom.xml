@@ -3,7 +3,25 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-09-02T19:16:02.715076+00:00</updated>
+  <updated>2026-09-03T12:38:34.113482+00:00</updated>
+  <entry>
+    <title>Plex warns users to patch security vulnerabilities immediately</title>
+    <id>urn:cybersecnews:item:360</id>
+    <published>2026-09-03T12:38:34.113482+00:00</published>
+    <updated>2026-09-03T12:38:34.113482+00:00</updated>
+    <link href="https://www.bleepingcomputer.com/news/security/plex-warns-users-to-patch-security-vulnerabilities-immediately/" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Plex has released critical security updates for its desktop clients and media server software addressing multiple unspecified vulnerabilities. The company issued an immediate patching directive but did not disclose severity levels, exploit status, or technical details of the flaws. Users should apply available updates to all Plex instances without delay as a precautionary measure. Monitor Plex's official security advisories for detailed vulnerability information once publicly disclosed.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/plex-warns-users-to-patch-security-vulnerabilities-immediately/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Pegasus Zero-Click Spyware Exploit Infects Serbian Student Movement Member's iPhone</title>
+    <id>urn:cybersecnews:item:359</id>
+    <published>2026-09-03T12:38:34.108937+00:00</published>
+    <updated>2026-09-03T12:38:34.108937+00:00</updated>
+    <link href="https://thehackernews.com/2026/09/pegasus-zero-click-spyware-exploit.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Apple iOS devices are vulnerable to NSO Group's Pegasus spyware, which exploits zero-click iMessage vulnerabilities requiring no user interaction for infection. This technique has been actively exploited in the wild against political targets, including Serbian student activists, demonstrating real-world deployment against high-value objectives. Severity is critical due to the zero-click nature and Pegasus's extensive surveillance capabilities. Apple users should immediately install the latest iOS security updates, and organizations tracking targeted individuals should implement device monitoring and consider alternative communication channels pending patch availability.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/09/pegasus-zero-click-spyware-exploit.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Red Team AI Skills</title>
     <id>urn:cybersecnews:item:358</id>
@@ -885,23 +903,5 @@
     <link href="https://thehackernews.com/2026/08/gunra-ransomware-exploits-fortinet-and.html" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Gunra ransomware exploits unpatched vulnerabilities in Fortinet FortiOS and Schneider Electric EcoStruxure products to establish network access, targeting critical infrastructure sectors including healthcare, finance, and government. The attacks leverage CVE-2024-21762 (Fortinet) and Schneider Electric authentication bypass flaws, with confirmed active exploitation in the wild. Organizations should immediately patch affected Fortinet and Schneider Electric systems, implement network segmentation to isolate critical assets, and enhance monitoring for lateral movement and ransomware deployment indicators. Prioritize external-facing systems and conduct forensic analysis on potentially compromised networks to identify persistence mechanisms.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/08/gunra-ransomware-exploits-fortinet-and.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Patchday: SAP Commerce Cloud komplett kompromittierbar</title>
-    <id>urn:cybersecnews:item:260</id>
-    <published>2026-08-11T16:58:15.846938+00:00</published>
-    <updated>2026-08-11T16:58:15.846938+00:00</updated>
-    <link href="https://www.heise.de/news/Patchday-SAP-Commerce-Cloud-komplett-kompromittierbar-11410169.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · multiple · CVE-2026-58231&lt;/em&gt;&lt;/p&gt;&lt;p&gt;SAP has patched multiple critical vulnerabilities across its Commerce Cloud and broader product portfolio. The vulnerabilities could allow complete compromise of affected SAP Commerce Cloud instances through various attack vectors including authentication bypass and code execution. These are actively being exploited or have high exploitation risk in the wild. Organizations running SAP Commerce Cloud should apply all available security updates immediately, prioritizing critical-rated patches, and review SAP Security Notes for their specific deployments.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.heise.de/news/Patchday-SAP-Commerce-Cloud-komplett-kompromittierbar-11410169.html"&gt;Read more&lt;/a&gt; · Source: heise-security&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Sicherheitslücken: Angreifer können Wachdienst von ClamAV stören</title>
-    <id>urn:cybersecnews:item:259</id>
-    <published>2026-08-11T08:55:56.660353+00:00</published>
-    <updated>2026-08-11T08:55:56.660353+00:00</updated>
-    <link href="https://www.heise.de/news/Sicherheitsluecken-Angreifer-koennen-Wachdienst-von-ClamAV-stoeren-11409730.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · code-execution&lt;/em&gt;&lt;/p&gt;&lt;p&gt;ClamAV open-source antivirus scanner contains vulnerabilities allowing attackers to disrupt the scanning daemon and potentially execute malicious code on affected systems. The vulnerabilities affect the core scanning functionality and daemon operations, with high severity impact including potential code execution. No indication provided of active exploitation in the wild. Apply available security patches immediately and verify ClamAV installations are updated to the latest patched version.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.heise.de/news/Sicherheitsluecken-Angreifer-koennen-Wachdienst-von-ClamAV-stoeren-11409730.html"&gt;Read more&lt;/a&gt; · Source: heise-security&lt;/p&gt;</content>
   </entry>
 </feed>
