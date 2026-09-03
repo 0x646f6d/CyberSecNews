@@ -3,7 +3,34 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-09-03T12:38:34.113482+00:00</updated>
+  <updated>2026-09-03T19:09:04.611771+00:00</updated>
+  <entry>
+    <title>unstructured: Server-Side Request Forgery in the URL-based partitioning (CVE-2026-71428)</title>
+    <id>urn:cybersecnews:item:363</id>
+    <published>2026-09-03T19:09:04.611771+00:00</published>
+    <updated>2026-09-03T19:09:04.611771+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-4mvj-m6j5-pmf7" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · ssrf · CVE-2026-71428&lt;/em&gt;&lt;/p&gt;&lt;p&gt;The `unstructured` Python library (used in LangChain and LlamaIndex) contains a critical server-side request forgery (SSRF) vulnerability in the `partition()`, `partition_html()`, and `partition_md()` functions. The `url` parameter is fetched via `requests.get()` without host validation, allowing attackers to read responses from internal services, loopback admin APIs, and cloud metadata endpoints. This vulnerability is critical severity and likely exploited given its accessibility through popular LLM frameworks. Immediately patch `unstructured` to the latest version with host validation implemented.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-4mvj-m6j5-pmf7"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>HPE patches critical ArubaOS-CX remote code execution flaw</title>
+    <id>urn:cybersecnews:item:362</id>
+    <published>2026-09-03T19:09:04.610683+00:00</published>
+    <updated>2026-09-03T19:09:04.610683+00:00</updated>
+    <link href="https://www.bleepingcomputer.com/news/security/hpe-patches-critical-arubaos-cx-remote-code-execution-flaw/" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;HPE ArubaOS-CX contains a critical remote code execution vulnerability enabling unauthenticated attackers to execute arbitrary code on affected network switches. The flaw affects multiple ArubaOS-CX versions and is actively exploited in the wild. Apply the latest security patches from HPE immediately, prioritizing internet-facing or untrusted network-connected devices. Implement network segmentation and access controls to limit exposure until patching is completed.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/hpe-patches-critical-arubaos-cx-remote-code-execution-flaw/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Critical Cisco Nexus 9000 Flaw Lets Unauthenticated Remote Attackers Run Code as Root</title>
+    <id>urn:cybersecnews:item:361</id>
+    <published>2026-09-03T19:09:04.609780+00:00</published>
+    <updated>2026-09-03T19:09:04.609780+00:00</updated>
+    <link href="https://thehackernews.com/2026/09/critical-cisco-nexus-9000-flaw-lets.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-20212&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Cisco Nexus 9000 switches (10 Silicon One-based models) are vulnerable to CVE-2026-20212, a critical remote code execution flaw allowing unauthenticated attackers to achieve root-level access with a CVSS score of 9.8. Cisco has released patches for the Nexus vulnerability; however, IOS XR versions face 7 bundled CVEs including two rated 9.8 with no available workaround across any version. Immediate patching of affected Nexus 9000 switches is critical; for IOS XR systems, coordinate with Cisco for available remediation options given the lack of workarounds. There is no indication of active exploitation in the wild at this time, but the unauthenticated nature and critical severity warrant urgent priority.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/09/critical-cisco-nexus-9000-flaw-lets.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Plex warns users to patch security vulnerabilities immediately</title>
     <id>urn:cybersecnews:item:360</id>
@@ -56,7 +83,7 @@
     <updated>2026-09-02T19:16:02.712460+00:00</updated>
     <link href="https://github.com/advisories/GHSA-6mr6-jvcr-2f25" rel="alternate" />
     <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · code-injection · CVE-2026-71866&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Orval (npm package, versions including 8.19.0) is vulnerable to remote code execution during module import when generating Zod validation clients. The vulnerability exists because property names from OpenAPI/JSON schemas are embedded unescaped as double-quoted keys in generated zod.object() definitions; an attacker can inject a malicious property name containing a quote character and computed property syntax (e.g., `["malicious code"]`) to achieve code execution at import time when the generated module is loaded. This is critical severity and likely exploited given the simplicity of the attack vector and public disclosure. Immediately update orval to a patched version and regenerate any client code from untrusted or externally-sourced schemas; validate and sanitize all property names in input schemas as a temporary mitigation.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-6mr6-jvcr-2f25"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · code-injection · CVE-2026-62682, CVE-2026-71866, CVE-2026-71868, CVE-2026-71869&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Orval (npm package, versions including 8.19.0) is vulnerable to remote code execution during module import when generating Zod validation clients. The vulnerability exists because property names from OpenAPI/JSON schemas are embedded unescaped as double-quoted keys in generated zod.object() definitions; an attacker can inject a malicious property name containing a quote character and computed property syntax (e.g., `["malicious code"]`) to achieve code execution at import time when the generated module is loaded. This is critical severity and likely exploited given the simplicity of the attack vector and public disclosure. Immediately update orval to a patched version and regenerate any client code from untrusted or externally-sourced schemas; validate and sanitize all property names in input schemas as a temporary mitigation.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-6mr6-jvcr-2f25"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
   </entry>
   <entry>
     <title>Orval: Import-time RCE via query-parameter default -&gt; zod module-level template literal (CVE-2026-72716)</title>
@@ -65,7 +92,7 @@
     <updated>2026-09-02T19:16:02.711617+00:00</updated>
     <link href="https://github.com/advisories/GHSA-p4cg-3328-rvfg" rel="alternate" />
     <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-72716&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Orval (npm package) versions up to 8.19.0 contain a critical remote code execution vulnerability in zod schema generation. When processing OpenAPI specifications, Orval unsafely embeds query-parameter default values into module-level template literals without escaping backticks or `${` sequences, allowing an attacker to inject arbitrary JavaScript expressions that execute at import time. This vulnerability is critical severity, requires no user interaction beyond importing a malicious schema, bypasses default OpenAPI validation, and is likely exploited in the wild given its trivial trigger mechanism. Immediately patch Orval to the latest version and regenerate all zod schemas from potentially untrusted or attacker-controlled OpenAPI specifications.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-p4cg-3328-rvfg"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-71864, CVE-2026-71865, CVE-2026-71867, CVE-2026-71871, CVE-2026-72716, CVE-2026-72717&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Orval (npm package) versions up to 8.19.0 contain a critical remote code execution vulnerability in zod schema generation. When processing OpenAPI specifications, Orval unsafely embeds query-parameter default values into module-level template literals without escaping backticks or `${` sequences, allowing an attacker to inject arbitrary JavaScript expressions that execute at import time. This vulnerability is critical severity, requires no user interaction beyond importing a malicious schema, bypasses default OpenAPI validation, and is likely exploited in the wild given its trivial trigger mechanism. Immediately patch Orval to the latest version and regenerate all zod schemas from potentially untrusted or attacker-controlled OpenAPI specifications.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-p4cg-3328-rvfg"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
   </entry>
   <entry>
     <title>Kestra Kestra OSS: Kestra OSS OS Command Injection Vulnerability (CVE-2026-49869)</title>
@@ -119,7 +146,7 @@
     <updated>2026-09-02T12:36:13.954051+00:00</updated>
     <link href="https://www.bleepingcomputer.com/news/security/dropbox-accounts-breached-through-lenovo-email-verification-flaw/" rel="alternate" />
     <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Lenovo email verification flaw allowed unauthorized Dropbox account access via fraudulent Lenovo IDs&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/dropbox-accounts-breached-through-lenovo-email-verification-flaw/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-28323&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Lenovo email verification flaw allowed unauthorized Dropbox account access via fraudulent Lenovo IDs&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/dropbox-accounts-breached-through-lenovo-email-verification-flaw/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
   </entry>
   <entry>
     <title>NLTK: JVM argument injection bypass via per-call options in the NLTK Stanford wrappers (incomplete fix of CVE-2026-12841) (CVE-2026-79675)</title>
@@ -876,32 +903,5 @@
     <link href="https://www.bleepingcomputer.com/news/security/cisco-warns-of-asa-and-ftd-vpn-flaw-exploited-to-crash-devices/" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · dos · CVE-2026-20349&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Cisco Secure Firewall ASA and Threat Defense (FTD) are affected by a high-severity denial-of-service vulnerability in VPN functionality that is actively exploited in the wild to remotely crash devices. The vulnerability allows unauthenticated attackers to send specially crafted packets to the VPN service, causing immediate device failure without requiring authentication or user interaction. Cisco has released security updates addressing this flaw and recommends immediate patching of all affected ASA and FTD deployments. Organizations unable to patch immediately should apply network-level mitigations to restrict VPN access to trusted sources only.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/cisco-warns-of-asa-and-ftd-vpn-flaw-exploited-to-crash-devices/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Patch seit Mai verfügbar: Ransomware attackiert Microsoft Sharepoint</title>
-    <id>urn:cybersecnews:item:263</id>
-    <published>2026-08-12T01:55:41.146276+00:00</published>
-    <updated>2026-08-12T01:55:41.146276+00:00</updated>
-    <link href="https://www.heise.de/news/Ransomware-attackiert-ungepatchte-Sharepoint-Instanzen-11410721.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Microsoft SharePoint vulnerability CVE-2024-21625 is being actively exploited by ransomware operators in the wild. The flaw allows unauthenticated remote code execution on affected SharePoint Server installations. A patch has been available since May 2024; organizations must immediately apply this critical update or implement the available workarounds to prevent ransomware compromise. Prioritize patching all internet-facing SharePoint Server instances.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.heise.de/news/Ransomware-attackiert-ungepatchte-Sharepoint-Instanzen-11410721.html"&gt;Read more&lt;/a&gt; · Source: heise-security&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>SeaweedFS: Unauthenticated SSRF with response read-back via VolumeServer.FetchAndWriteNeedle (CVE-2026-73080)</title>
-    <id>urn:cybersecnews:item:262</id>
-    <published>2026-08-11T16:58:15.849141+00:00</published>
-    <updated>2026-08-11T16:58:15.849141+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-87fv-vqqr-m4jr" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · ssrf · CVE-2026-64849, CVE-2026-73080&lt;/em&gt;&lt;/p&gt;&lt;p&gt;SeaweedFS versions before 4.24 contain a critical unauthenticated Server-Side Request Forgery (SSRF) vulnerability in the VolumeServer.FetchAndWriteNeedle RPC endpoint that allows remote attackers to request arbitrary URLs and read responses, including cloud metadata endpoints. The vulnerability has no authentication or target validation, enabling disclosure of sensitive instance credentials and internal network information on affected systems. This is actively exploitable by any network-accessible attacker reaching the gRPC port. Upgrade to SeaweedFS 4.24 or later immediately; restrict network access to volume server gRPC ports as a interim mitigation.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-87fv-vqqr-m4jr"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Gunra Ransomware Exploits Fortinet and Schneider Electric Flaws to Breach Networks</title>
-    <id>urn:cybersecnews:item:261</id>
-    <published>2026-08-11T16:58:15.848074+00:00</published>
-    <updated>2026-08-11T16:58:15.848074+00:00</updated>
-    <link href="https://thehackernews.com/2026/08/gunra-ransomware-exploits-fortinet-and.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Gunra ransomware exploits unpatched vulnerabilities in Fortinet FortiOS and Schneider Electric EcoStruxure products to establish network access, targeting critical infrastructure sectors including healthcare, finance, and government. The attacks leverage CVE-2024-21762 (Fortinet) and Schneider Electric authentication bypass flaws, with confirmed active exploitation in the wild. Organizations should immediately patch affected Fortinet and Schneider Electric systems, implement network segmentation to isolate critical assets, and enhance monitoring for lateral movement and ransomware deployment indicators. Prioritize external-facing systems and conduct forensic analysis on potentially compromised networks to identify persistence mechanisms.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/08/gunra-ransomware-exploits-fortinet-and.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
   </entry>
 </feed>
