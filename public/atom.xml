@@ -3,7 +3,25 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-09-03T19:09:04.611771+00:00</updated>
+  <updated>2026-09-04T03:10:00.992326+00:00</updated>
+  <entry>
+    <title>SiYuan: Unauthenticated SQL execution and REGEXP injection via fullTextSearchAssetContent (publish mode): reader-reachable raw SQL (method 2) and unescaped REGEXP (method 3) on read-write asset-content DB (CVE-2026-69083)</title>
+    <id>urn:cybersecnews:item:365</id>
+    <published>2026-09-04T03:10:00.992326+00:00</published>
+    <updated>2026-09-04T03:10:00.992326+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-fph3-ghq9-vw66" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · sql-injection · CVE-2026-69083&lt;/em&gt;&lt;/p&gt;&lt;p&gt;SiYuan's `/api/search/fullTextSearchAssetContent` endpoint contains critical SQL injection and REGEXP injection vulnerabilities (CVE-2026-69083) in the asset-content database that are exploitable by unauthenticated users with the publish RoleReader token or when authentication is disabled. The vulnerability allows arbitrary SQL execution and unescaped REGEXP operations without read-only protections, enabling data manipulation and exfiltration. This is actively exploitable in publish mode and affects the SiYuan kernel (go/github.com/siyuan-note/siyuan/kernel). Immediate patching is required; disable publish mode or enforce strict authentication (`Publish.Auth.Enable: true`) as interim mitigation.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-fph3-ghq9-vw66"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>SiYuan: SQL injection in backlink/mention search via unescaped stored and client input (publish mode): first-order (client keyword) and second-order (stored document title) breakout on read-write handle (CVE-2026-72811)</title>
+    <id>urn:cybersecnews:item:364</id>
+    <published>2026-09-04T03:10:00.991362+00:00</published>
+    <updated>2026-09-04T03:10:00.991362+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-q2vg-7qgx-x5fc" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · sqli · CVE-2026-72811&lt;/em&gt;&lt;/p&gt;&lt;p&gt;SiYuan note-taking application (kernel/model/backlink.go) contains a critical SQL injection vulnerability in backlink/mention search functionality where user-supplied keywords and stored document metadata (titles, aliases) are concatenated into SQL MATCH queries with insufficient escaping—only double quotes are filtered, allowing single-quote breakout via first-order (client input) and second-order (stored metadata) injection vectors. No evidence of active wild exploitation reported at this time. Immediate patching required; users should upgrade to patched version and avoid untrusted document imports until remediated, as stored metadata cannot be sanitized retroactively on affected systems.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-q2vg-7qgx-x5fc"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>unstructured: Server-Side Request Forgery in the URL-based partitioning (CVE-2026-71428)</title>
     <id>urn:cybersecnews:item:363</id>
@@ -83,7 +101,7 @@
     <updated>2026-09-02T19:16:02.712460+00:00</updated>
     <link href="https://github.com/advisories/GHSA-6mr6-jvcr-2f25" rel="alternate" />
     <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · code-injection · CVE-2026-62682, CVE-2026-71866, CVE-2026-71868, CVE-2026-71869&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Orval (npm package, versions including 8.19.0) is vulnerable to remote code execution during module import when generating Zod validation clients. The vulnerability exists because property names from OpenAPI/JSON schemas are embedded unescaped as double-quoted keys in generated zod.object() definitions; an attacker can inject a malicious property name containing a quote character and computed property syntax (e.g., `["malicious code"]`) to achieve code execution at import time when the generated module is loaded. This is critical severity and likely exploited given the simplicity of the attack vector and public disclosure. Immediately update orval to a patched version and regenerate any client code from untrusted or externally-sourced schemas; validate and sanitize all property names in input schemas as a temporary mitigation.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-6mr6-jvcr-2f25"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · code-injection · CVE-2026-62681, CVE-2026-62682, CVE-2026-71866, CVE-2026-71868, CVE-2026-71869&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Orval (npm package, versions including 8.19.0) is vulnerable to remote code execution during module import when generating Zod validation clients. The vulnerability exists because property names from OpenAPI/JSON schemas are embedded unescaped as double-quoted keys in generated zod.object() definitions; an attacker can inject a malicious property name containing a quote character and computed property syntax (e.g., `["malicious code"]`) to achieve code execution at import time when the generated module is loaded. This is critical severity and likely exploited given the simplicity of the attack vector and public disclosure. Immediately update orval to a patched version and regenerate any client code from untrusted or externally-sourced schemas; validate and sanitize all property names in input schemas as a temporary mitigation.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-6mr6-jvcr-2f25"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
   </entry>
   <entry>
     <title>Orval: Import-time RCE via query-parameter default -&gt; zod module-level template literal (CVE-2026-72716)</title>
@@ -164,7 +182,7 @@
     <updated>2026-09-01T19:14:24.668515+00:00</updated>
     <link href="https://www.bleepingcomputer.com/news/security/nearly-22-000-microsoft-exchange-servers-vulnerable-to-hijack-attacks/" rel="alternate" />
     <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Nearly 22,000 unpatched Microsoft Exchange servers are vulnerable to a high-severity authentication bypass flaw enabling complete mailbox compromise. The vulnerability allows remote attackers to bypass authentication mechanisms and gain unauthorized access to all user mailboxes without credentials. No active exploitation in the wild has been confirmed at this time, though the exposure of 22,000 internet-facing instances presents significant risk. Immediate patching of all Exchange servers is critical; administrators should prioritize applying the latest security updates and consider implementing network access controls to restrict Exchange exposure to trusted networks only.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/nearly-22-000-microsoft-exchange-servers-vulnerable-to-hijack-attacks/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-62911&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Nearly 22,000 unpatched Microsoft Exchange servers are vulnerable to a high-severity authentication bypass flaw enabling complete mailbox compromise. The vulnerability allows remote attackers to bypass authentication mechanisms and gain unauthorized access to all user mailboxes without credentials. No active exploitation in the wild has been confirmed at this time, though the exposure of 22,000 internet-facing instances presents significant risk. Immediate patching of all Exchange servers is critical; administrators should prioritize applying the latest security updates and consider implementing network access controls to restrict Exchange exposure to trusted networks only.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/nearly-22-000-microsoft-exchange-servers-vulnerable-to-hijack-attacks/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
   </entry>
   <entry>
     <title>Off the Hook: Discovering and Observing Active Exploitation of Sangoma Switchvox CVE-2026-9586</title>
@@ -885,23 +903,5 @@
     <link href="https://www.bleepingcomputer.com/news/microsoft/microsoft-august-2026-patch-tuesday-fixes-400-flaws-3-zero-days/" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Microsoft released patches for 400 vulnerabilities across its product suite on August 2026 Patch Tuesday, including three zero-day flaws—one actively exploited in the wild and two publicly disclosed. Critical severity vulnerabilities affecting Windows, Office, and other core products are present in this batch. Immediate patching of all affected Microsoft systems is strongly recommended, particularly for the actively exploited zero-day, to prevent imminent compromise.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/microsoft/microsoft-august-2026-patch-tuesday-fixes-400-flaws-3-zero-days/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Microsoft releases Windows 10 KB5120249 extended security update</title>
-    <id>urn:cybersecnews:item:265</id>
-    <published>2026-08-12T01:55:41.242379+00:00</published>
-    <updated>2026-08-12T01:55:41.242379+00:00</updated>
-    <link href="https://www.bleepingcomputer.com/news/microsoft/windows-10-kb5120249-cumulative-update-released-with-fixes/" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · multiple&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Windows 10 versions 22H2 and 21H2 are affected by unspecified security vulnerabilities addressed in Extended Security Update KB5120249. The update patches multiple security issues whose specific details and severity levels are not disclosed in the summary provided. Microsoft recommends immediate installation of KB5120249 to maintain security posture for systems still running Windows 10 beyond mainstream support. Apply the patch promptly via Windows Update or manual download from Microsoft's support portal.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/microsoft/windows-10-kb5120249-cumulative-update-released-with-fixes/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Cisco warns of ASA and FTD VPN flaw exploited to crash devices</title>
-    <id>urn:cybersecnews:item:264</id>
-    <published>2026-08-12T01:55:41.241102+00:00</published>
-    <updated>2026-08-12T01:55:41.241102+00:00</updated>
-    <link href="https://www.bleepingcomputer.com/news/security/cisco-warns-of-asa-and-ftd-vpn-flaw-exploited-to-crash-devices/" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · dos · CVE-2026-20349&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Cisco Secure Firewall ASA and Threat Defense (FTD) are affected by a high-severity denial-of-service vulnerability in VPN functionality that is actively exploited in the wild to remotely crash devices. The vulnerability allows unauthenticated attackers to send specially crafted packets to the VPN service, causing immediate device failure without requiring authentication or user interaction. Cisco has released security updates addressing this flaw and recommends immediate patching of all affected ASA and FTD deployments. Organizations unable to patch immediately should apply network-level mitigations to restrict VPN access to trusted sources only.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/cisco-warns-of-asa-and-ftd-vpn-flaw-exploited-to-crash-devices/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
   </entry>
 </feed>
