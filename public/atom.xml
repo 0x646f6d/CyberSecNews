@@ -3,7 +3,34 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-09-04T03:10:00.992326+00:00</updated>
+  <updated>2026-09-04T12:32:43.256416+00:00</updated>
+  <entry>
+    <title>DPRK APTs: Ted backdoor and curlRAT target South Korean media and automotive sectors</title>
+    <id>urn:cybersecnews:item:368</id>
+    <published>2026-09-04T12:32:43.256416+00:00</published>
+    <updated>2026-09-04T12:32:43.256416+00:00</updated>
+    <link href="https://www.rapid7.com/blog/post/tr-dprk-apts-ted-backdoor-curlrat-target-south-korean-media-automotive-sectors" rel="alternate" />
+    <category term="red-team" />
+    <content type="html">&lt;p&gt;&lt;em&gt;red-team · c2,lateral-movement,persistence,evasion&lt;/em&gt;&lt;/p&gt;&lt;p&gt;DPRK-attributed APT37 and Lazarus deployed a sophisticated Linux toolkit targeting South Korean automotive and media sectors, comprising the "ted backdoor" (a compromised HAProxy 2.8.12 with a custom filter plugin enabling HTTP traffic interception and injection), "curlRAT" (masquerading as legitimate system daemons like crond/atd), an SSH keylogger, and supporting stagers. The toolkit achieves persistence through trojanized system binaries, steals credentials and web session cookies, executes remote commands, and performs watering-hole attacks with heavy obfuscation (substitution ciphers, XOR encryption) and anti-forensics (selective log deletion, connection counter scrubbing). Medium-confidence DPRK attribution is based on targeting patterns, reuse of Korean-specific software, C2 infrastructure overlap with known APT37 operations, and concurrent similarities with Operation SyncHole. Organizations must apply strict security controls to edge components (load balancers, reverse proxies, mail servers), implement independent network monitoring and memory analysis rather than relying on component logs, verify binary integrity, and patch externally exposed Groupware portals and mail servers—as of July 2026, exploitation of South Korean mail appliances remains ongoing.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.rapid7.com/blog/post/tr-dprk-apts-ted-backdoor-curlrat-target-south-korean-media-automotive-sectors"&gt;Read more&lt;/a&gt; · Source: rapid7&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Google warns of new Chrome zero-day flaw exploited in attacks</title>
+    <id>urn:cybersecnews:item:367</id>
+    <published>2026-09-04T12:32:43.255506+00:00</published>
+    <updated>2026-09-04T12:32:43.255506+00:00</updated>
+    <link href="https://www.bleepingcomputer.com/news/security/google-warns-of-new-chrome-zero-day-flaw-exploited-in-attacks/" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Google released an emergency Chrome update addressing a high-severity zero-day vulnerability in the V8 JavaScript engine that is actively exploited in the wild, along with 11 additional flaws. The V8 vulnerability enables remote code execution through maliciously crafted JavaScript. Immediate patching is critical given active exploitation; users should update Chrome to the latest version as soon as possible.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/google-warns-of-new-chrome-zero-day-flaw-exploited-in-attacks/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Google Releases Chrome Update to Patch Actively Exploited V8 Zero-Day</title>
+    <id>urn:cybersecnews:item:366</id>
+    <published>2026-09-04T12:32:43.253871+00:00</published>
+    <updated>2026-09-04T12:32:43.253871+00:00</updated>
+    <link href="https://thehackernews.com/2026/09/google-releases-chrome-update-to-patch.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · type-confusion · CVE-2026-85046&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Google patched CVE-2026-85046, a high-severity type confusion vulnerability (CVSS 8.8) in Chrome's V8 JavaScript engine affecting versions prior to 152.0.7977.82. The flaw is actively exploited in the wild and allows remote code execution through malicious web content. Immediate patching to Chrome 152.0.7977.82 or later is critical. Users should enable automatic updates if not already configured.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/09/google-releases-chrome-update-to-patch.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>SiYuan: Unauthenticated SQL execution and REGEXP injection via fullTextSearchAssetContent (publish mode): reader-reachable raw SQL (method 2) and unescaped REGEXP (method 3) on read-write asset-content DB (CVE-2026-69083)</title>
     <id>urn:cybersecnews:item:365</id>
@@ -767,7 +794,7 @@
     <updated>2026-08-18T01:12:17.637761+00:00</updated>
     <link href="https://thehackernews.com/2026/08/forminator-wordpress-flaw-can-enable.html" rel="alternate" />
     <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-15748, CVE-2026-32475&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Forminator Forms WordPress plugin (600,000+ installations) contains a critical unauthenticated remote code execution vulnerability (CVE-2026-15748, CVSS 9.8) allowing attackers to upload malicious PHP files and execute arbitrary code. The flaw enables complete compromise of affected WordPress sites without requiring authentication. Immediate patching is essential; administrators should update Forminator to the latest patched version and review file upload directories for suspicious PHP files. There is no indication of active exploitation in the wild at this time, but the high CVSS score and ease of exploitation make patching urgent.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/08/forminator-wordpress-flaw-can-enable.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-14894, CVE-2026-15748, CVE-2026-32475&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Forminator Forms WordPress plugin (600,000+ installations) contains a critical unauthenticated remote code execution vulnerability (CVE-2026-15748, CVSS 9.8) allowing attackers to upload malicious PHP files and execute arbitrary code. The flaw enables complete compromise of affected WordPress sites without requiring authentication. Immediate patching is essential; administrators should update Forminator to the latest patched version and review file upload directories for suspicious PHP files. There is no indication of active exploitation in the wild at this time, but the high CVSS score and ease of exploitation make patching urgent.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/08/forminator-wordpress-flaw-can-enable.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
   </entry>
   <entry>
     <title>Snowflake GitHub Actions Flaw Lets Crafted Issues Trigger Command Injection</title>
@@ -876,32 +903,5 @@
     <link href="https://blog.projectnightcrawler.dev/posts/2026-08-11-shieldbreak-august-2026-disclosure/" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · unknown · CVE-2026-69414&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Windows Defender is affected by a critical zero-day vulnerability disclosed as ShieldBreak in August 2026. The exploit appears to be actively shared across public repositories, indicating active development and potential in-the-wild exploitation risk. Immediate action required: deploy emergency patching from Microsoft or implement temporary mitigation controls such as behavioral monitoring on Defender processes and network segmentation. Escalate to threat intelligence teams for detailed technical analysis of shared PoC code to assess impact scope and exploitation likelihood in your environment.&lt;/p&gt;&lt;p&gt;&lt;a href="https://blog.projectnightcrawler.dev/posts/2026-08-11-shieldbreak-august-2026-disclosure/"&gt;Read more&lt;/a&gt; · Source: projectnightcrawler&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Shattering the Dream – When a Job Offer Becomes a Zero-Day Attack</title>
-    <id>urn:cybersecnews:item:268</id>
-    <published>2026-08-12T01:55:41.247029+00:00</published>
-    <updated>2026-08-12T01:55:41.247029+00:00</updated>
-    <link href="https://research.checkpoint.com/2026/shattering-the-dream-when-a-job-offer-becomes-a-zero-day-attack/" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Operation Dream Job campaign targets defense, aerospace, and aviation sectors using trojanized PDF viewers that execute malicious payloads—a technique leveraging social engineering via fake job offers to distribute modified legitimate software. The attack exploits the trust users place in standard applications, with zero-day implications through custom payload delivery mechanisms. This threat is actively exploited in the wild and primarily affects Windows-based systems in critical infrastructure sectors. Organizations should enforce strict application whitelisting, disable unnecessary file type associations, implement email security controls to block suspicious job recruitment communications, and maintain updated endpoint detection and response solutions to identify anomalous PDF viewer behavior.&lt;/p&gt;&lt;p&gt;&lt;a href="https://research.checkpoint.com/2026/shattering-the-dream-when-a-job-offer-becomes-a-zero-day-attack/"&gt;Read more&lt;/a&gt; · Source: checkpoint-research&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Microsoft Patch Tuesday August 2026, (Tue, Aug 11th)</title>
-    <id>urn:cybersecnews:item:267</id>
-    <published>2026-08-12T01:55:41.245165+00:00</published>
-    <updated>2026-08-12T01:55:41.245165+00:00</updated>
-    <link href="https://isc.sans.edu/diary/rss/33236" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · multiple&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Microsoft released patches for 418 vulnerabilities in August 2026 Patch Tuesday, including 62 critical issues affecting Windows, container environments, QUIC protocol implementation, and DNS Server. One vulnerability is confirmed exploited in the wild and two were publicly disclosed zero-days prior to patching. Critical remote code execution flaws in QUIC and DNS Server, along with Windows privilege escalation and container tampering vulnerabilities, pose significant risk. Immediate patching is strongly recommended, prioritizing the actively exploited vulnerability and critical RCE issues.&lt;/p&gt;&lt;p&gt;&lt;a href="https://isc.sans.edu/diary/rss/33236"&gt;Read more&lt;/a&gt; · Source: sans-isc&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Microsoft August 2026 Patch Tuesday fixes 400 flaws, 3 zero-days</title>
-    <id>urn:cybersecnews:item:266</id>
-    <published>2026-08-12T01:55:41.244048+00:00</published>
-    <updated>2026-08-12T01:55:41.244048+00:00</updated>
-    <link href="https://www.bleepingcomputer.com/news/microsoft/microsoft-august-2026-patch-tuesday-fixes-400-flaws-3-zero-days/" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Microsoft released patches for 400 vulnerabilities across its product suite on August 2026 Patch Tuesday, including three zero-day flaws—one actively exploited in the wild and two publicly disclosed. Critical severity vulnerabilities affecting Windows, Office, and other core products are present in this batch. Immediate patching of all affected Microsoft systems is strongly recommended, particularly for the actively exploited zero-day, to prevent imminent compromise.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/microsoft/microsoft-august-2026-patch-tuesday-fixes-400-flaws-3-zero-days/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
   </entry>
 </feed>
