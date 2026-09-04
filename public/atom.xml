@@ -3,7 +3,25 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-09-04T12:32:43.256416+00:00</updated>
+  <updated>2026-09-04T18:51:20.206717+00:00</updated>
+  <entry>
+    <title>New CrowdStrike 'FalconFlank' zero-day grants SYSTEM privileges</title>
+    <id>urn:cybersecnews:item:370</id>
+    <published>2026-09-04T18:51:20.206717+00:00</published>
+    <updated>2026-09-04T18:51:20.206717+00:00</updated>
+    <link href="https://www.bleepingcomputer.com/news/security/new-crowdstrike-falconflank-zero-day-grants-system-privileges/" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · privilege-escalation&lt;/em&gt;&lt;/p&gt;&lt;p&gt;CrowdStrike Falcon endpoint protection contains a privilege escalation zero-day vulnerability (FalconFlank) allowing local attackers to gain SYSTEM-level privileges on fully patched Windows systems. The exploit has been publicly disclosed by a researcher using the "Nightmare Eclipse" handle, significantly increasing risk of active exploitation. CrowdStrike should immediately release a security patch; organizations running Falcon should prioritize deployment of any available updates and monitor for exploitation attempts targeting this vulnerability.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/new-crowdstrike-falconflank-zero-day-grants-system-privileges/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>PostgreSQL Fixes 12-Year-Old Logical Decoding Flaw Enabling Replication-Role Code Execution</title>
+    <id>urn:cybersecnews:item:369</id>
+    <published>2026-09-04T18:51:20.204735+00:00</published>
+    <updated>2026-09-04T18:51:20.204735+00:00</updated>
+    <link href="https://thehackernews.com/2026/09/postgresql-fixes-12-year-old-logical.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · code-execution · CVE-2026-6471&lt;/em&gt;&lt;/p&gt;&lt;p&gt;PostgreSQL versions prior to 18.6, 17.11, 16.15, 15.19, and 14.24 are affected by CVE-2026-6471, a 12-year-old logical decoding flaw that allows accounts with the REPLICATION attribute to execute arbitrary code with the privileges of the database server process (CVSS 7.2). This vulnerability has remained unexploited in the wild but poses significant risk in environments where replication roles are granted to untrusted users. Immediate patching to the fixed versions is strongly recommended for all affected PostgreSQL installations, particularly those with strict access controls on replication privileges.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/09/postgresql-fixes-12-year-old-logical.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>DPRK APTs: Ted backdoor and curlRAT target South Korean media and automotive sectors</title>
     <id>urn:cybersecnews:item:368</id>
@@ -56,7 +74,7 @@
     <updated>2026-09-03T19:09:04.611771+00:00</updated>
     <link href="https://github.com/advisories/GHSA-4mvj-m6j5-pmf7" rel="alternate" />
     <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · ssrf · CVE-2026-71428&lt;/em&gt;&lt;/p&gt;&lt;p&gt;The `unstructured` Python library (used in LangChain and LlamaIndex) contains a critical server-side request forgery (SSRF) vulnerability in the `partition()`, `partition_html()`, and `partition_md()` functions. The `url` parameter is fetched via `requests.get()` without host validation, allowing attackers to read responses from internal services, loopback admin APIs, and cloud metadata endpoints. This vulnerability is critical severity and likely exploited given its accessibility through popular LLM frameworks. Immediately patch `unstructured` to the latest version with host validation implemented.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-4mvj-m6j5-pmf7"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · ssrf · CVE-2026-71428, CVE-2026-75856&lt;/em&gt;&lt;/p&gt;&lt;p&gt;The `unstructured` Python library (used in LangChain and LlamaIndex) contains a critical server-side request forgery (SSRF) vulnerability in the `partition()`, `partition_html()`, and `partition_md()` functions. The `url` parameter is fetched via `requests.get()` without host validation, allowing attackers to read responses from internal services, loopback admin APIs, and cloud metadata endpoints. This vulnerability is critical severity and likely exploited given its accessibility through popular LLM frameworks. Immediately patch `unstructured` to the latest version with host validation implemented.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-4mvj-m6j5-pmf7"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
   </entry>
   <entry>
     <title>HPE patches critical ArubaOS-CX remote code execution flaw</title>
@@ -885,23 +903,5 @@
     <link href="https://www.bleepingcomputer.com/news/security/hackers-exploit-critical-adobe-commerce-flaw-to-hijack-customer-accounts/" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · account-hijacking · CVE-2026-71362&lt;/em&gt;&lt;/p&gt;&lt;p&gt;CVE-2026-71362 affects Adobe Commerce and Magento e-commerce platforms, enabling account hijacking through a critical vulnerability in authentication mechanisms. Active exploitation has been detected in the wild, with attackers leveraging this flaw to compromise customer accounts and potentially access sensitive transaction data. Immediate patching is required; administrators should apply Adobe's security updates without delay and monitor affected systems for unauthorized account access or modifications. Consider implementing additional authentication controls such as multi-factor authentication and IP whitelisting as interim mitigations pending patch deployment.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/hackers-exploit-critical-adobe-commerce-flaw-to-hijack-customer-accounts/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>OpenAI, Anthropic, Google API Flaw Let Weaker AI Models Decode Stronger Models' Reasoning</title>
-    <id>urn:cybersecnews:item:270</id>
-    <published>2026-08-12T16:57:28.046664+00:00</published>
-    <updated>2026-08-12T16:57:28.046664+00:00</updated>
-    <link href="https://thehackernews.com/2026/08/openai-anthropic-google-api-flaw-let.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · crypto-weakness&lt;/em&gt;&lt;/p&gt;&lt;p&gt;OpenAI, Anthropic, and Google's reasoning APIs contain a cryptographic flaw allowing attackers to replay encrypted reasoning blocks across sessions to extract internal model reasoning, API keys, and passwords from session logs. The vulnerability affects the encrypted objects used to pass hidden reasoning between API calls, where weak session isolation permits cross-session replay attacks. Severity is high given exposure of credentials and proprietary reasoning; exploitation likelihood in the wild is unknown but the technique is straightforward once discovered. Affected organizations should immediately implement strict session binding for encrypted reasoning objects, rotate exposed credentials, and audit logs for replay attempts.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/08/openai-anthropic-google-api-flaw-let.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>ShieldBreak - August 2026 disclosure</title>
-    <id>urn:cybersecnews:item:269</id>
-    <published>2026-08-12T01:55:41.248083+00:00</published>
-    <updated>2026-08-12T01:55:41.248083+00:00</updated>
-    <link href="https://blog.projectnightcrawler.dev/posts/2026-08-11-shieldbreak-august-2026-disclosure/" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · unknown · CVE-2026-69414&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Windows Defender is affected by a critical zero-day vulnerability disclosed as ShieldBreak in August 2026. The exploit appears to be actively shared across public repositories, indicating active development and potential in-the-wild exploitation risk. Immediate action required: deploy emergency patching from Microsoft or implement temporary mitigation controls such as behavioral monitoring on Defender processes and network segmentation. Escalate to threat intelligence teams for detailed technical analysis of shared PoC code to assess impact scope and exploitation likelihood in your environment.&lt;/p&gt;&lt;p&gt;&lt;a href="https://blog.projectnightcrawler.dev/posts/2026-08-11-shieldbreak-august-2026-disclosure/"&gt;Read more&lt;/a&gt; · Source: projectnightcrawler&lt;/p&gt;</content>
   </entry>
 </feed>
