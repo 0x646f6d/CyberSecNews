@@ -3,7 +3,16 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-09-04T18:51:20.206717+00:00</updated>
+  <updated>2026-09-05T03:12:15.421518+00:00</updated>
+  <entry>
+    <title>OpenChoreo: cluster-gateway internal proxy performs no caller authentication and is not read-only — data-plane Secret disclosure and arbitrary Kubernetes mutation (CVE-2026-73842)</title>
+    <id>urn:cybersecnews:item:371</id>
+    <published>2026-09-05T03:12:15.421518+00:00</published>
+    <updated>2026-09-05T03:12:15.421518+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-rh53-xvx2-j327" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass,secret-disclosure,arbitrary-mutation · CVE-2026-73842&lt;/em&gt;&lt;/p&gt;&lt;p&gt;OpenChoreo's cluster-gateway component exposes internal management APIs that perform no authentication on callers and lack enforcement of read-only operations, allowing unauthenticated access to tunnel mutating requests and read Secrets from tenant Kubernetes namespaces. This critical vulnerability (CVE-2026-73842) enables arbitrary Kubernetes mutations and sensitive data disclosure without authentication. No information provided on active exploitation in the wild. Immediately patch to a version that implements caller authentication and enforces read-only restrictions on the internal proxy APIs.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-rh53-xvx2-j327"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>New CrowdStrike 'FalconFlank' zero-day grants SYSTEM privileges</title>
     <id>urn:cybersecnews:item:370</id>
@@ -894,14 +903,5 @@
     <link href="https://www.mdsec.co.uk/2026/08/arm64-stack-internals-and-obfuscation-on-apple-silicon/" rel="alternate" />
     <category term="red-team" />
     <content type="html">&lt;p&gt;&lt;em&gt;red-team · edr-evasion&lt;/em&gt;&lt;/p&gt;&lt;p&gt;This article discusses ARM64 stack internals and obfuscation techniques on Apple Silicon platforms, focusing on how EDR detection mechanisms work rather than describing a specific vulnerability. The content appears to be educational research into stack-based obfuscation methods and how security tools detect suspicious activity on macOS systems. No specific severity rating or active exploitation is mentioned as this is defensive security research examining detection evasion techniques. Security engineers should review the detailed technical analysis to understand potential blind spots in their EDR deployments and ensure adequate monitoring of ARM64-specific obfuscation behaviors on Apple Silicon systems.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.mdsec.co.uk/2026/08/arm64-stack-internals-and-obfuscation-on-apple-silicon/"&gt;Read more&lt;/a&gt; · Source: mdsec&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Hackers exploit critical Adobe Commerce flaw to hijack customer accounts</title>
-    <id>urn:cybersecnews:item:271</id>
-    <published>2026-08-13T01:57:03.286433+00:00</published>
-    <updated>2026-08-13T01:57:03.286433+00:00</updated>
-    <link href="https://www.bleepingcomputer.com/news/security/hackers-exploit-critical-adobe-commerce-flaw-to-hijack-customer-accounts/" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · account-hijacking · CVE-2026-71362&lt;/em&gt;&lt;/p&gt;&lt;p&gt;CVE-2026-71362 affects Adobe Commerce and Magento e-commerce platforms, enabling account hijacking through a critical vulnerability in authentication mechanisms. Active exploitation has been detected in the wild, with attackers leveraging this flaw to compromise customer accounts and potentially access sensitive transaction data. Immediate patching is required; administrators should apply Adobe's security updates without delay and monitor affected systems for unauthorized account access or modifications. Consider implementing additional authentication controls such as multi-factor authentication and IP whitelisting as interim mitigations pending patch deployment.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/hackers-exploit-critical-adobe-commerce-flaw-to-hijack-customer-accounts/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
   </entry>
 </feed>
