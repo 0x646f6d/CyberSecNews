@@ -3,7 +3,16 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-09-05T03:12:15.421518+00:00</updated>
+  <updated>2026-09-06T03:11:46.466778+00:00</updated>
+  <entry>
+    <title>Unpatched Magento and Adobe Commerce Zero-Day Exploited to Backdoor Online Stores</title>
+    <id>urn:cybersecnews:item:372</id>
+    <published>2026-09-06T03:11:46.466778+00:00</published>
+    <updated>2026-09-06T03:11:46.466778+00:00</updated>
+    <link href="https://thehackernews.com/2026/09/unpatched-magento-and-adobe-commerce.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Magento Open Source and Adobe Commerce are vulnerable to an unauthenticated remote code execution zero-day vulnerability dubbed StyleSmuggler, allowing attackers to execute arbitrary code on affected servers without authentication. The vulnerability is actively exploited in the wild as of September 4, 2024, with attacks confirmed by security firm Sansec who discovered the flaw. Immediate action required: apply available patches from Adobe, implement web application firewalls to block exploitation attempts, and monitor for indicators of compromise on affected systems. Until patches are available, restrict access to admin panels and disable unnecessary features to reduce attack surface.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/09/unpatched-magento-and-adobe-commerce.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>OpenChoreo: cluster-gateway internal proxy performs no caller authentication and is not read-only — data-plane Secret disclosure and arbitrary Kubernetes mutation (CVE-2026-73842)</title>
     <id>urn:cybersecnews:item:371</id>
@@ -894,14 +903,5 @@
     <link href="https://blog.projectnightcrawler.dev/posts/2026-08-14-remember-cve-2010-2743/" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · privilege-escalation · CVE-2010-2743&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Win32k keyboard layout loading (CVE-2010-2743 and related) remains exploitable through alternative data streams (ADS) in trusted directories despite MS12-034 mitigations. The vulnerability allows unprivileged users to create malicious .kbd files via ADS in C:\Windows\System32\Tasks, bypassing directory trust checks and triggering kernel-mode memory corruption when the layout is loaded. Though no current in-the-wild exploitation is reported, this represents a high-severity kernel vulnerability with potential for privilege escalation. Microsoft should implement validation to reject keyboard layout files loaded from ADS or enforce stricter file integrity checks beyond directory path validation.&lt;/p&gt;&lt;p&gt;&lt;a href="https://blog.projectnightcrawler.dev/posts/2026-08-14-remember-cve-2010-2743/"&gt;Read more&lt;/a&gt; · Source: projectnightcrawler&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>ARM64 stack internals and obfuscation on Apple Silicon</title>
-    <id>urn:cybersecnews:item:272</id>
-    <published>2026-08-14T16:52:50.008146+00:00</published>
-    <updated>2026-08-14T16:52:50.008146+00:00</updated>
-    <link href="https://www.mdsec.co.uk/2026/08/arm64-stack-internals-and-obfuscation-on-apple-silicon/" rel="alternate" />
-    <category term="red-team" />
-    <content type="html">&lt;p&gt;&lt;em&gt;red-team · edr-evasion&lt;/em&gt;&lt;/p&gt;&lt;p&gt;This article discusses ARM64 stack internals and obfuscation techniques on Apple Silicon platforms, focusing on how EDR detection mechanisms work rather than describing a specific vulnerability. The content appears to be educational research into stack-based obfuscation methods and how security tools detect suspicious activity on macOS systems. No specific severity rating or active exploitation is mentioned as this is defensive security research examining detection evasion techniques. Security engineers should review the detailed technical analysis to understand potential blind spots in their EDR deployments and ensure adequate monitoring of ARM64-specific obfuscation behaviors on Apple Silicon systems.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.mdsec.co.uk/2026/08/arm64-stack-internals-and-obfuscation-on-apple-silicon/"&gt;Read more&lt;/a&gt; · Source: mdsec&lt;/p&gt;</content>
   </entry>
 </feed>
