@@ -3,7 +3,16 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-09-06T03:11:46.466778+00:00</updated>
+  <updated>2026-09-06T11:59:12.136011+00:00</updated>
+  <entry>
+    <title>Attackers Hijack MikroTik Routers Through Internet-Exposed SSH Without Authentication</title>
+    <id>urn:cybersecnews:item:373</id>
+    <published>2026-09-06T11:59:12.136011+00:00</published>
+    <updated>2026-09-06T11:59:12.136011+00:00</updated>
+    <link href="https://thehackernews.com/2026/09/attackers-hijack-mikrotik-routers.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass&lt;/em&gt;&lt;/p&gt;&lt;p&gt;MikroTik routers with internet-exposed SSH service are vulnerable to unauthenticated remote access allowing full administrative control. Attackers have actively exploited this vulnerability since at least September 2, 2024, gaining unauthorized administrative privileges without credentials. Severity is critical due to complete system compromise potential and active exploitation in the wild. Immediately disable internet-facing SSH access or restrict SSH to trusted IP addresses only; apply available security patches from MikroTik and consider disabling SSH entirely if remote management is not required.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/09/attackers-hijack-mikrotik-routers.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Unpatched Magento and Adobe Commerce Zero-Day Exploited to Backdoor Online Stores</title>
     <id>urn:cybersecnews:item:372</id>
@@ -894,14 +903,5 @@
     <link href="https://thehackernews.com/2026/08/unisoc-volte-video-call-exploit-chain.html" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Unisoc modem firmware used in Android devices is vulnerable to a two-stage exploit chain triggered via VoLTE video calls that achieves full Android kernel access. The vulnerability chain combines remote code execution disclosed in March 2026 with a second-stage exploit published in August 2026, enabling attackers to gain complete kernel-level control. No patch has been released by Unisoc as of the advisory publication date, and exploitation in the wild is unknown but likely given the public disclosure. Affected device users should contact their OEM for firmware updates, disable VoLTE if possible, or apply network-level mitigations to restrict malicious video call traffic until patches become available.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/08/unisoc-volte-video-call-exploit-chain.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Remember CVE-2010-2743 ?</title>
-    <id>urn:cybersecnews:item:273</id>
-    <published>2026-08-14T16:52:50.009681+00:00</published>
-    <updated>2026-08-14T16:52:50.009681+00:00</updated>
-    <link href="https://blog.projectnightcrawler.dev/posts/2026-08-14-remember-cve-2010-2743/" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · privilege-escalation · CVE-2010-2743&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Win32k keyboard layout loading (CVE-2010-2743 and related) remains exploitable through alternative data streams (ADS) in trusted directories despite MS12-034 mitigations. The vulnerability allows unprivileged users to create malicious .kbd files via ADS in C:\Windows\System32\Tasks, bypassing directory trust checks and triggering kernel-mode memory corruption when the layout is loaded. Though no current in-the-wild exploitation is reported, this represents a high-severity kernel vulnerability with potential for privilege escalation. Microsoft should implement validation to reject keyboard layout files loaded from ADS or enforce stricter file integrity checks beyond directory path validation.&lt;/p&gt;&lt;p&gt;&lt;a href="https://blog.projectnightcrawler.dev/posts/2026-08-14-remember-cve-2010-2743/"&gt;Read more&lt;/a&gt; · Source: projectnightcrawler&lt;/p&gt;</content>
   </entry>
 </feed>
