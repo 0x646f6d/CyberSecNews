@@ -3,7 +3,43 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-09-06T11:59:12.136011+00:00</updated>
+  <updated>2026-09-07T14:01:25.807451+00:00</updated>
+  <entry>
+    <title>N-able patches max severity N-central flaw amid ongoing attacks</title>
+    <id>urn:cybersecnews:item:377</id>
+    <published>2026-09-07T14:01:25.807451+00:00</published>
+    <updated>2026-09-07T14:01:25.807451+00:00</updated>
+    <link href="https://www.bleepingcomputer.com/news/security/n-able-patches-max-severity-n-central-flaw-amid-ongoing-attacks/" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;N-able's N-central RMM platform contains a maximum-severity remote code execution vulnerability being actively exploited in the wild. The flaw allows unauthenticated attackers to execute arbitrary code on affected systems. Apply the emergency hotfix immediately; N-able has indicated this is a critical priority given ongoing active attacks. Consider isolating affected N-central instances pending patch deployment and review access logs for indicators of compromise.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/n-able-patches-max-severity-n-central-flaw-amid-ongoing-attacks/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>ConnectWise warns of new ScreenConnect flaw without patch</title>
+    <id>urn:cybersecnews:item:376</id>
+    <published>2026-09-07T14:01:25.806434+00:00</published>
+    <updated>2026-09-07T14:01:25.806434+00:00</updated>
+    <link href="https://www.bleepingcomputer.com/news/security/connectwise-warns-of-new-screenconnect-flaw-without-patch/" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · remote-access&lt;/em&gt;&lt;/p&gt;&lt;p&gt;ConnectWise ScreenConnect Remote Access is affected by an unpatched vulnerability for which the vendor has only provided temporary mitigations pending a patch expected this week. Specific technical details of the flaw were not disclosed in the warning. Immediate action should focus on implementing ConnectWise's interim mitigation guidance, with plans to apply the official patch upon release. Monitor ConnectWise advisories closely for patch availability and prioritize deployment given ScreenConnect's prevalence in managed IT environments.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/connectwise-warns-of-new-screenconnect-flaw-without-patch/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>N-able Issues Fourth N-central Hotfix in Five Weeks for Unauthenticated RCE Flaw</title>
+    <id>urn:cybersecnews:item:375</id>
+    <published>2026-09-07T14:01:25.805520+00:00</published>
+    <updated>2026-09-07T14:01:25.805520+00:00</updated>
+    <link href="https://thehackernews.com/2026/09/n-able-issues-fourth-n-central-hotfix.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;N-able N-central RMM platform versions below 2026.3.1.14 contain an unauthenticated remote code execution vulnerability affecting on-premises deployments. The flaw has been actively exploited in the wild according to N-able's incident notice, though release notes indicate exploitation status remains unconfirmed. Immediate patching to Hotfix 4 (version 2026.3.1.14 or later) is critical; organizations should prioritize this update given the rapid succession of four hotfixes in five weeks and confirmed threat activity.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/09/n-able-issues-fourth-n-central-hotfix.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Telerik UI Padding-Oracle Bug Chained to Unauthenticated RCE — Public Exploit Released</title>
+    <id>urn:cybersecnews:item:374</id>
+    <published>2026-09-07T14:01:25.802973+00:00</published>
+    <updated>2026-09-07T14:01:25.802973+00:00</updated>
+    <link href="https://thehackernews.com/2026/09/telerik-ui-padding-oracle-bug-chained.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · padding-oracle,rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Telerik UI for ASP.NET AJAX is vulnerable to a padding oracle attack in AES-CBC encryption that can be chained to achieve unauthenticated remote code execution, though only in non-default configurations. Progress released patches in July 2024 and no confirmed wild exploitation has been reported to date. Organizations using Telerik UI should immediately apply the July 2024 patches and verify their application configuration does not match the exploitable setup (likely involving disabled ViewState MAC validation or custom encryption settings). Monitor affected systems for suspicious activity and consider network segmentation to limit exposure until patching is complete.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/09/telerik-ui-padding-oracle-bug-chained.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Attackers Hijack MikroTik Routers Through Internet-Exposed SSH Without Authentication</title>
     <id>urn:cybersecnews:item:373</id>
@@ -867,41 +903,5 @@
     <link href="https://www.zscaler.com/blogs/security-research/c2looper-new-backdoor-likely-tied-ransomware-github-c2" rel="alternate" />
     <category term="red-team" />
     <content type="html">&lt;p&gt;&lt;em&gt;red-team · c2&lt;/em&gt;&lt;/p&gt;&lt;p&gt;C2Looper is a new Rust-based backdoor malware likely deployed by ransomware threat actors, distributed through ClickFix infection chains, with capabilities including arbitrary command execution, reconnaissance, and second-stage payload deployment. The malware supports typical backdoor functionality and is under active development, with a version 2 variant incorporating GitHub-based command-and-control communications to evade traditional network detection. While severity is moderate to high given its ransomware association, exploitation in the wild appears limited to targeted campaigns rather than widespread attacks. Organizations should monitor for C2Looper indicators of compromise, block identified C2 infrastructure (45.158.196[.]23:8888 and 45.158.196.184:8888), implement application whitelisting to prevent ClickFix delivery chains, and ensure endpoint detection and response tools are configured to detect Win64.Trojan.C2Looper variants.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.zscaler.com/blogs/security-research/c2looper-new-backdoor-likely-tied-ransomware-github-c2"&gt;Read more&lt;/a&gt; · Source: zscaler-threatlabz&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>conflibot vulnerable to command injection via crafted pull request branch names under pull_request_target (CVE-2026-55158)</title>
-    <id>urn:cybersecnews:item:277</id>
-    <published>2026-08-17T16:28:00.807224+00:00</published>
-    <updated>2026-08-17T16:28:00.807224+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-2qvg-qr73-mqxp" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · command-injection · CVE-2026-55158&lt;/em&gt;&lt;/p&gt;&lt;p&gt;conflibot versions before 1.2.1 are vulnerable to command injection via crafted pull request branch names when used with the `pull_request_target` event (CVE-2026-55158). The vulnerability stems from constructing git commands through string interpolation of attacker-controlled branch names without proper escaping, allowing shell metacharacters to break out and execute arbitrary commands with base repository access. This is a critical severity issue with high impact given the typical use of `pull_request_target` in workflows. Upgrade conflibot to version 1.2.1 or later immediately; additionally, review workflow permissions and consider using branch name validation or moving to safer event triggers if feasible.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-2qvg-qr73-mqxp"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Ray-Project Ray: Ray-Project Ray Code Injection Vulnerability (CVE-2025-62593)</title>
-    <id>urn:cybersecnews:item:276</id>
-    <published>2026-08-17T16:28:00.806152+00:00</published>
-    <updated>2026-08-17T16:28:00.806152+00:00</updated>
-    <link href="https://nvd.nist.gov/vuln/detail/CVE-2025-62593" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · code-injection · CVE-2025-62593&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Ray-Project Ray is vulnerable to CVE-2025-62593, a code injection flaw enabling remote code execution affecting developers using Ray as a development tool, exploitable through Firefox and Safari browsers. This vulnerability is actively exploited in the wild and carries high severity due to RCE potential. Immediately apply vendor-supplied patches per CISA BOD 26-04 guidance; if mitigations are unavailable, discontinue use of the product. Conduct forensic triage on affected systems and evaluate internet exposure to prioritize patching according to risk assessment protocols.&lt;/p&gt;&lt;p&gt;&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2025-62593"&gt;Read more&lt;/a&gt; · Source: cisa-kev&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Evooo1Bot Linux Botnet Exploits Known Flaws to Turn Edge Devices Into SOCKS5 Proxies</title>
-    <id>urn:cybersecnews:item:275</id>
-    <published>2026-08-17T16:28:00.804628+00:00</published>
-    <updated>2026-08-17T16:28:00.804628+00:00</updated>
-    <link href="https://thehackernews.com/2026/08/evooo1bot-linux-botnet-exploits-known.html" rel="alternate" />
-    <category term="red-team" />
-    <content type="html">&lt;p&gt;&lt;em&gt;red-team · botnet&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Evooo1Bot is a Linux botnet targeting edge devices, leveraging publicly available Mirai source code with extended functionality to establish SOCKS5 proxies for malicious traffic routing. The malware exploits known vulnerabilities in IoT and edge devices to gain initial access, though specific CVEs are not detailed in available reporting. Active exploitation in the wild has been confirmed by security researchers monitoring the botnet's distribution. Organizations should prioritize patching edge devices, disabling default credentials, implementing network segmentation to isolate IoT/edge infrastructure, and monitoring for SOCKS proxy connections on managed devices.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/08/evooo1bot-linux-botnet-exploits-known.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Unisoc VoLTE Video Call Exploit Chain Can Give Attackers Full Android Kernel Access</title>
-    <id>urn:cybersecnews:item:274</id>
-    <published>2026-08-17T16:28:00.802852+00:00</published>
-    <updated>2026-08-17T16:28:00.802852+00:00</updated>
-    <link href="https://thehackernews.com/2026/08/unisoc-volte-video-call-exploit-chain.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Unisoc modem firmware used in Android devices is vulnerable to a two-stage exploit chain triggered via VoLTE video calls that achieves full Android kernel access. The vulnerability chain combines remote code execution disclosed in March 2026 with a second-stage exploit published in August 2026, enabling attackers to gain complete kernel-level control. No patch has been released by Unisoc as of the advisory publication date, and exploitation in the wild is unknown but likely given the public disclosure. Affected device users should contact their OEM for firmware updates, disable VoLTE if possible, or apply network-level mitigations to restrict malicious video call traffic until patches become available.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/08/unisoc-volte-video-call-exploit-chain.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
   </entry>
 </feed>
