@@ -3,7 +3,16 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-09-07T14:01:25.807451+00:00</updated>
+  <updated>2026-09-07T19:37:35.972911+00:00</updated>
+  <entry>
+    <title>PEEP Turns Chrome and Edge Into Post-Compromise Backdoors for Host Command Execution</title>
+    <id>urn:cybersecnews:item:378</id>
+    <published>2026-09-07T19:37:35.972911+00:00</published>
+    <updated>2026-09-07T19:37:35.972911+00:00</updated>
+    <link href="https://thehackernews.com/2026/09/peep-turns-chrome-and-edge-into-post.html" rel="alternate" />
+    <category term="red-team" />
+    <content type="html">&lt;p&gt;&lt;em&gt;red-team · post-exploitation&lt;/em&gt;&lt;/p&gt;&lt;p&gt;PEEP is a post-exploitation toolkit targeting Chrome and Edge that deploys a malicious extension bypassing Web Store validation by forging Secure Preferences files. The toolkit requires prior administrative or code execution access to install, then enables command execution on the compromised host while masquerading as a benign bookmarks extension. No evidence of active exploitation in the wild has been reported, but this represents a severe persistence mechanism for attackers who have already achieved initial compromise. Organizations should implement strict browser management policies, monitor extension installations, and ensure administrative access controls are properly enforced to prevent malicious extension injection.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/09/peep-turns-chrome-and-edge-into-post.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>N-able patches max severity N-central flaw amid ongoing attacks</title>
     <id>urn:cybersecnews:item:377</id>
@@ -894,14 +903,5 @@
     <link href="https://thehackernews.com/2026/08/critical-gitlab-graphql-flaw-could-let.html" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-19478&lt;/em&gt;&lt;/p&gt;&lt;p&gt;GitLab Community Edition (CE) and Enterprise Edition (EE) contain a critical GraphQL vulnerability (CVE-2026-19478, CVSS 9.4) allowing unauthenticated attackers to delete or modify public projects and user data under certain conditions. No information on active exploitation in the wild is provided in the summary. Immediate patching is required; administrators should apply the latest security updates from GitLab without delay and review access controls for public projects during the interim period.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/08/critical-gitlab-graphql-flaw-could-let.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>C2Looper: A New Backdoor Likely Tied To Ransomware With GitHub C2</title>
-    <id>urn:cybersecnews:item:278</id>
-    <published>2026-08-17T16:28:00.808193+00:00</published>
-    <updated>2026-08-17T16:28:00.808193+00:00</updated>
-    <link href="https://www.zscaler.com/blogs/security-research/c2looper-new-backdoor-likely-tied-ransomware-github-c2" rel="alternate" />
-    <category term="red-team" />
-    <content type="html">&lt;p&gt;&lt;em&gt;red-team · c2&lt;/em&gt;&lt;/p&gt;&lt;p&gt;C2Looper is a new Rust-based backdoor malware likely deployed by ransomware threat actors, distributed through ClickFix infection chains, with capabilities including arbitrary command execution, reconnaissance, and second-stage payload deployment. The malware supports typical backdoor functionality and is under active development, with a version 2 variant incorporating GitHub-based command-and-control communications to evade traditional network detection. While severity is moderate to high given its ransomware association, exploitation in the wild appears limited to targeted campaigns rather than widespread attacks. Organizations should monitor for C2Looper indicators of compromise, block identified C2 infrastructure (45.158.196[.]23:8888 and 45.158.196.184:8888), implement application whitelisting to prevent ClickFix delivery chains, and ensure endpoint detection and response tools are configured to detect Win64.Trojan.C2Looper variants.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.zscaler.com/blogs/security-research/c2looper-new-backdoor-likely-tied-ransomware-github-c2"&gt;Read more&lt;/a&gt; · Source: zscaler-threatlabz&lt;/p&gt;</content>
   </entry>
 </feed>
