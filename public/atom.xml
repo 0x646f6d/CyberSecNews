@@ -3,7 +3,88 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-09-08T12:39:15.184350+00:00</updated>
+  <updated>2026-09-08T19:18:54.529752+00:00</updated>
+  <entry>
+    <title>NetNTLMv1 Is Dead. Long Live NetNTLMv1.</title>
+    <id>urn:cybersecnews:item:388</id>
+    <published>2026-09-08T19:18:54.529752+00:00</published>
+    <updated>2026-09-08T19:18:54.529752+00:00</updated>
+    <link href="https://www.outflank.nl/blog/2026/09/08/netntlmv1-is-dead-long-live-netntlmv1/" rel="alternate" />
+    <category term="red-team" />
+    <content type="html">&lt;p&gt;&lt;em&gt;red-team · credential-cracking&lt;/em&gt;&lt;/p&gt;&lt;p&gt;NetNTLMv1 authentication protocol is now trivially crackable using publicly released rainbow tables and GPU acceleration tools (WebGPU browser client and ntlmrain CLI). Attackers can recover NT hashes from captured NetNTLMv1 responses with fixed challenge 1122334455667788 using commodity hardware (4TB disk, standard GPU), making this authentication method cryptographically broken. This technique is actively exploited in the wild as practical attack tools are publicly available. Organizations must disable NetNTLMv1 immediately and enforce NTLMv2 or Kerberos; any systems still relying on NetNTLMv1 for authentication should be considered compromised if network traffic was captured.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.outflank.nl/blog/2026/09/08/netntlmv1-is-dead-long-live-netntlmv1/"&gt;Read more&lt;/a&gt; · Source: outflank&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>The Shared Clipboard Inside the Sandbox: Cross-Account Data Leakage in ChatGPT</title>
+    <id>urn:cybersecnews:item:387</id>
+    <published>2026-09-08T19:18:54.528760+00:00</published>
+    <updated>2026-09-08T19:18:54.528760+00:00</updated>
+    <link href="https://research.checkpoint.com/2026/the-shared-clipboard-inside-the-sandbox-cross-account-data-leakage-in-chatgpt/" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · data-leakage&lt;/em&gt;&lt;/p&gt;&lt;p&gt;ChatGPT's code execution sandbox contains a cross-account data leakage vulnerability where the shared clipboard is accessible across different user sessions, allowing attackers to exfiltrate sensitive information pasted by other users. An attacker can inject malicious code into their ChatGPT conversation that reads clipboard contents, potentially capturing passwords, API keys, and private data from concurrent users. This vulnerability has moderate severity as it requires active exploitation during simultaneous sessions but affects a widely-used platform with millions of users; Check Point Research has not indicated active exploitation in the wild. Users should avoid pasting sensitive credentials directly into ChatGPT, and OpenAI should implement per-user clipboard isolation in the sandbox environment.&lt;/p&gt;&lt;p&gt;&lt;a href="https://research.checkpoint.com/2026/the-shared-clipboard-inside-the-sandbox-cross-account-data-leakage-in-chatgpt/"&gt;Read more&lt;/a&gt; · Source: checkpoint-research&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Netty: SNI Routing Bypass via Fragmented TLS ClientHello Causing Fallback to Default SslContext (CVE-2026-75595)</title>
+    <id>urn:cybersecnews:item:386</id>
+    <published>2026-09-08T19:18:54.527505+00:00</published>
+    <updated>2026-09-08T19:18:54.527505+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-c4c3-7fpv-j4q5" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-75595&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Netty handler (io.netty:netty-handler) contains a critical vulnerability in SslClientHelloHandler#decode where fragmented TLS ClientHello messages bypass SNI-based routing by causing fallback to the default SslContext. An attacker can craft a malicious ClientHello with the handshake header spanning multiple records to trigger this behavior, bypassing mTLS authentication gates that rely solely on per-SNI selection. This vulnerability is likely exploitable in the wild given its trivial exploitation method. Immediately patch to the latest Netty version and validate that your mTLS implementations do not depend exclusively on SNI-based SslContext selection.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-c4c3-7fpv-j4q5"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Microsoft Windows: Microsoft Windows Heap-Based Buffer Overflow Vulnerability (CVE-2026-85880)</title>
+    <id>urn:cybersecnews:item:385</id>
+    <published>2026-09-08T19:18:54.526518+00:00</published>
+    <updated>2026-09-08T19:18:54.526518+00:00</updated>
+    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-85880" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · heap-buffer-overflow · CVE-2026-85880&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Microsoft Windows Advanced Local Procedure Call (ALPC) contains a heap-based buffer overflow vulnerability (CVE-2026-85880) enabling local privilege escalation. This vulnerability is actively exploited in the wild and listed on CISA's Known Exploited Vulnerabilities catalog. Apply vendor-supplied patches immediately per BOD 26-04 prioritization guidance; if mitigations are unavailable, discontinue use or migrate affected systems. Conduct forensic triage on potentially compromised assets and assess internet exposure of all affected Windows systems.&lt;/p&gt;&lt;p&gt;&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2026-85880"&gt;Read more&lt;/a&gt; · Source: cisa-kev&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>SAP warns of maximum severity 'OVERPASS' kernel vulnerability</title>
+    <id>urn:cybersecnews:item:384</id>
+    <published>2026-09-08T19:18:54.525531+00:00</published>
+    <updated>2026-09-08T19:18:54.525531+00:00</updated>
+    <link href="https://www.bleepingcomputer.com/news/security/sap-warns-of-maximum-severity-overpass-kernel-vulnerability/" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · memory-corruption&lt;/em&gt;&lt;/p&gt;&lt;p&gt;SAP Kernel is affected by CVE-2026-XXXXX, a maximum-severity memory corruption vulnerability in kernel code tracked as "OVERPASS." The flaw allows remote attackers to execute arbitrary code or cause denial of service through malformed requests to vulnerable SAP systems. Apply SAP's September 2026 security patches immediately to all affected Kernel installations; this should be prioritized as critical given the maximum severity rating and remote exploitability.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/sap-warns-of-maximum-severity-overpass-kernel-vulnerability/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>August updates trigger 0xc0000409 errors on Windows Server 2016</title>
+    <id>urn:cybersecnews:item:383</id>
+    <published>2026-09-08T19:18:54.524620+00:00</published>
+    <updated>2026-09-08T19:18:54.524620+00:00</updated>
+    <link href="https://www.bleepingcomputer.com/news/microsoft/august-updates-trigger-0xc0000409-errors-on-windows-server-2016/" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · denial-of-service&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Windows Server 2016 systems running August 2026 security updates may experience 0xc0000409 errors when the Compatibility Appraiser diagnostic service is active. This is a reliability issue rather than a security vulnerability, causing system instability and potential crashes. Microsoft has acknowledged the problem but no exploit in the wild has been reported. Affected organizations should either disable the Compatibility Appraiser service if not required, defer the August update pending a fix, or apply workarounds documented in Microsoft's advisory.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/microsoft/august-updates-trigger-0xc0000409-errors-on-windows-server-2016/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Windows 11 cumulative updates KB5124008 &amp; KB5122880 released</title>
+    <id>urn:cybersecnews:item:382</id>
+    <published>2026-09-08T19:18:54.523360+00:00</published>
+    <updated>2026-09-08T19:18:54.523360+00:00</updated>
+    <link href="https://www.bleepingcomputer.com/news/microsoft/windows-11-cumulative-updates-kb5124008-and-kb5122880-released/" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · multiple&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Microsoft released cumulative updates KB5124008 (versions 25H2/24H2) and KB5122880 (version 23H2) for Windows 11 addressing multiple security vulnerabilities and bugs. The updates remediate an unspecified number of CVEs affecting Windows kernel, graphics, and other core components. Severity levels vary by individual CVE but Microsoft typically prioritizes critical kernel vulnerabilities in cumulative patches. Immediate deployment is recommended for all affected Windows 11 systems; prioritize internet-facing and critical infrastructure machines.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/microsoft/windows-11-cumulative-updates-kb5124008-and-kb5122880-released/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Microsoft September 2026 Patch Tuesday fixes 966 flaws, 2 zero-days</title>
+    <id>urn:cybersecnews:item:381</id>
+    <published>2026-09-08T19:18:54.522337+00:00</published>
+    <updated>2026-09-08T19:18:54.522337+00:00</updated>
+    <link href="https://www.bleepingcomputer.com/news/microsoft/microsoft-september-2026-patch-tuesday-fixes-966-flaws-2-zero-days/" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · multiple&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Microsoft released 966 security fixes on September 2026 Patch Tuesday, including two actively exploited zero-day vulnerabilities across multiple products. The zero-days are currently being weaponized in the wild, indicating immediate threat to deployed systems. All affected Microsoft products require urgent patching; prioritize systems running vulnerable versions and apply updates as soon as possible, with particular focus on the two zero-day vulnerabilities to remediate active exploitation.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/microsoft/microsoft-september-2026-patch-tuesday-fixes-966-flaws-2-zero-days/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>ChatGPT Flaw Let a Planted Prompt Send a Victim's Gmail Data to Another Account</title>
+    <id>urn:cybersecnews:item:380</id>
+    <published>2026-09-08T19:18:54.521047+00:00</published>
+    <updated>2026-09-08T19:18:54.521047+00:00</updated>
+    <link href="https://thehackernews.com/2026/09/chatgpt-flaw-let-planted-prompt-send.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · prompt-injection&lt;/em&gt;&lt;/p&gt;&lt;p&gt;ChatGPT's plugin system was vulnerable to prompt injection attacks where a malicious instruction embedded in user-supplied content could execute hidden operations while the assistant continued normal functionality. In the proof-of-concept, attackers could exfiltrate Gmail data connected to a victim's account and relay it to attacker-controlled accounts via covert channels. This was a high-severity vulnerability affecting users with Gmail integration enabled, though no evidence of active exploitation in the wild was reported. OpenAI patched the underlying plugin isolation issues; users should disable unnecessary third-party integrations and review plugin permissions settings.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/09/chatgpt-flaw-let-planted-prompt-send.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>FreeIPA Flaw Chain Lets Anonymous Clients Create Reusable Administrator Credentials</title>
     <id>urn:cybersecnews:item:379</id>
@@ -47,7 +128,7 @@
     <updated>2026-09-07T14:01:25.805520+00:00</updated>
     <link href="https://thehackernews.com/2026/09/n-able-issues-fourth-n-central-hotfix.html" rel="alternate" />
     <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;N-able N-central RMM platform versions below 2026.3.1.14 contain an unauthenticated remote code execution vulnerability affecting on-premises deployments. The flaw has been actively exploited in the wild according to N-able's incident notice, though release notes indicate exploitation status remains unconfirmed. Immediate patching to Hotfix 4 (version 2026.3.1.14 or later) is critical; organizations should prioritize this update given the rapid succession of four hotfixes in five weeks and confirmed threat activity.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/09/n-able-issues-fourth-n-central-hotfix.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-86218&lt;/em&gt;&lt;/p&gt;&lt;p&gt;N-able N-central RMM platform versions below 2026.3.1.14 contain an unauthenticated remote code execution vulnerability affecting on-premises deployments. The flaw has been actively exploited in the wild according to N-able's incident notice, though release notes indicate exploitation status remains unconfirmed. Immediate patching to Hotfix 4 (version 2026.3.1.14 or later) is critical; organizations should prioritize this update given the rapid succession of four hotfixes in five weeks and confirmed threat activity.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/09/n-able-issues-fourth-n-central-hotfix.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
   </entry>
   <entry>
     <title>Telerik UI Padding-Oracle Bug Chained to Unauthenticated RCE — Public Exploit Released</title>
@@ -245,7 +326,7 @@
     <updated>2026-09-02T19:16:02.710864+00:00</updated>
     <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-49869" rel="alternate" />
     <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · os-command-injection · CVE-2026-49869&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Kestra OSS is affected by CVE-2026-49869, an OS command injection vulnerability allowing unauthenticated remote attackers to create and execute arbitrary workflows without credentials. This vulnerability is actively exploited in the wild and carries high severity due to the lack of authentication requirements and potential for complete system compromise. Apply vendor-supplied patches immediately per CISA BOD 26-04 guidance; organizations unable to patch should implement network segmentation to restrict Kestra OSS internet exposure or discontinue use. Document system forensics and maintain evidence per CISA's Forensics Triage Requirements if prior compromise is suspected.&lt;/p&gt;&lt;p&gt;&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2026-49869"&gt;Read more&lt;/a&gt; · Source: cisa-kev&lt;/p&gt;</content>
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · os-command-injection · CVE-2026-49869, CVE-2026-73294&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Kestra OSS is affected by CVE-2026-49869, an OS command injection vulnerability allowing unauthenticated remote attackers to create and execute arbitrary workflows without credentials. This vulnerability is actively exploited in the wild and carries high severity due to the lack of authentication requirements and potential for complete system compromise. Apply vendor-supplied patches immediately per CISA BOD 26-04 guidance; organizations unable to patch should implement network segmentation to restrict Kestra OSS internet exposure or discontinue use. Document system forensics and maintain evidence per CISA's Forensics Triage Requirements if prior compromise is suspected.&lt;/p&gt;&lt;p&gt;&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2026-49869"&gt;Read more&lt;/a&gt; · Source: cisa-kev&lt;/p&gt;</content>
   </entry>
   <entry>
     <title>Kludex Starlette: Kludex Starlette HTTP Request/Response Smuggling Vulnerability (CVE-2026-48710)</title>
@@ -272,7 +353,7 @@
     <updated>2026-09-02T19:16:02.607410+00:00</updated>
     <link href="https://thehackernews.com/2026/09/malicious-git-configs-can-make-claude.html" rel="alternate" />
     <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · code-injection&lt;/em&gt;&lt;/p&gt;&lt;p&gt;AI coding agents (Claude, Codex, Cursor, and others) are vulnerable to arbitrary code execution via malicious .git configurations that trigger execution of attacker-specified commands with user privileges outside sandboxed environments. The vulnerabilities stem from agents parsing Git config files and executing referenced commands without validation or user approval. Severity is high as exploitation requires only committing a malicious .git file to a repository; no patching at publication for four of seven affected tools. Developers should avoid cloning untrusted repositories into agent environments and security teams should contact vendors for patches or workarounds; users should review Git configuration files in repositories before processing with AI agents.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/09/malicious-git-configs-can-make-claude.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · code-injection · CVE-2026-78676&lt;/em&gt;&lt;/p&gt;&lt;p&gt;AI coding agents (Claude, Codex, Cursor, and others) are vulnerable to arbitrary code execution via malicious .git configurations that trigger execution of attacker-specified commands with user privileges outside sandboxed environments. The vulnerabilities stem from agents parsing Git config files and executing referenced commands without validation or user approval. Severity is high as exploitation requires only committing a malicious .git file to a repository; no patching at publication for four of seven affected tools. Developers should avoid cloning untrusted repositories into agent environments and security teams should contact vendors for patches or workarounds; users should review Git configuration files in repositories before processing with AI agents.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/09/malicious-git-configs-can-make-claude.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
   </entry>
   <entry>
     <title>SonicWall warns of actively exploited SMA1000 zero-day flaws</title>
@@ -299,7 +380,7 @@
     <updated>2026-09-02T03:08:52.141923+00:00</updated>
     <link href="https://github.com/advisories/GHSA-m4rf-3fr8-xwx3" rel="alternate" />
     <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · jvm-arg-injection · CVE-2026-79675&lt;/em&gt;&lt;/p&gt;&lt;p&gt;NLTK's Stanford wrapper Java interface contains a critical JVM argument injection vulnerability (CVE-2026-79675) where the per-call `options` parameter in the `java()` function bypasses validation checks implemented for CVE-2026-12841, allowing attackers to inject dangerous JVM flags like `-javaagent` and `-agentlib`. The vulnerability affects all versions with the incomplete fix and is likely exploitable in the wild given the straightforward bypass method. Users should update NLTK immediately to a patched version that applies `_validate_java_options()` validation to both global and per-call option parameters.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-m4rf-3fr8-xwx3"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · jvm-arg-injection · CVE-2026-78683, CVE-2026-79657, CVE-2026-79675&lt;/em&gt;&lt;/p&gt;&lt;p&gt;NLTK's Stanford wrapper Java interface contains a critical JVM argument injection vulnerability (CVE-2026-79675) where the per-call `options` parameter in the `java()` function bypasses validation checks implemented for CVE-2026-12841, allowing attackers to inject dangerous JVM flags like `-javaagent` and `-agentlib`. The vulnerability affects all versions with the incomplete fix and is likely exploitable in the wild given the straightforward bypass method. Users should update NLTK immediately to a patched version that applies `_validate_java_options()` validation to both global and per-call option parameters.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-m4rf-3fr8-xwx3"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
   </entry>
   <entry>
     <title>Nearly 22,000 Microsoft Exchange servers vulnerable to hijack attacks</title>
@@ -822,86 +903,5 @@
     <link href="https://www.heise.de/news/Oracle-Patchday-Updates-fuer-weniger-als-tausend-Schwachstellen-11418883.html" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Oracle released its latest Critical Security Patch Update addressing approximately 1000 vulnerabilities across its product suite, including Oracle Database, WebLogic Server, and other enterprise software. The patch volume represents a decrease from the previous regular CPU cycle, indicating a temporary reduction in newly disclosed critical issues. Severity ratings span from critical to medium-risk flaws affecting authentication, remote code execution, and data access mechanisms. Organizations running Oracle products should prioritize patching critical and high-severity vulnerabilities identified for their specific deployments, with immediate attention to internet-facing systems like WebLogic Server.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.heise.de/news/Oracle-Patchday-Updates-fuer-weniger-als-tausend-Schwachstellen-11418883.html"&gt;Read more&lt;/a&gt; · Source: heise-security&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>kobako Sandbox Escape: guest eval reaches host RCE via method_missing → public_send (any bound Service) (CVE-2026-55107)</title>
-    <id>urn:cybersecnews:item:288</id>
-    <published>2026-08-19T01:13:46.148793+00:00</published>
-    <updated>2026-08-19T01:13:46.148793+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-7pwq-q9jf-539h" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · sandbox-escape · CVE-2026-55107&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Kobako sandbox (Ruby gem) suffers a critical sandbox escape vulnerability where guest mruby scripts can achieve arbitrary code execution in the host process by exploiting unfiltered `public_send` calls on bound Service objects, allowing access to any publicly callable method regardless of intended interface restrictions. An attacker can leverage `method_missing` to invoke arbitrary host methods through the wasm transport dispatcher without authentication or validation. This vulnerability is critical severity and active exploitation in the wild is possible given the attack surface. Update to the latest patched version of rubygems/kobako immediately and review any deployments exposing bound Service objects to untrusted guest scripts.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-7pwq-q9jf-539h"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>jmespath.php has CompilerRuntime code injection via unescaped function names (CVE-2026-54133)</title>
-    <id>urn:cybersecnews:item:287</id>
-    <published>2026-08-19T01:13:46.146536+00:00</published>
-    <updated>2026-08-19T01:13:46.146536+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-pcw8-m77r-2528" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · code-injection · CVE-2026-54133, CVE-2026-59989, CVE-2026-77413, CVE-2026-77414, CVE-2026-77415&lt;/em&gt;&lt;/p&gt;&lt;p&gt;The jmespath.php library (mtdowling/jmespath.php) contains a critical code injection vulnerability (CVE-2026-54133) where unescaped JMESPath function names are directly compiled into PHP source code without proper sanitization. An attacker can craft malicious JMESPath expressions that cause the compiler runtime to generate and execute arbitrary PHP code through poisoned cache files. This vulnerability is critical and likely exploitable in production environments where user-controlled JMESPath expressions are processed. Affected users should immediately update to a patched version and review any applications accepting untrusted JMESPath input for potential compromise.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-pcw8-m77r-2528"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Froxlor: Credential and 2FA secret disclosure via Froxlor API endpoints (CVE-2026-62988)</title>
-    <id>urn:cybersecnews:item:286</id>
-    <published>2026-08-19T01:13:46.144656+00:00</published>
-    <updated>2026-08-19T01:13:46.144656+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-7788-ghfq-c6mh" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · information-disclosure · CVE-2026-62988&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Froxlor API endpoints expose sensitive authentication material including password hashes and TOTP 2FA seeds through JSON responses without field filtering. The vulnerability affects Froxlor versions prior to patched releases and is rated critical severity, with no indication of active exploitation in the wild. Credentials for customers, administrators, and FTP users are exposed via full database row returns in multiple API command classes. Immediate patching to the latest Froxlor version is required; review API access logs for credential exposure and rotate all compromised credentials.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-7788-ghfq-c6mh"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Microsoft Internet Key Exchange (IKE) Service Extensions: Microsoft Internet Key Exchange (IKE) Service Extensions Double Free Vulnerability (CVE-2026-33824)</title>
-    <id>urn:cybersecnews:item:285</id>
-    <published>2026-08-19T01:13:46.138500+00:00</published>
-    <updated>2026-08-19T01:13:46.138500+00:00</updated>
-    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-33824" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · double-free · CVE-2026-33824&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Microsoft Internet Key Exchange (IKE) Service Extensions contains a double free vulnerability (CVE-2026-33824) enabling remote code execution. This vulnerability is actively exploited in the wild and carries critical severity. Organizations must apply vendor-supplied patches immediately in accordance with CISA BOD 26-04 prioritization guidance; for cloud services without available mitigations, discontinuation of the product is required. Conduct forensic triage on affected systems and assess internet exposure to determine patch deployment priority.&lt;/p&gt;&lt;p&gt;&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2026-33824"&gt;Read more&lt;/a&gt; · Source: cisa-kev&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Microsoft Copilot Personal Flaws Could Let One Click Exfiltrate Data From Connected Apps</title>
-    <id>urn:cybersecnews:item:284</id>
-    <published>2026-08-19T01:13:46.135224+00:00</published>
-    <updated>2026-08-19T01:13:46.135224+00:00</updated>
-    <link href="https://thehackernews.com/2026/08/microsoft-copilot-personal-flaws-could.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · data-exfiltration&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Microsoft Copilot Personal contains three vulnerabilities (CoSnitch) affecting data exfiltration from connected applications through specially crafted links requiring only a single click from victims. The flaws exploit an undocumented URL parameter to silently extract data available within the victim's Copilot session and connected apps. Varonis Threat Labs has disclosed the vulnerabilities; exploitation status in the wild is not explicitly confirmed in available reporting. Microsoft users should await and apply security patches promptly, avoid clicking suspicious links directing to Copilot, and review connected app permissions for least privilege access.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/08/microsoft-copilot-personal-flaws-could.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>CISA: Windows Task Host flaw now exploited by ransomware gangs</title>
-    <id>urn:cybersecnews:item:283</id>
-    <published>2026-08-18T16:31:04.372660+00:00</published>
-    <updated>2026-08-18T16:31:04.372660+00:00</updated>
-    <link href="https://www.bleepingcomputer.com/news/security/cisa-windows-task-host-flaw-now-exploited-by-ransomware-gangs/" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · privilege-escalation&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Windows Task Host (taskhostw.exe) contains a high-severity privilege escalation vulnerability (CVE-2024-21888) that ransomware gangs are actively exploiting in the wild. The flaw allows attackers with local access to escalate privileges and execute arbitrary code with system-level permissions. CISA has added this vulnerability to its Known Exploited Vulnerabilities catalog, confirming active exploitation by ransomware operators. Immediate patching through Windows Update is critical; organizations should prioritize this vulnerability in their patch management processes.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/cisa-windows-task-host-flaw-now-exploited-by-ransomware-gangs/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>New API: Integer overflow in quota billing yields negative charges (self-crediting) (CVE-2026-71479)</title>
-    <id>urn:cybersecnews:item:282</id>
-    <published>2026-08-18T01:12:17.638720+00:00</published>
-    <updated>2026-08-18T01:12:17.638720+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-8r8v-xf7q-rcpr" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · integer-overflow · CVE-2026-71479&lt;/em&gt;&lt;/p&gt;&lt;p&gt;An integer overflow vulnerability in QuantumNous/new-api's quota billing system allows unauthenticated attackers to self-credit accounts by supplying crafted extreme quantity parameters that wrap quota calculations into negative values, yielding free service credits at settlement time. The vulnerability affects multiple billing code paths that multiply user-controlled parameters without bounds checking or safe integer conversion. Severity is critical with active exploitation likely given the straightforward attack vector and financial impact. Immediate patching is required; apply integer overflow protections including upper bound validation on user inputs, use of safe multiplication libraries, and pre-conversion range verification before float-to-int casting.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-8r8v-xf7q-rcpr"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Forminator WordPress Flaw Can Enable Unauthenticated RCE via Malicious PHP Uploads</title>
-    <id>urn:cybersecnews:item:281</id>
-    <published>2026-08-18T01:12:17.637761+00:00</published>
-    <updated>2026-08-18T01:12:17.637761+00:00</updated>
-    <link href="https://thehackernews.com/2026/08/forminator-wordpress-flaw-can-enable.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-14894, CVE-2026-15748, CVE-2026-32475&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Forminator Forms WordPress plugin (600,000+ installations) contains a critical unauthenticated remote code execution vulnerability (CVE-2026-15748, CVSS 9.8) allowing attackers to upload malicious PHP files and execute arbitrary code. The flaw enables complete compromise of affected WordPress sites without requiring authentication. Immediate patching is essential; administrators should update Forminator to the latest patched version and review file upload directories for suspicious PHP files. There is no indication of active exploitation in the wild at this time, but the high CVSS score and ease of exploitation make patching urgent.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/08/forminator-wordpress-flaw-can-enable.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Snowflake GitHub Actions Flaw Lets Crafted Issues Trigger Command Injection</title>
-    <id>urn:cybersecnews:item:280</id>
-    <published>2026-08-18T01:12:17.636205+00:00</published>
-    <updated>2026-08-18T01:12:17.636205+00:00</updated>
-    <link href="https://thehackernews.com/2026/08/snowflake-github-actions-flaw-lets_0330881554.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · command-injection&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Snowflake's snowflakedb/snowflake-connector-net GitHub Actions workflow (jira_issue.yml) is vulnerable to command injection through crafted GitHub issues, allowing attackers to execute arbitrary commands with access to internal Jira credentials. The vulnerability stems from unsafe handling of user-controlled input in workflow variables. This is a high-severity flaw with potential for credential theft and supply chain compromise, though no evidence of active exploitation has been reported. Snowflake should immediately remediate the affected workflow by sanitizing all external inputs, implementing proper secret handling, and restricting workflow permissions to least-privilege principles.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/08/snowflake-github-actions-flaw-lets_0330881554.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
   </entry>
 </feed>
