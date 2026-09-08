@@ -3,7 +3,16 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-09-07T19:37:35.972911+00:00</updated>
+  <updated>2026-09-08T12:39:15.184350+00:00</updated>
+  <entry>
+    <title>FreeIPA Flaw Chain Lets Anonymous Clients Create Reusable Administrator Credentials</title>
+    <id>urn:cybersecnews:item:379</id>
+    <published>2026-09-08T12:39:15.184350+00:00</published>
+    <updated>2026-09-08T12:39:15.184350+00:00</updated>
+    <link href="https://thehackernews.com/2026/09/freeipa-flaw-chain-lets-anonymous.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · privilege-escalation&lt;/em&gt;&lt;/p&gt;&lt;p&gt;FreeIPA identity management system is vulnerable to a privilege escalation chain allowing unauthenticated clients to create arbitrary Kerberos identities with administrator privileges through flaws in both FreeIPA and the underlying 389 Directory Server. The vulnerability requires no prior authentication and leverages LDAP access to inject malicious directory entries that grant administrative group membership. This is a critical severity issue with potential for exploitation in environments where FreeIPA is exposed to untrusted networks. Immediate patching of both FreeIPA and 389 Directory Server is required; isolate FreeIPA administration interfaces and restrict LDAP access to trusted networks pending updates.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/09/freeipa-flaw-chain-lets-anonymous.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>PEEP Turns Chrome and Edge Into Post-Compromise Backdoors for Host Command Execution</title>
     <id>urn:cybersecnews:item:378</id>
@@ -65,7 +74,7 @@
     <updated>2026-09-06T03:11:46.466778+00:00</updated>
     <link href="https://thehackernews.com/2026/09/unpatched-magento-and-adobe-commerce.html" rel="alternate" />
     <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Magento Open Source and Adobe Commerce are vulnerable to an unauthenticated remote code execution zero-day vulnerability dubbed StyleSmuggler, allowing attackers to execute arbitrary code on affected servers without authentication. The vulnerability is actively exploited in the wild as of September 4, 2024, with attacks confirmed by security firm Sansec who discovered the flaw. Immediate action required: apply available patches from Adobe, implement web application firewalls to block exploitation attempts, and monitor for indicators of compromise on affected systems. Until patches are available, restrict access to admin panels and disable unnecessary features to reduce attack surface.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/09/unpatched-magento-and-adobe-commerce.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-75650&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Magento Open Source and Adobe Commerce are vulnerable to an unauthenticated remote code execution zero-day vulnerability dubbed StyleSmuggler, allowing attackers to execute arbitrary code on affected servers without authentication. The vulnerability is actively exploited in the wild as of September 4, 2024, with attacks confirmed by security firm Sansec who discovered the flaw. Immediate action required: apply available patches from Adobe, implement web application firewalls to block exploitation attempts, and monitor for indicators of compromise on affected systems. Until patches are available, restrict access to admin panels and disable unnecessary features to reduce attack surface.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/09/unpatched-magento-and-adobe-commerce.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
   </entry>
   <entry>
     <title>OpenChoreo: cluster-gateway internal proxy performs no caller authentication and is not read-only — data-plane Secret disclosure and arbitrary Kubernetes mutation (CVE-2026-73842)</title>
@@ -894,14 +903,5 @@
     <link href="https://thehackernews.com/2026/08/snowflake-github-actions-flaw-lets_0330881554.html" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · command-injection&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Snowflake's snowflakedb/snowflake-connector-net GitHub Actions workflow (jira_issue.yml) is vulnerable to command injection through crafted GitHub issues, allowing attackers to execute arbitrary commands with access to internal Jira credentials. The vulnerability stems from unsafe handling of user-controlled input in workflow variables. This is a high-severity flaw with potential for credential theft and supply chain compromise, though no evidence of active exploitation has been reported. Snowflake should immediately remediate the affected workflow by sanitizing all external inputs, implementing proper secret handling, and restricting workflow permissions to least-privilege principles.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/08/snowflake-github-actions-flaw-lets_0330881554.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Critical GitLab GraphQL Flaw Could Let Unauthenticated Attackers Delete Public Projects</title>
-    <id>urn:cybersecnews:item:279</id>
-    <published>2026-08-18T01:12:17.634485+00:00</published>
-    <updated>2026-08-18T01:12:17.634485+00:00</updated>
-    <link href="https://thehackernews.com/2026/08/critical-gitlab-graphql-flaw-could-let.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-19478&lt;/em&gt;&lt;/p&gt;&lt;p&gt;GitLab Community Edition (CE) and Enterprise Edition (EE) contain a critical GraphQL vulnerability (CVE-2026-19478, CVSS 9.4) allowing unauthenticated attackers to delete or modify public projects and user data under certain conditions. No information on active exploitation in the wild is provided in the summary. Immediate patching is required; administrators should apply the latest security updates from GitLab without delay and review access controls for public projects during the interim period.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/08/critical-gitlab-graphql-flaw-could-let.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
   </entry>
 </feed>
