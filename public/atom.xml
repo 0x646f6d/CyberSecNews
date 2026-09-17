@@ -3,7 +3,16 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-09-17T07:43:25.885208+00:00</updated>
+  <updated>2026-09-17T13:05:43.117604+00:00</updated>
+  <entry>
+    <title>Windows-Update sperrt Domain-Nutzer aus</title>
+    <id>urn:cybersecnews:item:393</id>
+    <published>2026-09-17T13:05:43.117604+00:00</published>
+    <updated>2026-09-17T13:05:43.117604+00:00</updated>
+    <link href="https://www.heise.de/news/Windows-Update-sperrt-Domain-Nutzer-aus-11456331.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Windows domain-joined systems are affected by a critical flaw introduced in September 2024 security updates that prevents domain user authentication and system logon. The vulnerability stems from improperly configured Group Policy or security certificate handling in the cumulative updates, causing legitimate domain users to be locked out of their machines. This issue has high severity due to widespread impact on enterprise environments and immediate operational disruption, though it is a regression rather than an actively exploited security vulnerability. Microsoft has released out-of-band patches to remediate the issue; administrators should immediately apply the corrective updates and consider reverting to previous update versions on affected systems while patches are deployed.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.heise.de/news/Windows-Update-sperrt-Domain-Nutzer-aus-11456331.html"&gt;Read more&lt;/a&gt; · Source: heise-security&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Credentials Are Still the Shortest Path In</title>
     <id>urn:cybersecnews:item:392</id>
@@ -894,14 +903,5 @@
     <link href="https://www.bleepingcomputer.com/news/security/us-warns-of-ai-powered-attacks-on-siemens-plcs-in-critical-infrastructure/" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Siemens S7 Series PLCs are targeted by threat actors using AI-generated exploit scripts to compromise critical infrastructure systems. The attack leverages automated payload generation to identify and exploit vulnerabilities in these industrial control devices. No specific CVE or severity rating provided, but active exploitation in critical infrastructure sectors indicates high risk with confirmed wild deployment. Immediate action required: patch all exposed Siemens PLCs to latest firmware versions, implement network segmentation isolating PLCs from untrusted networks, and deploy anomaly detection monitoring for unusual PLC communications.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/us-warns-of-ai-powered-attacks-on-siemens-plcs-in-critical-infrastructure/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Simple Scans for Cloud Metadata Service, (Wed, Aug 19th)</title>
-    <id>urn:cybersecnews:item:293</id>
-    <published>2026-08-19T16:31:25.338712+00:00</published>
-    <updated>2026-08-19T16:31:25.338712+00:00</updated>
-    <link href="https://isc.sans.edu/diary/rss/33260" rel="alternate" />
-    <category term="red-team" />
-    <content type="html">&lt;p&gt;&lt;em&gt;red-team · credential-theft&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Cloud metadata services (accessible via 169.254.169.254) across AWS, Azure, and GCP expose sensitive credentials including IAM role credentials and service account tokens to any code executing on compromised virtual machines. This represents a critical risk vector for lateral movement and privilege escalation, as attackers with initial VM access can trivially extract temporary credentials with broad permissions. This technique is actively exploited in the wild by adversaries targeting misconfigured cloud environments and supply chain compromises. Organizations should implement IMDSv2 (mandatory token authentication), network segmentation restricting metadata service access, and IAM policies limiting credential scope to mitigate exposure.&lt;/p&gt;&lt;p&gt;&lt;a href="https://isc.sans.edu/diary/rss/33260"&gt;Read more&lt;/a&gt; · Source: sans-isc&lt;/p&gt;</content>
   </entry>
 </feed>
