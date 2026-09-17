@@ -41,7 +41,14 @@ class LLMConfig:
     model: str = "claude-haiku-4-5-20251001"
     max_tokens: int = 1024
     semantic_dedup: bool = True
-    api_key: Optional[str] = None  # from ANTHROPIC_API_KEY
+    api_key: Optional[str] = None  # resolved from the api_key_env variable
+    # Env var the API key is read from. Defaults to ANTHROPIC_API_KEY; set to
+    # e.g. AZURE_AI_API_KEY for the azure_foundry provider.
+    api_key_env: str = "ANTHROPIC_API_KEY"
+    # Azure Foundry only: the model-inference endpoint URL and (optional) API
+    # version. Non-secret, so they live in the YAML.
+    endpoint: Optional[str] = None
+    api_version: Optional[str] = None
 
 
 @dataclass
@@ -134,12 +141,16 @@ def load_config(path: Optional[str | Path] = None) -> Config:
     ]
 
     llm_raw = raw.get("llm", {})
+    api_key_env = llm_raw.get("api_key_env", "ANTHROPIC_API_KEY")
     llm = LLMConfig(
         provider=llm_raw.get("provider", "anthropic"),
         model=llm_raw.get("model", "claude-haiku-4-5-20251001"),
         max_tokens=llm_raw.get("max_tokens", 1024),
         semantic_dedup=llm_raw.get("semantic_dedup", True),
-        api_key=os.environ.get("ANTHROPIC_API_KEY"),
+        api_key=os.environ.get(api_key_env),
+        api_key_env=api_key_env,
+        endpoint=llm_raw.get("endpoint"),
+        api_version=llm_raw.get("api_version"),
     )
 
     ntfy_raw = raw.get("ntfy", {})
@@ -189,3 +200,12 @@ def _validate(config: Config) -> None:
         raise ConfigError("At least one category must be enabled.")
     if not 1 <= config.min_relevance <= 5:
         raise ConfigError("min_relevance must be between 1 and 5.")
+    if config.llm.provider not in ("anthropic", "azure_foundry"):
+        raise ConfigError(
+            f"Unknown llm.provider {config.llm.provider!r}; "
+            "expected 'anthropic' or 'azure_foundry'."
+        )
+    if config.llm.provider == "azure_foundry" and not config.llm.endpoint:
+        raise ConfigError(
+            "llm.endpoint is required for the azure_foundry provider."
+        )

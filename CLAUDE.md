@@ -49,7 +49,9 @@ Orchestrated by `src/cybersecnews/pipeline.py::run()`.
 | `connectors/github_advisories.py` | GitHub Security Advisories connector (`github_advisories` type). Paginated, severity-filtered (default critical), optional `GITHUB_TOKEN`. |
 | `connectors/__init__.py` | Type registry (`rss`, `cisa_kev`, `github_advisories`) + `build_connectors()`. |
 | `llm/base.py` | `LLMClient` protocol: `classify`, `match_existing`, `summarize`. |
-| `llm/anthropic_client.py` | Claude Haiku impl. Prompts + defensive JSON extraction. |
+| `llm/chat.py` | `ChatJSONClient` — provider-agnostic base: prompts (`CLASSIFY_SYSTEM`/`MATCH_SYSTEM`/`SUMMARIZE_SYSTEM`), classify/match/summarize orchestration, defensive JSON extraction + classification parsing. Backends implement only `_text_call`. |
+| `llm/anthropic_client.py` | Claude Haiku backend. Subclasses `ChatJSONClient`; adds the Anthropic API call. |
+| `llm/azure_foundry.py` | Azure AI Foundry backend (`azure_foundry` provider). Subclasses `ChatJSONClient`; calls a Foundry model-inference endpoint via `azure-ai-inference` (`ChatCompletionsClient`) with an API key. Any Foundry-hosted chat model (`llm.model`). |
 | `llm/stub.py` | `HeuristicLLM` — offline keyword-based stub for `--dry-run`/tests. **Approximate, not a substitute for the real model.** |
 | `llm/__init__.py` | `build_llm(config)` factory. |
 | `db.py` | SQLite store (`Database`): the `seen` table, lookups, `insert`, `add_cves` (backfill). |
@@ -111,8 +113,10 @@ Tests in `tests/` (see Testing below).
 - **Pluggable by design:**
   - New source → subclass `Connector`, register its `type` in
     `connectors/__init__.py`, add a `config.yaml` entry. Nothing else changes.
-  - New LLM backend (e.g. Ollama) → implement the `LLMClient` protocol, wire into
-    `llm/build_llm`. The pipeline depends only on the protocol.
+  - New LLM backend (e.g. Ollama) → subclass `ChatJSONClient` and implement just
+    `_text_call` (or implement the `LLMClient` protocol directly), then wire into
+    `llm/build_llm`. The pipeline depends only on the protocol. Two backends ship:
+    `anthropic` (Claude) and `azure_foundry` (any Foundry-hosted chat model).
 
 ## Commands
 
@@ -154,7 +158,8 @@ python -m pytest -q
 
 | Env var | Required | Purpose |
 |---------|----------|---------|
-| `ANTHROPIC_API_KEY` | yes (not for `--dry-run`) | Claude Haiku access |
+| `ANTHROPIC_API_KEY` | yes if `llm.provider: anthropic` (not for `--dry-run`) | Claude Haiku access |
+| `AZURE_AI_API_KEY` | yes if `llm.provider: azure_foundry` | Azure Foundry model-inference key (env var name is `llm.api_key_env`) |
 | `NTFY_TOPIC` | yes (to send) | ntfy.sh topic to publish to |
 | `NTFY_TOKEN` | no | Bearer token for access-protected topics |
 | `GITHUB_TOKEN` | no | Raises GitHub Advisories API limit 60→5000/h. Auto-provided in Actions. |
@@ -167,21 +172,31 @@ Hosting is **GitHub Actions** — no server; **deploy = `git push`**.
   main zero-/n-day latency lever) + `workflow_dispatch`. Installs, runs
   `python -m cybersecnews`, then commits `data/seen.db` back (`[skip ci]`).
   Needs `permissions: contents: write` (already set). Secrets are repo Actions
-  secrets: `ANTHROPIC_API_KEY`, `NTFY_TOPIC`, optional `NTFY_TOKEN`.
+  secrets: the LLM key for the active provider (`ANTHROPIC_API_KEY` or
+  `AZURE_AI_API_KEY`), `NTFY_TOPIC`, optional `NTFY_TOKEN`.
 - `.github/workflows/ci.yml`: runs `pytest` on push / PR.
 - First-time setup: add the secrets, then trigger `daily.yml` manually from the
   Actions tab to confirm a report arrives and the DB commit lands.
 
 ## LLM / model
 
-- The model is **Claude Haiku `claude-haiku-4-5-20251001`** (`llm/anthropic_client.py`,
-  default in `config.py`). It's cheap at this volume and needs no host.
+- Two backends, selected by `llm.provider`:
+  - **`anthropic`** (default): Claude Haiku `claude-haiku-4-5-20251001`
+    (`llm/anthropic_client.py`; default model in `config.py`). Cheap at this
+    volume, no host.
+  - **`azure_foundry`**: any chat model deployed on Azure AI Foundry
+    (`llm/azure_foundry.py`), via the Foundry model-inference endpoint
+    (`azure-ai-inference` SDK) with an API key. Needs `llm.endpoint`
+    (`https://<resource>.services.ai.azure.com/models`), `llm.model` (the Foundry
+    deployment name), optional `llm.api_version`, and the key in the env var named
+    by `llm.api_key_env` (e.g. `AZURE_AI_API_KEY`).
 - **When touching any LLM/prompt/model code, load the `claude-api` skill first**
   (model ids, params, tool use, token/cost). Don't hand-edit model ids from memory.
-- Prompts live as module constants in `anthropic_client.py`
-  (`CLASSIFY_SYSTEM`, `MATCH_SYSTEM`, `SUMMARIZE_SYSTEM`). The classify prompt is
-  what enforces the "only these two categories" precision — edit it carefully and
-  re-check against `tests/` expectations.
+- Prompts and all JSON/classification parsing live as module constants + helpers
+  in `llm/chat.py` (`CLASSIFY_SYSTEM`, `MATCH_SYSTEM`, `SUMMARIZE_SYSTEM`), shared
+  by both backends. The classify prompt is what enforces the "only these two
+  categories" precision — edit it carefully and re-check against `tests/`
+  expectations.
 
 ## Conventions
 

@@ -57,11 +57,32 @@ cp config.example.yaml config.yaml   # then edit to taste (optional)
 
 | Variable            | Required | Purpose                                            |
 | ------------------- | -------- | -------------------------------------------------- |
-| `ANTHROPIC_API_KEY` | yes\*    | Claude Haiku access for classify/summarize/dedup   |
+| `ANTHROPIC_API_KEY` | yes\* if `llm.provider: anthropic` | Claude Haiku access for classify/summarize/dedup   |
+| `AZURE_AI_API_KEY`  | yes\* if `llm.provider: azure_foundry` | Azure AI Foundry model-inference key (variable name = `llm.api_key_env`) |
 | `NTFY_TOPIC`        | yes      | The ntfy.sh topic to publish the report to         |
 | `NTFY_TOKEN`        | no       | Bearer token if your ntfy topic is access-protected |
 
 \* Not needed for `--dry-run`, which falls back to an offline heuristic stub.
+
+### Choosing the LLM provider
+
+The classify/dedup/summarize model is pluggable via `llm.provider`:
+
+- **`anthropic`** (default) — Claude Haiku via the Anthropic API (`ANTHROPIC_API_KEY`).
+- **`azure_foundry`** — any chat model deployed on **Azure AI Foundry**, via the
+  Foundry model-inference endpoint. Set in `config.yaml`:
+
+  ```yaml
+  llm:
+    provider: azure_foundry
+    model: <your Foundry deployment name>       # e.g. Llama-3.3-70B-Instruct
+    api_key_env: AZURE_AI_API_KEY               # env var holding the key
+    endpoint: https://<resource>.services.ai.azure.com/models
+    api_version: 2024-05-01-preview             # optional
+  ```
+
+  Then export the key: `export AZURE_AI_API_KEY=...` (or add it as a GitHub
+  Actions secret). Prompts and output parsing are identical to the Anthropic path.
 
 Pick an unguessable topic name (anyone who knows it can read your reports), e.g.
 `csn-a8f3k29xqz`, and subscribe to it in the ntfy app or at
@@ -145,8 +166,9 @@ Sources are pluggable. For another RSS feed, just add an entry under
 3. Add a config entry.
 
 Nothing else in the pipeline changes. The LLM backend is similarly pluggable via
-the `LLMClient` protocol (`src/cybersecnews/llm/base.py`), so a local Ollama
-backend can be dropped in later.
+the `LLMClient` protocol (`src/cybersecnews/llm/base.py`) — the shipped backends
+are Anthropic Claude and Azure AI Foundry (see *Choosing the LLM provider*), and
+a local Ollama backend could be dropped in later.
 
 ## Deployment (GitHub Actions)
 
@@ -154,7 +176,8 @@ The intended hosting is a scheduled GitHub Actions workflow — no server needed
 and **deploy = `git push`**.
 
 1. Add repository **Secrets** (Settings → Secrets and variables → Actions):
-   `ANTHROPIC_API_KEY`, `NTFY_TOPIC`, and optionally `NTFY_TOKEN`.
+   the LLM key for your provider (`ANTHROPIC_API_KEY` **or** `AZURE_AI_API_KEY`),
+   `NTFY_TOPIC`, and optionally `NTFY_TOKEN`.
 2. `.github/workflows/daily.yml` runs every 4h (UTC) and on manual dispatch.
    After each run it commits the updated `data/seen.db` **and** `public/atom.xml`
    back to the repo, so the "already reported" memory survives between ephemeral

@@ -40,7 +40,11 @@ jobs:
 
       - name: Run aggregator
         env:
+          # LLM key. Set the one matching llm.provider in config.yaml:
+          #   provider: anthropic     -> ANTHROPIC_API_KEY
+          #   provider: azure_foundry -> AZURE_AI_API_KEY
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          AZURE_AI_API_KEY: ${{ secrets.AZURE_AI_API_KEY }}   # optional; for the azure_foundry provider
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
           NTFY_TOKEN: ${{ secrets.NTFY_TOKEN }}   # optional; empty if unset
           # Auto-provided by Actions; raises the GitHub Advisories API rate limit
