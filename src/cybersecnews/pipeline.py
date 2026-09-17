@@ -12,7 +12,7 @@ from .config import Config
 from .connectors import build_connectors
 from .db import Database
 from .dedup import DedupEngine
-from .llm.base import LLMClient
+from .llm.base import LLMClient, LLMUnavailableError
 from .logging_setup import get_logger
 from .models import Article, Vulnerability
 from .report import Report, build_report
@@ -145,6 +145,20 @@ def run(config: Config, db: Database, llm: LLMClient, dry_run: bool = False) -> 
         stats.new_items,
         stats.duplicates,
     )
+
+    # -- systemic LLM-outage guard ---------------------------------------------
+    # Individual classify errors are tolerated (the item is dropped), but if
+    # there were articles to classify and *every* classify call errored, the run
+    # produced nothing because the model was unreachable (bad key / no credit /
+    # wrong endpoint), not because there was no news. Abort loudly so the
+    # workflow goes red instead of silently sending nothing. Backends that don't
+    # track this (the offline stub / test fakes) expose no counters -> no abort.
+    calls = getattr(llm, "classify_calls", 0)
+    errors = getattr(llm, "classify_errors", 0)
+    if calls > 0 and errors == calls:
+        raise LLMUnavailableError(
+            f"all {calls} classify call(s) to the LLM failed; aborting run"
+        )
 
     # -- report ----------------------------------------------------------------
     report = build_report(new_items)

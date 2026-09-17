@@ -25,6 +25,7 @@ class ScriptedChatClient(ChatJSONClient):
     """ChatJSONClient whose raw API responses are supplied verbatim."""
 
     def __init__(self, responses: list[str | None]):
+        super().__init__()
         self._responses = list(responses)
 
     def _text_call(self, system, user):
@@ -53,6 +54,17 @@ def test_classify_failed_call_drops_to_other():
     c = client.classify(make_article(title="X"))
     assert c.category == CATEGORY_OTHER
     assert c.canonical_key == ""
+
+
+def test_classify_counters_distinguish_error_from_unparseable():
+    # None (API error) counts as an availability failure; a non-JSON response
+    # is dropped but does NOT count as the LLM being unavailable.
+    client = ScriptedChatClient([None, "not json at all", '{"category": "other", "canonical_key": "", "one_line": "x"}'])
+    client.classify(make_article())   # API error
+    client.classify(make_article())   # unparseable
+    client.classify(make_article())   # ok
+    assert client.classify_calls == 3
+    assert client.classify_errors == 1
 
 
 def _seen(rec_id: int) -> SeenRecord:

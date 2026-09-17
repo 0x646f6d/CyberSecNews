@@ -97,6 +97,16 @@ Tests in `tests/` (see Testing below).
 - **Store-after-report ordering:** new items are persisted only after the report is
   built (and never on `--dry-run`), so a crash mid-run doesn't silently swallow an
   unreported item.
+- **Systemic-LLM-outage guard.** A single classify error is tolerated (the item is
+  dropped), but if there were articles to classify and *every* classify call
+  errored (bad key / exhausted credit / wrong endpoint), the pipeline raises
+  `LLMUnavailableError` (`llm/base.py`) and the CLI exits **3** — so the workflow
+  goes red instead of silently "sending nothing". Distinguishes a real API error
+  (exception in `_text_call`) from a genuine `other` verdict or an unparseable
+  response (neither aborts). Counters live on `ChatJSONClient`
+  (`classify_calls`/`classify_errors`); backends without them (offline stub, test
+  fakes) never trip the guard. CLI exit codes: `0` ok, `1` send failure, `2` config
+  error, `3` LLM unavailable.
 - **Relevance scoring.** The classify call also returns a `relevance` score
   (`Classification.relevance`, 1..5) — how much a defender should care, driven by
   deployment breadth + exposure/exploitation (Windows/perimeter/actively-exploited

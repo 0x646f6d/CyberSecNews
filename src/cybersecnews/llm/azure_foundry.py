@@ -24,6 +24,7 @@ DEFAULT_API_VERSION = "2024-05-01-preview"
 
 class AzureFoundryClient(ChatJSONClient):
     def __init__(self, config: LLMConfig) -> None:
+        super().__init__()
         if not config.endpoint:
             raise ValueError(
                 "llm.endpoint is not set; the Azure Foundry backend needs the "

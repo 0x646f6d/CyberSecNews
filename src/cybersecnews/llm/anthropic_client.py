@@ -20,6 +20,7 @@ log = get_logger(__name__)
 
 class AnthropicClient(ChatJSONClient):
     def __init__(self, config: LLMConfig) -> None:
+        super().__init__()
         if not config.api_key:
             raise ValueError(
                 "ANTHROPIC_API_KEY is not set; cannot use the Anthropic LLM backend."

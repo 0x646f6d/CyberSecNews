@@ -104,6 +104,13 @@ class ChatJSONClient(LLMClient):
     provider API call, defensive: log and return ``None`` on any error).
     """
 
+    def __init__(self) -> None:
+        # Availability accounting so the pipeline can detect a systemic outage
+        # (every classify call erroring) vs. genuinely quiet news. Subclasses
+        # must call super().__init__().
+        self.classify_calls = 0
+        self.classify_errors = 0
+
     def _text_call(self, system: str, user: str) -> Optional[str]:
         raise NotImplementedError
 
@@ -111,11 +118,25 @@ class ChatJSONClient(LLMClient):
 
     def classify(self, article: Article) -> Classification:
         user = f"Title: {article.title}\n\nSummary: {article.summary}"
-        data = self._json_call(CLASSIFY_SYSTEM, user)
-        if data is None:
-            # On failure we drop the item (mark "other") rather than risk a
-            # miscategorised send.
+        self.classify_calls += 1
+        # Distinguish a real API error (None from _text_call) from a response
+        # that came back but wasn't parseable JSON: only the former counts as an
+        # availability failure for the systemic-outage guard.
+        text = self._text_call(CLASSIFY_SYSTEM, user)
+        if text is None:
+            self.classify_errors += 1
             log.warning("[llm] classify failed for %s; dropping", article.url)
+            return Classification(
+                category=CATEGORY_OTHER, canonical_key="", one_line=article.title
+            )
+        data = _extract_json(text)
+        if data is None:
+            # Got a response, but not usable JSON. Drop the item (don't risk a
+            # miscategorised send) but don't treat it as the LLM being down.
+            log.warning(
+                "[llm] classify returned unparseable output for %s; dropping",
+                article.url,
+            )
             return Classification(
                 category=CATEGORY_OTHER, canonical_key="", one_line=article.title
             )

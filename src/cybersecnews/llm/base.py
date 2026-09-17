@@ -11,6 +11,18 @@ from typing import Optional, Protocol
 from ..models import Article, Classification, SeenRecord
 
 
+class LLMUnavailableError(RuntimeError):
+    """Raised when the LLM backend appears systemically unreachable.
+
+    Individual failed calls are tolerated (a single flaky article is dropped),
+    but if *every* classify call in a run errors — e.g. the API key is invalid,
+    the credit balance is exhausted, or the endpoint is wrong — the run produced
+    nothing because the model was down, not because there was no news. The
+    pipeline raises this so the CLI exits non-zero and the workflow goes red
+    instead of silently reporting nothing.
+    """
+
+
 class LLMClient(Protocol):
     def classify(self, article: Article) -> Classification:
         """Classify one article and extract structured identity fields."""

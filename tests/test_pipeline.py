@@ -4,9 +4,13 @@ from __future__ import annotations
 
 from datetime import datetime, timezone
 
+import pytest
+
 import cybersecnews.pipeline as pipeline
 from cybersecnews.config import Config, ConnectorConfig, LLMConfig, NtfyConfig
 from cybersecnews.db import Database
+from cybersecnews.llm.base import LLMUnavailableError
+from cybersecnews.llm.chat import ChatJSONClient
 from cybersecnews.models import (
     CATEGORY_OTHER,
     CATEGORY_RED_TEAM,
@@ -196,6 +200,62 @@ def test_unscored_relevance_fails_open(tmp_path, monkeypatch):
     stats = pipeline.run(config, db, llm, dry_run=True)
     assert stats.low_relevance == 0
     assert stats.new_items == 1
+    db.close()
+
+
+class QueuedChatClient(ChatJSONClient):
+    """A real ChatJSONClient (so it tracks classify_calls/errors) whose raw API
+    responses are drawn from a queue. `None` simulates an API error."""
+
+    def __init__(self, responses):
+        super().__init__()
+        self._responses = list(responses)
+
+    def _text_call(self, system, user):
+        return self._responses.pop(0) if self._responses else None
+
+
+_GOOD = '{"category": "vulnerability", "canonical_key": "a:b:rce", "one_line": "x"}'
+
+
+def test_systemic_llm_failure_aborts(tmp_path, monkeypatch):
+    # Every classify call errors (e.g. bad key / no credit): the run must abort
+    # loudly rather than silently reporting nothing.
+    articles = [_article("https://n/1", "vuln one"), _article("https://n/2", "vuln two")]
+    _patch_connectors(monkeypatch, articles)
+    llm = QueuedChatClient([None, None])  # both classify calls fail
+    config = _config(tmp_path)
+    db = Database(config.database)
+    try:
+        with pytest.raises(LLMUnavailableError):
+            pipeline.run(config, db, llm, dry_run=True)
+    finally:
+        db.close()
+
+
+def test_partial_llm_failure_does_not_abort(tmp_path, monkeypatch):
+    # One classify succeeds, one errors -> not systemic; the run proceeds and
+    # reports the item that classified.
+    articles = [_article("https://n/1", "vuln one"), _article("https://n/2", "vuln two")]
+    _patch_connectors(monkeypatch, articles)
+    llm = QueuedChatClient([_GOOD, None])
+    config = _config(tmp_path)
+    db = Database(config.database)
+    stats = pipeline.run(config, db, llm, dry_run=True)
+    assert stats.new_items == 1
+    db.close()
+
+
+def test_no_candidates_does_not_abort(tmp_path, monkeypatch):
+    # Prefilter drops everything -> zero classify calls -> not a systemic outage.
+    articles = [_article("https://n/1", "cooking recipe", "no security here")]
+    _patch_connectors(monkeypatch, articles)
+    llm = QueuedChatClient([])
+    config = _config(tmp_path)
+    config.prefilter = {"vulnerability": ["exploit", "cve-"]}
+    db = Database(config.database)
+    stats = pipeline.run(config, db, llm, dry_run=True)  # must not raise
+    assert stats.prefiltered == 0
     db.close()
 
 

@@ -10,7 +10,7 @@ from . import __version__
 from .config import Config, ConfigError, load_config
 from .db import Database
 from .feed import write_atom_feed
-from .llm.base import LLMClient
+from .llm.base import LLMClient, LLMUnavailableError
 from .logging_setup import configure, get_logger
 from .notify import NtfyError, send_report
 from .pipeline import run
@@ -90,6 +90,11 @@ def main(argv: Optional[list[str]] = None) -> int:
         # persisted at this point). Skipped on dry runs, which persist nothing.
         if config.feed.enabled and not args.dry_run:
             write_atom_feed(db.latest(config.feed.max_items), config.feed)
+    except LLMUnavailableError as exc:
+        # Systemic LLM outage: fail loudly (non-zero exit) so the workflow goes
+        # red rather than silently sending nothing.
+        log.error("LLM unavailable: %s", exc)
+        return 3
     finally:
         db.close()
 
