@@ -3,7 +3,52 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-09-17T13:05:43.117604+00:00</updated>
+  <updated>2026-09-17T19:35:49.181213+00:00</updated>
+  <entry>
+    <title>Vendure affected by external-authentication account takeover: external login linked to a pre-existing account by email without verification (CVE-2026-63472)</title>
+    <id>urn:cybersecnews:item:398</id>
+    <published>2026-09-17T19:35:49.181213+00:00</published>
+    <updated>2026-09-17T19:35:49.181213+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-6j36-r6pr-59x4" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · account-takeover · CVE-2026-63472&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Vendure @vendure/core is affected by a critical account takeover vulnerability (CVE-2026-63472) in deployments using external/social authentication strategies. The flaw allows attackers to link external login credentials to pre-existing accounts by email address without requiring email verification from the external provider, enabling unauthorized account access. This vulnerability only impacts installations using third-party authentication methods (not the built-in email/password strategy) where the provider returns unverified email addresses. Immediate patching is required for all Vendure deployments using external authentication; verify that your authentication strategy validates email ownership before account linking.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-6j36-r6pr-59x4"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>RabbitMQ amqp091-go: Missing Explicit TLS Minimum Version Configuration In URI Parser (CVE-2026-77405)</title>
+    <id>urn:cybersecnews:item:397</id>
+    <published>2026-09-17T19:35:49.180037+00:00</published>
+    <updated>2026-09-17T19:35:49.180037+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-33mj-cw25-m34h" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · weak-tls-config · CVE-2026-77405&lt;/em&gt;&lt;/p&gt;&lt;p&gt;The RabbitMQ amqp091-go library contains a critical vulnerability (CVE-2026-77405) in its TLS configuration parser that fails to explicitly set a minimum TLS version when processing amqps:// URIs, instead relying on implicit Go compiler defaults that could allow downgrade attacks to older TLS versions if compilation conditions change. The vulnerability affects the tlsConfigFromURI function and could enable attackers to force legacy TLS versions during connection negotiation. Users should immediately update to a patched version of amqp091-go that explicitly sets MinVersion to TLS 1.2 or higher in the TLS configuration, regardless of Go toolchain version. There is no indication of active exploitation, but the critical severity rating warrants urgent patching given the potential for man-in-the-middle attacks via TLS downgrade.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-33mj-cw25-m34h"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>RabbitMQ amqp091-go: Protocol Desynchronization and Frame Injection via Integer Overflow in readLongstr (CVE-2026-77411)</title>
+    <id>urn:cybersecnews:item:396</id>
+    <published>2026-09-17T19:35:49.179029+00:00</published>
+    <updated>2026-09-17T19:35:49.179029+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-c5pq-fr2g-9jpf" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · protocol-desynchronization · CVE-2026-77411&lt;/em&gt;&lt;/p&gt;&lt;p&gt;RabbitMQ's amqp091-go library contains a critical integer overflow vulnerability in the readLongstr function that allows protocol desynchronization and frame injection attacks. When a malformed AMQP message specifies a long string length exceeding 2^31-1 bytes, the parser fails to consume the expected data from the network buffer while returning success, causing subsequent frames to be misinterpreted. This vulnerability is critical in severity and enables attackers to inject arbitrary frames or cause denial of service in AMQP connections. Users should immediately update to a patched version of amqp091-go; the recommended action is to apply the latest security release from the RabbitMQ project.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-c5pq-fr2g-9jpf"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>China-Aligned FamousSparrow Deploys SparroWocky Backdoor Across Latin America</title>
+    <id>urn:cybersecnews:item:395</id>
+    <published>2026-09-17T19:35:49.177967+00:00</published>
+    <updated>2026-09-17T19:35:49.177967+00:00</updated>
+    <link href="https://thehackernews.com/2026/09/china-aligned-famoussparrow-deploys.html" rel="alternate" />
+    <category term="red-team" />
+    <content type="html">&lt;p&gt;&lt;em&gt;red-team · c2&lt;/em&gt;&lt;/p&gt;&lt;p&gt;China-aligned APT FamousSparrow is deploying a novel C++ modular backdoor called SparroWocky against Latin American targets since at least August 2025. SparroWocky provides remote access and command execution capabilities with modular functionality, enabling attackers to customize functionality post-compromise. No public information indicates active exploitation in broader campaigns beyond the observed regional targeting, though the backdoor's sophistication suggests state-sponsored development and intent for continued use. Organizations in Latin America should prioritize threat hunting for SparroWocky indicators of compromise, implement network segmentation to contain potential compromises, and maintain updated endpoint detection and response capabilities to identify C++ backdoor execution patterns.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/09/china-aligned-famoussparrow-deploys.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Critical Unbound DNSSEC Validator Flaw Could Allow RCE via a Malicious DNS Zone</title>
+    <id>urn:cybersecnews:item:394</id>
+    <published>2026-09-17T19:35:49.175965+00:00</published>
+    <updated>2026-09-17T19:35:49.175965+00:00</updated>
+    <link href="https://thehackernews.com/2026/09/critical-unbound-dnssec-validator-flaw.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · heap-overflow · CVE-2024-1642&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Unbound DNS resolver versions before 1.26.1 contain a critical heap overflow vulnerability (CVE-2026-81642) in the DNSSEC validator that allows remote code execution when an attacker controls a malicious DNS zone. An unauthenticated attacker can trigger the flaw by querying a vulnerable resolver, potentially gaining full system compromise. Immediate patching to version 1.26.1 or later is mandatory; consider implementing query rate limiting and network segmentation as temporary mitigations if immediate patching is not feasible. Monitor for any exploitation attempts targeting Unbound instances in your environment.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/09/critical-unbound-dnssec-validator-flaw.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Windows-Update sperrt Domain-Nutzer aus</title>
     <id>urn:cybersecnews:item:393</id>
@@ -263,7 +308,7 @@
     <updated>2026-09-04T03:10:00.992326+00:00</updated>
     <link href="https://github.com/advisories/GHSA-fph3-ghq9-vw66" rel="alternate" />
     <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · sql-injection · CVE-2026-69083&lt;/em&gt;&lt;/p&gt;&lt;p&gt;SiYuan's `/api/search/fullTextSearchAssetContent` endpoint contains critical SQL injection and REGEXP injection vulnerabilities (CVE-2026-69083) in the asset-content database that are exploitable by unauthenticated users with the publish RoleReader token or when authentication is disabled. The vulnerability allows arbitrary SQL execution and unescaped REGEXP operations without read-only protections, enabling data manipulation and exfiltration. This is actively exploitable in publish mode and affects the SiYuan kernel (go/github.com/siyuan-note/siyuan/kernel). Immediate patching is required; disable publish mode or enforce strict authentication (`Publish.Auth.Enable: true`) as interim mitigation.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-fph3-ghq9-vw66"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · sql-injection · CVE-2026-69083, CVE-2026-75513&lt;/em&gt;&lt;/p&gt;&lt;p&gt;SiYuan's `/api/search/fullTextSearchAssetContent` endpoint contains critical SQL injection and REGEXP injection vulnerabilities (CVE-2026-69083) in the asset-content database that are exploitable by unauthenticated users with the publish RoleReader token or when authentication is disabled. The vulnerability allows arbitrary SQL execution and unescaped REGEXP operations without read-only protections, enabling data manipulation and exfiltration. This is actively exploitable in publish mode and affects the SiYuan kernel (go/github.com/siyuan-note/siyuan/kernel). Immediate patching is required; disable publish mode or enforce strict authentication (`Publish.Auth.Enable: true`) as interim mitigation.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-fph3-ghq9-vw66"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
   </entry>
   <entry>
     <title>SiYuan: SQL injection in backlink/mention search via unescaped stored and client input (publish mode): first-order (client keyword) and second-order (stored document title) breakout on read-write handle (CVE-2026-72811)</title>
@@ -858,50 +903,5 @@
     <link href="https://www.bleepingcomputer.com/news/security/cisa-warns-of-hackers-exploiting-critical-mlflow-vulnerability/" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;MLflow open-source AI engineering platform is vulnerable to remote code execution via inadequate access controls in its API endpoints. The vulnerability is critical severity and is currently being actively exploited in the wild. Federal agencies and organizations using MLflow should immediately patch to the latest patched version and review access logs for signs of compromise. Additionally, restrict network access to MLflow instances and implement proper authentication controls on all API endpoints.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/cisa-warns-of-hackers-exploiting-critical-mlflow-vulnerability/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>NASA AIT-GUI Flaws Could Let Unauthenticated Attackers Issue Spacecraft Commands</title>
-    <id>urn:cybersecnews:item:298</id>
-    <published>2026-08-20T16:35:25.851171+00:00</published>
-    <updated>2026-08-20T16:35:25.851171+00:00</updated>
-    <link href="https://thehackernews.com/2026/08/nasa-ait-gui-flaws-could-let.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass,rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;NASA/JPL's AMMOS Instrument Toolkit (AIT-GUI) browser-based operator console contains a critical authentication bypass chain (GHSA-p9r8-2q67-fp86, CVSS 9.4) allowing unauthenticated attackers to issue arbitrary commands to spacecraft and instrument command buses. The vulnerability stems from missing authentication controls on sensitive operational endpoints. No indication of active exploitation in the wild has been reported. Immediate patching is required; users should upgrade to patched versions and restrict network access to AIT-GUI instances to trusted networks only.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/08/nasa-ait-gui-flaws-could-let.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>CDN Tsunami Attack Abuses HTTP/3 Translation for Up to 350x DoS Amplification</title>
-    <id>urn:cybersecnews:item:297</id>
-    <published>2026-08-20T16:35:25.850106+00:00</published>
-    <updated>2026-08-20T16:35:25.850106+00:00</updated>
-    <link href="https://thehackernews.com/2026/08/cdn-tsunami-attack-abuses-http3.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · dos-amplification&lt;/em&gt;&lt;/p&gt;&lt;p&gt;CDN Tsunami exploits HTTP/3 to HTTP/1.1 translation mechanisms in major CDNs (Alibaba, Baidu, and others) to amplify DoS attacks up to 350x against origin servers. The vulnerability stems from how CDNs convert client HTTP/3 requests into backend HTTP/1.1 calls, allowing attackers to generate disproportionate load with minimal bandwidth. This is a high-severity attack technique with potential for real-world exploitation given the widespread use of affected CDNs. Organizations should coordinate with their CDN providers on request rate limiting, implement origin-side rate controls, and monitor for anomalous traffic patterns from CDN sources.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/08/cdn-tsunami-attack-abuses-http3.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Isolated-vm Flaw Lets Sandboxed JavaScript Escape to Host for Potential RCE</title>
-    <id>urn:cybersecnews:item:296</id>
-    <published>2026-08-20T16:35:25.848498+00:00</published>
-    <updated>2026-08-20T16:35:25.848498+00:00</updated>
-    <link href="https://thehackernews.com/2026/08/isolated-vm-flaw-lets-sandboxed.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · sandbox-escape&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Isolated-vm, a popular Node.js sandboxing library (all versions through 7.0.0), contains a critical escape vulnerability (GHSA-864f-rcv7-6rh4) allowing attackers to break out of the sandbox and achieve potential remote code execution on the host system. The flaw affects JavaScript execution isolation, undermining the core security premise of the library. No CVE has been assigned yet, and exploitability in the wild is not mentioned. Immediately upgrade to the patched version beyond 7.0.0 and assess any applications using isolated-vm for unauthorized access or code execution.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/08/isolated-vm-flaw-lets-sandboxed.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>CVE-2026-19490: Critical Vulnerability Affecting Citrix NetScaler ADC and NetScaler Gateway</title>
-    <id>urn:cybersecnews:item:295</id>
-    <published>2026-08-20T01:12:17.843015+00:00</published>
-    <updated>2026-08-20T01:12:17.843015+00:00</updated>
-    <link href="https://www.rapid7.com/blog/post/etr-cve-2026-19490-critical-vulnerability-affecting-citrix-netscaler-adc-and-netscaler-gateway" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2019-1068, CVE-2026-19490, CVE-2026-21962&lt;/em&gt;&lt;/p&gt;&lt;p&gt;CVE-2026-19490 is a critical authentication bypass vulnerability (CVSS 9.3) affecting Citrix NetScaler ADC and NetScaler Gateway versions 14.1 prior to 14.1-73.32 and 13.1 prior to 13.1-63.21, exploitable remotely by unauthenticated attackers without user interaction. While not yet observed in active exploitation as of August 19, 2026, these perimeter-deployed systems are high-value targets with historical patterns of rapid weaponization. Organizations must emergency-patch affected appliances immediately to the specified fixed versions and review configurations for SAML authentication or VPN vserver settings to identify vulnerable instances. Mitigation involves updating to NetScaler ADC/Gateway 14.1-73.32 or later, 13.1-63.21 or later, or corresponding FIPS versions.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.rapid7.com/blog/post/etr-cve-2026-19490-critical-vulnerability-affecting-citrix-netscaler-adc-and-netscaler-gateway"&gt;Read more&lt;/a&gt; · Source: rapid7&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>US warns of AI-powered attacks on Siemens PLCs in critical infrastructure</title>
-    <id>urn:cybersecnews:item:294</id>
-    <published>2026-08-20T01:12:17.840330+00:00</published>
-    <updated>2026-08-20T01:12:17.840330+00:00</updated>
-    <link href="https://www.bleepingcomputer.com/news/security/us-warns-of-ai-powered-attacks-on-siemens-plcs-in-critical-infrastructure/" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Siemens S7 Series PLCs are targeted by threat actors using AI-generated exploit scripts to compromise critical infrastructure systems. The attack leverages automated payload generation to identify and exploit vulnerabilities in these industrial control devices. No specific CVE or severity rating provided, but active exploitation in critical infrastructure sectors indicates high risk with confirmed wild deployment. Immediate action required: patch all exposed Siemens PLCs to latest firmware versions, implement network segmentation isolating PLCs from untrusted networks, and deploy anomaly detection monitoring for unusual PLC communications.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/us-warns-of-ai-powered-attacks-on-siemens-plcs-in-critical-infrastructure/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
   </entry>
 </feed>
