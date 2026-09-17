@@ -69,20 +69,23 @@ cp config.example.yaml config.yaml   # then edit to taste (optional)
 The classify/dedup/summarize model is pluggable via `llm.provider`:
 
 - **`anthropic`** (default) — Claude Haiku via the Anthropic API (`ANTHROPIC_API_KEY`).
-- **`azure_foundry`** — any chat model deployed on **Azure AI Foundry**, via the
-  Foundry model-inference endpoint. Set in `config.yaml`:
+- **`azure_foundry`** — a **Claude model deployed on Azure AI Foundry**, called
+  through the Anthropic Messages API (`.../anthropic/v1/messages`) via the
+  `AnthropicFoundry` client. Set in `config.yaml`:
 
   ```yaml
   llm:
     provider: azure_foundry
-    model: <your Foundry deployment name>       # e.g. Llama-3.3-70B-Instruct
-    api_key_env: AZURE_AI_API_KEY               # env var holding the key
-    endpoint: https://<resource>.services.ai.azure.com/models
-    api_version: 2024-05-01-preview             # optional
+    model: <your Foundry Claude deployment name>   # e.g. claude-haiku-4-5
+    api_key_env: AZURE_AI_API_KEY                  # env var holding the key
+    endpoint: https://<resource>.services.ai.azure.com
   ```
 
-  Then export the key: `export AZURE_AI_API_KEY=...` (or add it as a GitHub
-  Actions secret). Prompts and output parsing are identical to the Anthropic path.
+  `endpoint` only needs the resource host — any path you paste (`.../anthropic`,
+  `.../models`, …) is normalised to the Anthropic route, and a bare resource name
+  works too. No `api_version` is needed. Then export the key:
+  `export AZURE_AI_API_KEY=...` (or add it as a GitHub Actions secret). Prompts and
+  output parsing are identical to the first-party Anthropic path.
 
 #### Configuring the provider from the environment (GitHub Actions)
 
@@ -93,9 +96,8 @@ the environment — env values win over the file, and empty values are ignored:
 | Env var | Overrides | Example |
 | --- | --- | --- |
 | `LLM_PROVIDER` | `llm.provider` | `azure_foundry` |
-| `LLM_MODEL` | `llm.model` | `Llama-3.3-70B-Instruct` |
-| `LLM_ENDPOINT` | `llm.endpoint` | `https://<res>.services.ai.azure.com/models` |
-| `LLM_API_VERSION` | `llm.api_version` | `2024-05-01-preview` |
+| `LLM_MODEL` | `llm.model` | `claude-haiku-4-5` |
+| `LLM_ENDPOINT` | `llm.endpoint` | `https://<res>.services.ai.azure.com` |
 | `LLM_API_KEY_ENV` | `llm.api_key_env` | `AZURE_AI_API_KEY` (also the default for `azure_foundry`) |
 | `LLM_MAX_TOKENS` | `llm.max_tokens` | `1024` |
 

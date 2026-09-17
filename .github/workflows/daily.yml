@@ -43,15 +43,13 @@ jobs:
           # LLM config via env (overrides config.example.yaml; no config.yaml is
           # committed). Set these as repository Variables (Settings → Secrets and
           # variables → Actions → Variables). Leave them unset to use Anthropic.
-          #   For Azure AI Foundry set:
+          #   For a Claude model on Azure AI Foundry set:
           #     LLM_PROVIDER = azure_foundry
-          #     LLM_MODEL    = <your Foundry deployment name>
-          #     LLM_ENDPOINT = https://<resource>.services.ai.azure.com/models
-          #     LLM_API_VERSION = 2024-05-01-preview   (optional)
+          #     LLM_MODEL    = <your Foundry Claude deployment name>  (e.g. claude-haiku-4-5)
+          #     LLM_ENDPOINT = https://<resource>.services.ai.azure.com
           LLM_PROVIDER: ${{ vars.LLM_PROVIDER }}
           LLM_MODEL: ${{ vars.LLM_MODEL }}
           LLM_ENDPOINT: ${{ vars.LLM_ENDPOINT }}
-          LLM_API_VERSION: ${{ vars.LLM_API_VERSION }}
           # LLM key (secret). Set the one matching LLM_PROVIDER:
           #   anthropic     -> ANTHROPIC_API_KEY
           #   azure_foundry -> AZURE_AI_API_KEY

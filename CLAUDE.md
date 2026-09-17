@@ -50,8 +50,8 @@ Orchestrated by `src/cybersecnews/pipeline.py::run()`.
 | `connectors/__init__.py` | Type registry (`rss`, `cisa_kev`, `github_advisories`) + `build_connectors()`. |
 | `llm/base.py` | `LLMClient` protocol: `classify`, `match_existing`, `summarize`. |
 | `llm/chat.py` | `ChatJSONClient` — provider-agnostic base: prompts (`CLASSIFY_SYSTEM`/`MATCH_SYSTEM`/`SUMMARIZE_SYSTEM`), classify/match/summarize orchestration, defensive JSON extraction + classification parsing. Backends implement only `_text_call`. |
-| `llm/anthropic_client.py` | Claude Haiku backend. Subclasses `ChatJSONClient`; adds the Anthropic API call. |
-| `llm/azure_foundry.py` | Azure AI Foundry backend (`azure_foundry` provider). Subclasses `ChatJSONClient`; calls a Foundry model-inference endpoint via `azure-ai-inference` (`ChatCompletionsClient`) with an API key. Any Foundry-hosted chat model (`llm.model`). |
+| `llm/anthropic_client.py` | Anthropic Messages backends. `_AnthropicMessagesClient` (shared `_text_call` via `messages.create`) + `AnthropicClient` (first-party `Anthropic`, Claude Haiku). |
+| `llm/azure_foundry.py` | Azure AI Foundry backend (`azure_foundry` provider) — a **Claude** model on Foundry via the `AnthropicFoundry` client (Anthropic Messages API at `.../anthropic/v1/messages`). Subclasses `_AnthropicMessagesClient`; only builds the client. `_foundry_base_url()` normalises any endpoint/host/resource-name to `https://<host>/anthropic/`. |
 | `llm/stub.py` | `HeuristicLLM` — offline keyword-based stub for `--dry-run`/tests. **Approximate, not a substitute for the real model.** |
 | `llm/__init__.py` | `build_llm(config)` factory. |
 | `db.py` | SQLite store (`Database`): the `seen` table, lookups, `insert`, `add_cves` (backfill). |
@@ -168,7 +168,7 @@ python -m pytest -q
 - **LLM block is env-overridable** (env wins over YAML; empty = unset), so the
   non-secret config can be driven entirely from the environment in Actions where
   no `config.yaml` is committed: `LLM_PROVIDER`, `LLM_MODEL`, `LLM_ENDPOINT`,
-  `LLM_API_VERSION`, `LLM_API_KEY_ENV`, `LLM_MAX_TOKENS` (see `config.py::load_config`).
+  `LLM_API_KEY_ENV`, `LLM_MAX_TOKENS` (see `config.py::load_config`).
   `api_key_env` defaults per provider (`ANTHROPIC_API_KEY` / `AZURE_AI_API_KEY`).
   `daily.yml` passes the LLM_* vars from repo **Variables** and the key from a
   **Secret**.
@@ -201,12 +201,15 @@ Hosting is **GitHub Actions** — no server; **deploy = `git push`**.
   - **`anthropic`** (default): Claude Haiku `claude-haiku-4-5-20251001`
     (`llm/anthropic_client.py`; default model in `config.py`). Cheap at this
     volume, no host.
-  - **`azure_foundry`**: any chat model deployed on Azure AI Foundry
-    (`llm/azure_foundry.py`), via the Foundry model-inference endpoint
-    (`azure-ai-inference` SDK) with an API key. Needs `llm.endpoint`
-    (`https://<resource>.services.ai.azure.com/models`), `llm.model` (the Foundry
-    deployment name), optional `llm.api_version`, and the key in the env var named
-    by `llm.api_key_env` (e.g. `AZURE_AI_API_KEY`).
+  - **`azure_foundry`**: a **Claude** model deployed on Azure AI Foundry
+    (`llm/azure_foundry.py`), called through the Anthropic Messages API
+    (`.../anthropic/v1/messages`) via the Anthropic SDK's `AnthropicFoundry`
+    client — **not** `azure-ai-inference`/`/chat/completions` (that route 404s for
+    Claude deployments). Needs `llm.endpoint` (just the resource host, e.g.
+    `https://<resource>.services.ai.azure.com`; any path is normalised, a bare
+    resource name works), `llm.model` (the Foundry Claude deployment name), and the
+    key in the env var named by `llm.api_key_env` (e.g. `AZURE_AI_API_KEY`). No
+    `api_version` — the SDK manages it.
 - **When touching any LLM/prompt/model code, load the `claude-api` skill first**
   (model ids, params, tool use, token/cost). Don't hand-edit model ids from memory.
 - Prompts and all JSON/classification parsing live as module constants + helpers

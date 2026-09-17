@@ -254,13 +254,13 @@ prefilter:
 # LLM settings. The API key comes from the ANTHROPIC_API_KEY environment variable.
 llm:
   # provider: "anthropic" (Claude via the Anthropic API) or "azure_foundry"
-  # (any chat model deployed on Azure AI Foundry, via the Foundry model-inference
-  # endpoint). The prompts and JSON parsing are identical for both.
+  # (a Claude model deployed on Azure AI Foundry, via the Anthropic Messages API
+  # at .../anthropic/v1/messages). The prompts and JSON parsing are identical.
   #
   # ENV OVERRIDES: every field below can be set from the environment, which wins
   # over this file — handy in GitHub Actions where no config.yaml is committed:
-  #   LLM_PROVIDER, LLM_MODEL, LLM_ENDPOINT, LLM_API_VERSION, LLM_API_KEY_ENV,
-  #   LLM_MAX_TOKENS  (empty values are ignored).
+  #   LLM_PROVIDER, LLM_MODEL, LLM_ENDPOINT, LLM_API_KEY_ENV, LLM_MAX_TOKENS
+  #   (empty values are ignored).
   provider: anthropic
   model: claude-haiku-4-5-20251001
   max_tokens: 1024
@@ -273,15 +273,19 @@ llm:
   # rely only on url/CVE/canonical_key matching (cheaper, slightly less robust).
   semantic_dedup: true
 
-  # --- Azure AI Foundry (Foundry Model Inference) -------------------------------
-  # To use Azure instead of Anthropic, set the block above like this and provide
-  # the API key in the AZURE_AI_API_KEY env var / GitHub Actions secret:
+  # --- Azure AI Foundry (Claude on Foundry) -------------------------------------
+  # For a Claude model deployed on Azure AI Foundry, set the block above like this
+  # and provide the key in the AZURE_AI_API_KEY env var / GitHub Actions secret:
   #
   #   provider: azure_foundry
-  #   model: <your Foundry deployment / model name>   # e.g. Llama-3.3-70B-Instruct
+  #   model: <your Foundry Claude deployment name>    # e.g. claude-haiku-4-5
   #   api_key_env: AZURE_AI_API_KEY
-  #   endpoint: https://<resource>.services.ai.azure.com/models
-  #   api_version: 2024-05-01-preview   # optional; a sane default is used if unset
+  #   endpoint: https://<resource>.services.ai.azure.com
+  #
+  # `endpoint` just needs the resource host; any path you paste (…/anthropic,
+  # …/models, …) is normalised to the Anthropic route …/anthropic/v1/messages.
+  # A bare resource name also works (e.g. "my-resource"). No api_version needed —
+  # the Anthropic SDK manages it.
 
 # Minimum relevance to report. The LLM scores every interesting item 1..5 by how
 # much a security engineer should care — driven mainly by how widely the affected

@@ -131,12 +131,37 @@ def test_validate_requires_endpoint_for_azure():
 
 
 def test_build_azure_requires_key_before_sdk_import():
-    # No api_key -> ValueError raised before the Azure SDK is imported, so this
-    # passes even when azure-ai-inference is not installed.
+    # endpoint set but no api_key -> ValueError before the SDK client is built.
     cfg = LLMConfig(
         provider="azure_foundry",
-        endpoint="https://x.services.ai.azure.com/models",
+        endpoint="https://x.services.ai.azure.com",
         api_key=None,
     )
     with pytest.raises(ValueError):
         build_llm(cfg)
+
+
+def test_foundry_base_url_normalisation():
+    from cybersecnews.llm.azure_foundry import _foundry_base_url
+
+    host = "https://res.services.ai.azure.com/anthropic/"
+    assert _foundry_base_url("https://res.services.ai.azure.com/anthropic/chat/completions") == host
+    assert _foundry_base_url("https://res.services.ai.azure.com/models") == host
+    assert _foundry_base_url("https://res.services.ai.azure.com") == host
+    assert _foundry_base_url("res.services.ai.azure.com") == host
+    # a bare resource name gets the standard Foundry suffix
+    assert _foundry_base_url("res") == host
+
+
+def test_build_azure_uses_anthropic_foundry_and_shared_call():
+    # With a key + endpoint it builds an AnthropicFoundry client and routes to the
+    # shared Anthropic-Messages _text_call.
+    cfg = LLMConfig(
+        provider="azure_foundry",
+        model="claude-haiku-4-5",
+        endpoint="https://res.services.ai.azure.com",
+        api_key="fake",
+    )
+    client = build_llm(cfg)
+    assert type(client).__name__ == "AzureFoundryClient"
+    assert str(client._client.base_url) == "https://res.services.ai.azure.com/anthropic/"
