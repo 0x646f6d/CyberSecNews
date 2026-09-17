@@ -20,6 +20,16 @@ class ConfigError(Exception):
     """Raised when configuration is missing or invalid."""
 
 
+def _env(name: str) -> Optional[str]:
+    """Read an env var, treating an empty string as unset.
+
+    GitHub Actions passes an empty string for an unset `vars.X`/`secrets.X`, so
+    empty must mean "not provided" for env overrides to work there.
+    """
+    value = os.environ.get(name)
+    return value if value else None
+
+
 @dataclass
 class ConnectorConfig:
     name: str
@@ -140,17 +150,31 @@ def load_config(path: Optional[str | Path] = None) -> Config:
         for c in raw.get("connectors", [])
     ]
 
+    # LLM settings: env vars override the YAML so the non-secret config can be
+    # driven entirely from the environment (e.g. GitHub Actions, where no
+    # config.yaml is committed). Empty env values are treated as unset.
     llm_raw = raw.get("llm", {})
-    api_key_env = llm_raw.get("api_key_env", "ANTHROPIC_API_KEY")
+    provider = _env("LLM_PROVIDER") or llm_raw.get("provider", "anthropic")
+    model = _env("LLM_MODEL") or llm_raw.get("model", "claude-haiku-4-5-20251001")
+    endpoint = _env("LLM_ENDPOINT") or llm_raw.get("endpoint")
+    api_version = _env("LLM_API_VERSION") or llm_raw.get("api_version")
+    # Which env var holds the API key. Explicit override wins; otherwise the YAML
+    # value; otherwise a provider-appropriate default.
+    default_key_env = (
+        "AZURE_AI_API_KEY" if provider == "azure_foundry" else "ANTHROPIC_API_KEY"
+    )
+    api_key_env = (
+        _env("LLM_API_KEY_ENV") or llm_raw.get("api_key_env") or default_key_env
+    )
     llm = LLMConfig(
-        provider=llm_raw.get("provider", "anthropic"),
-        model=llm_raw.get("model", "claude-haiku-4-5-20251001"),
-        max_tokens=llm_raw.get("max_tokens", 1024),
+        provider=provider,
+        model=model,
+        max_tokens=int(_env("LLM_MAX_TOKENS") or llm_raw.get("max_tokens", 1024)),
         semantic_dedup=llm_raw.get("semantic_dedup", True),
         api_key=os.environ.get(api_key_env),
         api_key_env=api_key_env,
-        endpoint=llm_raw.get("endpoint"),
-        api_version=llm_raw.get("api_version"),
+        endpoint=endpoint,
+        api_version=api_version,
     )
 
     ntfy_raw = raw.get("ntfy", {})

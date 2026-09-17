@@ -256,13 +256,19 @@ llm:
   # provider: "anthropic" (Claude via the Anthropic API) or "azure_foundry"
   # (any chat model deployed on Azure AI Foundry, via the Foundry model-inference
   # endpoint). The prompts and JSON parsing are identical for both.
+  #
+  # ENV OVERRIDES: every field below can be set from the environment, which wins
+  # over this file — handy in GitHub Actions where no config.yaml is committed:
+  #   LLM_PROVIDER, LLM_MODEL, LLM_ENDPOINT, LLM_API_VERSION, LLM_API_KEY_ENV,
+  #   LLM_MAX_TOKENS  (empty values are ignored).
   provider: anthropic
   model: claude-haiku-4-5-20251001
   max_tokens: 1024
-  # Env var the API key is read from (never commit the key itself).
-  #   anthropic     -> ANTHROPIC_API_KEY (default)
-  #   azure_foundry -> e.g. AZURE_AI_API_KEY
-  api_key_env: ANTHROPIC_API_KEY
+  # Env var the API key is read from (never commit the key itself). Left unset
+  # here so it defaults by provider — ANTHROPIC_API_KEY for anthropic,
+  # AZURE_AI_API_KEY for azure_foundry — which keeps env-only provider switching
+  # (LLM_PROVIDER=azure_foundry) working. Uncomment only to force a custom name.
+  # api_key_env: ANTHROPIC_API_KEY
   # Whether to use the LLM semantic-match dedup layer (layer 3). Set false to
   # rely only on url/CVE/canonical_key matching (cheaper, slightly less robust).
   semantic_dedup: true

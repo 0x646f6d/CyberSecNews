@@ -84,6 +84,27 @@ The classify/dedup/summarize model is pluggable via `llm.provider`:
   Then export the key: `export AZURE_AI_API_KEY=...` (or add it as a GitHub
   Actions secret). Prompts and output parsing are identical to the Anthropic path.
 
+#### Configuring the provider from the environment (GitHub Actions)
+
+No `config.yaml` is committed, so in Actions the base is `config.example.yaml`
+(provider `anthropic`). Rather than commit a config, override the LLM block from
+the environment — env values win over the file, and empty values are ignored:
+
+| Env var | Overrides | Example |
+| --- | --- | --- |
+| `LLM_PROVIDER` | `llm.provider` | `azure_foundry` |
+| `LLM_MODEL` | `llm.model` | `Llama-3.3-70B-Instruct` |
+| `LLM_ENDPOINT` | `llm.endpoint` | `https://<res>.services.ai.azure.com/models` |
+| `LLM_API_VERSION` | `llm.api_version` | `2024-05-01-preview` |
+| `LLM_API_KEY_ENV` | `llm.api_key_env` | `AZURE_AI_API_KEY` (also the default for `azure_foundry`) |
+| `LLM_MAX_TOKENS` | `llm.max_tokens` | `1024` |
+
+In the repo, set the non-secret ones as **Variables** and the key as a **Secret**
+(Settings → Secrets and variables → Actions). For Azure that is `LLM_PROVIDER`,
+`LLM_MODEL`, `LLM_ENDPOINT` (Variables) plus `AZURE_AI_API_KEY` (Secret); the
+`daily.yml` workflow already passes these through. No code or config commit needed
+to switch providers — set the variables and re-run.
+
 Pick an unguessable topic name (anyone who knows it can read your reports), e.g.
 `csn-a8f3k29xqz`, and subscribe to it in the ntfy app or at
 `https://ntfy.sh/<topic>`.

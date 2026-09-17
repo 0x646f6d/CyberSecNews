@@ -165,6 +165,13 @@ python -m pytest -q
   `options:` carries their params (GHSA `severities`/`max_pages`/`token_env`).
 - Secrets come from the environment (never commit them). `config.yaml` is
   git-ignored; `config.example.yaml` is the committed template.
+- **LLM block is env-overridable** (env wins over YAML; empty = unset), so the
+  non-secret config can be driven entirely from the environment in Actions where
+  no `config.yaml` is committed: `LLM_PROVIDER`, `LLM_MODEL`, `LLM_ENDPOINT`,
+  `LLM_API_VERSION`, `LLM_API_KEY_ENV`, `LLM_MAX_TOKENS` (see `config.py::load_config`).
+  `api_key_env` defaults per provider (`ANTHROPIC_API_KEY` / `AZURE_AI_API_KEY`).
+  `daily.yml` passes the LLM_* vars from repo **Variables** and the key from a
+  **Secret**.
 
 | Env var | Required | Purpose |
 |---------|----------|---------|

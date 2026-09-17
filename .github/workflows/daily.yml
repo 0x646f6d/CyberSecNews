@@ -40,11 +40,23 @@ jobs:
 
       - name: Run aggregator
         env:
-          # LLM key. Set the one matching llm.provider in config.yaml:
-          #   provider: anthropic     -> ANTHROPIC_API_KEY
-          #   provider: azure_foundry -> AZURE_AI_API_KEY
+          # LLM config via env (overrides config.example.yaml; no config.yaml is
+          # committed). Set these as repository Variables (Settings → Secrets and
+          # variables → Actions → Variables). Leave them unset to use Anthropic.
+          #   For Azure AI Foundry set:
+          #     LLM_PROVIDER = azure_foundry
+          #     LLM_MODEL    = <your Foundry deployment name>
+          #     LLM_ENDPOINT = https://<resource>.services.ai.azure.com/models
+          #     LLM_API_VERSION = 2024-05-01-preview   (optional)
+          LLM_PROVIDER: ${{ vars.LLM_PROVIDER }}
+          LLM_MODEL: ${{ vars.LLM_MODEL }}
+          LLM_ENDPOINT: ${{ vars.LLM_ENDPOINT }}
+          LLM_API_VERSION: ${{ vars.LLM_API_VERSION }}
+          # LLM key (secret). Set the one matching LLM_PROVIDER:
+          #   anthropic     -> ANTHROPIC_API_KEY
+          #   azure_foundry -> AZURE_AI_API_KEY
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-          AZURE_AI_API_KEY: ${{ secrets.AZURE_AI_API_KEY }}   # optional; for the azure_foundry provider
+          AZURE_AI_API_KEY: ${{ secrets.AZURE_AI_API_KEY }}   # for the azure_foundry provider
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
           NTFY_TOKEN: ${{ secrets.NTFY_TOKEN }}   # optional; empty if unset
           # Auto-provided by Actions; raises the GitHub Advisories API rate limit
