@@ -3,7 +3,43 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-09-08T19:18:54.529752+00:00</updated>
+  <updated>2026-09-17T07:43:25.885208+00:00</updated>
+  <entry>
+    <title>Credentials Are Still the Shortest Path In</title>
+    <id>urn:cybersecnews:item:392</id>
+    <published>2026-09-17T07:43:25.885208+00:00</published>
+    <updated>2026-09-17T07:43:25.885208+00:00</updated>
+    <link href="https://www.praetorian.com/blog/credential-testing-brutus/" rel="alternate" />
+    <category term="red-team" />
+    <content type="html">&lt;p&gt;&lt;em&gt;red-team · credential-testing&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Brutus is a credential testing and reuse engine that systematically validates compromised username/password pairs across multiple internal services and systems. The tool exploits common weaknesses including breach reuse, unchanged vendor defaults, and poor password hygiene rather than novel exploits, making it highly effective for initial compromise and lateral movement. This represents a critical severity threat actively exploited in the wild, as credential reuse remains one of the fastest paths to network access. Organizations should enforce unique complex passwords, implement multi-factor authentication across all systems, conduct regular breach monitoring, and maintain credential rotation policies for vendor defaults and service accounts.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.praetorian.com/blog/credential-testing-brutus/"&gt;Read more&lt;/a&gt; · Source: praetorian&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Acronis Backup: Acronis Backup Incorrect Default Permissions Vulnerability (CVE-2026-87886)</title>
+    <id>urn:cybersecnews:item:391</id>
+    <published>2026-09-17T07:43:25.881626+00:00</published>
+    <updated>2026-09-17T07:43:25.881626+00:00</updated>
+    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-87886" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · privilege-escalation · CVE-2026-87886&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Acronis Backup plugins for cPanel &amp; WHM and Plesk contain an incorrect default permissions vulnerability (CVE-2026-87886) enabling privilege escalation attacks. This flaw is actively exploited in the wild and carries high severity. Immediately apply vendor-supplied mitigations per CISA BOD 26-04 guidance; if patches are unavailable, discontinue the affected products. Conduct forensics triage on all affected systems and assess internet exposure to prioritize remediation.&lt;/p&gt;&lt;p&gt;&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2026-87886"&gt;Read more&lt;/a&gt; · Source: cisa-kev&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Google Pixel: Google Pixel Improper Authorization Vulnerability (CVE-2026-58704)</title>
+    <id>urn:cybersecnews:item:390</id>
+    <published>2026-09-17T07:43:25.877232+00:00</published>
+    <updated>2026-09-17T07:43:25.877232+00:00</updated>
+    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-58704" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · privilege-escalation · CVE-2026-58704&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Google Pixel devices contain an improper authorization vulnerability (CVE-2026-58704) in the cellular modem that allows attackers to bypass permission checks and escalate privileges through a logic error. This vulnerability is actively exploited in the wild and carries high severity given its impact on device security. Immediately apply vendor-supplied patches in accordance with CISA BOD 26-04 prioritization guidance; if mitigations are unavailable, discontinue use of affected devices. Prioritize patching based on internet exposure assessment and compliance with federal BOD 26-04 timelines.&lt;/p&gt;&lt;p&gt;&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2026-58704"&gt;Read more&lt;/a&gt; · Source: cisa-kev&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Cisco warns of max severity ISE zero-day exploited in attacks</title>
+    <id>urn:cybersecnews:item:389</id>
+    <published>2026-09-17T07:43:25.838533+00:00</published>
+    <updated>2026-09-17T07:43:25.838533+00:00</updated>
+    <link href="https://www.bleepingcomputer.com/news/security/cisco-warns-of-identity-service-engine-zero-day-exploited-in-attacks/" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Cisco Identity Services Engine (ISE) is affected by a CVSS 10.0 zero-day vulnerability currently being exploited in active attacks. The flaw allows unauthenticated remote code execution on affected ISE deployments. Immediate patching is critical; apply Cisco's latest security updates for ISE without delay and prioritize this as a critical emergency.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/cisco-warns-of-identity-service-engine-zero-day-exploited-in-attacks/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>NetNTLMv1 Is Dead. Long Live NetNTLMv1.</title>
     <id>urn:cybersecnews:item:388</id>
@@ -164,7 +200,7 @@
     <updated>2026-09-05T03:12:15.421518+00:00</updated>
     <link href="https://github.com/advisories/GHSA-rh53-xvx2-j327" rel="alternate" />
     <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass,secret-disclosure,arbitrary-mutation · CVE-2026-73842&lt;/em&gt;&lt;/p&gt;&lt;p&gt;OpenChoreo's cluster-gateway component exposes internal management APIs that perform no authentication on callers and lack enforcement of read-only operations, allowing unauthenticated access to tunnel mutating requests and read Secrets from tenant Kubernetes namespaces. This critical vulnerability (CVE-2026-73842) enables arbitrary Kubernetes mutations and sensitive data disclosure without authentication. No information provided on active exploitation in the wild. Immediately patch to a version that implements caller authentication and enforces read-only restrictions on the internal proxy APIs.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-rh53-xvx2-j327"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass,secret-disclosure,arbitrary-mutation · CVE-2026-61594, CVE-2026-73842&lt;/em&gt;&lt;/p&gt;&lt;p&gt;OpenChoreo's cluster-gateway component exposes internal management APIs that perform no authentication on callers and lack enforcement of read-only operations, allowing unauthenticated access to tunnel mutating requests and read Secrets from tenant Kubernetes namespaces. This critical vulnerability (CVE-2026-73842) enables arbitrary Kubernetes mutations and sensitive data disclosure without authentication. No information provided on active exploitation in the wild. Immediately patch to a version that implements caller authentication and enforces read-only restrictions on the internal proxy APIs.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-rh53-xvx2-j327"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
   </entry>
   <entry>
     <title>New CrowdStrike 'FalconFlank' zero-day grants SYSTEM privileges</title>
@@ -867,41 +903,5 @@
     <link href="https://isc.sans.edu/diary/rss/33260" rel="alternate" />
     <category term="red-team" />
     <content type="html">&lt;p&gt;&lt;em&gt;red-team · credential-theft&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Cloud metadata services (accessible via 169.254.169.254) across AWS, Azure, and GCP expose sensitive credentials including IAM role credentials and service account tokens to any code executing on compromised virtual machines. This represents a critical risk vector for lateral movement and privilege escalation, as attackers with initial VM access can trivially extract temporary credentials with broad permissions. This technique is actively exploited in the wild by adversaries targeting misconfigured cloud environments and supply chain compromises. Organizations should implement IMDSv2 (mandatory token authentication), network segmentation restricting metadata service access, and IAM policies limiting credential scope to mitigate exposure.&lt;/p&gt;&lt;p&gt;&lt;a href="https://isc.sans.edu/diary/rss/33260"&gt;Read more&lt;/a&gt; · Source: sans-isc&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Hackers Compromised 14,500+ Dahua Devices Using Credential Attacks, Auth Bypasses, and P2P</title>
-    <id>urn:cybersecnews:item:292</id>
-    <published>2026-08-19T16:31:25.337881+00:00</published>
-    <updated>2026-08-19T16:31:25.337881+00:00</updated>
-    <link href="https://thehackernews.com/2026/08/hackers-compromised-14500-dahua-devices.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Dahua IP cameras and DVRs/NVRs were compromised in Operation CameraSwarm (June-July 2026) through credential attacks, two authentication-bypass vulnerabilities, and P2P relay exploitation, affecting 14,530+ devices. The campaign exploited weak credentials combined with unpatched auth flaws to gain device access and establish persistence through Dahua's P2P communication mechanism. This represents high severity given the scale of compromise and exposure of security infrastructure. Immediate actions include applying available security patches for the authentication-bypass flaws, enforcing strong credential policies, disabling P2P functionality if unused, and conducting network segmentation for camera/monitoring infrastructure.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/08/hackers-compromised-14500-dahua-devices.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Slowakei: Russische Backdoor in Verkehrskameras entdeckt</title>
-    <id>urn:cybersecnews:item:291</id>
-    <published>2026-08-19T16:31:25.334737+00:00</published>
-    <updated>2026-08-19T16:31:25.334737+00:00</updated>
-    <link href="https://www.golem.de/news/slowakei-russische-backdoor-in-verkehrskameras-entdeckt-2608-212088.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · backdoor&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Slovak traffic camera systems compromised with Russian backdoor malware during procurement of 279 new devices. The backdoor provides unauthorized remote access to camera infrastructure, compromising traffic monitoring systems and potentially enabling surveillance manipulation or network pivoting attacks. Severity is high due to critical infrastructure impact and confirmed presence in deployed systems. Immediate actions required: isolate affected cameras from primary networks, conduct forensic analysis to determine backdoor scope and capabilities, implement network segmentation for camera systems, and replace compromised hardware with verified vendors.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.golem.de/news/slowakei-russische-backdoor-in-verkehrskameras-entdeckt-2608-212088.html"&gt;Read more&lt;/a&gt; · Source: golem-security&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Oracle August 2026 Critical Security Patch Update Addresses 925 CVEs</title>
-    <id>urn:cybersecnews:item:290</id>
-    <published>2026-08-19T08:36:55.215864+00:00</published>
-    <updated>2026-08-19T08:36:55.215864+00:00</updated>
-    <link href="https://www.tenable.com/blog/oracle-august-2026-critical-security-patch-update-cspu-addresses-925-cves" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · multiple&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Oracle released 943 security patches addressing 925 CVEs across 23 product families in its August 2026 Critical Security Patch Update, with 154 critical-severity issues (16.3% of total patches). Oracle Fusion Middleware and Oracle Hyperion received the highest patch volumes at 262 patches each, with 182 and 107 vulnerabilities respectively exploitable remotely without authentication. No indication of active exploitation in the wild is provided in this advisory. Organizations should prioritize patching critical and high-severity vulnerabilities (75.3% of patches) in Fusion Middleware and Hyperion immediately, with particular attention to remotely exploitable issues.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.tenable.com/blog/oracle-august-2026-critical-security-patch-update-cspu-addresses-925-cves"&gt;Read more&lt;/a&gt; · Source: tenable&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Oracle-Patchday: Updates für weniger als tausend Schwachstellen</title>
-    <id>urn:cybersecnews:item:289</id>
-    <published>2026-08-19T08:36:55.213499+00:00</published>
-    <updated>2026-08-19T08:36:55.213499+00:00</updated>
-    <link href="https://www.heise.de/news/Oracle-Patchday-Updates-fuer-weniger-als-tausend-Schwachstellen-11418883.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Oracle released its latest Critical Security Patch Update addressing approximately 1000 vulnerabilities across its product suite, including Oracle Database, WebLogic Server, and other enterprise software. The patch volume represents a decrease from the previous regular CPU cycle, indicating a temporary reduction in newly disclosed critical issues. Severity ratings span from critical to medium-risk flaws affecting authentication, remote code execution, and data access mechanisms. Organizations running Oracle products should prioritize patching critical and high-severity vulnerabilities identified for their specific deployments, with immediate attention to internet-facing systems like WebLogic Server.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.heise.de/news/Oracle-Patchday-Updates-fuer-weniger-als-tausend-Schwachstellen-11418883.html"&gt;Read more&lt;/a&gt; · Source: heise-security&lt;/p&gt;</content>
   </entry>
 </feed>
