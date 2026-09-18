@@ -3,7 +3,88 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-09-18T12:45:28.392032+00:00</updated>
+  <updated>2026-09-18T18:56:23.253186+00:00</updated>
+  <entry>
+    <title>org.xwiki.rendering:xwiki-rendering-xml has an Eval Injection issue (CVE-2025-53837)</title>
+    <id>urn:cybersecnews:item:413</id>
+    <published>2026-09-18T18:56:23.253186+00:00</published>
+    <updated>2026-09-18T18:56:23.253186+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-26vp-8gxg-v4pg" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2025-53837&lt;/em&gt;&lt;/p&gt;&lt;p&gt;org.xwiki.rendering:xwiki-rendering-xml allows eval injection via improper escaping of rendering output in HTML macros, enabling authenticated users with document edit permissions to inject and execute arbitrary Groovy or Python script macros with programming rights, resulting in remote code execution and unrestricted wiki access. This is critical severity and actively exploited. Patch immediately by updating to the latest patched version; restrict document edit permissions as an interim mitigation.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-26vp-8gxg-v4pg"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>LMDeploy has Remote Code Execution by Pickle Deserialization via handle_zmq_recv in lmdeploy/lmdeploy/pytorch/disagg/conn/engine_conn.py (CVE-2025-66455)</title>
+    <id>urn:cybersecnews:item:412</id>
+    <published>2026-09-18T18:56:22.914666+00:00</published>
+    <updated>2026-09-18T18:56:22.914666+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-2vh9-42vm-xmv2" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2025-66455&lt;/em&gt;&lt;/p&gt;&lt;p&gt;LMDeploy's PyTorch DistServe disaggregation control plane is vulnerable to remote code execution via unsafe pickle deserialization in the `handle_zmq_recv` function (CVE-2025-66455). An attacker with network access to the affected DistServe API server can exploit the `/distserve/p2p_connect` endpoint to force the server to connect to a malicious peer and execute arbitrary code during message deserialization. This is a critical severity vulnerability that may be actively exploited. Apply the latest security patch immediately, restrict network access to DistServe API endpoints, and consider disabling disaggregation features until patched.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-2vh9-42vm-xmv2"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>AnyIO: TLSStream IDNA 2003 host name encoding enables potential TLS certificate spoofing (CVE-2026-63374)</title>
+    <id>urn:cybersecnews:item:411</id>
+    <published>2026-09-18T18:56:22.911475+00:00</published>
+    <updated>2026-09-18T18:56:22.911475+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-82r6-8w77-94w6" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · tls-certificate-spoofing · CVE-2026-63374&lt;/em&gt;&lt;/p&gt;&lt;p&gt;AnyIO's TLSStream implementation uses IDNA 2003 encoding for internationalized domain names in `connect_tcp()` and `TLSStream.wrap()`, which can be exploited for TLS certificate spoofing if an attacker redirects the connection. An attacker could obtain a legitimate certificate for the IDNA 2003-encoded hostname and present it to the client, causing validation to succeed. This is rated critical severity. Update to the patched version of AnyIO immediately, as the vulnerability affects certificate validation for non-ASCII domain names and could enable man-in-the-middle attacks on redirected connections.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-82r6-8w77-94w6"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Mnemosyne has JWT signature verification bypass sync server that allows authentication bypass (CVE-2026-59163)</title>
+    <id>urn:cybersecnews:item:410</id>
+    <published>2026-09-18T18:56:22.907432+00:00</published>
+    <updated>2026-09-18T18:56:22.907432+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-xcw4-53cc-hv32" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-59163&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Mnemosyne sync server (pip/mnemosyne-memory) contains a critical JWT signature verification bypass in its authentication mechanism. The server decodes JWT bearer tokens but fails to verify HMAC-SHA256 signatures, allowing unauthenticated attackers to forge valid tokens and impersonate any user to read or modify sync data. This vulnerability (CVE-2026-59163, CVSS 9.1) is likely exploitable in the wild given its simplicity and network-accessible nature. Immediately patch to a version implementing proper JWT signature verification; for non-networked deployments, severity may be reduced to High.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-xcw4-53cc-hv32"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Linux Kernel: Linux Kernel Race Condition Vulnerability (CVE-2025-39964)</title>
+    <id>urn:cybersecnews:item:409</id>
+    <published>2026-09-18T18:56:22.903747+00:00</published>
+    <updated>2026-09-18T18:56:22.903747+00:00</updated>
+    <link href="https://nvd.nist.gov/vuln/detail/CVE-2025-39964" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · race-condition · CVE-2025-39964&lt;/em&gt;&lt;/p&gt;&lt;p&gt;CVE-2025-39964 affects the Linux Kernel's AF_ALG socket implementation, where concurrent writes cause data interleaving and internal state corruption due to a race condition. This vulnerability is actively exploited in the wild and carries high severity given its kernel-level impact and active exploitation status. Immediate patching is mandatory per CISA BOD 26-04 guidance; apply vendor-supplied patches as soon as available or implement mitigations if patches are unavailable. Organizations without available mitigations should consider discontinuing use of affected systems and evaluate internet exposure to prioritize remediation.&lt;/p&gt;&lt;p&gt;&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2025-39964"&gt;Read more&lt;/a&gt; · Source: cisa-kev&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Gyazo server flaw exploited to steal 23.6 million user records</title>
+    <id>urn:cybersecnews:item:408</id>
+    <published>2026-09-18T18:56:22.897605+00:00</published>
+    <updated>2026-09-18T18:56:22.897605+00:00</updated>
+    <link href="https://www.bleepingcomputer.com/news/security/gyazo-server-flaw-exploited-to-steal-236-million-user-records/" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · server-vuln&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Gyazo image-sharing platform suffered a confirmed data breach affecting 23.6 million user records through exploitation of an unpatched server vulnerability. The flaw allowed unauthenticated remote access to user data, demonstrating active exploitation in the wild. This is a critical severity incident with confirmed malicious activity. Users should immediately change passwords, enable two-factor authentication if available, and monitor accounts for suspicious activity; Gyazo should deploy patches immediately and conduct forensic analysis to determine exposure scope and timeline.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/gyazo-server-flaw-exploited-to-steal-236-million-user-records/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Plugin4Shell Lets Repository Owners Swap Pinned Plugin Code Across Four AI Coding Agents</title>
+    <id>urn:cybersecnews:item:407</id>
+    <published>2026-09-18T18:56:22.885349+00:00</published>
+    <updated>2026-09-18T18:56:22.885349+00:00</updated>
+    <link href="https://thehackernews.com/2026/09/plugin4shell-lets-repository-owners.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · plugin-hijacking&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Four AI coding agents (Claude, OpenAI Codex, GitHub Copilot, and Cursor) are vulnerable to Plugin4Shell, which allows repository owners to swap pinned plugin code with malicious versions despite version locks. The vulnerability bypasses security controls intended to prevent code substitution and affects plugin installation mechanisms across these tools. This is high-severity as it enables supply chain attacks on developers using these agents, with active exploitation possible given repository owner access requirements. Affected users should update to patched versions (Claude Code 2.1.179, OpenAI Codex 0.146.0, and equivalents for other agents) and review plugin repository access controls.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/09/plugin4shell-lets-repository-owners.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Microsoft Patches CVSS 10.0 Azure AI Foundry Flaw Enabling Unauthorized Privilege Escalation</title>
+    <id>urn:cybersecnews:item:406</id>
+    <published>2026-09-18T18:56:22.880898+00:00</published>
+    <updated>2026-09-18T18:56:22.880898+00:00</updated>
+    <link href="https://thehackernews.com/2026/09/microsoft-patches-cvss-100-azure-ai.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-85889&lt;/em&gt;&lt;/p&gt;&lt;p&gt;CVE-2026-85889 in Microsoft Azure AI Foundry involves missing authentication on a critical function, enabling remote privilege escalation without user interaction. The vulnerability carries a maximum CVSS score of 10.0 and poses immediate risk to affected deployments. No customer action is required as Microsoft has already released fixes; ensure Azure AI Foundry instances are updated to the latest patched version. Monitor for any indicators of exploitation targeting this authentication bypass.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/09/microsoft-patches-cvss-100-azure-ai.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>New WordPress Click2Shell Flaw Forces Theme Installs, Can Chain to Code Execution</title>
+    <id>urn:cybersecnews:item:405</id>
+    <published>2026-09-18T18:56:22.727651+00:00</published>
+    <updated>2026-09-18T18:56:22.727651+00:00</updated>
+    <link href="https://thehackernews.com/2026/09/new-wordpress-click2shell-flaw-forces.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · csrf,privilege-escalation,rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;WordPress core contains a critical vulnerability allowing unauthenticated attackers to force theme installations via crafted links when clicked by logged-in administrators, part of the Click2Shell attack chain that can escalate to remote code execution. The flaw exploits insufficient validation in the theme installation mechanism and poses high severity risk given the administrative context required and chainable nature to RCE. No indication of active exploitation in the wild at this time. Administrators should immediately apply the latest WordPress security patches and consider restricting theme installation capabilities to trusted users only.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/09/new-wordpress-click2shell-flaw-forces.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>New Check Point flaw lets hackers execute code with root privileges</title>
     <id>urn:cybersecnews:item:404</id>
@@ -308,7 +389,7 @@
     <updated>2026-09-05T03:12:15.421518+00:00</updated>
     <link href="https://github.com/advisories/GHSA-rh53-xvx2-j327" rel="alternate" />
     <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass,secret-disclosure,arbitrary-mutation · CVE-2026-61594, CVE-2026-73842&lt;/em&gt;&lt;/p&gt;&lt;p&gt;OpenChoreo's cluster-gateway component exposes internal management APIs that perform no authentication on callers and lack enforcement of read-only operations, allowing unauthenticated access to tunnel mutating requests and read Secrets from tenant Kubernetes namespaces. This critical vulnerability (CVE-2026-73842) enables arbitrary Kubernetes mutations and sensitive data disclosure without authentication. No information provided on active exploitation in the wild. Immediately patch to a version that implements caller authentication and enforces read-only restrictions on the internal proxy APIs.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-rh53-xvx2-j327"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass,secret-disclosure,arbitrary-mutation · CVE-2026-61594, CVE-2026-61682, CVE-2026-73842&lt;/em&gt;&lt;/p&gt;&lt;p&gt;OpenChoreo's cluster-gateway component exposes internal management APIs that perform no authentication on callers and lack enforcement of read-only operations, allowing unauthenticated access to tunnel mutating requests and read Secrets from tenant Kubernetes namespaces. This critical vulnerability (CVE-2026-73842) enables arbitrary Kubernetes mutations and sensitive data disclosure without authentication. No information provided on active exploitation in the wild. Immediately patch to a version that implements caller authentication and enforces read-only restrictions on the internal proxy APIs.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-rh53-xvx2-j327"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
   </entry>
   <entry>
     <title>New CrowdStrike 'FalconFlank' zero-day grants SYSTEM privileges</title>
@@ -722,7 +803,7 @@
     <updated>2026-08-27T07:47:20.346195+00:00</updated>
     <link href="https://nvd.nist.gov/vuln/detail/CVE-2022-0995" rel="alternate" />
     <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · out-of-bounds-write · CVE-2022-0995&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Linux Kernel contains an out-of-bounds write vulnerability (CVE-2022-0995) that allows local users to escalate privileges or trigger denial of service. The vulnerability is actively exploited in the wild with high severity. Affected organizations must apply vendor patches immediately per CISA BOD 26-04 guidance, or discontinue use if mitigations are unavailable. Cloud service customers should verify their provider's remediation status and evaluate internet-exposed assets for prioritized patching.&lt;/p&gt;&lt;p&gt;&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2022-0995"&gt;Read more&lt;/a&gt; · Source: cisa-kev&lt;/p&gt;</content>
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · out-of-bounds-write · CVE-2022-0995, CVE-2026-53266&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Linux Kernel contains an out-of-bounds write vulnerability (CVE-2022-0995) that allows local users to escalate privileges or trigger denial of service. The vulnerability is actively exploited in the wild with high severity. Affected organizations must apply vendor patches immediately per CISA BOD 26-04 guidance, or discontinue use if mitigations are unavailable. Cloud service customers should verify their provider's remediation status and evaluate internet-exposed assets for prioritized patching.&lt;/p&gt;&lt;p&gt;&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2022-0995"&gt;Read more&lt;/a&gt; · Source: cisa-kev&lt;/p&gt;</content>
   </entry>
   <entry>
     <title>A GUID is Not a Credential: Unauthenticated RCE in Veeam Service Provider Console</title>
@@ -822,86 +903,5 @@
     <link href="https://www.bleepingcomputer.com/news/security/hackers-target-wordpress-sites-in-miniorange-auth-bypass-attacks/" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-61979&lt;/em&gt;&lt;/p&gt;&lt;p&gt;The miniOrange SAML 2.0 Single Sign On WordPress plugin contains two critical authentication bypass vulnerabilities allowing attackers to forge SAML responses and gain administrative access. These flaws are being actively exploited in the wild against WordPress installations. Immediate patching to the latest plugin version is essential; administrators should also review access logs for unauthorized logins and consider temporarily disabling the plugin if updates are unavailable.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/hackers-target-wordpress-sites-in-miniorange-auth-bypass-attacks/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Unpatched Calix flaw lets hackers bypass NAT to expose internal devices</title>
-    <id>urn:cybersecnews:item:313</id>
-    <published>2026-08-25T01:13:48.530288+00:00</published>
-    <updated>2026-08-25T01:13:48.530288+00:00</updated>
-    <link href="https://www.bleepingcomputer.com/news/security/unpatched-calix-flaw-lets-hackers-bypass-nat-to-expose-internal-devices/" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · nat-bypass&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Calix GS7 XGS (GS5239XG) residential routers contain an unpatched remote code execution vulnerability allowing unauthenticated attackers to create arbitrary port-forwarding rules, effectively bypassing NAT protections and exposing internal network devices. The flaw is critical in severity and actively exploited in the wild by threat actors targeting customers of major U.S. broadband providers. Affected users should contact their ISP immediately for patched firmware versions; Calix has not released public patches and administrative access restrictions at the ISP level may provide temporary mitigation. Organizations relying on these devices for network segmentation should consider replacement or implement external network monitoring to detect suspicious port-forwarding activity.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/unpatched-calix-flaw-lets-hackers-bypass-nat-to-expose-internal-devices/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Microsoft: August updates break printing, PDF export in WPF apps</title>
-    <id>urn:cybersecnews:item:312</id>
-    <published>2026-08-24T16:37:45.866344+00:00</published>
-    <updated>2026-08-24T16:37:45.866344+00:00</updated>
-    <link href="https://www.bleepingcomputer.com/news/microsoft/microsoft-august-updates-break-printing-pdf-export-in-wpf-apps/" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · regression&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Microsoft's August 2026 .NET Framework updates are causing printing and PDF export failures in Windows Presentation Foundation (WPF) applications. The issue affects core rendering functionality within the WPF subsystem, though no active exploitation in the wild has been reported. Severity appears moderate as it impacts application functionality rather than security posture. Microsoft recommends either deferring the August updates, reverting to previous builds, or applying any available hotfixes once released—security teams should coordinate with application owners running WPF-based tools to assess impact before mandatory patching.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/microsoft/microsoft-august-updates-break-printing-pdf-export-in-wpf-apps/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Zahlreiche Sicherheitslücken bedrohen VMware-Tanzu-Spring-Software</title>
-    <id>urn:cybersecnews:item:311</id>
-    <published>2026-08-24T16:37:45.864377+00:00</published>
-    <updated>2026-08-24T16:37:45.864377+00:00</updated>
-    <link href="https://www.heise.de/news/Zahlreiche-Sicherheitsluecken-bedrohen-VMware-Tanzu-Spring-Software-11423459.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · multiple&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Multiple high-severity vulnerabilities affect VMware Tanzu Spring software components including Spring AI, Integration, and Security, allowing remote attackers to execute arbitrary code or bypass authentication controls. The vulnerabilities span remote code execution, deserialization flaws, and authentication bypass issues across multiple Spring modules. Patch availability has been released by VMware, and immediate patching is strongly recommended given the critical nature of these flaws and likelihood of exploitation. Affected organizations should prioritize updating all vulnerable Spring components to the latest patched versions without delay.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.heise.de/news/Zahlreiche-Sicherheitsluecken-bedrohen-VMware-Tanzu-Spring-Software-11423459.html"&gt;Read more&lt;/a&gt; · Source: heise-security&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>GeoTools has unauthenticated SQL injection in the jsonArrayContains filter function against PostGIS layers (CVE-2026-76904)</title>
-    <id>urn:cybersecnews:item:310</id>
-    <published>2026-08-22T01:12:04.850703+00:00</published>
-    <updated>2026-08-22T01:12:04.850703+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-mqjf-5f49-2fjh" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · sqli · CVE-2026-76904&lt;/em&gt;&lt;/p&gt;&lt;p&gt;GeoTools PostGIS DataStore is vulnerable to unauthenticated SQL injection via the jsonArrayContains filter function (CVE-2026-76904), which fails to escape the value parameter when generating SQL queries against PostGIS 12+. This critical vulnerability allows remote attackers to execute arbitrary SQL commands without authentication. Affected versions are GeoTools prior to 35.1, 33.5, and 34.4; patch immediately to one of these versions. No workaround is available; upgrading is the only mitigation.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-mqjf-5f49-2fjh"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Xinference vulnerable to remote code execution via unsafe `eval()` in Llama3 tool-call parsing (CVE-2026-61539)</title>
-    <id>urn:cybersecnews:item:309</id>
-    <published>2026-08-22T01:12:04.849711+00:00</published>
-    <updated>2026-08-22T01:12:04.849711+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-x2rj-828p-hx9m" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-54569, CVE-2026-61539&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Xinference versions prior to patching contain a critical remote code execution vulnerability (CVE-2026-61539) in Llama3 tool-call parsing that uses unsafe `eval()` on model-generated output. An unauthenticated attacker can craft prompts to the chat completion API that cause the LLM to return arbitrary Python expressions, which are then executed server-side during post-processing. This is critical severity and likely exploitable in the wild given the default lack of authentication in typical deployments. Immediately update Xinference to a patched version and implement authentication controls on the chat completion API endpoint.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-x2rj-828p-hx9m"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>14 Trojanized npm Packages Drop RedC2 4.0 Linux Backdoor With AI-Assisted C2</title>
-    <id>urn:cybersecnews:item:308</id>
-    <published>2026-08-22T01:12:04.848160+00:00</published>
-    <updated>2026-08-22T01:12:04.848160+00:00</updated>
-    <link href="https://thehackernews.com/2026/08/14-trojanized-npm-packages-drop-redc2.html" rel="alternate" />
-    <category term="red-team" />
-    <content type="html">&lt;p&gt;&lt;em&gt;red-team · c2&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Fourteen trojanized npm packages distributed through the Node.js package registry were found delivering RedC2 4.0, an AI-assisted Linux backdoor that executes as a detached background process when the malicious modules are loaded. This represents active exploitation in the wild targeting development environments and supply chain compromise vectors. The backdoor enables remote command execution with AI-powered command and control capabilities, posing high severity risk to any systems running affected packages. Immediate action required: audit npm dependencies for trojanized packages (details in article), revoke any affected systems' credentials, and implement stricter package validation in build pipelines; update to clean versions once available from maintainers.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/08/14-trojanized-npm-packages-drop-redc2.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Microsoft warns of max severity Entra ID flaw exploited in attacks</title>
-    <id>urn:cybersecnews:item:307</id>
-    <published>2026-08-21T16:34:11.841400+00:00</published>
-    <updated>2026-08-21T16:34:11.841400+00:00</updated>
-    <link href="https://www.bleepingcomputer.com/news/microsoft/microsoft-warns-of-max-severity-entra-id-flaw-exploited-in-attacks/" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Microsoft Entra ID is affected by a critical vulnerability (CVSS 9.8) in its identity and access management functionality that is actively exploited in the wild. The flaw allows attackers to bypass authentication controls and gain unauthorized access to cloud resources and applications relying on Entra ID. Immediate patching is required; organizations should prioritize applying Microsoft's security updates and review access logs for indicators of compromise.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/microsoft/microsoft-warns-of-max-severity-entra-id-flaw-exploited-in-attacks/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Cisco Patches Nine Crosswork and Secure Workload Flaws, Five Scoring CVSS 10.0</title>
-    <id>urn:cybersecnews:item:306</id>
-    <published>2026-08-21T16:34:11.840019+00:00</published>
-    <updated>2026-08-21T16:34:11.840019+00:00</updated>
-    <link href="https://thehackernews.com/2026/08/cisco-patches-nine-crosswork-and-secure.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Cisco released security patches addressing nine vulnerabilities across Crosswork and Secure Workload products, with five flaws receiving CVSS 10.0 ratings indicating critical severity. The vulnerabilities affect Crosswork Data Gateway, Crosswork Network Controller, Crosswork Planning, and Secure Workload Software across multiple versions regardless of device configuration. No indication of active exploitation in the wild has been reported. Affected organizations should apply Cisco's published patches immediately given the critical CVSS scores and broad applicability across configurations.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/08/cisco-patches-nine-crosswork-and-secure.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Supply-Chain-Angriff: Backdoor in millionenfach geladene Rust Crates eingeschleust</title>
-    <id>urn:cybersecnews:item:305</id>
-    <published>2026-08-21T16:34:11.836698+00:00</published>
-    <updated>2026-08-21T16:34:11.836698+00:00</updated>
-    <link href="https://www.golem.de/news/supply-chain-angriff-backdoor-in-millionenfach-geladene-rust-crates-eingeschleust-2608-212158.html" rel="alternate" />
-    <category term="red-team" />
-    <content type="html">&lt;p&gt;&lt;em&gt;red-team · supply-chain-attack&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Multiple popular Rust crates were compromised in a supply chain attack injecting backdoor malware affecting potentially millions of downstream users. The attack targeted the Rust package ecosystem, allowing attackers to distribute malicious code through trusted dependencies. Severity is critical given the widespread distribution and persistence risk through legitimate package channels. Developers must immediately audit dependencies, update to patched versions once available, and review any suspicious package updates from these crates; consider pinning versions and implementing dependency scanning in build pipelines as interim protective measures.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.golem.de/news/supply-chain-angriff-backdoor-in-millionenfach-geladene-rust-crates-eingeschleust-2608-212158.html"&gt;Read more&lt;/a&gt; · Source: golem-security&lt;/p&gt;</content>
   </entry>
 </feed>
