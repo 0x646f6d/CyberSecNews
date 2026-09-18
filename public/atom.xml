@@ -3,7 +3,34 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-09-17T19:35:49.181213+00:00</updated>
+  <updated>2026-09-18T03:27:19.414319+00:00</updated>
+  <entry>
+    <title>Chamilo LMS CStudio upload flow allows unauthenticated remote code execution (CVE-2026-45140)</title>
+    <id>urn:cybersecnews:item:401</id>
+    <published>2026-09-18T03:27:19.414319+00:00</published>
+    <updated>2026-09-18T03:27:19.414319+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-g4c3-4g96-6g4m" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-45140&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Chamilo LMS versions prior to patching contain an unauthenticated remote code execution vulnerability in the CStudio upload flow (CVE-2026-45140). An attacker can upload and execute arbitrary code on the server without authentication, achieving complete system compromise. This critical vulnerability is likely to be exploited in the wild given its ease of exploitation and lack of authentication requirement. Immediately update Chamilo LMS to the latest patched version and review server logs for signs of exploitation or suspicious file uploads.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-g4c3-4g96-6g4m"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>CakePHP: Multiple methods in FunctionsBuilder vulnerable to SQL injection (CVE-2026-79752)</title>
+    <id>urn:cybersecnews:item:400</id>
+    <published>2026-09-18T03:27:19.408912+00:00</published>
+    <updated>2026-09-18T03:27:19.408912+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-vjqc-q4mp-2rvf" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · sqli · CVE-2026-79752&lt;/em&gt;&lt;/p&gt;&lt;p&gt;CakePHP versions prior to 5.3.7, 5.2.14, 5.1.9, 4.6.5, and 4.5.12 contain critical SQL injection vulnerabilities in FunctionsBuilder methods (cast, extract, datePart, dateAdd) when user-controlled data is passed to the $dataType, $part, or $unit parameters. This vulnerability allows attackers to execute arbitrary SQL commands if applications pass unsanitized user input to these methods. Patch immediately to the fixed versions listed; as a temporary workaround, avoid passing user-controlled data directly to these vulnerable parameters and validate/sanitize all inputs before use.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-vjqc-q4mp-2rvf"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Grav: Blueprint dynamic-data bare-function branch is denylist-gated and omits error_log, giving arbitrary file write (CVE-2026-75827)</title>
+    <id>urn:cybersecnews:item:399</id>
+    <published>2026-09-18T03:27:19.403195+00:00</published>
+    <updated>2026-09-18T03:27:19.403195+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-f8wv-xp27-6gq7" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · arbitrary-file-write · CVE-2026-75827&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Grav CMS versions up to 2.0.13 contain a critical arbitrary file write vulnerability (CVE-2026-75827) in the Blueprint dynamic-data provider that uses inadequate denylist validation in the `isSafeDynamicCall()` function, allowing attackers to bypass restrictions and invoke arbitrary PHP functions like `file_put_contents`. The vulnerability affects both `Blueprint.php` and `FlexDirectory.php` components; while class method calls use a strict allowlist, bare-function calls rely on a weaker denylist that omits critical functions like `error_log`. This vulnerability is exploitable and likely active in production environments given the ease of bypass. Immediate patching to a version implementing strict allowlist validation for all dynamic function calls is required; as a temporary mitigation, restrict access to Blueprint configuration endpoints and disable dynamic-data providers if not essential.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-f8wv-xp27-6gq7"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Vendure affected by external-authentication account takeover: external login linked to a pre-existing account by email without verification (CVE-2026-63472)</title>
     <id>urn:cybersecnews:item:398</id>
@@ -876,32 +903,5 @@
     <link href="https://research.checkpoint.com/2026/btr-reforged-weaponizing-defenders-remediation-driver-as-a-kernel-operation-primitive/" rel="alternate" />
     <category term="red-team" />
     <content type="html">&lt;p&gt;&lt;em&gt;red-team · privilege-escalation&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Windows Defender's remediation driver (MpCmdRun.exe and associated kernel components) can be abused as a kernel operation primitive to perform arbitrary file and registry operations at Ring 0 without requiring memory corruption or exploits. An attacker with local access can weaponize this signed, trusted Microsoft component to bypass security controls and execute privileged operations. This technique, dubbed BTR Reforged, is a privilege escalation and defense evasion method of high severity. Mitigation involves restricting access to Defender's remediation interfaces, applying principle of least privilege for driver execution, and monitoring for suspicious abuse patterns; no patch details are specified in the abstract, so coordination with Microsoft security teams is recommended.&lt;/p&gt;&lt;p&gt;&lt;a href="https://research.checkpoint.com/2026/btr-reforged-weaponizing-defenders-remediation-driver-as-a-kernel-operation-primitive/"&gt;Read more&lt;/a&gt; · Source: checkpoint-research&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Using Microsoft Graph and Powershell to Mine for Information - Stale Accounts and Licenses, (Thu, Aug 20th)</title>
-    <id>urn:cybersecnews:item:301</id>
-    <published>2026-08-20T16:35:25.857484+00:00</published>
-    <updated>2026-08-20T16:35:25.857484+00:00</updated>
-    <link href="https://isc.sans.edu/diary/rss/33264" rel="alternate" />
-    <category term="red-team" />
-    <content type="html">&lt;p&gt;&lt;em&gt;red-team · reconnaissance&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Microsoft Graph API via PowerShell enables comprehensive querying of M365, Entra ID users, and managed devices to identify stale accounts and unused licenses. This technique is not a vulnerability but rather a legitimate administrative capability that attackers can abuse if they gain sufficient API permissions or valid credentials. The risk is moderate to high depending on organizational access controls, as adversaries with compromised admin accounts or overly permissive application permissions can perform reconnaissance, enumerate inactive accounts for targeted attacks, or discover license misconfigurations. Organizations should enforce principle of least privilege for Microsoft Graph API permissions, implement conditional access policies, enable MFA for administrative accounts, audit API usage logs, and regularly review application consent permissions to limit exposure.&lt;/p&gt;&lt;p&gt;&lt;a href="https://isc.sans.edu/diary/rss/33264"&gt;Read more&lt;/a&gt; · Source: sans-isc&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Critical Zimbra RCE flaw now actively exploited in attacks</title>
-    <id>urn:cybersecnews:item:300</id>
-    <published>2026-08-20T16:35:25.853304+00:00</published>
-    <updated>2026-08-20T16:35:25.853304+00:00</updated>
-    <link href="https://www.bleepingcomputer.com/news/security/critical-zimbra-rce-flaw-now-actively-exploited-in-attacks/" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Zimbra Collaboration Suite contains a critical remote code execution vulnerability (CVE-2022-27925) that allows unauthenticated attackers to execute arbitrary code through improper validation in the webmail component. The flaw is actively exploited in the wild with public proof-of-concept code available. Administrators should immediately patch to the latest Zimbra version or apply vendor-supplied hotfixes; if patching is not immediately possible, disable webmail access or restrict it to trusted IP addresses as interim mitigation.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/critical-zimbra-rce-flaw-now-actively-exploited-in-attacks/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>CISA warns of hackers exploiting critical MLflow vulnerability</title>
-    <id>urn:cybersecnews:item:299</id>
-    <published>2026-08-20T16:35:25.852075+00:00</published>
-    <updated>2026-08-20T16:35:25.852075+00:00</updated>
-    <link href="https://www.bleepingcomputer.com/news/security/cisa-warns-of-hackers-exploiting-critical-mlflow-vulnerability/" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;MLflow open-source AI engineering platform is vulnerable to remote code execution via inadequate access controls in its API endpoints. The vulnerability is critical severity and is currently being actively exploited in the wild. Federal agencies and organizations using MLflow should immediately patch to the latest patched version and review access logs for signs of compromise. Additionally, restrict network access to MLflow instances and implement proper authentication controls on all API endpoints.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/cisa-warns-of-hackers-exploiting-critical-mlflow-vulnerability/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
   </entry>
 </feed>
