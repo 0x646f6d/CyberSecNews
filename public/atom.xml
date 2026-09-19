@@ -3,7 +3,16 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-09-18T18:56:23.253186+00:00</updated>
+  <updated>2026-09-19T12:18:48.484051+00:00</updated>
+  <entry>
+    <title>SolarWinds Patches ARM Hard-Coded Key Flaw Enabling Unauthenticated RCE</title>
+    <id>urn:cybersecnews:item:414</id>
+    <published>2026-09-19T12:18:48.484051+00:00</published>
+    <updated>2026-09-19T12:18:48.484051+00:00</updated>
+    <link href="https://thehackernews.com/2026/09/solarwinds-patches-arm-hard-coded-key.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-28326&lt;/em&gt;&lt;/p&gt;&lt;p&gt;SolarWinds Access Rights Manager (ARM) versions 2026.2 and prior contain a high-severity hard-coded cryptographic key vulnerability (CVE-2026-28326, CVSS 8.8) enabling unauthenticated remote code execution. The flaw stems from embedded credentials that attackers can leverage to bypass authentication and execute arbitrary code on affected systems. No public exploitation reports have been confirmed at this time, though the unauthenticated attack vector makes this a critical priority. Immediately apply SolarWinds' released security patches to all ARM deployments.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/09/solarwinds-patches-arm-hard-coded-key.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>org.xwiki.rendering:xwiki-rendering-xml has an Eval Injection issue (CVE-2025-53837)</title>
     <id>urn:cybersecnews:item:413</id>
@@ -119,7 +128,7 @@
     <updated>2026-09-18T03:27:19.414319+00:00</updated>
     <link href="https://github.com/advisories/GHSA-g4c3-4g96-6g4m" rel="alternate" />
     <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-45140&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Chamilo LMS versions prior to patching contain an unauthenticated remote code execution vulnerability in the CStudio upload flow (CVE-2026-45140). An attacker can upload and execute arbitrary code on the server without authentication, achieving complete system compromise. This critical vulnerability is likely to be exploited in the wild given its ease of exploitation and lack of authentication requirement. Immediately update Chamilo LMS to the latest patched version and review server logs for signs of exploitation or suspicious file uploads.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-g4c3-4g96-6g4m"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-45140, CVE-2026-58138&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Chamilo LMS versions prior to patching contain an unauthenticated remote code execution vulnerability in the CStudio upload flow (CVE-2026-45140). An attacker can upload and execute arbitrary code on the server without authentication, achieving complete system compromise. This critical vulnerability is likely to be exploited in the wild given its ease of exploitation and lack of authentication requirement. Immediately update Chamilo LMS to the latest patched version and review server logs for signs of exploitation or suspicious file uploads.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-g4c3-4g96-6g4m"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
   </entry>
   <entry>
     <title>CakePHP: Multiple methods in FunctionsBuilder vulnerable to SQL injection (CVE-2026-79752)</title>
@@ -894,14 +903,5 @@
     <link href="https://github.com/advisories/GHSA-8vh3-g2qg-2h2c" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-55640, CVE-2026-59822&lt;/em&gt;&lt;/p&gt;&lt;p&gt;The nextcloud-mcp-server webhook receiver endpoint (`POST /webhooks/nextcloud`) lacks authentication by default, with `WEBHOOK_SECRET` unset and unenforced. An unauthenticated attacker can submit arbitrary POST requests containing any user ID to delete or corrupt vector embeddings in Qdrant, resulting in data loss across all users. This is critical severity and likely exploitable in the wild given the default insecure configuration. Immediately set a strong `WEBHOOK_SECRET` environment variable, validate it at startup, and upgrade to a patched version that enforces authentication; consider restricting webhook endpoint access by IP or network controls as an interim mitigation.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-8vh3-g2qg-2h2c"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Hackers target WordPress sites in miniOrange auth bypass attacks</title>
-    <id>urn:cybersecnews:item:314</id>
-    <published>2026-08-25T01:13:48.532512+00:00</published>
-    <updated>2026-08-25T01:13:48.532512+00:00</updated>
-    <link href="https://www.bleepingcomputer.com/news/security/hackers-target-wordpress-sites-in-miniorange-auth-bypass-attacks/" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-61979&lt;/em&gt;&lt;/p&gt;&lt;p&gt;The miniOrange SAML 2.0 Single Sign On WordPress plugin contains two critical authentication bypass vulnerabilities allowing attackers to forge SAML responses and gain administrative access. These flaws are being actively exploited in the wild against WordPress installations. Immediate patching to the latest plugin version is essential; administrators should also review access logs for unauthorized logins and consider temporarily disabling the plugin if updates are unavailable.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/hackers-target-wordpress-sites-in-miniorange-auth-bypass-attacks/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
   </entry>
 </feed>
