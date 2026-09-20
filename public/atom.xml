@@ -3,7 +3,16 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-09-20T03:39:55.985190+00:00</updated>
+  <updated>2026-09-20T12:53:24.626023+00:00</updated>
+  <entry>
+    <title>Researchers escape OpenAI Codex sandbox to run commands on host</title>
+    <id>urn:cybersecnews:item:416</id>
+    <published>2026-09-20T12:53:24.626023+00:00</published>
+    <updated>2026-09-20T12:53:24.626023+00:00</updated>
+    <link href="https://www.bleepingcomputer.com/news/security/researchers-escape-openai-codex-sandbox-to-run-commands-on-host/" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · sandbox-escape&lt;/em&gt;&lt;/p&gt;&lt;p&gt;OpenAI Codex contained sandbox escape vulnerabilities allowing attackers to execute arbitrary commands on the host system, including from the most restrictive operating mode. Researchers demonstrated two separate escape techniques, both of which OpenAI has already patched. No evidence of active wild exploitation was reported. Users should update to the latest patched version of Codex immediately.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/researchers-escape-openai-codex-sandbox-to-run-commands-on-host/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Claude Opus 5 Helped Researchers Take Over OpenAI Staff Accounts via Chained Flaws</title>
     <id>urn:cybersecnews:item:415</id>
@@ -894,14 +903,5 @@
     <link href="https://github.com/advisories/GHSA-777c-2fxx-qr28" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-49757&lt;/em&gt;&lt;/p&gt;&lt;p&gt;AshAuthentication's OAuth2 and OIDC strategies (Erlang package) use email-based user matching instead of the recommended iss/sub claim combination, allowing account takeover. An unauthenticated attacker can register an account on any accepted OAuth provider using a victim's email address and gain full access to the victim's local account. This is critical severity and likely exploitable in the wild given the simplicity of the attack vector. Immediately update to a patched version that implements proper iss/sub claim-based user matching and audit existing OAuth/OIDC integrations for compromise.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-777c-2fxx-qr28"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Chainlit has command injection via MCP stdio transport that allows unauthenticated remote code execution (CVE-2026-45018)</title>
-    <id>urn:cybersecnews:item:316</id>
-    <published>2026-08-26T01:16:29.789224+00:00</published>
-    <updated>2026-08-26T01:16:29.789224+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-w3fx-mc44-mf6j" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · command-injection · CVE-2026-45018&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Chainlit versions with MCP (Model Context Protocol) stdio transport enabled are vulnerable to unauthenticated remote code injection via the `/mcp` endpoint, which accepts unsanitized user-controlled command strings despite validation checks. This critical vulnerability (CVE-2026-45018) allows unauthenticated remote code execution on affected systems and is exploitable in the wild. MCP has been disabled by default since v2.7.0, so most deployments are unaffected, but organizations running earlier versions with `features.mcp.enabled = true` should immediately disable MCP or upgrade to the patched version. Verify your `.chainlit/config.toml` configuration and restrict access to the `/mcp` endpoint as an interim mitigation.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-w3fx-mc44-mf6j"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
   </entry>
 </feed>
