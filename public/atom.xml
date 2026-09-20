@@ -3,7 +3,16 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-09-19T12:18:48.484051+00:00</updated>
+  <updated>2026-09-20T03:39:55.985190+00:00</updated>
+  <entry>
+    <title>Claude Opus 5 Helped Researchers Take Over OpenAI Staff Accounts via Chained Flaws</title>
+    <id>urn:cybersecnews:item:415</id>
+    <published>2026-09-20T03:39:55.985190+00:00</published>
+    <updated>2026-09-20T03:39:55.985190+00:00</updated>
+    <link href="https://thehackernews.com/2026/09/claude-opus-5-helped-researchers-take.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Anthropic Claude Opus 5 was leveraged by Hacktron researchers to chain two vulnerabilities affecting OpenAI infrastructure: a bug in OpenAI's public help forum software and a weakness in OpenAI's login system, enabling account takeover of multiple OpenAI staff members and unauthorized access to internal code repositories. The vulnerability chain demonstrates AI-assisted exploit development capability but was discovered through authorized security research rather than active exploitation in the wild. OpenAI should prioritize patching the identified login system weakness and help forum vulnerability, conduct account security audits, and implement additional authentication controls for access to internal repositories. This research also highlights the need for organizations to assess risks from AI-assisted attack chain development in their threat modeling processes.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/09/claude-opus-5-helped-researchers-take.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>SolarWinds Patches ARM Hard-Coded Key Flaw Enabling Unauthenticated RCE</title>
     <id>urn:cybersecnews:item:414</id>
@@ -894,14 +903,5 @@
     <link href="https://github.com/advisories/GHSA-w3fx-mc44-mf6j" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · command-injection · CVE-2026-45018&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Chainlit versions with MCP (Model Context Protocol) stdio transport enabled are vulnerable to unauthenticated remote code injection via the `/mcp` endpoint, which accepts unsanitized user-controlled command strings despite validation checks. This critical vulnerability (CVE-2026-45018) allows unauthenticated remote code execution on affected systems and is exploitable in the wild. MCP has been disabled by default since v2.7.0, so most deployments are unaffected, but organizations running earlier versions with `features.mcp.enabled = true` should immediately disable MCP or upgrade to the patched version. Verify your `.chainlit/config.toml` configuration and restrict access to the `/mcp` endpoint as an interim mitigation.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-w3fx-mc44-mf6j"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>nextcloud-mcp-server: Unauthenticated `POST /webhooks/nextcloud` allows arbitrary vector data deletion when `WEBHOOK_SECRET` is unset ( default ) (CVE-2026-55640)</title>
-    <id>urn:cybersecnews:item:315</id>
-    <published>2026-08-25T16:37:12.786606+00:00</published>
-    <updated>2026-08-25T16:37:12.786606+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-8vh3-g2qg-2h2c" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-55640, CVE-2026-59822&lt;/em&gt;&lt;/p&gt;&lt;p&gt;The nextcloud-mcp-server webhook receiver endpoint (`POST /webhooks/nextcloud`) lacks authentication by default, with `WEBHOOK_SECRET` unset and unenforced. An unauthenticated attacker can submit arbitrary POST requests containing any user ID to delete or corrupt vector embeddings in Qdrant, resulting in data loss across all users. This is critical severity and likely exploitable in the wild given the default insecure configuration. Immediately set a strong `WEBHOOK_SECRET` environment variable, validate it at startup, and upgrade to a patched version that enforces authentication; consider restricting webhook endpoint access by IP or network controls as an interim mitigation.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-8vh3-g2qg-2h2c"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
   </entry>
 </feed>
