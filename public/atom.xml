@@ -3,7 +3,25 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-09-21T14:54:08.611701+00:00</updated>
+  <updated>2026-09-21T20:17:39.037753+00:00</updated>
+  <entry>
+    <title>Zyxel GS1900 Series Switches: Zyxel GS1900 Series Switches Stack-Based Buffer Overflow Vulnerability (CVE-2026-7273)</title>
+    <id>urn:cybersecnews:item:423</id>
+    <published>2026-09-21T20:17:39.037753+00:00</published>
+    <updated>2026-09-21T20:17:39.037753+00:00</updated>
+    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-7273" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · buffer-overflow · CVE-2026-7273&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Zyxel GS1900 series switches are vulnerable to a stack-based buffer overflow in the CGI program (CVE-2026-7273) that allows unauthenticated LAN-based attackers to execute arbitrary OS commands via malicious HTTP requests. This vulnerability is actively exploited in the wild with high severity. Immediately apply vendor-supplied patches or mitigations per CISA BOD 26-04 guidance; discontinue use if patches are unavailable. Conduct forensic triage on affected systems to identify potential compromise.&lt;/p&gt;&lt;p&gt;&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2026-7273"&gt;Read more&lt;/a&gt; · Source: cisa-kev&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>TASK#STOMP PowerShell Backdoor Steals Documents, Wi-Fi Passwords, and Clipboard Data</title>
+    <id>urn:cybersecnews:item:422</id>
+    <published>2026-09-21T20:17:39.036209+00:00</published>
+    <updated>2026-09-21T20:17:39.036209+00:00</updated>
+    <link href="https://thehackernews.com/2026/09/taskstomp-powershell-backdoor-steals.html" rel="alternate" />
+    <category term="red-team" />
+    <content type="html">&lt;p&gt;&lt;em&gt;red-team · backdoor&lt;/em&gt;&lt;/p&gt;&lt;p&gt;TASK#STOMP is a PowerShell backdoor deployed in active campaigns that harvests business documents, Wi-Fi credentials, clipboard data, and screenshots from compromised systems with real-time filesystem monitoring capabilities. The malware represents a significant threat due to its multi-faceted data exfiltration capabilities targeting sensitive business and authentication information. There is no indication this is currently exploited at scale in the wild, though the active campaign suggests targeted deployment. Organizations should implement application whitelisting for PowerShell, enforce execution policies, monitor for suspicious PowerShell activity, and educate users on phishing vectors likely used for initial compromise; apply patches for any identified delivery mechanisms and consider blocking PowerShell execution in environments where it is not operationally necessary.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/09/taskstomp-powershell-backdoor-steals.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Vidar Adds Virtual Machine and Custom Stream Ciphers For String Obfuscation</title>
     <id>urn:cybersecnews:item:421</id>
@@ -885,23 +903,5 @@
     <link href="https://bishopfox.com/blog/a-guid-is-not-a-credential-unauthenticated-rce-in-veeam-service-provider-console" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Veeam Service Provider Console contains two chained critical vulnerabilities enabling unauthenticated remote code execution on the management server. The first vulnerability treats a GUID as authentication, allowing attackers to bypass authentication; the second enables code execution once authenticated. This is actively exploited in the wild and affects organizations managing backup infrastructure for multiple tenants. Apply available security patches immediately and implement network segmentation to restrict access to the Service Provider Console management interface.&lt;/p&gt;&lt;p&gt;&lt;a href="https://bishopfox.com/blog/a-guid-is-not-a-credential-unauthenticated-rce-in-veeam-service-provider-console"&gt;Read more&lt;/a&gt; · Source: bishop-fox&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Kyverno's NamespacedGeneratingPolicy generator.apply() namespace argument unvalidated -- background controller creates RoleBindings in any namespace including kube-system (CVE-2026-54523)</title>
-    <id>urn:cybersecnews:item:323</id>
-    <published>2026-08-26T16:48:54.196007+00:00</published>
-    <updated>2026-08-26T16:48:54.196007+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-79gf-7frw-68m9" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · privilege-escalation · CVE-2026-54523&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Kyverno v1.18.1's NamespacedMutatingPolicy allows tenants to generate resources in arbitrary namespaces, including kube-system, by passing unvalidated namespace strings to the CEL generator.apply() function. An attacker with policy creation permissions in their own namespace can exploit this to create RoleBindings or other resources in sensitive namespaces, escalating privileges cluster-wide. This is a critical vulnerability being actively exploited. Upgrade to a patched version immediately and audit existing policies for malicious generator.apply() calls with namespace arguments.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-79gf-7frw-68m9"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Hackers now exploit critical Gitea flaw in code injection attacks</title>
-    <id>urn:cybersecnews:item:322</id>
-    <published>2026-08-26T16:48:54.195032+00:00</published>
-    <updated>2026-08-26T16:48:54.195032+00:00</updated>
-    <link href="https://www.bleepingcomputer.com/news/security/hackers-now-exploit-critical-gitea-flaw-in-code-injection-attacks/" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · code-injection&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Gitea self-hosted Git service is affected by a critical-severity code injection vulnerability now actively exploited in the wild. The flaw allows remote attackers to execute arbitrary code on affected instances. CISA has confirmed active exploitation, indicating this is a high-priority threat. Administrators should immediately update Gitea to the latest patched version and review access logs for signs of compromise.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/hackers-now-exploit-critical-gitea-flaw-in-code-injection-attacks/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
   </entry>
 </feed>
