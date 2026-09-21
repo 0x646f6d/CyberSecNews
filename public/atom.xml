@@ -3,7 +3,52 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-09-20T12:53:24.626023+00:00</updated>
+  <updated>2026-09-21T14:54:08.611701+00:00</updated>
+  <entry>
+    <title>Vidar Adds Virtual Machine and Custom Stream Ciphers For String Obfuscation</title>
+    <id>urn:cybersecnews:item:421</id>
+    <published>2026-09-21T14:54:08.611701+00:00</published>
+    <updated>2026-09-21T14:54:08.611701+00:00</updated>
+    <link href="https://www.zscaler.com/blogs/security-research/vidar-adds-virtual-machine-and-custom-stream-ciphers-string-obfuscation" rel="alternate" />
+    <category term="red-team" />
+    <content type="html">&lt;p&gt;&lt;em&gt;red-team · string-obfuscation&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Vidar information stealer (versions 2.0-3.3+) has evolved its string obfuscation from basic XOR to ChaCha20, and most recently to a custom virtual machine with per-build bytecode and custom stream ciphers (both ChaCha-based and ARX-based variants), making static and automated analysis significantly harder. The VM uses a lightweight bytecode interpreter with 14 opcode handlers performing simple operations (XOR, addition, rotation, substitution), while the custom stream ciphers vary their constants and transformations across builds. This represents an ongoing threat with active development; no severity rating or exploitation metrics are provided in the source material. Organizations should employ behavioral detection, network monitoring for command-and-control communication, and endpoint detection systems capable of identifying stealer activity patterns rather than relying solely on signature-based detection of these increasingly polymorphic obfuscation techniques.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.zscaler.com/blogs/security-research/vidar-adds-virtual-machine-and-custom-stream-ciphers-string-obfuscation"&gt;Read more&lt;/a&gt; · Source: zscaler-threatlabz&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Jade Sleet Linked to Indian IT Provider Breach With FLATROOF and ROOFDECK Backdoors</title>
+    <id>urn:cybersecnews:item:420</id>
+    <published>2026-09-21T14:54:08.610017+00:00</published>
+    <updated>2026-09-21T14:54:08.610017+00:00</updated>
+    <link href="https://thehackernews.com/2026/09/jade-sleet-linked-to-indian-it-provider.html" rel="alternate" />
+    <category term="red-team" />
+    <content type="html">&lt;p&gt;&lt;em&gt;red-team · backdoor&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Jade Sleet, attributed to North Korea, compromised an Indian IT services provider using custom backdoors FLATROOF and ROOFDECK to establish persistence and access downstream targets. The attack demonstrates a continued pattern of supply chain targeting through developer-focused organizations to infiltrate higher-value networks. Severity is high given the nation-state actor's sophistication and the supply chain risk implications for customers of the compromised IT provider. Organizations should prioritize detection of FLATROOF/ROOFDECK indicators of compromise, conduct supply chain risk assessments with IT vendors, and implement zero-trust architecture to limit lateral movement from compromised supplier networks.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/09/jade-sleet-linked-to-indian-it-provider.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>ClickFix Lures Deploy ChainScript RAT Using Polygon to Rotate C2 Infrastructure</title>
+    <id>urn:cybersecnews:item:419</id>
+    <published>2026-09-21T14:54:08.608955+00:00</published>
+    <updated>2026-09-21T14:54:08.608955+00:00</updated>
+    <link href="https://thehackernews.com/2026/09/clickfix-lures-deploy-chainscript-rat.html" rel="alternate" />
+    <category term="red-team" />
+    <content type="html">&lt;p&gt;&lt;em&gt;red-team · c2&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Threat actors are distributing ChainScript, a previously undocumented RAT, via ClickFix-style social engineering lures that impersonate legitimate software (Spotify, Zoom, Teams). The malware uses Polygon blockchain infrastructure to rotate command-and-control servers, complicating takedown and attribution efforts. No severity rating or active exploitation data provided in available details, but the use of legitimate software impersonation and blockchain obfuscation suggests moderate-to-high risk. Recommend user awareness training on software download verification, implementation of application whitelisting, and network monitoring for connections to blockchain infrastructure endpoints.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/09/clickfix-lures-deploy-chainscript-rat.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Synology warnt: Kritische NAS-Lücken ermöglichen Datenklau</title>
+    <id>urn:cybersecnews:item:418</id>
+    <published>2026-09-21T14:54:08.607737+00:00</published>
+    <updated>2026-09-21T14:54:08.607737+00:00</updated>
+    <link href="https://www.golem.de/news/synology-warnt-kritische-nas-luecken-ermoeglichen-datenklau-2609-213268.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · unauthorized-access&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Synology NAS devices are affected by multiple critical vulnerabilities enabling arbitrary read and write access to stored data. These flaws allow unauthenticated attackers to compromise device integrity and exfiltrate sensitive information. Synology has released security patches addressing these issues. Administrators should apply available patches immediately to all affected NAS systems and verify no unauthorized access has occurred.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.golem.de/news/synology-warnt-kritische-nas-luecken-ermoeglichen-datenklau-2609-213268.html"&gt;Read more&lt;/a&gt; · Source: golem-security&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>(g+) Windows-Lücken: Die Rückkehr der Würmer</title>
+    <id>urn:cybersecnews:item:417</id>
+    <published>2026-09-21T14:54:08.604483+00:00</published>
+    <updated>2026-09-21T14:54:08.604483+00:00</updated>
+    <link href="https://www.golem.de/news/windows-luecken-die-rueckkehr-der-wuermer-2609-213269.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · worm-capable-rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Microsoft's latest Windows patches address 20 vulnerabilities capable of worm propagation, representing a significant resurgence risk similar to WannaCry. These network-propagating flaws span multiple Windows versions and could enable mass exploitation without user interaction. Administrators should immediately apply all available Windows updates prioritizing critical network-accessible vulnerabilities, implement network segmentation, and enforce strict firewall rules to limit lateral movement. Consider deploying EDR solutions and monitoring for exploit attempts, particularly for SMB and RDP-related CVEs.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.golem.de/news/windows-luecken-die-rueckkehr-der-wuermer-2609-213269.html"&gt;Read more&lt;/a&gt; · Source: golem-security&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Researchers escape OpenAI Codex sandbox to run commands on host</title>
     <id>urn:cybersecnews:item:416</id>
@@ -858,50 +903,5 @@
     <link href="https://www.bleepingcomputer.com/news/security/hackers-now-exploit-critical-gitea-flaw-in-code-injection-attacks/" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · code-injection&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Gitea self-hosted Git service is affected by a critical-severity code injection vulnerability now actively exploited in the wild. The flaw allows remote attackers to execute arbitrary code on affected instances. CISA has confirmed active exploitation, indicating this is a high-priority threat. Administrators should immediately update Gitea to the latest patched version and review access logs for signs of compromise.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/hackers-now-exploit-critical-gitea-flaw-in-code-injection-attacks/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Ubiquiti patches three max severity security vulnerabilities</title>
-    <id>urn:cybersecnews:item:321</id>
-    <published>2026-08-26T16:48:54.193369+00:00</published>
-    <updated>2026-08-26T16:48:54.193369+00:00</updated>
-    <link href="https://www.bleepingcomputer.com/news/security/ubiquiti-patches-three-max-severity-security-vulnerabilities/" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Ubiquiti has patched three critical remote code execution vulnerabilities (CVSS 9.8+) affecting its networking products that require no authentication or user interaction for exploitation. These flaws enable unauthenticated attackers to gain full system compromise on affected devices. There is no indication of active exploitation in the wild at this time. Organizations running vulnerable Ubiquiti equipment should apply available patches immediately and prioritize systems exposed to untrusted networks.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/ubiquiti-patches-three-max-severity-security-vulnerabilities/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Unpatched Kaltura mwEmbed Flaws Could Let Remote Attackers Read Files and Run Code</title>
-    <id>urn:cybersecnews:item:320</id>
-    <published>2026-08-26T16:48:54.191785+00:00</published>
-    <updated>2026-08-26T16:48:54.191785+00:00</updated>
-    <link href="https://thehackernews.com/2026/08/unpatched-kaltura-mwembed-flaws-could.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · unsafe-deserialization · CVE-2021-23758, CVE-2026-19912, CVE-2026-19913, CVE-2026-55220&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Kaltura's mwEmbed HTML5 video player library contains two critical unpatched vulnerabilities (CVE-2026-19913, CVE-2026-19912) in the mwEmbedLoader.php endpoint stemming from unsafe deserialization, allowing unauthenticated remote attackers to read arbitrary files and execute code. These flaws pose severe risk as they require no authentication and can lead to complete system compromise. No evidence of active exploitation in the wild has been reported at this time, though the public disclosure elevates risk significantly. Organizations using Kaltura should immediately contact vendor support for patches or implement network-level access restrictions to the affected endpoint until updates are available.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/08/unpatched-kaltura-mwembed-flaws-could.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Jetzt updaten: 327 Sicherheitslücken in Google Chrome gepatcht</title>
-    <id>urn:cybersecnews:item:319</id>
-    <published>2026-08-26T08:42:23.918171+00:00</published>
-    <updated>2026-08-26T08:42:23.918171+00:00</updated>
-    <link href="https://www.golem.de/news/jetzt-updaten-327-sicherheitsluecken-in-google-chrome-gepatcht-2608-212303.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · multiple&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Google Chrome has been patched against 327 security vulnerabilities in the latest update. The vulnerabilities span multiple severity levels, with at least one critical flaw reported as actively exploited in the wild. Users should prioritize immediate installation of this update to prevent exploitation, particularly for critical-severity bugs affecting core Chrome functionality.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.golem.de/news/jetzt-updaten-327-sicherheitsluecken-in-google-chrome-gepatcht-2608-212303.html"&gt;Read more&lt;/a&gt; · Source: golem-security&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>gRPC Erlang package vulnerable to Remote Code Execution with attacker-controlled gRPC payloads (CVE-2026-48853)</title>
-    <id>urn:cybersecnews:item:318</id>
-    <published>2026-08-26T01:16:29.792765+00:00</published>
-    <updated>2026-08-26T01:16:29.792765+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-grp7-v8xh-rj7h" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-48853&lt;/em&gt;&lt;/p&gt;&lt;p&gt;gRPC Erlang package (CVE-2026-48853) contains a critical remote code execution vulnerability in GRPC.Codec.Erlpack.decode/2, which calls erlang.binary_to_term/1 without the :safe option on untrusted gRPC message bodies. An unauthenticated attacker sending malicious gRPC payloads with Content-Type: application/grpc+erlpack can crash the BEAM node via atom table exhaustion or achieve remote code execution if decoded fun terms reach callable code paths. Exploit exists in the wild. Immediately patch erlang/grpc to the latest version and restrict network access to gRPC endpoints if patching is delayed.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-grp7-v8xh-rj7h"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>AshAuthentication vulnerable to OAuth2/OIDC account takeover via email-based user matching (CVE-2026-49757)</title>
-    <id>urn:cybersecnews:item:317</id>
-    <published>2026-08-26T01:16:29.791746+00:00</published>
-    <updated>2026-08-26T01:16:29.791746+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-777c-2fxx-qr28" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-49757&lt;/em&gt;&lt;/p&gt;&lt;p&gt;AshAuthentication's OAuth2 and OIDC strategies (Erlang package) use email-based user matching instead of the recommended iss/sub claim combination, allowing account takeover. An unauthenticated attacker can register an account on any accepted OAuth provider using a victim's email address and gain full access to the victim's local account. This is critical severity and likely exploitable in the wild given the simplicity of the attack vector. Immediately update to a patched version that implements proper iss/sub claim-based user matching and audit existing OAuth/OIDC integrations for compromise.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-777c-2fxx-qr28"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
   </entry>
 </feed>
