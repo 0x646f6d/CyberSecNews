@@ -3,7 +3,52 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-09-22T13:09:32.426501+00:00</updated>
+  <updated>2026-09-22T19:40:12.325590+00:00</updated>
+  <entry>
+    <title>New Windows Defender zero-day blocks Microsoft antivirus updates</title>
+    <id>urn:cybersecnews:item:431</id>
+    <published>2026-09-22T19:40:12.325590+00:00</published>
+    <updated>2026-09-22T19:40:12.325590+00:00</updated>
+    <link href="https://www.bleepingcomputer.com/news/security/new-windows-defender-zero-day-blocks-microsoft-antivirus-updates/" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · privilege-escalation&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Microsoft Defender is affected by a zero-day vulnerability that allows attackers to block antivirus updates, disclosed by researcher Abdelhamid Naceri over the weekend. The exploit leverages a flaw in Defender's update mechanism, preventing the security software from receiving critical patches and signatures. Severity is high as successful exploitation leaves systems without current threat protection; there is no indication of active exploitation in the wild at this time. Microsoft should be contacted for an immediate patch; in the interim, organizations should implement compensating controls such as network-level security monitoring and alternative endpoint protection until an official fix is released.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/new-windows-defender-zero-day-blocks-microsoft-antivirus-updates/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>ShinyHunters claims FBI hack, data theft in PeopleSoft zero-day breach</title>
+    <id>urn:cybersecnews:item:430</id>
+    <published>2026-09-22T19:40:12.322220+00:00</published>
+    <updated>2026-09-22T19:40:12.322220+00:00</updated>
+    <link href="https://www.bleepingcomputer.com/news/security/shinyhunters-claims-fbi-hack-data-theft-in-peoplesoft-zero-day-breach/" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · zero-day&lt;/em&gt;&lt;/p&gt;&lt;p&gt;ShinyHunters claims exploitation of an unpatched Oracle PeopleSoft zero-day vulnerability to breach FBI systems and exfiltrate employee and applicant data. The group used the zero-day for remote code execution against PeopleSoft instances, a widely deployed HR and financial management platform affecting government and enterprise organizations. This represents a critical-severity vulnerability actively exploited in the wild with confirmed successful compromise of high-value targets. Oracle should prioritize emergency patching; affected organizations running PeopleSoft should immediately isolate instances, apply security updates upon release, and conduct forensic investigation for signs of breach.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/shinyhunters-claims-fbi-hack-data-theft-in-peoplesoft-zero-day-breach/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>New CVSS 10.0 VeloCloud Orchestrator Flaw Actively Exploited in Certificate-Based Setups</title>
+    <id>urn:cybersecnews:item:429</id>
+    <published>2026-09-22T19:40:12.319984+00:00</published>
+    <updated>2026-09-22T19:40:12.319984+00:00</updated>
+    <link href="https://thehackernews.com/2026/09/new-cvss-100-velocloud-orchestrator.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · privilege-escalation · CVE-2026-93952&lt;/em&gt;&lt;/p&gt;&lt;p&gt;VeloCloud Orchestrator (VCO) on-premises deployments are affected by CVE-2026-93952, a critical remote code execution vulnerability (CVSS 10.0) that allows unauthenticated attackers to escalate privileges on the VCO host in certificate-based authentication configurations. This flaw is actively being exploited in the wild. Organizations using on-premises VCO with certificate-based Edge authentication should immediately apply available security patches from Arista and verify their deployment authentication method. As a mitigation, consider temporarily restricting network access to the VCO management interface until patches are applied.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/09/new-cvss-100-velocloud-orchestrator.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Researcher Drops BigDiskBuster Zero-Day PoC That Blocks Microsoft Defender Updates</title>
+    <id>urn:cybersecnews:item:428</id>
+    <published>2026-09-22T19:40:12.317876+00:00</published>
+    <updated>2026-09-22T19:40:12.317876+00:00</updated>
+    <link href="https://thehackernews.com/2026/09/researcher-drops-bigdiskbuster-zero-day.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · edr-evasion&lt;/em&gt;&lt;/p&gt;&lt;p&gt;BigDiskBuster is a proof-of-concept zero-day exploitation technique that fills disk space to prevent Microsoft Defender from applying platform and signature updates, published September 19 with no CVE assigned or patch available. The vulnerability has no evidence of active exploitation in the wild but poses moderate severity as it disables critical security updates on affected systems. Microsoft has not released an advisory or patch. Mitigations include monitoring disk space usage patterns, implementing disk quota enforcement, and hardening file system permissions to prevent mass file creation; prioritize patching when Microsoft releases a fix.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/09/researcher-drops-bigdiskbuster-zero-day.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Critical Bifrost AI Gateway Flaw Lets Attackers Run Commands Without Credentials</title>
+    <id>urn:cybersecnews:item:427</id>
+    <published>2026-09-22T19:40:12.312179+00:00</published>
+    <updated>2026-09-22T19:40:12.312179+00:00</updated>
+    <link href="https://thehackernews.com/2026/09/critical-bifrost-ai-gateway-flaw-lets.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-90898&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Bifrost open-source AI gateway (all versions before 2.1.0) contains a critical pre-authentication remote code execution vulnerability in its HTTP transport layer that allows unauthenticated attackers to execute arbitrary commands on the gateway server via a single HTTP request (CVE-2026-90898, CVSS 9.8). The vulnerability has direct access implications for organizations routing LLM requests through Bifrost, potentially compromising all downstream systems and data. Immediate action required: upgrade to Bifrost 2.1.0 or later and verify no unauthorized command execution occurred on affected systems.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/09/critical-bifrost-ai-gateway-flaw-lets.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>D-Link warns of max severity zero-day bug in DIR-822A routers</title>
     <id>urn:cybersecnews:item:426</id>
@@ -209,7 +254,7 @@
     <updated>2026-09-18T12:45:28.392032+00:00</updated>
     <link href="https://www.bleepingcomputer.com/news/security/check-point-warns-critical-flaw-lets-hackers-execute-code-as-root/" rel="alternate" />
     <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Check Point management systems are affected by a critical vulnerability enabling remote code execution with root privileges. The flaw allows unauthenticated attackers to execute arbitrary commands on affected systems. Check Point has released patches to address this issue; administrators should apply security updates immediately to all vulnerable management systems.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/check-point-warns-critical-flaw-lets-hackers-execute-code-as-root/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-93616&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Check Point management systems are affected by a critical vulnerability enabling remote code execution with root privileges. The flaw allows unauthenticated attackers to execute arbitrary commands on affected systems. Check Point has released patches to address this issue; administrators should apply security updates immediately to all vulnerable management systems.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/check-point-warns-critical-flaw-lets-hackers-execute-code-as-root/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
   </entry>
   <entry>
     <title>WeaselBiscuit Stealer Spreads via 13 npm Packages to Harvest Chrome Extension Storage</title>
@@ -858,50 +903,5 @@
     <link href="https://thehackernews.com/2026/08/apt28-linked-hookedge-backdoor-targets.html" rel="alternate" />
     <category term="red-team" />
     <content type="html">&lt;p&gt;&lt;em&gt;red-team · backdoor&lt;/em&gt;&lt;/p&gt;&lt;p&gt;APT28 is deploying HOOKEDGE, a previously undocumented Windows batch script backdoor, against European government and diplomatic entities in Romania, Spain, and Türkiye since September 2025. The backdoor provides remote access and command execution capabilities, representing a moderate-to-high severity threat given the sensitive nature of targeted organizations and APT28's advanced capabilities. Active exploitation in the wild is confirmed through ongoing campaigns across multiple countries. Organizations should immediately patch systems, implement network segmentation for diplomatic/government networks, enhance endpoint detection and response (EDR) capabilities, and conduct forensic investigations for potential compromise indicators related to batch script execution and command-and-control communications.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/08/apt28-linked-hookedge-backdoor-targets.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>JFrog Artifactory: JFrog Artifactory Improper Limitation of a Pathname to a Restricted Directory Vulnerability (CVE-2026-66384)</title>
-    <id>urn:cybersecnews:item:331</id>
-    <published>2026-08-27T18:54:11.239285+00:00</published>
-    <updated>2026-08-27T18:54:11.239285+00:00</updated>
-    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-66384" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · path-traversal · CVE-2026-66384, CVE-2026-82329&lt;/em&gt;&lt;/p&gt;&lt;p&gt;JFrog Artifactory is vulnerable to CVE-2026-66384, a path traversal flaw allowing authenticated users to write data outside the intended Docker cache directory under specific remote repository conditions. This vulnerability is actively exploited in the wild and carries high severity due to potential unauthorized file writes. Apply vendor-provided patches or mitigations immediately per CISA BOD 26-04 guidance; discontinue use if mitigations are unavailable. Prioritize patching based on internet exposure and ensure compliance with federal security update requirements.&lt;/p&gt;&lt;p&gt;&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2026-66384"&gt;Read more&lt;/a&gt; · Source: cisa-kev&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>ownCloud ownCloud: ownCloud Improper Authentication Vulnerability (CVE-2023-49105)</title>
-    <id>urn:cybersecnews:item:330</id>
-    <published>2026-08-27T18:54:11.238406+00:00</published>
-    <updated>2026-08-27T18:54:11.238406+00:00</updated>
-    <link href="https://nvd.nist.gov/vuln/detail/CVE-2023-49105" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2023-49105&lt;/em&gt;&lt;/p&gt;&lt;p&gt;ownCloud is vulnerable to improper authentication (CVE-2023-49105) allowing unauthenticated attackers to access, modify, or delete files if the victim's username is known and no signing key is configured. This vulnerability is actively exploited in the wild and rated high severity. Immediately apply vendor mitigations per CISA BOD 26-04 prioritization guidance, or discontinue use if patches are unavailable; conduct forensic triage on potentially exposed instances.&lt;/p&gt;&lt;p&gt;&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2023-49105"&gt;Read more&lt;/a&gt; · Source: cisa-kev&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>PaperCut warns of NG, MF flaw exploited in zero-day attacks</title>
-    <id>urn:cybersecnews:item:329</id>
-    <published>2026-08-27T18:54:11.237483+00:00</published>
-    <updated>2026-08-27T18:54:11.237483+00:00</updated>
-    <link href="https://www.bleepingcomputer.com/news/security/papercut-warns-of-ng-mf-flaw-exploited-in-zero-day-attacks/" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-81578, CVE-2026-82078&lt;/em&gt;&lt;/p&gt;&lt;p&gt;PaperCut NG and MF print management software are affected by an actively exploited zero-day vulnerability. The flaw allows unauthenticated attackers to achieve remote code execution on vulnerable systems. Given the zero-day status and active exploitation in the wild, immediate patching is critical. Apply the latest security updates from PaperCut as soon as they become available, and consider implementing network segmentation to isolate affected systems while patches are deployed.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/papercut-warns-of-ng-mf-flaw-exploited-in-zero-day-attacks/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Next.js Patches Critical AVIF and Windows Flaws Enabling Unauthenticated RCE</title>
-    <id>urn:cybersecnews:item:328</id>
-    <published>2026-08-27T18:54:11.236765+00:00</published>
-    <updated>2026-08-27T18:54:11.236765+00:00</updated>
-    <link href="https://thehackernews.com/2026/08/nextjs-patches-critical-avif-and.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-75604&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Next.js web framework contains two critical unauthenticated RCE vulnerabilities: one via malicious AVIF image processing and one through Windows path traversal (CVE-2024-50383). Both vulnerabilities allow remote code execution without authentication and represent high-severity risks. Patches have been released by Vercel and should be applied immediately to all affected Next.js deployments. There is no indication these are currently exploited in the wild, but given the critical nature and ease of exploitation, immediate patching is essential.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/08/nextjs-patches-critical-avif-and.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Exchange-Sicherheitslücke: Wegen Proof-of-Concept Angriffe wahrscheinlich</title>
-    <id>urn:cybersecnews:item:327</id>
-    <published>2026-08-27T18:54:11.235012+00:00</published>
-    <updated>2026-08-27T18:54:11.235012+00:00</updated>
-    <link href="https://www.heise.de/news/Angriffe-erwartbar-Proof-of-Concept-fuer-Exchange-Luecke-veroeffentlicht-11431561.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Microsoft Exchange is vulnerable to a critical remote code execution flaw enabling full system compromise. Exploit proof-of-concept code is now public, making active exploitation in the wild highly probable. This vulnerability affects Exchange Server installations and requires immediate patching. Administrators must apply available security updates without delay to prevent unauthorized system access.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.heise.de/news/Angriffe-erwartbar-Proof-of-Concept-fuer-Exchange-Luecke-veroeffentlicht-11431561.html"&gt;Read more&lt;/a&gt; · Source: heise-security&lt;/p&gt;</content>
   </entry>
 </feed>
