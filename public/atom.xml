@@ -3,7 +3,34 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-09-21T20:17:39.037753+00:00</updated>
+  <updated>2026-09-22T13:09:32.426501+00:00</updated>
+  <entry>
+    <title>D-Link warns of max severity zero-day bug in DIR-822A routers</title>
+    <id>urn:cybersecnews:item:426</id>
+    <published>2026-09-22T13:09:32.426501+00:00</published>
+    <updated>2026-09-22T13:09:32.426501+00:00</updated>
+    <link href="https://www.bleepingcomputer.com/news/security/d-link-warns-of-max-severity-zero-day-bug-in-dir-822a-routers/" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-86296&lt;/em&gt;&lt;/p&gt;&lt;p&gt;D-Link DIR-822A routers are vulnerable to CVE-2026-86296, a CVSS 10.0 critical zero-day that allows unauthenticated remote code execution. Proof-of-concept exploit code is publicly available and the vulnerability is actively exploited in the wild. No patch is currently available; D-Link recommends disabling remote management features and considering replacement of affected legacy devices. Users should immediately isolate affected routers from critical networks and monitor for unauthorized access.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/d-link-warns-of-max-severity-zero-day-bug-in-dir-822a-routers/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>WordPress Comment2Shell Flaw Can Turn Anonymous Comment XSS Into RCE via Admin Session</title>
+    <id>urn:cybersecnews:item:425</id>
+    <published>2026-09-22T13:09:32.424883+00:00</published>
+    <updated>2026-09-22T13:09:32.424883+00:00</updated>
+    <link href="https://thehackernews.com/2026/09/wordpress-comment2shell-flaw-can-turn.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · xss-to-rce · CVE-2026-93485&lt;/em&gt;&lt;/p&gt;&lt;p&gt;WordPress core versions prior to 7.1.1 contain CVE-2026-93485 ("Comment2Shell"), a stored XSS vulnerability in the comment system that allows unauthenticated attackers to inject malicious scripts into comments. When an administrator views the compromised comment, the injected script executes with administrative privileges, enabling arbitrary code execution and server compromise. WordPress released a patch in version 7.1.1 on September 17 and recommends immediate updates; there is no indication of active exploitation in the wild at this time, but the vulnerability's severity and ease of exploitation make urgent patching critical.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/09/wordpress-comment2shell-flaw-can-turn.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>New Linux Kernel Flaw Gives ARM64 KVM Guests Read-Write Access to Host Memory</title>
+    <id>urn:cybersecnews:item:424</id>
+    <published>2026-09-22T13:09:32.422877+00:00</published>
+    <updated>2026-09-22T13:09:32.422877+00:00</updated>
+    <link href="https://thehackernews.com/2026/09/new-linux-kernel-flaw-gives-arm64-kvm.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · use-after-free · CVE-2026-89775&lt;/em&gt;&lt;/p&gt;&lt;p&gt;CVE-2026-89775 affects the Linux kernel's ARM64 KVM virtualization code and allows guest virtual machines to read and write host kernel memory through a use-after-free vulnerability when nested virtualization is enabled. The flaw enables guest escape and arbitrary code execution on the host with high severity. This requires nested virtualization to be explicitly enabled, limiting immediate exposure, but patches should be applied to affected kernel versions. Mitigation involves disabling nested virtualization until patches are deployed.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/09/new-linux-kernel-flaw-gives-arm64-kvm.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Zyxel GS1900 Series Switches: Zyxel GS1900 Series Switches Stack-Based Buffer Overflow Vulnerability (CVE-2026-7273)</title>
     <id>urn:cybersecnews:item:423</id>
@@ -876,32 +903,5 @@
     <link href="https://www.heise.de/news/Angriffe-erwartbar-Proof-of-Concept-fuer-Exchange-Luecke-veroeffentlicht-11431561.html" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Microsoft Exchange is vulnerable to a critical remote code execution flaw enabling full system compromise. Exploit proof-of-concept code is now public, making active exploitation in the wild highly probable. This vulnerability affects Exchange Server installations and requires immediate patching. Administrators must apply available security updates without delay to prevent unauthorized system access.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.heise.de/news/Angriffe-erwartbar-Proof-of-Concept-fuer-Exchange-Luecke-veroeffentlicht-11431561.html"&gt;Read more&lt;/a&gt; · Source: heise-security&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Citrix NetScaler ADC and NetScaler Gateway: Citrix NetScaler ADC and NetScaler Gateway Improper Restriction of Operations within the Bounds of a Memory Buffer Vulnerability (CVE-2026-8452)</title>
-    <id>urn:cybersecnews:item:326</id>
-    <published>2026-08-27T07:47:20.348081+00:00</published>
-    <updated>2026-08-27T07:47:20.348081+00:00</updated>
-    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-8452" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · buffer-overflow · CVE-2026-8452&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Citrix NetScaler ADC and NetScaler Gateway are affected by a buffer overflow vulnerability (CVE-2026-8452) that permits denial of service attacks. This vulnerability is actively exploited in the wild and rated as severe by CISA. Organizations must immediately apply vendor patches or mitigations per BOD 26-04 guidance; discontinue use if patches are unavailable and the product is internet-exposed. Conduct forensics triage on affected systems per CISA requirements and prioritize remediation based on asset internet exposure.&lt;/p&gt;&lt;p&gt;&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2026-8452"&gt;Read more&lt;/a&gt; · Source: cisa-kev&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Linux Kernel: Linux Kernel Out-of-Bounds Write Vulnerability (CVE-2022-0995)</title>
-    <id>urn:cybersecnews:item:325</id>
-    <published>2026-08-27T07:47:20.346195+00:00</published>
-    <updated>2026-08-27T07:47:20.346195+00:00</updated>
-    <link href="https://nvd.nist.gov/vuln/detail/CVE-2022-0995" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · out-of-bounds-write · CVE-2022-0995, CVE-2026-53266&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Linux Kernel contains an out-of-bounds write vulnerability (CVE-2022-0995) that allows local users to escalate privileges or trigger denial of service. The vulnerability is actively exploited in the wild with high severity. Affected organizations must apply vendor patches immediately per CISA BOD 26-04 guidance, or discontinue use if mitigations are unavailable. Cloud service customers should verify their provider's remediation status and evaluate internet-exposed assets for prioritized patching.&lt;/p&gt;&lt;p&gt;&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2022-0995"&gt;Read more&lt;/a&gt; · Source: cisa-kev&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>A GUID is Not a Credential: Unauthenticated RCE in Veeam Service Provider Console</title>
-    <id>urn:cybersecnews:item:324</id>
-    <published>2026-08-26T16:48:54.197374+00:00</published>
-    <updated>2026-08-26T16:48:54.197374+00:00</updated>
-    <link href="https://bishopfox.com/blog/a-guid-is-not-a-credential-unauthenticated-rce-in-veeam-service-provider-console" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Veeam Service Provider Console contains two chained critical vulnerabilities enabling unauthenticated remote code execution on the management server. The first vulnerability treats a GUID as authentication, allowing attackers to bypass authentication; the second enables code execution once authenticated. This is actively exploited in the wild and affects organizations managing backup infrastructure for multiple tenants. Apply available security patches immediately and implement network segmentation to restrict access to the Service Provider Console management interface.&lt;/p&gt;&lt;p&gt;&lt;a href="https://bishopfox.com/blog/a-guid-is-not-a-credential-unauthenticated-rce-in-veeam-service-provider-console"&gt;Read more&lt;/a&gt; · Source: bishop-fox&lt;/p&gt;</content>
   </entry>
 </feed>
