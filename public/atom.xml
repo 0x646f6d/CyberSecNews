@@ -3,7 +3,25 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-09-23T03:34:51.680655+00:00</updated>
+  <updated>2026-09-23T13:24:16.068452+00:00</updated>
+  <entry>
+    <title>Absturzgefahr: Exploit lässt Angreifer DJI-Drohnen mitten im Flug kapern</title>
+    <id>urn:cybersecnews:item:437</id>
+    <published>2026-09-23T13:24:16.068452+00:00</published>
+    <updated>2026-09-23T13:24:16.068452+00:00</updated>
+    <link href="https://www.golem.de/news/per-bluetooth-exploit-laesst-angreifer-dji-drohnen-mitten-im-flug-kapern-2609-213353.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Multiple DJI drone models are vulnerable to a critical WiFi-based vulnerability enabling complete remote takeover during flight operations. The flaw allows attackers to hijack affected drones mid-air without authentication, posing severe safety risks. Exploit code appears to be circulating in security research communities though active wild exploitation is not confirmed widespread. DJI has released firmware patches for affected models; immediate firmware updates are strongly recommended for all users.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.golem.de/news/per-bluetooth-exploit-laesst-angreifer-dji-drohnen-mitten-im-flug-kapern-2609-213353.html"&gt;Read more&lt;/a&gt; · Source: golem-security&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Patchday: Adobe Connect ist unter Android, macOS und Windows verwundbar</title>
+    <id>urn:cybersecnews:item:436</id>
+    <published>2026-09-23T13:24:16.067127+00:00</published>
+    <updated>2026-09-23T13:24:16.067127+00:00</updated>
+    <link href="https://www.heise.de/news/Patchday-Adobe-Connect-ist-unter-Android-macOS-und-Windows-verwundbar-11462802.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · unspecified&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Adobe Connect patches critical vulnerabilities affecting Android, macOS, and Windows platforms, including arbitrary code execution and authentication bypass flaws. The severity warrants immediate patching across all affected systems and platforms. Users should prioritize applying available security updates to close exploitation vectors. Recommend coordinating deployment across enterprise Android MDM, macOS, and Windows patch management systems to ensure comprehensive coverage.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.heise.de/news/Patchday-Adobe-Connect-ist-unter-Android-macOS-und-Windows-verwundbar-11462802.html"&gt;Read more&lt;/a&gt; · Source: heise-security&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>[mcp-atlassian] Authentication bypass in HTTP transport: AtlassianOpaqueTokenVerifier accepts any non-empty token (CVE-2026-77244)</title>
     <id>urn:cybersecnews:item:435</id>
@@ -110,7 +128,7 @@
     <updated>2026-09-22T13:09:32.422877+00:00</updated>
     <link href="https://thehackernews.com/2026/09/new-linux-kernel-flaw-gives-arm64-kvm.html" rel="alternate" />
     <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · use-after-free · CVE-2026-89775&lt;/em&gt;&lt;/p&gt;&lt;p&gt;CVE-2026-89775 affects the Linux kernel's ARM64 KVM virtualization code and allows guest virtual machines to read and write host kernel memory through a use-after-free vulnerability when nested virtualization is enabled. The flaw enables guest escape and arbitrary code execution on the host with high severity. This requires nested virtualization to be explicitly enabled, limiting immediate exposure, but patches should be applied to affected kernel versions. Mitigation involves disabling nested virtualization until patches are deployed.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/09/new-linux-kernel-flaw-gives-arm64-kvm.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · use-after-free · CVE-2026-80521, CVE-2026-89775&lt;/em&gt;&lt;/p&gt;&lt;p&gt;CVE-2026-89775 affects the Linux kernel's ARM64 KVM virtualization code and allows guest virtual machines to read and write host kernel memory through a use-after-free vulnerability when nested virtualization is enabled. The flaw enables guest escape and arbitrary code execution on the host with high severity. This requires nested virtualization to be explicitly enabled, limiting immediate exposure, but patches should be applied to affected kernel versions. Mitigation involves disabling nested virtualization until patches are deployed.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/09/new-linux-kernel-flaw-gives-arm64-kvm.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
   </entry>
   <entry>
     <title>Zyxel GS1900 Series Switches: Zyxel GS1900 Series Switches Stack-Based Buffer Overflow Vulnerability (CVE-2026-7273)</title>
@@ -632,7 +650,7 @@
     <updated>2026-09-04T12:32:43.253871+00:00</updated>
     <link href="https://thehackernews.com/2026/09/google-releases-chrome-update-to-patch.html" rel="alternate" />
     <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · type-confusion · CVE-2026-85046&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Google patched CVE-2026-85046, a high-severity type confusion vulnerability (CVSS 8.8) in Chrome's V8 JavaScript engine affecting versions prior to 152.0.7977.82. The flaw is actively exploited in the wild and allows remote code execution through malicious web content. Immediate patching to Chrome 152.0.7977.82 or later is critical. Users should enable automatic updates if not already configured.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/09/google-releases-chrome-update-to-patch.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · type-confusion · CVE-2026-85046, CVE-2026-85880, CVE-2026-87491&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Google patched CVE-2026-85046, a high-severity type confusion vulnerability (CVSS 8.8) in Chrome's V8 JavaScript engine affecting versions prior to 152.0.7977.82. The flaw is actively exploited in the wild and allows remote code execution through malicious web content. Immediate patching to Chrome 152.0.7977.82 or later is critical. Users should enable automatic updates if not already configured.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/09/google-releases-chrome-update-to-patch.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
   </entry>
   <entry>
     <title>SiYuan: Unauthenticated SQL execution and REGEXP injection via fullTextSearchAssetContent (publish mode): reader-reachable raw SQL (method 2) and unescaped REGEXP (method 3) on read-write asset-content DB (CVE-2026-69083)</title>
@@ -885,23 +903,5 @@
     <link href="https://github.com/advisories/GHSA-73mf-m39p-wpm9" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · yaml-injection-rce · CVE-2026-55559&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Yamcs (yamcs-core) is vulnerable to remote code execution via YAML injection in the `templateArgs` parameter of the `POST /api/instances` and `PATCH /api/instances/{instance}` endpoints (CVE-2026-55559). An authenticated attacker with the `CreateInstances` privilege can inject malicious YAML to add a `ProcessRunner` service entry and execute arbitrary commands on the host. This is a critical severity vulnerability that appears exploitable in the wild. Apply the latest security patch immediately and restrict `CreateInstances` privilege to trusted administrators only.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-73mf-m39p-wpm9"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Yamcs vulnerable to authenticated remote code execution via unescaped StreamSQL `LIKE` pattern compiled by Janino (`LikeExpression`) (CVE-2026-55565)</title>
-    <id>urn:cybersecnews:item:337</id>
-    <published>2026-08-29T00:27:03.528029+00:00</published>
-    <updated>2026-08-29T00:27:03.528029+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-c64q-hj4j-375f" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-55565&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Yamcs (org.yamcs:yamcs-core) contains a critical authenticated remote code execution vulnerability in StreamSQL `LIKE` operator handling. User-supplied LIKE patterns are inserted unescaped into Java code compiled by Janino, allowing an attacker to break out of string literals and inject arbitrary Java code (such as static blocks executing OS commands) when the compiled filter class loads. The vulnerability affects all versions and is exploitable by authenticated users; no public exploitation in the wild has been reported yet. Patch immediately by upgrading to a patched version when available, or apply input validation/escaping for LIKE patterns as a temporary mitigation.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-c64q-hj4j-375f"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>plone.app.event vulnerable to denial of service via iCalendar import (CVE-2026-55247)</title>
-    <id>urn:cybersecnews:item:336</id>
-    <published>2026-08-29T00:27:03.526961+00:00</published>
-    <updated>2026-08-29T00:27:03.526961+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-r82h-mqw3-fc56" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · dos,ssrf,xss · CVE-2026-55247, CVE-2026-83548, CVE-2026-83549&lt;/em&gt;&lt;/p&gt;&lt;p&gt;plone.app.event iCalendar import functionality contains a critical vulnerability (CVE-2026-55247) allowing authenticated editors to cause denial of service, perform server-side request forgery (SSRF) to access internal networks and disk files, and store persistent XSS payloads. There is no indication of active exploitation in the wild. Immediately upgrade plone.app.event to version 6.0.1 (Plone 6.2) or 5.2.4 (Plone 6.0/6.1) to patch the vulnerability.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-r82h-mqw3-fc56"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
   </entry>
 </feed>
