@@ -3,7 +3,43 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-09-22T19:40:12.325590+00:00</updated>
+  <updated>2026-09-23T03:34:51.680655+00:00</updated>
+  <entry>
+    <title>[mcp-atlassian] Authentication bypass in HTTP transport: AtlassianOpaqueTokenVerifier accepts any non-empty token (CVE-2026-77244)</title>
+    <id>urn:cybersecnews:item:435</id>
+    <published>2026-09-23T03:34:51.680655+00:00</published>
+    <updated>2026-09-23T03:34:51.680655+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-wrhw-j3f9-8vc6" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-77244&lt;/em&gt;&lt;/p&gt;&lt;p&gt;mcp-atlassian's AtlassianOpaqueTokenVerifier accepts any non-empty token without validation, allowing authentication bypass in multi-user deployments (Pattern B). This critical vulnerability affects systems using per-request tokens via Authorization headers or service headers, enabling unauthorized access to Jira/Confluence. No evidence of wild exploitation reported. Immediately patch to the latest version and implement server-side token validation; single-user deployments using environment variables (Pattern A) are unaffected but should still update as a precaution.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-wrhw-j3f9-8vc6"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>OpenBao's Recovery Mode Vulnerable To Token Leakage via Timing Attack (CVE-2026-63132)</title>
+    <id>urn:cybersecnews:item:434</id>
+    <published>2026-09-23T03:34:51.679530+00:00</published>
+    <updated>2026-09-23T03:34:51.679530+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-34fc-gh42-pj53" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · timing-attack · CVE-2026-63132&lt;/em&gt;&lt;/p&gt;&lt;p&gt;OpenBao versions prior to 2.6.0 are vulnerable to a timing attack against the recovery token in recovery mode (CVE-2026-63132). An attacker can exploit variable response times during token validation to extract the recovery token and subsequently access or modify sensitive data in the OpenBao instance. This is a critical severity vulnerability with no reported wild exploitation at present. Upgrade to OpenBao v2.6.0 or later immediately, and consider disabling recovery mode when not actively needed.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-34fc-gh42-pj53"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Home Assistant: XSS in Statistics Graph Card (CVE-2026-91130)</title>
+    <id>urn:cybersecnews:item:433</id>
+    <published>2026-09-23T03:34:51.678242+00:00</published>
+    <updated>2026-09-23T03:34:51.678242+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-wx4m-69m9-gx3m" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · xss · CVE-2026-91130&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Home Assistant's Statistics Graph Card is vulnerable to Cross-Site Scripting (CVE-2026-91130) when an authenticated user injects malicious code into entity names; the payload executes when other users hover over chart data points. This critical severity vulnerability requires authentication but affects all users viewing the compromised statistics card. Patch to the latest Home Assistant version immediately as this vulnerability likely enables account takeover or lateral movement within the Home Assistant instance. Review entity names across your installation for suspicious characters and restrict entity renaming permissions to trusted administrators.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-wx4m-69m9-gx3m"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>F5 BIG-IP APM: F5 BIG-IP APM Heap-based Buffer Overflow Vulnerability (CVE-2026-94127)</title>
+    <id>urn:cybersecnews:item:432</id>
+    <published>2026-09-23T03:34:51.673792+00:00</published>
+    <updated>2026-09-23T03:34:51.673792+00:00</updated>
+    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-94127" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · heap-buffer-overflow · CVE-2026-94127&lt;/em&gt;&lt;/p&gt;&lt;p&gt;F5 BIG-IP APM is vulnerable to a heap-based buffer overflow (CVE-2026-94127) triggered when access policy and OAuth profile configurations are present on a virtual server, enabling unauthenticated remote code execution. This vulnerability is actively exploited in the wild. Apply vendor-provided patches immediately per CISA BOD 26-04 prioritization guidance; if patches are unavailable, implement mitigations or discontinue use. Conduct forensics triage and assess internet-facing exposure to prioritize remediation across your environment.&lt;/p&gt;&lt;p&gt;&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2026-94127"&gt;Read more&lt;/a&gt; · Source: cisa-kev&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>New Windows Defender zero-day blocks Microsoft antivirus updates</title>
     <id>urn:cybersecnews:item:431</id>
@@ -254,7 +290,7 @@
     <updated>2026-09-18T12:45:28.392032+00:00</updated>
     <link href="https://www.bleepingcomputer.com/news/security/check-point-warns-critical-flaw-lets-hackers-execute-code-as-root/" rel="alternate" />
     <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-93616&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Check Point management systems are affected by a critical vulnerability enabling remote code execution with root privileges. The flaw allows unauthenticated attackers to execute arbitrary commands on affected systems. Check Point has released patches to address this issue; administrators should apply security updates immediately to all vulnerable management systems.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/check-point-warns-critical-flaw-lets-hackers-execute-code-as-root/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-85102, CVE-2026-93616&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Check Point management systems are affected by a critical vulnerability enabling remote code execution with root privileges. The flaw allows unauthenticated attackers to execute arbitrary commands on affected systems. Check Point has released patches to address this issue; administrators should apply security updates immediately to all vulnerable management systems.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/check-point-warns-critical-flaw-lets-hackers-execute-code-as-root/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
   </entry>
   <entry>
     <title>WeaselBiscuit Stealer Spreads via 13 npm Packages to Harvest Chrome Extension Storage</title>
@@ -867,41 +903,5 @@
     <link href="https://github.com/advisories/GHSA-r82h-mqw3-fc56" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · dos,ssrf,xss · CVE-2026-55247, CVE-2026-83548, CVE-2026-83549&lt;/em&gt;&lt;/p&gt;&lt;p&gt;plone.app.event iCalendar import functionality contains a critical vulnerability (CVE-2026-55247) allowing authenticated editors to cause denial of service, perform server-side request forgery (SSRF) to access internal networks and disk files, and store persistent XSS payloads. There is no indication of active exploitation in the wild. Immediately upgrade plone.app.event to version 6.0.1 (Plone 6.2) or 5.2.4 (Plone 6.0/6.1) to patch the vulnerability.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-r82h-mqw3-fc56"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Pimcore Vulnerable to Remote Code Execution via DataObject Class-Definition Field Name (CVE-2026-55634)</title>
-    <id>urn:cybersecnews:item:335</id>
-    <published>2026-08-29T00:27:03.526051+00:00</published>
-    <updated>2026-08-29T00:27:03.526051+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-9x44-4gxf-8c25" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-55634&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Pimcore is vulnerable to remote code execution through improper validation of DataObject class-definition field names (CVE-2026-55634). Users with basic `objects` permission can inject arbitrary PHP code by crafting malicious field names that break out of property declarations during class file generation. This is a critical vulnerability actively exploitable without special privileges. Administrators should immediately update Pimcore to the patched version and restrict DataObject import functionality until patching is complete.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-9x44-4gxf-8c25"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>GiveWP WordPress donation plugin flaw lets hackers execute server commands</title>
-    <id>urn:cybersecnews:item:334</id>
-    <published>2026-08-29T00:27:03.525182+00:00</published>
-    <updated>2026-08-29T00:27:03.525182+00:00</updated>
-    <link href="https://www.bleepingcomputer.com/news/security/givewp-wordpress-donation-plugin-flaw-lets-hackers-execute-server-commands/" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-76581&lt;/em&gt;&lt;/p&gt;&lt;p&gt;GiveWP WordPress donation plugin contains a critical remote code execution (RCE) vulnerability allowing unauthenticated attackers to execute arbitrary server commands. The flaw has a CVSS score indicating maximum severity and poses immediate risk to all affected installations. Update GiveWP to the patched version immediately; additionally, restrict access to the plugin files and monitor server logs for exploitation attempts. If patching cannot be deployed immediately, disable or remove the plugin as a temporary mitigation measure.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/givewp-wordpress-donation-plugin-flaw-lets-hackers-execute-server-commands/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Cosmos EVM Flaw Exploited After Cosmos Labs Knew Every Blockchain Running It Was Vulnerable</title>
-    <id>urn:cybersecnews:item:333</id>
-    <published>2026-08-29T00:27:03.523186+00:00</published>
-    <updated>2026-08-29T00:27:03.523186+00:00</updated>
-    <link href="https://thehackernews.com/2026/08/cosmos-evm-flaw-exploited-after-cosmos.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · balance-handling-flaw&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Cosmos EVM module versions prior to 0.6.2 contain a critical balance-handling flaw that has been actively exploited in the wild to drain funds from at least six blockchains. The vulnerability allows attackers to manipulate account balances, with confirmed exploitation occurring between August 20-25, 2026, after Cosmos Labs was aware of the risk to all affected chains. This is rated Critical severity with active ongoing exploitation. All operators of Cosmos EVM-based blockchains must immediately patch to version 0.6.2 or later; operators unable to patch immediately should consider halting affected chains or implementing emergency governance measures to freeze vulnerable accounts.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/08/cosmos-evm-flaw-exploited-after-cosmos.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>APT28-Linked HOOKEDGE Backdoor Targets European Government and Diplomatic Organizations</title>
-    <id>urn:cybersecnews:item:332</id>
-    <published>2026-08-28T09:51:42.761181+00:00</published>
-    <updated>2026-08-28T09:51:42.761181+00:00</updated>
-    <link href="https://thehackernews.com/2026/08/apt28-linked-hookedge-backdoor-targets.html" rel="alternate" />
-    <category term="red-team" />
-    <content type="html">&lt;p&gt;&lt;em&gt;red-team · backdoor&lt;/em&gt;&lt;/p&gt;&lt;p&gt;APT28 is deploying HOOKEDGE, a previously undocumented Windows batch script backdoor, against European government and diplomatic entities in Romania, Spain, and Türkiye since September 2025. The backdoor provides remote access and command execution capabilities, representing a moderate-to-high severity threat given the sensitive nature of targeted organizations and APT28's advanced capabilities. Active exploitation in the wild is confirmed through ongoing campaigns across multiple countries. Organizations should immediately patch systems, implement network segmentation for diplomatic/government networks, enhance endpoint detection and response (EDR) capabilities, and conduct forensic investigations for potential compromise indicators related to batch script execution and command-and-control communications.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/08/apt28-linked-hookedge-backdoor-targets.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
   </entry>
 </feed>
