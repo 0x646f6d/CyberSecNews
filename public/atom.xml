@@ -3,7 +3,52 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-09-23T13:24:16.068452+00:00</updated>
+  <updated>2026-09-23T19:29:41.201855+00:00</updated>
+  <entry>
+    <title>Moquette: Pattern-ACL wildcard injection (cross-tenant authorization bypass) plus a remote-unauthenticated DoS cluster, a Will-message authorization bypass, and a cross-session durable-corruption bug (CVE-2026-85724)</title>
+    <id>urn:cybersecnews:item:442</id>
+    <published>2026-09-23T19:29:41.201855+00:00</published>
+    <updated>2026-09-23T19:29:41.201855+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-5f42-97gr-vfhq" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass,dos,acl-bypass · CVE-2026-85724&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Moquette MQTT broker (io.moquette:moquette-broker) contains multiple critical authorization and denial-of-service vulnerabilities (CVE-2026-85724) affecting pattern-based ACLs, Will-message authorization, and cross-session integrity. Unauthenticated remote clients can bypass pattern ACLs across tenants, trigger remote DoS, bypass Will-message authorization, and cause durable corruption—though RCE is not possible on the JVM platform. Severity is critical; exploitation likelihood in the wild is unknown but the anonymous-by-default configuration makes it accessible. Patch or upgrade to a patched version immediately; review and restrict anonymous MQTT access pending patches.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-5f42-97gr-vfhq"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>OpenC3 COSMOS: Authenticated remote code execution via the user-writable config overlay (table definitions, cmd/tlm definitions, and script suites) (CVE-2026-77602)</title>
+    <id>urn:cybersecnews:item:441</id>
+    <published>2026-09-23T19:29:41.200813+00:00</published>
+    <updated>2026-09-23T19:29:41.200813+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-jjq7-m736-w977" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-77602&lt;/em&gt;&lt;/p&gt;&lt;p&gt;OpenC3 COSMOS is vulnerable to authenticated remote code execution (CVE-2026-77602, critical severity) through user-writable configuration overlays in the `targets_modified/` directory. An authenticated attacker can inject arbitrary code via ERB template injection in configuration files, generic conversion blocks that execute Ruby/Python code, or script suite procedures that are dynamically required. This vulnerability is likely exploited in the wild given the trivial exploitation path for authenticated users with write access. Immediately patch COSMOS to the latest version and restrict write permissions on the `targets_modified/` directory; additionally, disable ERB rendering for untrusted configuration files or implement strict input validation.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-jjq7-m736-w977"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>How One Kubernetes YAML Can Hand Over a GCP Organization</title>
+    <id>urn:cybersecnews:item:440</id>
+    <published>2026-09-23T19:29:41.199857+00:00</published>
+    <updated>2026-09-23T19:29:41.199857+00:00</updated>
+    <link href="https://www.bleepingcomputer.com/news/security/how-one-kubernetes-yaml-can-hand-over-a-gcp-organization/" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · privilege-escalation&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Google Kubernetes Config Connector (KCC) allows Kubernetes users with limited permissions to escalate privileges to organization-wide control over GCP through a confused deputy vulnerability. An attacker can craft a malicious YAML manifest that exploits KCC's broad IAM permissions to create or modify GCP resources across the entire organization, bypassing intended access controls. This represents a critical severity issue with high exploitability for organizations using KCC without proper RBAC restrictions. Mitigate by implementing least-privilege Kubernetes RBAC policies for KCC service accounts, using organizational policy constraints to restrict resource creation scope, and auditing existing KCC permissions against principle of least privilege.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/how-one-kubernetes-yaml-can-hand-over-a-gcp-organization/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Hackers start exploiting critical WordPress flaw for code execution</title>
+    <id>urn:cybersecnews:item:439</id>
+    <published>2026-09-23T19:29:41.198089+00:00</published>
+    <updated>2026-09-23T19:29:41.198089+00:00</updated>
+    <link href="https://www.bleepingcomputer.com/news/security/hackers-start-exploiting-critical-wordpress-flaw-for-code-execution/" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-87902&lt;/em&gt;&lt;/p&gt;&lt;p&gt;CVE-2026-87902 affects WordPress and allows remote code execution through arbitrary file writing to disk. Threat actors are actively exploiting this critical vulnerability in the wild to execute shell commands on compromised systems. Immediate patching is required for all affected WordPress installations; apply available security updates without delay and audit systems for indicators of compromise including unexpected files and suspicious command execution.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/hackers-start-exploiting-critical-wordpress-flaw-for-code-execution/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>A Leaked GitLab Issue Email Address Lets Anyone Push Code and Run CI Jobs as You</title>
+    <id>urn:cybersecnews:item:438</id>
+    <published>2026-09-23T19:29:41.196664+00:00</published>
+    <updated>2026-09-23T19:29:41.196664+00:00</updated>
+    <link href="https://thehackernews.com/2026/09/a-leaked-gitlab-issue-email-address.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass&lt;/em&gt;&lt;/p&gt;&lt;p&gt;GitLab's confidential issue email feature exposes a sensitive credential that functions as authentication for code commits and CI/CD job execution. An attacker obtaining a user's private issue email address can push commits to any branch the user has access to, including main, and trigger CI/CD pipelines executing with the victim's privileges. This is a high-severity vulnerability enabling supply chain compromise and unauthorized code execution. GitLab should rotate compromised email addresses immediately and implement additional authentication mechanisms for email-based code submission; users should treat their issue email addresses as highly sensitive secrets and rotate them if exposed.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/09/a-leaked-gitlab-issue-email-address.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Absturzgefahr: Exploit lässt Angreifer DJI-Drohnen mitten im Flug kapern</title>
     <id>urn:cybersecnews:item:437</id>
@@ -227,7 +272,7 @@
     <updated>2026-09-18T18:56:23.253186+00:00</updated>
     <link href="https://github.com/advisories/GHSA-26vp-8gxg-v4pg" rel="alternate" />
     <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2025-53837&lt;/em&gt;&lt;/p&gt;&lt;p&gt;org.xwiki.rendering:xwiki-rendering-xml allows eval injection via improper escaping of rendering output in HTML macros, enabling authenticated users with document edit permissions to inject and execute arbitrary Groovy or Python script macros with programming rights, resulting in remote code execution and unrestricted wiki access. This is critical severity and actively exploited. Patch immediately by updating to the latest patched version; restrict document edit permissions as an interim mitigation.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-26vp-8gxg-v4pg"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2025-53837, CVE-2026-57149&lt;/em&gt;&lt;/p&gt;&lt;p&gt;org.xwiki.rendering:xwiki-rendering-xml allows eval injection via improper escaping of rendering output in HTML macros, enabling authenticated users with document edit permissions to inject and execute arbitrary Groovy or Python script macros with programming rights, resulting in remote code execution and unrestricted wiki access. This is critical severity and actively exploited. Patch immediately by updating to the latest patched version; restrict document edit permissions as an interim mitigation.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-26vp-8gxg-v4pg"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
   </entry>
   <entry>
     <title>LMDeploy has Remote Code Execution by Pickle Deserialization via handle_zmq_recv in lmdeploy/lmdeploy/pytorch/disagg/conn/engine_conn.py (CVE-2025-66455)</title>
@@ -587,7 +632,7 @@
     <updated>2026-09-06T11:59:12.136011+00:00</updated>
     <link href="https://thehackernews.com/2026/09/attackers-hijack-mikrotik-routers.html" rel="alternate" />
     <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass&lt;/em&gt;&lt;/p&gt;&lt;p&gt;MikroTik routers with internet-exposed SSH service are vulnerable to unauthenticated remote access allowing full administrative control. Attackers have actively exploited this vulnerability since at least September 2, 2024, gaining unauthorized administrative privileges without credentials. Severity is critical due to complete system compromise potential and active exploitation in the wild. Immediately disable internet-facing SSH access or restrict SSH to trusted IP addresses only; apply available security patches from MikroTik and consider disabling SSH entirely if remote management is not required.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/09/attackers-hijack-mikrotik-routers.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-67279, CVE-2026-86060&lt;/em&gt;&lt;/p&gt;&lt;p&gt;MikroTik routers with internet-exposed SSH service are vulnerable to unauthenticated remote access allowing full administrative control. Attackers have actively exploited this vulnerability since at least September 2, 2024, gaining unauthorized administrative privileges without credentials. Severity is critical due to complete system compromise potential and active exploitation in the wild. Immediately disable internet-facing SSH access or restrict SSH to trusted IP addresses only; apply available security patches from MikroTik and consider disabling SSH entirely if remote management is not required.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/09/attackers-hijack-mikrotik-routers.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
   </entry>
   <entry>
     <title>Unpatched Magento and Adobe Commerce Zero-Day Exploited to Backdoor Online Stores</title>
@@ -858,50 +903,5 @@
     <link href="https://bishopfox.com/blog/traefik-version-through-3-7-11" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · dos&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Traefik HTTP/3 requests are not subject to the configured read timeout, allowing attackers to establish connections and hold them open indefinitely, potentially enabling slowloris-style denial-of-service attacks. This vulnerability affects all Traefik versions through 3.7.11 and has existed for at least four years without being exploited in the wild. Update to the patched version immediately, as the vendor has released a fix within two weeks of disclosure. Review HTTP/3 listener configurations and consider implementing network-level timeouts as a temporary mitigation if immediate patching is not feasible.&lt;/p&gt;&lt;p&gt;&lt;a href="https://bishopfox.com/blog/traefik-version-through-3-7-11"&gt;Read more&lt;/a&gt; · Source: bishop-fox&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Breaking the Seal: Static Deobfuscation of JSCeal’s Compiled V8 Bytecode</title>
-    <id>urn:cybersecnews:item:342</id>
-    <published>2026-08-31T21:19:59.476585+00:00</published>
-    <updated>2026-08-31T21:19:59.476585+00:00</updated>
-    <link href="https://research.checkpoint.com/2026/breaking-the-seal-static-deobfuscation-of-jsceals-compiled-v8-bytecode/" rel="alternate" />
-    <category term="red-team" />
-    <content type="html">&lt;p&gt;&lt;em&gt;red-team · deobfuscation&lt;/em&gt;&lt;/p&gt;&lt;p&gt;JSCeal is a stealer malware distributed as obfuscated V8 bytecode (.jsc files) executed via bundled Node.js runtime, primarily targeting cryptocurrency applications and also tracked as WEEVILPROXY or MeadowLocust. The malware has been active since March 2024 and employs bytecode compilation as an obfuscation technique to evade detection, though researchers have demonstrated static deobfuscation methods are effective against it. This represents a moderate-to-high severity threat given its cryptocurrency targeting and active campaign status; current exploitation appears limited to targeted financial entities. Organizations should implement detection signatures for .jsc files and V8 bytecode execution, restrict Node.js runtime execution to trusted sources only, and monitor for suspicious cryptocurrency wallet application access.&lt;/p&gt;&lt;p&gt;&lt;a href="https://research.checkpoint.com/2026/breaking-the-seal-static-deobfuscation-of-jsceals-compiled-v8-bytecode/"&gt;Read more&lt;/a&gt; · Source: checkpoint-research&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>TerminalFix Uses Fake Cloudflare CAPTCHAs to Deploy Reverse-Tunnel Backdoor</title>
-    <id>urn:cybersecnews:item:341</id>
-    <published>2026-08-30T13:36:05.459111+00:00</published>
-    <updated>2026-08-30T13:36:05.459111+00:00</updated>
-    <link href="https://thehackernews.com/2026/08/terminalfix-uses-fake-cloudflare.html" rel="alternate" />
-    <category term="red-team" />
-    <content type="html">&lt;p&gt;&lt;em&gt;red-team · social-engineering&lt;/em&gt;&lt;/p&gt;&lt;p&gt;TerminalFix is a ClickFix variant that uses fake Cloudflare CAPTCHA prompts to socially engineer users into executing malicious commands in Windows Terminal or PowerShell, ultimately deploying a reverse-tunnel backdoor. This technique increases effectiveness over traditional ClickFix by leveraging terminal applications to execute complex payloads that Run dialogs cannot handle. Severity is moderate-to-high as it enables backdoor installation and is actively exploited in the wild through social engineering. Recommended actions include user awareness training on suspicious CAPTCHA prompts outside normal browser contexts, blocking execution policies via Group Policy where feasible, and monitoring for suspicious terminal/PowerShell command execution patterns.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/08/terminalfix-uses-fake-cloudflare.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Klever: Integer overflow in split-royalty validation enables unbounded minting of KLV (native token) (CVE-2026-54755)</title>
-    <id>urn:cybersecnews:item:340</id>
-    <published>2026-08-29T00:27:03.530696+00:00</published>
-    <updated>2026-08-29T00:27:03.530696+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-cgc5-v3f2-8m2v" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · integer-overflow · CVE-2026-54755&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Klever Go SDK's split-royalty validation contains a critical integer overflow vulnerability in the uint32 accumulator used to verify per-entry percentages (CVE-2026-54755). An attacker can craft two split entries with percentages summing over 2^32 to bypass validation while storing astronomically large individual values, enabling unbounded minting of KLV tokens during royalty payout. This is critical severity with no current indication of wild exploitation but represents complete loss of token supply integrity. Immediate patching required: upgrade to a fixed version that implements proper bounds checking on individual percentage entries before accumulation or uses uint64 for accumulator validation.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-cgc5-v3f2-8m2v"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>free5GC NRF nnrf-nfm lacks NF Profile input validation — enables NF Registration Poisoning with arbitrary service endpoints (CVE-2026-55068)</title>
-    <id>urn:cybersecnews:item:339</id>
-    <published>2026-08-29T00:27:03.529874+00:00</published>
-    <updated>2026-08-29T00:27:03.529874+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-x8mj-6p3q-g5pp" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · input-validation · CVE-2026-55068&lt;/em&gt;&lt;/p&gt;&lt;p&gt;free5GC NRF (Network Repository Function) in versions up to latest lacks input validation on NF Profile registration, allowing unauthenticated attackers to inject malicious NF profiles with arbitrary service endpoints that violate 3GPP TS 29.510 constraints. This NF Registration Poisoning vulnerability has critical severity and enables control-plane traffic hijacking through fake endpoint discovery. No evidence of active exploitation provided. Immediately patch free5gc to the latest version implementing full NF Profile validation per 3GPP specifications and enforce authentication/authorization on the nnrf-nfm endpoint; consider network segmentation to restrict NRF access.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-x8mj-6p3q-g5pp"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Yamcs vulnerable to Remote Code Execution via instance-template argument YAML injection (createInstance) (CVE-2026-55559)</title>
-    <id>urn:cybersecnews:item:338</id>
-    <published>2026-08-29T00:27:03.529062+00:00</published>
-    <updated>2026-08-29T00:27:03.529062+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-73mf-m39p-wpm9" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · yaml-injection-rce · CVE-2026-55559&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Yamcs (yamcs-core) is vulnerable to remote code execution via YAML injection in the `templateArgs` parameter of the `POST /api/instances` and `PATCH /api/instances/{instance}` endpoints (CVE-2026-55559). An authenticated attacker with the `CreateInstances` privilege can inject malicious YAML to add a `ProcessRunner` service entry and execute arbitrary commands on the host. This is a critical severity vulnerability that appears exploitable in the wild. Apply the latest security patch immediately and restrict `CreateInstances` privilege to trusted administrators only.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-73mf-m39p-wpm9"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
   </entry>
 </feed>
