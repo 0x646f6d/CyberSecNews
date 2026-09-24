@@ -3,7 +3,16 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-09-23T19:29:41.201855+00:00</updated>
+  <updated>2026-09-24T13:17:04.836328+00:00</updated>
+  <entry>
+    <title>Sicherheitspatch gegen Schadcode repariert SolarWinds Observability Self-Hosted</title>
+    <id>urn:cybersecnews:item:443</id>
+    <published>2026-09-24T13:17:04.836328+00:00</published>
+    <updated>2026-09-24T13:17:04.836328+00:00</updated>
+    <link href="https://www.heise.de/news/Sicherheitspatch-gegen-Schadcode-repariert-SolarWinds-Observability-Self-Hosted-11464112.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;SolarWinds Observability Self-Hosted contains a vulnerability allowing arbitrary code execution under specific conditions. The flaw affects the infrastructure monitoring solution and poses significant risk to affected deployments. SolarWinds has released a security patch to address this issue. Organizations running SolarWinds Observability Self-Hosted should apply the available security update immediately, particularly if the system is exposed to untrusted networks or user input.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.heise.de/news/Sicherheitspatch-gegen-Schadcode-repariert-SolarWinds-Observability-Self-Hosted-11464112.html"&gt;Read more&lt;/a&gt; · Source: heise-security&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Moquette: Pattern-ACL wildcard injection (cross-tenant authorization bypass) plus a remote-unauthenticated DoS cluster, a Will-message authorization bypass, and a cross-session durable-corruption bug (CVE-2026-85724)</title>
     <id>urn:cybersecnews:item:442</id>
@@ -894,14 +903,5 @@
     <link href="https://trustedsec.com/blog/waf-fu-or-some-log-replay-nonsense" rel="alternate" />
     <category term="red-team" />
     <content type="html">&lt;p&gt;&lt;em&gt;red-team · post-exploitation&lt;/em&gt;&lt;/p&gt;&lt;p&gt;AWS CloudWatch logs can be replayed to extract exposed credentials when WAF (Web Application Firewall) rules fail to sanitize sensitive data in request/response logs. This technique exploits insufficient logging controls and WAF bypass methods to capture plaintext credentials from historical log entries, potentially granting unauthorized access to AWS resources and services. Severity is medium-to-high depending on credential scope and environment sensitivity; exploitation requires existing CloudWatch log access and is primarily a manual post-compromise technique rather than widespread automated exploitation. Recommended mitigations: implement strict WAF rules to redact sensitive patterns (passwords, tokens, keys) before logging, enforce principle of least privilege on CloudWatch log access, enable log encryption at rest and in transit, and conduct regular log audits for exposed credentials.&lt;/p&gt;&lt;p&gt;&lt;a href="https://trustedsec.com/blog/waf-fu-or-some-log-replay-nonsense"&gt;Read more&lt;/a&gt; · Source: trustedsec&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Traefik | Version Through 3.7.11</title>
-    <id>urn:cybersecnews:item:343</id>
-    <published>2026-08-31T21:19:59.489400+00:00</published>
-    <updated>2026-08-31T21:19:59.489400+00:00</updated>
-    <link href="https://bishopfox.com/blog/traefik-version-through-3-7-11" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · dos&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Traefik HTTP/3 requests are not subject to the configured read timeout, allowing attackers to establish connections and hold them open indefinitely, potentially enabling slowloris-style denial-of-service attacks. This vulnerability affects all Traefik versions through 3.7.11 and has existed for at least four years without being exploited in the wild. Update to the patched version immediately, as the vendor has released a fix within two weeks of disclosure. Review HTTP/3 listener configurations and consider implementing network-level timeouts as a temporary mitigation if immediate patching is not feasible.&lt;/p&gt;&lt;p&gt;&lt;a href="https://bishopfox.com/blog/traefik-version-through-3-7-11"&gt;Read more&lt;/a&gt; · Source: bishop-fox&lt;/p&gt;</content>
   </entry>
 </feed>
