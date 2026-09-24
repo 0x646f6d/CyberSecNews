@@ -3,7 +3,70 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-09-24T13:17:04.836328+00:00</updated>
+  <updated>2026-09-24T19:50:42.004813+00:00</updated>
+  <entry>
+    <title>SunEditor: Critical XSS vulnerability - sanitizer bypass (CVE-2026-59167)</title>
+    <id>urn:cybersecnews:item:450</id>
+    <published>2026-09-24T19:50:42.004813+00:00</published>
+    <updated>2026-09-24T19:50:42.004813+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-6rf4-v2fh-m6p4" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · xss · CVE-2026-59167&lt;/em&gt;&lt;/p&gt;&lt;p&gt;SunEditor v2.47.10 and prior versions contain a critical cross-site scripting (XSS) vulnerability (CVE-2026-59167) where the HTML sanitizer fails to remove event-handler attributes from namespaced or custom HTML elements, allowing attackers to inject executable JavaScript. The vulnerability stems from insufficient sanitization logic introduced in recent code changes and is likely exploitable in production environments. Organizations using SunEditor should immediately upgrade to a patched version once available, or implement strict input validation and content security policies as interim mitigations.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-6rf4-v2fh-m6p4"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>http4s-scala-xml has an XML External Entity (XXE) processing issue (CVE-2026-61741)</title>
+    <id>urn:cybersecnews:item:449</id>
+    <published>2026-09-24T19:50:42.003624+00:00</published>
+    <updated>2026-09-24T19:50:42.003624+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-cjx3-73hr-rpw7" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · xxe · CVE-2026-61741&lt;/em&gt;&lt;/p&gt;&lt;p&gt;The http4s-scala-xml library (all versions for Scala 2.12, 2.13, and 3) contains an XML External Entity (XXE) vulnerability in its EntityDecoder implementations for parsing XML message bodies. The affected SAXParserFactory instances lack security hardening and resolve external entities and DTDs by default, allowing attackers to exploit XXE attacks through untrusted XML input. This is a critical severity issue with active wild exploitation reported. Immediately update to a patched version and apply XXE protections such as disabling external entity resolution in XML parsers, or implement input validation on XML sources.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-cjx3-73hr-rpw7"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>DBHub HTTP transport DNS rebinding allows unauthenticated browser-origin SQL execution (CVE-2026-61742)</title>
+    <id>urn:cybersecnews:item:448</id>
+    <published>2026-09-24T19:50:42.002427+00:00</published>
+    <updated>2026-09-24T19:50:42.002427+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-fm8p-53ww-hf6w" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · dns-rebinding · CVE-2026-61742&lt;/em&gt;&lt;/p&gt;&lt;p&gt;DBHub npm package version 0.21.2 and earlier exposes an unauthenticated HTTP endpoint vulnerable to DNS rebinding attacks when running in HTTP transport mode, allowing attackers to execute arbitrary SQL commands from a victim's browser. The vulnerability bypasses the Origin/Host validation check through DNS rebinding, where an attacker-controlled domain rebinds to point at the victim's DBHub instance. This is a critical severity issue with active exploitation potential in browser environments. Users should immediately upgrade to a patched version and disable HTTP transport mode if not strictly required, alternatively implementing network-level access controls to restrict DBHub HTTP endpoints to trusted networks only.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-fm8p-53ww-hf6w"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>WSO2 Multiple Products: WSO2 Multiple Products Path Traversal Vulnerability (CVE-2026-5430)</title>
+    <id>urn:cybersecnews:item:447</id>
+    <published>2026-09-24T19:50:42.001224+00:00</published>
+    <updated>2026-09-24T19:50:42.001224+00:00</updated>
+    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-5430" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · path-traversal · CVE-2026-5430&lt;/em&gt;&lt;/p&gt;&lt;p&gt;WSO2 API Control Plane, API Manager, Traffic Manager, and Universal Gateway are vulnerable to path traversal (CVE-2026-5430) enabling unrestricted file uploads and remote code execution. This vulnerability is actively exploited in the wild with critical severity. Apply vendor-supplied mitigations immediately per CISA BOD 26-04 guidance; if unavailable, discontinue use of affected products. Assess internet exposure and prioritize patching based on asset criticality.&lt;/p&gt;&lt;p&gt;&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2026-5430"&gt;Read more&lt;/a&gt; · Source: cisa-kev&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>CISA: Ransomware gangs now exploiting critical TeamCity flaw</title>
+    <id>urn:cybersecnews:item:446</id>
+    <published>2026-09-24T19:50:41.999690+00:00</published>
+    <updated>2026-09-24T19:50:41.999690+00:00</updated>
+    <link href="https://www.bleepingcomputer.com/news/security/cisa-ransomware-gangs-now-exploiting-critical-teamcity-flaw/" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;JetBrains TeamCity is actively being exploited by ransomware operators for a critical remote code execution vulnerability (CVE-2024-27198) patched in July 2024. The flaw allows unauthenticated attackers to execute arbitrary code on affected systems, making it high-severity and widely leveraged in the wild. CISA recommends immediate patching to the latest version; organizations using TeamCity should prioritize this update to prevent ransomware deployment and ensure all instances are fully patched without delay.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/cisa-ransomware-gangs-now-exploiting-critical-teamcity-flaw/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Hackers now exploit critical Roundcube flaw in code injection attacks</title>
+    <id>urn:cybersecnews:item:445</id>
+    <published>2026-09-24T19:50:41.998442+00:00</published>
+    <updated>2026-09-24T19:50:41.998442+00:00</updated>
+    <link href="https://www.bleepingcomputer.com/news/security/critical-roundcube-flaw-now-actively-exploited-in-code-injection-attacks/" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · code-injection&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Roundcube Webmail is under active exploitation for a high-severity code injection vulnerability that was patched in May. The flaw allows remote attackers to execute arbitrary code through template injection, compromising email server security and user data. This vulnerability is confirmed exploited in the wild. Organizations running Roundcube should immediately apply the May security patch or later versions to mitigate active attack campaigns.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/critical-roundcube-flaw-now-actively-exploited-in-code-injection-attacks/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Unpatched OnePlus Flaws Let Installed Android Apps Gain Root Without Permissions</title>
+    <id>urn:cybersecnews:item:444</id>
+    <published>2026-09-24T19:50:41.996670+00:00</published>
+    <updated>2026-09-24T19:50:41.996670+00:00</updated>
+    <link href="https://thehackernews.com/2026/09/unpatched-oneplus-flaws-let-installed.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · privilege-escalation&lt;/em&gt;&lt;/p&gt;&lt;p&gt;OnePlus devices running OxygenOS are vulnerable to privilege escalation via two chained flaws in proprietary software that allow installed applications to gain root access without requesting any permissions. Researcher Rasmus Moorats demonstrated the vulnerability affecting OnePlus 15 and confirmed the same issues impact multiple OnePlus and OPPO devices; severity is critical as this enables complete device compromise. There is no indication of active exploitation in the wild, but given the simplicity of the attack (no special permissions required), exploitation risk is high. OnePlus users should await security patches immediately; currently, no workaround exists beyond avoiding installation of untrusted applications.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/09/unpatched-oneplus-flaws-let-installed.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Sicherheitspatch gegen Schadcode repariert SolarWinds Observability Self-Hosted</title>
     <id>urn:cybersecnews:item:443</id>
@@ -578,7 +641,7 @@
     <updated>2026-09-08T19:18:54.521047+00:00</updated>
     <link href="https://thehackernews.com/2026/09/chatgpt-flaw-let-planted-prompt-send.html" rel="alternate" />
     <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · prompt-injection&lt;/em&gt;&lt;/p&gt;&lt;p&gt;ChatGPT's plugin system was vulnerable to prompt injection attacks where a malicious instruction embedded in user-supplied content could execute hidden operations while the assistant continued normal functionality. In the proof-of-concept, attackers could exfiltrate Gmail data connected to a victim's account and relay it to attacker-controlled accounts via covert channels. This was a high-severity vulnerability affecting users with Gmail integration enabled, though no evidence of active exploitation in the wild was reported. OpenAI patched the underlying plugin isolation issues; users should disable unnecessary third-party integrations and review plugin permissions settings.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/09/chatgpt-flaw-let-planted-prompt-send.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · prompt-injection · CVE-2026-61732&lt;/em&gt;&lt;/p&gt;&lt;p&gt;ChatGPT's plugin system was vulnerable to prompt injection attacks where a malicious instruction embedded in user-supplied content could execute hidden operations while the assistant continued normal functionality. In the proof-of-concept, attackers could exfiltrate Gmail data connected to a victim's account and relay it to attacker-controlled accounts via covert channels. This was a high-severity vulnerability affecting users with Gmail integration enabled, though no evidence of active exploitation in the wild was reported. OpenAI patched the underlying plugin isolation issues; users should disable unnecessary third-party integrations and review plugin permissions settings.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/09/chatgpt-flaw-let-planted-prompt-send.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
   </entry>
   <entry>
     <title>FreeIPA Flaw Chain Lets Anonymous Clients Create Reusable Administrator Credentials</title>
@@ -840,68 +903,5 @@
     <link href="https://thehackernews.com/2026/09/geonetwork-fixes-unauthenticated-rce.html" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;GeoNetwork geospatial metadata catalog software affected by an unauthenticated RCE vulnerability chain exploitable without authentication. Two chained vulnerabilities allow remote code execution on systems running versions prior to 4.4.12 and 4.2.17, with particular impact to government and agency geoportal backends. Severity is critical given the widespread government deployment and lack of authentication requirement; exploit status in the wild is unknown at publication. Immediate patching to versions 4.4.12 or 4.2.17 is required; organizations should prioritize this update given the deployment landscape and verify no exploitation has occurred during the disclosure lag period.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/09/geonetwork-fixes-unauthenticated-rce.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Malicious .git Configs Can Make Claude, Codex, Cursor, and Other AI Agents Run Attacker Code</title>
-    <id>urn:cybersecnews:item:350</id>
-    <published>2026-09-02T19:16:02.607410+00:00</published>
-    <updated>2026-09-02T19:16:02.607410+00:00</updated>
-    <link href="https://thehackernews.com/2026/09/malicious-git-configs-can-make-claude.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · code-injection · CVE-2026-78676&lt;/em&gt;&lt;/p&gt;&lt;p&gt;AI coding agents (Claude, Codex, Cursor, and others) are vulnerable to arbitrary code execution via malicious .git configurations that trigger execution of attacker-specified commands with user privileges outside sandboxed environments. The vulnerabilities stem from agents parsing Git config files and executing referenced commands without validation or user approval. Severity is high as exploitation requires only committing a malicious .git file to a repository; no patching at publication for four of seven affected tools. Developers should avoid cloning untrusted repositories into agent environments and security teams should contact vendors for patches or workarounds; users should review Git configuration files in repositories before processing with AI agents.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/09/malicious-git-configs-can-make-claude.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>SonicWall warns of actively exploited SMA1000 zero-day flaws</title>
-    <id>urn:cybersecnews:item:349</id>
-    <published>2026-09-02T12:36:13.955500+00:00</published>
-    <updated>2026-09-02T12:36:13.955500+00:00</updated>
-    <link href="https://www.bleepingcomputer.com/news/security/sonicwall-warns-of-actively-exploited-sma1000-zero-day-flaws/" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-72920, CVE-2026-83549&lt;/em&gt;&lt;/p&gt;&lt;p&gt;SonicWall SMA1000 zero-day RCE flaws actively exploited in chained attacks&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/sonicwall-warns-of-actively-exploited-sma1000-zero-day-flaws/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Dropbox accounts breached through Lenovo email verification flaw</title>
-    <id>urn:cybersecnews:item:348</id>
-    <published>2026-09-02T12:36:13.954051+00:00</published>
-    <updated>2026-09-02T12:36:13.954051+00:00</updated>
-    <link href="https://www.bleepingcomputer.com/news/security/dropbox-accounts-breached-through-lenovo-email-verification-flaw/" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-28323&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Lenovo email verification flaw allowed unauthorized Dropbox account access via fraudulent Lenovo IDs&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/dropbox-accounts-breached-through-lenovo-email-verification-flaw/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>NLTK: JVM argument injection bypass via per-call options in the NLTK Stanford wrappers (incomplete fix of CVE-2026-12841) (CVE-2026-79675)</title>
-    <id>urn:cybersecnews:item:347</id>
-    <published>2026-09-02T03:08:52.141923+00:00</published>
-    <updated>2026-09-02T03:08:52.141923+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-m4rf-3fr8-xwx3" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · jvm-arg-injection · CVE-2026-78683, CVE-2026-79657, CVE-2026-79675&lt;/em&gt;&lt;/p&gt;&lt;p&gt;NLTK's Stanford wrapper Java interface contains a critical JVM argument injection vulnerability (CVE-2026-79675) where the per-call `options` parameter in the `java()` function bypasses validation checks implemented for CVE-2026-12841, allowing attackers to inject dangerous JVM flags like `-javaagent` and `-agentlib`. The vulnerability affects all versions with the incomplete fix and is likely exploitable in the wild given the straightforward bypass method. Users should update NLTK immediately to a patched version that applies `_validate_java_options()` validation to both global and per-call option parameters.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-m4rf-3fr8-xwx3"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Nearly 22,000 Microsoft Exchange servers vulnerable to hijack attacks</title>
-    <id>urn:cybersecnews:item:346</id>
-    <published>2026-09-01T19:14:24.668515+00:00</published>
-    <updated>2026-09-01T19:14:24.668515+00:00</updated>
-    <link href="https://www.bleepingcomputer.com/news/security/nearly-22-000-microsoft-exchange-servers-vulnerable-to-hijack-attacks/" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-62911&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Nearly 22,000 unpatched Microsoft Exchange servers are vulnerable to a high-severity authentication bypass flaw enabling complete mailbox compromise. The vulnerability allows remote attackers to bypass authentication mechanisms and gain unauthorized access to all user mailboxes without credentials. No active exploitation in the wild has been confirmed at this time, though the exposure of 22,000 internet-facing instances presents significant risk. Immediate patching of all Exchange servers is critical; administrators should prioritize applying the latest security updates and consider implementing network access controls to restrict Exchange exposure to trusted networks only.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/nearly-22-000-microsoft-exchange-servers-vulnerable-to-hijack-attacks/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Off the Hook: Discovering and Observing Active Exploitation of Sangoma Switchvox CVE-2026-9586</title>
-    <id>urn:cybersecnews:item:345</id>
-    <published>2026-09-01T13:09:31.861633+00:00</published>
-    <updated>2026-09-01T13:09:31.861633+00:00</updated>
-    <link href="https://horizon3.ai/attack-research/disclosures/cve-2026-9586-sangoma-switchvox-rce/" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · sqli-rce · CVE-2026-9586&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Sangoma Switchvox is affected by CVE-2026-9586, an unauthenticated SQL injection vulnerability that allows remote code execution. The flaw is actively exploited in the wild. Organizations running Switchvox should apply available patches immediately and implement network-level access controls to restrict exposure of the affected application.&lt;/p&gt;&lt;p&gt;&lt;a href="https://horizon3.ai/attack-research/disclosures/cve-2026-9586-sangoma-switchvox-rce/"&gt;Read more&lt;/a&gt; · Source: horizon3&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>waf-fu, or Some Log Replay Nonsense</title>
-    <id>urn:cybersecnews:item:344</id>
-    <published>2026-09-01T13:09:31.859168+00:00</published>
-    <updated>2026-09-01T13:09:31.859168+00:00</updated>
-    <link href="https://trustedsec.com/blog/waf-fu-or-some-log-replay-nonsense" rel="alternate" />
-    <category term="red-team" />
-    <content type="html">&lt;p&gt;&lt;em&gt;red-team · post-exploitation&lt;/em&gt;&lt;/p&gt;&lt;p&gt;AWS CloudWatch logs can be replayed to extract exposed credentials when WAF (Web Application Firewall) rules fail to sanitize sensitive data in request/response logs. This technique exploits insufficient logging controls and WAF bypass methods to capture plaintext credentials from historical log entries, potentially granting unauthorized access to AWS resources and services. Severity is medium-to-high depending on credential scope and environment sensitivity; exploitation requires existing CloudWatch log access and is primarily a manual post-compromise technique rather than widespread automated exploitation. Recommended mitigations: implement strict WAF rules to redact sensitive patterns (passwords, tokens, keys) before logging, enforce principle of least privilege on CloudWatch log access, enable log encryption at rest and in transit, and conduct regular log audits for exposed credentials.&lt;/p&gt;&lt;p&gt;&lt;a href="https://trustedsec.com/blog/waf-fu-or-some-log-replay-nonsense"&gt;Read more&lt;/a&gt; · Source: trustedsec&lt;/p&gt;</content>
   </entry>
 </feed>
