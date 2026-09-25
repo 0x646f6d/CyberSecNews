@@ -3,7 +3,25 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-09-24T19:50:42.004813+00:00</updated>
+  <updated>2026-09-25T13:17:30.785502+00:00</updated>
+  <entry>
+    <title>Cloudflare Fixes Flaw That Let One Container Read Another Customer's Leftover Disk Data</title>
+    <id>urn:cybersecnews:item:452</id>
+    <published>2026-09-25T13:17:30.785502+00:00</published>
+    <updated>2026-09-25T13:17:30.785502+00:00</updated>
+    <link href="https://thehackernews.com/2026/09/cloudflare-fixes-flaw-that-let-one.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · information-disclosure&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Cloudflare Containers contained a data disclosure vulnerability allowing customers to read residual disk data from other customers' previously executed containers on shared infrastructure. The flaw affected disk space reuse between container instances and required no active exploitation technique beyond normal container execution. Cloudflare has patched the vulnerability; severity was mitigated by the inability to target specific victims and the residual nature of exposed data. Affected customers should verify they are running patched Cloudflare Container versions and review access logs for potential unauthorized data access during the vulnerability window.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/09/cloudflare-fixes-flaw-that-let-one.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Server am Samstagmorgen herunterfahren: Kiteworks warnt Admins vor Zero-Day</title>
+    <id>urn:cybersecnews:item:451</id>
+    <published>2026-09-25T13:17:30.783988+00:00</published>
+    <updated>2026-09-25T13:17:30.783988+00:00</updated>
+    <link href="https://www.heise.de/news/Bevorstehender-Zero-Day-Angriff-KiteWorks-draengt-Kunden-zur-Serverabschaltung-11466114.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Kiteworks secure file transfer and content collaboration platform is affected by an unpatched zero-day vulnerability being actively exploited in the wild. The company advised administrators to shut down servers immediately on Saturday morning and has notified law enforcement of confirmed attacks against large enterprises in Germany and elsewhere. Severity details and technical specifics were not disclosed in the warning, but the urgency and active exploitation indicate critical risk. Organizations should immediately take affected systems offline pending patch availability and conduct forensic investigation of potentially compromised systems.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.heise.de/news/Bevorstehender-Zero-Day-Angriff-KiteWorks-draengt-Kunden-zur-Serverabschaltung-11466114.html"&gt;Read more&lt;/a&gt; · Source: heise-security&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>SunEditor: Critical XSS vulnerability - sanitizer bypass (CVE-2026-59167)</title>
     <id>urn:cybersecnews:item:450</id>
@@ -56,7 +74,7 @@
     <updated>2026-09-24T19:50:41.998442+00:00</updated>
     <link href="https://www.bleepingcomputer.com/news/security/critical-roundcube-flaw-now-actively-exploited-in-code-injection-attacks/" rel="alternate" />
     <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · code-injection&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Roundcube Webmail is under active exploitation for a high-severity code injection vulnerability that was patched in May. The flaw allows remote attackers to execute arbitrary code through template injection, compromising email server security and user data. This vulnerability is confirmed exploited in the wild. Organizations running Roundcube should immediately apply the May security patch or later versions to mitigate active attack campaigns.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/critical-roundcube-flaw-now-actively-exploited-in-code-injection-attacks/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · code-injection · CVE-2026-48842&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Roundcube Webmail is under active exploitation for a high-severity code injection vulnerability that was patched in May. The flaw allows remote attackers to execute arbitrary code through template injection, compromising email server security and user data. This vulnerability is confirmed exploited in the wild. Organizations running Roundcube should immediately apply the May security patch or later versions to mitigate active attack campaigns.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/critical-roundcube-flaw-now-actively-exploited-in-code-injection-attacks/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
   </entry>
   <entry>
     <title>Unpatched OnePlus Flaws Let Installed Android Apps Gain Root Without Permissions</title>
@@ -885,23 +903,5 @@
     <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-49869" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · os-command-injection · CVE-2026-49869, CVE-2026-73294&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Kestra OSS is affected by CVE-2026-49869, an OS command injection vulnerability allowing unauthenticated remote attackers to create and execute arbitrary workflows without credentials. This vulnerability is actively exploited in the wild and carries high severity due to the lack of authentication requirements and potential for complete system compromise. Apply vendor-supplied patches immediately per CISA BOD 26-04 guidance; organizations unable to patch should implement network segmentation to restrict Kestra OSS internet exposure or discontinue use. Document system forensics and maintain evidence per CISA's Forensics Triage Requirements if prior compromise is suspected.&lt;/p&gt;&lt;p&gt;&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2026-49869"&gt;Read more&lt;/a&gt; · Source: cisa-kev&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Kludex Starlette: Kludex Starlette HTTP Request/Response Smuggling Vulnerability (CVE-2026-48710)</title>
-    <id>urn:cybersecnews:item:352</id>
-    <published>2026-09-02T19:16:02.709665+00:00</published>
-    <updated>2026-09-02T19:16:02.709665+00:00</updated>
-    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-48710" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · http-request-smuggling · CVE-2026-48710&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Starlette web framework contains an HTTP request/response smuggling vulnerability (CVE-2026-48710) allowing attackers to inject paths into the host header, potentially bypassing authentication mechanisms that rely on reconstructed URL paths. This vulnerability is actively exploited in the wild and can be chained with CVE-2026-42271 for compound impact. Apply vendor-supplied patches immediately per CISA BOD 26-04 guidance; if unavailable, discontinue use or implement compensating controls and document internet exposure. Assess all affected instances for exploitation and follow forensic triage requirements per CISA guidance.&lt;/p&gt;&lt;p&gt;&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2026-48710"&gt;Read more&lt;/a&gt; · Source: cisa-kev&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>GeoNetwork Fixes Unauthenticated RCE Chain Affecting Government Geoportal Backends</title>
-    <id>urn:cybersecnews:item:351</id>
-    <published>2026-09-02T19:16:02.708590+00:00</published>
-    <updated>2026-09-02T19:16:02.708590+00:00</updated>
-    <link href="https://thehackernews.com/2026/09/geonetwork-fixes-unauthenticated-rce.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;GeoNetwork geospatial metadata catalog software affected by an unauthenticated RCE vulnerability chain exploitable without authentication. Two chained vulnerabilities allow remote code execution on systems running versions prior to 4.4.12 and 4.2.17, with particular impact to government and agency geoportal backends. Severity is critical given the widespread government deployment and lack of authentication requirement; exploit status in the wild is unknown at publication. Immediate patching to versions 4.4.12 or 4.2.17 is required; organizations should prioritize this update given the deployment landscape and verify no exploitation has occurred during the disclosure lag period.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/09/geonetwork-fixes-unauthenticated-rce.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
   </entry>
 </feed>
