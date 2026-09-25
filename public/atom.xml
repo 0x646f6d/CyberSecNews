@@ -3,7 +3,34 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-09-25T13:17:30.785502+00:00</updated>
+  <updated>2026-09-25T19:52:30.541291+00:00</updated>
+  <entry>
+    <title>Metasploit Wrap Up: Belgian Waffles, Chocolates, and…Modules-Frites?</title>
+    <id>urn:cybersecnews:item:455</id>
+    <published>2026-09-25T19:52:30.541291+00:00</published>
+    <updated>2026-09-25T19:52:30.541291+00:00</updated>
+    <link href="https://www.rapid7.com/blog/post/pt-metasploit-wrap-up-belgian-waffles-chocolates-and-modules-frites" rel="alternate" />
+    <category term="red-team" />
+    <content type="html">&lt;p&gt;&lt;em&gt;red-team&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Metasploit framework added multiple new modules including exploits for CVE-2024-21894 (Microsoft SharePoint RCE) and CVE-2024-23897 (GitLab authentication bypass), alongside auxiliary modules for reconnaissance and post-exploitation. The SharePoint vulnerability allows unauthenticated remote code execution with high severity, while the GitLab flaw enables authentication bypass with medium-to-high impact; both have seen active exploitation in the wild. Organizations running affected SharePoint and GitLab instances should prioritize patching immediately, and network defenders should monitor for exploitation attempts using the newly published Metasploit modules as detection references.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.rapid7.com/blog/post/pt-metasploit-wrap-up-belgian-waffles-chocolates-and-modules-frites"&gt;Read more&lt;/a&gt; · Source: rapid7&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Elementor WordPress flaw lets attackers create admin accounts</title>
+    <id>urn:cybersecnews:item:454</id>
+    <published>2026-09-25T19:52:30.539863+00:00</published>
+    <updated>2026-09-25T19:52:30.539863+00:00</updated>
+    <link href="https://www.bleepingcomputer.com/news/security/elementor-wordpress-flaw-lets-attackers-create-admin-accounts/" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · csrf&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Elementor WordPress plugin contains a CSRF vulnerability allowing unauthenticated attackers to create administrator accounts through malicious requests. The flaw affects the plugin's user registration functionality and has moderate-to-high severity due to direct admin account creation enabling complete site compromise. Update Elementor to the patched version immediately; additionally, implement CSRF token validation and consider restricting registration endpoints to authenticated users where feasible.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/elementor-wordpress-flaw-lets-attackers-create-admin-accounts/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>PamStealer macOS Malware Adds Live C2 Payload Decryption and Multi-Layer Persistence</title>
+    <id>urn:cybersecnews:item:453</id>
+    <published>2026-09-25T19:52:30.538194+00:00</published>
+    <updated>2026-09-25T19:52:30.538194+00:00</updated>
+    <link href="https://thehackernews.com/2026/09/pamstealer-macos-malware-adds-live-c2.html" rel="alternate" />
+    <category term="red-team" />
+    <content type="html">&lt;p&gt;&lt;em&gt;red-team · c2&lt;/em&gt;&lt;/p&gt;&lt;p&gt;PamStealer, a macOS malware using JavaScript for Automation droppers, has evolved to employ server-side payload decryption and multi-layer persistence mechanisms, preventing offline analysis of the main payload. The malware maintains its JXA-based delivery method while updating lure techniques and distribution methods. Severity appears moderate to high given the enhanced evasion capabilities and persistence tactics, though specific wild exploitation rates are not detailed in available reporting. Organizations should prioritize blocking malicious JXA scripts, maintain updated endpoint detection for macOS systems, and educate users on suspicious file delivery methods, particularly those impersonating legitimate applications or documents.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/09/pamstealer-macos-malware-adds-live-c2.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Cloudflare Fixes Flaw That Let One Container Read Another Customer's Leftover Disk Data</title>
     <id>urn:cybersecnews:item:452</id>
@@ -497,7 +524,7 @@
     <updated>2026-09-17T19:35:49.181213+00:00</updated>
     <link href="https://github.com/advisories/GHSA-6j36-r6pr-59x4" rel="alternate" />
     <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · account-takeover · CVE-2026-63472&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Vendure @vendure/core is affected by a critical account takeover vulnerability (CVE-2026-63472) in deployments using external/social authentication strategies. The flaw allows attackers to link external login credentials to pre-existing accounts by email address without requiring email verification from the external provider, enabling unauthorized account access. This vulnerability only impacts installations using third-party authentication methods (not the built-in email/password strategy) where the provider returns unverified email addresses. Immediate patching is required for all Vendure deployments using external authentication; verify that your authentication strategy validates email ownership before account linking.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-6j36-r6pr-59x4"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · account-takeover · CVE-2026-63472, CVE-2026-92161&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Vendure @vendure/core is affected by a critical account takeover vulnerability (CVE-2026-63472) in deployments using external/social authentication strategies. The flaw allows attackers to link external login credentials to pre-existing accounts by email address without requiring email verification from the external provider, enabling unauthorized account access. This vulnerability only impacts installations using third-party authentication methods (not the built-in email/password strategy) where the provider returns unverified email addresses. Immediate patching is required for all Vendure deployments using external authentication; verify that your authentication strategy validates email ownership before account linking.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-6j36-r6pr-59x4"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
   </entry>
   <entry>
     <title>RabbitMQ amqp091-go: Missing Explicit TLS Minimum Version Configuration In URI Parser (CVE-2026-77405)</title>
@@ -876,32 +903,5 @@
     <link href="https://blog.qualys.com/category/product-tech" rel="alternate" />
     <category term="red-team" />
     <content type="html">&lt;p&gt;&lt;em&gt;red-team · lateral-movement&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Active Directory exploitation techniques using legitimate Windows protocols and credentials to achieve domain takeover without malware or exploits. Attack chain leverages benign AD operations (password changes, privilege escalation, credential delegation) that evade signature-based detection; full compromise demonstrated in 54 minutes. Severity is critical as attacks leave minimal forensic indicators and bypass traditional security tools. Recommended actions: implement behavioral analytics and logging correlation to detect anomalous AD activity patterns, enforce MFA on sensitive AD accounts, apply principle of least privilege for service accounts, and conduct threat hunting focused on suspicious credential delegation and unexpected privilege changes in event logs.&lt;/p&gt;&lt;p&gt;&lt;a href="https://blog.qualys.com/category/product-tech"&gt;Read more&lt;/a&gt; · Source: qualys&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Orval: Import-time RCE via schema property name -&gt; computed-property-key injection in the zod client (CVE-2026-71866)</title>
-    <id>urn:cybersecnews:item:355</id>
-    <published>2026-09-02T19:16:02.712460+00:00</published>
-    <updated>2026-09-02T19:16:02.712460+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-6mr6-jvcr-2f25" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · code-injection · CVE-2026-62681, CVE-2026-62682, CVE-2026-71866, CVE-2026-71868, CVE-2026-71869&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Orval (npm package, versions including 8.19.0) is vulnerable to remote code execution during module import when generating Zod validation clients. The vulnerability exists because property names from OpenAPI/JSON schemas are embedded unescaped as double-quoted keys in generated zod.object() definitions; an attacker can inject a malicious property name containing a quote character and computed property syntax (e.g., `["malicious code"]`) to achieve code execution at import time when the generated module is loaded. This is critical severity and likely exploited given the simplicity of the attack vector and public disclosure. Immediately update orval to a patched version and regenerate any client code from untrusted or externally-sourced schemas; validate and sanitize all property names in input schemas as a temporary mitigation.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-6mr6-jvcr-2f25"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Orval: Import-time RCE via query-parameter default -&gt; zod module-level template literal (CVE-2026-72716)</title>
-    <id>urn:cybersecnews:item:354</id>
-    <published>2026-09-02T19:16:02.711617+00:00</published>
-    <updated>2026-09-02T19:16:02.711617+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-p4cg-3328-rvfg" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-71864, CVE-2026-71865, CVE-2026-71867, CVE-2026-71871, CVE-2026-72716, CVE-2026-72717&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Orval (npm package) versions up to 8.19.0 contain a critical remote code execution vulnerability in zod schema generation. When processing OpenAPI specifications, Orval unsafely embeds query-parameter default values into module-level template literals without escaping backticks or `${` sequences, allowing an attacker to inject arbitrary JavaScript expressions that execute at import time. This vulnerability is critical severity, requires no user interaction beyond importing a malicious schema, bypasses default OpenAPI validation, and is likely exploited in the wild given its trivial trigger mechanism. Immediately patch Orval to the latest version and regenerate all zod schemas from potentially untrusted or attacker-controlled OpenAPI specifications.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-p4cg-3328-rvfg"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Kestra Kestra OSS: Kestra OSS OS Command Injection Vulnerability (CVE-2026-49869)</title>
-    <id>urn:cybersecnews:item:353</id>
-    <published>2026-09-02T19:16:02.710864+00:00</published>
-    <updated>2026-09-02T19:16:02.710864+00:00</updated>
-    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-49869" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · os-command-injection · CVE-2026-49869, CVE-2026-73294&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Kestra OSS is affected by CVE-2026-49869, an OS command injection vulnerability allowing unauthenticated remote attackers to create and execute arbitrary workflows without credentials. This vulnerability is actively exploited in the wild and carries high severity due to the lack of authentication requirements and potential for complete system compromise. Apply vendor-supplied patches immediately per CISA BOD 26-04 guidance; organizations unable to patch should implement network segmentation to restrict Kestra OSS internet exposure or discontinue use. Document system forensics and maintain evidence per CISA's Forensics Triage Requirements if prior compromise is suspected.&lt;/p&gt;&lt;p&gt;&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2026-49869"&gt;Read more&lt;/a&gt; · Source: cisa-kev&lt;/p&gt;</content>
   </entry>
 </feed>
