@@ -3,7 +3,25 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-09-25T19:52:30.541291+00:00</updated>
+  <updated>2026-09-27T19:34:21.862351+00:00</updated>
+  <entry>
+    <title>Wireshark 4.6.9 Released, (Sun, Sep 27th)</title>
+    <id>urn:cybersecnews:item:457</id>
+    <published>2026-09-27T19:34:21.862351+00:00</published>
+    <updated>2026-09-27T19:34:21.862351+00:00</updated>
+    <link href="https://isc.sans.edu/diary/rss/33372" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · multiple&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Wireshark 4.6.9 addresses 19 vulnerabilities across the packet analysis application, including memory safety issues and parsing flaws in various protocol dissectors. The severity levels of individual CVEs were not specified in the release notes. Upgrade to version 4.6.9 or later immediately; no evidence of active exploitation was noted. Users unable to patch should restrict Wireshark to trusted, isolated environments and avoid processing untrusted packet captures.&lt;/p&gt;&lt;p&gt;&lt;a href="https://isc.sans.edu/diary/rss/33372"&gt;Read more&lt;/a&gt; · Source: sans-isc&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Citrix Netscaler: Kritische Sicherheitslücken erlauben Codeeinschleusung</title>
+    <id>urn:cybersecnews:item:456</id>
+    <published>2026-09-27T19:34:21.859538+00:00</published>
+    <updated>2026-09-27T19:34:21.859538+00:00</updated>
+    <link href="https://www.heise.de/news/Sicherheitsforscher-warnen-Neue-Zero-Day-Exploits-in-Citrix-Netscaler-11467200.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Citrix NetScaler is affected by critical code injection vulnerabilities that allow remote attackers to execute arbitrary code. The vulnerabilities are being actively exploited in the wild according to security researchers, making this a high-severity threat. Citrix has confirmed the issues and released updates; immediate patching is strongly recommended for all affected NetScaler installations. Organizations unable to patch immediately should implement network segmentation and access controls to restrict exposure.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.heise.de/news/Sicherheitsforscher-warnen-Neue-Zero-Day-Exploits-in-Citrix-Netscaler-11467200.html"&gt;Read more&lt;/a&gt; · Source: heise-security&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Metasploit Wrap Up: Belgian Waffles, Chocolates, and…Modules-Frites?</title>
     <id>urn:cybersecnews:item:455</id>
@@ -885,23 +903,5 @@
     <link href="https://www.outflank.nl/blog/2026/09/02/red-team-ai-skills/" rel="alternate" />
     <category term="red-team" />
     <content type="html">&lt;p&gt;&lt;em&gt;red-team · c2&lt;/em&gt;&lt;/p&gt;&lt;p&gt;SpecterOps released an open-source AI skills marketplace for red team operations and offensive security research, with initial support for Cobalt Strike and Outflank C2 frameworks. This is a legitimate security research tool designed to enhance offensive capabilities for authorized penetration testing and red team exercises, not a vulnerability disclosure. No patching or mitigation is required; organizations should evaluate whether to permit or restrict access to such tools based on their security policies and whether authorized red team activities are underway. This represents a tooling advancement rather than a security threat requiring immediate action.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.outflank.nl/blog/2026/09/02/red-team-ai-skills/"&gt;Read more&lt;/a&gt; · Source: outflank&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Gaming the system: how a Chinese-speaking actor turned Brazilian government sites into an SEO weapon</title>
-    <id>urn:cybersecnews:item:357</id>
-    <published>2026-09-02T19:16:02.714298+00:00</published>
-    <updated>2026-09-02T19:16:02.714298+00:00</updated>
-    <link href="https://research.checkpoint.com/2026/gaming-the-system-how-a-chinese-speaking-actor-turned-brazilian-government-sites-into-an-seo-weapon/" rel="alternate" />
-    <category term="red-team" />
-    <content type="html">&lt;p&gt;&lt;em&gt;red-team · initial-access,c2,persistence&lt;/em&gt;&lt;/p&gt;&lt;p&gt;A Chinese-speaking cybercrime group linked to Earth Berberoka has conducted a sustained campaign against Brazilian government organizations since mid-2025, using compromised sites for SEO manipulation and deploying a custom Linux toolkit including backdoors and downloaders. The attack demonstrates moderate-to-high severity given the targeting of government infrastructure and the deployment of persistent remote access capabilities. Organizations should immediately audit web server access logs for suspicious activity, patch Linux systems against known vulnerabilities, implement network segmentation to limit lateral movement, and conduct forensic analysis on affected systems to identify backdoor indicators of compromise.&lt;/p&gt;&lt;p&gt;&lt;a href="https://research.checkpoint.com/2026/gaming-the-system-how-a-chinese-speaking-actor-turned-brazilian-government-sites-into-an-seo-weapon/"&gt;Read more&lt;/a&gt; · Source: checkpoint-research&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Anatomy of a Silent Domain Takeover</title>
-    <id>urn:cybersecnews:item:356</id>
-    <published>2026-09-02T19:16:02.713464+00:00</published>
-    <updated>2026-09-02T19:16:02.713464+00:00</updated>
-    <link href="https://blog.qualys.com/category/product-tech" rel="alternate" />
-    <category term="red-team" />
-    <content type="html">&lt;p&gt;&lt;em&gt;red-team · lateral-movement&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Active Directory exploitation techniques using legitimate Windows protocols and credentials to achieve domain takeover without malware or exploits. Attack chain leverages benign AD operations (password changes, privilege escalation, credential delegation) that evade signature-based detection; full compromise demonstrated in 54 minutes. Severity is critical as attacks leave minimal forensic indicators and bypass traditional security tools. Recommended actions: implement behavioral analytics and logging correlation to detect anomalous AD activity patterns, enforce MFA on sensitive AD accounts, apply principle of least privilege for service accounts, and conduct threat hunting focused on suspicious credential delegation and unexpected privilege changes in event logs.&lt;/p&gt;&lt;p&gt;&lt;a href="https://blog.qualys.com/category/product-tech"&gt;Read more&lt;/a&gt; · Source: qualys&lt;/p&gt;</content>
   </entry>
 </feed>
