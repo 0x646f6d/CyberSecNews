@@ -3,7 +3,25 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-09-27T19:34:21.862351+00:00</updated>
+  <updated>2026-09-28T16:30:12.782413+00:00</updated>
+  <entry>
+    <title>JADEPUFFER-Linked Attackers Used Compromised Service Principals to Delete Azure Resources</title>
+    <id>urn:cybersecnews:item:459</id>
+    <published>2026-09-28T16:30:12.782413+00:00</published>
+    <updated>2026-09-28T16:30:12.782413+00:00</updated>
+    <link href="https://thehackernews.com/2026/09/jadepuffer-linked-attackers-used.html" rel="alternate" />
+    <category term="red-team" />
+    <content type="html">&lt;p&gt;&lt;em&gt;red-team · lateral-movement&lt;/em&gt;&lt;/p&gt;&lt;p&gt;JADEPUFFER (Storm-3168) compromised Azure service principals to execute destructive operations against Azure resources over an 18-hour period in June 2026, representing an evolution in the threat actor's tradecraft. The vulnerability exploited compromised identity credentials rather than a software flaw, allowing attackers to delete Azure resources and conduct destructive actions with legitimate authentication. This technique is actively exploited in the wild by a sophisticated threat actor. Organizations should implement conditional access policies, strengthen service principal credential management, enable MFA for privileged accounts, audit service principal activity logs, and establish immutable backup retention policies for critical resources.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/09/jadepuffer-linked-attackers-used.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Carbonato Botnet Compromises Docker Hosts to Deploy Telegram-Controlled Hermes AI Agent</title>
+    <id>urn:cybersecnews:item:458</id>
+    <published>2026-09-28T16:30:12.780688+00:00</published>
+    <updated>2026-09-28T16:30:12.780688+00:00</updated>
+    <link href="https://thehackernews.com/2026/09/carbonato-botnet-compromises-docker.html" rel="alternate" />
+    <category term="red-team" />
+    <content type="html">&lt;p&gt;&lt;em&gt;red-team · c2&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Carbonato botnet exploits exposed Docker daemons to deploy Hermes AI agent framework controlled via Telegram, enabling remote command execution on compromised hosts. The vulnerability stems from misconfigured or unauthenticated Docker API endpoints that lack network segmentation, allowing attackers to execute arbitrary containers. This threat is actively exploited in the wild with moderate severity due to the widespread deployment of improperly secured Docker installations. Immediate mitigation requires restricting Docker daemon access through firewall rules, enabling API authentication, implementing network segmentation, and patching Docker hosts with latest security updates.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/09/carbonato-botnet-compromises-docker.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Wireshark 4.6.9 Released, (Sun, Sep 27th)</title>
     <id>urn:cybersecnews:item:457</id>
@@ -20,7 +38,7 @@
     <updated>2026-09-27T19:34:21.859538+00:00</updated>
     <link href="https://www.heise.de/news/Sicherheitsforscher-warnen-Neue-Zero-Day-Exploits-in-Citrix-Netscaler-11467200.html" rel="alternate" />
     <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-88771, CVE-2026-88772&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Citrix NetScaler is affected by critical code injection vulnerabilities that allow remote attackers to execute arbitrary code. The vulnerabilities are being actively exploited in the wild according to security researchers, making this a high-severity threat. Citrix has confirmed the issues and released updates; immediate patching is strongly recommended for all affected NetScaler installations. Organizations unable to patch immediately should implement network segmentation and access controls to restrict exposure.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.heise.de/news/Sicherheitsforscher-warnen-Neue-Zero-Day-Exploits-in-Citrix-Netscaler-11467200.html"&gt;Read more&lt;/a&gt; · Source: heise-security&lt;/p&gt;</content>
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-88771, CVE-2026-88772, CVE-2026-88773, CVE-2026-88774, CVE-2026-88775, CVE-2026-88776, CVE-2026-88777, CVE-2026-88778&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Citrix NetScaler is affected by critical code injection vulnerabilities that allow remote attackers to execute arbitrary code. The vulnerabilities are being actively exploited in the wild according to security researchers, making this a high-severity threat. Citrix has confirmed the issues and released updates; immediate patching is strongly recommended for all affected NetScaler installations. Organizations unable to patch immediately should implement network segmentation and access controls to restrict exposure.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.heise.de/news/Sicherheitsforscher-warnen-Neue-Zero-Day-Exploits-in-Citrix-Netscaler-11467200.html"&gt;Read more&lt;/a&gt; · Source: heise-security&lt;/p&gt;</content>
   </entry>
   <entry>
     <title>Metasploit Wrap Up: Belgian Waffles, Chocolates, and…Modules-Frites?</title>
@@ -885,23 +903,5 @@
     <link href="https://www.bleepingcomputer.com/news/security/plex-warns-users-to-patch-security-vulnerabilities-immediately/" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Plex has released critical security updates for its desktop clients and media server software addressing multiple unspecified vulnerabilities. The company issued an immediate patching directive but did not disclose severity levels, exploit status, or technical details of the flaws. Users should apply available updates to all Plex instances without delay as a precautionary measure. Monitor Plex's official security advisories for detailed vulnerability information once publicly disclosed.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/plex-warns-users-to-patch-security-vulnerabilities-immediately/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Pegasus Zero-Click Spyware Exploit Infects Serbian Student Movement Member's iPhone</title>
-    <id>urn:cybersecnews:item:359</id>
-    <published>2026-09-03T12:38:34.108937+00:00</published>
-    <updated>2026-09-03T12:38:34.108937+00:00</updated>
-    <link href="https://thehackernews.com/2026/09/pegasus-zero-click-spyware-exploit.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Apple iOS devices are vulnerable to NSO Group's Pegasus spyware, which exploits zero-click iMessage vulnerabilities requiring no user interaction for infection. This technique has been actively exploited in the wild against political targets, including Serbian student activists, demonstrating real-world deployment against high-value objectives. Severity is critical due to the zero-click nature and Pegasus's extensive surveillance capabilities. Apple users should immediately install the latest iOS security updates, and organizations tracking targeted individuals should implement device monitoring and consider alternative communication channels pending patch availability.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/09/pegasus-zero-click-spyware-exploit.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Red Team AI Skills</title>
-    <id>urn:cybersecnews:item:358</id>
-    <published>2026-09-02T19:16:02.715076+00:00</published>
-    <updated>2026-09-02T19:16:02.715076+00:00</updated>
-    <link href="https://www.outflank.nl/blog/2026/09/02/red-team-ai-skills/" rel="alternate" />
-    <category term="red-team" />
-    <content type="html">&lt;p&gt;&lt;em&gt;red-team · c2&lt;/em&gt;&lt;/p&gt;&lt;p&gt;SpecterOps released an open-source AI skills marketplace for red team operations and offensive security research, with initial support for Cobalt Strike and Outflank C2 frameworks. This is a legitimate security research tool designed to enhance offensive capabilities for authorized penetration testing and red team exercises, not a vulnerability disclosure. No patching or mitigation is required; organizations should evaluate whether to permit or restrict access to such tools based on their security policies and whether authorized red team activities are underway. This represents a tooling advancement rather than a security threat requiring immediate action.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.outflank.nl/blog/2026/09/02/red-team-ai-skills/"&gt;Read more&lt;/a&gt; · Source: outflank&lt;/p&gt;</content>
   </entry>
 </feed>
