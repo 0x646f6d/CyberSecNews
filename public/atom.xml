@@ -3,7 +3,25 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-09-29T04:31:07.868678+00:00</updated>
+  <updated>2026-09-29T20:29:07.116738+00:00</updated>
+  <entry>
+    <title>Russia's Star Blizzard Targets 100+ Organizations With Fake Event Invites to Deliver Backdoor</title>
+    <id>urn:cybersecnews:item:462</id>
+    <published>2026-09-29T20:29:07.116738+00:00</published>
+    <updated>2026-09-29T20:29:07.116738+00:00</updated>
+    <link href="https://thehackernews.com/2026/09/russias-star-blizzard-targets-100.html" rel="alternate" />
+    <category term="red-team" />
+    <content type="html">&lt;p&gt;&lt;em&gt;red-team · social-engineering&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Russian state-sponsored actor Star Blizzard is conducting active spear-phishing campaigns using fraudulent event invitations to deliver backdoors on Windows systems targeting 100+ organizations, primarily in the U.S. and U.K., with focus on Ukraine-related entities since January. The technique exploits social engineering via malicious calendar attachments or links to execute malware installation with confirmed infections. This represents high-severity threat activity demonstrating active in-the-wild exploitation by a capable nation-state adversary. Recommended actions: implement email filtering for suspicious invitations and attachments, conduct user security awareness training on phishing tactics, enable attack surface reduction rules for Office macro execution, and maintain EDR telemetry for anomalous process execution patterns.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/09/russias-star-blizzard-targets-100.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>New Spectre-v2 BTR Attack Leaks Linux Memory Despite Existing Defenses</title>
+    <id>urn:cybersecnews:item:461</id>
+    <published>2026-09-29T20:29:07.115498+00:00</published>
+    <updated>2026-09-29T20:29:07.115498+00:00</updated>
+    <link href="https://thehackernews.com/2026/09/new-spectre-v2-btr-attack-leaks-linux.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · speculative-execution&lt;/em&gt;&lt;/p&gt;&lt;p&gt;A new Spectre-v2 variant called Branch Target Reuse (BTR) affects JIT engines in web browsers, language runtimes, and OS kernels across multiple CPU vendors by exploiting branch predictor reuse to leak sensitive memory despite existing mitigations. The vulnerability bypasses current Spectre-v2 defenses by leveraging indirect branch target predictions, enabling attackers to extract kernel and application memory from JavaScript or native code. Severity appears high given the broad affected scope and kernel-level access potential, though no widespread in-the-wild exploitation has been reported yet. Mitigation requires microcode updates and software-level defenses targeting branch prediction isolation; vendors should prioritize patching JIT implementations and evaluating additional branch target buffer protections.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/09/new-spectre-v2-btr-attack-leaks-linux.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Apple Patches CoreGraphics Flaw Possibly Exploited in Targeted Attacks</title>
     <id>urn:cybersecnews:item:460</id>
@@ -885,23 +903,5 @@
     <link href="https://github.com/advisories/GHSA-4mvj-m6j5-pmf7" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · ssrf · CVE-2026-71428, CVE-2026-75856&lt;/em&gt;&lt;/p&gt;&lt;p&gt;The `unstructured` Python library (used in LangChain and LlamaIndex) contains a critical server-side request forgery (SSRF) vulnerability in the `partition()`, `partition_html()`, and `partition_md()` functions. The `url` parameter is fetched via `requests.get()` without host validation, allowing attackers to read responses from internal services, loopback admin APIs, and cloud metadata endpoints. This vulnerability is critical severity and likely exploited given its accessibility through popular LLM frameworks. Immediately patch `unstructured` to the latest version with host validation implemented.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-4mvj-m6j5-pmf7"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>HPE patches critical ArubaOS-CX remote code execution flaw</title>
-    <id>urn:cybersecnews:item:362</id>
-    <published>2026-09-03T19:09:04.610683+00:00</published>
-    <updated>2026-09-03T19:09:04.610683+00:00</updated>
-    <link href="https://www.bleepingcomputer.com/news/security/hpe-patches-critical-arubaos-cx-remote-code-execution-flaw/" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;HPE ArubaOS-CX contains a critical remote code execution vulnerability enabling unauthenticated attackers to execute arbitrary code on affected network switches. The flaw affects multiple ArubaOS-CX versions and is actively exploited in the wild. Apply the latest security patches from HPE immediately, prioritizing internet-facing or untrusted network-connected devices. Implement network segmentation and access controls to limit exposure until patching is completed.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/hpe-patches-critical-arubaos-cx-remote-code-execution-flaw/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Critical Cisco Nexus 9000 Flaw Lets Unauthenticated Remote Attackers Run Code as Root</title>
-    <id>urn:cybersecnews:item:361</id>
-    <published>2026-09-03T19:09:04.609780+00:00</published>
-    <updated>2026-09-03T19:09:04.609780+00:00</updated>
-    <link href="https://thehackernews.com/2026/09/critical-cisco-nexus-9000-flaw-lets.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-20212&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Cisco Nexus 9000 switches (10 Silicon One-based models) are vulnerable to CVE-2026-20212, a critical remote code execution flaw allowing unauthenticated attackers to achieve root-level access with a CVSS score of 9.8. Cisco has released patches for the Nexus vulnerability; however, IOS XR versions face 7 bundled CVEs including two rated 9.8 with no available workaround across any version. Immediate patching of affected Nexus 9000 switches is critical; for IOS XR systems, coordinate with Cisco for available remediation options given the lack of workarounds. There is no indication of active exploitation in the wild at this time, but the unauthenticated nature and critical severity warrant urgent priority.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/09/critical-cisco-nexus-9000-flaw-lets.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
   </entry>
 </feed>
