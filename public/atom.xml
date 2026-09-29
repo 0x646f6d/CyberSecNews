@@ -3,7 +3,16 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-09-28T16:30:12.782413+00:00</updated>
+  <updated>2026-09-29T04:31:07.868678+00:00</updated>
+  <entry>
+    <title>Apple Patches CoreGraphics Flaw Possibly Exploited in Targeted Attacks</title>
+    <id>urn:cybersecnews:item:460</id>
+    <published>2026-09-29T04:31:07.868678+00:00</published>
+    <updated>2026-09-29T04:31:07.868678+00:00</updated>
+    <link href="https://thehackernews.com/2026/09/apple-patches-coregraphics-flaw.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · out-of-bounds-write · CVE-2026-86950&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Apple patched CVE-2026-86950, an out-of-bounds write vulnerability in CoreGraphics affecting iOS, iPadOS, and macOS that enables arbitrary code execution via malicious file processing. The flaw has likely been exploited in targeted attacks in the wild. All users should update to the latest patched versions of iOS, iPadOS, and macOS immediately, prioritizing older device versions which remain at higher risk.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/09/apple-patches-coregraphics-flaw.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>JADEPUFFER-Linked Attackers Used Compromised Service Principals to Delete Azure Resources</title>
     <id>urn:cybersecnews:item:459</id>
@@ -894,14 +903,5 @@
     <link href="https://thehackernews.com/2026/09/critical-cisco-nexus-9000-flaw-lets.html" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-20212&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Cisco Nexus 9000 switches (10 Silicon One-based models) are vulnerable to CVE-2026-20212, a critical remote code execution flaw allowing unauthenticated attackers to achieve root-level access with a CVSS score of 9.8. Cisco has released patches for the Nexus vulnerability; however, IOS XR versions face 7 bundled CVEs including two rated 9.8 with no available workaround across any version. Immediate patching of affected Nexus 9000 switches is critical; for IOS XR systems, coordinate with Cisco for available remediation options given the lack of workarounds. There is no indication of active exploitation in the wild at this time, but the unauthenticated nature and critical severity warrant urgent priority.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/09/critical-cisco-nexus-9000-flaw-lets.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Plex warns users to patch security vulnerabilities immediately</title>
-    <id>urn:cybersecnews:item:360</id>
-    <published>2026-09-03T12:38:34.113482+00:00</published>
-    <updated>2026-09-03T12:38:34.113482+00:00</updated>
-    <link href="https://www.bleepingcomputer.com/news/security/plex-warns-users-to-patch-security-vulnerabilities-immediately/" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Plex has released critical security updates for its desktop clients and media server software addressing multiple unspecified vulnerabilities. The company issued an immediate patching directive but did not disclose severity levels, exploit status, or technical details of the flaws. Users should apply available updates to all Plex instances without delay as a precautionary measure. Monitor Plex's official security advisories for detailed vulnerability information once publicly disclosed.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/plex-warns-users-to-patch-security-vulnerabilities-immediately/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
   </entry>
 </feed>
