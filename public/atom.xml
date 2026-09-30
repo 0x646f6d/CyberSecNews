@@ -3,7 +3,43 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-09-30T04:15:01.036887+00:00</updated>
+  <updated>2026-09-30T14:40:25.927682+00:00</updated>
+  <entry>
+    <title>Bitget hacked via zero-day in third-party security products</title>
+    <id>urn:cybersecnews:item:468</id>
+    <published>2026-09-30T14:40:25.927682+00:00</published>
+    <updated>2026-09-30T14:40:25.927682+00:00</updated>
+    <link href="https://www.bleepingcomputer.com/news/security/bitget-hacked-via-zero-day-in-third-party-security-products/" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · zero-day&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Bitget cryptocurrency exchange was compromised via a zero-day vulnerability in third-party security products, resulting in the theft of $387.5 million. The attackers exploited the unpatched flaw to gain unauthorized access to Bitget's systems; the specific security vendor and technical details have not been fully disclosed. This represents a critical severity incident actively exploited in the wild against a high-value target. Bitget should immediately identify and isolate affected security products, coordinate with vendors on emergency patches, implement network segmentation to limit lateral movement, and conduct forensic analysis to determine the full scope of compromise and data exposure.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/bitget-hacked-via-zero-day-in-third-party-security-products/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>TeamViewer urges users to patch severe flaws “as soon as possible”</title>
+    <id>urn:cybersecnews:item:467</id>
+    <published>2026-09-30T14:40:25.926876+00:00</published>
+    <updated>2026-09-30T14:40:25.926876+00:00</updated>
+    <link href="https://www.bleepingcomputer.com/news/security/teamviewer-urges-users-to-patch-severe-flaws-as-soon-as-possible/" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;TeamViewer client and host software contain high-severity vulnerabilities requiring immediate patching. The specific technical details of the flaws are not disclosed in this summary, but the "as soon as possible" language indicates active exploitation risk or critical impact potential. Users should prioritize applying available patches from TeamViewer without delay, particularly for systems handling sensitive data or critical infrastructure access. Verify patch availability through official TeamViewer channels and consider temporary access restrictions until systems are updated.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/teamviewer-urges-users-to-patch-severe-flaws-as-soon-as-possible/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>OpenSSL Fixes High-Severity DTLS Flaw That Can Leak Heap Memory Unencrypted</title>
+    <id>urn:cybersecnews:item:466</id>
+    <published>2026-09-30T14:40:25.926007+00:00</published>
+    <updated>2026-09-30T14:40:25.926007+00:00</updated>
+    <link href="https://thehackernews.com/2026/09/openssl-fixes-high-severity-dtls-flaw.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · information-disclosure&lt;/em&gt;&lt;/p&gt;&lt;p&gt;OpenSSL DTLS (Datagram TLS) is affected by a high-severity vulnerability (CVE-2023-44487) that can leak unencrypted heap memory to remote attackers or cause denial of service when handshake message retransmission occurs during fragmented message processing. The flaw exploits DTLS's resend mechanism and affects connections over UDP; there is no evidence of active exploitation in the wild at this time. Users should immediately patch to OpenSSL 3.0.11, 3.1.3, or later versions depending on their deployment. This is critical for any system using DTLS for secure communications, particularly IoT and real-time applications relying on UDP.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/09/openssl-fixes-high-severity-dtls-flaw.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Jetzt patchen: Angreifer umgehen Anmeldung bei Cisco Catalyst SD-WAN Manager</title>
+    <id>urn:cybersecnews:item:465</id>
+    <published>2026-09-30T14:40:25.923095+00:00</published>
+    <updated>2026-09-30T14:40:25.923095+00:00</updated>
+    <link href="https://www.heise.de/news/Jetzt-patchen-Angreifer-umgehen-Anmeldung-bei-Cisco-Catalyst-SD-WAN-Manager-11471591.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Cisco Catalyst SD-WAN Manager contains an authentication bypass vulnerability allowing attackers to gain admin-level access without valid credentials. The flaw affects the login mechanism and is actively exploited in the wild by threat actors. Administrators must immediately patch affected systems to the latest version and implement network segmentation to restrict access to management interfaces as a temporary mitigation. Additionally, review access logs for unauthorized administrative activity.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.heise.de/news/Jetzt-patchen-Angreifer-umgehen-Anmeldung-bei-Cisco-Catalyst-SD-WAN-Manager-11471591.html"&gt;Read more&lt;/a&gt; · Source: heise-security&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>PyJWT: Asymmetric-PEM detection bypass: whitespace/line-ending-mutated public keys skip the HS/asymmetric confusion guard (CVE-2026-102268)</title>
     <id>urn:cybersecnews:item:464</id>
@@ -867,41 +903,5 @@
     <link href="https://thehackernews.com/2026/09/postgresql-fixes-12-year-old-logical.html" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · code-execution · CVE-2026-6471&lt;/em&gt;&lt;/p&gt;&lt;p&gt;PostgreSQL versions prior to 18.6, 17.11, 16.15, 15.19, and 14.24 are affected by CVE-2026-6471, a 12-year-old logical decoding flaw that allows accounts with the REPLICATION attribute to execute arbitrary code with the privileges of the database server process (CVSS 7.2). This vulnerability has remained unexploited in the wild but poses significant risk in environments where replication roles are granted to untrusted users. Immediate patching to the fixed versions is strongly recommended for all affected PostgreSQL installations, particularly those with strict access controls on replication privileges.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/09/postgresql-fixes-12-year-old-logical.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>DPRK APTs: Ted backdoor and curlRAT target South Korean media and automotive sectors</title>
-    <id>urn:cybersecnews:item:368</id>
-    <published>2026-09-04T12:32:43.256416+00:00</published>
-    <updated>2026-09-04T12:32:43.256416+00:00</updated>
-    <link href="https://www.rapid7.com/blog/post/tr-dprk-apts-ted-backdoor-curlrat-target-south-korean-media-automotive-sectors" rel="alternate" />
-    <category term="red-team" />
-    <content type="html">&lt;p&gt;&lt;em&gt;red-team · c2,lateral-movement,persistence,evasion&lt;/em&gt;&lt;/p&gt;&lt;p&gt;DPRK-attributed APT37 and Lazarus deployed a sophisticated Linux toolkit targeting South Korean automotive and media sectors, comprising the "ted backdoor" (a compromised HAProxy 2.8.12 with a custom filter plugin enabling HTTP traffic interception and injection), "curlRAT" (masquerading as legitimate system daemons like crond/atd), an SSH keylogger, and supporting stagers. The toolkit achieves persistence through trojanized system binaries, steals credentials and web session cookies, executes remote commands, and performs watering-hole attacks with heavy obfuscation (substitution ciphers, XOR encryption) and anti-forensics (selective log deletion, connection counter scrubbing). Medium-confidence DPRK attribution is based on targeting patterns, reuse of Korean-specific software, C2 infrastructure overlap with known APT37 operations, and concurrent similarities with Operation SyncHole. Organizations must apply strict security controls to edge components (load balancers, reverse proxies, mail servers), implement independent network monitoring and memory analysis rather than relying on component logs, verify binary integrity, and patch externally exposed Groupware portals and mail servers—as of July 2026, exploitation of South Korean mail appliances remains ongoing.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.rapid7.com/blog/post/tr-dprk-apts-ted-backdoor-curlrat-target-south-korean-media-automotive-sectors"&gt;Read more&lt;/a&gt; · Source: rapid7&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Google warns of new Chrome zero-day flaw exploited in attacks</title>
-    <id>urn:cybersecnews:item:367</id>
-    <published>2026-09-04T12:32:43.255506+00:00</published>
-    <updated>2026-09-04T12:32:43.255506+00:00</updated>
-    <link href="https://www.bleepingcomputer.com/news/security/google-warns-of-new-chrome-zero-day-flaw-exploited-in-attacks/" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Google released an emergency Chrome update addressing a high-severity zero-day vulnerability in the V8 JavaScript engine that is actively exploited in the wild, along with 11 additional flaws. The V8 vulnerability enables remote code execution through maliciously crafted JavaScript. Immediate patching is critical given active exploitation; users should update Chrome to the latest version as soon as possible.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/google-warns-of-new-chrome-zero-day-flaw-exploited-in-attacks/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Google Releases Chrome Update to Patch Actively Exploited V8 Zero-Day</title>
-    <id>urn:cybersecnews:item:366</id>
-    <published>2026-09-04T12:32:43.253871+00:00</published>
-    <updated>2026-09-04T12:32:43.253871+00:00</updated>
-    <link href="https://thehackernews.com/2026/09/google-releases-chrome-update-to-patch.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · type-confusion · CVE-2026-85046, CVE-2026-85880, CVE-2026-87491&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Google patched CVE-2026-85046, a high-severity type confusion vulnerability (CVSS 8.8) in Chrome's V8 JavaScript engine affecting versions prior to 152.0.7977.82. The flaw is actively exploited in the wild and allows remote code execution through malicious web content. Immediate patching to Chrome 152.0.7977.82 or later is critical. Users should enable automatic updates if not already configured.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/09/google-releases-chrome-update-to-patch.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>SiYuan: Unauthenticated SQL execution and REGEXP injection via fullTextSearchAssetContent (publish mode): reader-reachable raw SQL (method 2) and unescaped REGEXP (method 3) on read-write asset-content DB (CVE-2026-69083)</title>
-    <id>urn:cybersecnews:item:365</id>
-    <published>2026-09-04T03:10:00.992326+00:00</published>
-    <updated>2026-09-04T03:10:00.992326+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-fph3-ghq9-vw66" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · sql-injection · CVE-2026-69083, CVE-2026-75513&lt;/em&gt;&lt;/p&gt;&lt;p&gt;SiYuan's `/api/search/fullTextSearchAssetContent` endpoint contains critical SQL injection and REGEXP injection vulnerabilities (CVE-2026-69083) in the asset-content database that are exploitable by unauthenticated users with the publish RoleReader token or when authentication is disabled. The vulnerability allows arbitrary SQL execution and unescaped REGEXP operations without read-only protections, enabling data manipulation and exfiltration. This is actively exploitable in publish mode and affects the SiYuan kernel (go/github.com/siyuan-note/siyuan/kernel). Immediate patching is required; disable publish mode or enforce strict authentication (`Publish.Auth.Enable: true`) as interim mitigation.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-fph3-ghq9-vw66"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
   </entry>
 </feed>
