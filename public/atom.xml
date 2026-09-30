@@ -3,7 +3,25 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-09-29T20:29:07.116738+00:00</updated>
+  <updated>2026-09-30T04:15:01.036887+00:00</updated>
+  <entry>
+    <title>PyJWT: Asymmetric-PEM detection bypass: whitespace/line-ending-mutated public keys skip the HS/asymmetric confusion guard (CVE-2026-102268)</title>
+    <id>urn:cybersecnews:item:464</id>
+    <published>2026-09-30T04:15:01.036887+00:00</published>
+    <updated>2026-09-30T04:15:01.036887+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-ffc3-869f-jxw9" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-102268&lt;/em&gt;&lt;/p&gt;&lt;p&gt;PyJWT versions prior to patching are vulnerable to asymmetric-HMAC confusion attacks when decoding JWT tokens if the allow-list contains both HMAC and asymmetric algorithms (CVE-2026-102268, critical severity). The vulnerability exploits a bypass in PyJWT's PEM format detection where whitespace or line-ending mutations in public keys cause the `is_pem_format` regex to fail, allowing an attacker with a valid HMAC secret to forge tokens that pass asymmetric signature verification. This impacts deployments mixing algorithm types in the decode allow-list and passing PEM keys as raw bytes/text. Immediately update PyJWT to the patched version and audit configurations to follow RFC 8725 best practices by using single asymmetric algorithms in decode allow-lists rather than mixing HS/asymmetric options.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-ffc3-869f-jxw9"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>@xhmikosr/decompress: Path traversal via symlink chain (CVE-2026-101894)</title>
+    <id>urn:cybersecnews:item:463</id>
+    <published>2026-09-30T04:15:01.034776+00:00</published>
+    <updated>2026-09-30T04:15:01.034776+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-hrh2-vp3x-79xf" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · path-traversal · CVE-2026-101894&lt;/em&gt;&lt;/p&gt;&lt;p&gt;The @xhmikosr/decompress and decompress npm packages are vulnerable to path traversal via symlink chains (CVE-2026-101894), allowing attackers to extract files outside the intended output directory during archive extraction. The vulnerability exploits a gap in lexical path validation by using chained symlinks to bypass containment checks, potentially enabling remote code execution through overwriting startup scripts or configuration files. This is rated critical severity and appears to have active exploitation potential given its nature as a supply-chain attack vector on archive handling. Users should immediately update to a patched version and consider validating archive contents before extraction in production environments.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-hrh2-vp3x-79xf"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Russia's Star Blizzard Targets 100+ Organizations With Fake Event Invites to Deliver Backdoor</title>
     <id>urn:cybersecnews:item:462</id>
@@ -885,23 +903,5 @@
     <link href="https://github.com/advisories/GHSA-fph3-ghq9-vw66" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · sql-injection · CVE-2026-69083, CVE-2026-75513&lt;/em&gt;&lt;/p&gt;&lt;p&gt;SiYuan's `/api/search/fullTextSearchAssetContent` endpoint contains critical SQL injection and REGEXP injection vulnerabilities (CVE-2026-69083) in the asset-content database that are exploitable by unauthenticated users with the publish RoleReader token or when authentication is disabled. The vulnerability allows arbitrary SQL execution and unescaped REGEXP operations without read-only protections, enabling data manipulation and exfiltration. This is actively exploitable in publish mode and affects the SiYuan kernel (go/github.com/siyuan-note/siyuan/kernel). Immediate patching is required; disable publish mode or enforce strict authentication (`Publish.Auth.Enable: true`) as interim mitigation.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-fph3-ghq9-vw66"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>SiYuan: SQL injection in backlink/mention search via unescaped stored and client input (publish mode): first-order (client keyword) and second-order (stored document title) breakout on read-write handle (CVE-2026-72811)</title>
-    <id>urn:cybersecnews:item:364</id>
-    <published>2026-09-04T03:10:00.991362+00:00</published>
-    <updated>2026-09-04T03:10:00.991362+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-q2vg-7qgx-x5fc" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · sqli · CVE-2026-72811&lt;/em&gt;&lt;/p&gt;&lt;p&gt;SiYuan note-taking application (kernel/model/backlink.go) contains a critical SQL injection vulnerability in backlink/mention search functionality where user-supplied keywords and stored document metadata (titles, aliases) are concatenated into SQL MATCH queries with insufficient escaping—only double quotes are filtered, allowing single-quote breakout via first-order (client input) and second-order (stored metadata) injection vectors. No evidence of active wild exploitation reported at this time. Immediate patching required; users should upgrade to patched version and avoid untrusted document imports until remediated, as stored metadata cannot be sanitized retroactively on affected systems.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-q2vg-7qgx-x5fc"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>unstructured: Server-Side Request Forgery in the URL-based partitioning (CVE-2026-71428)</title>
-    <id>urn:cybersecnews:item:363</id>
-    <published>2026-09-03T19:09:04.611771+00:00</published>
-    <updated>2026-09-03T19:09:04.611771+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-4mvj-m6j5-pmf7" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · ssrf · CVE-2026-71428, CVE-2026-75856&lt;/em&gt;&lt;/p&gt;&lt;p&gt;The `unstructured` Python library (used in LangChain and LlamaIndex) contains a critical server-side request forgery (SSRF) vulnerability in the `partition()`, `partition_html()`, and `partition_md()` functions. The `url` parameter is fetched via `requests.get()` without host validation, allowing attackers to read responses from internal services, loopback admin APIs, and cloud metadata endpoints. This vulnerability is critical severity and likely exploited given its accessibility through popular LLM frameworks. Immediately patch `unstructured` to the latest version with host validation implemented.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-4mvj-m6j5-pmf7"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
   </entry>
 </feed>
