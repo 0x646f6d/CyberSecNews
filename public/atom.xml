@@ -3,7 +3,61 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-10-01T15:09:15.256865+00:00</updated>
+  <updated>2026-10-01T20:50:35.038954+00:00</updated>
+  <entry>
+    <title>vm2: NodeVM nesting guard accepts array-shaped require and permits host RCE (CVE-2026-92935)</title>
+    <id>urn:cybersecnews:item:478</id>
+    <published>2026-10-01T20:50:35.038954+00:00</published>
+    <updated>2026-10-01T20:50:35.038954+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-8hr7-r645-pc6w" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-92935&lt;/em&gt;&lt;/p&gt;&lt;p&gt;vm2 NodeVM is vulnerable to a nesting guard bypass (CVE-2026-92935) where passing an array for the require parameter bypasses type checking, allowing attackers to execute arbitrary code on the host system with critical severity. The vulnerability affects versions of vm2 where `typeof requireOpts === 'object'` accepts arrays, which then destructure to undefined and permit nesting execution. This is exploitable in the wild when downstream NodeVM instances are configured with `nesting: true` and untrusted code execution. Patch immediately by updating vm2 to a patched version and add strict type validation for require configuration parameters.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-8hr7-r645-pc6w"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>vm2: NodeVM node:-prefixed negative builtin deny bypass exposes child_process (CVE-2026-92957)</title>
+    <id>urn:cybersecnews:item:477</id>
+    <published>2026-10-01T20:50:35.038000+00:00</published>
+    <updated>2026-10-01T20:50:35.038000+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-8686-vhfx-7r3j" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · sandbox-bypass · CVE-2026-92957&lt;/em&gt;&lt;/p&gt;&lt;p&gt;The npm vm2 package (NodeVM) contains a critical sandbox escape vulnerability (CVE-2026-92957) where negative builtin denials fail to block `node:`-prefixed module specifiers, allowing sandboxed code to require child_process and execute arbitrary processes despite explicit deny policies. This affects configurations using wildcard builtin policies with negative entries like `['*', '-node:child_process']`. The vulnerability is critical severity and likely exploitable in active deployments using vm2 for code sandboxing. Users should immediately update to a patched version once released or implement external process isolation controls as a mitigation.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-8686-vhfx-7r3j"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>vm2 Custom Module Resolver Can Bypass the External Package Allowlist by Loading a Colliding Host Package (CVE-2026-92951)</title>
+    <id>urn:cybersecnews:item:476</id>
+    <published>2026-10-01T20:50:35.037121+00:00</published>
+    <updated>2026-10-01T20:50:35.037121+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-c48m-32m9-vx93" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · allowlist-bypass · CVE-2026-92951&lt;/em&gt;&lt;/p&gt;&lt;p&gt;vm2 NodeVM with external package allowlist and custom resolve callbacks is vulnerable to package name collision attacks allowing bypass of intended package restrictions (CVE-2026-92951, critical severity). An attacker can request colliding package names like `evil-left-pad` when only `left-pad` is whitelisted, exploiting non-exact string matching in the allowlist check to load malicious host packages. No indication of active exploitation in the wild is provided. Immediately upgrade vm2 to a patched version; if immediate patching is unavailable, review and remove reliance on external allowlists with custom resolvers as a mitigation.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-c48m-32m9-vx93"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>vm2 exposes host HTTPS credentials and TLS traffic through globalAgent (CVE-2026-92940)</title>
+    <id>urn:cybersecnews:item:475</id>
+    <published>2026-10-01T20:50:35.036010+00:00</published>
+    <updated>2026-10-01T20:50:35.036010+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-h85j-hv3c-qfgq" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · sandbox-escape · CVE-2026-92940&lt;/em&gt;&lt;/p&gt;&lt;p&gt;vm2 versions up to 3.11.6 leak host HTTPS credentials and TLS traffic when NodeVM explicitly permits requiring the https module. The vulnerability allows sandbox code to register listeners on the shared globalAgent and intercept host request options and TLS sockets from unrelated host HTTPS requests through connection pooling. This is critical severity and exploitable by any code executed within a vm2 sandbox with https module access. Immediate patching to a version beyond 3.11.6 is required; additionally, restrict https module access in vm2 contexts unless absolutely necessary and monitor for unusual connection pooling activity.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-h85j-hv3c-qfgq"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>vm2: NodeVM builtin allowlist bypass via node:test.run() execArgv allows sandbox escape (CVE-2026-92948)</title>
+    <id>urn:cybersecnews:item:474</id>
+    <published>2026-10-01T20:50:35.035171+00:00</published>
+    <updated>2026-10-01T20:50:35.035171+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-qhwx-74w5-xhxq" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · sandbox-escape · CVE-2026-92948&lt;/em&gt;&lt;/p&gt;&lt;p&gt;vm2 NodeVM on Node.js 24+ allows sandbox escape when the node:test builtin is whitelisted; attackers can exploit require('node:node:test') and call run() with malicious execArgv parameters like --eval to execute arbitrary code outside the sandbox. Severity is critical with no indication of active wild exploitation at this time. Immediately upgrade to the latest patched vm2 version and restrict node:test from the allowlist unless absolutely necessary; users unable to patch should disable NodeVM or remove node:test from permitted builtins.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-qhwx-74w5-xhxq"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Fortinet FortiMail: Fortinet FortiMail Path Traversal Vulnerability (CVE-2026-104286)</title>
+    <id>urn:cybersecnews:item:473</id>
+    <published>2026-10-01T20:50:35.031767+00:00</published>
+    <updated>2026-10-01T20:50:35.031767+00:00</updated>
+    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-104286" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · path-traversal · CVE-2026-104286&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Fortinet FortiMail is vulnerable to CVE-2026-104286, a path traversal and NULL byte improper neutralization flaw allowing unauthenticated attackers to write arbitrary files via crafted HTTP/HTTPS requests. This vulnerability is actively exploited in the wild and carries high severity. Apply vendor-supplied mitigations immediately per CISA BOD 26-04 guidance; discontinue use if patches are unavailable. Conduct forensics triage on affected systems per CISA requirements and prioritize patching based on internet exposure assessment.&lt;/p&gt;&lt;p&gt;&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2026-104286"&gt;Read more&lt;/a&gt; · Source: cisa-kev&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>piscina: Prototype-pollution gadget in ThreadPool.options allows RCE via execArgv / loadBalancer / env (CVE-2026-102992)</title>
     <id>urn:cybersecnews:item:472</id>
@@ -849,59 +903,5 @@
     <link href="https://thehackernews.com/2026/09/freeipa-flaw-chain-lets-anonymous.html" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · privilege-escalation&lt;/em&gt;&lt;/p&gt;&lt;p&gt;FreeIPA identity management system is vulnerable to a privilege escalation chain allowing unauthenticated clients to create arbitrary Kerberos identities with administrator privileges through flaws in both FreeIPA and the underlying 389 Directory Server. The vulnerability requires no prior authentication and leverages LDAP access to inject malicious directory entries that grant administrative group membership. This is a critical severity issue with potential for exploitation in environments where FreeIPA is exposed to untrusted networks. Immediate patching of both FreeIPA and 389 Directory Server is required; isolate FreeIPA administration interfaces and restrict LDAP access to trusted networks pending updates.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/09/freeipa-flaw-chain-lets-anonymous.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>PEEP Turns Chrome and Edge Into Post-Compromise Backdoors for Host Command Execution</title>
-    <id>urn:cybersecnews:item:378</id>
-    <published>2026-09-07T19:37:35.972911+00:00</published>
-    <updated>2026-09-07T19:37:35.972911+00:00</updated>
-    <link href="https://thehackernews.com/2026/09/peep-turns-chrome-and-edge-into-post.html" rel="alternate" />
-    <category term="red-team" />
-    <content type="html">&lt;p&gt;&lt;em&gt;red-team · post-exploitation&lt;/em&gt;&lt;/p&gt;&lt;p&gt;PEEP is a post-exploitation toolkit targeting Chrome and Edge that deploys a malicious extension bypassing Web Store validation by forging Secure Preferences files. The toolkit requires prior administrative or code execution access to install, then enables command execution on the compromised host while masquerading as a benign bookmarks extension. No evidence of active exploitation in the wild has been reported, but this represents a severe persistence mechanism for attackers who have already achieved initial compromise. Organizations should implement strict browser management policies, monitor extension installations, and ensure administrative access controls are properly enforced to prevent malicious extension injection.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/09/peep-turns-chrome-and-edge-into-post.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>N-able patches max severity N-central flaw amid ongoing attacks</title>
-    <id>urn:cybersecnews:item:377</id>
-    <published>2026-09-07T14:01:25.807451+00:00</published>
-    <updated>2026-09-07T14:01:25.807451+00:00</updated>
-    <link href="https://www.bleepingcomputer.com/news/security/n-able-patches-max-severity-n-central-flaw-amid-ongoing-attacks/" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;N-able's N-central RMM platform contains a maximum-severity remote code execution vulnerability being actively exploited in the wild. The flaw allows unauthenticated attackers to execute arbitrary code on affected systems. Apply the emergency hotfix immediately; N-able has indicated this is a critical priority given ongoing active attacks. Consider isolating affected N-central instances pending patch deployment and review access logs for indicators of compromise.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/n-able-patches-max-severity-n-central-flaw-amid-ongoing-attacks/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>ConnectWise warns of new ScreenConnect flaw without patch</title>
-    <id>urn:cybersecnews:item:376</id>
-    <published>2026-09-07T14:01:25.806434+00:00</published>
-    <updated>2026-09-07T14:01:25.806434+00:00</updated>
-    <link href="https://www.bleepingcomputer.com/news/security/connectwise-warns-of-new-screenconnect-flaw-without-patch/" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · remote-access&lt;/em&gt;&lt;/p&gt;&lt;p&gt;ConnectWise ScreenConnect Remote Access is affected by an unpatched vulnerability for which the vendor has only provided temporary mitigations pending a patch expected this week. Specific technical details of the flaw were not disclosed in the warning. Immediate action should focus on implementing ConnectWise's interim mitigation guidance, with plans to apply the official patch upon release. Monitor ConnectWise advisories closely for patch availability and prioritize deployment given ScreenConnect's prevalence in managed IT environments.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/connectwise-warns-of-new-screenconnect-flaw-without-patch/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>N-able Issues Fourth N-central Hotfix in Five Weeks for Unauthenticated RCE Flaw</title>
-    <id>urn:cybersecnews:item:375</id>
-    <published>2026-09-07T14:01:25.805520+00:00</published>
-    <updated>2026-09-07T14:01:25.805520+00:00</updated>
-    <link href="https://thehackernews.com/2026/09/n-able-issues-fourth-n-central-hotfix.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-86218&lt;/em&gt;&lt;/p&gt;&lt;p&gt;N-able N-central RMM platform versions below 2026.3.1.14 contain an unauthenticated remote code execution vulnerability affecting on-premises deployments. The flaw has been actively exploited in the wild according to N-able's incident notice, though release notes indicate exploitation status remains unconfirmed. Immediate patching to Hotfix 4 (version 2026.3.1.14 or later) is critical; organizations should prioritize this update given the rapid succession of four hotfixes in five weeks and confirmed threat activity.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/09/n-able-issues-fourth-n-central-hotfix.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Telerik UI Padding-Oracle Bug Chained to Unauthenticated RCE — Public Exploit Released</title>
-    <id>urn:cybersecnews:item:374</id>
-    <published>2026-09-07T14:01:25.802973+00:00</published>
-    <updated>2026-09-07T14:01:25.802973+00:00</updated>
-    <link href="https://thehackernews.com/2026/09/telerik-ui-padding-oracle-bug-chained.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · padding-oracle,rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Telerik UI for ASP.NET AJAX is vulnerable to a padding oracle attack in AES-CBC encryption that can be chained to achieve unauthenticated remote code execution, though only in non-default configurations. Progress released patches in July 2024 and no confirmed wild exploitation has been reported to date. Organizations using Telerik UI should immediately apply the July 2024 patches and verify their application configuration does not match the exploitable setup (likely involving disabled ViewState MAC validation or custom encryption settings). Monitor affected systems for suspicious activity and consider network segmentation to limit exposure until patching is complete.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/09/telerik-ui-padding-oracle-bug-chained.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Attackers Hijack MikroTik Routers Through Internet-Exposed SSH Without Authentication</title>
-    <id>urn:cybersecnews:item:373</id>
-    <published>2026-09-06T11:59:12.136011+00:00</published>
-    <updated>2026-09-06T11:59:12.136011+00:00</updated>
-    <link href="https://thehackernews.com/2026/09/attackers-hijack-mikrotik-routers.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-67279, CVE-2026-86060&lt;/em&gt;&lt;/p&gt;&lt;p&gt;MikroTik routers with internet-exposed SSH service are vulnerable to unauthenticated remote access allowing full administrative control. Attackers have actively exploited this vulnerability since at least September 2, 2024, gaining unauthorized administrative privileges without credentials. Severity is critical due to complete system compromise potential and active exploitation in the wild. Immediately disable internet-facing SSH access or restrict SSH to trusted IP addresses only; apply available security patches from MikroTik and consider disabling SSH entirely if remote management is not required.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/09/attackers-hijack-mikrotik-routers.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
   </entry>
 </feed>
