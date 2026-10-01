@@ -3,7 +3,25 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-09-30T20:35:53.134551+00:00</updated>
+  <updated>2026-10-01T15:09:15.256865+00:00</updated>
+  <entry>
+    <title>piscina: Prototype-pollution gadget in ThreadPool.options allows RCE via execArgv / loadBalancer / env (CVE-2026-102992)</title>
+    <id>urn:cybersecnews:item:472</id>
+    <published>2026-10-01T15:09:15.256865+00:00</published>
+    <updated>2026-10-01T15:09:15.256865+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-67c8-pqhq-4rmx" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · prototype-pollution · CVE-2026-102992&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Piscina's ThreadPool.options constructor contains a prototype pollution vulnerability (CVE-2026-102992) that allows attackers to execute arbitrary code in worker threads, invoke arbitrary functions, or inject environment variables by polluting Object.prototype through unvalidated options inheriting from the prototype chain. The vulnerability is critical severity; there is no evidence of active exploitation in the wild at this time. Immediately update piscina to a patched version that validates and sanitizes ThreadPool.options against an explicit allowlist of safe configuration parameters, or implement strict input validation on all ThreadPool instantiation parameters.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-67c8-pqhq-4rmx"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>WordPress Backdoor Rebuilds Itself After Cleanup Using Files, Database, and Shared Memory</title>
+    <id>urn:cybersecnews:item:471</id>
+    <published>2026-10-01T15:09:15.255303+00:00</published>
+    <updated>2026-10-01T15:09:15.255303+00:00</updated>
+    <link href="https://thehackernews.com/2026/10/wordpress-backdoor-rebuilds-itself.html" rel="alternate" />
+    <category term="red-team" />
+    <content type="html">&lt;p&gt;&lt;em&gt;red-team · persistence&lt;/em&gt;&lt;/p&gt;&lt;p&gt;WordPress sites are targeted by the SC backdoor, which employs multiple persistence mechanisms including file-based, database, and shared memory storage to rebuild itself after cleanup attempts. The malware uses "SC_" markers and operates as a self-healing mesh architecture, making traditional removal difficult even after initial infection mitigation. This represents a high-severity threat as it enables attackers to maintain long-term access despite remediation efforts. Recommended actions include comprehensive malware scanning with updated signatures, complete database audits to remove injected entries, shared memory inspection, file integrity monitoring post-cleanup, and immediate patching of WordPress core, plugins, and themes to eliminate initial compromise vectors.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/wordpress-backdoor-rebuilds-itself.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>CISA warns of critical pre-auth RCE flaw in MikroTik RouterOS</title>
     <id>urn:cybersecnews:item:470</id>
@@ -885,23 +903,5 @@
     <link href="https://thehackernews.com/2026/09/attackers-hijack-mikrotik-routers.html" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-67279, CVE-2026-86060&lt;/em&gt;&lt;/p&gt;&lt;p&gt;MikroTik routers with internet-exposed SSH service are vulnerable to unauthenticated remote access allowing full administrative control. Attackers have actively exploited this vulnerability since at least September 2, 2024, gaining unauthorized administrative privileges without credentials. Severity is critical due to complete system compromise potential and active exploitation in the wild. Immediately disable internet-facing SSH access or restrict SSH to trusted IP addresses only; apply available security patches from MikroTik and consider disabling SSH entirely if remote management is not required.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/09/attackers-hijack-mikrotik-routers.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Unpatched Magento and Adobe Commerce Zero-Day Exploited to Backdoor Online Stores</title>
-    <id>urn:cybersecnews:item:372</id>
-    <published>2026-09-06T03:11:46.466778+00:00</published>
-    <updated>2026-09-06T03:11:46.466778+00:00</updated>
-    <link href="https://thehackernews.com/2026/09/unpatched-magento-and-adobe-commerce.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-75650&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Magento Open Source and Adobe Commerce are vulnerable to an unauthenticated remote code execution zero-day vulnerability dubbed StyleSmuggler, allowing attackers to execute arbitrary code on affected servers without authentication. The vulnerability is actively exploited in the wild as of September 4, 2024, with attacks confirmed by security firm Sansec who discovered the flaw. Immediate action required: apply available patches from Adobe, implement web application firewalls to block exploitation attempts, and monitor for indicators of compromise on affected systems. Until patches are available, restrict access to admin panels and disable unnecessary features to reduce attack surface.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/09/unpatched-magento-and-adobe-commerce.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>OpenChoreo: cluster-gateway internal proxy performs no caller authentication and is not read-only — data-plane Secret disclosure and arbitrary Kubernetes mutation (CVE-2026-73842)</title>
-    <id>urn:cybersecnews:item:371</id>
-    <published>2026-09-05T03:12:15.421518+00:00</published>
-    <updated>2026-09-05T03:12:15.421518+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-rh53-xvx2-j327" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass,secret-disclosure,arbitrary-mutation · CVE-2026-61594, CVE-2026-61682, CVE-2026-73842&lt;/em&gt;&lt;/p&gt;&lt;p&gt;OpenChoreo's cluster-gateway component exposes internal management APIs that perform no authentication on callers and lack enforcement of read-only operations, allowing unauthenticated access to tunnel mutating requests and read Secrets from tenant Kubernetes namespaces. This critical vulnerability (CVE-2026-73842) enables arbitrary Kubernetes mutations and sensitive data disclosure without authentication. No information provided on active exploitation in the wild. Immediately patch to a version that implements caller authentication and enforces read-only restrictions on the internal proxy APIs.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-rh53-xvx2-j327"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
   </entry>
 </feed>
