@@ -3,7 +3,25 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-10-01T20:50:35.038954+00:00</updated>
+  <updated>2026-10-02T14:29:52.161302+00:00</updated>
+  <entry>
+    <title>SMTP is the key: BPFDoor and AVERAT hitting the network edge</title>
+    <id>urn:cybersecnews:item:480</id>
+    <published>2026-10-02T14:29:52.161302+00:00</published>
+    <updated>2026-10-02T14:29:52.161302+00:00</updated>
+    <link href="https://www.rapid7.com/blog/post/tr-smtp-is-the-key-bpfdoor-averat-hitting-the-network-edge" rel="alternate" />
+    <category term="red-team" />
+    <content type="html">&lt;p&gt;&lt;em&gt;red-team · c2, persistence, evasion&lt;/em&gt;&lt;/p&gt;&lt;p&gt;BPFDoor and AVERAT Linux implants target telecom and network-edge appliances including mail-security gateways, DVRs, and NAS devices in South Korea and Taiwan. BPFDoor is a passive Berkeley Packet Filter-based backdoor that uses kernel-level packet interception with magic-byte triggers (evolved to hide in HTTPS POST requests to evade detection), while AVERAT is a modular implant beaconing via SMTP to blend with legitimate mail traffic and supporting ten concurrent shell sessions, file operations, and dynamic C2 reconfiguration. Both families are actively exploited in the wild; BPFDoor variants use regional process spoofing (SpamSniper in Korea, Oracle/Sniper daemons in telecom infrastructure) and AVERAT infrastructure comprises compromised consumer/SMB appliances in Taiwan acting as operational relays consistent with China-nexus ORB networks. Organizations should hunt for processes with deleted executables (/proc/pid/exe pointing to deleted), monitor outbound SMTP from non-mail services to consumer-grade hosts, detect raw packet sockets and BPF filters on non-packet-capture systems, and restrict management access to edge appliances while preserving process forensics and DNS records; patch end-of-life appliances where possible and segment network-edge devices.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.rapid7.com/blog/post/tr-smtp-is-the-key-bpfdoor-averat-hitting-the-network-edge"&gt;Read more&lt;/a&gt; · Source: rapid7&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Dell asks admins to patch max severity CSM flaws as soon as possible</title>
+    <id>urn:cybersecnews:item:479</id>
+    <published>2026-10-02T14:29:52.159492+00:00</published>
+    <updated>2026-10-02T14:29:52.159492+00:00</updated>
+    <link href="https://www.bleepingcomputer.com/news/security/new-max-severity-dell-csm-flaws-give-hackers-admin-privileges/" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Dell Container Storage Modules (CSM) for Kubernetes contains two maximum severity vulnerabilities enabling remote code execution and privilege escalation on enterprise storage arrays. The flaws allow unauthenticated attackers to compromise storage infrastructure integrated with Kubernetes clusters. Dell recommends immediate patching of affected CSM versions; check Dell security advisories for specific vulnerable versions and available updates. No indication of active exploitation in the wild, but the critical nature and storage infrastructure exposure warrant expedited remediation.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/new-max-severity-dell-csm-flaws-give-hackers-admin-privileges/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>vm2: NodeVM nesting guard accepts array-shaped require and permits host RCE (CVE-2026-92935)</title>
     <id>urn:cybersecnews:item:478</id>
@@ -885,23 +903,5 @@
     <link href="https://www.bleepingcomputer.com/news/microsoft/microsoft-september-2026-patch-tuesday-fixes-966-flaws-2-zero-days/" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · multiple&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Microsoft released 966 security fixes on September 2026 Patch Tuesday, including two actively exploited zero-day vulnerabilities across multiple products. The zero-days are currently being weaponized in the wild, indicating immediate threat to deployed systems. All affected Microsoft products require urgent patching; prioritize systems running vulnerable versions and apply updates as soon as possible, with particular focus on the two zero-day vulnerabilities to remediate active exploitation.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/microsoft/microsoft-september-2026-patch-tuesday-fixes-966-flaws-2-zero-days/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>ChatGPT Flaw Let a Planted Prompt Send a Victim's Gmail Data to Another Account</title>
-    <id>urn:cybersecnews:item:380</id>
-    <published>2026-09-08T19:18:54.521047+00:00</published>
-    <updated>2026-09-08T19:18:54.521047+00:00</updated>
-    <link href="https://thehackernews.com/2026/09/chatgpt-flaw-let-planted-prompt-send.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · prompt-injection · CVE-2026-61732&lt;/em&gt;&lt;/p&gt;&lt;p&gt;ChatGPT's plugin system was vulnerable to prompt injection attacks where a malicious instruction embedded in user-supplied content could execute hidden operations while the assistant continued normal functionality. In the proof-of-concept, attackers could exfiltrate Gmail data connected to a victim's account and relay it to attacker-controlled accounts via covert channels. This was a high-severity vulnerability affecting users with Gmail integration enabled, though no evidence of active exploitation in the wild was reported. OpenAI patched the underlying plugin isolation issues; users should disable unnecessary third-party integrations and review plugin permissions settings.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/09/chatgpt-flaw-let-planted-prompt-send.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>FreeIPA Flaw Chain Lets Anonymous Clients Create Reusable Administrator Credentials</title>
-    <id>urn:cybersecnews:item:379</id>
-    <published>2026-09-08T12:39:15.184350+00:00</published>
-    <updated>2026-09-08T12:39:15.184350+00:00</updated>
-    <link href="https://thehackernews.com/2026/09/freeipa-flaw-chain-lets-anonymous.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · privilege-escalation&lt;/em&gt;&lt;/p&gt;&lt;p&gt;FreeIPA identity management system is vulnerable to a privilege escalation chain allowing unauthenticated clients to create arbitrary Kerberos identities with administrator privileges through flaws in both FreeIPA and the underlying 389 Directory Server. The vulnerability requires no prior authentication and leverages LDAP access to inject malicious directory entries that grant administrative group membership. This is a critical severity issue with potential for exploitation in environments where FreeIPA is exposed to untrusted networks. Immediate patching of both FreeIPA and 389 Directory Server is required; isolate FreeIPA administration interfaces and restrict LDAP access to trusted networks pending updates.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/09/freeipa-flaw-chain-lets-anonymous.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
   </entry>
 </feed>
