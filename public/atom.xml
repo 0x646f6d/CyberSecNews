@@ -3,7 +3,16 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-10-02T20:23:37.996240+00:00</updated>
+  <updated>2026-10-03T04:01:46.005857+00:00</updated>
+  <entry>
+    <title>gitea-runner: workflow container.options passes host namespaces and capability flags to job container when privileged mode is disabled (CVE-2026-73802)</title>
+    <id>urn:cybersecnews:item:483</id>
+    <published>2026-10-03T04:01:46.005857+00:00</published>
+    <updated>2026-10-03T04:01:46.005857+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-x4q3-gcj3-m6cf" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · privilege-escalation · CVE-2026-73802&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Gitea Runner (act_runner) fails to sanitize workflow-controlled `container.options` parameters when privileged mode is disabled, allowing attackers to bypass security restrictions. A malicious workflow can specify host namespace flags (PID/IPC) and capability expansions to gain root-level access to the runner host despite the runner operating in non-privileged mode. This is critical severity and likely exploitable given that workflows are user-controllable in many CI/CD environments. Immediately update Gitea Runner to the patched version and audit all recent workflow executions for suspicious container options usage.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-x4q3-gcj3-m6cf"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Antino Backdoor Uses Outlook and OneDrive for C2 in China-Nexus Espionage Campaign</title>
     <id>urn:cybersecnews:item:482</id>
@@ -894,14 +903,5 @@
     <link href="https://www.bleepingcomputer.com/news/security/sap-warns-of-maximum-severity-overpass-kernel-vulnerability/" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · memory-corruption&lt;/em&gt;&lt;/p&gt;&lt;p&gt;SAP Kernel is affected by CVE-2026-XXXXX, a maximum-severity memory corruption vulnerability in kernel code tracked as "OVERPASS." The flaw allows remote attackers to execute arbitrary code or cause denial of service through malformed requests to vulnerable SAP systems. Apply SAP's September 2026 security patches immediately to all affected Kernel installations; this should be prioritized as critical given the maximum severity rating and remote exploitability.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/sap-warns-of-maximum-severity-overpass-kernel-vulnerability/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>August updates trigger 0xc0000409 errors on Windows Server 2016</title>
-    <id>urn:cybersecnews:item:383</id>
-    <published>2026-09-08T19:18:54.524620+00:00</published>
-    <updated>2026-09-08T19:18:54.524620+00:00</updated>
-    <link href="https://www.bleepingcomputer.com/news/microsoft/august-updates-trigger-0xc0000409-errors-on-windows-server-2016/" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · denial-of-service&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Windows Server 2016 systems running August 2026 security updates may experience 0xc0000409 errors when the Compatibility Appraiser diagnostic service is active. This is a reliability issue rather than a security vulnerability, causing system instability and potential crashes. Microsoft has acknowledged the problem but no exploit in the wild has been reported. Affected organizations should either disable the Compatibility Appraiser service if not required, defer the August update pending a fix, or apply workarounds documented in Microsoft's advisory.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/microsoft/august-updates-trigger-0xc0000409-errors-on-windows-server-2016/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
   </entry>
 </feed>
