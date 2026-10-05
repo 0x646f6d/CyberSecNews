@@ -3,7 +3,43 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-10-03T04:01:46.005857+00:00</updated>
+  <updated>2026-10-05T16:51:21.127938+00:00</updated>
+  <entry>
+    <title>New Dell System Update flaw lets hackers gain root privileges</title>
+    <id>urn:cybersecnews:item:487</id>
+    <published>2026-10-05T16:51:21.127938+00:00</published>
+    <updated>2026-10-05T16:51:21.127938+00:00</updated>
+    <link href="https://www.bleepingcomputer.com/news/security/new-dell-system-update-flaw-lets-hackers-gain-root-privileges/" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · privilege-escalation&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Dell System Update (DSU) CLI tool contains a critical vulnerability enabling unauthenticated remote attackers to gain root-level privileges on affected systems. The flaw allows privilege escalation through improper handling of CLI parameters during deployment operations. No evidence of active exploitation in the wild has been reported at this time, but given the critical severity and root access impact, immediate patching is mandatory. Dell has released security updates; administrators should prioritize deploying patches to all affected DSU installations and restrict CLI tool access where possible pending remediation.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/new-dell-system-update-flaw-lets-hackers-gain-root-privileges/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Attackers Target Rejetto HFS Flaw That Enables Admin Session Forgery and RCE</title>
+    <id>urn:cybersecnews:item:486</id>
+    <published>2026-10-05T16:51:21.126764+00:00</published>
+    <updated>2026-10-05T16:51:21.126764+00:00</updated>
+    <link href="https://thehackernews.com/2026/10/attackers-target-rejetto-hfs-flaw-that.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · session-forgery · CVE-2026-61500&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Rejetto HTTP File Server (HFS) is affected by CVE-2024-27891 (CVSS 9.3), a critical session forgery vulnerability caused by a weak pseudo-random number generator that produces predictable session keys, allowing attackers to forge admin sessions and achieve remote code execution. Active exploitation in the wild has been confirmed by VulnCheck. Organizations running HFS should immediately patch to a patched version or disable the service if updates are unavailable. This is a high-priority vulnerability requiring urgent remediation due to the ease of exploitation and severity of impact.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/attackers-target-rejetto-hfs-flaw-that.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Realtek Jungle SDK Exploit Attempts Deliver Cling Botnet With STUN-Based C2</title>
+    <id>urn:cybersecnews:item:485</id>
+    <published>2026-10-05T16:51:21.125425+00:00</published>
+    <updated>2026-10-05T16:51:21.125425+00:00</updated>
+    <link href="https://thehackernews.com/2026/10/realtek-jungle-sdk-exploit-attempts.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Realtek Jungle SDK is affected by a critical, now-patched vulnerability being actively exploited in the wild to deploy Cling botnet malware. Cling leverages STUN (Session Traversal Utilities for NAT) protocol for command-and-control communications, repurposing legitimate network behavior to evade detection. Apply available security patches for Realtek Jungle SDK immediately, and monitor for STUN traffic anomalies indicative of C2 communication. Implement network-level controls to restrict STUN traffic from IoT/embedded devices not requiring this protocol.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/realtek-jungle-sdk-exploit-attempts.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Bildmanipulationen: Content-Signatur C2PA ausgehebelt</title>
+    <id>urn:cybersecnews:item:484</id>
+    <published>2026-10-05T16:51:21.124098+00:00</published>
+    <updated>2026-10-05T16:51:21.124098+00:00</updated>
+    <link href="https://www.golem.de/news/bildmanipulationen-content-signatur-c2pa-ausgehebelt-2610-213700.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · signature-bypass&lt;/em&gt;&lt;/p&gt;&lt;p&gt;The C2PA (Coalition for Content Provenance and Authenticity) content signature standard for verifying image authenticity has been bypassed by exploiting an exclusion rule that allows certain image regions to be omitted from signature calculations. The bypass leverages a technically necessary feature of the standard but enables attackers to manipulate images while maintaining valid C2PA signatures, undermining the integrity verification purpose. No active exploitation in the wild has been reported, though this represents a fundamental weakness in the standard's design rather than a software-specific vulnerability. Adobe and other C2PA implementers should collaborate on refined verification rules that balance technical necessity with security; users should not rely solely on C2PA signatures for authenticating critical content without additional verification methods.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.golem.de/news/bildmanipulationen-content-signatur-c2pa-ausgehebelt-2610-213700.html"&gt;Read more&lt;/a&gt; · Source: golem-security&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>gitea-runner: workflow container.options passes host namespaces and capability flags to job container when privileged mode is disabled (CVE-2026-73802)</title>
     <id>urn:cybersecnews:item:483</id>
@@ -867,41 +903,5 @@
     <link href="https://www.outflank.nl/blog/2026/09/08/netntlmv1-is-dead-long-live-netntlmv1/" rel="alternate" />
     <category term="red-team" />
     <content type="html">&lt;p&gt;&lt;em&gt;red-team · credential-cracking&lt;/em&gt;&lt;/p&gt;&lt;p&gt;NetNTLMv1 authentication protocol is now trivially crackable using publicly released rainbow tables and GPU acceleration tools (WebGPU browser client and ntlmrain CLI). Attackers can recover NT hashes from captured NetNTLMv1 responses with fixed challenge 1122334455667788 using commodity hardware (4TB disk, standard GPU), making this authentication method cryptographically broken. This technique is actively exploited in the wild as practical attack tools are publicly available. Organizations must disable NetNTLMv1 immediately and enforce NTLMv2 or Kerberos; any systems still relying on NetNTLMv1 for authentication should be considered compromised if network traffic was captured.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.outflank.nl/blog/2026/09/08/netntlmv1-is-dead-long-live-netntlmv1/"&gt;Read more&lt;/a&gt; · Source: outflank&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>The Shared Clipboard Inside the Sandbox: Cross-Account Data Leakage in ChatGPT</title>
-    <id>urn:cybersecnews:item:387</id>
-    <published>2026-09-08T19:18:54.528760+00:00</published>
-    <updated>2026-09-08T19:18:54.528760+00:00</updated>
-    <link href="https://research.checkpoint.com/2026/the-shared-clipboard-inside-the-sandbox-cross-account-data-leakage-in-chatgpt/" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · data-leakage&lt;/em&gt;&lt;/p&gt;&lt;p&gt;ChatGPT's code execution sandbox contains a cross-account data leakage vulnerability where the shared clipboard is accessible across different user sessions, allowing attackers to exfiltrate sensitive information pasted by other users. An attacker can inject malicious code into their ChatGPT conversation that reads clipboard contents, potentially capturing passwords, API keys, and private data from concurrent users. This vulnerability has moderate severity as it requires active exploitation during simultaneous sessions but affects a widely-used platform with millions of users; Check Point Research has not indicated active exploitation in the wild. Users should avoid pasting sensitive credentials directly into ChatGPT, and OpenAI should implement per-user clipboard isolation in the sandbox environment.&lt;/p&gt;&lt;p&gt;&lt;a href="https://research.checkpoint.com/2026/the-shared-clipboard-inside-the-sandbox-cross-account-data-leakage-in-chatgpt/"&gt;Read more&lt;/a&gt; · Source: checkpoint-research&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Netty: SNI Routing Bypass via Fragmented TLS ClientHello Causing Fallback to Default SslContext (CVE-2026-75595)</title>
-    <id>urn:cybersecnews:item:386</id>
-    <published>2026-09-08T19:18:54.527505+00:00</published>
-    <updated>2026-09-08T19:18:54.527505+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-c4c3-7fpv-j4q5" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-75595&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Netty handler (io.netty:netty-handler) contains a critical vulnerability in SslClientHelloHandler#decode where fragmented TLS ClientHello messages bypass SNI-based routing by causing fallback to the default SslContext. An attacker can craft a malicious ClientHello with the handshake header spanning multiple records to trigger this behavior, bypassing mTLS authentication gates that rely solely on per-SNI selection. This vulnerability is likely exploitable in the wild given its trivial exploitation method. Immediately patch to the latest Netty version and validate that your mTLS implementations do not depend exclusively on SNI-based SslContext selection.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-c4c3-7fpv-j4q5"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Microsoft Windows: Microsoft Windows Heap-Based Buffer Overflow Vulnerability (CVE-2026-85880)</title>
-    <id>urn:cybersecnews:item:385</id>
-    <published>2026-09-08T19:18:54.526518+00:00</published>
-    <updated>2026-09-08T19:18:54.526518+00:00</updated>
-    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-85880" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · heap-buffer-overflow · CVE-2026-85880&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Microsoft Windows Advanced Local Procedure Call (ALPC) contains a heap-based buffer overflow vulnerability (CVE-2026-85880) enabling local privilege escalation. This vulnerability is actively exploited in the wild and listed on CISA's Known Exploited Vulnerabilities catalog. Apply vendor-supplied patches immediately per BOD 26-04 prioritization guidance; if mitigations are unavailable, discontinue use or migrate affected systems. Conduct forensic triage on potentially compromised assets and assess internet exposure of all affected Windows systems.&lt;/p&gt;&lt;p&gt;&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2026-85880"&gt;Read more&lt;/a&gt; · Source: cisa-kev&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>SAP warns of maximum severity 'OVERPASS' kernel vulnerability</title>
-    <id>urn:cybersecnews:item:384</id>
-    <published>2026-09-08T19:18:54.525531+00:00</published>
-    <updated>2026-09-08T19:18:54.525531+00:00</updated>
-    <link href="https://www.bleepingcomputer.com/news/security/sap-warns-of-maximum-severity-overpass-kernel-vulnerability/" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · memory-corruption&lt;/em&gt;&lt;/p&gt;&lt;p&gt;SAP Kernel is affected by CVE-2026-XXXXX, a maximum-severity memory corruption vulnerability in kernel code tracked as "OVERPASS." The flaw allows remote attackers to execute arbitrary code or cause denial of service through malformed requests to vulnerable SAP systems. Apply SAP's September 2026 security patches immediately to all affected Kernel installations; this should be prioritized as critical given the maximum severity rating and remote exploitability.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/sap-warns-of-maximum-severity-overpass-kernel-vulnerability/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
   </entry>
 </feed>
