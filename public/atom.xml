@@ -3,7 +3,43 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-10-05T16:51:21.127938+00:00</updated>
+  <updated>2026-10-06T05:09:50.199688+00:00</updated>
+  <entry>
+    <title>Capacitor Android and iOS: remote content can be loaded at the app origin via the internal HTTP proxy path (CVE-2026-103922)</title>
+    <id>urn:cybersecnews:item:491</id>
+    <published>2026-10-06T05:09:50.199688+00:00</published>
+    <updated>2026-10-06T05:09:50.199688+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-rvm3-566m-v7fv" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · origin-bypass · CVE-2026-103922&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Capacitor (Android/iOS) contains a critical path traversal vulnerability in its WebView navigation guard that fails to validate URL paths, only checking host and scheme. An attacker can navigate to the internal HTTP proxy path (`/_capacitor_http_interceptor_`) to fetch arbitrary remote content and execute it at the application's origin, potentially enabling script injection and full app compromise. This vulnerability is critical in severity and affects Capacitor Core, Capacitor Android, Capacitor iOS, and Capacitor Swift. Users should immediately update to patched versions across all affected platforms to prevent exploitation.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-rvm3-566m-v7fv"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>proxy-addr vulnerable to IP spoofing via IPv4-mapped IPv6 trust subnet (CVE-2026-90711)</title>
+    <id>urn:cybersecnews:item:490</id>
+    <published>2026-10-06T05:09:50.198412+00:00</published>
+    <updated>2026-10-06T05:09:50.198412+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-jqcg-44mw-7w3h" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · ip-spoofing · CVE-2026-90711&lt;/em&gt;&lt;/p&gt;&lt;p&gt;The proxy-addr npm package is vulnerable to IP spoofing (CVE-2026-90711) when trust subnets are configured as IPv4-mapped IPv6 addresses or IPv6 ranges with zero leading bits; affected configurations incorrectly match all IPv4 addresses rather than the intended subnet block, allowing attackers to spoof X-Forwarded-For headers. This is a critical vulnerability that enables authentication bypass and trusted proxy impersonation. Applications should immediately audit their proxy-addr configuration for affected subnet patterns (e.g., `::ffff:10.0.0.0/8` or `::/1`) and update to the patched version with corrected subnet validation logic.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-jqcg-44mw-7w3h"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>simple-git unsafe-operation guard does not block trailer command configuration (CVE-2026-102828)</title>
+    <id>urn:cybersecnews:item:489</id>
+    <published>2026-10-06T05:09:50.197388+00:00</published>
+    <updated>2026-10-06T05:09:50.197388+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-x6jw-m9v5-85vh" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · command-injection · CVE-2026-102828&lt;/em&gt;&lt;/p&gt;&lt;p&gt;The npm package simple-git's default blockUnsafeOperationsPlugin fails to block the `trailer.&lt;token&gt;.cmd` configuration option, which Git executes as a shell command via `git interpret-trailers`. This allows attackers to achieve arbitrary command execution when an application permits untrusted values in SimpleGitOptions.config or Git inline configuration arguments. This is a critical severity vulnerability with no indication of active exploitation in the wild. Applications using simple-git should immediately update to a patched version and review any code paths accepting untrusted Git configuration values.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-x6jw-m9v5-85vh"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>simple-git: `VISUAL` editor environment variable is omitted from unsafe editor detection (CVE-2026-102829)</title>
+    <id>urn:cybersecnews:item:488</id>
+    <published>2026-10-06T05:09:50.196493+00:00</published>
+    <updated>2026-10-06T05:09:50.196493+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-v5rq-49vh-5v5c" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · security-control-bypass · CVE-2026-102829&lt;/em&gt;&lt;/p&gt;&lt;p&gt;The npm package @simple-git/argv-parser fails to include the `VISUAL` environment variable in its unsafe editor detection mechanism, allowing attackers to bypass security controls that prevent command injection through editor configuration. This is a critical security control bypass in the `parseEnv` function's `vulnerabilityCheck` routine. There is no indication the vulnerability is currently exploited in the wild, but it enables arbitrary command execution when untrusted code controls the `VISUAL` environment variable. Immediately update @simple-git/argv-parser to a patched version that properly classifies `VISUAL` as an unsafe editor fallback in the allowUnsafeEditor check.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-v5rq-49vh-5v5c"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>New Dell System Update flaw lets hackers gain root privileges</title>
     <id>urn:cybersecnews:item:487</id>
@@ -20,7 +56,7 @@
     <updated>2026-10-05T16:51:21.126764+00:00</updated>
     <link href="https://thehackernews.com/2026/10/attackers-target-rejetto-hfs-flaw-that.html" rel="alternate" />
     <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · session-forgery · CVE-2026-61500&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Rejetto HTTP File Server (HFS) is affected by CVE-2024-27891 (CVSS 9.3), a critical session forgery vulnerability caused by a weak pseudo-random number generator that produces predictable session keys, allowing attackers to forge admin sessions and achieve remote code execution. Active exploitation in the wild has been confirmed by VulnCheck. Organizations running HFS should immediately patch to a patched version or disable the service if updates are unavailable. This is a high-priority vulnerability requiring urgent remediation due to the ease of exploitation and severity of impact.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/attackers-target-rejetto-hfs-flaw-that.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · session-forgery · CVE-2026-61500, CVE-2026-9205&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Rejetto HTTP File Server (HFS) is affected by CVE-2024-27891 (CVSS 9.3), a critical session forgery vulnerability caused by a weak pseudo-random number generator that produces predictable session keys, allowing attackers to forge admin sessions and achieve remote code execution. Active exploitation in the wild has been confirmed by VulnCheck. Organizations running HFS should immediately patch to a patched version or disable the service if updates are unavailable. This is a high-priority vulnerability requiring urgent remediation due to the ease of exploitation and severity of impact.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/attackers-target-rejetto-hfs-flaw-that.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
   </entry>
   <entry>
     <title>Realtek Jungle SDK Exploit Attempts Deliver Cling Botnet With STUN-Based C2</title>
@@ -92,7 +128,7 @@
     <updated>2026-10-01T20:50:35.038954+00:00</updated>
     <link href="https://github.com/advisories/GHSA-8hr7-r645-pc6w" rel="alternate" />
     <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-92935&lt;/em&gt;&lt;/p&gt;&lt;p&gt;vm2 NodeVM is vulnerable to a nesting guard bypass (CVE-2026-92935) where passing an array for the require parameter bypasses type checking, allowing attackers to execute arbitrary code on the host system with critical severity. The vulnerability affects versions of vm2 where `typeof requireOpts === 'object'` accepts arrays, which then destructure to undefined and permit nesting execution. This is exploitable in the wild when downstream NodeVM instances are configured with `nesting: true` and untrusted code execution. Patch immediately by updating vm2 to a patched version and add strict type validation for require configuration parameters.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-8hr7-r645-pc6w"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-92935, CVE-2026-92947, CVE-2026-92953, CVE-2026-92954, CVE-2026-92955&lt;/em&gt;&lt;/p&gt;&lt;p&gt;vm2 NodeVM is vulnerable to a nesting guard bypass (CVE-2026-92935) where passing an array for the require parameter bypasses type checking, allowing attackers to execute arbitrary code on the host system with critical severity. The vulnerability affects versions of vm2 where `typeof requireOpts === 'object'` accepts arrays, which then destructure to undefined and permit nesting execution. This is exploitable in the wild when downstream NodeVM instances are configured with `nesting: true` and untrusted code execution. Patch immediately by updating vm2 to a patched version and add strict type validation for require configuration parameters.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-8hr7-r645-pc6w"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
   </entry>
   <entry>
     <title>vm2: NodeVM node:-prefixed negative builtin deny bypass exposes child_process (CVE-2026-92957)</title>
@@ -119,7 +155,7 @@
     <updated>2026-10-01T20:50:35.036010+00:00</updated>
     <link href="https://github.com/advisories/GHSA-h85j-hv3c-qfgq" rel="alternate" />
     <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · sandbox-escape · CVE-2026-92940&lt;/em&gt;&lt;/p&gt;&lt;p&gt;vm2 versions up to 3.11.6 leak host HTTPS credentials and TLS traffic when NodeVM explicitly permits requiring the https module. The vulnerability allows sandbox code to register listeners on the shared globalAgent and intercept host request options and TLS sockets from unrelated host HTTPS requests through connection pooling. This is critical severity and exploitable by any code executed within a vm2 sandbox with https module access. Immediate patching to a version beyond 3.11.6 is required; additionally, restrict https module access in vm2 contexts unless absolutely necessary and monitor for unusual connection pooling activity.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-h85j-hv3c-qfgq"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · sandbox-escape · CVE-2026-100721, CVE-2026-92934, CVE-2026-92940, CVE-2026-92946, CVE-2026-92956&lt;/em&gt;&lt;/p&gt;&lt;p&gt;vm2 versions up to 3.11.6 leak host HTTPS credentials and TLS traffic when NodeVM explicitly permits requiring the https module. The vulnerability allows sandbox code to register listeners on the shared globalAgent and intercept host request options and TLS sockets from unrelated host HTTPS requests through connection pooling. This is critical severity and exploitable by any code executed within a vm2 sandbox with https module access. Immediate patching to a version beyond 3.11.6 is required; additionally, restrict https module access in vm2 contexts unless absolutely necessary and monitor for unusual connection pooling activity.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-h85j-hv3c-qfgq"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
   </entry>
   <entry>
     <title>vm2: NodeVM builtin allowlist bypass via node:test.run() execArgv allows sandbox escape (CVE-2026-92948)</title>
@@ -146,7 +182,7 @@
     <updated>2026-10-01T15:09:15.256865+00:00</updated>
     <link href="https://github.com/advisories/GHSA-67c8-pqhq-4rmx" rel="alternate" />
     <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · prototype-pollution · CVE-2026-102992&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Piscina's ThreadPool.options constructor contains a prototype pollution vulnerability (CVE-2026-102992) that allows attackers to execute arbitrary code in worker threads, invoke arbitrary functions, or inject environment variables by polluting Object.prototype through unvalidated options inheriting from the prototype chain. The vulnerability is critical severity; there is no evidence of active exploitation in the wild at this time. Immediately update piscina to a patched version that validates and sanitizes ThreadPool.options against an explicit allowlist of safe configuration parameters, or implement strict input validation on all ThreadPool instantiation parameters.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-67c8-pqhq-4rmx"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · prototype-pollution · CVE-2026-102992, CVE-2026-104848, CVE-2026-104849&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Piscina's ThreadPool.options constructor contains a prototype pollution vulnerability (CVE-2026-102992) that allows attackers to execute arbitrary code in worker threads, invoke arbitrary functions, or inject environment variables by polluting Object.prototype through unvalidated options inheriting from the prototype chain. The vulnerability is critical severity; there is no evidence of active exploitation in the wild at this time. Immediately update piscina to a patched version that validates and sanitizes ThreadPool.options against an explicit allowlist of safe configuration parameters, or implement strict input validation on all ThreadPool instantiation parameters.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-67c8-pqhq-4rmx"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
   </entry>
   <entry>
     <title>WordPress Backdoor Rebuilds Itself After Cleanup Using Files, Database, and Shared Memory</title>
@@ -867,41 +903,5 @@
     <link href="https://www.praetorian.com/blog/credential-testing-brutus/" rel="alternate" />
     <category term="red-team" />
     <content type="html">&lt;p&gt;&lt;em&gt;red-team · credential-testing&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Brutus is a credential testing and reuse engine that systematically validates compromised username/password pairs across multiple internal services and systems. The tool exploits common weaknesses including breach reuse, unchanged vendor defaults, and poor password hygiene rather than novel exploits, making it highly effective for initial compromise and lateral movement. This represents a critical severity threat actively exploited in the wild, as credential reuse remains one of the fastest paths to network access. Organizations should enforce unique complex passwords, implement multi-factor authentication across all systems, conduct regular breach monitoring, and maintain credential rotation policies for vendor defaults and service accounts.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.praetorian.com/blog/credential-testing-brutus/"&gt;Read more&lt;/a&gt; · Source: praetorian&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Acronis Backup: Acronis Backup Incorrect Default Permissions Vulnerability (CVE-2026-87886)</title>
-    <id>urn:cybersecnews:item:391</id>
-    <published>2026-09-17T07:43:25.881626+00:00</published>
-    <updated>2026-09-17T07:43:25.881626+00:00</updated>
-    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-87886" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · privilege-escalation · CVE-2026-87886&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Acronis Backup plugins for cPanel &amp; WHM and Plesk contain an incorrect default permissions vulnerability (CVE-2026-87886) enabling privilege escalation attacks. This flaw is actively exploited in the wild and carries high severity. Immediately apply vendor-supplied mitigations per CISA BOD 26-04 guidance; if patches are unavailable, discontinue the affected products. Conduct forensics triage on all affected systems and assess internet exposure to prioritize remediation.&lt;/p&gt;&lt;p&gt;&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2026-87886"&gt;Read more&lt;/a&gt; · Source: cisa-kev&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Google Pixel: Google Pixel Improper Authorization Vulnerability (CVE-2026-58704)</title>
-    <id>urn:cybersecnews:item:390</id>
-    <published>2026-09-17T07:43:25.877232+00:00</published>
-    <updated>2026-09-17T07:43:25.877232+00:00</updated>
-    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-58704" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · privilege-escalation · CVE-2026-58704&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Google Pixel devices contain an improper authorization vulnerability (CVE-2026-58704) in the cellular modem that allows attackers to bypass permission checks and escalate privileges through a logic error. This vulnerability is actively exploited in the wild and carries high severity given its impact on device security. Immediately apply vendor-supplied patches in accordance with CISA BOD 26-04 prioritization guidance; if mitigations are unavailable, discontinue use of affected devices. Prioritize patching based on internet exposure assessment and compliance with federal BOD 26-04 timelines.&lt;/p&gt;&lt;p&gt;&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2026-58704"&gt;Read more&lt;/a&gt; · Source: cisa-kev&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Cisco warns of max severity ISE zero-day exploited in attacks</title>
-    <id>urn:cybersecnews:item:389</id>
-    <published>2026-09-17T07:43:25.838533+00:00</published>
-    <updated>2026-09-17T07:43:25.838533+00:00</updated>
-    <link href="https://www.bleepingcomputer.com/news/security/cisco-warns-of-identity-service-engine-zero-day-exploited-in-attacks/" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Cisco Identity Services Engine (ISE) is affected by a CVSS 10.0 zero-day vulnerability currently being exploited in active attacks. The flaw allows unauthenticated remote code execution on affected ISE deployments. Immediate patching is critical; apply Cisco's latest security updates for ISE without delay and prioritize this as a critical emergency.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/cisco-warns-of-identity-service-engine-zero-day-exploited-in-attacks/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>NetNTLMv1 Is Dead. Long Live NetNTLMv1.</title>
-    <id>urn:cybersecnews:item:388</id>
-    <published>2026-09-08T19:18:54.529752+00:00</published>
-    <updated>2026-09-08T19:18:54.529752+00:00</updated>
-    <link href="https://www.outflank.nl/blog/2026/09/08/netntlmv1-is-dead-long-live-netntlmv1/" rel="alternate" />
-    <category term="red-team" />
-    <content type="html">&lt;p&gt;&lt;em&gt;red-team · credential-cracking&lt;/em&gt;&lt;/p&gt;&lt;p&gt;NetNTLMv1 authentication protocol is now trivially crackable using publicly released rainbow tables and GPU acceleration tools (WebGPU browser client and ntlmrain CLI). Attackers can recover NT hashes from captured NetNTLMv1 responses with fixed challenge 1122334455667788 using commodity hardware (4TB disk, standard GPU), making this authentication method cryptographically broken. This technique is actively exploited in the wild as practical attack tools are publicly available. Organizations must disable NetNTLMv1 immediately and enforce NTLMv2 or Kerberos; any systems still relying on NetNTLMv1 for authentication should be considered compromised if network traffic was captured.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.outflank.nl/blog/2026/09/08/netntlmv1-is-dead-long-live-netntlmv1/"&gt;Read more&lt;/a&gt; · Source: outflank&lt;/p&gt;</content>
   </entry>
 </feed>
