@@ -3,7 +3,34 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-10-06T05:09:50.199688+00:00</updated>
+  <updated>2026-10-06T14:47:48.573822+00:00</updated>
+  <entry>
+    <title>shell-quote: `quote()` command injection via a line terminator in a token after a `{ comment }` token (CVE-2026-102422)</title>
+    <id>urn:cybersecnews:item:494</id>
+    <published>2026-10-06T14:47:48.573822+00:00</published>
+    <updated>2026-10-06T14:47:48.573822+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-pqg4-j6r4-53mv" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · command-injection · CVE-2026-102422&lt;/em&gt;&lt;/p&gt;&lt;p&gt;The shell-quote npm package's quote() function is vulnerable to command injection when processing comment tokens followed by string tokens containing line terminators (CVE-2026-102422). The vulnerability allows attackers to inject arbitrary shell commands by exploiting how comment tokens are rendered as `#` characters that comment out subsequent code, with line breaks in later tokens breaking out of the comment context. This is a critical severity issue with active exploitation potential. Users should immediately update to a patched version of shell-quote that properly escapes or handles comment tokens to prevent line terminator injection.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-pqg4-j6r4-53mv"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>LibreOffice and OpenOffice Flaws Let Malicious Spreadsheets Run Code Without Macro Warnings</title>
+    <id>urn:cybersecnews:item:493</id>
+    <published>2026-10-06T14:47:48.572890+00:00</published>
+    <updated>2026-10-06T14:47:48.572890+00:00</updated>
+    <link href="https://thehackernews.com/2026/10/libreoffice-and-openoffice-flaws-let.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;LibreOffice and Apache OpenOffice with Java support enabled are vulnerable to arbitrary code execution via malicious spreadsheets that bypass macro security warnings. The vulnerability exploits Java integration to execute attacker code immediately upon file opening without user prompts. This is currently a proof-of-concept with no reported in-the-wild exploitation. Mitigation includes disabling Java support in LibreOffice/OpenOffice if not required, or applying security patches when available; users should also disable automatic macro execution and treat spreadsheet files from untrusted sources with caution.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/libreoffice-and-openoffice-flaws-let.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Android-Patchday: Mehr als 25 Sicherheitslücken gestopft</title>
+    <id>urn:cybersecnews:item:492</id>
+    <published>2026-10-06T14:47:48.571119+00:00</published>
+    <updated>2026-10-06T14:47:48.571119+00:00</updated>
+    <link href="https://www.heise.de/news/Android-Patchday-Google-stopft-diverse-Rechteausweitungsluecken-11477435.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · multiple&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Google's October Android security patch addresses over 25 vulnerabilities, including seven rated as critical severity. The patches cover multiple components across the Android framework and appear to address remote code execution and privilege escalation risks. Exploitation in the wild is not specified in available details. All Android device owners should apply the October security patches immediately, with priority given to devices with critical-rated CVEs.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.heise.de/news/Android-Patchday-Google-stopft-diverse-Rechteausweitungsluecken-11477435.html"&gt;Read more&lt;/a&gt; · Source: heise-security&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Capacitor Android and iOS: remote content can be loaded at the app origin via the internal HTTP proxy path (CVE-2026-103922)</title>
     <id>urn:cybersecnews:item:491</id>
@@ -173,7 +200,7 @@
     <updated>2026-10-01T20:50:35.031767+00:00</updated>
     <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-104286" rel="alternate" />
     <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · path-traversal · CVE-2026-104286&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Fortinet FortiMail is vulnerable to CVE-2026-104286, a path traversal and NULL byte improper neutralization flaw allowing unauthenticated attackers to write arbitrary files via crafted HTTP/HTTPS requests. This vulnerability is actively exploited in the wild and carries high severity. Apply vendor-supplied mitigations immediately per CISA BOD 26-04 guidance; discontinue use if patches are unavailable. Conduct forensics triage on affected systems per CISA requirements and prioritize patching based on internet exposure assessment.&lt;/p&gt;&lt;p&gt;&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2026-104286"&gt;Read more&lt;/a&gt; · Source: cisa-kev&lt;/p&gt;</content>
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · path-traversal · CVE-2026-104286, CVE-2026-21589&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Fortinet FortiMail is vulnerable to CVE-2026-104286, a path traversal and NULL byte improper neutralization flaw allowing unauthenticated attackers to write arbitrary files via crafted HTTP/HTTPS requests. This vulnerability is actively exploited in the wild and carries high severity. Apply vendor-supplied mitigations immediately per CISA BOD 26-04 guidance; discontinue use if patches are unavailable. Conduct forensics triage on affected systems per CISA requirements and prioritize patching based on internet exposure assessment.&lt;/p&gt;&lt;p&gt;&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2026-104286"&gt;Read more&lt;/a&gt; · Source: cisa-kev&lt;/p&gt;</content>
   </entry>
   <entry>
     <title>piscina: Prototype-pollution gadget in ThreadPool.options allows RCE via execArgv / loadBalancer / env (CVE-2026-102992)</title>
@@ -876,32 +903,5 @@
     <link href="https://thehackernews.com/2026/09/china-aligned-famoussparrow-deploys.html" rel="alternate" />
     <category term="red-team" />
     <content type="html">&lt;p&gt;&lt;em&gt;red-team · c2&lt;/em&gt;&lt;/p&gt;&lt;p&gt;China-aligned APT FamousSparrow is deploying a novel C++ modular backdoor called SparroWocky against Latin American targets since at least August 2025. SparroWocky provides remote access and command execution capabilities with modular functionality, enabling attackers to customize functionality post-compromise. No public information indicates active exploitation in broader campaigns beyond the observed regional targeting, though the backdoor's sophistication suggests state-sponsored development and intent for continued use. Organizations in Latin America should prioritize threat hunting for SparroWocky indicators of compromise, implement network segmentation to contain potential compromises, and maintain updated endpoint detection and response capabilities to identify C++ backdoor execution patterns.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/09/china-aligned-famoussparrow-deploys.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Critical Unbound DNSSEC Validator Flaw Could Allow RCE via a Malicious DNS Zone</title>
-    <id>urn:cybersecnews:item:394</id>
-    <published>2026-09-17T19:35:49.175965+00:00</published>
-    <updated>2026-09-17T19:35:49.175965+00:00</updated>
-    <link href="https://thehackernews.com/2026/09/critical-unbound-dnssec-validator-flaw.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · heap-overflow · CVE-2024-1642&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Unbound DNS resolver versions before 1.26.1 contain a critical heap overflow vulnerability (CVE-2026-81642) in the DNSSEC validator that allows remote code execution when an attacker controls a malicious DNS zone. An unauthenticated attacker can trigger the flaw by querying a vulnerable resolver, potentially gaining full system compromise. Immediate patching to version 1.26.1 or later is mandatory; consider implementing query rate limiting and network segmentation as temporary mitigations if immediate patching is not feasible. Monitor for any exploitation attempts targeting Unbound instances in your environment.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/09/critical-unbound-dnssec-validator-flaw.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Windows-Update sperrt Domain-Nutzer aus</title>
-    <id>urn:cybersecnews:item:393</id>
-    <published>2026-09-17T13:05:43.117604+00:00</published>
-    <updated>2026-09-17T13:05:43.117604+00:00</updated>
-    <link href="https://www.heise.de/news/Windows-Update-sperrt-Domain-Nutzer-aus-11456331.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Windows domain-joined systems are affected by a critical flaw introduced in September 2024 security updates that prevents domain user authentication and system logon. The vulnerability stems from improperly configured Group Policy or security certificate handling in the cumulative updates, causing legitimate domain users to be locked out of their machines. This issue has high severity due to widespread impact on enterprise environments and immediate operational disruption, though it is a regression rather than an actively exploited security vulnerability. Microsoft has released out-of-band patches to remediate the issue; administrators should immediately apply the corrective updates and consider reverting to previous update versions on affected systems while patches are deployed.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.heise.de/news/Windows-Update-sperrt-Domain-Nutzer-aus-11456331.html"&gt;Read more&lt;/a&gt; · Source: heise-security&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Credentials Are Still the Shortest Path In</title>
-    <id>urn:cybersecnews:item:392</id>
-    <published>2026-09-17T07:43:25.885208+00:00</published>
-    <updated>2026-09-17T07:43:25.885208+00:00</updated>
-    <link href="https://www.praetorian.com/blog/credential-testing-brutus/" rel="alternate" />
-    <category term="red-team" />
-    <content type="html">&lt;p&gt;&lt;em&gt;red-team · credential-testing&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Brutus is a credential testing and reuse engine that systematically validates compromised username/password pairs across multiple internal services and systems. The tool exploits common weaknesses including breach reuse, unchanged vendor defaults, and poor password hygiene rather than novel exploits, making it highly effective for initial compromise and lateral movement. This represents a critical severity threat actively exploited in the wild, as credential reuse remains one of the fastest paths to network access. Organizations should enforce unique complex passwords, implement multi-factor authentication across all systems, conduct regular breach monitoring, and maintain credential rotation policies for vendor defaults and service accounts.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.praetorian.com/blog/credential-testing-brutus/"&gt;Read more&lt;/a&gt; · Source: praetorian&lt;/p&gt;</content>
   </entry>
 </feed>
