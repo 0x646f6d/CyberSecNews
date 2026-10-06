@@ -3,7 +3,61 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-10-06T14:47:48.573822+00:00</updated>
+  <updated>2026-10-06T20:49:46.733452+00:00</updated>
+  <entry>
+    <title>More RMM Tools In the Wild, (Tue, Oct 6th)</title>
+    <id>urn:cybersecnews:item:500</id>
+    <published>2026-10-06T20:49:46.733452+00:00</published>
+    <updated>2026-10-06T20:49:46.733452+00:00</updated>
+    <link href="https://isc.sans.edu/diary/rss/33400" rel="alternate" />
+    <category term="red-team" />
+    <content type="html">&lt;p&gt;&lt;em&gt;red-team · c2&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Multiple Remote Management and Monitoring (RMM) tools are being actively abused by threat actors in the wild as part of an expanding trend. ScreenConnect and other RMM platforms are being leveraged for unauthorized remote access and control of victim systems. These tools pose a high severity risk due to their legitimate functionality being weaponized for lateral movement, data exfiltration, and persistence. Organizations should implement strict access controls on RMM tools, restrict outbound connections, deploy detection signatures for suspicious RMM activity, and maintain current patches for all RMM software deployed in their environments.&lt;/p&gt;&lt;p&gt;&lt;a href="https://isc.sans.edu/diary/rss/33400"&gt;Read more&lt;/a&gt; · Source: sans-isc&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>MsQuic: Improper Certificate Validation in Microsoft.Native.Quic.MsQuic.OpenSSL (CVE-2026-105794)</title>
+    <id>urn:cybersecnews:item:499</id>
+    <published>2026-10-06T20:49:46.732306+00:00</published>
+    <updated>2026-10-06T20:49:46.732306+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-w5f4-fx9m-m4q7" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-105794&lt;/em&gt;&lt;/p&gt;&lt;p&gt;MsQuic's OpenSSL and QuicTLS backends contain improper TLS hostname verification (CVE-2026-105794), allowing on-path attackers to perform MITM attacks by presenting mismatched certificates. This critical vulnerability affects Microsoft.Native.Quic.MsQuic.OpenSSL on NuGet; the Schannel backend is unaffected. Immediate patching to versions 2.6.1, 2.5.11, or 2.4.20 is required for all systems using OpenSSL/QuicTLS backends. No active exploitation in the wild is indicated, but given the critical severity and ease of exploitation, patching should be prioritized.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-w5f4-fx9m-m4q7"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Payload: SQL Injection in SQLite and Postgres (CVE-2026-105845)</title>
+    <id>urn:cybersecnews:item:498</id>
+    <published>2026-10-06T20:49:46.730221+00:00</published>
+    <updated>2026-10-06T20:49:46.730221+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-v49j-62m6-pgrr" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · sqli · CVE-2026-105845&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Payload CMS versions prior to 3.88.0 or 4.0.0-canary.27 contain a critical SQL injection vulnerability in SQLite and Postgres implementations when processing dynamic filters or joins on readable collections. Untrusted users can exploit this to execute arbitrary SQL queries, though MongoDB deployments are unaffected. Immediate upgrade to the patched versions is required; no workarounds are available as a substitute for patching.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-v49j-62m6-pgrr"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Payload: Prototype pollution in Payload Import Export plugin (CVE-2026-105844)</title>
+    <id>urn:cybersecnews:item:497</id>
+    <published>2026-10-06T20:49:46.729322+00:00</published>
+    <updated>2026-10-06T20:49:46.729322+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-qf28-8hc6-vwrp" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · prototype-pollution · CVE-2026-105844&lt;/em&gt;&lt;/p&gt;&lt;p&gt;The Payload CMS Import Export plugin (all versions prior to 3.88.0 or 4.0.0-canary.27) contains a prototype pollution vulnerability enabling unauthenticated remote code execution. An attacker can exploit this flaw to inject malicious code into the application's prototype chain when the plugin is enabled. Severity is critical with potential for active exploitation. Immediately upgrade to patched versions 3.88.0, 4.0.0-canary.27 or later; if immediate patching is unavailable, disable the Import Export plugin or restrict endpoint access via firewall or authentication controls.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-qf28-8hc6-vwrp"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Payload: Field access control bypass on auth collections (CVE-2026-105851)</title>
+    <id>urn:cybersecnews:item:496</id>
+    <published>2026-10-06T20:49:46.728604+00:00</published>
+    <updated>2026-10-06T20:49:46.728604+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-vc4h-q48j-5hcx" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-105851&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Payload CMS versions prior to 3.90.0 and 4.0.0-canary.34 contain a critical field access control bypass in the duplicate operation that copies field values regardless of `access.read` or `access.create` restrictions, even when fields are marked as hidden or the `disableDuplicate` setting is enabled. This vulnerability allows attackers to access sensitive data from auth collections that should be protected by access control rules. Users must immediately upgrade to Payload &gt;= 3.90.0 or &gt;= 4.0.0-canary.34; as a temporary workaround, implement beforeDuplicate field hooks to clear or reset sensitive field values.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-vc4h-q48j-5hcx"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Hackers exploit 32 zero-days on first day of Pwn2Own Ireland</title>
+    <id>urn:cybersecnews:item:495</id>
+    <published>2026-10-06T20:49:46.726829+00:00</published>
+    <updated>2026-10-06T20:49:46.726829+00:00</updated>
+    <link href="https://www.bleepingcomputer.com/news/security/hackers-exploit-32-zero-days-on-first-day-of-pwn2own-ireland/" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · multiple&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Security researchers exploited 32 zero-day vulnerabilities across multiple Samsung and other target systems during Pwn2Own Ireland 2026's first day, demonstrating critical weaknesses in current mobile device security. The exploits targeted the Samsung Galaxy S26 and additional platforms, with researchers successfully compromising devices through previously unknown attack vectors to earn substantial prize money ($388,500). These zero-days represent high-severity vulnerabilities not yet disclosed to vendors or the public, indicating active exploitation potential once details emerge. Affected vendors should prepare emergency patches immediately upon responsible disclosure from event organizers, and users should monitor security bulletins from Samsung and other impacted companies for urgent updates.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/hackers-exploit-32-zero-days-on-first-day-of-pwn2own-ireland/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>shell-quote: `quote()` command injection via a line terminator in a token after a `{ comment }` token (CVE-2026-102422)</title>
     <id>urn:cybersecnews:item:494</id>
@@ -849,59 +903,5 @@
     <link href="https://github.com/advisories/GHSA-g4c3-4g96-6g4m" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-45140, CVE-2026-58138&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Chamilo LMS versions prior to patching contain an unauthenticated remote code execution vulnerability in the CStudio upload flow (CVE-2026-45140). An attacker can upload and execute arbitrary code on the server without authentication, achieving complete system compromise. This critical vulnerability is likely to be exploited in the wild given its ease of exploitation and lack of authentication requirement. Immediately update Chamilo LMS to the latest patched version and review server logs for signs of exploitation or suspicious file uploads.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-g4c3-4g96-6g4m"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>CakePHP: Multiple methods in FunctionsBuilder vulnerable to SQL injection (CVE-2026-79752)</title>
-    <id>urn:cybersecnews:item:400</id>
-    <published>2026-09-18T03:27:19.408912+00:00</published>
-    <updated>2026-09-18T03:27:19.408912+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-vjqc-q4mp-2rvf" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · sqli · CVE-2026-79752&lt;/em&gt;&lt;/p&gt;&lt;p&gt;CakePHP versions prior to 5.3.7, 5.2.14, 5.1.9, 4.6.5, and 4.5.12 contain critical SQL injection vulnerabilities in FunctionsBuilder methods (cast, extract, datePart, dateAdd) when user-controlled data is passed to the $dataType, $part, or $unit parameters. This vulnerability allows attackers to execute arbitrary SQL commands if applications pass unsanitized user input to these methods. Patch immediately to the fixed versions listed; as a temporary workaround, avoid passing user-controlled data directly to these vulnerable parameters and validate/sanitize all inputs before use.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-vjqc-q4mp-2rvf"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Grav: Blueprint dynamic-data bare-function branch is denylist-gated and omits error_log, giving arbitrary file write (CVE-2026-75827)</title>
-    <id>urn:cybersecnews:item:399</id>
-    <published>2026-09-18T03:27:19.403195+00:00</published>
-    <updated>2026-09-18T03:27:19.403195+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-f8wv-xp27-6gq7" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · arbitrary-file-write · CVE-2026-75827&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Grav CMS versions up to 2.0.13 contain a critical arbitrary file write vulnerability (CVE-2026-75827) in the Blueprint dynamic-data provider that uses inadequate denylist validation in the `isSafeDynamicCall()` function, allowing attackers to bypass restrictions and invoke arbitrary PHP functions like `file_put_contents`. The vulnerability affects both `Blueprint.php` and `FlexDirectory.php` components; while class method calls use a strict allowlist, bare-function calls rely on a weaker denylist that omits critical functions like `error_log`. This vulnerability is exploitable and likely active in production environments given the ease of bypass. Immediate patching to a version implementing strict allowlist validation for all dynamic function calls is required; as a temporary mitigation, restrict access to Blueprint configuration endpoints and disable dynamic-data providers if not essential.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-f8wv-xp27-6gq7"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Vendure affected by external-authentication account takeover: external login linked to a pre-existing account by email without verification (CVE-2026-63472)</title>
-    <id>urn:cybersecnews:item:398</id>
-    <published>2026-09-17T19:35:49.181213+00:00</published>
-    <updated>2026-09-17T19:35:49.181213+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-6j36-r6pr-59x4" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · account-takeover · CVE-2026-63472, CVE-2026-92161&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Vendure @vendure/core is affected by a critical account takeover vulnerability (CVE-2026-63472) in deployments using external/social authentication strategies. The flaw allows attackers to link external login credentials to pre-existing accounts by email address without requiring email verification from the external provider, enabling unauthorized account access. This vulnerability only impacts installations using third-party authentication methods (not the built-in email/password strategy) where the provider returns unverified email addresses. Immediate patching is required for all Vendure deployments using external authentication; verify that your authentication strategy validates email ownership before account linking.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-6j36-r6pr-59x4"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>RabbitMQ amqp091-go: Missing Explicit TLS Minimum Version Configuration In URI Parser (CVE-2026-77405)</title>
-    <id>urn:cybersecnews:item:397</id>
-    <published>2026-09-17T19:35:49.180037+00:00</published>
-    <updated>2026-09-17T19:35:49.180037+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-33mj-cw25-m34h" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · weak-tls-config · CVE-2026-77405&lt;/em&gt;&lt;/p&gt;&lt;p&gt;The RabbitMQ amqp091-go library contains a critical vulnerability (CVE-2026-77405) in its TLS configuration parser that fails to explicitly set a minimum TLS version when processing amqps:// URIs, instead relying on implicit Go compiler defaults that could allow downgrade attacks to older TLS versions if compilation conditions change. The vulnerability affects the tlsConfigFromURI function and could enable attackers to force legacy TLS versions during connection negotiation. Users should immediately update to a patched version of amqp091-go that explicitly sets MinVersion to TLS 1.2 or higher in the TLS configuration, regardless of Go toolchain version. There is no indication of active exploitation, but the critical severity rating warrants urgent patching given the potential for man-in-the-middle attacks via TLS downgrade.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-33mj-cw25-m34h"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>RabbitMQ amqp091-go: Protocol Desynchronization and Frame Injection via Integer Overflow in readLongstr (CVE-2026-77411)</title>
-    <id>urn:cybersecnews:item:396</id>
-    <published>2026-09-17T19:35:49.179029+00:00</published>
-    <updated>2026-09-17T19:35:49.179029+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-c5pq-fr2g-9jpf" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · protocol-desynchronization · CVE-2026-77411&lt;/em&gt;&lt;/p&gt;&lt;p&gt;RabbitMQ's amqp091-go library contains a critical integer overflow vulnerability in the readLongstr function that allows protocol desynchronization and frame injection attacks. When a malformed AMQP message specifies a long string length exceeding 2^31-1 bytes, the parser fails to consume the expected data from the network buffer while returning success, causing subsequent frames to be misinterpreted. This vulnerability is critical in severity and enables attackers to inject arbitrary frames or cause denial of service in AMQP connections. Users should immediately update to a patched version of amqp091-go; the recommended action is to apply the latest security release from the RabbitMQ project.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-c5pq-fr2g-9jpf"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>China-Aligned FamousSparrow Deploys SparroWocky Backdoor Across Latin America</title>
-    <id>urn:cybersecnews:item:395</id>
-    <published>2026-09-17T19:35:49.177967+00:00</published>
-    <updated>2026-09-17T19:35:49.177967+00:00</updated>
-    <link href="https://thehackernews.com/2026/09/china-aligned-famoussparrow-deploys.html" rel="alternate" />
-    <category term="red-team" />
-    <content type="html">&lt;p&gt;&lt;em&gt;red-team · c2&lt;/em&gt;&lt;/p&gt;&lt;p&gt;China-aligned APT FamousSparrow is deploying a novel C++ modular backdoor called SparroWocky against Latin American targets since at least August 2025. SparroWocky provides remote access and command execution capabilities with modular functionality, enabling attackers to customize functionality post-compromise. No public information indicates active exploitation in broader campaigns beyond the observed regional targeting, though the backdoor's sophistication suggests state-sponsored development and intent for continued use. Organizations in Latin America should prioritize threat hunting for SparroWocky indicators of compromise, implement network segmentation to contain potential compromises, and maintain updated endpoint detection and response capabilities to identify C++ backdoor execution patterns.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/09/china-aligned-famoussparrow-deploys.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
   </entry>
 </feed>
