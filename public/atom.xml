@@ -3,7 +3,16 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-10-06T20:49:46.733452+00:00</updated>
+  <updated>2026-10-07T04:35:29.169074+00:00</updated>
+  <entry>
+    <title>Ninja Forms plugin flaw exploited to hack WordPress sites</title>
+    <id>urn:cybersecnews:item:501</id>
+    <published>2026-10-07T04:35:29.169074+00:00</published>
+    <updated>2026-10-07T04:35:29.169074+00:00</updated>
+    <link href="https://www.bleepingcomputer.com/news/security/ninja-forms-plugin-flaw-exploited-to-hack-wordpress-sites/" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · stored-xss&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Ninja Forms and WPC Product Bundles for WooCommerce WordPress plugins contain stored XSS vulnerabilities being actively exploited in the wild to install backdoors and create unauthorized administrator accounts. The flaws allow authenticated or unauthenticated attackers to inject malicious scripts that execute in admin contexts, enabling full site compromise. Severity is critical given the demonstrated active exploitation and ease of account creation. Affected site operators should immediately update both plugins to patched versions and audit user accounts and installed plugins for signs of compromise.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/ninja-forms-plugin-flaw-exploited-to-hack-wordpress-sites/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>More RMM Tools In the Wild, (Tue, Oct 6th)</title>
     <id>urn:cybersecnews:item:500</id>
@@ -894,14 +903,5 @@
     <link href="https://www.heise.de/news/Atlassian-Angreifer-koennen-Confluence-Data-Center-ausspionieren-11458267.html" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · information-disclosure&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Atlassian released security patches addressing multiple vulnerabilities across its products including Confluence Data Center, Bitbucket, and Jira. The vulnerabilities enable attackers to conduct reconnaissance and espionage activities against affected installations. Severity levels vary by product and vulnerability type, with some impacting authenticated and unauthenticated users; exploitation in the wild has been observed for certain issues. Administrators should immediately apply all available security patches and prioritize updates based on Atlassian's severity ratings and your organization's exposure to internet-facing instances.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.heise.de/news/Atlassian-Angreifer-koennen-Confluence-Data-Center-ausspionieren-11458267.html"&gt;Read more&lt;/a&gt; · Source: heise-security&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Chamilo LMS CStudio upload flow allows unauthenticated remote code execution (CVE-2026-45140)</title>
-    <id>urn:cybersecnews:item:401</id>
-    <published>2026-09-18T03:27:19.414319+00:00</published>
-    <updated>2026-09-18T03:27:19.414319+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-g4c3-4g96-6g4m" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-45140, CVE-2026-58138&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Chamilo LMS versions prior to patching contain an unauthenticated remote code execution vulnerability in the CStudio upload flow (CVE-2026-45140). An attacker can upload and execute arbitrary code on the server without authentication, achieving complete system compromise. This critical vulnerability is likely to be exploited in the wild given its ease of exploitation and lack of authentication requirement. Immediately update Chamilo LMS to the latest patched version and review server logs for signs of exploitation or suspicious file uploads.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-g4c3-4g96-6g4m"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
   </entry>
 </feed>
