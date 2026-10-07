@@ -3,7 +3,79 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-10-07T04:35:29.169074+00:00</updated>
+  <updated>2026-10-07T21:03:27.878912+00:00</updated>
+  <entry>
+    <title>Homer: Complete Authentication Bypass When coordinator.jwt.secret Is Empty (Default) (CVE-2026-62253)</title>
+    <id>urn:cybersecnews:item:509</id>
+    <published>2026-10-07T21:03:27.878912+00:00</published>
+    <updated>2026-10-07T21:03:27.878912+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-rqcc-94gv-wjm9" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-62253&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Homer API authentication bypass in coordinator JWT middleware (CVE-2026-62253) allows complete unauthenticated access to protected endpoints under `/api/v1`, `/api/v3`, and `/api/v4` when the default empty `coordinator.jwt.secret` configuration is used. The vulnerability exists in `JWTMiddleware` and `JWTMiddlewareV4` functions which immediately return without validation when jwt secret is empty. This is a critical severity issue affecting default installations with no evidence of active wild exploitation noted. Immediately configure a non-empty `coordinator.jwt.secret` value in production deployments and apply patches when available from the Homer project.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-rqcc-94gv-wjm9"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Homer: Hardcoded Default Admin Password 'sipcapture' With No Forced Change on First Login (CVE-2026-62252)</title>
+    <id>urn:cybersecnews:item:508</id>
+    <published>2026-10-07T21:03:27.874563+00:00</published>
+    <updated>2026-10-07T21:03:27.874563+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-6xp5-7rcx-xfgx" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · hardcoded-credentials · CVE-2026-62252&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Homer's internal authentication bootstrap creates an admin account with hardcoded default password 'sipcapture' with no forced password change on first login, allowing immediate full administrative compromise of any fresh deployment. This critical vulnerability (CVE-2026-62252) affects the go/github.com/sipcapture/homer-app package across all fresh installations using internal authentication. There is no indication of current exploitation in the wild, but the ease of access makes this highly likely to be leveraged. Immediately change the default admin password upon deployment, implement forced password change on first login, and consider generating randomized initial credentials during bootstrap rather than using hardcoded defaults.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-6xp5-7rcx-xfgx"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Quasar Framework: Stored/Reflected XSS via unescaped SSR meta tag rendering in getHead() (CVE-2026-106102)</title>
+    <id>urn:cybersecnews:item:507</id>
+    <published>2026-10-07T21:03:27.869901+00:00</published>
+    <updated>2026-10-07T21:03:27.869901+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-pq96-jpmf-w254" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · xss · CVE-2026-106102&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Quasar Framework versions prior to patch contain stored/reflected XSS vulnerabilities in the `useMeta()` composable where user-supplied metadata is rendered unescaped in server-side rendering (SSR) meta tag output via the `getHead()` function. An attacker can inject malicious JavaScript through meta tag properties that execute in victims' browsers during page load. This is critical severity and exploitation likelihood is high given the public-facing nature of meta tag inputs in typical web applications. Apply the latest Quasar Framework security patch immediately; if unavailable, sanitize all user-controlled data passed to `useMeta()` before rendering and implement Content Security Policy headers as interim mitigation.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-pq96-jpmf-w254"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Flowise Prompt Injection to RCE and SSRF via CSV/Airtable Agent Python Validator Bypass (CVE-2026-73487)</title>
+    <id>urn:cybersecnews:item:506</id>
+    <published>2026-10-07T21:03:27.866137+00:00</published>
+    <updated>2026-10-07T21:03:27.866137+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-w7x8-q2gp-5cgg" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · prompt-injection,rce,ssrf · CVE-2026-73487&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Flowise &lt;= 3.1.2 CSV Agent and Airtable Agent nodes are vulnerable to prompt injection leading to remote code execution and SSRF via inadequate Python code validation. An attacker can bypass the regex-based sanitizer through structural manipulation to execute arbitrary Python code in Pyodide, exfiltrate data, and probe internal services—exploitable through the unauthenticated prediction API. This is critical severity; no indication of active wild exploitation noted in advisory. Immediately upgrade to patched version &gt; 3.1.2 and consider restricting access to the prediction API or requiring authentication.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-w7x8-q2gp-5cgg"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Backstage: Sensitive information exposure in Scaffolder (CVE-2026-106501)</title>
+    <id>urn:cybersecnews:item:505</id>
+    <published>2026-10-07T21:03:27.863471+00:00</published>
+    <updated>2026-10-07T21:03:27.863471+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-g2v8-7jhw-pp8p" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · information-disclosure · CVE-2026-106501&lt;/em&gt;&lt;/p&gt;&lt;p&gt;CVE-2026-106501 affects Backstage npm/@backstage/plugin-scaffolder-backend, where authenticated users can read other users' Scaffolder tasks and expose internal execution data including external service credentials. This critical vulnerability allows unauthorized disclosure and potential service compromise in deployments storing credentials in task data. Patch to version 4.1.0 or apply workarounds by restricting task read permissions to task owners via the `scaffolder.task.read` policy. No public exploitation reports available at time of advisory.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-g2v8-7jhw-pp8p"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Langflow: OS command injection (RCE) via arbitrary command in MCP stdio server configuration (CVE-2026-105697)</title>
+    <id>urn:cybersecnews:item:504</id>
+    <published>2026-10-07T21:03:27.860668+00:00</published>
+    <updated>2026-10-07T21:03:27.860668+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-w794-rj3p-xv45" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-105697&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Langflow versions before 1.10.3 are vulnerable to OS command injection (CVE-2026-105697) via the MCP stdio server configuration, where arbitrary shell commands can be executed without validation or allowlisting. Any user with access to MCP server settings or the MCP Tools component can inject malicious commands that run with the application's privileges, achieving remote code execution. This vulnerability is critical in severity and exploitable by authenticated users. Upgrade to Langflow 1.10.3 or later immediately; restrict access to MCP server configuration settings as an interim mitigation.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-w794-rj3p-xv45"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>FBI Warns FortiBleed Remains Active After Amassing 86,644 Fortinet Device Credentials</title>
+    <id>urn:cybersecnews:item:503</id>
+    <published>2026-10-07T21:03:27.857454+00:00</published>
+    <updated>2026-10-07T21:03:27.857454+00:00</updated>
+    <link href="https://thehackernews.com/2026/10/fbi-warns-fortibleed-remains-active.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · credential-harvesting&lt;/em&gt;&lt;/p&gt;&lt;p&gt;FortiBleed targets Fortinet FortiGate firewalls and SSL VPN gateways through exploitation of reused/leaked credentials and legacy SHA-256 password hashing vulnerabilities. The FBI and Secret Service report the campaign remains actively harvesting credentials with 86,644 Fortinet device credentials already compromised. This represents significant operational risk for organizations running vulnerable FortiGate infrastructure. Immediate actions required: patch to current FortiOS versions, implement credential rotation for affected systems, enforce MFA on administrative access, and apply network segmentation to limit VPN gateway exposure.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/fbi-warns-fortibleed-remains-active.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>SonicWall Patches CVSS 10.0 Pre-Authentication SSRF Flaw in SMA1000 Appliances</title>
+    <id>urn:cybersecnews:item:502</id>
+    <published>2026-10-07T21:03:27.854767+00:00</published>
+    <updated>2026-10-07T21:03:27.854767+00:00</updated>
+    <link href="https://thehackernews.com/2026/10/sonicwall-patches-cvss-100-pre.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · ssrf&lt;/em&gt;&lt;/p&gt;&lt;p&gt;SonicWall SMA1000 appliances contain a critical pre-authentication server-side request forgery (SSRF) vulnerability rated CVSS 10.0 that allows unauthenticated attackers to send arbitrary requests through the appliance to reach internal functions. The flaw affects remote access gateways used to provide workers access to corporate networks and applications. SonicWall reports no evidence of active exploitation in the wild at this time. Apply the released hotfixes immediately given the maximum severity rating and lack of authentication requirement.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/sonicwall-patches-cvss-100-pre.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Ninja Forms plugin flaw exploited to hack WordPress sites</title>
     <id>urn:cybersecnews:item:501</id>
@@ -56,7 +128,7 @@
     <updated>2026-10-06T20:49:46.728604+00:00</updated>
     <link href="https://github.com/advisories/GHSA-vc4h-q48j-5hcx" rel="alternate" />
     <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-105851&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Payload CMS versions prior to 3.90.0 and 4.0.0-canary.34 contain a critical field access control bypass in the duplicate operation that copies field values regardless of `access.read` or `access.create` restrictions, even when fields are marked as hidden or the `disableDuplicate` setting is enabled. This vulnerability allows attackers to access sensitive data from auth collections that should be protected by access control rules. Users must immediately upgrade to Payload &gt;= 3.90.0 or &gt;= 4.0.0-canary.34; as a temporary workaround, implement beforeDuplicate field hooks to clear or reset sensitive field values.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-vc4h-q48j-5hcx"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-105851, CVE-2026-105857, CVE-2026-105859, CVE-2026-105863&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Payload CMS versions prior to 3.90.0 and 4.0.0-canary.34 contain a critical field access control bypass in the duplicate operation that copies field values regardless of `access.read` or `access.create` restrictions, even when fields are marked as hidden or the `disableDuplicate` setting is enabled. This vulnerability allows attackers to access sensitive data from auth collections that should be protected by access control rules. Users must immediately upgrade to Payload &gt;= 3.90.0 or &gt;= 4.0.0-canary.34; as a temporary workaround, implement beforeDuplicate field hooks to clear or reset sensitive field values.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-vc4h-q48j-5hcx"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
   </entry>
   <entry>
     <title>Hackers exploit 32 zero-days on first day of Pwn2Own Ireland</title>
@@ -218,7 +290,7 @@
     <updated>2026-10-01T20:50:35.038954+00:00</updated>
     <link href="https://github.com/advisories/GHSA-8hr7-r645-pc6w" rel="alternate" />
     <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-92935, CVE-2026-92947, CVE-2026-92953, CVE-2026-92954, CVE-2026-92955&lt;/em&gt;&lt;/p&gt;&lt;p&gt;vm2 NodeVM is vulnerable to a nesting guard bypass (CVE-2026-92935) where passing an array for the require parameter bypasses type checking, allowing attackers to execute arbitrary code on the host system with critical severity. The vulnerability affects versions of vm2 where `typeof requireOpts === 'object'` accepts arrays, which then destructure to undefined and permit nesting execution. This is exploitable in the wild when downstream NodeVM instances are configured with `nesting: true` and untrusted code execution. Patch immediately by updating vm2 to a patched version and add strict type validation for require configuration parameters.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-8hr7-r645-pc6w"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-73483, CVE-2026-92935, CVE-2026-92947, CVE-2026-92953, CVE-2026-92954, CVE-2026-92955, CVE-2026-93605&lt;/em&gt;&lt;/p&gt;&lt;p&gt;vm2 NodeVM is vulnerable to a nesting guard bypass (CVE-2026-92935) where passing an array for the require parameter bypasses type checking, allowing attackers to execute arbitrary code on the host system with critical severity. The vulnerability affects versions of vm2 where `typeof requireOpts === 'object'` accepts arrays, which then destructure to undefined and permit nesting execution. This is exploitable in the wild when downstream NodeVM instances are configured with `nesting: true` and untrusted code execution. Patch immediately by updating vm2 to a patched version and add strict type validation for require configuration parameters.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-8hr7-r645-pc6w"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
   </entry>
   <entry>
     <title>vm2: NodeVM node:-prefixed negative builtin deny bypass exposes child_process (CVE-2026-92957)</title>
@@ -831,77 +903,5 @@
     <link href="https://github.com/advisories/GHSA-xcw4-53cc-hv32" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-59163&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Mnemosyne sync server (pip/mnemosyne-memory) contains a critical JWT signature verification bypass in its authentication mechanism. The server decodes JWT bearer tokens but fails to verify HMAC-SHA256 signatures, allowing unauthenticated attackers to forge valid tokens and impersonate any user to read or modify sync data. This vulnerability (CVE-2026-59163, CVSS 9.1) is likely exploitable in the wild given its simplicity and network-accessible nature. Immediately patch to a version implementing proper JWT signature verification; for non-networked deployments, severity may be reduced to High.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-xcw4-53cc-hv32"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Linux Kernel: Linux Kernel Race Condition Vulnerability (CVE-2025-39964)</title>
-    <id>urn:cybersecnews:item:409</id>
-    <published>2026-09-18T18:56:22.903747+00:00</published>
-    <updated>2026-09-18T18:56:22.903747+00:00</updated>
-    <link href="https://nvd.nist.gov/vuln/detail/CVE-2025-39964" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · race-condition · CVE-2025-39682, CVE-2025-39964&lt;/em&gt;&lt;/p&gt;&lt;p&gt;CVE-2025-39964 affects the Linux Kernel's AF_ALG socket implementation, where concurrent writes cause data interleaving and internal state corruption due to a race condition. This vulnerability is actively exploited in the wild and carries high severity given its kernel-level impact and active exploitation status. Immediate patching is mandatory per CISA BOD 26-04 guidance; apply vendor-supplied patches as soon as available or implement mitigations if patches are unavailable. Organizations without available mitigations should consider discontinuing use of affected systems and evaluate internet exposure to prioritize remediation.&lt;/p&gt;&lt;p&gt;&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2025-39964"&gt;Read more&lt;/a&gt; · Source: cisa-kev&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Gyazo server flaw exploited to steal 23.6 million user records</title>
-    <id>urn:cybersecnews:item:408</id>
-    <published>2026-09-18T18:56:22.897605+00:00</published>
-    <updated>2026-09-18T18:56:22.897605+00:00</updated>
-    <link href="https://www.bleepingcomputer.com/news/security/gyazo-server-flaw-exploited-to-steal-236-million-user-records/" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · server-vuln&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Gyazo image-sharing platform suffered a confirmed data breach affecting 23.6 million user records through exploitation of an unpatched server vulnerability. The flaw allowed unauthenticated remote access to user data, demonstrating active exploitation in the wild. This is a critical severity incident with confirmed malicious activity. Users should immediately change passwords, enable two-factor authentication if available, and monitor accounts for suspicious activity; Gyazo should deploy patches immediately and conduct forensic analysis to determine exposure scope and timeline.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/gyazo-server-flaw-exploited-to-steal-236-million-user-records/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Plugin4Shell Lets Repository Owners Swap Pinned Plugin Code Across Four AI Coding Agents</title>
-    <id>urn:cybersecnews:item:407</id>
-    <published>2026-09-18T18:56:22.885349+00:00</published>
-    <updated>2026-09-18T18:56:22.885349+00:00</updated>
-    <link href="https://thehackernews.com/2026/09/plugin4shell-lets-repository-owners.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · plugin-hijacking&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Four AI coding agents (Claude, OpenAI Codex, GitHub Copilot, and Cursor) are vulnerable to Plugin4Shell, which allows repository owners to swap pinned plugin code with malicious versions despite version locks. The vulnerability bypasses security controls intended to prevent code substitution and affects plugin installation mechanisms across these tools. This is high-severity as it enables supply chain attacks on developers using these agents, with active exploitation possible given repository owner access requirements. Affected users should update to patched versions (Claude Code 2.1.179, OpenAI Codex 0.146.0, and equivalents for other agents) and review plugin repository access controls.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/09/plugin4shell-lets-repository-owners.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Microsoft Patches CVSS 10.0 Azure AI Foundry Flaw Enabling Unauthorized Privilege Escalation</title>
-    <id>urn:cybersecnews:item:406</id>
-    <published>2026-09-18T18:56:22.880898+00:00</published>
-    <updated>2026-09-18T18:56:22.880898+00:00</updated>
-    <link href="https://thehackernews.com/2026/09/microsoft-patches-cvss-100-azure-ai.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-85889&lt;/em&gt;&lt;/p&gt;&lt;p&gt;CVE-2026-85889 in Microsoft Azure AI Foundry involves missing authentication on a critical function, enabling remote privilege escalation without user interaction. The vulnerability carries a maximum CVSS score of 10.0 and poses immediate risk to affected deployments. No customer action is required as Microsoft has already released fixes; ensure Azure AI Foundry instances are updated to the latest patched version. Monitor for any indicators of exploitation targeting this authentication bypass.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/09/microsoft-patches-cvss-100-azure-ai.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>New WordPress Click2Shell Flaw Forces Theme Installs, Can Chain to Code Execution</title>
-    <id>urn:cybersecnews:item:405</id>
-    <published>2026-09-18T18:56:22.727651+00:00</published>
-    <updated>2026-09-18T18:56:22.727651+00:00</updated>
-    <link href="https://thehackernews.com/2026/09/new-wordpress-click2shell-flaw-forces.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · csrf,privilege-escalation,rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;WordPress core contains a critical vulnerability allowing unauthenticated attackers to force theme installations via crafted links when clicked by logged-in administrators, part of the Click2Shell attack chain that can escalate to remote code execution. The flaw exploits insufficient validation in the theme installation mechanism and poses high severity risk given the administrative context required and chainable nature to RCE. No indication of active exploitation in the wild at this time. Administrators should immediately apply the latest WordPress security patches and consider restricting theme installation capabilities to trusted users only.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/09/new-wordpress-click2shell-flaw-forces.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>New Check Point flaw lets hackers execute code with root privileges</title>
-    <id>urn:cybersecnews:item:404</id>
-    <published>2026-09-18T12:45:28.392032+00:00</published>
-    <updated>2026-09-18T12:45:28.392032+00:00</updated>
-    <link href="https://www.bleepingcomputer.com/news/security/check-point-warns-critical-flaw-lets-hackers-execute-code-as-root/" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-85102, CVE-2026-93616&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Check Point management systems are affected by a critical vulnerability enabling remote code execution with root privileges. The flaw allows unauthenticated attackers to execute arbitrary commands on affected systems. Check Point has released patches to address this issue; administrators should apply security updates immediately to all vulnerable management systems.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/check-point-warns-critical-flaw-lets-hackers-execute-code-as-root/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>WeaselBiscuit Stealer Spreads via 13 npm Packages to Harvest Chrome Extension Storage</title>
-    <id>urn:cybersecnews:item:403</id>
-    <published>2026-09-18T12:45:28.390315+00:00</published>
-    <updated>2026-09-18T12:45:28.390315+00:00</updated>
-    <link href="https://thehackernews.com/2026/09/weaselbiscuit-stealer-spreads-via-13.html" rel="alternate" />
-    <category term="red-team" />
-    <content type="html">&lt;p&gt;&lt;em&gt;red-team · supply-chain-malware&lt;/em&gt;&lt;/p&gt;&lt;p&gt;WeaselBiscuit stealer malware has been distributed through 13 compromised npm packages to harvest data from Chrome extension storage, representing a supply chain attack on JavaScript developers. The malware exhibits functional similarities to DPRK-attributed BeaverTail and Contagious Interview campaign tools, suggesting possible state-sponsored involvement. Severity is high given the stealer's capability to exfiltrate sensitive extension data and the broad reach of npm package distribution. Immediate actions include auditing npm dependencies for the affected packages, removing them, and reviewing Chrome extension permissions and stored data for unauthorized access.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/09/weaselbiscuit-stealer-spreads-via-13.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Atlassian: Angreifer können Confluence Data Center ausspionieren</title>
-    <id>urn:cybersecnews:item:402</id>
-    <published>2026-09-18T12:45:28.387804+00:00</published>
-    <updated>2026-09-18T12:45:28.387804+00:00</updated>
-    <link href="https://www.heise.de/news/Atlassian-Angreifer-koennen-Confluence-Data-Center-ausspionieren-11458267.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · information-disclosure&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Atlassian released security patches addressing multiple vulnerabilities across its products including Confluence Data Center, Bitbucket, and Jira. The vulnerabilities enable attackers to conduct reconnaissance and espionage activities against affected installations. Severity levels vary by product and vulnerability type, with some impacting authenticated and unauthenticated users; exploitation in the wild has been observed for certain issues. Administrators should immediately apply all available security patches and prioritize updates based on Atlassian's severity ratings and your organization's exposure to internet-facing instances.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.heise.de/news/Atlassian-Angreifer-koennen-Confluence-Data-Center-ausspionieren-11458267.html"&gt;Read more&lt;/a&gt; · Source: heise-security&lt;/p&gt;</content>
   </entry>
 </feed>
