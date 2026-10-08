@@ -3,7 +3,25 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-10-07T21:03:27.878912+00:00</updated>
+  <updated>2026-10-08T15:15:38.695526+00:00</updated>
+  <entry>
+    <title>Tensorlake npm Package Compromised to Deliver Shai-Hulud Credential-Stealing Worm</title>
+    <id>urn:cybersecnews:item:511</id>
+    <published>2026-10-08T15:15:38.695526+00:00</published>
+    <updated>2026-10-08T15:15:38.695526+00:00</updated>
+    <link href="https://thehackernews.com/2026/10/tensorlake-npm-package-compromised-to.html" rel="alternate" />
+    <category term="red-team" />
+    <content type="html">&lt;p&gt;&lt;em&gt;red-team · supply-chain-attack&lt;/em&gt;&lt;/p&gt;&lt;p&gt;The npm package "tensorlake" (versions including 0.5.144) was compromised to deliver the Shai-Hulud credential-stealing worm, which harvests developer credentials, exfiltrates secrets, establishes persistence, and executes remote commands. This represents a high-severity supply chain attack actively exploited in the wild as part of the ChainDrop campaign targeting software developers. Immediately remove the compromised package version and audit all systems where it was installed for credential compromise and unauthorized access. Regenerate any exposed credentials (API keys, tokens, SSH keys) and review logs for signs of remote code execution or data exfiltration.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/tensorlake-npm-package-compromised-to.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>16 Malicious Firefox Extensions Pose as Rabby and OKX Wallets to Steal Recovery Phrases</title>
+    <id>urn:cybersecnews:item:510</id>
+    <published>2026-10-08T15:15:38.693433+00:00</published>
+    <updated>2026-10-08T15:15:38.693433+00:00</updated>
+    <link href="https://thehackernews.com/2026/10/16-malicious-firefox-extensions-pose-as.html" rel="alternate" />
+    <category term="red-team" />
+    <content type="html">&lt;p&gt;&lt;em&gt;red-team · credential-theft&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Sixteen malicious Firefox extensions impersonating Rabby and OKX cryptocurrency wallets steal recovery phrases and private keys by intercepting data during wallet import processes. The extensions pose as legitimate wallet portals and browser tools to deceive users into installation. This threat is actively exploited in the wild with real cryptocurrency theft occurring. Users should immediately uninstall suspicious wallet extensions, verify authenticity through official sources only, and consider rotating compromised wallet credentials; Mozilla should accelerate removal from the Firefox add-on store.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/16-malicious-firefox-extensions-pose-as.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Homer: Complete Authentication Bypass When coordinator.jwt.secret Is Empty (Default) (CVE-2026-62253)</title>
     <id>urn:cybersecnews:item:509</id>
@@ -885,23 +903,5 @@
     <link href="https://github.com/advisories/GHSA-2vh9-42vm-xmv2" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2025-66455&lt;/em&gt;&lt;/p&gt;&lt;p&gt;LMDeploy's PyTorch DistServe disaggregation control plane is vulnerable to remote code execution via unsafe pickle deserialization in the `handle_zmq_recv` function (CVE-2025-66455). An attacker with network access to the affected DistServe API server can exploit the `/distserve/p2p_connect` endpoint to force the server to connect to a malicious peer and execute arbitrary code during message deserialization. This is a critical severity vulnerability that may be actively exploited. Apply the latest security patch immediately, restrict network access to DistServe API endpoints, and consider disabling disaggregation features until patched.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-2vh9-42vm-xmv2"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>AnyIO: TLSStream IDNA 2003 host name encoding enables potential TLS certificate spoofing (CVE-2026-63374)</title>
-    <id>urn:cybersecnews:item:411</id>
-    <published>2026-09-18T18:56:22.911475+00:00</published>
-    <updated>2026-09-18T18:56:22.911475+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-82r6-8w77-94w6" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · tls-certificate-spoofing · CVE-2026-63374&lt;/em&gt;&lt;/p&gt;&lt;p&gt;AnyIO's TLSStream implementation uses IDNA 2003 encoding for internationalized domain names in `connect_tcp()` and `TLSStream.wrap()`, which can be exploited for TLS certificate spoofing if an attacker redirects the connection. An attacker could obtain a legitimate certificate for the IDNA 2003-encoded hostname and present it to the client, causing validation to succeed. This is rated critical severity. Update to the patched version of AnyIO immediately, as the vulnerability affects certificate validation for non-ASCII domain names and could enable man-in-the-middle attacks on redirected connections.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-82r6-8w77-94w6"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Mnemosyne has JWT signature verification bypass sync server that allows authentication bypass (CVE-2026-59163)</title>
-    <id>urn:cybersecnews:item:410</id>
-    <published>2026-09-18T18:56:22.907432+00:00</published>
-    <updated>2026-09-18T18:56:22.907432+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-xcw4-53cc-hv32" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-59163&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Mnemosyne sync server (pip/mnemosyne-memory) contains a critical JWT signature verification bypass in its authentication mechanism. The server decodes JWT bearer tokens but fails to verify HMAC-SHA256 signatures, allowing unauthenticated attackers to forge valid tokens and impersonate any user to read or modify sync data. This vulnerability (CVE-2026-59163, CVSS 9.1) is likely exploitable in the wild given its simplicity and network-accessible nature. Immediately patch to a version implementing proper JWT signature verification; for non-networked deployments, severity may be reduced to High.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-xcw4-53cc-hv32"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
   </entry>
 </feed>
