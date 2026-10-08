@@ -3,7 +3,97 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-10-08T15:15:38.695526+00:00</updated>
+  <updated>2026-10-08T21:05:03.457291+00:00</updated>
+  <entry>
+    <title>AsyncHttpClient: Replay to a different host sends the original host request and credentials to the new host (CVE-2026-107282)</title>
+    <id>urn:cybersecnews:item:521</id>
+    <published>2026-10-08T21:05:03.457291+00:00</published>
+    <updated>2026-10-08T21:05:03.457291+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-jmqq-x5g9-9p2w" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · credential-leakage · CVE-2026-107282&lt;/em&gt;&lt;/p&gt;&lt;p&gt;AsyncHttpClient (org.asynchttpclient:async-http-client) contains a critical vulnerability where replayed requests to different hosts inadvertently send the original host's credentials and request data to the new host. This occurs through normal documented features including ResponseFilter failover patterns and IOException retry mechanisms, requiring no special attacker capabilities. The vulnerability has not been reported as exploited in the wild. Users should immediately update to a patched version when available; as a temporary mitigation, avoid using automatic replay/failover features that redirect to different hosts.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-jmqq-x5g9-9p2w"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Handlebars: JavaScript Injection via Own Property Check Bypass (CVE-2026-106445)</title>
+    <id>urn:cybersecnews:item:520</id>
+    <published>2026-10-08T21:05:03.456610+00:00</published>
+    <updated>2026-10-08T21:05:03.456610+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-p8wg-vrv2-v86f" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · prototype-pollution-rce · CVE-2026-106445&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Handlebars JavaScript template engine contains a critical prototype pollution vulnerability (CVE-2026-106445) allowing Remote Code Execution through the Function constructor bypass. When `allowProtoMethodsByDefault: true` is configured, attackers who control template input can inject arbitrary JavaScript by exploiting the `lookupProperty` function's trust of own properties on `Function.prototype.constructor`. This vulnerability is critical severity; immediate patching is required for all affected versions. Upgrade Handlebars to the latest patched version and disable `allowProtoMethodsByDefault` unless explicitly required, or implement strict template input validation.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-p8wg-vrv2-v86f"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Handlebars: JavaScript Injection via AST Type Confusion in compile (bypass of CVE-2026-33937) (CVE-2026-106446)</title>
+    <id>urn:cybersecnews:item:519</id>
+    <published>2026-10-08T21:05:03.455816+00:00</published>
+    <updated>2026-10-08T21:05:03.455816+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-8r5x-fm3f-whwj" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · code-injection · CVE-2026-106446&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Handlebars.compile() and Handlebars.precompile() functions are vulnerable to JavaScript injection via AST type confusion (CVE-2026-106446), bypassing previous mitigation CVE-2026-33937. The vulnerability allows attackers who can supply untrusted AST objects to inject arbitrary JavaScript code because the functions only validate specific node types while leaving others unchecked. This is critical severity and likely exploited given the prior CVE bypass. Update Handlebars to the latest patched version immediately, and avoid passing untrusted objects directly to compile/precompile functions; validate and sanitize all user-supplied AST input.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-8r5x-fm3f-whwj"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>ProFTPD ProFTPD: ProFTPD Improper Access Control Vulnerability (CVE-2015-3306)</title>
+    <id>urn:cybersecnews:item:518</id>
+    <published>2026-10-08T21:05:03.455041+00:00</published>
+    <updated>2026-10-08T21:05:03.455041+00:00</updated>
+    <link href="https://nvd.nist.gov/vuln/detail/CVE-2015-3306" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · improper-access-control · CVE-2015-3306&lt;/em&gt;&lt;/p&gt;&lt;p&gt;ProFTPD versions prior to 1.3.5 contain an improper access control vulnerability exploitable via the SITE CPFR and SITE CPTO commands, allowing unauthenticated remote attackers to read and write arbitrary files on affected systems. This vulnerability is actively exploited in the wild and carries high severity. Immediately apply vendor patches to ProFTPD 1.3.5 or later, prioritize remediation per CISA BOD 26-04 guidelines, and discontinue use if patches cannot be deployed. Conduct forensic triage on systems that cannot be patched immediately to assess exposure and potential compromise.&lt;/p&gt;&lt;p&gt;&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2015-3306"&gt;Read more&lt;/a&gt; · Source: cisa-kev&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>ONLYOFFICE Docs: ONLYOFFICE Docs Server Path Traversal Vulnerability (CVE-2021-3199)</title>
+    <id>urn:cybersecnews:item:517</id>
+    <published>2026-10-08T21:05:03.454365+00:00</published>
+    <updated>2026-10-08T21:05:03.454365+00:00</updated>
+    <link href="https://nvd.nist.gov/vuln/detail/CVE-2021-3199" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · path-traversal · CVE-2021-3199&lt;/em&gt;&lt;/p&gt;&lt;p&gt;ONLYOFFICE Docs Server contains a path traversal vulnerability (CVE-2021-3199) affecting JWT-authenticated image upload functionality, exploitable via /.. sequences in parameters to achieve remote code execution. This vulnerability is actively exploited in the wild and carries high severity. Apply vendor-supplied patches immediately per CISA BOD 26-04 guidance, or discontinue use if mitigations are unavailable; evaluate internet exposure for all affected instances and prioritize based on external accessibility.&lt;/p&gt;&lt;p&gt;&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2021-3199"&gt;Read more&lt;/a&gt; · Source: cisa-kev&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Strapi Strapi: Strapi Cleartext Storage of Sensitive Information Vulnerability (CVE-2023-22894)</title>
+    <id>urn:cybersecnews:item:516</id>
+    <published>2026-10-08T21:05:03.453620+00:00</published>
+    <updated>2026-10-08T21:05:03.453620+00:00</updated>
+    <link href="https://nvd.nist.gov/vuln/detail/CVE-2023-22894" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · cleartext-storage · CVE-2023-22894&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Strapi CMS versions prior to 3.6.8 and 4.x prior to 4.5.0 contain a cleartext storage vulnerability allowing authenticated admin panel users to extract sensitive information through query filters. This vulnerability is actively exploited in the wild and can be chained with CVE-2023-22621 to achieve remote code execution. Organizations should immediately patch to Strapi 3.6.8, 4.5.0 or later, or discontinue use of end-of-life versions; CISA BOD 26-04 prioritization applies.&lt;/p&gt;&lt;p&gt;&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2023-22894"&gt;Read more&lt;/a&gt; · Source: cisa-kev&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Apache Struts: Apache Struts Command Injection Vulnerability (CVE-2016-3081)</title>
+    <id>urn:cybersecnews:item:515</id>
+    <published>2026-10-08T21:05:03.452765+00:00</published>
+    <updated>2026-10-08T21:05:03.452765+00:00</updated>
+    <link href="https://nvd.nist.gov/vuln/detail/CVE-2016-3081" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2016-3081&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Apache Struts is vulnerable to remote command injection (CVE-2016-3081) when Dynamic Method Invocation is enabled, allowing unauthenticated attackers to execute arbitrary code via crafted method:prefix parameters. This vulnerability is actively exploited in the wild and carries critical severity. Immediately apply vendor patches or disable Dynamic Method Invocation; if mitigations are unavailable, discontinue use per CISA BOD 26-04 guidance. Prioritize patching for internet-exposed instances and conduct forensic triage on potentially compromised systems.&lt;/p&gt;&lt;p&gt;&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2016-3081"&gt;Read more&lt;/a&gt; · Source: cisa-kev&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>ISC BIND: ISC BIND Data Processing Errors Vulnerability (CVE-2015-5477)</title>
+    <id>urn:cybersecnews:item:514</id>
+    <published>2026-10-08T21:05:03.452064+00:00</published>
+    <updated>2026-10-08T21:05:03.452064+00:00</updated>
+    <link href="https://nvd.nist.gov/vuln/detail/CVE-2015-5477" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · denial-of-service · CVE-2015-5477&lt;/em&gt;&lt;/p&gt;&lt;p&gt;ISC BIND DNS resolver software is vulnerable to denial of service attacks via specially crafted TKEY queries due to improper data processing (CVE-2015-5477). This vulnerability is actively exploited in the wild and rated high severity. Organizations must immediately apply vendor patches following CISA BOD 26-04 prioritization guidance; cloud service users should implement available mitigations or discontinue use if patches are unavailable. Internet-exposed BIND instances should be prioritized for remediation.&lt;/p&gt;&lt;p&gt;&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2015-5477"&gt;Read more&lt;/a&gt; · Source: cisa-kev&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Cisco warns of critical flaws allowing Nexus switch takeover</title>
+    <id>urn:cybersecnews:item:513</id>
+    <published>2026-10-08T21:05:03.451157+00:00</published>
+    <updated>2026-10-08T21:05:03.451157+00:00</updated>
+    <link href="https://www.bleepingcomputer.com/news/security/cisco-warns-of-critical-flaws-allowing-nexus-switch-takeover/" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Cisco NX-OS used in Nexus switches contains five critical vulnerabilities allowing unauthenticated remote attackers to execute arbitrary code with root privileges. The flaws are in core NX-OS functionality and impact multiple Nexus platforms across the product line. Cisco has not reported active exploitation in the wild at this time, but the critical severity rating and ease of exploitation make immediate patching essential. Apply the latest security updates from Cisco as soon as possible, prioritize patching internet-facing Nexus switches, and consider implementing network segmentation to limit switch management access.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/cisco-warns-of-critical-flaws-allowing-nexus-switch-takeover/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Japan Sees Sharp Rise in Web Data Leaks Amid Mobile API Abuse and Metabase Attacks</title>
+    <id>urn:cybersecnews:item:512</id>
+    <published>2026-10-08T21:05:03.449964+00:00</published>
+    <updated>2026-10-08T21:05:03.449964+00:00</updated>
+    <link href="https://thehackernews.com/2026/10/japan-sees-sharp-rise-in-web-data-leaks.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · api-abuse&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Japan is experiencing increased data breaches involving API abuse targeting mobile applications and exploitation of known vulnerabilities in software like Metabase. JPCERT/CC reports these attacks are leveraging unpatched flaws and weak API security controls, though specific threat actors and victims remain undisclosed. Organizations should prioritize patching known vulnerabilities in exposed software, implementing API rate limiting and authentication controls, and conducting security audits of mobile application endpoints. Immediate action to identify and remediate unpatched systems and enforce strict API access controls is critical given active exploitation in the wild.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/japan-sees-sharp-rise-in-web-data-leaks.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Tensorlake npm Package Compromised to Deliver Shai-Hulud Credential-Stealing Worm</title>
     <id>urn:cybersecnews:item:511</id>
@@ -56,7 +146,7 @@
     <updated>2026-10-07T21:03:27.866137+00:00</updated>
     <link href="https://github.com/advisories/GHSA-w7x8-q2gp-5cgg" rel="alternate" />
     <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · prompt-injection,rce,ssrf · CVE-2026-73487&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Flowise &lt;= 3.1.2 CSV Agent and Airtable Agent nodes are vulnerable to prompt injection leading to remote code execution and SSRF via inadequate Python code validation. An attacker can bypass the regex-based sanitizer through structural manipulation to execute arbitrary Python code in Pyodide, exfiltrate data, and probe internal services—exploitable through the unauthenticated prediction API. This is critical severity; no indication of active wild exploitation noted in advisory. Immediately upgrade to patched version &gt; 3.1.2 and consider restricting access to the prediction API or requiring authentication.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-w7x8-q2gp-5cgg"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · prompt-injection,rce,ssrf · CVE-2026-61447, CVE-2026-73487&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Flowise &lt;= 3.1.2 CSV Agent and Airtable Agent nodes are vulnerable to prompt injection leading to remote code execution and SSRF via inadequate Python code validation. An attacker can bypass the regex-based sanitizer through structural manipulation to execute arbitrary Python code in Pyodide, exfiltrate data, and probe internal services—exploitable through the unauthenticated prediction API. This is critical severity; no indication of active wild exploitation noted in advisory. Immediately upgrade to patched version &gt; 3.1.2 and consider restricting access to the prediction API or requiring authentication.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-w7x8-q2gp-5cgg"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
   </entry>
   <entry>
     <title>Backstage: Sensitive information exposure in Scaffolder (CVE-2026-106501)</title>
@@ -813,95 +903,5 @@
     <link href="https://thehackernews.com/2026/09/taskstomp-powershell-backdoor-steals.html" rel="alternate" />
     <category term="red-team" />
     <content type="html">&lt;p&gt;&lt;em&gt;red-team · backdoor&lt;/em&gt;&lt;/p&gt;&lt;p&gt;TASK#STOMP is a PowerShell backdoor deployed in active campaigns that harvests business documents, Wi-Fi credentials, clipboard data, and screenshots from compromised systems with real-time filesystem monitoring capabilities. The malware represents a significant threat due to its multi-faceted data exfiltration capabilities targeting sensitive business and authentication information. There is no indication this is currently exploited at scale in the wild, though the active campaign suggests targeted deployment. Organizations should implement application whitelisting for PowerShell, enforce execution policies, monitor for suspicious PowerShell activity, and educate users on phishing vectors likely used for initial compromise; apply patches for any identified delivery mechanisms and consider blocking PowerShell execution in environments where it is not operationally necessary.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/09/taskstomp-powershell-backdoor-steals.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Vidar Adds Virtual Machine and Custom Stream Ciphers For String Obfuscation</title>
-    <id>urn:cybersecnews:item:421</id>
-    <published>2026-09-21T14:54:08.611701+00:00</published>
-    <updated>2026-09-21T14:54:08.611701+00:00</updated>
-    <link href="https://www.zscaler.com/blogs/security-research/vidar-adds-virtual-machine-and-custom-stream-ciphers-string-obfuscation" rel="alternate" />
-    <category term="red-team" />
-    <content type="html">&lt;p&gt;&lt;em&gt;red-team · string-obfuscation&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Vidar information stealer (versions 2.0-3.3+) has evolved its string obfuscation from basic XOR to ChaCha20, and most recently to a custom virtual machine with per-build bytecode and custom stream ciphers (both ChaCha-based and ARX-based variants), making static and automated analysis significantly harder. The VM uses a lightweight bytecode interpreter with 14 opcode handlers performing simple operations (XOR, addition, rotation, substitution), while the custom stream ciphers vary their constants and transformations across builds. This represents an ongoing threat with active development; no severity rating or exploitation metrics are provided in the source material. Organizations should employ behavioral detection, network monitoring for command-and-control communication, and endpoint detection systems capable of identifying stealer activity patterns rather than relying solely on signature-based detection of these increasingly polymorphic obfuscation techniques.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.zscaler.com/blogs/security-research/vidar-adds-virtual-machine-and-custom-stream-ciphers-string-obfuscation"&gt;Read more&lt;/a&gt; · Source: zscaler-threatlabz&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Jade Sleet Linked to Indian IT Provider Breach With FLATROOF and ROOFDECK Backdoors</title>
-    <id>urn:cybersecnews:item:420</id>
-    <published>2026-09-21T14:54:08.610017+00:00</published>
-    <updated>2026-09-21T14:54:08.610017+00:00</updated>
-    <link href="https://thehackernews.com/2026/09/jade-sleet-linked-to-indian-it-provider.html" rel="alternate" />
-    <category term="red-team" />
-    <content type="html">&lt;p&gt;&lt;em&gt;red-team · backdoor&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Jade Sleet, attributed to North Korea, compromised an Indian IT services provider using custom backdoors FLATROOF and ROOFDECK to establish persistence and access downstream targets. The attack demonstrates a continued pattern of supply chain targeting through developer-focused organizations to infiltrate higher-value networks. Severity is high given the nation-state actor's sophistication and the supply chain risk implications for customers of the compromised IT provider. Organizations should prioritize detection of FLATROOF/ROOFDECK indicators of compromise, conduct supply chain risk assessments with IT vendors, and implement zero-trust architecture to limit lateral movement from compromised supplier networks.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/09/jade-sleet-linked-to-indian-it-provider.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>ClickFix Lures Deploy ChainScript RAT Using Polygon to Rotate C2 Infrastructure</title>
-    <id>urn:cybersecnews:item:419</id>
-    <published>2026-09-21T14:54:08.608955+00:00</published>
-    <updated>2026-09-21T14:54:08.608955+00:00</updated>
-    <link href="https://thehackernews.com/2026/09/clickfix-lures-deploy-chainscript-rat.html" rel="alternate" />
-    <category term="red-team" />
-    <content type="html">&lt;p&gt;&lt;em&gt;red-team · c2&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Threat actors are distributing ChainScript, a previously undocumented RAT, via ClickFix-style social engineering lures that impersonate legitimate software (Spotify, Zoom, Teams). The malware uses Polygon blockchain infrastructure to rotate command-and-control servers, complicating takedown and attribution efforts. No severity rating or active exploitation data provided in available details, but the use of legitimate software impersonation and blockchain obfuscation suggests moderate-to-high risk. Recommend user awareness training on software download verification, implementation of application whitelisting, and network monitoring for connections to blockchain infrastructure endpoints.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/09/clickfix-lures-deploy-chainscript-rat.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Synology warnt: Kritische NAS-Lücken ermöglichen Datenklau</title>
-    <id>urn:cybersecnews:item:418</id>
-    <published>2026-09-21T14:54:08.607737+00:00</published>
-    <updated>2026-09-21T14:54:08.607737+00:00</updated>
-    <link href="https://www.golem.de/news/synology-warnt-kritische-nas-luecken-ermoeglichen-datenklau-2609-213268.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · unauthorized-access&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Synology NAS devices are affected by multiple critical vulnerabilities enabling arbitrary read and write access to stored data. These flaws allow unauthenticated attackers to compromise device integrity and exfiltrate sensitive information. Synology has released security patches addressing these issues. Administrators should apply available patches immediately to all affected NAS systems and verify no unauthorized access has occurred.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.golem.de/news/synology-warnt-kritische-nas-luecken-ermoeglichen-datenklau-2609-213268.html"&gt;Read more&lt;/a&gt; · Source: golem-security&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>(g+) Windows-Lücken: Die Rückkehr der Würmer</title>
-    <id>urn:cybersecnews:item:417</id>
-    <published>2026-09-21T14:54:08.604483+00:00</published>
-    <updated>2026-09-21T14:54:08.604483+00:00</updated>
-    <link href="https://www.golem.de/news/windows-luecken-die-rueckkehr-der-wuermer-2609-213269.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · worm-capable-rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Microsoft's latest Windows patches address 20 vulnerabilities capable of worm propagation, representing a significant resurgence risk similar to WannaCry. These network-propagating flaws span multiple Windows versions and could enable mass exploitation without user interaction. Administrators should immediately apply all available Windows updates prioritizing critical network-accessible vulnerabilities, implement network segmentation, and enforce strict firewall rules to limit lateral movement. Consider deploying EDR solutions and monitoring for exploit attempts, particularly for SMB and RDP-related CVEs.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.golem.de/news/windows-luecken-die-rueckkehr-der-wuermer-2609-213269.html"&gt;Read more&lt;/a&gt; · Source: golem-security&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Researchers escape OpenAI Codex sandbox to run commands on host</title>
-    <id>urn:cybersecnews:item:416</id>
-    <published>2026-09-20T12:53:24.626023+00:00</published>
-    <updated>2026-09-20T12:53:24.626023+00:00</updated>
-    <link href="https://www.bleepingcomputer.com/news/security/researchers-escape-openai-codex-sandbox-to-run-commands-on-host/" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · sandbox-escape&lt;/em&gt;&lt;/p&gt;&lt;p&gt;OpenAI Codex contained sandbox escape vulnerabilities allowing attackers to execute arbitrary commands on the host system, including from the most restrictive operating mode. Researchers demonstrated two separate escape techniques, both of which OpenAI has already patched. No evidence of active wild exploitation was reported. Users should update to the latest patched version of Codex immediately.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/researchers-escape-openai-codex-sandbox-to-run-commands-on-host/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Claude Opus 5 Helped Researchers Take Over OpenAI Staff Accounts via Chained Flaws</title>
-    <id>urn:cybersecnews:item:415</id>
-    <published>2026-09-20T03:39:55.985190+00:00</published>
-    <updated>2026-09-20T03:39:55.985190+00:00</updated>
-    <link href="https://thehackernews.com/2026/09/claude-opus-5-helped-researchers-take.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Anthropic Claude Opus 5 was leveraged by Hacktron researchers to chain two vulnerabilities affecting OpenAI infrastructure: a bug in OpenAI's public help forum software and a weakness in OpenAI's login system, enabling account takeover of multiple OpenAI staff members and unauthorized access to internal code repositories. The vulnerability chain demonstrates AI-assisted exploit development capability but was discovered through authorized security research rather than active exploitation in the wild. OpenAI should prioritize patching the identified login system weakness and help forum vulnerability, conduct account security audits, and implement additional authentication controls for access to internal repositories. This research also highlights the need for organizations to assess risks from AI-assisted attack chain development in their threat modeling processes.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/09/claude-opus-5-helped-researchers-take.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>SolarWinds Patches ARM Hard-Coded Key Flaw Enabling Unauthenticated RCE</title>
-    <id>urn:cybersecnews:item:414</id>
-    <published>2026-09-19T12:18:48.484051+00:00</published>
-    <updated>2026-09-19T12:18:48.484051+00:00</updated>
-    <link href="https://thehackernews.com/2026/09/solarwinds-patches-arm-hard-coded-key.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-28326&lt;/em&gt;&lt;/p&gt;&lt;p&gt;SolarWinds Access Rights Manager (ARM) versions 2026.2 and prior contain a high-severity hard-coded cryptographic key vulnerability (CVE-2026-28326, CVSS 8.8) enabling unauthenticated remote code execution. The flaw stems from embedded credentials that attackers can leverage to bypass authentication and execute arbitrary code on affected systems. No public exploitation reports have been confirmed at this time, though the unauthenticated attack vector makes this a critical priority. Immediately apply SolarWinds' released security patches to all ARM deployments.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/09/solarwinds-patches-arm-hard-coded-key.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>org.xwiki.rendering:xwiki-rendering-xml has an Eval Injection issue (CVE-2025-53837)</title>
-    <id>urn:cybersecnews:item:413</id>
-    <published>2026-09-18T18:56:23.253186+00:00</published>
-    <updated>2026-09-18T18:56:23.253186+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-26vp-8gxg-v4pg" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2025-53837, CVE-2026-57149&lt;/em&gt;&lt;/p&gt;&lt;p&gt;org.xwiki.rendering:xwiki-rendering-xml allows eval injection via improper escaping of rendering output in HTML macros, enabling authenticated users with document edit permissions to inject and execute arbitrary Groovy or Python script macros with programming rights, resulting in remote code execution and unrestricted wiki access. This is critical severity and actively exploited. Patch immediately by updating to the latest patched version; restrict document edit permissions as an interim mitigation.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-26vp-8gxg-v4pg"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>LMDeploy has Remote Code Execution by Pickle Deserialization via handle_zmq_recv in lmdeploy/lmdeploy/pytorch/disagg/conn/engine_conn.py (CVE-2025-66455)</title>
-    <id>urn:cybersecnews:item:412</id>
-    <published>2026-09-18T18:56:22.914666+00:00</published>
-    <updated>2026-09-18T18:56:22.914666+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-2vh9-42vm-xmv2" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2025-66455&lt;/em&gt;&lt;/p&gt;&lt;p&gt;LMDeploy's PyTorch DistServe disaggregation control plane is vulnerable to remote code execution via unsafe pickle deserialization in the `handle_zmq_recv` function (CVE-2025-66455). An attacker with network access to the affected DistServe API server can exploit the `/distserve/p2p_connect` endpoint to force the server to connect to a malicious peer and execute arbitrary code during message deserialization. This is a critical severity vulnerability that may be actively exploited. Apply the latest security patch immediately, restrict network access to DistServe API endpoints, and consider disabling disaggregation features until patched.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-2vh9-42vm-xmv2"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
   </entry>
 </feed>
