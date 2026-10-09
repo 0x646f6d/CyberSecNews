@@ -3,7 +3,43 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-10-09T04:49:41.750358+00:00</updated>
+  <updated>2026-10-09T15:01:24.588476+00:00</updated>
+  <entry>
+    <title>Three Teams Demonstrate Remote Hacks of Fully Patched Google Pixel 10 at Pwn2Own</title>
+    <id>urn:cybersecnews:item:527</id>
+    <published>2026-10-09T15:01:24.588476+00:00</published>
+    <updated>2026-10-09T15:01:24.588476+00:00</updated>
+    <link href="https://thehackernews.com/2026/10/three-teams-demonstrate-remote-hacks-of.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Three research teams successfully exploited fully patched Google Pixel 10 devices at Pwn2Own Ireland, demonstrating zero-day vulnerabilities in the flagship Android device despite current security patches. The exploits likely involved chained vulnerabilities across multiple components (kernel, drivers, or system services), with the winning entry from Ikotas Labs earning the top $300,000 prize. These vulnerabilities are not yet exploited in the wild but represent real attack paths that Google will receive detailed technical information on for remediation. Google should prioritize expedited patching of the disclosed vulnerabilities and conduct comprehensive security reviews of the affected components across its Pixel line.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/three-teams-demonstrate-remote-hacks-of.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>GoBalance Flaw Lets Attackers Hijack .onion Addresses by Recovering Tor-Format Keys</title>
+    <id>urn:cybersecnews:item:526</id>
+    <published>2026-10-09T15:01:24.587255+00:00</published>
+    <updated>2026-10-09T15:01:24.587255+00:00</updated>
+    <link href="https://thehackernews.com/2026/10/gobalance-flaw-lets-attackers-hijack.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · key-recovery&lt;/em&gt;&lt;/p&gt;&lt;p&gt;GoBalance, a Tor onion address management tool, contains a cryptographic flaw that allows attackers to recover the private key controlling a .onion address using only publicly available information, enabling complete hijacking of the hidden service. The vulnerability stems from improper key derivation in GoBalance's implementation of Tor-format keys. This is a critical severity issue with potential for active exploitation given the tool's use by dark-web operators and the straightforward nature of the attack requiring only public data. Administrators should immediately discontinue GoBalance use, migrate to alternative solutions, and regenerate all onion addresses with properly secured key management systems.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/gobalance-flaw-lets-attackers-hijack.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Attackers Exploit AhsayCBS Flaws to Deploy XMRig Miners Disguised as Microsoft Edge</title>
+    <id>urn:cybersecnews:item:525</id>
+    <published>2026-10-09T15:01:24.585941+00:00</published>
+    <updated>2026-10-09T15:01:24.585941+00:00</updated>
+    <link href="https://thehackernews.com/2026/10/attackers-exploit-ahsaycbs-flaws-to.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-105133&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Attackers are actively exploiting two vulnerabilities in AhsayCBS backup software (CVE-2026-105133 and an undisclosed second flaw) to gain unauthorized device access and deploy XMRig cryptocurrency miners and web shells. CVE-2026-105133, a moderate-severity improper authentication flaw in the checkSysPwd() function (CVSS 5.5), is being leveraged in active exploitation campaigns. This threat is occurring in the wild with direct impact to confidentiality and system resources. Organizations running AhsayCBS should immediately patch to the latest available version and monitor systems for signs of cryptomining activity and unauthorized web shell access.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/attackers-exploit-ahsaycbs-flaws-to.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Researchers Publish Working Exploit for Pre-Auth AnyDesk Linux Flaw That Gives Root Access</title>
+    <id>urn:cybersecnews:item:524</id>
+    <published>2026-10-09T15:01:24.583835+00:00</published>
+    <updated>2026-10-09T15:01:24.583835+00:00</updated>
+    <link href="https://thehackernews.com/2026/10/researchers-publish-working-exploit-for.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;AnyDesk Linux versions prior to 8.0.3 contain a pre-authentication remote code execution vulnerability allowing unauthenticated attackers to achieve root access without user approval. A working public exploit has been released following AnyDesk's June patch, which was initially downplayed as a crash fix with no CVE disclosure. This represents high severity as it bypasses all authentication and authorization controls. Immediate patching to version 8.0.3 or later is critical for all Linux deployments; organizations should prioritize this update and monitor for signs of exploitation.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/researchers-publish-working-exploit-for.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>PraisonAI: AICoder Arbitrary File Write and Command Execution via LLM Tool Calls (CVE-2026-61445)</title>
     <id>urn:cybersecnews:item:523</id>
@@ -614,7 +650,7 @@
     <updated>2026-09-27T19:34:21.859538+00:00</updated>
     <link href="https://www.heise.de/news/Sicherheitsforscher-warnen-Neue-Zero-Day-Exploits-in-Citrix-Netscaler-11467200.html" rel="alternate" />
     <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-88771, CVE-2026-88772, CVE-2026-88773, CVE-2026-88774, CVE-2026-88775, CVE-2026-88776, CVE-2026-88777, CVE-2026-88778, CVE-2026-88779&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Citrix NetScaler is affected by critical code injection vulnerabilities that allow remote attackers to execute arbitrary code. The vulnerabilities are being actively exploited in the wild according to security researchers, making this a high-severity threat. Citrix has confirmed the issues and released updates; immediate patching is strongly recommended for all affected NetScaler installations. Organizations unable to patch immediately should implement network segmentation and access controls to restrict exposure.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.heise.de/news/Sicherheitsforscher-warnen-Neue-Zero-Day-Exploits-in-Citrix-Netscaler-11467200.html"&gt;Read more&lt;/a&gt; · Source: heise-security&lt;/p&gt;</content>
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-107406, CVE-2026-88771, CVE-2026-88772, CVE-2026-88773, CVE-2026-88774, CVE-2026-88775, CVE-2026-88776, CVE-2026-88777, CVE-2026-88778, CVE-2026-88779&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Citrix NetScaler is affected by critical code injection vulnerabilities that allow remote attackers to execute arbitrary code. The vulnerabilities are being actively exploited in the wild according to security researchers, making this a high-severity threat. Citrix has confirmed the issues and released updates; immediate patching is strongly recommended for all affected NetScaler installations. Organizations unable to patch immediately should implement network segmentation and access controls to restrict exposure.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.heise.de/news/Sicherheitsforscher-warnen-Neue-Zero-Day-Exploits-in-Citrix-Netscaler-11467200.html"&gt;Read more&lt;/a&gt; · Source: heise-security&lt;/p&gt;</content>
   </entry>
   <entry>
     <title>Metasploit Wrap Up: Belgian Waffles, Chocolates, and…Modules-Frites?</title>
@@ -867,41 +903,5 @@
     <link href="https://thehackernews.com/2026/09/researcher-drops-bigdiskbuster-zero-day.html" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · edr-evasion&lt;/em&gt;&lt;/p&gt;&lt;p&gt;BigDiskBuster is a proof-of-concept zero-day exploitation technique that fills disk space to prevent Microsoft Defender from applying platform and signature updates, published September 19 with no CVE assigned or patch available. The vulnerability has no evidence of active exploitation in the wild but poses moderate severity as it disables critical security updates on affected systems. Microsoft has not released an advisory or patch. Mitigations include monitoring disk space usage patterns, implementing disk quota enforcement, and hardening file system permissions to prevent mass file creation; prioritize patching when Microsoft releases a fix.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/09/researcher-drops-bigdiskbuster-zero-day.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Critical Bifrost AI Gateway Flaw Lets Attackers Run Commands Without Credentials</title>
-    <id>urn:cybersecnews:item:427</id>
-    <published>2026-09-22T19:40:12.312179+00:00</published>
-    <updated>2026-09-22T19:40:12.312179+00:00</updated>
-    <link href="https://thehackernews.com/2026/09/critical-bifrost-ai-gateway-flaw-lets.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-90898&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Bifrost open-source AI gateway (all versions before 2.1.0) contains a critical pre-authentication remote code execution vulnerability in its HTTP transport layer that allows unauthenticated attackers to execute arbitrary commands on the gateway server via a single HTTP request (CVE-2026-90898, CVSS 9.8). The vulnerability has direct access implications for organizations routing LLM requests through Bifrost, potentially compromising all downstream systems and data. Immediate action required: upgrade to Bifrost 2.1.0 or later and verify no unauthorized command execution occurred on affected systems.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/09/critical-bifrost-ai-gateway-flaw-lets.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>D-Link warns of max severity zero-day bug in DIR-822A routers</title>
-    <id>urn:cybersecnews:item:426</id>
-    <published>2026-09-22T13:09:32.426501+00:00</published>
-    <updated>2026-09-22T13:09:32.426501+00:00</updated>
-    <link href="https://www.bleepingcomputer.com/news/security/d-link-warns-of-max-severity-zero-day-bug-in-dir-822a-routers/" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-86296&lt;/em&gt;&lt;/p&gt;&lt;p&gt;D-Link DIR-822A routers are vulnerable to CVE-2026-86296, a CVSS 10.0 critical zero-day that allows unauthenticated remote code execution. Proof-of-concept exploit code is publicly available and the vulnerability is actively exploited in the wild. No patch is currently available; D-Link recommends disabling remote management features and considering replacement of affected legacy devices. Users should immediately isolate affected routers from critical networks and monitor for unauthorized access.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/d-link-warns-of-max-severity-zero-day-bug-in-dir-822a-routers/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>WordPress Comment2Shell Flaw Can Turn Anonymous Comment XSS Into RCE via Admin Session</title>
-    <id>urn:cybersecnews:item:425</id>
-    <published>2026-09-22T13:09:32.424883+00:00</published>
-    <updated>2026-09-22T13:09:32.424883+00:00</updated>
-    <link href="https://thehackernews.com/2026/09/wordpress-comment2shell-flaw-can-turn.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · xss-to-rce · CVE-2026-93485&lt;/em&gt;&lt;/p&gt;&lt;p&gt;WordPress core versions prior to 7.1.1 contain CVE-2026-93485 ("Comment2Shell"), a stored XSS vulnerability in the comment system that allows unauthenticated attackers to inject malicious scripts into comments. When an administrator views the compromised comment, the injected script executes with administrative privileges, enabling arbitrary code execution and server compromise. WordPress released a patch in version 7.1.1 on September 17 and recommends immediate updates; there is no indication of active exploitation in the wild at this time, but the vulnerability's severity and ease of exploitation make urgent patching critical.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/09/wordpress-comment2shell-flaw-can-turn.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>New Linux Kernel Flaw Gives ARM64 KVM Guests Read-Write Access to Host Memory</title>
-    <id>urn:cybersecnews:item:424</id>
-    <published>2026-09-22T13:09:32.422877+00:00</published>
-    <updated>2026-09-22T13:09:32.422877+00:00</updated>
-    <link href="https://thehackernews.com/2026/09/new-linux-kernel-flaw-gives-arm64-kvm.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · use-after-free · CVE-2026-80521, CVE-2026-89775&lt;/em&gt;&lt;/p&gt;&lt;p&gt;CVE-2026-89775 affects the Linux kernel's ARM64 KVM virtualization code and allows guest virtual machines to read and write host kernel memory through a use-after-free vulnerability when nested virtualization is enabled. The flaw enables guest escape and arbitrary code execution on the host with high severity. This requires nested virtualization to be explicitly enabled, limiting immediate exposure, but patches should be applied to affected kernel versions. Mitigation involves disabling nested virtualization until patches are deployed.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/09/new-linux-kernel-flaw-gives-arm64-kvm.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
   </entry>
 </feed>
