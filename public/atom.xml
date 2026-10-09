@@ -3,7 +3,25 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-10-09T15:01:24.588476+00:00</updated>
+  <updated>2026-10-09T20:35:19.457918+00:00</updated>
+  <entry>
+    <title>Metasploit Wrap Up: A Collection of What Can Only Be Called Eclectic Modules</title>
+    <id>urn:cybersecnews:item:529</id>
+    <published>2026-10-09T20:35:19.457918+00:00</published>
+    <updated>2026-10-09T20:35:19.457918+00:00</updated>
+    <link href="https://www.rapid7.com/blog/post/pt-metasploit-wrap-up-a-collection-of-what-can-only-be-called-eclectic-modules" rel="alternate" />
+    <category term="red-team" />
+    <content type="html">&lt;p&gt;&lt;em&gt;red-team · exploitation-framework&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Metasploit framework received updates including eclectic new modules across various attack vectors and post-exploitation capabilities. The additions expand the toolkit's functionality but do not represent specific vulnerability disclosures or critical security issues requiring immediate patching. No particular software vulnerability is highlighted as actively exploited in the wild from this update. Organizations using Metasploit should update to access these new modules for security testing purposes, though this is routine maintenance rather than a critical security action.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.rapid7.com/blog/post/pt-metasploit-wrap-up-a-collection-of-what-can-only-be-called-eclectic-modules"&gt;Read more&lt;/a&gt; · Source: rapid7&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>P7 DarkSword iOS Exploit Kit Adds Crypto Wallet Data Theft and Remote Commands</title>
+    <id>urn:cybersecnews:item:528</id>
+    <published>2026-10-09T20:35:19.456161+00:00</published>
+    <updated>2026-10-09T20:35:19.456161+00:00</updated>
+    <link href="https://thehackernews.com/2026/10/p7-darksword-ios-exploit-kit-adds.html" rel="alternate" />
+    <category term="red-team" />
+    <content type="html">&lt;p&gt;&lt;em&gt;red-team · c2&lt;/em&gt;&lt;/p&gt;&lt;p&gt;P7 DarkSword iOS exploit kit targets iOS devices with reduced footprint, enhanced keychain/crypto-wallet data theft capabilities, and bidirectional command-and-control communication enabling remote code execution. This represents an evolution of previously known DarkSword variants with increased functionality for sensitive data exfiltration. No indicators of widespread wild exploitation have been publicly reported, though the kit's enhanced capabilities present elevated risk to targeted users, particularly those holding cryptocurrency assets. Organizations should ensure iOS devices run current OS patches, enforce strong endpoint security policies, and consider mobile threat defense solutions; users should restrict app permissions and monitor for unusual device behavior.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/p7-darksword-ios-exploit-kit-adds.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Three Teams Demonstrate Remote Hacks of Fully Patched Google Pixel 10 at Pwn2Own</title>
     <id>urn:cybersecnews:item:527</id>
@@ -885,23 +903,5 @@
     <link href="https://www.bleepingcomputer.com/news/security/shinyhunters-claims-fbi-hack-data-theft-in-peoplesoft-zero-day-breach/" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · zero-day · CVE-2026-35273&lt;/em&gt;&lt;/p&gt;&lt;p&gt;ShinyHunters claims exploitation of an unpatched Oracle PeopleSoft zero-day vulnerability to breach FBI systems and exfiltrate employee and applicant data. The group used the zero-day for remote code execution against PeopleSoft instances, a widely deployed HR and financial management platform affecting government and enterprise organizations. This represents a critical-severity vulnerability actively exploited in the wild with confirmed successful compromise of high-value targets. Oracle should prioritize emergency patching; affected organizations running PeopleSoft should immediately isolate instances, apply security updates upon release, and conduct forensic investigation for signs of breach.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/shinyhunters-claims-fbi-hack-data-theft-in-peoplesoft-zero-day-breach/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>New CVSS 10.0 VeloCloud Orchestrator Flaw Actively Exploited in Certificate-Based Setups</title>
-    <id>urn:cybersecnews:item:429</id>
-    <published>2026-09-22T19:40:12.319984+00:00</published>
-    <updated>2026-09-22T19:40:12.319984+00:00</updated>
-    <link href="https://thehackernews.com/2026/09/new-cvss-100-velocloud-orchestrator.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · privilege-escalation · CVE-2026-93952&lt;/em&gt;&lt;/p&gt;&lt;p&gt;VeloCloud Orchestrator (VCO) on-premises deployments are affected by CVE-2026-93952, a critical remote code execution vulnerability (CVSS 10.0) that allows unauthenticated attackers to escalate privileges on the VCO host in certificate-based authentication configurations. This flaw is actively being exploited in the wild. Organizations using on-premises VCO with certificate-based Edge authentication should immediately apply available security patches from Arista and verify their deployment authentication method. As a mitigation, consider temporarily restricting network access to the VCO management interface until patches are applied.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/09/new-cvss-100-velocloud-orchestrator.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Researcher Drops BigDiskBuster Zero-Day PoC That Blocks Microsoft Defender Updates</title>
-    <id>urn:cybersecnews:item:428</id>
-    <published>2026-09-22T19:40:12.317876+00:00</published>
-    <updated>2026-09-22T19:40:12.317876+00:00</updated>
-    <link href="https://thehackernews.com/2026/09/researcher-drops-bigdiskbuster-zero-day.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · edr-evasion&lt;/em&gt;&lt;/p&gt;&lt;p&gt;BigDiskBuster is a proof-of-concept zero-day exploitation technique that fills disk space to prevent Microsoft Defender from applying platform and signature updates, published September 19 with no CVE assigned or patch available. The vulnerability has no evidence of active exploitation in the wild but poses moderate severity as it disables critical security updates on affected systems. Microsoft has not released an advisory or patch. Mitigations include monitoring disk space usage patterns, implementing disk quota enforcement, and hardening file system permissions to prevent mass file creation; prioritize patching when Microsoft releases a fix.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/09/researcher-drops-bigdiskbuster-zero-day.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
   </entry>
 </feed>
