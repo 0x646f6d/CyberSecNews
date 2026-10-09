@@ -3,7 +3,25 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-10-08T21:05:03.457291+00:00</updated>
+  <updated>2026-10-09T04:49:41.750358+00:00</updated>
+  <entry>
+    <title>PraisonAI: AICoder Arbitrary File Write and Command Execution via LLM Tool Calls (CVE-2026-61445)</title>
+    <id>urn:cybersecnews:item:523</id>
+    <published>2026-10-09T04:49:41.750358+00:00</published>
+    <updated>2026-10-09T04:49:41.750358+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-9mp3-24cc-77mg" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · arbitrary-file-write,rce · CVE-2026-61445&lt;/em&gt;&lt;/p&gt;&lt;p&gt;PraisonAI's AICoder UI component (pip/praisonai) contains critical vulnerabilities in the `write_to_file` and `execute_command` tools exposed to LLMs without path validation or command sanitization. An attacker can inject malicious prompts via the chat interface to achieve arbitrary file writes to sensitive locations (e.g., `/root/.ssh/authorized_keys`, `/etc/crontab`) and execute arbitrary commands; impact is maximized as Docker containers typically run as root. This vulnerability is critical and no indication of wild exploitation is mentioned. Users should immediately update PraisonAI to a patched version and consider restricting LLM tool access to validated safe directories and commands, or disable these tools until a fix is deployed.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-9mp3-24cc-77mg"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Hazelcast allows arbitrary member memory access by low-privileged client (CVE-2026-107726)</title>
+    <id>urn:cybersecnews:item:522</id>
+    <published>2026-10-09T04:49:41.748719+00:00</published>
+    <updated>2026-10-09T04:49:41.748719+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-6v25-8wq6-xq4j" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass,memory-disclosure,dos,rce · CVE-2026-107726&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Hazelcast Enterprise and Community editions (all versions) contain a critical memory access vulnerability (CVE-2026-107726) allowing low-privileged clients to read arbitrary memory from cluster members including heap, off-heap data, and JVM address space. Affected versions may also permit denial-of-service crashes or memory corruption leading to potential RCE in Enterprise configurations. This vulnerability is critical severity; check vendor advisories for exploitation status and immediately apply available patches or implement network access controls restricting client connections to trusted sources only.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-6v25-8wq6-xq4j"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>AsyncHttpClient: Replay to a different host sends the original host request and credentials to the new host (CVE-2026-107282)</title>
     <id>urn:cybersecnews:item:521</id>
@@ -524,7 +542,7 @@
     <updated>2026-09-30T04:15:01.036887+00:00</updated>
     <link href="https://github.com/advisories/GHSA-ffc3-869f-jxw9" rel="alternate" />
     <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-102268&lt;/em&gt;&lt;/p&gt;&lt;p&gt;PyJWT versions prior to patching are vulnerable to asymmetric-HMAC confusion attacks when decoding JWT tokens if the allow-list contains both HMAC and asymmetric algorithms (CVE-2026-102268, critical severity). The vulnerability exploits a bypass in PyJWT's PEM format detection where whitespace or line-ending mutations in public keys cause the `is_pem_format` regex to fail, allowing an attacker with a valid HMAC secret to forge tokens that pass asymmetric signature verification. This impacts deployments mixing algorithm types in the decode allow-list and passing PEM keys as raw bytes/text. Immediately update PyJWT to the patched version and audit configurations to follow RFC 8725 best practices by using single asymmetric algorithms in decode allow-lists rather than mixing HS/asymmetric options.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-ffc3-869f-jxw9"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-102268, CVE-2026-107722&lt;/em&gt;&lt;/p&gt;&lt;p&gt;PyJWT versions prior to patching are vulnerable to asymmetric-HMAC confusion attacks when decoding JWT tokens if the allow-list contains both HMAC and asymmetric algorithms (CVE-2026-102268, critical severity). The vulnerability exploits a bypass in PyJWT's PEM format detection where whitespace or line-ending mutations in public keys cause the `is_pem_format` regex to fail, allowing an attacker with a valid HMAC secret to forge tokens that pass asymmetric signature verification. This impacts deployments mixing algorithm types in the decode allow-list and passing PEM keys as raw bytes/text. Immediately update PyJWT to the patched version and audit configurations to follow RFC 8725 best practices by using single asymmetric algorithms in decode allow-lists rather than mixing HS/asymmetric options.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-ffc3-869f-jxw9"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
   </entry>
   <entry>
     <title>@xhmikosr/decompress: Path traversal via symlink chain (CVE-2026-101894)</title>
@@ -885,23 +903,5 @@
     <link href="https://thehackernews.com/2026/09/new-linux-kernel-flaw-gives-arm64-kvm.html" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · use-after-free · CVE-2026-80521, CVE-2026-89775&lt;/em&gt;&lt;/p&gt;&lt;p&gt;CVE-2026-89775 affects the Linux kernel's ARM64 KVM virtualization code and allows guest virtual machines to read and write host kernel memory through a use-after-free vulnerability when nested virtualization is enabled. The flaw enables guest escape and arbitrary code execution on the host with high severity. This requires nested virtualization to be explicitly enabled, limiting immediate exposure, but patches should be applied to affected kernel versions. Mitigation involves disabling nested virtualization until patches are deployed.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/09/new-linux-kernel-flaw-gives-arm64-kvm.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Zyxel GS1900 Series Switches: Zyxel GS1900 Series Switches Stack-Based Buffer Overflow Vulnerability (CVE-2026-7273)</title>
-    <id>urn:cybersecnews:item:423</id>
-    <published>2026-09-21T20:17:39.037753+00:00</published>
-    <updated>2026-09-21T20:17:39.037753+00:00</updated>
-    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-7273" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · buffer-overflow · CVE-2026-7273&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Zyxel GS1900 series switches are vulnerable to a stack-based buffer overflow in the CGI program (CVE-2026-7273) that allows unauthenticated LAN-based attackers to execute arbitrary OS commands via malicious HTTP requests. This vulnerability is actively exploited in the wild with high severity. Immediately apply vendor-supplied patches or mitigations per CISA BOD 26-04 guidance; discontinue use if patches are unavailable. Conduct forensic triage on affected systems to identify potential compromise.&lt;/p&gt;&lt;p&gt;&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2026-7273"&gt;Read more&lt;/a&gt; · Source: cisa-kev&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>TASK#STOMP PowerShell Backdoor Steals Documents, Wi-Fi Passwords, and Clipboard Data</title>
-    <id>urn:cybersecnews:item:422</id>
-    <published>2026-09-21T20:17:39.036209+00:00</published>
-    <updated>2026-09-21T20:17:39.036209+00:00</updated>
-    <link href="https://thehackernews.com/2026/09/taskstomp-powershell-backdoor-steals.html" rel="alternate" />
-    <category term="red-team" />
-    <content type="html">&lt;p&gt;&lt;em&gt;red-team · backdoor&lt;/em&gt;&lt;/p&gt;&lt;p&gt;TASK#STOMP is a PowerShell backdoor deployed in active campaigns that harvests business documents, Wi-Fi credentials, clipboard data, and screenshots from compromised systems with real-time filesystem monitoring capabilities. The malware represents a significant threat due to its multi-faceted data exfiltration capabilities targeting sensitive business and authentication information. There is no indication this is currently exploited at scale in the wild, though the active campaign suggests targeted deployment. Organizations should implement application whitelisting for PowerShell, enforce execution policies, monitor for suspicious PowerShell activity, and educate users on phishing vectors likely used for initial compromise; apply patches for any identified delivery mechanisms and consider blocking PowerShell execution in environments where it is not operationally necessary.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/09/taskstomp-powershell-backdoor-steals.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
   </entry>
 </feed>
