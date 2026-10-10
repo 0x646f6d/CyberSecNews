@@ -3,7 +3,34 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-10-09T20:35:19.457918+00:00</updated>
+  <updated>2026-10-10T04:34:51.741095+00:00</updated>
+  <entry>
+    <title>Nginx UI: Authenticated Remote Code Execution via Backup Restore App Config Overwrite (CVE-2026-107806)</title>
+    <id>urn:cybersecnews:item:532</id>
+    <published>2026-10-10T04:34:51.741095+00:00</published>
+    <updated>2026-10-10T04:34:51.741095+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-p393-cf76-4jmr" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-107806&lt;/em&gt;&lt;/p&gt;&lt;p&gt;nginx-ui (version 2.3.11 and likely earlier) contains a critical authenticated remote code execution vulnerability (CVE-2026-107806) allowing users to upload forged encrypted backups via the restore API endpoint, overwrite application configuration including nginx command settings, and execute arbitrary commands through the test functionality. An authenticated attacker can exploit this by calling POST /api/restore followed by POST /api/nginx/test to achieve RCE. Immediate patching is required; users should upgrade to a patched version once available and restrict API access to trusted administrators only.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-p393-cf76-4jmr"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Contao: Cross-site scripting in the comments bundle (CVE-2026-107845)</title>
+    <id>urn:cybersecnews:item:531</id>
+    <published>2026-10-10T04:34:51.740175+00:00</published>
+    <updated>2026-10-10T04:34:51.740175+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-628f-v4f6-p37r" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · xss · CVE-2026-107845&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Contao Comments Bundle (CVE-2026-107845) contains a critical unauthenticated cross-site scripting vulnerability allowing attackers to inject malicious scripts via comment fields that execute in backend admin sessions when moderators review comments. The absence of Content-Security-Policy headers on the Contao backend eliminates XSS mitigation, ensuring exploitation occurs during normal moderation workflows. This vulnerability is likely actively exploited given its trivial attack vector and high privilege target. Update the comments-bundle package immediately via Composer and implement Content-Security-Policy headers on all backend interfaces as a defense-in-depth measure.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-628f-v4f6-p37r"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Credential-Stealing GitHub Actions Workflows Planted in Tens of Thousands of Repositories</title>
+    <id>urn:cybersecnews:item:530</id>
+    <published>2026-10-10T04:34:51.739114+00:00</published>
+    <updated>2026-10-10T04:34:51.739114+00:00</updated>
+    <link href="https://thehackernews.com/2026/10/credential-stealing-github-actions.html" rel="alternate" />
+    <category term="red-team" />
+    <content type="html">&lt;p&gt;&lt;em&gt;red-team · credential-theft&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Attackers compromised two high-profile open-source maintainer accounts (including pyxel author Takashi Kitao) to inject malicious GitHub Actions workflows into over 340 repositories, enabling credential theft from CI/CD pipelines. The campaign exploited weak account security to push workflows that steal secrets and tokens used during automated builds. This represents high-severity risk as compromised CI/CD credentials can facilitate supply chain attacks affecting downstream users. Immediate actions: verify GitHub Actions secrets/tokens in affected repositories for unauthorized access, enforce strong authentication and branch protection rules on maintainer accounts, audit workflow permissions, and rotate any potentially exposed credentials.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/credential-stealing-github-actions.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Metasploit Wrap Up: A Collection of What Can Only Be Called Eclectic Modules</title>
     <id>urn:cybersecnews:item:529</id>
@@ -191,7 +218,7 @@
     <updated>2026-10-07T21:03:27.878912+00:00</updated>
     <link href="https://github.com/advisories/GHSA-rqcc-94gv-wjm9" rel="alternate" />
     <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-62253&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Homer API authentication bypass in coordinator JWT middleware (CVE-2026-62253) allows complete unauthenticated access to protected endpoints under `/api/v1`, `/api/v3`, and `/api/v4` when the default empty `coordinator.jwt.secret` configuration is used. The vulnerability exists in `JWTMiddleware` and `JWTMiddlewareV4` functions which immediately return without validation when jwt secret is empty. This is a critical severity issue affecting default installations with no evidence of active wild exploitation noted. Immediately configure a non-empty `coordinator.jwt.secret` value in production deployments and apply patches when available from the Homer project.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-rqcc-94gv-wjm9"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-62253, CVE-2026-68582&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Homer API authentication bypass in coordinator JWT middleware (CVE-2026-62253) allows complete unauthenticated access to protected endpoints under `/api/v1`, `/api/v3`, and `/api/v4` when the default empty `coordinator.jwt.secret` configuration is used. The vulnerability exists in `JWTMiddleware` and `JWTMiddlewareV4` functions which immediately return without validation when jwt secret is empty. This is a critical severity issue affecting default installations with no evidence of active wild exploitation noted. Immediately configure a non-empty `coordinator.jwt.secret` value in production deployments and apply patches when available from the Homer project.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-rqcc-94gv-wjm9"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
   </entry>
   <entry>
     <title>Homer: Hardcoded Default Admin Password 'sipcapture' With No Forced Change on First Login (CVE-2026-62252)</title>
@@ -876,32 +903,5 @@
     <link href="https://github.com/advisories/GHSA-wx4m-69m9-gx3m" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · xss · CVE-2026-91130&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Home Assistant's Statistics Graph Card is vulnerable to Cross-Site Scripting (CVE-2026-91130) when an authenticated user injects malicious code into entity names; the payload executes when other users hover over chart data points. This critical severity vulnerability requires authentication but affects all users viewing the compromised statistics card. Patch to the latest Home Assistant version immediately as this vulnerability likely enables account takeover or lateral movement within the Home Assistant instance. Review entity names across your installation for suspicious characters and restrict entity renaming permissions to trusted administrators.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-wx4m-69m9-gx3m"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>F5 BIG-IP APM: F5 BIG-IP APM Heap-based Buffer Overflow Vulnerability (CVE-2026-94127)</title>
-    <id>urn:cybersecnews:item:432</id>
-    <published>2026-09-23T03:34:51.673792+00:00</published>
-    <updated>2026-09-23T03:34:51.673792+00:00</updated>
-    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-94127" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · heap-buffer-overflow · CVE-2026-94127&lt;/em&gt;&lt;/p&gt;&lt;p&gt;F5 BIG-IP APM is vulnerable to a heap-based buffer overflow (CVE-2026-94127) triggered when access policy and OAuth profile configurations are present on a virtual server, enabling unauthenticated remote code execution. This vulnerability is actively exploited in the wild. Apply vendor-provided patches immediately per CISA BOD 26-04 prioritization guidance; if patches are unavailable, implement mitigations or discontinue use. Conduct forensics triage and assess internet-facing exposure to prioritize remediation across your environment.&lt;/p&gt;&lt;p&gt;&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2026-94127"&gt;Read more&lt;/a&gt; · Source: cisa-kev&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>New Windows Defender zero-day blocks Microsoft antivirus updates</title>
-    <id>urn:cybersecnews:item:431</id>
-    <published>2026-09-22T19:40:12.325590+00:00</published>
-    <updated>2026-09-22T19:40:12.325590+00:00</updated>
-    <link href="https://www.bleepingcomputer.com/news/security/new-windows-defender-zero-day-blocks-microsoft-antivirus-updates/" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · privilege-escalation&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Microsoft Defender is affected by a zero-day vulnerability that allows attackers to block antivirus updates, disclosed by researcher Abdelhamid Naceri over the weekend. The exploit leverages a flaw in Defender's update mechanism, preventing the security software from receiving critical patches and signatures. Severity is high as successful exploitation leaves systems without current threat protection; there is no indication of active exploitation in the wild at this time. Microsoft should be contacted for an immediate patch; in the interim, organizations should implement compensating controls such as network-level security monitoring and alternative endpoint protection until an official fix is released.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/new-windows-defender-zero-day-blocks-microsoft-antivirus-updates/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>ShinyHunters claims FBI hack, data theft in PeopleSoft zero-day breach</title>
-    <id>urn:cybersecnews:item:430</id>
-    <published>2026-09-22T19:40:12.322220+00:00</published>
-    <updated>2026-09-22T19:40:12.322220+00:00</updated>
-    <link href="https://www.bleepingcomputer.com/news/security/shinyhunters-claims-fbi-hack-data-theft-in-peoplesoft-zero-day-breach/" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · zero-day · CVE-2026-35273&lt;/em&gt;&lt;/p&gt;&lt;p&gt;ShinyHunters claims exploitation of an unpatched Oracle PeopleSoft zero-day vulnerability to breach FBI systems and exfiltrate employee and applicant data. The group used the zero-day for remote code execution against PeopleSoft instances, a widely deployed HR and financial management platform affecting government and enterprise organizations. This represents a critical-severity vulnerability actively exploited in the wild with confirmed successful compromise of high-value targets. Oracle should prioritize emergency patching; affected organizations running PeopleSoft should immediately isolate instances, apply security updates upon release, and conduct forensic investigation for signs of breach.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/shinyhunters-claims-fbi-hack-data-theft-in-peoplesoft-zero-day-breach/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
   </entry>
 </feed>
