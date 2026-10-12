@@ -3,7 +3,25 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-10-10T04:34:51.741095+00:00</updated>
+  <updated>2026-10-12T17:26:38.110489+00:00</updated>
+  <entry>
+    <title>Inside AvisLoader: A Windows Malware Loader Built to Resist Disruption</title>
+    <id>urn:cybersecnews:item:534</id>
+    <published>2026-10-12T17:26:38.110489+00:00</published>
+    <updated>2026-10-12T17:26:38.110489+00:00</updated>
+    <link href="https://www.bleepingcomputer.com/news/security/inside-avisloader-a-windows-malware-loader-built-to-resist-disruption/" rel="alternate" />
+    <category term="red-team" />
+    <content type="html">&lt;p&gt;&lt;em&gt;red-team · c2&lt;/em&gt;&lt;/p&gt;&lt;p&gt;AvisLoader is a Windows malware loader employing encrypted peer-to-peer communications to evade command-and-control takedown efforts. The malware utilizes ClickFix social engineering for initial delivery, establishes persistence via shortcut files, and executes remote commands with high resilience to disruption. No severity rating or active exploitation details were provided in available information. Organizations should implement application whitelisting, educate users on ClickFix tactics, monitor for suspicious shortcut file creation, and maintain endpoint detection and response (EDR) capabilities to identify command execution patterns.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/inside-avisloader-a-windows-malware-loader-built-to-resist-disruption/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Attackers Exploit CVSS 10.0 Bricksforge WordPress Flaw Enabling Unauthenticated RCE</title>
+    <id>urn:cybersecnews:item:533</id>
+    <published>2026-10-12T17:26:38.108375+00:00</published>
+    <updated>2026-10-12T17:26:38.108375+00:00</updated>
+    <link href="https://thehackernews.com/2026/10/attackers-exploit-cvss-100-bricksforge.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-85097&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Bricksforge WordPress plugin is vulnerable to CVE-2026-85097, a CVSS 10.0 critical flaw allowing unauthenticated remote code execution through arbitrary PHP file upload. The vulnerability is actively exploited in the wild. Immediate patching is required; administrators should update Bricksforge to the latest patched version and verify no unauthorized code execution has occurred on affected systems.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/attackers-exploit-cvss-100-bricksforge.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Nginx UI: Authenticated Remote Code Execution via Backup Restore App Config Overwrite (CVE-2026-107806)</title>
     <id>urn:cybersecnews:item:532</id>
@@ -885,23 +903,5 @@
     <link href="https://github.com/advisories/GHSA-wrhw-j3f9-8vc6" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-77244&lt;/em&gt;&lt;/p&gt;&lt;p&gt;mcp-atlassian's AtlassianOpaqueTokenVerifier accepts any non-empty token without validation, allowing authentication bypass in multi-user deployments (Pattern B). This critical vulnerability affects systems using per-request tokens via Authorization headers or service headers, enabling unauthorized access to Jira/Confluence. No evidence of wild exploitation reported. Immediately patch to the latest version and implement server-side token validation; single-user deployments using environment variables (Pattern A) are unaffected but should still update as a precaution.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-wrhw-j3f9-8vc6"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>OpenBao's Recovery Mode Vulnerable To Token Leakage via Timing Attack (CVE-2026-63132)</title>
-    <id>urn:cybersecnews:item:434</id>
-    <published>2026-09-23T03:34:51.679530+00:00</published>
-    <updated>2026-09-23T03:34:51.679530+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-34fc-gh42-pj53" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · timing-attack · CVE-2026-63132&lt;/em&gt;&lt;/p&gt;&lt;p&gt;OpenBao versions prior to 2.6.0 are vulnerable to a timing attack against the recovery token in recovery mode (CVE-2026-63132). An attacker can exploit variable response times during token validation to extract the recovery token and subsequently access or modify sensitive data in the OpenBao instance. This is a critical severity vulnerability with no reported wild exploitation at present. Upgrade to OpenBao v2.6.0 or later immediately, and consider disabling recovery mode when not actively needed.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-34fc-gh42-pj53"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Home Assistant: XSS in Statistics Graph Card (CVE-2026-91130)</title>
-    <id>urn:cybersecnews:item:433</id>
-    <published>2026-09-23T03:34:51.678242+00:00</published>
-    <updated>2026-09-23T03:34:51.678242+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-wx4m-69m9-gx3m" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · xss · CVE-2026-91130&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Home Assistant's Statistics Graph Card is vulnerable to Cross-Site Scripting (CVE-2026-91130) when an authenticated user injects malicious code into entity names; the payload executes when other users hover over chart data points. This critical severity vulnerability requires authentication but affects all users viewing the compromised statistics card. Patch to the latest Home Assistant version immediately as this vulnerability likely enables account takeover or lateral movement within the Home Assistant instance. Review entity names across your installation for suspicious characters and restrict entity renaming permissions to trusted administrators.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-wx4m-69m9-gx3m"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
   </entry>
 </feed>
