@@ -3,7 +3,61 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-10-12T17:26:38.110489+00:00</updated>
+  <updated>2026-10-13T15:38:21.392762+00:00</updated>
+  <entry>
+    <title>Releasing the Cobalt Strike Beacon Corpus</title>
+    <id>urn:cybersecnews:item:540</id>
+    <published>2026-10-13T15:38:21.392762+00:00</published>
+    <updated>2026-10-13T15:38:21.392762+00:00</updated>
+    <link href="https://blog.fox-it.com/2026/10/13/releasing-the-cobalt-strike-beacon-corpus/" rel="alternate" />
+    <category term="red-team" />
+    <content type="html">&lt;p&gt;&lt;em&gt;red-team · c2&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Fox-IT released a comprehensive dataset of 56,843 Cobalt Strike Beacon samples with parsed configurations collected from over 30,600 unique command-and-control servers between July 2018 and September 2026. This corpus documents widespread exploitation of Cobalt Strike, a legitimate penetration testing framework frequently weaponized by threat actors for post-exploitation activities. The dataset provides security researchers and defenders with detailed intelligence on malicious beacon infrastructure, configurations, and deployment patterns to improve detection and attribution capabilities. Organizations should use this corpus to enhance threat hunting, update detection signatures for Cobalt Strike C2 communication patterns, and conduct forensic analysis of compromised systems potentially connected to these known malicious Team Servers.&lt;/p&gt;&lt;p&gt;&lt;a href="https://blog.fox-it.com/2026/10/13/releasing-the-cobalt-strike-beacon-corpus/"&gt;Read more&lt;/a&gt; · Source: fox-it&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>CVE-2026-97229: Critical Unauthenticated Remote Code Execution in GitLab</title>
+    <id>urn:cybersecnews:item:539</id>
+    <published>2026-10-13T15:38:21.391639+00:00</published>
+    <updated>2026-10-13T15:38:21.391639+00:00</updated>
+    <link href="https://www.rapid7.com/blog/post/etr-cve-2026-97229-critical-unauthenticated-remote-code-execution-in-gitlab" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · integer-overflow-rce · CVE-2026-97229&lt;/em&gt;&lt;/p&gt;&lt;p&gt;GitLab Community and Enterprise Editions (CE/EE) versions 19.2 through 19.4.1 contain a critical integer overflow (CWE-190) in the CI/CD regular expression compiler that enables unauthenticated remote code execution with a CVSS score of 10.0. An attacker must commit a malicious .gitlab-ci.yml to a repository with UTF-8 characters; when evaluated, an encoding recompilation triggers integer overflow in Onigmo regex engine, allowing arbitrary code execution as the GitLab git user. While no confirmed in-the-wild exploitation exists, Rapid7 has independently reproduced code execution on unpatched instances. Organizations must immediately upgrade affected self-managed instances to versions 19.2.8, 19.3.5, or 19.4.2 outside normal patch cycles; GitLab.com and Dedicated are unaffected. Interim mitigation includes restricting anonymous access and preventing untrusted users from creating public projects, though these do not remediate the underlying vulnerability.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.rapid7.com/blog/post/etr-cve-2026-97229-critical-unauthenticated-remote-code-execution-in-gitlab"&gt;Read more&lt;/a&gt; · Source: rapid7&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Ivanti Connect Secure: Ivanti Connect Secure Authentication Bypass by Spoofing Vulnerability (CVE-2026-104935)</title>
+    <id>urn:cybersecnews:item:538</id>
+    <published>2026-10-13T15:38:21.390872+00:00</published>
+    <updated>2026-10-13T15:38:21.390872+00:00</updated>
+    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-104935" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-104935&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Ivanti Connect Secure is affected by CVE-2026-104935, an authentication bypass vulnerability allowing remote unauthenticated attackers to execute arbitrary commands through spoofing. This vulnerability is actively exploited in the wild and carries high severity. Immediately apply vendor mitigations per CISA BOD 26-04 guidance, prioritize patching based on internet exposure risk assessment, or discontinue use if patches are unavailable. Conduct forensics triage on affected systems per CISA requirements.&lt;/p&gt;&lt;p&gt;&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2026-104935"&gt;Read more&lt;/a&gt; · Source: cisa-kev&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Two Critical MarkLogic Flaws Could Give Delegated Managers Persistent Admin Control</title>
+    <id>urn:cybersecnews:item:537</id>
+    <published>2026-10-13T15:38:21.390083+00:00</published>
+    <updated>2026-10-13T15:38:21.390083+00:00</updated>
+    <link href="https://thehackernews.com/2026/10/two-critical-marklogic-flaws-could-give.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · privilege-escalation&lt;/em&gt;&lt;/p&gt;&lt;p&gt;MarkLogic Server versions prior to 11.3.7 and 12.1.0 contain two critical privilege escalation vulnerabilities that allow delegated manager accounts to obtain persistent administrator control of the database server. Progress Software released patches in September 2024, with 31 total vulnerabilities disclosed in October including five rated critical. Organizations should immediately apply updates to MarkLogic 11.3.7 or 12.1.0 or later, prioritizing this patch given the privilege escalation severity and potential for lateral movement within managed environments.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/two-critical-marklogic-flaws-could-give.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>LG Smart TVs Vulnerable to Pre-Auth Root Takeover From Local Network</title>
+    <id>urn:cybersecnews:item:536</id>
+    <published>2026-10-13T15:38:21.388974+00:00</published>
+    <updated>2026-10-13T15:38:21.388974+00:00</updated>
+    <link href="https://thehackernews.com/2026/10/lg-smart-tvs-vulnerable-to-pre-auth.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · pre-auth-rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;LG webOS smart TVs contain three pre-authentication vulnerabilities allowing local network attackers to chain exploits for unauthenticated root access without user interaction. The vulnerabilities affect models 32LQ636BPSA and 27TQ600SW running webOS 7.5.7-25 and represent a critical severity issue enabling complete device compromise. LG has released patches; affected users should immediately update their TV firmware and consider network segmentation to restrict smart TV access from untrusted devices on their home network.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/lg-smart-tvs-vulnerable-to-pre-auth.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Patchday SAP: Angreifer können Systeme übernehmen</title>
+    <id>urn:cybersecnews:item:535</id>
+    <published>2026-10-13T15:38:21.387513+00:00</published>
+    <updated>2026-10-13T15:38:21.387513+00:00</updated>
+    <link href="https://www.heise.de/news/Patchday-SAP-Angreifer-koennen-Systeme-uebernehmen-11486228.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;SAP Cloud SDK for Python and related SAP enterprise products received critical security updates addressing remote code execution vulnerabilities that could allow attackers to gain system control. The vulnerabilities affect multiple SAP applications and components, with high severity ratings. Exploitation in active attacks has been reported or is considered likely given the attack vectors. Organizations running affected SAP systems should apply the latest patches immediately as part of standard patch management procedures; admins should prioritize deployment given the severity and exploitation potential.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.heise.de/news/Patchday-SAP-Angreifer-koennen-Systeme-uebernehmen-11486228.html"&gt;Read more&lt;/a&gt; · Source: heise-security&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Inside AvisLoader: A Windows Malware Loader Built to Resist Disruption</title>
     <id>urn:cybersecnews:item:534</id>
@@ -236,7 +290,7 @@
     <updated>2026-10-07T21:03:27.878912+00:00</updated>
     <link href="https://github.com/advisories/GHSA-rqcc-94gv-wjm9" rel="alternate" />
     <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-62253, CVE-2026-68582&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Homer API authentication bypass in coordinator JWT middleware (CVE-2026-62253) allows complete unauthenticated access to protected endpoints under `/api/v1`, `/api/v3`, and `/api/v4` when the default empty `coordinator.jwt.secret` configuration is used. The vulnerability exists in `JWTMiddleware` and `JWTMiddlewareV4` functions which immediately return without validation when jwt secret is empty. This is a critical severity issue affecting default installations with no evidence of active wild exploitation noted. Immediately configure a non-empty `coordinator.jwt.secret` value in production deployments and apply patches when available from the Homer project.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-rqcc-94gv-wjm9"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-105445, CVE-2026-35029, CVE-2026-59823, CVE-2026-62253, CVE-2026-68582&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Homer API authentication bypass in coordinator JWT middleware (CVE-2026-62253) allows complete unauthenticated access to protected endpoints under `/api/v1`, `/api/v3`, and `/api/v4` when the default empty `coordinator.jwt.secret` configuration is used. The vulnerability exists in `JWTMiddleware` and `JWTMiddlewareV4` functions which immediately return without validation when jwt secret is empty. This is a critical severity issue affecting default installations with no evidence of active wild exploitation noted. Immediately configure a non-empty `coordinator.jwt.secret` value in production deployments and apply patches when available from the Homer project.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-rqcc-94gv-wjm9"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
   </entry>
   <entry>
     <title>Homer: Hardcoded Default Admin Password 'sipcapture' With No Forced Change on First Login (CVE-2026-62252)</title>
@@ -849,59 +903,5 @@
     <link href="https://github.com/advisories/GHSA-jjq7-m736-w977" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-77602&lt;/em&gt;&lt;/p&gt;&lt;p&gt;OpenC3 COSMOS is vulnerable to authenticated remote code execution (CVE-2026-77602, critical severity) through user-writable configuration overlays in the `targets_modified/` directory. An authenticated attacker can inject arbitrary code via ERB template injection in configuration files, generic conversion blocks that execute Ruby/Python code, or script suite procedures that are dynamically required. This vulnerability is likely exploited in the wild given the trivial exploitation path for authenticated users with write access. Immediately patch COSMOS to the latest version and restrict write permissions on the `targets_modified/` directory; additionally, disable ERB rendering for untrusted configuration files or implement strict input validation.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-jjq7-m736-w977"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>How One Kubernetes YAML Can Hand Over a GCP Organization</title>
-    <id>urn:cybersecnews:item:440</id>
-    <published>2026-09-23T19:29:41.199857+00:00</published>
-    <updated>2026-09-23T19:29:41.199857+00:00</updated>
-    <link href="https://www.bleepingcomputer.com/news/security/how-one-kubernetes-yaml-can-hand-over-a-gcp-organization/" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · privilege-escalation&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Google Kubernetes Config Connector (KCC) allows Kubernetes users with limited permissions to escalate privileges to organization-wide control over GCP through a confused deputy vulnerability. An attacker can craft a malicious YAML manifest that exploits KCC's broad IAM permissions to create or modify GCP resources across the entire organization, bypassing intended access controls. This represents a critical severity issue with high exploitability for organizations using KCC without proper RBAC restrictions. Mitigate by implementing least-privilege Kubernetes RBAC policies for KCC service accounts, using organizational policy constraints to restrict resource creation scope, and auditing existing KCC permissions against principle of least privilege.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/how-one-kubernetes-yaml-can-hand-over-a-gcp-organization/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Hackers start exploiting critical WordPress flaw for code execution</title>
-    <id>urn:cybersecnews:item:439</id>
-    <published>2026-09-23T19:29:41.198089+00:00</published>
-    <updated>2026-09-23T19:29:41.198089+00:00</updated>
-    <link href="https://www.bleepingcomputer.com/news/security/hackers-start-exploiting-critical-wordpress-flaw-for-code-execution/" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-87902&lt;/em&gt;&lt;/p&gt;&lt;p&gt;CVE-2026-87902 affects WordPress and allows remote code execution through arbitrary file writing to disk. Threat actors are actively exploiting this critical vulnerability in the wild to execute shell commands on compromised systems. Immediate patching is required for all affected WordPress installations; apply available security updates without delay and audit systems for indicators of compromise including unexpected files and suspicious command execution.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/hackers-start-exploiting-critical-wordpress-flaw-for-code-execution/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>A Leaked GitLab Issue Email Address Lets Anyone Push Code and Run CI Jobs as You</title>
-    <id>urn:cybersecnews:item:438</id>
-    <published>2026-09-23T19:29:41.196664+00:00</published>
-    <updated>2026-09-23T19:29:41.196664+00:00</updated>
-    <link href="https://thehackernews.com/2026/09/a-leaked-gitlab-issue-email-address.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass&lt;/em&gt;&lt;/p&gt;&lt;p&gt;GitLab's confidential issue email feature exposes a sensitive credential that functions as authentication for code commits and CI/CD job execution. An attacker obtaining a user's private issue email address can push commits to any branch the user has access to, including main, and trigger CI/CD pipelines executing with the victim's privileges. This is a high-severity vulnerability enabling supply chain compromise and unauthorized code execution. GitLab should rotate compromised email addresses immediately and implement additional authentication mechanisms for email-based code submission; users should treat their issue email addresses as highly sensitive secrets and rotate them if exposed.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/09/a-leaked-gitlab-issue-email-address.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Absturzgefahr: Exploit lässt Angreifer DJI-Drohnen mitten im Flug kapern</title>
-    <id>urn:cybersecnews:item:437</id>
-    <published>2026-09-23T13:24:16.068452+00:00</published>
-    <updated>2026-09-23T13:24:16.068452+00:00</updated>
-    <link href="https://www.golem.de/news/per-bluetooth-exploit-laesst-angreifer-dji-drohnen-mitten-im-flug-kapern-2609-213353.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Multiple DJI drone models are vulnerable to a critical WiFi-based vulnerability enabling complete remote takeover during flight operations. The flaw allows attackers to hijack affected drones mid-air without authentication, posing severe safety risks. Exploit code appears to be circulating in security research communities though active wild exploitation is not confirmed widespread. DJI has released firmware patches for affected models; immediate firmware updates are strongly recommended for all users.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.golem.de/news/per-bluetooth-exploit-laesst-angreifer-dji-drohnen-mitten-im-flug-kapern-2609-213353.html"&gt;Read more&lt;/a&gt; · Source: golem-security&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Patchday: Adobe Connect ist unter Android, macOS und Windows verwundbar</title>
-    <id>urn:cybersecnews:item:436</id>
-    <published>2026-09-23T13:24:16.067127+00:00</published>
-    <updated>2026-09-23T13:24:16.067127+00:00</updated>
-    <link href="https://www.heise.de/news/Patchday-Adobe-Connect-ist-unter-Android-macOS-und-Windows-verwundbar-11462802.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · unspecified&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Adobe Connect patches critical vulnerabilities affecting Android, macOS, and Windows platforms, including arbitrary code execution and authentication bypass flaws. The severity warrants immediate patching across all affected systems and platforms. Users should prioritize applying available security updates to close exploitation vectors. Recommend coordinating deployment across enterprise Android MDM, macOS, and Windows patch management systems to ensure comprehensive coverage.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.heise.de/news/Patchday-Adobe-Connect-ist-unter-Android-macOS-und-Windows-verwundbar-11462802.html"&gt;Read more&lt;/a&gt; · Source: heise-security&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>[mcp-atlassian] Authentication bypass in HTTP transport: AtlassianOpaqueTokenVerifier accepts any non-empty token (CVE-2026-77244)</title>
-    <id>urn:cybersecnews:item:435</id>
-    <published>2026-09-23T03:34:51.680655+00:00</published>
-    <updated>2026-09-23T03:34:51.680655+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-wrhw-j3f9-8vc6" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-77244&lt;/em&gt;&lt;/p&gt;&lt;p&gt;mcp-atlassian's AtlassianOpaqueTokenVerifier accepts any non-empty token without validation, allowing authentication bypass in multi-user deployments (Pattern B). This critical vulnerability affects systems using per-request tokens via Authorization headers or service headers, enabling unauthorized access to Jira/Confluence. No evidence of wild exploitation reported. Immediately patch to the latest version and implement server-side token validation; single-user deployments using environment variables (Pattern A) are unaffected but should still update as a precaution.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-wrhw-j3f9-8vc6"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
   </entry>
 </feed>
