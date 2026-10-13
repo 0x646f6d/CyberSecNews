@@ -3,7 +3,52 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-10-13T15:38:21.392762+00:00</updated>
+  <updated>2026-10-13T21:01:59.319174+00:00</updated>
+  <entry>
+    <title>October 2026 Microsoft Patch Tuesday, (Tue, Oct 13th)</title>
+    <id>urn:cybersecnews:item:545</id>
+    <published>2026-10-13T21:01:59.319174+00:00</published>
+    <updated>2026-10-13T21:01:59.319174+00:00</updated>
+    <link href="https://isc.sans.edu/diary/rss/33422" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · mixed&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Microsoft released patches for 1,417 vulnerabilities in October 2026 Patch Tuesday, including 76 critical-severity issues across multiple products and components. One vulnerability is currently exploited in the wild and another was disclosed prior to patch release, indicating active threat activity. Seven critical vulnerabilities require no customer action, while the remainder should be prioritized for immediate patching based on organizational risk assessment and affected system inventory. Organizations should deploy patches urgently for exploited and pre-disclosed vulnerabilities, and establish a triage process for the remaining critical issues based on asset criticality and exposure.&lt;/p&gt;&lt;p&gt;&lt;a href="https://isc.sans.edu/diary/rss/33422"&gt;Read more&lt;/a&gt; · Source: sans-isc&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Microsoft Security Advisory CVE-2026-70188 - ASP.NET Core Security Feature Bypass Vulnerability</title>
+    <id>urn:cybersecnews:item:544</id>
+    <published>2026-10-13T21:01:59.318257+00:00</published>
+    <updated>2026-10-13T21:01:59.318257+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-fpq8-4vhr-rcxx" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · security-feature-bypass · CVE-2026-70188&lt;/em&gt;&lt;/p&gt;&lt;p&gt;CVE-2026-70188 affects Microsoft.AspNetCore.Server.Kestrel.Core across multiple platforms (Linux ARM/x64, macOS). The vulnerability is a security feature bypass where Kestrel improperly accepts newline characters in HTTP/2 request trailers and HPACK dynamic table values instead of rejecting them as malformed, potentially allowing request smuggling or header injection attacks. Severity is critical with no indication of current wild exploitation. Developers must update the affected Microsoft.AspNetCore.App.Runtime packages to patched versions immediately.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-fpq8-4vhr-rcxx"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Microsoft Security Advisory CVE-2026-88092 - ASP.NET Core Security Feature Bypass Vulnerability</title>
+    <id>urn:cybersecnews:item:543</id>
+    <published>2026-10-13T21:01:59.317465+00:00</published>
+    <updated>2026-10-13T21:01:59.317465+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-rv87-ccxw-8ggf" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · request-smuggling · CVE-2026-88092&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Microsoft.AspNetCore.Server.Kestrel.Core contains a critical HTTP request smuggling vulnerability (CVE-2026-88092) where aborted HTTP/1 connections can reparse unread request-body bytes as separate requests, enabling request desynchronization attacks. The vulnerability affects multiple runtime packages across Linux and macOS platforms and is classified as critical severity. Immediate patching is required; developers must update to the latest patched version of Microsoft.AspNetCore.App.Runtime packages across all affected platform variants. Monitor for exploitation attempts targeting Kestrel-based applications until patches are fully deployed.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-rv87-ccxw-8ggf"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Microsoft Windows: Microsoft Windows Command Injection Vulnerability (CVE-2026-96951)</title>
+    <id>urn:cybersecnews:item:542</id>
+    <published>2026-10-13T21:01:59.316308+00:00</published>
+    <updated>2026-10-13T21:01:59.316308+00:00</updated>
+    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-96951" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · command-injection · CVE-2026-96951&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Microsoft Windows Shell is vulnerable to command injection (CVE-2026-96951) allowing network-based attackers to bypass security features; this vulnerability is actively exploited in the wild and carries high severity. Immediately apply vendor patches in accordance with CISA BOD 26-04 prioritization guidance, with expedited remediation required for internet-facing systems. For environments where patches are unavailable, implement mitigations per vendor documentation or discontinue use of affected systems. Conduct forensics triage on potentially compromised assets per CISA requirements.&lt;/p&gt;&lt;p&gt;&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2026-96951"&gt;Read more&lt;/a&gt; · Source: cisa-kev&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Docker Fixes Critical Two-Year-Old Hub Flaw That Let One User Push Images as Another</title>
+    <id>urn:cybersecnews:item:541</id>
+    <published>2026-10-13T21:01:59.315194+00:00</published>
+    <updated>2026-10-13T21:01:59.315194+00:00</updated>
+    <link href="https://thehackernews.com/2026/10/docker-fixes-critical-two-year-old-hub.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Docker Hub contained a critical authorization flaw in the account-to-organization conversion feature that persisted for two years, allowing authenticated users to push, pull, or delete container images as another user. The vulnerability affected Docker Hub's core image registry functionality and had CVSS severity indicating critical risk. Docker reports no evidence of active exploitation in the wild. Affected users should ensure their Docker Hub installation is updated to the patched version released September 30, 2024, and review image repository access logs for unauthorized activity.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/docker-fixes-critical-two-year-old-hub.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Releasing the Cobalt Strike Beacon Corpus</title>
     <id>urn:cybersecnews:item:540</id>
@@ -380,7 +425,7 @@
     <updated>2026-10-06T20:49:46.732306+00:00</updated>
     <link href="https://github.com/advisories/GHSA-w5f4-fx9m-m4q7" rel="alternate" />
     <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-105794&lt;/em&gt;&lt;/p&gt;&lt;p&gt;MsQuic's OpenSSL and QuicTLS backends contain improper TLS hostname verification (CVE-2026-105794), allowing on-path attackers to perform MITM attacks by presenting mismatched certificates. This critical vulnerability affects Microsoft.Native.Quic.MsQuic.OpenSSL on NuGet; the Schannel backend is unaffected. Immediate patching to versions 2.6.1, 2.5.11, or 2.4.20 is required for all systems using OpenSSL/QuicTLS backends. No active exploitation in the wild is indicated, but given the critical severity and ease of exploitation, patching should be prioritized.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-w5f4-fx9m-m4q7"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-105016, CVE-2026-105794&lt;/em&gt;&lt;/p&gt;&lt;p&gt;MsQuic's OpenSSL and QuicTLS backends contain improper TLS hostname verification (CVE-2026-105794), allowing on-path attackers to perform MITM attacks by presenting mismatched certificates. This critical vulnerability affects Microsoft.Native.Quic.MsQuic.OpenSSL on NuGet; the Schannel backend is unaffected. Immediate patching to versions 2.6.1, 2.5.11, or 2.4.20 is required for all systems using OpenSSL/QuicTLS backends. No active exploitation in the wild is indicated, but given the critical severity and ease of exploitation, patching should be prioritized.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-w5f4-fx9m-m4q7"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
   </entry>
   <entry>
     <title>Payload: SQL Injection in SQLite and Postgres (CVE-2026-105845)</title>
@@ -858,50 +903,5 @@
     <link href="https://www.bleepingcomputer.com/news/security/cisa-ransomware-gangs-now-exploiting-critical-teamcity-flaw/" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;JetBrains TeamCity is actively being exploited by ransomware operators for a critical remote code execution vulnerability (CVE-2024-27198) patched in July 2024. The flaw allows unauthenticated attackers to execute arbitrary code on affected systems, making it high-severity and widely leveraged in the wild. CISA recommends immediate patching to the latest version; organizations using TeamCity should prioritize this update to prevent ransomware deployment and ensure all instances are fully patched without delay.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/cisa-ransomware-gangs-now-exploiting-critical-teamcity-flaw/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Hackers now exploit critical Roundcube flaw in code injection attacks</title>
-    <id>urn:cybersecnews:item:445</id>
-    <published>2026-09-24T19:50:41.998442+00:00</published>
-    <updated>2026-09-24T19:50:41.998442+00:00</updated>
-    <link href="https://www.bleepingcomputer.com/news/security/critical-roundcube-flaw-now-actively-exploited-in-code-injection-attacks/" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · code-injection · CVE-2026-48842&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Roundcube Webmail is under active exploitation for a high-severity code injection vulnerability that was patched in May. The flaw allows remote attackers to execute arbitrary code through template injection, compromising email server security and user data. This vulnerability is confirmed exploited in the wild. Organizations running Roundcube should immediately apply the May security patch or later versions to mitigate active attack campaigns.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/critical-roundcube-flaw-now-actively-exploited-in-code-injection-attacks/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Unpatched OnePlus Flaws Let Installed Android Apps Gain Root Without Permissions</title>
-    <id>urn:cybersecnews:item:444</id>
-    <published>2026-09-24T19:50:41.996670+00:00</published>
-    <updated>2026-09-24T19:50:41.996670+00:00</updated>
-    <link href="https://thehackernews.com/2026/09/unpatched-oneplus-flaws-let-installed.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · privilege-escalation&lt;/em&gt;&lt;/p&gt;&lt;p&gt;OnePlus devices running OxygenOS are vulnerable to privilege escalation via two chained flaws in proprietary software that allow installed applications to gain root access without requesting any permissions. Researcher Rasmus Moorats demonstrated the vulnerability affecting OnePlus 15 and confirmed the same issues impact multiple OnePlus and OPPO devices; severity is critical as this enables complete device compromise. There is no indication of active exploitation in the wild, but given the simplicity of the attack (no special permissions required), exploitation risk is high. OnePlus users should await security patches immediately; currently, no workaround exists beyond avoiding installation of untrusted applications.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/09/unpatched-oneplus-flaws-let-installed.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Sicherheitspatch gegen Schadcode repariert SolarWinds Observability Self-Hosted</title>
-    <id>urn:cybersecnews:item:443</id>
-    <published>2026-09-24T13:17:04.836328+00:00</published>
-    <updated>2026-09-24T13:17:04.836328+00:00</updated>
-    <link href="https://www.heise.de/news/Sicherheitspatch-gegen-Schadcode-repariert-SolarWinds-Observability-Self-Hosted-11464112.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;SolarWinds Observability Self-Hosted contains a vulnerability allowing arbitrary code execution under specific conditions. The flaw affects the infrastructure monitoring solution and poses significant risk to affected deployments. SolarWinds has released a security patch to address this issue. Organizations running SolarWinds Observability Self-Hosted should apply the available security update immediately, particularly if the system is exposed to untrusted networks or user input.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.heise.de/news/Sicherheitspatch-gegen-Schadcode-repariert-SolarWinds-Observability-Self-Hosted-11464112.html"&gt;Read more&lt;/a&gt; · Source: heise-security&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Moquette: Pattern-ACL wildcard injection (cross-tenant authorization bypass) plus a remote-unauthenticated DoS cluster, a Will-message authorization bypass, and a cross-session durable-corruption bug (CVE-2026-85724)</title>
-    <id>urn:cybersecnews:item:442</id>
-    <published>2026-09-23T19:29:41.201855+00:00</published>
-    <updated>2026-09-23T19:29:41.201855+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-5f42-97gr-vfhq" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass,dos,acl-bypass · CVE-2026-85724&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Moquette MQTT broker (io.moquette:moquette-broker) contains multiple critical authorization and denial-of-service vulnerabilities (CVE-2026-85724) affecting pattern-based ACLs, Will-message authorization, and cross-session integrity. Unauthenticated remote clients can bypass pattern ACLs across tenants, trigger remote DoS, bypass Will-message authorization, and cause durable corruption—though RCE is not possible on the JVM platform. Severity is critical; exploitation likelihood in the wild is unknown but the anonymous-by-default configuration makes it accessible. Patch or upgrade to a patched version immediately; review and restrict anonymous MQTT access pending patches.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-5f42-97gr-vfhq"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>OpenC3 COSMOS: Authenticated remote code execution via the user-writable config overlay (table definitions, cmd/tlm definitions, and script suites) (CVE-2026-77602)</title>
-    <id>urn:cybersecnews:item:441</id>
-    <published>2026-09-23T19:29:41.200813+00:00</published>
-    <updated>2026-09-23T19:29:41.200813+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-jjq7-m736-w977" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-77602&lt;/em&gt;&lt;/p&gt;&lt;p&gt;OpenC3 COSMOS is vulnerable to authenticated remote code execution (CVE-2026-77602, critical severity) through user-writable configuration overlays in the `targets_modified/` directory. An authenticated attacker can inject arbitrary code via ERB template injection in configuration files, generic conversion blocks that execute Ruby/Python code, or script suite procedures that are dynamically required. This vulnerability is likely exploited in the wild given the trivial exploitation path for authenticated users with write access. Immediately patch COSMOS to the latest version and restrict write permissions on the `targets_modified/` directory; additionally, disable ERB rendering for untrusted configuration files or implement strict input validation.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-jjq7-m736-w977"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
   </entry>
 </feed>
