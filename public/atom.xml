@@ -3,7 +3,52 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-10-14T13:21:32.498251+00:00</updated>
+  <updated>2026-10-14T20:01:31.948025+00:00</updated>
+  <entry>
+    <title>Unauthenticated SQL Injection In Channel Software WebAlliance eCommerce</title>
+    <id>urn:cybersecnews:item:556</id>
+    <published>2026-10-14T20:01:31.948025+00:00</published>
+    <updated>2026-10-14T20:01:31.948025+00:00</updated>
+    <link href="https://www.rapid7.com/blog/post/ve-unauthenticated-sql-injection-in-channel-software-weballiance-ecommerce" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · sqli · CVE-2026-108065&lt;/em&gt;&lt;/p&gt;&lt;p&gt;CVE-2026-108065 affects Channel Software WebAlliance eCommerce, an unauthenticated SQL injection vulnerability in the GetUser SOAP method's sUserID parameter that fails to properly escape user input. The vulnerability is critical (CVSS 9.8) and allows attackers to extract sensitive data including PII and passwords, or execute system commands if the database runs with admin privileges; exploitation via time-based SQL injection and MSSQL stacked queries is trivial and no evidence of wild exploitation is reported but the public PoC increases risk. Organizations running WebAlliance eCommerce should immediately block access to /preapproval.asmx endpoint as a temporary mitigation and contact Channel Software for a patched version, as the vendor has not released a fix as of October 2026.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.rapid7.com/blog/post/ve-unauthenticated-sql-injection-in-channel-software-weballiance-ecommerce"&gt;Read more&lt;/a&gt; · Source: rapid7&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>From One Account to Every Mailbox: Breaking Zimbra's Identity Boundaries (Part 1)</title>
+    <id>urn:cybersecnews:item:555</id>
+    <published>2026-10-14T20:01:31.946447+00:00</published>
+    <updated>2026-10-14T20:01:31.946447+00:00</updated>
+    <link href="https://www.rapid7.com/blog/post/ve-breaking-zimbra-identity-boundaries-part-1" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · multi · CVE-2026-10631, CVE-2026-50055, CVE-2026-73571, CVE-2026-93635, CVE-2026-93637&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Zimbra Collaboration Suite (ZCS) contains five account-related vulnerabilities affecting authentication, mailbox authorization, and mail filtering: CVE-2026-93637 (GraphQL authentication rate-limit bypass, CVSS 3.7), CVE-2026-93635 (LDAP filter injection, CVSS 5.3), CVE-2026-73571 (email impersonation via SaveDraftRequest, CVSS 8.3), CVE-2026-10631 (EWS cross-user mailbox access, CVSS 6.5), and CVE-2026-50055 (Sieve notify forwarding-restriction bypass, CVSS 6.5). CVE-2026-73571, CVE-2026-10631, and CVE-2026-50055 are confirmed fixed in ZCS 10.1.17–10.1.20; fixes for CVE-2026-93637 and CVE-2026-93635 were not publicly listed at publication. No evidence of active exploitation in the wild is mentioned, but the high-severity email impersonation flaw and the cross-user mailbox access vulnerability allow full account compromise chains when chained with subsequent findings. Affected organizations must immediately upgrade to ZCS 10.1.20 or later, inspect existing Sieve rules for illicit notify actions, and review EWS access logs for suspicious cross-account operations.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.rapid7.com/blog/post/ve-breaking-zimbra-identity-boundaries-part-1"&gt;Read more&lt;/a&gt; · Source: rapid7&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Cisco Secure Email Gateway: Cisco Secure Email Gateway Relative Path Traversal Vulnerability (CVE-2026-76519)</title>
+    <id>urn:cybersecnews:item:554</id>
+    <published>2026-10-14T20:01:31.945526+00:00</published>
+    <updated>2026-10-14T20:01:31.945526+00:00</updated>
+    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-76519" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · path-traversal · CVE-2026-76519&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Cisco Secure Email Gateway is affected by CVE-2026-76519, a relative path traversal vulnerability enabling unauthenticated remote attackers to write arbitrary files to the underlying operating system. This vulnerability is actively exploited in the wild and carries high severity due to the lack of authentication requirements and potential for complete system compromise. Immediately apply vendor mitigations per CISA BOD 26-04 guidelines; if mitigations are unavailable, discontinue use of the product. Conduct forensics triage on potentially compromised systems and assess internet exposure of all affected assets.&lt;/p&gt;&lt;p&gt;&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2026-76519"&gt;Read more&lt;/a&gt; · Source: cisa-kev&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Hackers Backdoor Nextcloud Servers Through Critical Flaw in Collabora’s Built-in CODE App</title>
+    <id>urn:cybersecnews:item:553</id>
+    <published>2026-10-14T20:01:31.944597+00:00</published>
+    <updated>2026-10-14T20:01:31.944597+00:00</updated>
+    <link href="https://thehackernews.com/2026/10/hackers-backdoor-nextcloud-servers.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;A critical vulnerability in Nextcloud's optional Collabora Online - Built-in CODE Server app allows unauthenticated attackers to execute arbitrary code and plant web shells on affected servers. The flaw has been actively exploited in the wild since at least September 10, with documented cases affecting multiple Nextcloud installations. Administrators should immediately update the Collabora Online app to the patched version and review server logs for suspicious activity or unauthorized web shell uploads. Alternatively, disable or remove the Collabora Online - Built-in CODE Server app if the functionality is not required.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/hackers-backdoor-nextcloud-servers.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Cisco Warns of Active Attacks Exploiting New Critical Secure Email Gateway Vulnerability</title>
+    <id>urn:cybersecnews:item:552</id>
+    <published>2026-10-14T20:01:31.943014+00:00</published>
+    <updated>2026-10-14T20:01:31.943014+00:00</updated>
+    <link href="https://thehackernews.com/2026/10/cisco-warns-of-active-attacks.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Cisco Secure Email Gateway contains a critical unauthenticated file write vulnerability (CVE-2024-20421) that allows remote attackers to execute arbitrary commands as root by sending crafted email attachments. This flaw is actively exploited in the wild with no authentication required. Immediate patching is essential; organizations should apply Cisco's available security updates or implement temporary workarounds if patches cannot be deployed immediately.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/cisco-warns-of-active-attacks.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>AI-Found Linux Kernel Flaw Gives Local Users Root, and Can Break a Guest Out to the Host</title>
     <id>urn:cybersecnews:item:551</id>
@@ -92,7 +137,7 @@
     <updated>2026-10-13T21:01:59.316308+00:00</updated>
     <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-96951" rel="alternate" />
     <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · command-injection · CVE-2026-108398, CVE-2026-70242, CVE-2026-70291, CVE-2026-88156, CVE-2026-96951, CVE-2026-97016, CVE-2026-97749&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Microsoft Windows Shell is vulnerable to command injection (CVE-2026-96951) allowing network-based attackers to bypass security features; this vulnerability is actively exploited in the wild and carries high severity. Immediately apply vendor patches in accordance with CISA BOD 26-04 prioritization guidance, with expedited remediation required for internet-facing systems. For environments where patches are unavailable, implement mitigations per vendor documentation or discontinue use of affected systems. Conduct forensics triage on potentially compromised assets per CISA requirements.&lt;/p&gt;&lt;p&gt;&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2026-96951"&gt;Read more&lt;/a&gt; · Source: cisa-kev&lt;/p&gt;</content>
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · command-injection · CVE-2026-0322, CVE-2026-108398, CVE-2026-70242, CVE-2026-70291, CVE-2026-88156, CVE-2026-96951, CVE-2026-97016, CVE-2026-97749&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Microsoft Windows Shell is vulnerable to command injection (CVE-2026-96951) allowing network-based attackers to bypass security features; this vulnerability is actively exploited in the wild and carries high severity. Immediately apply vendor patches in accordance with CISA BOD 26-04 prioritization guidance, with expedited remediation required for internet-facing systems. For environments where patches are unavailable, implement mitigations per vendor documentation or discontinue use of affected systems. Conduct forensics triage on potentially compromised assets per CISA requirements.&lt;/p&gt;&lt;p&gt;&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2026-96951"&gt;Read more&lt;/a&gt; · Source: cisa-kev&lt;/p&gt;</content>
   </entry>
   <entry>
     <title>Docker Fixes Critical Two-Year-Old Hub Flaw That Let One User Push Images as Another</title>
@@ -245,7 +290,7 @@
     <updated>2026-10-09T15:01:24.585941+00:00</updated>
     <link href="https://thehackernews.com/2026/10/attackers-exploit-ahsaycbs-flaws-to.html" rel="alternate" />
     <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-105133&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Attackers are actively exploiting two vulnerabilities in AhsayCBS backup software (CVE-2026-105133 and an undisclosed second flaw) to gain unauthorized device access and deploy XMRig cryptocurrency miners and web shells. CVE-2026-105133, a moderate-severity improper authentication flaw in the checkSysPwd() function (CVSS 5.5), is being leveraged in active exploitation campaigns. This threat is occurring in the wild with direct impact to confidentiality and system resources. Organizations running AhsayCBS should immediately patch to the latest available version and monitor systems for signs of cryptomining activity and unauthorized web shell access.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/attackers-exploit-ahsaycbs-flaws-to.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-105133, CVE-2026-105134&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Attackers are actively exploiting two vulnerabilities in AhsayCBS backup software (CVE-2026-105133 and an undisclosed second flaw) to gain unauthorized device access and deploy XMRig cryptocurrency miners and web shells. CVE-2026-105133, a moderate-severity improper authentication flaw in the checkSysPwd() function (CVSS 5.5), is being leveraged in active exploitation campaigns. This threat is occurring in the wild with direct impact to confidentiality and system resources. Organizations running AhsayCBS should immediately patch to the latest available version and monitor systems for signs of cryptomining activity and unauthorized web shell access.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/attackers-exploit-ahsaycbs-flaws-to.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
   </entry>
   <entry>
     <title>Researchers Publish Working Exploit for Pre-Auth AnyDesk Linux Flaw That Gives Root Access</title>
@@ -858,50 +903,5 @@
     <link href="https://isc.sans.edu/diary/rss/33372" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · multiple&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Wireshark 4.6.9 addresses 19 vulnerabilities across the packet analysis application, including memory safety issues and parsing flaws in various protocol dissectors. The severity levels of individual CVEs were not specified in the release notes. Upgrade to version 4.6.9 or later immediately; no evidence of active exploitation was noted. Users unable to patch should restrict Wireshark to trusted, isolated environments and avoid processing untrusted packet captures.&lt;/p&gt;&lt;p&gt;&lt;a href="https://isc.sans.edu/diary/rss/33372"&gt;Read more&lt;/a&gt; · Source: sans-isc&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Citrix Netscaler: Kritische Sicherheitslücken erlauben Codeeinschleusung</title>
-    <id>urn:cybersecnews:item:456</id>
-    <published>2026-09-27T19:34:21.859538+00:00</published>
-    <updated>2026-09-27T19:34:21.859538+00:00</updated>
-    <link href="https://www.heise.de/news/Sicherheitsforscher-warnen-Neue-Zero-Day-Exploits-in-Citrix-Netscaler-11467200.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-107406, CVE-2026-88771, CVE-2026-88772, CVE-2026-88773, CVE-2026-88774, CVE-2026-88775, CVE-2026-88776, CVE-2026-88777, CVE-2026-88778, CVE-2026-88779&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Citrix NetScaler is affected by critical code injection vulnerabilities that allow remote attackers to execute arbitrary code. The vulnerabilities are being actively exploited in the wild according to security researchers, making this a high-severity threat. Citrix has confirmed the issues and released updates; immediate patching is strongly recommended for all affected NetScaler installations. Organizations unable to patch immediately should implement network segmentation and access controls to restrict exposure.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.heise.de/news/Sicherheitsforscher-warnen-Neue-Zero-Day-Exploits-in-Citrix-Netscaler-11467200.html"&gt;Read more&lt;/a&gt; · Source: heise-security&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Metasploit Wrap Up: Belgian Waffles, Chocolates, and…Modules-Frites?</title>
-    <id>urn:cybersecnews:item:455</id>
-    <published>2026-09-25T19:52:30.541291+00:00</published>
-    <updated>2026-09-25T19:52:30.541291+00:00</updated>
-    <link href="https://www.rapid7.com/blog/post/pt-metasploit-wrap-up-belgian-waffles-chocolates-and-modules-frites" rel="alternate" />
-    <category term="red-team" />
-    <content type="html">&lt;p&gt;&lt;em&gt;red-team&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Metasploit framework added multiple new modules including exploits for CVE-2024-21894 (Microsoft SharePoint RCE) and CVE-2024-23897 (GitLab authentication bypass), alongside auxiliary modules for reconnaissance and post-exploitation. The SharePoint vulnerability allows unauthenticated remote code execution with high severity, while the GitLab flaw enables authentication bypass with medium-to-high impact; both have seen active exploitation in the wild. Organizations running affected SharePoint and GitLab instances should prioritize patching immediately, and network defenders should monitor for exploitation attempts using the newly published Metasploit modules as detection references.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.rapid7.com/blog/post/pt-metasploit-wrap-up-belgian-waffles-chocolates-and-modules-frites"&gt;Read more&lt;/a&gt; · Source: rapid7&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Elementor WordPress flaw lets attackers create admin accounts</title>
-    <id>urn:cybersecnews:item:454</id>
-    <published>2026-09-25T19:52:30.539863+00:00</published>
-    <updated>2026-09-25T19:52:30.539863+00:00</updated>
-    <link href="https://www.bleepingcomputer.com/news/security/elementor-wordpress-flaw-lets-attackers-create-admin-accounts/" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · csrf&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Elementor WordPress plugin contains a CSRF vulnerability allowing unauthenticated attackers to create administrator accounts through malicious requests. The flaw affects the plugin's user registration functionality and has moderate-to-high severity due to direct admin account creation enabling complete site compromise. Update Elementor to the patched version immediately; additionally, implement CSRF token validation and consider restricting registration endpoints to authenticated users where feasible.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/elementor-wordpress-flaw-lets-attackers-create-admin-accounts/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>PamStealer macOS Malware Adds Live C2 Payload Decryption and Multi-Layer Persistence</title>
-    <id>urn:cybersecnews:item:453</id>
-    <published>2026-09-25T19:52:30.538194+00:00</published>
-    <updated>2026-09-25T19:52:30.538194+00:00</updated>
-    <link href="https://thehackernews.com/2026/09/pamstealer-macos-malware-adds-live-c2.html" rel="alternate" />
-    <category term="red-team" />
-    <content type="html">&lt;p&gt;&lt;em&gt;red-team · c2&lt;/em&gt;&lt;/p&gt;&lt;p&gt;PamStealer, a macOS malware using JavaScript for Automation droppers, has evolved to employ server-side payload decryption and multi-layer persistence mechanisms, preventing offline analysis of the main payload. The malware maintains its JXA-based delivery method while updating lure techniques and distribution methods. Severity appears moderate to high given the enhanced evasion capabilities and persistence tactics, though specific wild exploitation rates are not detailed in available reporting. Organizations should prioritize blocking malicious JXA scripts, maintain updated endpoint detection for macOS systems, and educate users on suspicious file delivery methods, particularly those impersonating legitimate applications or documents.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/09/pamstealer-macos-malware-adds-live-c2.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Cloudflare Fixes Flaw That Let One Container Read Another Customer's Leftover Disk Data</title>
-    <id>urn:cybersecnews:item:452</id>
-    <published>2026-09-25T13:17:30.785502+00:00</published>
-    <updated>2026-09-25T13:17:30.785502+00:00</updated>
-    <link href="https://thehackernews.com/2026/09/cloudflare-fixes-flaw-that-let-one.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · information-disclosure&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Cloudflare Containers contained a data disclosure vulnerability allowing customers to read residual disk data from other customers' previously executed containers on shared infrastructure. The flaw affected disk space reuse between container instances and required no active exploitation technique beyond normal container execution. Cloudflare has patched the vulnerability; severity was mitigated by the inability to target specific victims and the residual nature of exposed data. Affected customers should verify they are running patched Cloudflare Container versions and review access logs for potential unauthorized data access during the vulnerability window.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/09/cloudflare-fixes-flaw-that-let-one.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
   </entry>
 </feed>
