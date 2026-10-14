@@ -3,7 +3,52 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-10-14T03:45:42.783546+00:00</updated>
+  <updated>2026-10-14T13:21:32.498251+00:00</updated>
+  <entry>
+    <title>AI-Found Linux Kernel Flaw Gives Local Users Root, and Can Break a Guest Out to the Host</title>
+    <id>urn:cybersecnews:item:551</id>
+    <published>2026-10-14T13:21:32.498251+00:00</published>
+    <updated>2026-10-14T13:21:32.498251+00:00</updated>
+    <link href="https://thehackernews.com/2026/10/ai-found-linux-kernel-flaw-gives-local.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · privilege-escalation · CVE-2026-74580&lt;/em&gt;&lt;/p&gt;&lt;p&gt;CVE-2026-74580 affects the Linux kernel's vhost subsystem across multiple versions spanning approximately a decade. The vulnerability allows local users to read and write arbitrary kernel memory, escalate to root privileges, and in virtualization scenarios enables guest VMs to access host memory and compromise the hypervisor process. Severity is critical with active exploitation potential in multi-tenant cloud environments. Immediate kernel patching is required; users should prioritize updates for affected distributions and review VM isolation controls pending patch deployment.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/ai-found-linux-kernel-flaw-gives-local.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>An AI Agent Found a Critical OTP Bypass in Production. The Attack Was the Easy Part.</title>
+    <id>urn:cybersecnews:item:550</id>
+    <published>2026-10-14T13:21:32.497253+00:00</published>
+    <updated>2026-10-14T13:21:32.497253+00:00</updated>
+    <link href="https://thehackernews.com/2026/10/an-ai-agent-found-critical-otp-bypass.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass&lt;/em&gt;&lt;/p&gt;&lt;p&gt;An AI pentesting agent identified a critical authentication bypass in a major insurer's production login system where users could arbitrarily redirect one-time passcodes to attacker-controlled destinations, circumventing OTP-based multi-factor authentication. This vulnerability allows complete account takeover with minimal technical sophistication and represents a fundamental flaw in OTP delivery validation rather than a weak implementation. The severity is critical with high exploitability; while discovered during authorized testing, the simplicity of the attack suggests it could be weaponized in the wild if not remediated. The affected organization must immediately implement server-side validation restricting OTP delivery destinations to pre-registered user-controlled channels, audit logs for exploitation evidence, and enforce strict controls over OTP transmission parameters.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/an-ai-agent-found-critical-otp-bypass.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Hirudo Android Trojan Uses Patched Banking Apps to Bypass Their Built-In Security Checks</title>
+    <id>urn:cybersecnews:item:549</id>
+    <published>2026-10-14T13:21:32.496378+00:00</published>
+    <updated>2026-10-14T13:21:32.496378+00:00</updated>
+    <link href="https://thehackernews.com/2026/10/hirudo-android-trojan-uses-patched.html" rel="alternate" />
+    <category term="red-team" />
+    <content type="html">&lt;p&gt;&lt;em&gt;red-team · banking-fraud&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Hirudo is an Android banking trojan that replaces legitimate banking apps with modified versions that disable built-in security checks, targeting Indonesian financial institutions. The malware operates by sideloading patched banking apps that bypass security mechanisms from within the application itself, representing an escalation in mobile banking fraud techniques. This represents a high-severity threat with active exploitation in the wild targeting Indonesian users. Users should uninstall suspicious banking apps, download only from official app stores, and enable Google Play Protect; financial institutions should enhance device attestation and implement server-side anomaly detection to identify compromised client instances.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/hirudo-android-trojan-uses-patched.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Researchers Used a Public OpenAI Model to Build a $250,000 Chrome Full-Chain Exploit in Six Days</title>
+    <id>urn:cybersecnews:item:548</id>
+    <published>2026-10-14T13:21:32.495511+00:00</published>
+    <updated>2026-10-14T13:21:32.495511+00:00</updated>
+    <link href="https://thehackernews.com/2026/10/researchers-used-public-openai-model-to.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Researchers used OpenAI's GPT-5.6 Sol model to chain three previously unknown Google Chrome vulnerabilities into a full exploit capable of arbitrary code execution on Windows via malicious web pages, demonstrating AI-assisted vulnerability discovery at scale. The exploit achieved high severity (full system compromise) and was not exploited in the wild before disclosure. Google has patched all three vulnerabilities and awarded XBOW a maximum bug bounty; organizations should apply Chrome updates immediately and consider restricting AI model access to security researchers given the accelerated exploit development timeline.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/researchers-used-public-openai-model-to.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>curl Patches HTTP/2 Upload Flaw After PoC Demonstrates Client-Side Code Execution</title>
+    <id>urn:cybersecnews:item:547</id>
+    <published>2026-10-14T13:21:32.493966+00:00</published>
+    <updated>2026-10-14T13:21:32.493966+00:00</updated>
+    <link href="https://thehackernews.com/2026/10/curl-patches-http2-upload-flaw-after.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · memory-corruption&lt;/em&gt;&lt;/p&gt;&lt;p&gt;curl versions prior to 8.23.0 contain an HTTP/2 upload vulnerability allowing malicious servers to corrupt client memory during file uploads, potentially enabling code execution. The flaw requires precise knowledge of the victim's build and memory layout, and exploitation typically results in client crashes, limiting practical real-world impact. A proof-of-concept has been publicly demonstrated. Affected organizations should upgrade to curl 8.23.0 or later immediately, particularly systems performing uploads to untrusted servers.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/curl-patches-http2-upload-flaw-after.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Ghostscript flaw lets hackers hijack servers via PDF uploads</title>
     <id>urn:cybersecnews:item:546</id>
@@ -858,50 +903,5 @@
     <link href="https://thehackernews.com/2026/09/cloudflare-fixes-flaw-that-let-one.html" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · information-disclosure&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Cloudflare Containers contained a data disclosure vulnerability allowing customers to read residual disk data from other customers' previously executed containers on shared infrastructure. The flaw affected disk space reuse between container instances and required no active exploitation technique beyond normal container execution. Cloudflare has patched the vulnerability; severity was mitigated by the inability to target specific victims and the residual nature of exposed data. Affected customers should verify they are running patched Cloudflare Container versions and review access logs for potential unauthorized data access during the vulnerability window.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/09/cloudflare-fixes-flaw-that-let-one.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Server am Samstagmorgen herunterfahren: Kiteworks warnt Admins vor Zero-Day</title>
-    <id>urn:cybersecnews:item:451</id>
-    <published>2026-09-25T13:17:30.783988+00:00</published>
-    <updated>2026-09-25T13:17:30.783988+00:00</updated>
-    <link href="https://www.heise.de/news/Bevorstehender-Zero-Day-Angriff-KiteWorks-draengt-Kunden-zur-Serverabschaltung-11466114.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Kiteworks secure file transfer and content collaboration platform is affected by an unpatched zero-day vulnerability being actively exploited in the wild. The company advised administrators to shut down servers immediately on Saturday morning and has notified law enforcement of confirmed attacks against large enterprises in Germany and elsewhere. Severity details and technical specifics were not disclosed in the warning, but the urgency and active exploitation indicate critical risk. Organizations should immediately take affected systems offline pending patch availability and conduct forensic investigation of potentially compromised systems.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.heise.de/news/Bevorstehender-Zero-Day-Angriff-KiteWorks-draengt-Kunden-zur-Serverabschaltung-11466114.html"&gt;Read more&lt;/a&gt; · Source: heise-security&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>SunEditor: Critical XSS vulnerability - sanitizer bypass (CVE-2026-59167)</title>
-    <id>urn:cybersecnews:item:450</id>
-    <published>2026-09-24T19:50:42.004813+00:00</published>
-    <updated>2026-09-24T19:50:42.004813+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-6rf4-v2fh-m6p4" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · xss · CVE-2026-59167&lt;/em&gt;&lt;/p&gt;&lt;p&gt;SunEditor v2.47.10 and prior versions contain a critical cross-site scripting (XSS) vulnerability (CVE-2026-59167) where the HTML sanitizer fails to remove event-handler attributes from namespaced or custom HTML elements, allowing attackers to inject executable JavaScript. The vulnerability stems from insufficient sanitization logic introduced in recent code changes and is likely exploitable in production environments. Organizations using SunEditor should immediately upgrade to a patched version once available, or implement strict input validation and content security policies as interim mitigations.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-6rf4-v2fh-m6p4"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>http4s-scala-xml has an XML External Entity (XXE) processing issue (CVE-2026-61741)</title>
-    <id>urn:cybersecnews:item:449</id>
-    <published>2026-09-24T19:50:42.003624+00:00</published>
-    <updated>2026-09-24T19:50:42.003624+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-cjx3-73hr-rpw7" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · xxe · CVE-2026-61741&lt;/em&gt;&lt;/p&gt;&lt;p&gt;The http4s-scala-xml library (all versions for Scala 2.12, 2.13, and 3) contains an XML External Entity (XXE) vulnerability in its EntityDecoder implementations for parsing XML message bodies. The affected SAXParserFactory instances lack security hardening and resolve external entities and DTDs by default, allowing attackers to exploit XXE attacks through untrusted XML input. This is a critical severity issue with active wild exploitation reported. Immediately update to a patched version and apply XXE protections such as disabling external entity resolution in XML parsers, or implement input validation on XML sources.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-cjx3-73hr-rpw7"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>DBHub HTTP transport DNS rebinding allows unauthenticated browser-origin SQL execution (CVE-2026-61742)</title>
-    <id>urn:cybersecnews:item:448</id>
-    <published>2026-09-24T19:50:42.002427+00:00</published>
-    <updated>2026-09-24T19:50:42.002427+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-fm8p-53ww-hf6w" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · dns-rebinding · CVE-2026-61742&lt;/em&gt;&lt;/p&gt;&lt;p&gt;DBHub npm package version 0.21.2 and earlier exposes an unauthenticated HTTP endpoint vulnerable to DNS rebinding attacks when running in HTTP transport mode, allowing attackers to execute arbitrary SQL commands from a victim's browser. The vulnerability bypasses the Origin/Host validation check through DNS rebinding, where an attacker-controlled domain rebinds to point at the victim's DBHub instance. This is a critical severity issue with active exploitation potential in browser environments. Users should immediately upgrade to a patched version and disable HTTP transport mode if not strictly required, alternatively implementing network-level access controls to restrict DBHub HTTP endpoints to trusted networks only.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-fm8p-53ww-hf6w"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>WSO2 Multiple Products: WSO2 Multiple Products Path Traversal Vulnerability (CVE-2026-5430)</title>
-    <id>urn:cybersecnews:item:447</id>
-    <published>2026-09-24T19:50:42.001224+00:00</published>
-    <updated>2026-09-24T19:50:42.001224+00:00</updated>
-    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-5430" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · path-traversal · CVE-2026-5430&lt;/em&gt;&lt;/p&gt;&lt;p&gt;WSO2 API Control Plane, API Manager, Traffic Manager, and Universal Gateway are vulnerable to path traversal (CVE-2026-5430) enabling unrestricted file uploads and remote code execution. This vulnerability is actively exploited in the wild with critical severity. Apply vendor-supplied mitigations immediately per CISA BOD 26-04 guidance; if unavailable, discontinue use of affected products. Assess internet exposure and prioritize patching based on asset criticality.&lt;/p&gt;&lt;p&gt;&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2026-5430"&gt;Read more&lt;/a&gt; · Source: cisa-kev&lt;/p&gt;</content>
   </entry>
 </feed>
