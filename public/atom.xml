@@ -3,7 +3,16 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-10-13T21:01:59.319174+00:00</updated>
+  <updated>2026-10-14T03:45:42.783546+00:00</updated>
+  <entry>
+    <title>Ghostscript flaw lets hackers hijack servers via PDF uploads</title>
+    <id>urn:cybersecnews:item:546</id>
+    <published>2026-10-14T03:45:42.783546+00:00</published>
+    <updated>2026-10-14T03:45:42.783546+00:00</updated>
+    <link href="https://www.bleepingcomputer.com/news/security/ghostscript-flaw-lets-hackers-hijack-servers-via-pdf-uploads/" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · heap-buffer-overflow · CVE-2026-39919&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Ghostscript PDF interpreter contains a critical heap buffer overflow (CVE-2026-39919) enabling remote code execution via malicious PDF uploads. The vulnerability affects file upload functionality across web services and document processing systems that use Ghostscript for rendering. No active exploitation in the wild has been confirmed at this time, though the critical severity rating and ease of weaponization via PDF attachments present significant risk. Apply available security patches immediately and implement input validation on PDF uploads as a compensating control until patching is complete.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/ghostscript-flaw-lets-hackers-hijack-servers-via-pdf-uploads/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>October 2026 Microsoft Patch Tuesday, (Tue, Oct 13th)</title>
     <id>urn:cybersecnews:item:545</id>
@@ -38,7 +47,7 @@
     <updated>2026-10-13T21:01:59.316308+00:00</updated>
     <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-96951" rel="alternate" />
     <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · command-injection · CVE-2026-96951&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Microsoft Windows Shell is vulnerable to command injection (CVE-2026-96951) allowing network-based attackers to bypass security features; this vulnerability is actively exploited in the wild and carries high severity. Immediately apply vendor patches in accordance with CISA BOD 26-04 prioritization guidance, with expedited remediation required for internet-facing systems. For environments where patches are unavailable, implement mitigations per vendor documentation or discontinue use of affected systems. Conduct forensics triage on potentially compromised assets per CISA requirements.&lt;/p&gt;&lt;p&gt;&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2026-96951"&gt;Read more&lt;/a&gt; · Source: cisa-kev&lt;/p&gt;</content>
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · command-injection · CVE-2026-108398, CVE-2026-70242, CVE-2026-70291, CVE-2026-88156, CVE-2026-96951, CVE-2026-97016, CVE-2026-97749&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Microsoft Windows Shell is vulnerable to command injection (CVE-2026-96951) allowing network-based attackers to bypass security features; this vulnerability is actively exploited in the wild and carries high severity. Immediately apply vendor patches in accordance with CISA BOD 26-04 prioritization guidance, with expedited remediation required for internet-facing systems. For environments where patches are unavailable, implement mitigations per vendor documentation or discontinue use of affected systems. Conduct forensics triage on potentially compromised assets per CISA requirements.&lt;/p&gt;&lt;p&gt;&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2026-96951"&gt;Read more&lt;/a&gt; · Source: cisa-kev&lt;/p&gt;</content>
   </entry>
   <entry>
     <title>Docker Fixes Critical Two-Year-Old Hub Flaw That Let One User Push Images as Another</title>
@@ -894,14 +903,5 @@
     <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-5430" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · path-traversal · CVE-2026-5430&lt;/em&gt;&lt;/p&gt;&lt;p&gt;WSO2 API Control Plane, API Manager, Traffic Manager, and Universal Gateway are vulnerable to path traversal (CVE-2026-5430) enabling unrestricted file uploads and remote code execution. This vulnerability is actively exploited in the wild with critical severity. Apply vendor-supplied mitigations immediately per CISA BOD 26-04 guidance; if unavailable, discontinue use of affected products. Assess internet exposure and prioritize patching based on asset criticality.&lt;/p&gt;&lt;p&gt;&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2026-5430"&gt;Read more&lt;/a&gt; · Source: cisa-kev&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>CISA: Ransomware gangs now exploiting critical TeamCity flaw</title>
-    <id>urn:cybersecnews:item:446</id>
-    <published>2026-09-24T19:50:41.999690+00:00</published>
-    <updated>2026-09-24T19:50:41.999690+00:00</updated>
-    <link href="https://www.bleepingcomputer.com/news/security/cisa-ransomware-gangs-now-exploiting-critical-teamcity-flaw/" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;JetBrains TeamCity is actively being exploited by ransomware operators for a critical remote code execution vulnerability (CVE-2024-27198) patched in July 2024. The flaw allows unauthenticated attackers to execute arbitrary code on affected systems, making it high-severity and widely leveraged in the wild. CISA recommends immediate patching to the latest version; organizations using TeamCity should prioritize this update to prevent ransomware deployment and ensure all instances are fully patched without delay.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/cisa-ransomware-gangs-now-exploiting-critical-teamcity-flaw/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
   </entry>
 </feed>
