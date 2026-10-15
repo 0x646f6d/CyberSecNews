@@ -3,7 +3,16 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-10-14T20:01:31.948025+00:00</updated>
+  <updated>2026-10-15T03:27:10.082591+00:00</updated>
+  <entry>
+    <title>Threat Actor Abuses Agentic AI Pentesting Framework to Target South Korean Financial Institutions</title>
+    <id>urn:cybersecnews:item:557</id>
+    <published>2026-10-15T03:27:10.082591+00:00</published>
+    <updated>2026-10-15T03:27:10.082591+00:00</updated>
+    <link href="https://www.zscaler.com/blogs/security-research/threat-actor-abuses-agentic-ai-pentesting-framework-target-south-korean" rel="alternate" />
+    <category term="red-team" />
+    <content type="html">&lt;p&gt;&lt;em&gt;red-team · agentic-ai-framework&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Threat actors abused ARTEX, an open-source agentic AI pentesting framework, to target South Korean financial institutions by automating reconnaissance, vulnerability identification, and exploitation against peripheral web applications. The campaign, attributed with moderate confidence to a financially motivated Chinese-speaking actor, exploited SQL injection and authentication bypass vulnerabilities in customer-facing portals and employee backends, exfiltrating PII for approximately 67,000 individuals with high impact. Organizations should isolate any locally deployed pentesting frameworks from production environments, avoid storing production credentials in open-source tools, implement Zero Trust architecture with least-privilege access controls, deploy deception controls to detect AI-driven reconnaissance, and enforce rate limiting and authorization checks on external portals to prevent enumeration attacks. Monitor for outbound API calls to LLM services (DeepSeek, Anthropic, Zhipu) and high-frequency automated requests with sequential enumeration patterns as behavioral indicators of compromise.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.zscaler.com/blogs/security-research/threat-actor-abuses-agentic-ai-pentesting-framework-target-south-korean"&gt;Read more&lt;/a&gt; · Source: zscaler-threatlabz&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Unauthenticated SQL Injection In Channel Software WebAlliance eCommerce</title>
     <id>urn:cybersecnews:item:556</id>
@@ -894,14 +903,5 @@
     <link href="https://thehackernews.com/2026/09/carbonato-botnet-compromises-docker.html" rel="alternate" />
     <category term="red-team" />
     <content type="html">&lt;p&gt;&lt;em&gt;red-team · c2&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Carbonato botnet exploits exposed Docker daemons to deploy Hermes AI agent framework controlled via Telegram, enabling remote command execution on compromised hosts. The vulnerability stems from misconfigured or unauthenticated Docker API endpoints that lack network segmentation, allowing attackers to execute arbitrary containers. This threat is actively exploited in the wild with moderate severity due to the widespread deployment of improperly secured Docker installations. Immediate mitigation requires restricting Docker daemon access through firewall rules, enabling API authentication, implementing network segmentation, and patching Docker hosts with latest security updates.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/09/carbonato-botnet-compromises-docker.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Wireshark 4.6.9 Released, (Sun, Sep 27th)</title>
-    <id>urn:cybersecnews:item:457</id>
-    <published>2026-09-27T19:34:21.862351+00:00</published>
-    <updated>2026-09-27T19:34:21.862351+00:00</updated>
-    <link href="https://isc.sans.edu/diary/rss/33372" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · multiple&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Wireshark 4.6.9 addresses 19 vulnerabilities across the packet analysis application, including memory safety issues and parsing flaws in various protocol dissectors. The severity levels of individual CVEs were not specified in the release notes. Upgrade to version 4.6.9 or later immediately; no evidence of active exploitation was noted. Users unable to patch should restrict Wireshark to trusted, isolated environments and avoid processing untrusted packet captures.&lt;/p&gt;&lt;p&gt;&lt;a href="https://isc.sans.edu/diary/rss/33372"&gt;Read more&lt;/a&gt; · Source: sans-isc&lt;/p&gt;</content>
   </entry>
 </feed>
