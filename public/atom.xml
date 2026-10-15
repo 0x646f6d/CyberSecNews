@@ -3,7 +3,25 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-10-15T13:06:28.801270+00:00</updated>
+  <updated>2026-10-15T19:43:50.588475+00:00</updated>
+  <entry>
+    <title>NGINX Fixes 5 Flaws, Including Possible RCE and a TLS Bug That May Skip Client-Cert Checks</title>
+    <id>urn:cybersecnews:item:561</id>
+    <published>2026-10-15T19:43:50.588475+00:00</published>
+    <updated>2026-10-15T19:43:50.588475+00:00</updated>
+    <link href="https://thehackernews.com/2026/10/nginx-fixes-5-flaws-including-possible.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce,dos,tls-bypass&lt;/em&gt;&lt;/p&gt;&lt;p&gt;NGINX versions prior to 1.30.6 and 1.31.7 contain five vulnerabilities including three memory corruption flaws that could cause denial of service or remote code execution under specific configurations, and a TLS session forgery flaw potentially bypassing client certificate validation. One vulnerability has existed since May 2005. F5 has not reported active exploitation in the wild. Administrators should immediately update to NGINX 1.30.6, 1.31.7, or later; prioritize patching if running configurations that trigger the memory bugs (consult F5 advisories for specific conditions).&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/nginx-fixes-5-flaws-including-possible.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Silent Lynx Exploits WinRAR Flaw to Deploy Reverse Shell in CIS Government Attacks</title>
+    <id>urn:cybersecnews:item:560</id>
+    <published>2026-10-15T19:43:50.584531+00:00</published>
+    <updated>2026-10-15T19:43:50.584531+00:00</updated>
+    <link href="https://thehackernews.com/2026/10/silent-lynx-exploits-winrar-flaw-to.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · arbitrary-code-execution&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Silent Lynx is exploiting an unpatched WinRAR vulnerability as part of a multi-stage attack chain against CIS government entities, utilizing macro-enabled documents, PS2EXE downloaders, and GitHub-hosted payloads to deliver reverse shells. The attacks have been active from June 2025 through August 2026, demonstrating sustained targeting with four distinct infection vectors. This represents high severity exploitation of a known WinRAR flaw being weaponized in active campaigns. Immediate action required: patch WinRAR to the latest version, restrict macro execution in Office documents, implement network controls on suspicious GitHub access patterns, and isolate affected government systems for forensic analysis.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/silent-lynx-exploits-winrar-flaw-to.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Drupal Patches Critical Core RCE Flaw with No-Login Path via Contributed Modules</title>
     <id>urn:cybersecnews:item:559</id>
@@ -885,23 +903,5 @@
     <link href="https://thehackernews.com/2026/09/russias-star-blizzard-targets-100.html" rel="alternate" />
     <category term="red-team" />
     <content type="html">&lt;p&gt;&lt;em&gt;red-team · social-engineering&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Russian state-sponsored actor Star Blizzard is conducting active spear-phishing campaigns using fraudulent event invitations to deliver backdoors on Windows systems targeting 100+ organizations, primarily in the U.S. and U.K., with focus on Ukraine-related entities since January. The technique exploits social engineering via malicious calendar attachments or links to execute malware installation with confirmed infections. This represents high-severity threat activity demonstrating active in-the-wild exploitation by a capable nation-state adversary. Recommended actions: implement email filtering for suspicious invitations and attachments, conduct user security awareness training on phishing tactics, enable attack surface reduction rules for Office macro execution, and maintain EDR telemetry for anomalous process execution patterns.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/09/russias-star-blizzard-targets-100.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>New Spectre-v2 BTR Attack Leaks Linux Memory Despite Existing Defenses</title>
-    <id>urn:cybersecnews:item:461</id>
-    <published>2026-09-29T20:29:07.115498+00:00</published>
-    <updated>2026-09-29T20:29:07.115498+00:00</updated>
-    <link href="https://thehackernews.com/2026/09/new-spectre-v2-btr-attack-leaks-linux.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · speculative-execution&lt;/em&gt;&lt;/p&gt;&lt;p&gt;A new Spectre-v2 variant called Branch Target Reuse (BTR) affects JIT engines in web browsers, language runtimes, and OS kernels across multiple CPU vendors by exploiting branch predictor reuse to leak sensitive memory despite existing mitigations. The vulnerability bypasses current Spectre-v2 defenses by leveraging indirect branch target predictions, enabling attackers to extract kernel and application memory from JavaScript or native code. Severity appears high given the broad affected scope and kernel-level access potential, though no widespread in-the-wild exploitation has been reported yet. Mitigation requires microcode updates and software-level defenses targeting branch prediction isolation; vendors should prioritize patching JIT implementations and evaluating additional branch target buffer protections.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/09/new-spectre-v2-btr-attack-leaks-linux.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Apple Patches CoreGraphics Flaw Possibly Exploited in Targeted Attacks</title>
-    <id>urn:cybersecnews:item:460</id>
-    <published>2026-09-29T04:31:07.868678+00:00</published>
-    <updated>2026-09-29T04:31:07.868678+00:00</updated>
-    <link href="https://thehackernews.com/2026/09/apple-patches-coregraphics-flaw.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · out-of-bounds-write · CVE-2026-86950&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Apple patched CVE-2026-86950, an out-of-bounds write vulnerability in CoreGraphics affecting iOS, iPadOS, and macOS that enables arbitrary code execution via malicious file processing. The flaw has likely been exploited in targeted attacks in the wild. All users should update to the latest patched versions of iOS, iPadOS, and macOS immediately, prioritizing older device versions which remain at higher risk.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/09/apple-patches-coregraphics-flaw.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
   </entry>
 </feed>
