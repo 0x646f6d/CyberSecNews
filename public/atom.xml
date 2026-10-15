@@ -3,7 +3,25 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-10-15T03:27:10.082591+00:00</updated>
+  <updated>2026-10-15T13:06:28.801270+00:00</updated>
+  <entry>
+    <title>Drupal Patches Critical Core RCE Flaw with No-Login Path via Contributed Modules</title>
+    <id>urn:cybersecnews:item:559</id>
+    <published>2026-10-15T13:06:28.801270+00:00</published>
+    <updated>2026-10-15T13:06:28.801270+00:00</updated>
+    <link href="https://thehackernews.com/2026/10/drupal-patches-critical-core-rce-flaw.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Drupal core versions 10.x, 11.3.x, and 11.4.x contain a critical remote code execution vulnerability in the Field UI module exploitable through contributed modules without requiring authentication. The flaw allows unauthenticated attackers to execute arbitrary code on vulnerable servers when specific contributed modules are present, though the vulnerability cannot be directly exploited through core alone. Drupal released patches on October 14 in versions 10.6.19, 11.3.19, and 11.4.10; immediate patching is required along with assessment of installed contributed modules for exploitation paths. No evidence of active wild exploitation has been reported, but the critical severity and no-auth requirement make immediate remediation essential.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/drupal-patches-critical-core-rce-flaw.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Unsichere Firewall: Palo Alto Networks warnt vor Angriffen auf Zero-Day-Lücke</title>
+    <id>urn:cybersecnews:item:558</id>
+    <published>2026-10-15T13:06:28.799809+00:00</published>
+    <updated>2026-10-15T13:06:28.799809+00:00</updated>
+    <link href="https://www.golem.de/news/unsichere-firewall-palo-alto-networks-warnt-vor-angriffen-auf-zero-day-luecke-2610-214137.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Palo Alto Networks firewalls (PA and VM series) are vulnerable to a zero-day remote code execution vulnerability allowing attackers to execute code with root privileges. The vulnerability is being actively exploited in the wild and poses critical risk to affected organizations. Immediate patching is required; users should apply available security updates or implement network segmentation to isolate affected firewalls until patches can be deployed. Monitor firewall logs for signs of compromise and consider temporary failover to unaffected security infrastructure if updates cannot be applied immediately.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.golem.de/news/unsichere-firewall-palo-alto-networks-warnt-vor-angriffen-auf-zero-day-luecke-2610-214137.html"&gt;Read more&lt;/a&gt; · Source: golem-security&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Threat Actor Abuses Agentic AI Pentesting Framework to Target South Korean Financial Institutions</title>
     <id>urn:cybersecnews:item:557</id>
@@ -488,7 +506,7 @@
     <updated>2026-10-07T21:03:27.860668+00:00</updated>
     <link href="https://github.com/advisories/GHSA-w794-rj3p-xv45" rel="alternate" />
     <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-105697&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Langflow versions before 1.10.3 are vulnerable to OS command injection (CVE-2026-105697) via the MCP stdio server configuration, where arbitrary shell commands can be executed without validation or allowlisting. Any user with access to MCP server settings or the MCP Tools component can inject malicious commands that run with the application's privileges, achieving remote code execution. This vulnerability is critical in severity and exploitable by authenticated users. Upgrade to Langflow 1.10.3 or later immediately; restrict access to MCP server configuration settings as an interim mitigation.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-w794-rj3p-xv45"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-105697, CVE-2026-105740&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Langflow versions before 1.10.3 are vulnerable to OS command injection (CVE-2026-105697) via the MCP stdio server configuration, where arbitrary shell commands can be executed without validation or allowlisting. Any user with access to MCP server settings or the MCP Tools component can inject malicious commands that run with the application's privileges, achieving remote code execution. This vulnerability is critical in severity and exploitable by authenticated users. Upgrade to Langflow 1.10.3 or later immediately; restrict access to MCP server configuration settings as an interim mitigation.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-w794-rj3p-xv45"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
   </entry>
   <entry>
     <title>FBI Warns FortiBleed Remains Active After Amassing 86,644 Fortinet Device Credentials</title>
@@ -885,23 +903,5 @@
     <link href="https://thehackernews.com/2026/09/apple-patches-coregraphics-flaw.html" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · out-of-bounds-write · CVE-2026-86950&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Apple patched CVE-2026-86950, an out-of-bounds write vulnerability in CoreGraphics affecting iOS, iPadOS, and macOS that enables arbitrary code execution via malicious file processing. The flaw has likely been exploited in targeted attacks in the wild. All users should update to the latest patched versions of iOS, iPadOS, and macOS immediately, prioritizing older device versions which remain at higher risk.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/09/apple-patches-coregraphics-flaw.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>JADEPUFFER-Linked Attackers Used Compromised Service Principals to Delete Azure Resources</title>
-    <id>urn:cybersecnews:item:459</id>
-    <published>2026-09-28T16:30:12.782413+00:00</published>
-    <updated>2026-09-28T16:30:12.782413+00:00</updated>
-    <link href="https://thehackernews.com/2026/09/jadepuffer-linked-attackers-used.html" rel="alternate" />
-    <category term="red-team" />
-    <content type="html">&lt;p&gt;&lt;em&gt;red-team · lateral-movement&lt;/em&gt;&lt;/p&gt;&lt;p&gt;JADEPUFFER (Storm-3168) compromised Azure service principals to execute destructive operations against Azure resources over an 18-hour period in June 2026, representing an evolution in the threat actor's tradecraft. The vulnerability exploited compromised identity credentials rather than a software flaw, allowing attackers to delete Azure resources and conduct destructive actions with legitimate authentication. This technique is actively exploited in the wild by a sophisticated threat actor. Organizations should implement conditional access policies, strengthen service principal credential management, enable MFA for privileged accounts, audit service principal activity logs, and establish immutable backup retention policies for critical resources.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/09/jadepuffer-linked-attackers-used.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Carbonato Botnet Compromises Docker Hosts to Deploy Telegram-Controlled Hermes AI Agent</title>
-    <id>urn:cybersecnews:item:458</id>
-    <published>2026-09-28T16:30:12.780688+00:00</published>
-    <updated>2026-09-28T16:30:12.780688+00:00</updated>
-    <link href="https://thehackernews.com/2026/09/carbonato-botnet-compromises-docker.html" rel="alternate" />
-    <category term="red-team" />
-    <content type="html">&lt;p&gt;&lt;em&gt;red-team · c2&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Carbonato botnet exploits exposed Docker daemons to deploy Hermes AI agent framework controlled via Telegram, enabling remote command execution on compromised hosts. The vulnerability stems from misconfigured or unauthenticated Docker API endpoints that lack network segmentation, allowing attackers to execute arbitrary containers. This threat is actively exploited in the wild with moderate severity due to the widespread deployment of improperly secured Docker installations. Immediate mitigation requires restricting Docker daemon access through firewall rules, enabling API authentication, implementing network segmentation, and patching Docker hosts with latest security updates.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/09/carbonato-botnet-compromises-docker.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
   </entry>
 </feed>
