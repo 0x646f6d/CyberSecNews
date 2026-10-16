@@ -3,7 +3,61 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-10-15T19:43:50.588475+00:00</updated>
+  <updated>2026-10-16T03:23:12.305649+00:00</updated>
+  <entry>
+    <title>Vitess vttablet /twopcz reflected XSS (CVE-2026-104252)</title>
+    <id>urn:cybersecnews:item:567</id>
+    <published>2026-10-16T03:23:12.305649+00:00</published>
+    <updated>2026-10-16T03:23:12.305649+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-v75v-6fpf-gvw8" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · xss · CVE-2026-104252&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Vitess vttablet's /twopcz endpoint (CVE-2026-104252) contains a reflected XSS vulnerability where the `Action` and `dtid` form parameters are written directly to HTML responses without escaping in the `twopczHandler` function. This is critical severity as the endpoint is reachable by default due to Vitess's permissive ACL policy and the response is served as HTML. There is no indication of active exploitation in the wild. Upgrade to a patched version of Vitess that implements proper HTML escaping for user-supplied parameters in the twopcz handler, or restrict access to the /twopcz endpoint via firewall/ACL rules.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-v75v-6fpf-gvw8"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Dgraph: Zero Unauthenticated HTTP Admin removeNode Denial of Service (CVE-2026-102748)</title>
+    <id>urn:cybersecnews:item:566</id>
+    <published>2026-10-16T03:23:12.304456+00:00</published>
+    <updated>2026-10-16T03:23:12.304456+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-qj98-gp63-54xj" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass,dos · CVE-2026-102748&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Dgraph Zero versions prior to v25.3.8 expose unauthenticated HTTP administrative endpoints on port 6080, including /removeNode, /assign, /state, and /moveTablet. An attacker can send an unauthenticated request to /removeNode to trigger a denial of service by breaking the Zero control plane and preventing Alpha instances from reconnecting. This is a critical severity vulnerability with active exploitation potential given the trivial attack vector. Users should immediately upgrade to Dgraph v25.3.8 or later and restrict network access to port 6080 to trusted administrators only.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-qj98-gp63-54xj"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Argo CD: AppProject destination-namespace and resource restrictions bypassed by PreDelete/PostDelete resource hooks (CVE-2026-77459)</title>
+    <id>urn:cybersecnews:item:565</id>
+    <published>2026-10-16T03:23:12.303230+00:00</published>
+    <updated>2026-10-16T03:23:12.303230+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-fmxq-cgp8-87wp" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-77459&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Argo CD versions 2.10.0 and later are affected by CVE-2026-77459, where PreDelete and PostDelete resource hooks bypass AppProject destination-namespace and resource restrictions during application deletion. An attacker can exploit this critical vulnerability to create resources outside permitted namespaces or deploy cluster-scoped resources that should be denied by AppProject policies, leveraging application-controller credentials on the destination cluster. No evidence of active exploitation in the wild is mentioned, but immediate patching is essential; users should upgrade to the latest patched version once available and review PreDelete/PostDelete hooks in existing Applications for policy compliance.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-fmxq-cgp8-87wp"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>KEDA: Privilege escalation from namespace admin to cluster admin via KEDA TriggerAuthentication (CVE-2026-77524)</title>
+    <id>urn:cybersecnews:item:564</id>
+    <published>2026-10-16T03:23:12.301666+00:00</published>
+    <updated>2026-10-16T03:23:12.301666+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-637c-6jxx-4rwm" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · privilege-escalation · CVE-2026-77524&lt;/em&gt;&lt;/p&gt;&lt;p&gt;KEDA (Kubernetes Event Driven Autoscaling) versions prior to patched releases contain a critical privilege escalation vulnerability (CVE-2026-77524) where a namespace admin can exploit TriggerAuthentication and ScaledObject resources to exfiltrate the KEDA operator's cluster-admin ServiceAccount token to a tenant-controlled URL. The operator token grants broad cluster-wide permissions including reading all Secrets, creating/deleting batch jobs, modifying workload scaling, and updating validating webhooks, enabling complete cluster compromise. This vulnerability is critical severity and should be assumed exploitable given the straightforward attack chain. Immediately upgrade KEDA to patched versions and restrict namespace admin permissions; review audit logs for TriggerAuthentication abuse and monitor for suspicious outbound connections from KEDA operator pods.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-637c-6jxx-4rwm"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Podman: The `podman run` command can be instructed to disable almost all sandboxing by image annotation (CVE-2026-94603)</title>
+    <id>urn:cybersecnews:item:563</id>
+    <published>2026-10-16T03:23:12.300430+00:00</published>
+    <updated>2026-10-16T03:23:12.300430+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-2cvf-wqm6-wr9g" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · sandbox-bypass · CVE-2026-94603&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Podman versions 4.4.0 and later are affected by CVE-2026-94603, where the `podman run` command silently ignores user-specified sandbox security settings when executing containers from OCI registry checkpoints, allowing attackers to disable sandboxing via malicious image annotations. This is a critical vulnerability that enables complete bypass of container isolation controls. There is no indication of active wild exploitation at this time. Users should immediately update to a patched version once available, and until then avoid running container images from untrusted sources or restrict checkpoint functionality at the system level.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-2cvf-wqm6-wr9g"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>TanStack Router: Unauthenticated reflected XSS in TanStack Start server-function responses (CVE-2026-102989)</title>
+    <id>urn:cybersecnews:item:562</id>
+    <published>2026-10-16T03:23:12.298313+00:00</published>
+    <updated>2026-10-16T03:23:12.298313+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-qx66-fv34-fjm8" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · reflected-xss · CVE-2026-102989&lt;/em&gt;&lt;/p&gt;&lt;p&gt;TanStack Start (React, Solid, Vue variants) and start-server-core are affected by an unauthenticated reflected XSS vulnerability (CVE-2026-102989) where attacker-controlled request payload fields are passed into internal middleware state instead of being restricted to public inputs, allowing arbitrary HTML and JavaScript execution from the app's origin. This is critical severity and can enable attackers to steal same-origin data and make requests with victim authority. Users should update to patched versions of @tanstack/react-start, @tanstack/solid-start, @tanstack/vue-start, and @tanstack/start-server-core as soon as available, and avoid clicking untrusted links to server functions.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-qx66-fv34-fjm8"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>NGINX Fixes 5 Flaws, Including Possible RCE and a TLS Bug That May Skip Client-Cert Checks</title>
     <id>urn:cybersecnews:item:561</id>
@@ -83,7 +137,7 @@
     <updated>2026-10-14T20:01:31.944597+00:00</updated>
     <link href="https://thehackernews.com/2026/10/hackers-backdoor-nextcloud-servers.html" rel="alternate" />
     <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;A critical vulnerability in Nextcloud's optional Collabora Online - Built-in CODE Server app allows unauthenticated attackers to execute arbitrary code and plant web shells on affected servers. The flaw has been actively exploited in the wild since at least September 10, with documented cases affecting multiple Nextcloud installations. Administrators should immediately update the Collabora Online app to the patched version and review server logs for suspicious activity or unauthorized web shell uploads. Alternatively, disable or remove the Collabora Online - Built-in CODE Server app if the functionality is not required.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/hackers-backdoor-nextcloud-servers.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-110447&lt;/em&gt;&lt;/p&gt;&lt;p&gt;A critical vulnerability in Nextcloud's optional Collabora Online - Built-in CODE Server app allows unauthenticated attackers to execute arbitrary code and plant web shells on affected servers. The flaw has been actively exploited in the wild since at least September 10, with documented cases affecting multiple Nextcloud installations. Administrators should immediately update the Collabora Online app to the patched version and review server logs for suspicious activity or unauthorized web shell uploads. Alternatively, disable or remove the Collabora Online - Built-in CODE Server app if the functionality is not required.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/hackers-backdoor-nextcloud-servers.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
   </entry>
   <entry>
     <title>Cisco Warns of Active Attacks Exploiting New Critical Secure Email Gateway Vulnerability</title>
@@ -101,7 +155,7 @@
     <updated>2026-10-14T13:21:32.498251+00:00</updated>
     <link href="https://thehackernews.com/2026/10/ai-found-linux-kernel-flaw-gives-local.html" rel="alternate" />
     <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · privilege-escalation · CVE-2026-74580&lt;/em&gt;&lt;/p&gt;&lt;p&gt;CVE-2026-74580 affects the Linux kernel's vhost subsystem across multiple versions spanning approximately a decade. The vulnerability allows local users to read and write arbitrary kernel memory, escalate to root privileges, and in virtualization scenarios enables guest VMs to access host memory and compromise the hypervisor process. Severity is critical with active exploitation potential in multi-tenant cloud environments. Immediate kernel patching is required; users should prioritize updates for affected distributions and review VM isolation controls pending patch deployment.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/ai-found-linux-kernel-flaw-gives-local.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · privilege-escalation · CVE-2026-74580, CVE-2026-99999&lt;/em&gt;&lt;/p&gt;&lt;p&gt;CVE-2026-74580 affects the Linux kernel's vhost subsystem across multiple versions spanning approximately a decade. The vulnerability allows local users to read and write arbitrary kernel memory, escalate to root privileges, and in virtualization scenarios enables guest VMs to access host memory and compromise the hypervisor process. Severity is critical with active exploitation potential in multi-tenant cloud environments. Immediate kernel patching is required; users should prioritize updates for affected distributions and review VM isolation controls pending patch deployment.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/ai-found-linux-kernel-flaw-gives-local.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
   </entry>
   <entry>
     <title>An AI Agent Found a Critical OTP Bypass in Production. The Attack Was the Easy Part.</title>
@@ -849,59 +903,5 @@
     <link href="https://www.bleepingcomputer.com/news/security/bitget-hacked-via-zero-day-in-third-party-security-products/" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · zero-day&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Bitget cryptocurrency exchange was compromised via a zero-day vulnerability in third-party security products, resulting in the theft of $387.5 million. The attackers exploited the unpatched flaw to gain unauthorized access to Bitget's systems; the specific security vendor and technical details have not been fully disclosed. This represents a critical severity incident actively exploited in the wild against a high-value target. Bitget should immediately identify and isolate affected security products, coordinate with vendors on emergency patches, implement network segmentation to limit lateral movement, and conduct forensic analysis to determine the full scope of compromise and data exposure.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/bitget-hacked-via-zero-day-in-third-party-security-products/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>TeamViewer urges users to patch severe flaws “as soon as possible”</title>
-    <id>urn:cybersecnews:item:467</id>
-    <published>2026-09-30T14:40:25.926876+00:00</published>
-    <updated>2026-09-30T14:40:25.926876+00:00</updated>
-    <link href="https://www.bleepingcomputer.com/news/security/teamviewer-urges-users-to-patch-severe-flaws-as-soon-as-possible/" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;TeamViewer client and host software contain high-severity vulnerabilities requiring immediate patching. The specific technical details of the flaws are not disclosed in this summary, but the "as soon as possible" language indicates active exploitation risk or critical impact potential. Users should prioritize applying available patches from TeamViewer without delay, particularly for systems handling sensitive data or critical infrastructure access. Verify patch availability through official TeamViewer channels and consider temporary access restrictions until systems are updated.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/teamviewer-urges-users-to-patch-severe-flaws-as-soon-as-possible/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>OpenSSL Fixes High-Severity DTLS Flaw That Can Leak Heap Memory Unencrypted</title>
-    <id>urn:cybersecnews:item:466</id>
-    <published>2026-09-30T14:40:25.926007+00:00</published>
-    <updated>2026-09-30T14:40:25.926007+00:00</updated>
-    <link href="https://thehackernews.com/2026/09/openssl-fixes-high-severity-dtls-flaw.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · information-disclosure&lt;/em&gt;&lt;/p&gt;&lt;p&gt;OpenSSL DTLS (Datagram TLS) is affected by a high-severity vulnerability (CVE-2023-44487) that can leak unencrypted heap memory to remote attackers or cause denial of service when handshake message retransmission occurs during fragmented message processing. The flaw exploits DTLS's resend mechanism and affects connections over UDP; there is no evidence of active exploitation in the wild at this time. Users should immediately patch to OpenSSL 3.0.11, 3.1.3, or later versions depending on their deployment. This is critical for any system using DTLS for secure communications, particularly IoT and real-time applications relying on UDP.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/09/openssl-fixes-high-severity-dtls-flaw.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Jetzt patchen: Angreifer umgehen Anmeldung bei Cisco Catalyst SD-WAN Manager</title>
-    <id>urn:cybersecnews:item:465</id>
-    <published>2026-09-30T14:40:25.923095+00:00</published>
-    <updated>2026-09-30T14:40:25.923095+00:00</updated>
-    <link href="https://www.heise.de/news/Jetzt-patchen-Angreifer-umgehen-Anmeldung-bei-Cisco-Catalyst-SD-WAN-Manager-11471591.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-76504&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Cisco Catalyst SD-WAN Manager contains an authentication bypass vulnerability allowing attackers to gain admin-level access without valid credentials. The flaw affects the login mechanism and is actively exploited in the wild by threat actors. Administrators must immediately patch affected systems to the latest version and implement network segmentation to restrict access to management interfaces as a temporary mitigation. Additionally, review access logs for unauthorized administrative activity.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.heise.de/news/Jetzt-patchen-Angreifer-umgehen-Anmeldung-bei-Cisco-Catalyst-SD-WAN-Manager-11471591.html"&gt;Read more&lt;/a&gt; · Source: heise-security&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>PyJWT: Asymmetric-PEM detection bypass: whitespace/line-ending-mutated public keys skip the HS/asymmetric confusion guard (CVE-2026-102268)</title>
-    <id>urn:cybersecnews:item:464</id>
-    <published>2026-09-30T04:15:01.036887+00:00</published>
-    <updated>2026-09-30T04:15:01.036887+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-ffc3-869f-jxw9" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-102268, CVE-2026-107722&lt;/em&gt;&lt;/p&gt;&lt;p&gt;PyJWT versions prior to patching are vulnerable to asymmetric-HMAC confusion attacks when decoding JWT tokens if the allow-list contains both HMAC and asymmetric algorithms (CVE-2026-102268, critical severity). The vulnerability exploits a bypass in PyJWT's PEM format detection where whitespace or line-ending mutations in public keys cause the `is_pem_format` regex to fail, allowing an attacker with a valid HMAC secret to forge tokens that pass asymmetric signature verification. This impacts deployments mixing algorithm types in the decode allow-list and passing PEM keys as raw bytes/text. Immediately update PyJWT to the patched version and audit configurations to follow RFC 8725 best practices by using single asymmetric algorithms in decode allow-lists rather than mixing HS/asymmetric options.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-ffc3-869f-jxw9"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>@xhmikosr/decompress: Path traversal via symlink chain (CVE-2026-101894)</title>
-    <id>urn:cybersecnews:item:463</id>
-    <published>2026-09-30T04:15:01.034776+00:00</published>
-    <updated>2026-09-30T04:15:01.034776+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-hrh2-vp3x-79xf" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · path-traversal · CVE-2026-101894&lt;/em&gt;&lt;/p&gt;&lt;p&gt;The @xhmikosr/decompress and decompress npm packages are vulnerable to path traversal via symlink chains (CVE-2026-101894), allowing attackers to extract files outside the intended output directory during archive extraction. The vulnerability exploits a gap in lexical path validation by using chained symlinks to bypass containment checks, potentially enabling remote code execution through overwriting startup scripts or configuration files. This is rated critical severity and appears to have active exploitation potential given its nature as a supply-chain attack vector on archive handling. Users should immediately update to a patched version and consider validating archive contents before extraction in production environments.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-hrh2-vp3x-79xf"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Russia's Star Blizzard Targets 100+ Organizations With Fake Event Invites to Deliver Backdoor</title>
-    <id>urn:cybersecnews:item:462</id>
-    <published>2026-09-29T20:29:07.116738+00:00</published>
-    <updated>2026-09-29T20:29:07.116738+00:00</updated>
-    <link href="https://thehackernews.com/2026/09/russias-star-blizzard-targets-100.html" rel="alternate" />
-    <category term="red-team" />
-    <content type="html">&lt;p&gt;&lt;em&gt;red-team · social-engineering&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Russian state-sponsored actor Star Blizzard is conducting active spear-phishing campaigns using fraudulent event invitations to deliver backdoors on Windows systems targeting 100+ organizations, primarily in the U.S. and U.K., with focus on Ukraine-related entities since January. The technique exploits social engineering via malicious calendar attachments or links to execute malware installation with confirmed infections. This represents high-severity threat activity demonstrating active in-the-wild exploitation by a capable nation-state adversary. Recommended actions: implement email filtering for suspicious invitations and attachments, conduct user security awareness training on phishing tactics, enable attack surface reduction rules for Office macro execution, and maintain EDR telemetry for anomalous process execution patterns.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/09/russias-star-blizzard-targets-100.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
   </entry>
 </feed>
