@@ -3,7 +3,25 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-10-16T03:23:12.305649+00:00</updated>
+  <updated>2026-10-17T03:13:07.558035+00:00</updated>
+  <entry>
+    <title>Claude Agent SDK: Argument Injection via resume Option Allows Arbitrary Command Execution (CVE-2026-96620)</title>
+    <id>urn:cybersecnews:item:569</id>
+    <published>2026-10-17T03:13:07.558035+00:00</published>
+    <updated>2026-10-17T03:13:07.558035+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-h4mw-j7qp-8mwm" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · argument-injection · CVE-2026-96620&lt;/em&gt;&lt;/p&gt;&lt;p&gt;The Claude Agent SDK for Python (pip package) contains a critical argument injection vulnerability (CVE-2026-96620) in the `resume` option that passes unsanitized input to the Claude CLI. An attacker controlling the resume parameter can inject malicious CLI flags like `--mcp-config` to execute arbitrary commands at startup, bypassing SDK permission controls. This requires an application to pass untrusted input as a session ID. Users should immediately update to a patched version; applications should validate and sanitize all user-supplied input used as session identifiers.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-h4mw-j7qp-8mwm"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Critical BlockStrap flaw lets hackers run code on Magento servers</title>
+    <id>urn:cybersecnews:item:568</id>
+    <published>2026-10-17T03:13:07.556167+00:00</published>
+    <updated>2026-10-17T03:13:07.556167+00:00</updated>
+    <link href="https://www.bleepingcomputer.com/news/security/critical-blockstrap-flaw-lets-hackers-run-code-on-magento-servers/" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-103849&lt;/em&gt;&lt;/p&gt;&lt;p&gt;BlockStrap extension for Magento and Adobe Commerce contains a critical remote code execution vulnerability (CVE-2026-103849) that allows unauthenticated attackers to execute arbitrary PHP code on affected servers. The flaw has a CVSS score of 9.8 and poses immediate risk to e-commerce operations. No evidence of active exploitation in the wild has been reported at this time, but patch availability should be verified immediately with Adobe/vendor. Affected organizations must prioritize applying security updates or disabling the BlockStrap extension until a fix is confirmed available.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/critical-blockstrap-flaw-lets-hackers-run-code-on-magento-servers/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Vitess vttablet /twopcz reflected XSS (CVE-2026-104252)</title>
     <id>urn:cybersecnews:item:567</id>
@@ -885,23 +903,5 @@
     <link href="https://www.bleepingcomputer.com/news/security/cisa-warns-of-critical-pre-auth-rce-flaw-in-mikrotik-routeros/" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;MikroTik RouterOS contains a critical pre-authentication remote code execution vulnerability that allows unauthenticated attackers to execute arbitrary code or trigger denial-of-service conditions on affected devices. CISA has added this flaw to its known exploited vulnerabilities catalog, indicating active exploitation in the wild. Organizations operating MikroTik routers should immediately apply available patches and consider implementing network segmentation to limit exposure until updates can be deployed. Monitor for suspicious traffic targeting RouterOS management interfaces and review logs for signs of compromise.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/cisa-warns-of-critical-pre-auth-rce-flaw-in-mikrotik-routeros/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>DIVD says Zammad zero-days enabled AI-driven network breach</title>
-    <id>urn:cybersecnews:item:469</id>
-    <published>2026-09-30T20:35:53.132653+00:00</published>
-    <updated>2026-09-30T20:35:53.132653+00:00</updated>
-    <link href="https://www.bleepingcomputer.com/news/security/divd-says-zammad-zero-days-enabled-ai-driven-network-breach/" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · chain-of-vulnerabilities · CVE-2026-102489, CVE-2026-102490&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Zammad open-source ticketing system contained a chain of two zero-day vulnerabilities that were exploited to breach the DIVD network. The vulnerabilities allowed unauthenticated remote code execution through the ticketing platform, demonstrating high severity with confirmed active exploitation in the wild. DIVD recommends immediate patching of Zammad instances to the latest version and conducting network forensics to identify if similar compromise occurred at other organizations running the software.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/divd-says-zammad-zero-days-enabled-ai-driven-network-breach/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Bitget hacked via zero-day in third-party security products</title>
-    <id>urn:cybersecnews:item:468</id>
-    <published>2026-09-30T14:40:25.927682+00:00</published>
-    <updated>2026-09-30T14:40:25.927682+00:00</updated>
-    <link href="https://www.bleepingcomputer.com/news/security/bitget-hacked-via-zero-day-in-third-party-security-products/" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · zero-day&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Bitget cryptocurrency exchange was compromised via a zero-day vulnerability in third-party security products, resulting in the theft of $387.5 million. The attackers exploited the unpatched flaw to gain unauthorized access to Bitget's systems; the specific security vendor and technical details have not been fully disclosed. This represents a critical severity incident actively exploited in the wild against a high-value target. Bitget should immediately identify and isolate affected security products, coordinate with vendors on emergency patches, implement network segmentation to limit lateral movement, and conduct forensic analysis to determine the full scope of compromise and data exposure.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/bitget-hacked-via-zero-day-in-third-party-security-products/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
   </entry>
 </feed>
