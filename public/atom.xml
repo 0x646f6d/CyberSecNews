@@ -3,7 +3,25 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-10-19T15:19:32.148270+00:00</updated>
+  <updated>2026-10-19T20:54:49.905520+00:00</updated>
+  <entry>
+    <title>Authentication Bypass, Remote Code Execution, and Database Read in Eptura Archibus (FIXED)</title>
+    <id>urn:cybersecnews:item:575</id>
+    <published>2026-10-19T20:54:49.905520+00:00</published>
+    <updated>2026-10-19T20:54:49.905520+00:00</updated>
+    <link href="https://www.rapid7.com/blog/post/ve-authentication-bypass-remote-code-execution-and-database-read-in-eptura-archibus-fixed" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass,rce,database-read · CVE-2026-107186, CVE-2026-107187, CVE-2026-107188&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Eptura Archibus versions prior to 2025.02 contain three chained vulnerabilities in its Java Direct Web Remoting (DWR) API: an authentication bypass (CVE-2026-107186, CVSS 8.6) allowing unauthenticated workflow execution, full database read access (CVE-2026-107187, CVSS 8.5) to extract credentials and sensitive data, and unrestricted file upload (CVE-2026-107188, CVSS 9.6 Critical) enabling remote code execution as NT AUTHORITY/Local Service. These vulnerabilities are exploitable by network-adjacent attackers with HTTP access and were actively exploited on a customer system during discovery; no evidence of widespread wild exploitation is documented. Immediate patching to Archibus 2025.02 or later is required, as the vulnerable DWR authentication mechanism was redesigned into a REST API in the patched version.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.rapid7.com/blog/post/ve-authentication-bypass-remote-code-execution-and-database-read-in-eptura-archibus-fixed"&gt;Read more&lt;/a&gt; · Source: rapid7&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Mercury: Unauthenticated Remote Code Execution in /api/terminals - access control bypass (CVE-2026-111057)</title>
+    <id>urn:cybersecnews:item:574</id>
+    <published>2026-10-19T20:54:49.904121+00:00</published>
+    <updated>2026-10-19T20:54:49.904121+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-f8c7-rwf9-fmgm" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · access-control-bypass · CVE-2026-111057&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Mercury (pip package) contains a critical access control bypass in `/api/terminals` due to a missing comma in the `BLOCKED_PATTERNS` list within `mercury_app/block_handler.py`, allowing unauthenticated attackers to spawn interactive OS-level shells on affected hosts. This vulnerability (CVE-2026-111057) is a syntax error that causes the blocklist to fail covering the `/api/terminals` endpoint. There is no indication of active exploitation in the wild at this time. Affected users should immediately upgrade to a patched version when available; as interim mitigation, restrict network access to Mercury instances or implement authentication controls at the network perimeter.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-f8c7-rwf9-fmgm"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Unpatched Broadcom Wi-Fi Flaw Lets Attackers in Range Run Code as Root on Routers</title>
     <id>urn:cybersecnews:item:573</id>
@@ -885,23 +903,5 @@
     <link href="https://github.com/advisories/GHSA-c48m-32m9-vx93" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · allowlist-bypass · CVE-2026-92951&lt;/em&gt;&lt;/p&gt;&lt;p&gt;vm2 NodeVM with external package allowlist and custom resolve callbacks is vulnerable to package name collision attacks allowing bypass of intended package restrictions (CVE-2026-92951, critical severity). An attacker can request colliding package names like `evil-left-pad` when only `left-pad` is whitelisted, exploiting non-exact string matching in the allowlist check to load malicious host packages. No indication of active exploitation in the wild is provided. Immediately upgrade vm2 to a patched version; if immediate patching is unavailable, review and remove reliance on external allowlists with custom resolvers as a mitigation.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-c48m-32m9-vx93"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>vm2 exposes host HTTPS credentials and TLS traffic through globalAgent (CVE-2026-92940)</title>
-    <id>urn:cybersecnews:item:475</id>
-    <published>2026-10-01T20:50:35.036010+00:00</published>
-    <updated>2026-10-01T20:50:35.036010+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-h85j-hv3c-qfgq" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · sandbox-escape · CVE-2026-100721, CVE-2026-92934, CVE-2026-92940, CVE-2026-92946, CVE-2026-92956&lt;/em&gt;&lt;/p&gt;&lt;p&gt;vm2 versions up to 3.11.6 leak host HTTPS credentials and TLS traffic when NodeVM explicitly permits requiring the https module. The vulnerability allows sandbox code to register listeners on the shared globalAgent and intercept host request options and TLS sockets from unrelated host HTTPS requests through connection pooling. This is critical severity and exploitable by any code executed within a vm2 sandbox with https module access. Immediate patching to a version beyond 3.11.6 is required; additionally, restrict https module access in vm2 contexts unless absolutely necessary and monitor for unusual connection pooling activity.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-h85j-hv3c-qfgq"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>vm2: NodeVM builtin allowlist bypass via node:test.run() execArgv allows sandbox escape (CVE-2026-92948)</title>
-    <id>urn:cybersecnews:item:474</id>
-    <published>2026-10-01T20:50:35.035171+00:00</published>
-    <updated>2026-10-01T20:50:35.035171+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-qhwx-74w5-xhxq" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · sandbox-escape · CVE-2026-92948&lt;/em&gt;&lt;/p&gt;&lt;p&gt;vm2 NodeVM on Node.js 24+ allows sandbox escape when the node:test builtin is whitelisted; attackers can exploit require('node:node:test') and call run() with malicious execArgv parameters like --eval to execute arbitrary code outside the sandbox. Severity is critical with no indication of active wild exploitation at this time. Immediately upgrade to the latest patched vm2 version and restrict node:test from the allowlist unless absolutely necessary; users unable to patch should disable NodeVM or remove node:test from permitted builtins.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-qhwx-74w5-xhxq"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
   </entry>
 </feed>
