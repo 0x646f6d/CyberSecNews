@@ -3,7 +3,16 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-10-19T20:54:49.905520+00:00</updated>
+  <updated>2026-10-20T13:22:47.104894+00:00</updated>
+  <entry>
+    <title>CVE-2026-106173 Deep-Dive: FortiSIEM gRPC Path Traversal File Write RCE</title>
+    <id>urn:cybersecnews:item:576</id>
+    <published>2026-10-20T13:22:47.104894+00:00</published>
+    <updated>2026-10-20T13:22:47.104894+00:00</updated>
+    <link href="https://horizon3.ai/attack-research/cve-2026-106173-deep-dive-fortisiem-grpc-path-traversal-file-write-rce/" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · path-traversal,rce · CVE-2026-106173&lt;/em&gt;&lt;/p&gt;&lt;p&gt;FortiSIEM's unauthenticated gRPC service contains a critical path traversal vulnerability (CVE-2026-106173) enabling arbitrary file writes and RCE through null-byte handling in file paths. The flaw affects FortiSIEM across multiple versions and requires no authentication, making it readily exploitable. Active exploitation in the wild has been observed based on available indicators of compromise. Immediately patch FortiSIEM to the latest patched version; as interim mitigation, restrict gRPC service access (default port 50051) to trusted networks only and monitor for suspicious file write patterns in FortiSIEM directories.&lt;/p&gt;&lt;p&gt;&lt;a href="https://horizon3.ai/attack-research/cve-2026-106173-deep-dive-fortisiem-grpc-path-traversal-file-write-rce/"&gt;Read more&lt;/a&gt; · Source: horizon3&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Authentication Bypass, Remote Code Execution, and Database Read in Eptura Archibus (FIXED)</title>
     <id>urn:cybersecnews:item:575</id>
@@ -380,7 +389,7 @@
     <updated>2026-10-12T17:26:38.110489+00:00</updated>
     <link href="https://www.bleepingcomputer.com/news/security/inside-avisloader-a-windows-malware-loader-built-to-resist-disruption/" rel="alternate" />
     <category term="red-team" />
-    <content type="html">&lt;p&gt;&lt;em&gt;red-team · c2&lt;/em&gt;&lt;/p&gt;&lt;p&gt;AvisLoader is a Windows malware loader employing encrypted peer-to-peer communications to evade command-and-control takedown efforts. The malware utilizes ClickFix social engineering for initial delivery, establishes persistence via shortcut files, and executes remote commands with high resilience to disruption. No severity rating or active exploitation details were provided in available information. Organizations should implement application whitelisting, educate users on ClickFix tactics, monitor for suspicious shortcut file creation, and maintain endpoint detection and response (EDR) capabilities to identify command execution patterns.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/inside-avisloader-a-windows-malware-loader-built-to-resist-disruption/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+    <content type="html">&lt;p&gt;&lt;em&gt;red-team · c2 · CVE-2026-110936&lt;/em&gt;&lt;/p&gt;&lt;p&gt;AvisLoader is a Windows malware loader employing encrypted peer-to-peer communications to evade command-and-control takedown efforts. The malware utilizes ClickFix social engineering for initial delivery, establishes persistence via shortcut files, and executes remote commands with high resilience to disruption. No severity rating or active exploitation details were provided in available information. Organizations should implement application whitelisting, educate users on ClickFix tactics, monitor for suspicious shortcut file creation, and maintain endpoint detection and response (EDR) capabilities to identify command execution patterns.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/inside-avisloader-a-windows-malware-loader-built-to-resist-disruption/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
   </entry>
   <entry>
     <title>Attackers Exploit CVSS 10.0 Bricksforge WordPress Flaw Enabling Unauthenticated RCE</title>
@@ -894,14 +903,5 @@
     <link href="https://github.com/advisories/GHSA-8686-vhfx-7r3j" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · sandbox-bypass · CVE-2026-92957&lt;/em&gt;&lt;/p&gt;&lt;p&gt;The npm vm2 package (NodeVM) contains a critical sandbox escape vulnerability (CVE-2026-92957) where negative builtin denials fail to block `node:`-prefixed module specifiers, allowing sandboxed code to require child_process and execute arbitrary processes despite explicit deny policies. This affects configurations using wildcard builtin policies with negative entries like `['*', '-node:child_process']`. The vulnerability is critical severity and likely exploitable in active deployments using vm2 for code sandboxing. Users should immediately update to a patched version once released or implement external process isolation controls as a mitigation.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-8686-vhfx-7r3j"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>vm2 Custom Module Resolver Can Bypass the External Package Allowlist by Loading a Colliding Host Package (CVE-2026-92951)</title>
-    <id>urn:cybersecnews:item:476</id>
-    <published>2026-10-01T20:50:35.037121+00:00</published>
-    <updated>2026-10-01T20:50:35.037121+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-c48m-32m9-vx93" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · allowlist-bypass · CVE-2026-92951&lt;/em&gt;&lt;/p&gt;&lt;p&gt;vm2 NodeVM with external package allowlist and custom resolve callbacks is vulnerable to package name collision attacks allowing bypass of intended package restrictions (CVE-2026-92951, critical severity). An attacker can request colliding package names like `evil-left-pad` when only `left-pad` is whitelisted, exploiting non-exact string matching in the allowlist check to load malicious host packages. No indication of active exploitation in the wild is provided. Immediately upgrade vm2 to a patched version; if immediate patching is unavailable, review and remove reliance on external allowlists with custom resolvers as a mitigation.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-c48m-32m9-vx93"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
   </entry>
 </feed>
