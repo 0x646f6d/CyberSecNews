@@ -3,7 +3,16 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-10-20T13:22:47.104894+00:00</updated>
+  <updated>2026-10-20T19:51:41.418630+00:00</updated>
+  <entry>
+    <title>uv's bundled CA store trusts an emSign root whose intermediate CA keys are compromised</title>
+    <id>urn:cybersecnews:item:577</id>
+    <published>2026-10-20T19:51:41.418630+00:00</published>
+    <updated>2026-10-20T19:51:41.418630+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-hq85-5cpj-mr62" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · tls-trust-store&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Python dependency manager uv bundles compromised CA root certificates in its vendored webpki-root-certs store. Versions prior to 0.13.4 include emSign ECC Root CA - G3, which has eight intermediate CAs with compromised private keys that eMudhra has revoked; attackers with these keys can issue valid certificates for any hostname to perform MITM attacks. This is critical severity with potential for exploitation in the wild. Update to uv 0.13.4 or later immediately to remove the vulnerable root from the trusted store.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-hq85-5cpj-mr62"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>CVE-2026-106173 Deep-Dive: FortiSIEM gRPC Path Traversal File Write RCE</title>
     <id>urn:cybersecnews:item:576</id>
@@ -56,7 +65,7 @@
     <updated>2026-10-19T15:19:32.144541+00:00</updated>
     <link href="https://www.golem.de/news/exploit-code-geleakt-angreifer-schleusen-malware-auf-plex-server-2610-214242.html" rel="alternate" />
     <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Plex Media Server is vulnerable to remote code execution via the Plex2Shell attack, allowing attackers to inject malware into affected installations. Exploit code has been leaked and is actively used in the wild. The vulnerability has high severity as it enables unauthenticated arbitrary code execution. Administrators must immediately update Plex Media Server to the latest available version to remediate this exposure.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.golem.de/news/exploit-code-geleakt-angreifer-schleusen-malware-auf-plex-server-2610-214242.html"&gt;Read more&lt;/a&gt; · Source: golem-security&lt;/p&gt;</content>
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-96652, CVE-2026-96654, CVE-2026-96655, CVE-2026-96656&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Plex Media Server is vulnerable to remote code execution via the Plex2Shell attack, allowing attackers to inject malware into affected installations. Exploit code has been leaked and is actively used in the wild. The vulnerability has high severity as it enables unauthenticated arbitrary code execution. Administrators must immediately update Plex Media Server to the latest available version to remediate this exposure.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.golem.de/news/exploit-code-geleakt-angreifer-schleusen-malware-auf-plex-server-2610-214242.html"&gt;Read more&lt;/a&gt; · Source: golem-security&lt;/p&gt;</content>
   </entry>
   <entry>
     <title>Hackers exploit SiteGuard WAF flaw to run commands as admins</title>
@@ -65,7 +74,7 @@
     <updated>2026-10-18T18:28:29.528547+00:00</updated>
     <link href="https://www.bleepingcomputer.com/news/security/hackers-exploit-siteguard-waf-flaw-to-run-commands-as-system-root/" rel="alternate" />
     <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · os-command-injection&lt;/em&gt;&lt;/p&gt;&lt;p&gt;SiteGuard Server Edition is vulnerable to OS command injection that allows attackers to execute arbitrary commands with root/SYSTEM privileges. The vulnerability is actively exploited in the wild according to reports. Patch availability status should be confirmed with the vendor immediately, and affected systems should be isolated or placed behind an additional WAF layer if patching is delayed. Organizations running SiteGuard Server Edition should prioritize patching and monitor for signs of exploitation such as unusual command execution or privilege escalation attempts.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/hackers-exploit-siteguard-waf-flaw-to-run-commands-as-system-root/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · os-command-injection · CVE-2026-106931&lt;/em&gt;&lt;/p&gt;&lt;p&gt;SiteGuard Server Edition is vulnerable to OS command injection that allows attackers to execute arbitrary commands with root/SYSTEM privileges. The vulnerability is actively exploited in the wild according to reports. Patch availability status should be confirmed with the vendor immediately, and affected systems should be isolated or placed behind an additional WAF layer if patching is delayed. Organizations running SiteGuard Server Edition should prioritize patching and monitor for signs of exploitation such as unusual command execution or privilege escalation attempts.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/hackers-exploit-siteguard-waf-flaw-to-run-commands-as-system-root/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
   </entry>
   <entry>
     <title>Claude Agent SDK: Argument Injection via resume Option Allows Arbitrary Command Execution (CVE-2026-96620)</title>
@@ -894,14 +903,5 @@
     <link href="https://github.com/advisories/GHSA-8hr7-r645-pc6w" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-73483, CVE-2026-92935, CVE-2026-92947, CVE-2026-92953, CVE-2026-92954, CVE-2026-92955, CVE-2026-93605&lt;/em&gt;&lt;/p&gt;&lt;p&gt;vm2 NodeVM is vulnerable to a nesting guard bypass (CVE-2026-92935) where passing an array for the require parameter bypasses type checking, allowing attackers to execute arbitrary code on the host system with critical severity. The vulnerability affects versions of vm2 where `typeof requireOpts === 'object'` accepts arrays, which then destructure to undefined and permit nesting execution. This is exploitable in the wild when downstream NodeVM instances are configured with `nesting: true` and untrusted code execution. Patch immediately by updating vm2 to a patched version and add strict type validation for require configuration parameters.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-8hr7-r645-pc6w"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>vm2: NodeVM node:-prefixed negative builtin deny bypass exposes child_process (CVE-2026-92957)</title>
-    <id>urn:cybersecnews:item:477</id>
-    <published>2026-10-01T20:50:35.038000+00:00</published>
-    <updated>2026-10-01T20:50:35.038000+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-8686-vhfx-7r3j" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · sandbox-bypass · CVE-2026-92957&lt;/em&gt;&lt;/p&gt;&lt;p&gt;The npm vm2 package (NodeVM) contains a critical sandbox escape vulnerability (CVE-2026-92957) where negative builtin denials fail to block `node:`-prefixed module specifiers, allowing sandboxed code to require child_process and execute arbitrary processes despite explicit deny policies. This affects configurations using wildcard builtin policies with negative entries like `['*', '-node:child_process']`. The vulnerability is critical severity and likely exploitable in active deployments using vm2 for code sandboxing. Users should immediately update to a patched version once released or implement external process isolation controls as a mitigation.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-8686-vhfx-7r3j"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
   </entry>
 </feed>
