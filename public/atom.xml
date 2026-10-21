@@ -3,7 +3,16 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-10-21T13:29:58.573234+00:00</updated>
+  <updated>2026-10-21T19:57:00.556481+00:00</updated>
+  <entry>
+    <title>Storybook: Missing origin validation in Storybook preview allows code injection from malicious websites (CVE-2026-114125)</title>
+    <id>urn:cybersecnews:item:585</id>
+    <published>2026-10-21T19:57:00.556481+00:00</published>
+    <updated>2026-10-21T19:57:00.556481+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-f2ph-cmg5-wxc8" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · code-injection · CVE-2026-114125&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Storybook preview (@storybook/core, @storybook/core-server, and related addons) contains a missing origin validation vulnerability allowing code injection from malicious websites when a dev server is running. An attacker can cause unauthorized file changes in a developer's project, potentially leading to code execution with developer privileges if a changed file is executed by a local runtime. No active exploitation in the wild has been reported. Update affected Storybook packages to patched versions immediately, and avoid opening Storybook dev servers in untrusted browser contexts.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-f2ph-cmg5-wxc8"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Hackers Hid Vasilek Backdoor in VMware Tools During 2-Year Russian Healthcare Intrusion</title>
     <id>urn:cybersecnews:item:584</id>
@@ -894,14 +903,5 @@
     <link href="https://thehackernews.com/2026/10/attackers-target-rejetto-hfs-flaw-that.html" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · session-forgery · CVE-2026-61500, CVE-2026-9205&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Rejetto HTTP File Server (HFS) is affected by CVE-2024-27891 (CVSS 9.3), a critical session forgery vulnerability caused by a weak pseudo-random number generator that produces predictable session keys, allowing attackers to forge admin sessions and achieve remote code execution. Active exploitation in the wild has been confirmed by VulnCheck. Organizations running HFS should immediately patch to a patched version or disable the service if updates are unavailable. This is a high-priority vulnerability requiring urgent remediation due to the ease of exploitation and severity of impact.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/attackers-target-rejetto-hfs-flaw-that.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Realtek Jungle SDK Exploit Attempts Deliver Cling Botnet With STUN-Based C2</title>
-    <id>urn:cybersecnews:item:485</id>
-    <published>2026-10-05T16:51:21.125425+00:00</published>
-    <updated>2026-10-05T16:51:21.125425+00:00</updated>
-    <link href="https://thehackernews.com/2026/10/realtek-jungle-sdk-exploit-attempts.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Realtek Jungle SDK is affected by a critical, now-patched vulnerability being actively exploited in the wild to deploy Cling botnet malware. Cling leverages STUN (Session Traversal Utilities for NAT) protocol for command-and-control communications, repurposing legitimate network behavior to evade detection. Apply available security patches for Realtek Jungle SDK immediately, and monitor for STUN traffic anomalies indicative of C2 communication. Implement network-level controls to restrict STUN traffic from IoT/embedded devices not requiring this protocol.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/realtek-jungle-sdk-exploit-attempts.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
   </entry>
 </feed>
