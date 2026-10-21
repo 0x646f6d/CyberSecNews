@@ -3,7 +3,34 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-10-21T03:32:06.424610+00:00</updated>
+  <updated>2026-10-21T13:29:58.573234+00:00</updated>
+  <entry>
+    <title>Hackers Hid Vasilek Backdoor in VMware Tools During 2-Year Russian Healthcare Intrusion</title>
+    <id>urn:cybersecnews:item:584</id>
+    <published>2026-10-21T13:29:58.573234+00:00</published>
+    <updated>2026-10-21T13:29:58.573234+00:00</updated>
+    <link href="https://thehackernews.com/2026/10/hackers-hid-vasilek-backdoor-in-vmware.html" rel="alternate" />
+    <category term="red-team" />
+    <content type="html">&lt;p&gt;&lt;em&gt;red-team · backdoor&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Partisan Zmiy (Cyber Partisans) deployed the Vasilek backdoor by compromising VMware Tools within a Russian healthcare network over a two-year intrusion campaign, demonstrating sophisticated persistence techniques. The attack exploits VMware Tools as a delivery mechanism for malware, allowing the threat actor to maintain long-term access to critical infrastructure. No severity score or widespread exploitation data provided, but the multi-year dwell time indicates high operational impact to the targeted organization. Immediate action required: audit VMware Tools installations for unauthorized modifications, verify integrity of VMware Tools packages, isolate and analyze any suspicious VMware processes, and implement strict access controls and monitoring on hypervisor and guest-agent communications.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/hackers-hid-vasilek-backdoor-in-vmware.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Attackers Hijacked Over 300 Tor Exit Relays to Intercept SSH Connections</title>
+    <id>urn:cybersecnews:item:583</id>
+    <published>2026-10-21T13:29:58.571774+00:00</published>
+    <updated>2026-10-21T13:29:58.571774+00:00</updated>
+    <link href="https://thehackernews.com/2026/10/attackers-hijacked-over-300-tor-exit.html" rel="alternate" />
+    <category term="red-team" />
+    <content type="html">&lt;p&gt;&lt;em&gt;red-team · man-in-the-middle&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Attackers compromised over 300 Tor exit relays in October 2020 to intercept SSH traffic and harvest login credentials from users connecting through those nodes. The attack exploited the trust model of Tor's exit relay network, redirecting SSH connections to attacker-controlled servers that captured passwords before forwarding traffic to legitimate destinations. This represents a high-severity threat to users relying on Tor for secure remote access, though exploitation was limited to SSH password authentication during the five-day window. Users should assume compromised credentials from that period and immediately change SSH passwords; operators should audit exit relay deployments for unauthorized modifications and implement additional monitoring for anomalous SSH traffic patterns.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/attackers-hijacked-over-300-tor-exit.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>China-Aligned Bronze Sandcastle Abuses Sandboxie DLL Sideloading to Deploy Backdoors</title>
+    <id>urn:cybersecnews:item:582</id>
+    <published>2026-10-21T13:29:58.570163+00:00</published>
+    <updated>2026-10-21T13:29:58.570163+00:00</updated>
+    <link href="https://thehackernews.com/2026/10/china-aligned-bronze-sandcastle-abuses.html" rel="alternate" />
+    <category term="red-team" />
+    <content type="html">&lt;p&gt;&lt;em&gt;red-team · dll-sideloading&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Bronze Sandcastle, a China-aligned threat actor active since mid-2025, exploits DLL sideloading vulnerabilities in Sandboxie to deploy backdoors against organizations in Asia and Africa. The group leverages legitimate Sandboxie processes to load malicious DLLs, a technique that evades detection by appearing as benign sandbox software execution. No severity rating or in-the-wild exploitation prevalence data was provided in available details. Organizations should update Sandboxie to the latest version, implement DLL sideloading mitigations (code signing enforcement, application whitelisting), and monitor for suspicious Sandboxie process behavior.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/china-aligned-bronze-sandcastle-abuses.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Oracle October 2026 Critical Patch Update Addresses 1209 CVEs</title>
     <id>urn:cybersecnews:item:581</id>
@@ -29,7 +56,7 @@
     <updated>2026-10-21T03:32:06.422443+00:00</updated>
     <link href="https://www.bleepingcomputer.com/news/security/php-warns-admins-of-two-critical-flaws-emergency-patches-coming-tomorrow/" rel="alternate" />
     <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · critical&lt;/em&gt;&lt;/p&gt;&lt;p&gt;PHP is releasing emergency patches tomorrow for two critical vulnerabilities affecting the PHP interpreter; details have leaked early, compromising the coordinated disclosure timeline. The exact nature of these flaws remains undisclosed, but their critical rating and premature exposure suggest active exploitation risk is high or imminent. Administrators should prioritize applying these patches immediately upon release tomorrow and consider temporarily restricting PHP application exposure if feasible. Monitor PHP's official security advisory channels for details and patch availability as soon as updates become available.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/php-warns-admins-of-two-critical-flaws-emergency-patches-coming-tomorrow/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · critical · CVE-2026-109618, CVE-2026-109619&lt;/em&gt;&lt;/p&gt;&lt;p&gt;PHP is releasing emergency patches tomorrow for two critical vulnerabilities affecting the PHP interpreter; details have leaked early, compromising the coordinated disclosure timeline. The exact nature of these flaws remains undisclosed, but their critical rating and premature exposure suggest active exploitation risk is high or imminent. Administrators should prioritize applying these patches immediately upon release tomorrow and consider temporarily restricting PHP application exposure if feasible. Monitor PHP's official security advisory channels for details and patch availability as soon as updates become available.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/php-warns-admins-of-two-critical-flaws-emergency-patches-coming-tomorrow/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
   </entry>
   <entry>
     <title>Stolen UpdraftCentral keys used to backdoor WordPress sites</title>
@@ -876,32 +903,5 @@
     <link href="https://thehackernews.com/2026/10/realtek-jungle-sdk-exploit-attempts.html" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Realtek Jungle SDK is affected by a critical, now-patched vulnerability being actively exploited in the wild to deploy Cling botnet malware. Cling leverages STUN (Session Traversal Utilities for NAT) protocol for command-and-control communications, repurposing legitimate network behavior to evade detection. Apply available security patches for Realtek Jungle SDK immediately, and monitor for STUN traffic anomalies indicative of C2 communication. Implement network-level controls to restrict STUN traffic from IoT/embedded devices not requiring this protocol.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/realtek-jungle-sdk-exploit-attempts.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Bildmanipulationen: Content-Signatur C2PA ausgehebelt</title>
-    <id>urn:cybersecnews:item:484</id>
-    <published>2026-10-05T16:51:21.124098+00:00</published>
-    <updated>2026-10-05T16:51:21.124098+00:00</updated>
-    <link href="https://www.golem.de/news/bildmanipulationen-content-signatur-c2pa-ausgehebelt-2610-213700.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · signature-bypass&lt;/em&gt;&lt;/p&gt;&lt;p&gt;The C2PA (Coalition for Content Provenance and Authenticity) content signature standard for verifying image authenticity has been bypassed by exploiting an exclusion rule that allows certain image regions to be omitted from signature calculations. The bypass leverages a technically necessary feature of the standard but enables attackers to manipulate images while maintaining valid C2PA signatures, undermining the integrity verification purpose. No active exploitation in the wild has been reported, though this represents a fundamental weakness in the standard's design rather than a software-specific vulnerability. Adobe and other C2PA implementers should collaborate on refined verification rules that balance technical necessity with security; users should not rely solely on C2PA signatures for authenticating critical content without additional verification methods.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.golem.de/news/bildmanipulationen-content-signatur-c2pa-ausgehebelt-2610-213700.html"&gt;Read more&lt;/a&gt; · Source: golem-security&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>gitea-runner: workflow container.options passes host namespaces and capability flags to job container when privileged mode is disabled (CVE-2026-73802)</title>
-    <id>urn:cybersecnews:item:483</id>
-    <published>2026-10-03T04:01:46.005857+00:00</published>
-    <updated>2026-10-03T04:01:46.005857+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-x4q3-gcj3-m6cf" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · privilege-escalation · CVE-2026-73802&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Gitea Runner (act_runner) fails to sanitize workflow-controlled `container.options` parameters when privileged mode is disabled, allowing attackers to bypass security restrictions. A malicious workflow can specify host namespace flags (PID/IPC) and capability expansions to gain root-level access to the runner host despite the runner operating in non-privileged mode. This is critical severity and likely exploitable given that workflows are user-controllable in many CI/CD environments. Immediately update Gitea Runner to the patched version and audit all recent workflow executions for suspicious container options usage.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-x4q3-gcj3-m6cf"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Antino Backdoor Uses Outlook and OneDrive for C2 in China-Nexus Espionage Campaign</title>
-    <id>urn:cybersecnews:item:482</id>
-    <published>2026-10-02T20:23:37.996240+00:00</published>
-    <updated>2026-10-02T20:23:37.996240+00:00</updated>
-    <link href="https://thehackernews.com/2026/10/antino-backdoor-uses-outlook-and.html" rel="alternate" />
-    <category term="red-team" />
-    <content type="html">&lt;p&gt;&lt;em&gt;red-team · c2&lt;/em&gt;&lt;/p&gt;&lt;p&gt;A China-nexus threat actor has deployed a previously undocumented backdoor called Antino targeting government and policy organizations across seven Asian countries (Taiwan, India, Philippines, Cambodia, Pakistan, Thailand, Myanmar). Antino uses legitimate Microsoft services—Outlook and OneDrive—for command and control communications, enabling it to evade network-based detection. The severity is high given the espionage targeting of government entities; current indicators do not specify active wild exploitation beyond the identified campaign. Recommended actions: implement email security controls and OneDrive access restrictions for sensitive networks, hunt for Antino indicators of compromise in logs, and monitor for lateral movement following initial compromise.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/antino-backdoor-uses-outlook-and.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
   </entry>
 </feed>
