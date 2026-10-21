@@ -3,7 +3,43 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-10-20T19:51:41.418630+00:00</updated>
+  <updated>2026-10-21T03:32:06.424610+00:00</updated>
+  <entry>
+    <title>Oracle October 2026 Critical Patch Update Addresses 1209 CVEs</title>
+    <id>urn:cybersecnews:item:581</id>
+    <published>2026-10-21T03:32:06.424610+00:00</published>
+    <updated>2026-10-21T03:32:06.424610+00:00</updated>
+    <link href="https://www.tenable.com/blog/oracle-october-2026-critical-patch-update-addresses-1209-cves" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · multiple&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Oracle's October 2026 Critical Patch Update addresses 1209 CVEs across 33 product families, with 112 critical-severity patches representing 8.6% of total patches released. Oracle Fusion Middleware and E-Business Suite received the most patches (206 and 194 respectively), with 134 and 31 remote exploits without authentication required. The high prevalence of remotely exploitable critical vulnerabilities in Fusion Middleware (95 of 206 patches) and Siebel CRM (66 of 122 patches) indicates immediate risk. Apply all relevant patches from this CPU immediately, prioritizing critical updates for Fusion Middleware and E-Business Suite deployments.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.tenable.com/blog/oracle-october-2026-critical-patch-update-addresses-1209-cves"&gt;Read more&lt;/a&gt; · Source: tenable&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Pillow: Heap buffer overflow in ImagingJpegDecode (CVE-2026-112403)</title>
+    <id>urn:cybersecnews:item:580</id>
+    <published>2026-10-21T03:32:06.423764+00:00</published>
+    <updated>2026-10-21T03:32:06.423764+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-8g5g-8vmr-9782" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · heap-buffer-overflow · CVE-2026-112403&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Pillow's `JpegImageFile.draft()` method used by `Image.thumbnail()` contains a critical heap buffer overflow in `ImagingJpegDecode()` that fails to validate JPEG decoder output dimensions against the allocated decode buffer. The vulnerability occurs when requesting scaled JPEG output (1/2, 1/4, or 1/8) because the buffer allocation does not account for actual output parameters set by `jpeg_start_decompress()`. This flaw can be exploited remotely via specially crafted JPEG files to achieve arbitrary code execution. Users should immediately update Pillow to the latest patched version.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-8g5g-8vmr-9782"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>PHP warns admins of two critical flaws, emergency patches coming tomorrow</title>
+    <id>urn:cybersecnews:item:579</id>
+    <published>2026-10-21T03:32:06.422443+00:00</published>
+    <updated>2026-10-21T03:32:06.422443+00:00</updated>
+    <link href="https://www.bleepingcomputer.com/news/security/php-warns-admins-of-two-critical-flaws-emergency-patches-coming-tomorrow/" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · critical&lt;/em&gt;&lt;/p&gt;&lt;p&gt;PHP is releasing emergency patches tomorrow for two critical vulnerabilities affecting the PHP interpreter; details have leaked early, compromising the coordinated disclosure timeline. The exact nature of these flaws remains undisclosed, but their critical rating and premature exposure suggest active exploitation risk is high or imminent. Administrators should prioritize applying these patches immediately upon release tomorrow and consider temporarily restricting PHP application exposure if feasible. Monitor PHP's official security advisory channels for details and patch availability as soon as updates become available.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/php-warns-admins-of-two-critical-flaws-emergency-patches-coming-tomorrow/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Stolen UpdraftCentral keys used to backdoor WordPress sites</title>
+    <id>urn:cybersecnews:item:578</id>
+    <published>2026-10-21T03:32:06.421231+00:00</published>
+    <updated>2026-10-21T03:32:06.421231+00:00</updated>
+    <link href="https://www.bleepingcomputer.com/news/security/stolen-updraftcentral-keys-used-to-backdoor-wordpress-sites/" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · credential-compromise&lt;/em&gt;&lt;/p&gt;&lt;p&gt;UpdraftCentral, a WordPress management tool used to remotely administer WordPress sites, had authentication keys compromised following a breach of TeamUpdraft's infrastructure. The stolen keys allow attackers to send arbitrary commands to WordPress installations connected through UpdraftCentral, enabling complete site compromise. This vulnerability is actively exploited in the wild with confirmed backdooring of WordPress sites. Immediately revoke and regenerate all UpdraftCentral connection keys, audit sites for unauthorized activity, and monitor for suspicious commands sent through the platform; consider temporarily disconnecting UpdraftCentral until key rotation is complete.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/stolen-updraftcentral-keys-used-to-backdoor-wordpress-sites/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>uv's bundled CA store trusts an emSign root whose intermediate CA keys are compromised</title>
     <id>urn:cybersecnews:item:577</id>
@@ -200,7 +236,7 @@
     <updated>2026-10-14T20:01:31.948025+00:00</updated>
     <link href="https://www.rapid7.com/blog/post/ve-unauthenticated-sql-injection-in-channel-software-weballiance-ecommerce" rel="alternate" />
     <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · sqli · CVE-2026-108065&lt;/em&gt;&lt;/p&gt;&lt;p&gt;CVE-2026-108065 affects Channel Software WebAlliance eCommerce, an unauthenticated SQL injection vulnerability in the GetUser SOAP method's sUserID parameter that fails to properly escape user input. The vulnerability is critical (CVSS 9.8) and allows attackers to extract sensitive data including PII and passwords, or execute system commands if the database runs with admin privileges; exploitation via time-based SQL injection and MSSQL stacked queries is trivial and no evidence of wild exploitation is reported but the public PoC increases risk. Organizations running WebAlliance eCommerce should immediately block access to /preapproval.asmx endpoint as a temporary mitigation and contact Channel Software for a patched version, as the vendor has not released a fix as of October 2026.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.rapid7.com/blog/post/ve-unauthenticated-sql-injection-in-channel-software-weballiance-ecommerce"&gt;Read more&lt;/a&gt; · Source: rapid7&lt;/p&gt;</content>
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · sqli · CVE-2026-101767, CVE-2026-108065&lt;/em&gt;&lt;/p&gt;&lt;p&gt;CVE-2026-108065 affects Channel Software WebAlliance eCommerce, an unauthenticated SQL injection vulnerability in the GetUser SOAP method's sUserID parameter that fails to properly escape user input. The vulnerability is critical (CVSS 9.8) and allows attackers to extract sensitive data including PII and passwords, or execute system commands if the database runs with admin privileges; exploitation via time-based SQL injection and MSSQL stacked queries is trivial and no evidence of wild exploitation is reported but the public PoC increases risk. Organizations running WebAlliance eCommerce should immediately block access to /preapproval.asmx endpoint as a temporary mitigation and contact Channel Software for a patched version, as the vendor has not released a fix as of October 2026.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.rapid7.com/blog/post/ve-unauthenticated-sql-injection-in-channel-software-weballiance-ecommerce"&gt;Read more&lt;/a&gt; · Source: rapid7&lt;/p&gt;</content>
   </entry>
   <entry>
     <title>From One Account to Every Mailbox: Breaking Zimbra's Identity Boundaries (Part 1)</title>
@@ -867,41 +903,5 @@
     <link href="https://thehackernews.com/2026/10/antino-backdoor-uses-outlook-and.html" rel="alternate" />
     <category term="red-team" />
     <content type="html">&lt;p&gt;&lt;em&gt;red-team · c2&lt;/em&gt;&lt;/p&gt;&lt;p&gt;A China-nexus threat actor has deployed a previously undocumented backdoor called Antino targeting government and policy organizations across seven Asian countries (Taiwan, India, Philippines, Cambodia, Pakistan, Thailand, Myanmar). Antino uses legitimate Microsoft services—Outlook and OneDrive—for command and control communications, enabling it to evade network-based detection. The severity is high given the espionage targeting of government entities; current indicators do not specify active wild exploitation beyond the identified campaign. Recommended actions: implement email security controls and OneDrive access restrictions for sensitive networks, hunt for Antino indicators of compromise in logs, and monitor for lateral movement following initial compromise.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/antino-backdoor-uses-outlook-and.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>GitLab Patches Critical 9.9 AI Gateway Flaw Allowing Command Execution on Self-Hosted Servers</title>
-    <id>urn:cybersecnews:item:481</id>
-    <published>2026-10-02T20:23:37.990775+00:00</published>
-    <updated>2026-10-02T20:23:37.990775+00:00</updated>
-    <link href="https://thehackernews.com/2026/10/gitlab-patches-critical-self-hosted-ai.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;GitLab AI Gateway versions prior to 19.2.4, 19.3.2, and 19.4.1 contain a critical command execution vulnerability (CVSS 9.9) affecting self-hosted deployments. An authenticated user with Duo Agent Platform access can execute arbitrary commands on the gateway under specific conditions. This flaw is not reported as actively exploited in the wild but poses severe risk to self-hosted GitLab instances. Administrators operating self-hosted AI Gateways should immediately upgrade to the patched versions listed above.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/gitlab-patches-critical-self-hosted-ai.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>SMTP is the key: BPFDoor and AVERAT hitting the network edge</title>
-    <id>urn:cybersecnews:item:480</id>
-    <published>2026-10-02T14:29:52.161302+00:00</published>
-    <updated>2026-10-02T14:29:52.161302+00:00</updated>
-    <link href="https://www.rapid7.com/blog/post/tr-smtp-is-the-key-bpfdoor-averat-hitting-the-network-edge" rel="alternate" />
-    <category term="red-team" />
-    <content type="html">&lt;p&gt;&lt;em&gt;red-team · c2, persistence, evasion&lt;/em&gt;&lt;/p&gt;&lt;p&gt;BPFDoor and AVERAT Linux implants target telecom and network-edge appliances including mail-security gateways, DVRs, and NAS devices in South Korea and Taiwan. BPFDoor is a passive Berkeley Packet Filter-based backdoor that uses kernel-level packet interception with magic-byte triggers (evolved to hide in HTTPS POST requests to evade detection), while AVERAT is a modular implant beaconing via SMTP to blend with legitimate mail traffic and supporting ten concurrent shell sessions, file operations, and dynamic C2 reconfiguration. Both families are actively exploited in the wild; BPFDoor variants use regional process spoofing (SpamSniper in Korea, Oracle/Sniper daemons in telecom infrastructure) and AVERAT infrastructure comprises compromised consumer/SMB appliances in Taiwan acting as operational relays consistent with China-nexus ORB networks. Organizations should hunt for processes with deleted executables (/proc/pid/exe pointing to deleted), monitor outbound SMTP from non-mail services to consumer-grade hosts, detect raw packet sockets and BPF filters on non-packet-capture systems, and restrict management access to edge appliances while preserving process forensics and DNS records; patch end-of-life appliances where possible and segment network-edge devices.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.rapid7.com/blog/post/tr-smtp-is-the-key-bpfdoor-averat-hitting-the-network-edge"&gt;Read more&lt;/a&gt; · Source: rapid7&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Dell asks admins to patch max severity CSM flaws as soon as possible</title>
-    <id>urn:cybersecnews:item:479</id>
-    <published>2026-10-02T14:29:52.159492+00:00</published>
-    <updated>2026-10-02T14:29:52.159492+00:00</updated>
-    <link href="https://www.bleepingcomputer.com/news/security/new-max-severity-dell-csm-flaws-give-hackers-admin-privileges/" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-63688&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Dell Container Storage Modules (CSM) for Kubernetes contains two maximum severity vulnerabilities enabling remote code execution and privilege escalation on enterprise storage arrays. The flaws allow unauthenticated attackers to compromise storage infrastructure integrated with Kubernetes clusters. Dell recommends immediate patching of affected CSM versions; check Dell security advisories for specific vulnerable versions and available updates. No indication of active exploitation in the wild, but the critical nature and storage infrastructure exposure warrant expedited remediation.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/new-max-severity-dell-csm-flaws-give-hackers-admin-privileges/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>vm2: NodeVM nesting guard accepts array-shaped require and permits host RCE (CVE-2026-92935)</title>
-    <id>urn:cybersecnews:item:478</id>
-    <published>2026-10-01T20:50:35.038954+00:00</published>
-    <updated>2026-10-01T20:50:35.038954+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-8hr7-r645-pc6w" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-73483, CVE-2026-92935, CVE-2026-92947, CVE-2026-92953, CVE-2026-92954, CVE-2026-92955, CVE-2026-93605&lt;/em&gt;&lt;/p&gt;&lt;p&gt;vm2 NodeVM is vulnerable to a nesting guard bypass (CVE-2026-92935) where passing an array for the require parameter bypasses type checking, allowing attackers to execute arbitrary code on the host system with critical severity. The vulnerability affects versions of vm2 where `typeof requireOpts === 'object'` accepts arrays, which then destructure to undefined and permit nesting execution. This is exploitable in the wild when downstream NodeVM instances are configured with `nesting: true` and untrusted code execution. Patch immediately by updating vm2 to a patched version and add strict type validation for require configuration parameters.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-8hr7-r645-pc6w"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
   </entry>
 </feed>
