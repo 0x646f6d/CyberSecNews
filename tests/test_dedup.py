@@ -44,8 +44,13 @@ def test_layer2_canonical_key_matches_cveless_zeroday(tmp_path):
 
 def test_layer3_semantic_match(tmp_path):
     db = Database(tmp_path / "seen.db")
-    seen = db.insert(make_vuln(url="https://x/1", canonical_key="k-old", cve_ids=[]))
-    candidate = make_vuln(url="https://x/2", canonical_key="k-new", cve_ids=[])
+    # Paraphrased key for the same product: layer 2 misses, layer 3 catches it.
+    seen = db.insert(
+        make_vuln(url="https://x/1", canonical_key="ivanti:connect-secure:rce", cve_ids=[])
+    )
+    candidate = make_vuln(
+        url="https://x/2", canonical_key="ivanti:ics:code-execution", cve_ids=[]
+    )
     llm = FakeLLM(semantic_matches={"https://x/2": seen})
     engine = DedupEngine(db=db, llm=llm, use_semantic=True)
 
@@ -69,3 +74,40 @@ def test_cve_backfill(tmp_path):
     rid = db.insert(make_vuln(url="https://x/1", canonical_key="k", cve_ids=[]))
     db.add_cves(rid, ["CVE-2025-42"])
     assert db.find_by_cve(["CVE-2025-42"]).id == rid
+
+
+def test_layer3_rejects_unrelated_product(tmp_path):
+    """An LLM match between two different products must not swallow the item."""
+    db = Database(tmp_path / "seen.db")
+    seen = db.insert(
+        make_vuln(
+            url="https://x/1",
+            canonical_key="tensorlake:tensorlake-npm:supply-chain-attack",
+            cve_ids=[],
+        )
+    )
+    candidate = make_vuln(
+        url="https://x/2", canonical_key="litellm:litellm:supply-chain-attack", cve_ids=[]
+    )
+    llm = FakeLLM(semantic_matches={"https://x/2": seen})
+    engine = DedupEngine(db=db, llm=llm, use_semantic=True)
+    assert engine.check(candidate).is_duplicate is False
+
+
+def test_layer3_rejects_unknown_match_id(tmp_path):
+    db = Database(tmp_path / "seen.db")
+    db.insert(make_vuln(url="https://x/1", canonical_key="acme:widget:rce", cve_ids=[]))
+    candidate = make_vuln(url="https://x/2", canonical_key="acme:widget:sqli", cve_ids=[])
+    llm = FakeLLM(semantic_matches={"https://x/2": 9999})  # not a candidate
+    engine = DedupEngine(db=db, llm=llm, use_semantic=True)
+    assert engine.check(candidate).is_duplicate is False
+
+
+def test_layer3_fails_open_without_identity(tmp_path):
+    """Vague keys (no usable vendor/product) leave the decision to the LLM."""
+    db = Database(tmp_path / "seen.db")
+    seen = db.insert(make_vuln(url="https://x/1", canonical_key="acme:widget:rce", cve_ids=[]))
+    candidate = make_vuln(url="https://x/2", canonical_key="multiple:unknown:rce", cve_ids=[])
+    llm = FakeLLM(semantic_matches={"https://x/2": seen})
+    engine = DedupEngine(db=db, llm=llm, use_semantic=True)
+    assert engine.check(candidate).is_duplicate

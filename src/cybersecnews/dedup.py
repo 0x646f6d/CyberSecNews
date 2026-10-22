@@ -10,13 +10,14 @@ articles about the same fresh zero-day in one batch collapse to one report entry
 
 from __future__ import annotations
 
+import re
 from dataclasses import dataclass, field
 from typing import Optional
 
 from .db import Database
 from .llm.base import LLMClient
 from .logging_setup import get_logger
-from .models import SeenRecord, Vulnerability
+from .models import Classification, SeenRecord, Vulnerability
 
 log = get_logger(__name__)
 
@@ -73,9 +74,34 @@ class DedupEngine:
             if candidates:
                 match_id = self.llm.match_existing(vuln.article, c, candidates)
                 if match_id is not None:
-                    # match_id may reference a pending (unpersisted, id<0) item.
-                    real_id = match_id if match_id >= 0 else None
-                    return DedupResult(True, "layer3:semantic", real_id)
+                    matched = next((r for r in candidates if r.id == match_id), None)
+                    if matched is None:
+                        # The LLM returned an id that wasn't offered: never let a
+                        # hallucinated id swallow an item.
+                        log.warning(
+                            "[dedup] layer3 rejected: unknown match id #%s for %s",
+                            match_id,
+                            vuln.article.title,
+                        )
+                    elif not _identity_overlaps(c, matched):
+                        # Completely different vendor/product: a false positive
+                        # (e.g. two unrelated supply-chain compromises).
+                        log.info(
+                            "[dedup] layer3 rejected: #%d %r [%s] shares no "
+                            "vendor/product with [%s]",
+                            matched.id,
+                            matched.title,
+                            matched.canonical_key,
+                            c.canonical_key,
+                        )
+                    else:
+                        # match_id may reference a pending (unpersisted, id<0) item.
+                        real_id = match_id if match_id >= 0 else None
+                        return DedupResult(
+                            True,
+                            f"layer3:semantic #{match_id} {matched.title!r}",
+                            real_id,
+                        )
 
         return DedupResult(False)
 
@@ -101,3 +127,35 @@ class DedupEngine:
                 first_seen_at=vuln.article.published,
             )
         )
+
+
+# Placeholder tokens that say nothing about which product is affected.
+_GENERIC_TOKENS = {
+    "multiple", "various", "unknown", "none", "null", "generic", "misc",
+    "product", "products", "software", "package", "packages", "malicious",
+}
+
+
+def _identity_tokens(
+    vendor: Optional[str], product: Optional[str], canonical_key: str
+) -> set[str]:
+    """Vendor/product tokens from the explicit fields plus the key's first two
+    segments (``vendor:product:vuln_class``)."""
+    parts = [vendor or "", product or ""] + (canonical_key or "").split(":")[:2]
+    tokens = set()
+    for part in parts:
+        tokens.update(re.split(r"[^a-z0-9]+", part.lower()))
+    return {t for t in tokens if len(t) >= 2 and t not in _GENERIC_TOKENS}
+
+
+def _identity_overlaps(c: Classification, rec: SeenRecord) -> bool:
+    """False only if both sides name a vendor/product and they share nothing.
+
+    Fails open (True) when either side has no usable identity, so the LLM's
+    judgement still decides for vague items.
+    """
+    new = _identity_tokens(c.vendor, c.product, c.canonical_key)
+    old = _identity_tokens(rec.vendor, rec.product, rec.canonical_key)
+    if not new or not old:
+        return True
+    return bool(new & old)

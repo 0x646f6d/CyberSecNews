@@ -227,6 +227,16 @@ prefilter:
     - security update
     - flaw
     - backdoor
+    # Supply-chain compromises and leaked keys/certificates rarely say
+    # "vulnerability" or "exploit".
+    - supply chain
+    - supply-chain
+    - compromised
+    - malicious package
+    - credential stealer
+    - private key
+    - certificate
+    - leak
   red_team:
     - red team
     - red teaming

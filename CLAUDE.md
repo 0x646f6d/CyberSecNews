@@ -76,6 +76,10 @@ Tests in `tests/` (see Testing below).
   2. `canonical_key` matches an existing row (no LLM) — carries CVE-less zero-days;
   3. one bounded LLM `match_existing` call vs the recent window
      (`dedup_window_days`, default 45) — paraphrase/re-mention catch.
+     The LLM's `match_id` is only accepted if it is one of the offered candidates
+     and shares at least one vendor/product token with the new item
+     (`_identity_overlaps`; fails open when either side has no usable identity).
+     The matched record (`#id 'title'`) is logged in the dedup reason.
 - **CVE backfill:** when a later article about a known zero-day finally carries a
   CVE, `db.add_cves` merges it onto the stored record so Layer 1 catches it next
   time. Triggered from `pipeline.run` on a duplicate with `matched_record_id`.

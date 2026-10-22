@@ -58,11 +58,12 @@ def run(config: Config, db: Database, llm: LLMClient, dry_run: bool = False) -> 
     # -- prefilter -------------------------------------------------------------
     # Curated, trusted feeds skip the keyword gate and always reach the LLM.
     bypass = {c.name for c in enabled if c.bypass_prefilter}
-    candidates = [
-        a
-        for a in articles
-        if a.source in bypass or _passes_prefilter(a, config.prefilter)
-    ]
+    candidates = []
+    for a in articles:
+        if a.source in bypass or _passes_prefilter(a, config.prefilter):
+            candidates.append(a)
+        else:
+            log.debug("[prefilter] drop: %s (%s)", a.title, a.url)
     stats.prefiltered = len(candidates)
     log.info(
         "prefilter kept %d / %d articles", stats.prefiltered, stats.in_window
