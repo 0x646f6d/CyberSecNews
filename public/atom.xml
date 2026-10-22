@@ -3,7 +3,70 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-10-22T13:31:17.210676+00:00</updated>
+  <updated>2026-10-22T19:47:25.016690+00:00</updated>
+  <entry>
+    <title>SEO Poisoning Campaign Delivers New Armorsteal Malware</title>
+    <id>urn:cybersecnews:item:599</id>
+    <published>2026-10-22T19:47:25.016690+00:00</published>
+    <updated>2026-10-22T19:47:25.016690+00:00</updated>
+    <link href="https://www.zscaler.com/blogs/security-research/seo-poisoning-campaign-delivers-new-armorsteal-malware" rel="alternate" />
+    <category term="red-team" />
+    <content type="html">&lt;p&gt;&lt;em&gt;red-team · malware&lt;/em&gt;&lt;/p&gt;&lt;p&gt;SEO poisoning campaign distributes Armorsteal, a Python-based malware with remote access, keystroke logging, clipboard hijacking, and credential stealing modules targeting cryptocurrency wallets, Discord tokens, browsers, SSH keys, and Steam data. Severity is high as the malware is actively exploited in the wild with sophisticated anti-analysis techniques including Pyarmor obfuscation and cloud provider detection. Organizations should immediately hunt for SysCheck2/SysCheckX scheduled tasks and C:\Windows\SystemHealth\Update\ artifacts, block listed malicious domains, review PowerShell logs for suspicious downloads, and educate users to verify software sources before executing installation commands.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.zscaler.com/blogs/security-research/seo-poisoning-campaign-delivers-new-armorsteal-malware"&gt;Read more&lt;/a&gt; · Source: zscaler-threatlabz&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Next.js: Unauthenticated Remote Code Execution in Image Optimization API when SVG files are used</title>
+    <id>urn:cybersecnews:item:598</id>
+    <published>2026-10-22T19:47:25.015974+00:00</published>
+    <updated>2026-10-22T19:47:25.015974+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-2464-fhr4-w9xw" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Next.js Image Optimization API is vulnerable to unauthenticated remote code execution on glibc-based Linux systems when processing SVG files, caused by a memory-related vulnerability in the upstream sharp library. This is a critical severity issue with potential for active exploitation. Users must upgrade to Next.js versions that include sharp 0.35.5 or later; fresh installations are already patched, but existing deployments require immediate updates through package manager upgrades.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-2464-fhr4-w9xw"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Sentry-Javascript: Middleware Bypass when using Tunnel route (CVE-2026-114139)</title>
+    <id>urn:cybersecnews:item:597</id>
+    <published>2026-10-22T19:47:25.015126+00:00</published>
+    <updated>2026-10-22T19:47:25.015126+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-mchm-gjx6-7h55" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · middleware-bypass · CVE-2026-114139&lt;/em&gt;&lt;/p&gt;&lt;p&gt;The Sentry JavaScript SDK for Next.js (npm/@sentry/nextjs) contains a critical middleware bypass vulnerability (CVE-2026-114139) in the `tunnelRoute` feature. The vulnerability allows unauthenticated requests to bypass server middleware when the tunnel route is configured, as the middleware skip applies more broadly than the actual rewrite rule that should restrict access to tunnel endpoints. This is exploitable in production environments and allows attackers to bypass security middleware protections. Upgrade to the patched version of @sentry/nextjs immediately and review deployed middleware to ensure no sensitive operations were exposed.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-mchm-gjx6-7h55"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>DOMPurify SAFE_FOR_TEMPLATES bypass: split template expressions survive in attached shadow root content on DOM output modes</title>
+    <id>urn:cybersecnews:item:596</id>
+    <published>2026-10-22T19:47:25.014402+00:00</published>
+    <updated>2026-10-22T19:47:25.014402+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-cg2g-xh64-v4q7" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · template-injection&lt;/em&gt;&lt;/p&gt;&lt;p&gt;DOMPurify versions with SAFE_FOR_TEMPLATES mode enabled alongside DOM-returning modes (RETURN_DOM, RETURN_DOM_FRAGMENT, or IN_PLACE) fail to sanitize template expressions like {{...}}, ${...}, and &lt;%...%&gt; within attached shadow root content, allowing bypass of template injection protections. The vulnerability exists because the safety net function _scrubTemplateExpressions does not recurse into attached shadow roots despite handling template content. This is critical severity and appears exploitable when users rely on SAFE_FOR_TEMPLATES to prevent template injection attacks. Update DOMPurify to the latest patched version immediately.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-cg2g-xh64-v4q7"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Next.js: Unauthenticated Remote Code Execution in `use cache` functions returning typed arrays</title>
+    <id>urn:cybersecnews:item:595</id>
+    <published>2026-10-22T19:47:25.013388+00:00</published>
+    <updated>2026-10-22T19:47:25.013388+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-673q-mjm6-r5xr" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Next.js App Router applications using `use cache` functions that return typed arrays are vulnerable to unauthenticated remote code execution due to improper serialization handling. This is a critical severity issue actively exploitable in production environments. All Next.js users should upgrade immediately regardless of whether they currently implement affected `use cache` patterns, as there is no viable workaround. Patch to the latest Next.js version as soon as possible.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-673q-mjm6-r5xr"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Two CVSS 9.0 Linux KSMBD RCE Flaws Disclosed on Public Mailing Lists Before Kernel Fixes</title>
+    <id>urn:cybersecnews:item:594</id>
+    <published>2026-10-22T19:47:25.012476+00:00</published>
+    <updated>2026-10-22T19:47:25.012476+00:00</updated>
+    <link href="https://thehackernews.com/2026/10/two-cvss-90-linux-ksmbd-rce-flaws.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Linux KSMBD kernel SMB server contains two critical remote code execution vulnerabilities (CVE details pending) rated CVSS 9.0 by ZDI, with one exploitable pre-authentication and the other requiring SMB Direct/RDMA. Both flaws have been disclosed publicly on mailing lists before kernel patches were available, increasing exploitation risk. No fixes currently exist in mainline kernel; administrators should disable KSMBD immediately on exposed systems until patches are released. Monitor vendor communications and apply kernel updates containing security fixes as soon as available.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/two-cvss-90-linux-ksmbd-rce-flaws.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>eMudhra to Exit Global SSL/TLS Business After 8 Intermediate CA Keys Found Easily Guessable</title>
+    <id>urn:cybersecnews:item:593</id>
+    <published>2026-10-22T19:47:25.011122+00:00</published>
+    <updated>2026-10-22T19:47:25.011122+00:00</updated>
+    <link href="https://thehackernews.com/2026/10/emudhra-to-exit-global-ssltls-business.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · weak-key-generation&lt;/em&gt;&lt;/p&gt;&lt;p&gt;eMudhra's global SSL/TLS certificate business is shutting down following the discovery that eight intermediate CA private keys were cryptographically weak and easily recoverable by researchers. This represents a critical vulnerability in certificate authority infrastructure, as compromised intermediate CA keys enable attackers to forge valid SSL/TLS certificates for any domain, undermining trust across the internet. The severity is extremely high with confirmed exploitability, though eMudhra has not disclosed evidence of malicious exploitation in the wild. Organizations using eMudhra certificates should immediately obtain replacements from partner CAs and audit their systems for any fraudulent certificates issued during the compromise window.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/emudhra-to-exit-global-ssltls-business.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Amazon says PHP2Shell exploitation began 4 days before patches</title>
     <id>urn:cybersecnews:item:592</id>
@@ -119,7 +182,7 @@
     <updated>2026-10-21T03:32:06.423764+00:00</updated>
     <link href="https://github.com/advisories/GHSA-8g5g-8vmr-9782" rel="alternate" />
     <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · heap-buffer-overflow · CVE-2026-112393, CVE-2026-112403&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Pillow's `JpegImageFile.draft()` method used by `Image.thumbnail()` contains a critical heap buffer overflow in `ImagingJpegDecode()` that fails to validate JPEG decoder output dimensions against the allocated decode buffer. The vulnerability occurs when requesting scaled JPEG output (1/2, 1/4, or 1/8) because the buffer allocation does not account for actual output parameters set by `jpeg_start_decompress()`. This flaw can be exploited remotely via specially crafted JPEG files to achieve arbitrary code execution. Users should immediately update Pillow to the latest patched version.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-8g5g-8vmr-9782"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · heap-buffer-overflow · CVE-2026-112393, CVE-2026-112403, CVE-2026-96639&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Pillow's `JpegImageFile.draft()` method used by `Image.thumbnail()` contains a critical heap buffer overflow in `ImagingJpegDecode()` that fails to validate JPEG decoder output dimensions against the allocated decode buffer. The vulnerability occurs when requesting scaled JPEG output (1/2, 1/4, or 1/8) because the buffer allocation does not account for actual output parameters set by `jpeg_start_decompress()`. This flaw can be exploited remotely via specially crafted JPEG files to achieve arbitrary code execution. Users should immediately update Pillow to the latest patched version.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-8g5g-8vmr-9782"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
   </entry>
   <entry>
     <title>PHP warns admins of two critical flaws, emergency patches coming tomorrow</title>
@@ -840,68 +903,5 @@
     <link href="https://isc.sans.edu/diary/rss/33400" rel="alternate" />
     <category term="red-team" />
     <content type="html">&lt;p&gt;&lt;em&gt;red-team · c2&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Multiple Remote Management and Monitoring (RMM) tools are being actively abused by threat actors in the wild as part of an expanding trend. ScreenConnect and other RMM platforms are being leveraged for unauthorized remote access and control of victim systems. These tools pose a high severity risk due to their legitimate functionality being weaponized for lateral movement, data exfiltration, and persistence. Organizations should implement strict access controls on RMM tools, restrict outbound connections, deploy detection signatures for suspicious RMM activity, and maintain current patches for all RMM software deployed in their environments.&lt;/p&gt;&lt;p&gt;&lt;a href="https://isc.sans.edu/diary/rss/33400"&gt;Read more&lt;/a&gt; · Source: sans-isc&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>MsQuic: Improper Certificate Validation in Microsoft.Native.Quic.MsQuic.OpenSSL (CVE-2026-105794)</title>
-    <id>urn:cybersecnews:item:499</id>
-    <published>2026-10-06T20:49:46.732306+00:00</published>
-    <updated>2026-10-06T20:49:46.732306+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-w5f4-fx9m-m4q7" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-105016, CVE-2026-105794&lt;/em&gt;&lt;/p&gt;&lt;p&gt;MsQuic's OpenSSL and QuicTLS backends contain improper TLS hostname verification (CVE-2026-105794), allowing on-path attackers to perform MITM attacks by presenting mismatched certificates. This critical vulnerability affects Microsoft.Native.Quic.MsQuic.OpenSSL on NuGet; the Schannel backend is unaffected. Immediate patching to versions 2.6.1, 2.5.11, or 2.4.20 is required for all systems using OpenSSL/QuicTLS backends. No active exploitation in the wild is indicated, but given the critical severity and ease of exploitation, patching should be prioritized.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-w5f4-fx9m-m4q7"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Payload: SQL Injection in SQLite and Postgres (CVE-2026-105845)</title>
-    <id>urn:cybersecnews:item:498</id>
-    <published>2026-10-06T20:49:46.730221+00:00</published>
-    <updated>2026-10-06T20:49:46.730221+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-v49j-62m6-pgrr" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · sqli · CVE-2026-105845&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Payload CMS versions prior to 3.88.0 or 4.0.0-canary.27 contain a critical SQL injection vulnerability in SQLite and Postgres implementations when processing dynamic filters or joins on readable collections. Untrusted users can exploit this to execute arbitrary SQL queries, though MongoDB deployments are unaffected. Immediate upgrade to the patched versions is required; no workarounds are available as a substitute for patching.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-v49j-62m6-pgrr"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Payload: Prototype pollution in Payload Import Export plugin (CVE-2026-105844)</title>
-    <id>urn:cybersecnews:item:497</id>
-    <published>2026-10-06T20:49:46.729322+00:00</published>
-    <updated>2026-10-06T20:49:46.729322+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-qf28-8hc6-vwrp" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · prototype-pollution · CVE-2026-105844&lt;/em&gt;&lt;/p&gt;&lt;p&gt;The Payload CMS Import Export plugin (all versions prior to 3.88.0 or 4.0.0-canary.27) contains a prototype pollution vulnerability enabling unauthenticated remote code execution. An attacker can exploit this flaw to inject malicious code into the application's prototype chain when the plugin is enabled. Severity is critical with potential for active exploitation. Immediately upgrade to patched versions 3.88.0, 4.0.0-canary.27 or later; if immediate patching is unavailable, disable the Import Export plugin or restrict endpoint access via firewall or authentication controls.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-qf28-8hc6-vwrp"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Payload: Field access control bypass on auth collections (CVE-2026-105851)</title>
-    <id>urn:cybersecnews:item:496</id>
-    <published>2026-10-06T20:49:46.728604+00:00</published>
-    <updated>2026-10-06T20:49:46.728604+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-vc4h-q48j-5hcx" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-105851, CVE-2026-105857, CVE-2026-105859, CVE-2026-105863&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Payload CMS versions prior to 3.90.0 and 4.0.0-canary.34 contain a critical field access control bypass in the duplicate operation that copies field values regardless of `access.read` or `access.create` restrictions, even when fields are marked as hidden or the `disableDuplicate` setting is enabled. This vulnerability allows attackers to access sensitive data from auth collections that should be protected by access control rules. Users must immediately upgrade to Payload &gt;= 3.90.0 or &gt;= 4.0.0-canary.34; as a temporary workaround, implement beforeDuplicate field hooks to clear or reset sensitive field values.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-vc4h-q48j-5hcx"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Hackers exploit 32 zero-days on first day of Pwn2Own Ireland</title>
-    <id>urn:cybersecnews:item:495</id>
-    <published>2026-10-06T20:49:46.726829+00:00</published>
-    <updated>2026-10-06T20:49:46.726829+00:00</updated>
-    <link href="https://www.bleepingcomputer.com/news/security/hackers-exploit-32-zero-days-on-first-day-of-pwn2own-ireland/" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · multiple&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Security researchers exploited 32 zero-day vulnerabilities across multiple Samsung and other target systems during Pwn2Own Ireland 2026's first day, demonstrating critical weaknesses in current mobile device security. The exploits targeted the Samsung Galaxy S26 and additional platforms, with researchers successfully compromising devices through previously unknown attack vectors to earn substantial prize money ($388,500). These zero-days represent high-severity vulnerabilities not yet disclosed to vendors or the public, indicating active exploitation potential once details emerge. Affected vendors should prepare emergency patches immediately upon responsible disclosure from event organizers, and users should monitor security bulletins from Samsung and other impacted companies for urgent updates.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/hackers-exploit-32-zero-days-on-first-day-of-pwn2own-ireland/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>shell-quote: `quote()` command injection via a line terminator in a token after a `{ comment }` token (CVE-2026-102422)</title>
-    <id>urn:cybersecnews:item:494</id>
-    <published>2026-10-06T14:47:48.573822+00:00</published>
-    <updated>2026-10-06T14:47:48.573822+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-pqg4-j6r4-53mv" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · command-injection · CVE-2026-102422&lt;/em&gt;&lt;/p&gt;&lt;p&gt;The shell-quote npm package's quote() function is vulnerable to command injection when processing comment tokens followed by string tokens containing line terminators (CVE-2026-102422). The vulnerability allows attackers to inject arbitrary shell commands by exploiting how comment tokens are rendered as `#` characters that comment out subsequent code, with line breaks in later tokens breaking out of the comment context. This is a critical severity issue with active exploitation potential. Users should immediately update to a patched version of shell-quote that properly escapes or handles comment tokens to prevent line terminator injection.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-pqg4-j6r4-53mv"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>LibreOffice and OpenOffice Flaws Let Malicious Spreadsheets Run Code Without Macro Warnings</title>
-    <id>urn:cybersecnews:item:493</id>
-    <published>2026-10-06T14:47:48.572890+00:00</published>
-    <updated>2026-10-06T14:47:48.572890+00:00</updated>
-    <link href="https://thehackernews.com/2026/10/libreoffice-and-openoffice-flaws-let.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;LibreOffice and Apache OpenOffice with Java support enabled are vulnerable to arbitrary code execution via malicious spreadsheets that bypass macro security warnings. The vulnerability exploits Java integration to execute attacker code immediately upon file opening without user prompts. This is currently a proof-of-concept with no reported in-the-wild exploitation. Mitigation includes disabling Java support in LibreOffice/OpenOffice if not required, or applying security patches when available; users should also disable automatic macro execution and treat spreadsheet files from untrusted sources with caution.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/libreoffice-and-openoffice-flaws-let.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
   </entry>
 </feed>
