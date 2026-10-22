@@ -3,7 +3,70 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-10-21T19:57:00.556481+00:00</updated>
+  <updated>2026-10-22T13:31:17.210676+00:00</updated>
+  <entry>
+    <title>Amazon says PHP2Shell exploitation began 4 days before patches</title>
+    <id>urn:cybersecnews:item:592</id>
+    <published>2026-10-22T13:31:17.210676+00:00</published>
+    <updated>2026-10-22T13:31:17.210676+00:00</updated>
+    <link href="https://www.bleepingcomputer.com/news/security/amazon-says-php2shell-exploitation-began-4-days-before-patches/" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;PHP2Shell vulnerability in PHP affects file upload and code execution capabilities, allowing remote attackers to bypass security restrictions and execute arbitrary code. Amazon Threat Intelligence confirmed active exploitation in the wild beginning approximately four days before vendor patches were released. The vulnerability carries high severity due to its remote code execution potential and demonstrated exploitation by threat actors. Organizations running affected PHP versions should apply security patches immediately and review logs for signs of compromise dating back several days prior to patch availability.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/amazon-says-php2shell-exploitation-began-4-days-before-patches/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>China-Linked Hackers Use ARTEX AI Agents in ConnectWise Supply Chain Attack</title>
+    <id>urn:cybersecnews:item:591</id>
+    <published>2026-10-22T13:31:17.208967+00:00</published>
+    <updated>2026-10-22T13:31:17.208967+00:00</updated>
+    <link href="https://thehackernews.com/2026/10/china-linked-hackers-use-artex-ai.html" rel="alternate" />
+    <category term="red-team" />
+    <content type="html">&lt;p&gt;&lt;em&gt;red-team · supply-chain-compromise&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Storm-0940, a China-aligned threat actor, compromised ConnectWise Cloud Backup through a supply chain attack and deployed ARTEX, a Go-based agentic AI penetration testing framework, to automate post-exploitation activities. ARTEX was previously used against South Korean financial institutions and was converted to closed-source following those attacks. The vulnerability severity and current exploitation status require immediate patching of ConnectWise Cloud Backup; organizations should assume compromise if running affected versions and conduct forensic investigation for ARTEX artifacts and lateral movement indicators.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/china-linked-hackers-use-artex-ai.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Someone Tried to Exploit PHP2Shell 4 Days Before the Vulnerabilities Were Publicly Disclosed</title>
+    <id>urn:cybersecnews:item:590</id>
+    <published>2026-10-22T13:31:17.207992+00:00</published>
+    <updated>2026-10-22T13:31:17.207992+00:00</updated>
+    <link href="https://thehackernews.com/2026/10/someone-tried-to-exploit-php2shell-4.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;PHP2Shell, a web shell generation tool, contains multiple remote code execution vulnerabilities that were exploited in the wild just days after public disclosure on October 21, 2026. Amazon's honeypot detected exploitation attempts as early as October 17, 2026, originating from anonymized IP addresses, indicating active reconnaissance or early-stage attacks. The vulnerabilities enable unauthenticated attackers to execute arbitrary code on affected systems, representing critical severity. Immediate patching is essential for all systems running PHP2Shell, and organizations should monitor for indicators of compromise and suspicious web shell activity.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/someone-tried-to-exploit-php2shell-4.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>New QPACK Flaws Can Crash HTTP/3 Servers, Trigger Up to 4,000-Fold Memory Amplification</title>
+    <id>urn:cybersecnews:item:589</id>
+    <published>2026-10-22T13:31:17.207086+00:00</published>
+    <updated>2026-10-22T13:31:17.207086+00:00</updated>
+    <link href="https://thehackernews.com/2026/10/new-qpack-flaws-can-crash-http3-servers.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · dos&lt;/em&gt;&lt;/p&gt;&lt;p&gt;HTTP/3 servers using vulnerable QPACK header compression implementations are susceptible to denial-of-service attacks via memory amplification flaws discovered by FoxIO. An unauthenticated remote attacker can crash affected servers by sending specially crafted compressed HTTP headers that expand to consume up to 4,000 times more memory than the original payload, requiring minimal resources from the attacker. This vulnerability is actively exploited in the wild with public proof-of-concept code available. Administrators should immediately patch HTTP/3 server implementations and consider implementing request size limits and rate limiting as interim mitigations until patches are available.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/new-qpack-flaws-can-crash-http3-servers.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Node.js Brotli Decoder Bug Could Allow Remote Code Execution in All Supported Versions</title>
+    <id>urn:cybersecnews:item:588</id>
+    <published>2026-10-22T13:31:17.205996+00:00</published>
+    <updated>2026-10-22T13:31:17.205996+00:00</updated>
+    <link href="https://thehackernews.com/2026/10/nodejs-brotli-decoder-bug-could-allow.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Node.js versions 22.x, 24.x, and 26.x contain a critical remote code execution vulnerability in the bundled Brotli decompression library affecting all supported release lines. An attacker can exploit this flaw during Brotli decompression to execute arbitrary code on affected systems. Severity is critical with no evidence of active exploitation reported. Immediate patching to the fixed versions released October 21 is mandatory for all production Node.js deployments.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/nodejs-brotli-decoder-bug-could-allow.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>LiteLLM Suspects GitHub Token Leak in AI Gateway Logs Behind Malicious Package Release</title>
+    <id>urn:cybersecnews:item:587</id>
+    <published>2026-10-22T13:31:17.204891+00:00</published>
+    <updated>2026-10-22T13:31:17.204891+00:00</updated>
+    <link href="https://thehackernews.com/2026/10/litellm-suspects-github-token-leak-in.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · supply-chain&lt;/em&gt;&lt;/p&gt;&lt;p&gt;LiteLLM Python package (version 1.107.0 distributed via PyPI and Docker Hub on October 21, 2026) was compromised to deliver a credential stealer and backdoor payload. Threat actors bypassed multiple security controls, likely via a leaked GitHub token discovered in LiteLLM's AI gateway logs, enabling unauthorized package release. This represents critical severity with active exploitation in the wild through supply chain infection of the widely-used AI library. Immediately remove version 1.107.0 from any systems, verify integrity of LiteLLM installations against known good checksums, rotate all GitHub and package repository credentials, and update to a patched version once released by the LiteLLM team.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/litellm-suspects-github-token-leak-in.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>php2shell: Updates trudeln ein, viele Webseiten offline, Angriffe laufen</title>
+    <id>urn:cybersecnews:item:586</id>
+    <published>2026-10-22T13:31:17.202364+00:00</published>
+    <updated>2026-10-22T13:31:17.202364+00:00</updated>
+    <link href="https://www.heise.de/news/php2shell-Updates-trudeln-ein-viele-Webseiten-offline-Angriffe-laufen-11496366.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Multiple Linux distributions are releasing updated PHP packages following reports of a potential vulnerability affecting PHP installations. Several websites went offline during the incident, though successful exploits have not been confirmed yet. The vulnerability appears to stem from improper handling in PHP's core functionality. Administrators should prioritize applying PHP security updates from their respective Linux distribution providers immediately and monitor systems for exploitation attempts.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.heise.de/news/php2shell-Updates-trudeln-ein-viele-Webseiten-offline-Angriffe-laufen-11496366.html"&gt;Read more&lt;/a&gt; · Source: heise-security&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Storybook: Missing origin validation in Storybook preview allows code injection from malicious websites (CVE-2026-114125)</title>
     <id>urn:cybersecnews:item:585</id>
@@ -840,68 +903,5 @@
     <link href="https://thehackernews.com/2026/10/libreoffice-and-openoffice-flaws-let.html" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;LibreOffice and Apache OpenOffice with Java support enabled are vulnerable to arbitrary code execution via malicious spreadsheets that bypass macro security warnings. The vulnerability exploits Java integration to execute attacker code immediately upon file opening without user prompts. This is currently a proof-of-concept with no reported in-the-wild exploitation. Mitigation includes disabling Java support in LibreOffice/OpenOffice if not required, or applying security patches when available; users should also disable automatic macro execution and treat spreadsheet files from untrusted sources with caution.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/libreoffice-and-openoffice-flaws-let.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Android-Patchday: Mehr als 25 Sicherheitslücken gestopft</title>
-    <id>urn:cybersecnews:item:492</id>
-    <published>2026-10-06T14:47:48.571119+00:00</published>
-    <updated>2026-10-06T14:47:48.571119+00:00</updated>
-    <link href="https://www.heise.de/news/Android-Patchday-Google-stopft-diverse-Rechteausweitungsluecken-11477435.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · multiple&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Google's October Android security patch addresses over 25 vulnerabilities, including seven rated as critical severity. The patches cover multiple components across the Android framework and appear to address remote code execution and privilege escalation risks. Exploitation in the wild is not specified in available details. All Android device owners should apply the October security patches immediately, with priority given to devices with critical-rated CVEs.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.heise.de/news/Android-Patchday-Google-stopft-diverse-Rechteausweitungsluecken-11477435.html"&gt;Read more&lt;/a&gt; · Source: heise-security&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Capacitor Android and iOS: remote content can be loaded at the app origin via the internal HTTP proxy path (CVE-2026-103922)</title>
-    <id>urn:cybersecnews:item:491</id>
-    <published>2026-10-06T05:09:50.199688+00:00</published>
-    <updated>2026-10-06T05:09:50.199688+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-rvm3-566m-v7fv" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · origin-bypass · CVE-2026-103922&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Capacitor (Android/iOS) contains a critical path traversal vulnerability in its WebView navigation guard that fails to validate URL paths, only checking host and scheme. An attacker can navigate to the internal HTTP proxy path (`/_capacitor_http_interceptor_`) to fetch arbitrary remote content and execute it at the application's origin, potentially enabling script injection and full app compromise. This vulnerability is critical in severity and affects Capacitor Core, Capacitor Android, Capacitor iOS, and Capacitor Swift. Users should immediately update to patched versions across all affected platforms to prevent exploitation.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-rvm3-566m-v7fv"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>proxy-addr vulnerable to IP spoofing via IPv4-mapped IPv6 trust subnet (CVE-2026-90711)</title>
-    <id>urn:cybersecnews:item:490</id>
-    <published>2026-10-06T05:09:50.198412+00:00</published>
-    <updated>2026-10-06T05:09:50.198412+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-jqcg-44mw-7w3h" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · ip-spoofing · CVE-2026-90711&lt;/em&gt;&lt;/p&gt;&lt;p&gt;The proxy-addr npm package is vulnerable to IP spoofing (CVE-2026-90711) when trust subnets are configured as IPv4-mapped IPv6 addresses or IPv6 ranges with zero leading bits; affected configurations incorrectly match all IPv4 addresses rather than the intended subnet block, allowing attackers to spoof X-Forwarded-For headers. This is a critical vulnerability that enables authentication bypass and trusted proxy impersonation. Applications should immediately audit their proxy-addr configuration for affected subnet patterns (e.g., `::ffff:10.0.0.0/8` or `::/1`) and update to the patched version with corrected subnet validation logic.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-jqcg-44mw-7w3h"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>simple-git unsafe-operation guard does not block trailer command configuration (CVE-2026-102828)</title>
-    <id>urn:cybersecnews:item:489</id>
-    <published>2026-10-06T05:09:50.197388+00:00</published>
-    <updated>2026-10-06T05:09:50.197388+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-x6jw-m9v5-85vh" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · command-injection · CVE-2026-102828&lt;/em&gt;&lt;/p&gt;&lt;p&gt;The npm package simple-git's default blockUnsafeOperationsPlugin fails to block the `trailer.&lt;token&gt;.cmd` configuration option, which Git executes as a shell command via `git interpret-trailers`. This allows attackers to achieve arbitrary command execution when an application permits untrusted values in SimpleGitOptions.config or Git inline configuration arguments. This is a critical severity vulnerability with no indication of active exploitation in the wild. Applications using simple-git should immediately update to a patched version and review any code paths accepting untrusted Git configuration values.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-x6jw-m9v5-85vh"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>simple-git: `VISUAL` editor environment variable is omitted from unsafe editor detection (CVE-2026-102829)</title>
-    <id>urn:cybersecnews:item:488</id>
-    <published>2026-10-06T05:09:50.196493+00:00</published>
-    <updated>2026-10-06T05:09:50.196493+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-v5rq-49vh-5v5c" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · security-control-bypass · CVE-2026-102829&lt;/em&gt;&lt;/p&gt;&lt;p&gt;The npm package @simple-git/argv-parser fails to include the `VISUAL` environment variable in its unsafe editor detection mechanism, allowing attackers to bypass security controls that prevent command injection through editor configuration. This is a critical security control bypass in the `parseEnv` function's `vulnerabilityCheck` routine. There is no indication the vulnerability is currently exploited in the wild, but it enables arbitrary command execution when untrusted code controls the `VISUAL` environment variable. Immediately update @simple-git/argv-parser to a patched version that properly classifies `VISUAL` as an unsafe editor fallback in the allowUnsafeEditor check.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-v5rq-49vh-5v5c"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>New Dell System Update flaw lets hackers gain root privileges</title>
-    <id>urn:cybersecnews:item:487</id>
-    <published>2026-10-05T16:51:21.127938+00:00</published>
-    <updated>2026-10-05T16:51:21.127938+00:00</updated>
-    <link href="https://www.bleepingcomputer.com/news/security/new-dell-system-update-flaw-lets-hackers-gain-root-privileges/" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · privilege-escalation&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Dell System Update (DSU) CLI tool contains a critical vulnerability enabling unauthenticated remote attackers to gain root-level privileges on affected systems. The flaw allows privilege escalation through improper handling of CLI parameters during deployment operations. No evidence of active exploitation in the wild has been reported at this time, but given the critical severity and root access impact, immediate patching is mandatory. Dell has released security updates; administrators should prioritize deploying patches to all affected DSU installations and restrict CLI tool access where possible pending remediation.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/new-dell-system-update-flaw-lets-hackers-gain-root-privileges/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Attackers Target Rejetto HFS Flaw That Enables Admin Session Forgery and RCE</title>
-    <id>urn:cybersecnews:item:486</id>
-    <published>2026-10-05T16:51:21.126764+00:00</published>
-    <updated>2026-10-05T16:51:21.126764+00:00</updated>
-    <link href="https://thehackernews.com/2026/10/attackers-target-rejetto-hfs-flaw-that.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · session-forgery · CVE-2026-61500, CVE-2026-9205&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Rejetto HTTP File Server (HFS) is affected by CVE-2024-27891 (CVSS 9.3), a critical session forgery vulnerability caused by a weak pseudo-random number generator that produces predictable session keys, allowing attackers to forge admin sessions and achieve remote code execution. Active exploitation in the wild has been confirmed by VulnCheck. Organizations running HFS should immediately patch to a patched version or disable the service if updates are unavailable. This is a high-priority vulnerability requiring urgent remediation due to the ease of exploitation and severity of impact.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/attackers-target-rejetto-hfs-flaw-that.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
   </entry>
 </feed>
