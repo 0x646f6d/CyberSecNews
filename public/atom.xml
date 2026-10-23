@@ -3,7 +3,25 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-10-23T03:35:55.621895+00:00</updated>
+  <updated>2026-10-23T13:07:17.970389+00:00</updated>
+  <entry>
+    <title>HPE patches eight max severity RCE and auth bypass AOS flaws</title>
+    <id>urn:cybersecnews:item:602</id>
+    <published>2026-10-23T13:07:17.970389+00:00</published>
+    <updated>2026-10-23T13:07:17.970389+00:00</updated>
+    <link href="https://www.bleepingcomputer.com/news/security/hpe-patches-eight-max-severity-rce-and-auth-bypass-aos-flaws/" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce,auth-bypass&lt;/em&gt;&lt;/p&gt;&lt;p&gt;HPE released patches for 72 vulnerabilities in ArubaOS, including eight maximum-severity flaws allowing remote code execution and authentication bypass. The critical issues affect Aruba access points and controllers, with no indication of active exploitation in the wild at this time. Organizations running ArubaOS should apply the available security updates immediately, prioritizing systems exposed to untrusted networks. HPE has published detailed advisories with affected version numbers and patch availability information.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/hpe-patches-eight-max-severity-rce-and-auth-bypass-aos-flaws/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Russian-Linked Hackers Used New Mesh Network Backdoor in Destructive Ukraine Attack</title>
+    <id>urn:cybersecnews:item:601</id>
+    <published>2026-10-23T13:07:17.968434+00:00</published>
+    <updated>2026-10-23T13:07:17.968434+00:00</updated>
+    <link href="https://thehackernews.com/2026/10/russian-linked-hackers-used-new-mesh.html" rel="alternate" />
+    <category term="red-team" />
+    <content type="html">&lt;p&gt;&lt;em&gt;red-team · c2&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Sandworm and UAC-0099 conducted a destructive attack against a Ukrainian logistics firm using a novel mesh network backdoor deployed via spear-phishing in July 2025. The malware establishes peer-to-peer command and control infrastructure to enable lateral movement and data destruction while evading traditional network detection. This represents active exploitation in targeted campaigns against critical infrastructure with high destructive capability. Organizations should prioritize email security controls, implement network segmentation, deploy behavioral detection for unusual C2 patterns, and maintain offline backups to mitigate mesh botnet propagation and wiper malware impacts.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/russian-linked-hackers-used-new-mesh.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>CVE-2026-76268 | Splunk Enterprise Patroni REST API Missing Authentication Vulnerability</title>
     <id>urn:cybersecnews:item:600</id>
@@ -119,7 +137,7 @@
     <updated>2026-10-22T13:31:17.205996+00:00</updated>
     <link href="https://thehackernews.com/2026/10/nodejs-brotli-decoder-bug-could-allow.html" rel="alternate" />
     <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Node.js versions 22.x, 24.x, and 26.x contain a critical remote code execution vulnerability in the bundled Brotli decompression library affecting all supported release lines. An attacker can exploit this flaw during Brotli decompression to execute arbitrary code on affected systems. Severity is critical with no evidence of active exploitation reported. Immediate patching to the fixed versions released October 21 is mandatory for all production Node.js deployments.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/nodejs-brotli-decoder-bug-could-allow.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-111497&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Node.js versions 22.x, 24.x, and 26.x contain a critical remote code execution vulnerability in the bundled Brotli decompression library affecting all supported release lines. An attacker can exploit this flaw during Brotli decompression to execute arbitrary code on affected systems. Severity is critical with no evidence of active exploitation reported. Immediate patching to the fixed versions released October 21 is mandatory for all production Node.js deployments.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/nodejs-brotli-decoder-bug-could-allow.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
   </entry>
   <entry>
     <title>LiteLLM Suspects GitHub Token Leak in AI Gateway Logs Behind Malicious Package Release</title>
@@ -137,7 +155,7 @@
     <updated>2026-10-22T13:31:17.202364+00:00</updated>
     <link href="https://www.heise.de/news/php2shell-Updates-trudeln-ein-viele-Webseiten-offline-Angriffe-laufen-11496366.html" rel="alternate" />
     <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Multiple Linux distributions are releasing updated PHP packages following reports of a potential vulnerability affecting PHP installations. Several websites went offline during the incident, though successful exploits have not been confirmed yet. The vulnerability appears to stem from improper handling in PHP's core functionality. Administrators should prioritize applying PHP security updates from their respective Linux distribution providers immediately and monitor systems for exploitation attempts.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.heise.de/news/php2shell-Updates-trudeln-ein-viele-Webseiten-offline-Angriffe-laufen-11496366.html"&gt;Read more&lt;/a&gt; · Source: heise-security&lt;/p&gt;</content>
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-115560&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Multiple Linux distributions are releasing updated PHP packages following reports of a potential vulnerability affecting PHP installations. Several websites went offline during the incident, though successful exploits have not been confirmed yet. The vulnerability appears to stem from improper handling in PHP's core functionality. Administrators should prioritize applying PHP security updates from their respective Linux distribution providers immediately and monitor systems for exploitation attempts.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.heise.de/news/php2shell-Updates-trudeln-ein-viele-Webseiten-offline-Angriffe-laufen-11496366.html"&gt;Read more&lt;/a&gt; · Source: heise-security&lt;/p&gt;</content>
   </entry>
   <entry>
     <title>Storybook: Missing origin validation in Storybook preview allows code injection from malicious websites (CVE-2026-114125)</title>
@@ -885,23 +903,5 @@
     <link href="https://thehackernews.com/2026/10/fbi-warns-fortibleed-remains-active.html" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · credential-harvesting&lt;/em&gt;&lt;/p&gt;&lt;p&gt;FortiBleed targets Fortinet FortiGate firewalls and SSL VPN gateways through exploitation of reused/leaked credentials and legacy SHA-256 password hashing vulnerabilities. The FBI and Secret Service report the campaign remains actively harvesting credentials with 86,644 Fortinet device credentials already compromised. This represents significant operational risk for organizations running vulnerable FortiGate infrastructure. Immediate actions required: patch to current FortiOS versions, implement credential rotation for affected systems, enforce MFA on administrative access, and apply network segmentation to limit VPN gateway exposure.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/fbi-warns-fortibleed-remains-active.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>SonicWall Patches CVSS 10.0 Pre-Authentication SSRF Flaw in SMA1000 Appliances</title>
-    <id>urn:cybersecnews:item:502</id>
-    <published>2026-10-07T21:03:27.854767+00:00</published>
-    <updated>2026-10-07T21:03:27.854767+00:00</updated>
-    <link href="https://thehackernews.com/2026/10/sonicwall-patches-cvss-100-pre.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · ssrf&lt;/em&gt;&lt;/p&gt;&lt;p&gt;SonicWall SMA1000 appliances contain a critical pre-authentication server-side request forgery (SSRF) vulnerability rated CVSS 10.0 that allows unauthenticated attackers to send arbitrary requests through the appliance to reach internal functions. The flaw affects remote access gateways used to provide workers access to corporate networks and applications. SonicWall reports no evidence of active exploitation in the wild at this time. Apply the released hotfixes immediately given the maximum severity rating and lack of authentication requirement.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/sonicwall-patches-cvss-100-pre.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Ninja Forms plugin flaw exploited to hack WordPress sites</title>
-    <id>urn:cybersecnews:item:501</id>
-    <published>2026-10-07T04:35:29.169074+00:00</published>
-    <updated>2026-10-07T04:35:29.169074+00:00</updated>
-    <link href="https://www.bleepingcomputer.com/news/security/ninja-forms-plugin-flaw-exploited-to-hack-wordpress-sites/" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · stored-xss&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Ninja Forms and WPC Product Bundles for WooCommerce WordPress plugins contain stored XSS vulnerabilities being actively exploited in the wild to install backdoors and create unauthorized administrator accounts. The flaws allow authenticated or unauthenticated attackers to inject malicious scripts that execute in admin contexts, enabling full site compromise. Severity is critical given the demonstrated active exploitation and ease of account creation. Affected site operators should immediately update both plugins to patched versions and audit user accounts and installed plugins for signs of compromise.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/ninja-forms-plugin-flaw-exploited-to-hack-wordpress-sites/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
   </entry>
 </feed>
