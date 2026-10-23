@@ -3,7 +3,16 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-10-22T19:47:25.016690+00:00</updated>
+  <updated>2026-10-23T03:35:55.621895+00:00</updated>
+  <entry>
+    <title>CVE-2026-76268 | Splunk Enterprise Patroni REST API Missing Authentication Vulnerability</title>
+    <id>urn:cybersecnews:item:600</id>
+    <published>2026-10-23T03:35:55.621895+00:00</published>
+    <updated>2026-10-23T03:35:55.621895+00:00</updated>
+    <link href="https://horizon3.ai/attack-research/vulnerabilities/cve-2026-76268/" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-76268&lt;/em&gt;&lt;/p&gt;&lt;p&gt;CVE-2026-76268 affects Splunk Enterprise's Patroni REST API, which lacks proper authentication controls. Unauthenticated attackers with network access can execute arbitrary operating system commands, representing a critical severity vulnerability. There is no indication of active exploitation in the wild at this time, though the attack surface is significant given the API's network accessibility. Splunk Enterprise users should immediately apply available patches and restrict network access to the Patroni REST API through firewall rules or network segmentation until updates are deployed.&lt;/p&gt;&lt;p&gt;&lt;a href="https://horizon3.ai/attack-research/vulnerabilities/cve-2026-76268/"&gt;Read more&lt;/a&gt; · Source: horizon3&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>SEO Poisoning Campaign Delivers New Armorsteal Malware</title>
     <id>urn:cybersecnews:item:599</id>
@@ -894,14 +903,5 @@
     <link href="https://www.bleepingcomputer.com/news/security/ninja-forms-plugin-flaw-exploited-to-hack-wordpress-sites/" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · stored-xss&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Ninja Forms and WPC Product Bundles for WooCommerce WordPress plugins contain stored XSS vulnerabilities being actively exploited in the wild to install backdoors and create unauthorized administrator accounts. The flaws allow authenticated or unauthenticated attackers to inject malicious scripts that execute in admin contexts, enabling full site compromise. Severity is critical given the demonstrated active exploitation and ease of account creation. Affected site operators should immediately update both plugins to patched versions and audit user accounts and installed plugins for signs of compromise.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/ninja-forms-plugin-flaw-exploited-to-hack-wordpress-sites/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>More RMM Tools In the Wild, (Tue, Oct 6th)</title>
-    <id>urn:cybersecnews:item:500</id>
-    <published>2026-10-06T20:49:46.733452+00:00</published>
-    <updated>2026-10-06T20:49:46.733452+00:00</updated>
-    <link href="https://isc.sans.edu/diary/rss/33400" rel="alternate" />
-    <category term="red-team" />
-    <content type="html">&lt;p&gt;&lt;em&gt;red-team · c2&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Multiple Remote Management and Monitoring (RMM) tools are being actively abused by threat actors in the wild as part of an expanding trend. ScreenConnect and other RMM platforms are being leveraged for unauthorized remote access and control of victim systems. These tools pose a high severity risk due to their legitimate functionality being weaponized for lateral movement, data exfiltration, and persistence. Organizations should implement strict access controls on RMM tools, restrict outbound connections, deploy detection signatures for suspicious RMM activity, and maintain current patches for all RMM software deployed in their environments.&lt;/p&gt;&lt;p&gt;&lt;a href="https://isc.sans.edu/diary/rss/33400"&gt;Read more&lt;/a&gt; · Source: sans-isc&lt;/p&gt;</content>
   </entry>
 </feed>
