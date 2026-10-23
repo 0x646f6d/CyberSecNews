@@ -3,7 +3,43 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-10-23T13:07:17.970389+00:00</updated>
+  <updated>2026-10-23T19:49:37.371811+00:00</updated>
+  <entry>
+    <title>obsidian-tc HTTP transport lacks Origin/DNS-rebinding protection, enabling drive-by vault access on loopback (CVE-2026-77363)</title>
+    <id>urn:cybersecnews:item:606</id>
+    <published>2026-10-23T19:49:37.371811+00:00</published>
+    <updated>2026-10-23T19:49:37.371811+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-pqh8-4pj7-32xx" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-77363&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Obsidian-tc HTTP transport lacks origin and DNS-rebinding protections, allowing unauthenticated attackers to access local vaults via drive-by web pages that forge requests to the loopback interface. With default authentication disabled, an attacker can POST to http://127.0.0.1/mcp to gain full read/write vault access. Severity is critical and no public exploitation reports are documented, but the attack is straightforward to execute. Upgrade immediately to version 1.3.1 or later, which implements DNS-rebinding protection and origin validation.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-pqh8-4pj7-32xx"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Exposed Infrastructure Reveals How Ransomware Affiliates Used AI Agents to Execute Intrusions</title>
+    <id>urn:cybersecnews:item:605</id>
+    <published>2026-10-23T19:49:37.371075+00:00</published>
+    <updated>2026-10-23T19:49:37.371075+00:00</updated>
+    <link href="https://thehackernews.com/2026/10/exposed-infrastructure-reveals-how.html" rel="alternate" />
+    <category term="red-team" />
+    <content type="html">&lt;p&gt;&lt;em&gt;red-team · c2&lt;/em&gt;&lt;/p&gt;&lt;p&gt;INC and The Gentlemen ransomware affiliates operate an AI-driven intrusion framework called Phantom that automates reconnaissance, exploitation, and lateral movement in target networks. This Autonomous Red Team Kill Chain Framework significantly reduces manual effort required for intrusions and increases operational scale. The threat is actively exploited in the wild with moderate-to-high severity given the automation capabilities and dual ransomware/extortion model. Organizations should implement robust network segmentation, enhanced endpoint detection and response (EDR) monitoring for unusual automation patterns, restrict AI tool access, and enforce strict access controls to limit lateral movement opportunities.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/exposed-infrastructure-reveals-how.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Ruby Fixes Three Regex Engine Bugs Responsible for Four Critical GitLab RCE Flaws</title>
+    <id>urn:cybersecnews:item:604</id>
+    <published>2026-10-23T19:49:37.370196+00:00</published>
+    <updated>2026-10-23T19:49:37.370196+00:00</updated>
+    <link href="https://thehackernews.com/2026/10/ruby-fixes-three-regex-engine-bugs.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · memory-corruption,rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Ruby released versions 3.3.13, 3.4.12, and 4.0.9 addressing three Onigmo regex engine bugs that enabled four critical RCE vulnerabilities in GitLab. Specially crafted regex patterns cause memory corruption during compilation, allowing arbitrary code execution. These flaws are critical severity and have been actively exploited against GitLab instances in the wild. Update Ruby immediately to patched versions and audit systems for evidence of exploitation targeting regex processing functionality.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/ruby-fixes-three-regex-engine-bugs.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>BlackX UEFI Bootkit Bypasses Secure Boot on Patched Windows Systems Missing Revocations</title>
+    <id>urn:cybersecnews:item:603</id>
+    <published>2026-10-23T19:49:37.368304+00:00</published>
+    <updated>2026-10-23T19:49:37.368304+00:00</updated>
+    <link href="https://thehackernews.com/2026/10/blackx-uefi-bootkit-bypasses-secure.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · secure-boot-bypass&lt;/em&gt;&lt;/p&gt;&lt;p&gt;BlackX UEFI bootkit targets Windows systems by exploiting insufficient Secure Boot revocation mechanisms, allowing attackers to bypass Secure Boot protections on patched systems missing updated certificate revocations. The bootkit establishes persistent firmware-level control, enabling advanced threats that survive OS reinstalls and standard remediation. Active exploitation has been confirmed against diplomatic entities in Central Asia, with APT41 attributed as the suspected operator. Organizations should immediately apply all available UEFI/firmware updates from OEMs, verify Secure Boot certificate revocation lists are current, and conduct firmware integrity audits on potentially affected systems; consider EDR solutions with firmware visibility for threatened entities.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/blackx-uefi-bootkit-bypasses-secure.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>HPE patches eight max severity RCE and auth bypass AOS flaws</title>
     <id>urn:cybersecnews:item:602</id>
@@ -867,41 +903,5 @@
     <link href="https://github.com/advisories/GHSA-pq96-jpmf-w254" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · xss · CVE-2026-106102&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Quasar Framework versions prior to patch contain stored/reflected XSS vulnerabilities in the `useMeta()` composable where user-supplied metadata is rendered unescaped in server-side rendering (SSR) meta tag output via the `getHead()` function. An attacker can inject malicious JavaScript through meta tag properties that execute in victims' browsers during page load. This is critical severity and exploitation likelihood is high given the public-facing nature of meta tag inputs in typical web applications. Apply the latest Quasar Framework security patch immediately; if unavailable, sanitize all user-controlled data passed to `useMeta()` before rendering and implement Content Security Policy headers as interim mitigation.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-pq96-jpmf-w254"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Flowise Prompt Injection to RCE and SSRF via CSV/Airtable Agent Python Validator Bypass (CVE-2026-73487)</title>
-    <id>urn:cybersecnews:item:506</id>
-    <published>2026-10-07T21:03:27.866137+00:00</published>
-    <updated>2026-10-07T21:03:27.866137+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-w7x8-q2gp-5cgg" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · prompt-injection,rce,ssrf · CVE-2026-61447, CVE-2026-73487&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Flowise &lt;= 3.1.2 CSV Agent and Airtable Agent nodes are vulnerable to prompt injection leading to remote code execution and SSRF via inadequate Python code validation. An attacker can bypass the regex-based sanitizer through structural manipulation to execute arbitrary Python code in Pyodide, exfiltrate data, and probe internal services—exploitable through the unauthenticated prediction API. This is critical severity; no indication of active wild exploitation noted in advisory. Immediately upgrade to patched version &gt; 3.1.2 and consider restricting access to the prediction API or requiring authentication.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-w7x8-q2gp-5cgg"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Backstage: Sensitive information exposure in Scaffolder (CVE-2026-106501)</title>
-    <id>urn:cybersecnews:item:505</id>
-    <published>2026-10-07T21:03:27.863471+00:00</published>
-    <updated>2026-10-07T21:03:27.863471+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-g2v8-7jhw-pp8p" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · information-disclosure · CVE-2026-106501&lt;/em&gt;&lt;/p&gt;&lt;p&gt;CVE-2026-106501 affects Backstage npm/@backstage/plugin-scaffolder-backend, where authenticated users can read other users' Scaffolder tasks and expose internal execution data including external service credentials. This critical vulnerability allows unauthorized disclosure and potential service compromise in deployments storing credentials in task data. Patch to version 4.1.0 or apply workarounds by restricting task read permissions to task owners via the `scaffolder.task.read` policy. No public exploitation reports available at time of advisory.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-g2v8-7jhw-pp8p"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Langflow: OS command injection (RCE) via arbitrary command in MCP stdio server configuration (CVE-2026-105697)</title>
-    <id>urn:cybersecnews:item:504</id>
-    <published>2026-10-07T21:03:27.860668+00:00</published>
-    <updated>2026-10-07T21:03:27.860668+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-w794-rj3p-xv45" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-105697, CVE-2026-105740&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Langflow versions before 1.10.3 are vulnerable to OS command injection (CVE-2026-105697) via the MCP stdio server configuration, where arbitrary shell commands can be executed without validation or allowlisting. Any user with access to MCP server settings or the MCP Tools component can inject malicious commands that run with the application's privileges, achieving remote code execution. This vulnerability is critical in severity and exploitable by authenticated users. Upgrade to Langflow 1.10.3 or later immediately; restrict access to MCP server configuration settings as an interim mitigation.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-w794-rj3p-xv45"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>FBI Warns FortiBleed Remains Active After Amassing 86,644 Fortinet Device Credentials</title>
-    <id>urn:cybersecnews:item:503</id>
-    <published>2026-10-07T21:03:27.857454+00:00</published>
-    <updated>2026-10-07T21:03:27.857454+00:00</updated>
-    <link href="https://thehackernews.com/2026/10/fbi-warns-fortibleed-remains-active.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · credential-harvesting&lt;/em&gt;&lt;/p&gt;&lt;p&gt;FortiBleed targets Fortinet FortiGate firewalls and SSL VPN gateways through exploitation of reused/leaked credentials and legacy SHA-256 password hashing vulnerabilities. The FBI and Secret Service report the campaign remains actively harvesting credentials with 86,644 Fortinet device credentials already compromised. This represents significant operational risk for organizations running vulnerable FortiGate infrastructure. Immediate actions required: patch to current FortiOS versions, implement credential rotation for affected systems, enforce MFA on administrative access, and apply network segmentation to limit VPN gateway exposure.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/fbi-warns-fortibleed-remains-active.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
   </entry>
 </feed>
