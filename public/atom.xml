@@ -3,7 +3,34 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-10-23T19:49:37.371811+00:00</updated>
+  <updated>2026-10-24T03:30:28.022937+00:00</updated>
+  <entry>
+    <title>Echo: Rejected WebSocket upgrades can bypass Echo route-level access controls</title>
+    <id>urn:cybersecnews:item:609</id>
+    <published>2026-10-24T03:30:28.022937+00:00</published>
+    <updated>2026-10-24T03:30:28.022937+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-cxf3-9h37-7rr8" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Echo web framework versions 4 and 5 contain a critical vulnerability in the Proxy middleware where rejected WebSocket upgrades bypass route-level access controls. When an upstream server rejects a WebSocket upgrade but maintains the connection, subsequent HTTP requests are tunneled directly without passing through Echo's router or middleware, potentially circumventing authentication and authorization checks. This is actively exploitable and affects any Echo application using the Proxy middleware with route-level security controls. Users should immediately upgrade to patched versions of echo/v4 and echo/v5 and review any proxied traffic for potential unauthorized access.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-cxf3-9h37-7rr8"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Laravel TokenGuard authentication bypass through non-string API credentials (CVE-2026-114509)</title>
+    <id>urn:cybersecnews:item:608</id>
+    <published>2026-10-24T03:30:28.022023+00:00</published>
+    <updated>2026-10-24T03:30:28.022023+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-f9x3-7vq9-cph6" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-114509&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Laravel's TokenGuard authentication mechanism contains a critical bypass vulnerability (CVE-2026-114509) affecting token-based API authentication, particularly on MySQL/MariaDB databases. By submitting specially crafted non-string credential values, attackers can exploit type juggling in authentication queries to authenticate as arbitrary users without valid API tokens. This vulnerability is critical severity; current exploitation status in the wild is not specified in the advisory. Affected Laravel installations using TokenGuard with standard API authentication should immediately update the framework to the patched version and review access logs for suspicious authentication attempts.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-f9x3-7vq9-cph6"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Wasmtime: Bit-packing in Cranelift compiler causes silent overflow and miscompilation (CVE-2026-115889)</title>
+    <id>urn:cybersecnews:item:607</id>
+    <published>2026-10-24T03:30:28.007871+00:00</published>
+    <updated>2026-10-24T03:30:28.007871+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-897f-g5gm-fmxm" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · miscompilation · CVE-2026-115889&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Wasmtime versions prior to v43 contain a critical vulnerability (CVE-2026-115889) in the Cranelift compiler backend where bit-packing of SSA value indices causes silent overflow in release builds, leading to incorrect IR value references and arbitrary miscompilation. A specially crafted WebAssembly function with excessive SSA values can trigger type confusion and sandbox escape. Update Wasmtime to v43 or later immediately, which remediates the issue by using full u32 indices instead of bit-packed values. No evidence of wild exploitation currently reported, but the critical severity and sandbox escape potential warrant emergency patching.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-897f-g5gm-fmxm"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>obsidian-tc HTTP transport lacks Origin/DNS-rebinding protection, enabling drive-by vault access on loopback (CVE-2026-77363)</title>
     <id>urn:cybersecnews:item:606</id>
@@ -245,7 +272,7 @@
     <updated>2026-10-21T03:32:06.423764+00:00</updated>
     <link href="https://github.com/advisories/GHSA-8g5g-8vmr-9782" rel="alternate" />
     <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · heap-buffer-overflow · CVE-2026-112393, CVE-2026-112403, CVE-2026-96639&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Pillow's `JpegImageFile.draft()` method used by `Image.thumbnail()` contains a critical heap buffer overflow in `ImagingJpegDecode()` that fails to validate JPEG decoder output dimensions against the allocated decode buffer. The vulnerability occurs when requesting scaled JPEG output (1/2, 1/4, or 1/8) because the buffer allocation does not account for actual output parameters set by `jpeg_start_decompress()`. This flaw can be exploited remotely via specially crafted JPEG files to achieve arbitrary code execution. Users should immediately update Pillow to the latest patched version.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-8g5g-8vmr-9782"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · heap-buffer-overflow · CVE-2026-112393, CVE-2026-112398, CVE-2026-112403, CVE-2026-96639&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Pillow's `JpegImageFile.draft()` method used by `Image.thumbnail()` contains a critical heap buffer overflow in `ImagingJpegDecode()` that fails to validate JPEG decoder output dimensions against the allocated decode buffer. The vulnerability occurs when requesting scaled JPEG output (1/2, 1/4, or 1/8) because the buffer allocation does not account for actual output parameters set by `jpeg_start_decompress()`. This flaw can be exploited remotely via specially crafted JPEG files to achieve arbitrary code execution. Users should immediately update Pillow to the latest patched version.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-8g5g-8vmr-9782"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
   </entry>
   <entry>
     <title>PHP warns admins of two critical flaws, emergency patches coming tomorrow</title>
@@ -876,32 +903,5 @@
     <link href="https://thehackernews.com/2026/10/16-malicious-firefox-extensions-pose-as.html" rel="alternate" />
     <category term="red-team" />
     <content type="html">&lt;p&gt;&lt;em&gt;red-team · credential-theft&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Sixteen malicious Firefox extensions impersonating Rabby and OKX cryptocurrency wallets steal recovery phrases and private keys by intercepting data during wallet import processes. The extensions pose as legitimate wallet portals and browser tools to deceive users into installation. This threat is actively exploited in the wild with real cryptocurrency theft occurring. Users should immediately uninstall suspicious wallet extensions, verify authenticity through official sources only, and consider rotating compromised wallet credentials; Mozilla should accelerate removal from the Firefox add-on store.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/16-malicious-firefox-extensions-pose-as.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Homer: Complete Authentication Bypass When coordinator.jwt.secret Is Empty (Default) (CVE-2026-62253)</title>
-    <id>urn:cybersecnews:item:509</id>
-    <published>2026-10-07T21:03:27.878912+00:00</published>
-    <updated>2026-10-07T21:03:27.878912+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-rqcc-94gv-wjm9" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-105445, CVE-2026-35029, CVE-2026-59823, CVE-2026-62253, CVE-2026-68582&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Homer API authentication bypass in coordinator JWT middleware (CVE-2026-62253) allows complete unauthenticated access to protected endpoints under `/api/v1`, `/api/v3`, and `/api/v4` when the default empty `coordinator.jwt.secret` configuration is used. The vulnerability exists in `JWTMiddleware` and `JWTMiddlewareV4` functions which immediately return without validation when jwt secret is empty. This is a critical severity issue affecting default installations with no evidence of active wild exploitation noted. Immediately configure a non-empty `coordinator.jwt.secret` value in production deployments and apply patches when available from the Homer project.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-rqcc-94gv-wjm9"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Homer: Hardcoded Default Admin Password 'sipcapture' With No Forced Change on First Login (CVE-2026-62252)</title>
-    <id>urn:cybersecnews:item:508</id>
-    <published>2026-10-07T21:03:27.874563+00:00</published>
-    <updated>2026-10-07T21:03:27.874563+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-6xp5-7rcx-xfgx" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · hardcoded-credentials · CVE-2026-62252&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Homer's internal authentication bootstrap creates an admin account with hardcoded default password 'sipcapture' with no forced password change on first login, allowing immediate full administrative compromise of any fresh deployment. This critical vulnerability (CVE-2026-62252) affects the go/github.com/sipcapture/homer-app package across all fresh installations using internal authentication. There is no indication of current exploitation in the wild, but the ease of access makes this highly likely to be leveraged. Immediately change the default admin password upon deployment, implement forced password change on first login, and consider generating randomized initial credentials during bootstrap rather than using hardcoded defaults.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-6xp5-7rcx-xfgx"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Quasar Framework: Stored/Reflected XSS via unescaped SSR meta tag rendering in getHead() (CVE-2026-106102)</title>
-    <id>urn:cybersecnews:item:507</id>
-    <published>2026-10-07T21:03:27.869901+00:00</published>
-    <updated>2026-10-07T21:03:27.869901+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-pq96-jpmf-w254" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · xss · CVE-2026-106102&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Quasar Framework versions prior to patch contain stored/reflected XSS vulnerabilities in the `useMeta()` composable where user-supplied metadata is rendered unescaped in server-side rendering (SSR) meta tag output via the `getHead()` function. An attacker can inject malicious JavaScript through meta tag properties that execute in victims' browsers during page load. This is critical severity and exploitation likelihood is high given the public-facing nature of meta tag inputs in typical web applications. Apply the latest Quasar Framework security patch immediately; if unavailable, sanitize all user-controlled data passed to `useMeta()` before rendering and implement Content Security Policy headers as interim mitigation.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-pq96-jpmf-w254"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
   </entry>
 </feed>
