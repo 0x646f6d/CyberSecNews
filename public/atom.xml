@@ -3,7 +3,16 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-10-24T03:30:28.022937+00:00</updated>
+  <updated>2026-10-24T18:36:34.681761+00:00</updated>
+  <entry>
+    <title>BlackX UEFI bootkit exploits Baton Drop flaw to bypass Secure Boot</title>
+    <id>urn:cybersecnews:item:610</id>
+    <published>2026-10-24T18:36:34.681761+00:00</published>
+    <updated>2026-10-24T18:36:34.681761+00:00</updated>
+    <link href="https://www.bleepingcomputer.com/news/security/blackx-uefi-bootkit-exploits-baton-drop-flaw-to-bypass-secure-boot/" rel="alternate" />
+    <category term="red-team" />
+    <content type="html">&lt;p&gt;&lt;em&gt;red-team · secure-boot-bypass&lt;/em&gt;&lt;/p&gt;&lt;p&gt;BlackX UEFI bootkit exploits CVE-2021-21224 (Baton Drop), a Secure Boot bypass flaw in certain firmware implementations, to load malicious drivers targeting Kaspersky and Avast security solutions. The vulnerability is critical as it completely circumvents Secure Boot protections; exploitation is confirmed active in espionage campaigns as of early 2026. Affected organizations should immediately verify UEFI firmware versions and apply available security updates from their OEM, while considering additional endpoint detection and response (EDR) solutions to compensate for compromised security products. Forensic investigation of systems with unusual UEFI modifications is recommended to detect potential BlackX deployment.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/blackx-uefi-bootkit-exploits-baton-drop-flaw-to-bypass-secure-boot/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Echo: Rejected WebSocket upgrades can bypass Echo route-level access controls</title>
     <id>urn:cybersecnews:item:609</id>
@@ -894,14 +903,5 @@
     <link href="https://thehackernews.com/2026/10/tensorlake-npm-package-compromised-to.html" rel="alternate" />
     <category term="red-team" />
     <content type="html">&lt;p&gt;&lt;em&gt;red-team · supply-chain-attack&lt;/em&gt;&lt;/p&gt;&lt;p&gt;The npm package "tensorlake" (versions including 0.5.144) was compromised to deliver the Shai-Hulud credential-stealing worm, which harvests developer credentials, exfiltrates secrets, establishes persistence, and executes remote commands. This represents a high-severity supply chain attack actively exploited in the wild as part of the ChainDrop campaign targeting software developers. Immediately remove the compromised package version and audit all systems where it was installed for credential compromise and unauthorized access. Regenerate any exposed credentials (API keys, tokens, SSH keys) and review logs for signs of remote code execution or data exfiltration.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/tensorlake-npm-package-compromised-to.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>16 Malicious Firefox Extensions Pose as Rabby and OKX Wallets to Steal Recovery Phrases</title>
-    <id>urn:cybersecnews:item:510</id>
-    <published>2026-10-08T15:15:38.693433+00:00</published>
-    <updated>2026-10-08T15:15:38.693433+00:00</updated>
-    <link href="https://thehackernews.com/2026/10/16-malicious-firefox-extensions-pose-as.html" rel="alternate" />
-    <category term="red-team" />
-    <content type="html">&lt;p&gt;&lt;em&gt;red-team · credential-theft&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Sixteen malicious Firefox extensions impersonating Rabby and OKX cryptocurrency wallets steal recovery phrases and private keys by intercepting data during wallet import processes. The extensions pose as legitimate wallet portals and browser tools to deceive users into installation. This threat is actively exploited in the wild with real cryptocurrency theft occurring. Users should immediately uninstall suspicious wallet extensions, verify authenticity through official sources only, and consider rotating compromised wallet credentials; Mozilla should accelerate removal from the Firefox add-on store.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/16-malicious-firefox-extensions-pose-as.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
   </entry>
 </feed>
