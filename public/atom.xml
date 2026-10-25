@@ -3,7 +3,16 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-10-24T18:36:34.681761+00:00</updated>
+  <updated>2026-10-25T18:44:47.617114+00:00</updated>
+  <entry>
+    <title>Unpatched Tailscale SSH Flaws Could Let a Hacked Device Reach Root on Other Servers</title>
+    <id>urn:cybersecnews:item:611</id>
+    <published>2026-10-25T18:44:47.617114+00:00</published>
+    <updated>2026-10-25T18:44:47.617114+00:00</updated>
+    <link href="https://thehackernews.com/2026/10/unpatched-tailscale-ssh-flaws-could-let.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · privilege-escalation&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Tailscale SSH implementation contains privilege escalation vulnerabilities allowing compromised network devices to gain root access on target servers when SSH port forwarding is enabled. An attacker with control of one permitted device can exploit flaws in Tailscale's access controls to escalate privileges and laterally move across the network. Severity is high given the requirement for only network access and the resulting full system compromise, though exploitation requires prior device compromise. Users should immediately disable SSH port forwarding in Tailscale security policies if not operationally required, and apply available security patches when released; review network segmentation and device access controls to limit lateral movement potential.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/unpatched-tailscale-ssh-flaws-could-let.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>BlackX UEFI bootkit exploits Baton Drop flaw to bypass Secure Boot</title>
     <id>urn:cybersecnews:item:610</id>
@@ -894,14 +903,5 @@
     <link href="https://thehackernews.com/2026/10/japan-sees-sharp-rise-in-web-data-leaks.html" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · api-abuse&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Japan is experiencing increased data breaches involving API abuse targeting mobile applications and exploitation of known vulnerabilities in software like Metabase. JPCERT/CC reports these attacks are leveraging unpatched flaws and weak API security controls, though specific threat actors and victims remain undisclosed. Organizations should prioritize patching known vulnerabilities in exposed software, implementing API rate limiting and authentication controls, and conducting security audits of mobile application endpoints. Immediate action to identify and remediate unpatched systems and enforce strict API access controls is critical given active exploitation in the wild.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/japan-sees-sharp-rise-in-web-data-leaks.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Tensorlake npm Package Compromised to Deliver Shai-Hulud Credential-Stealing Worm</title>
-    <id>urn:cybersecnews:item:511</id>
-    <published>2026-10-08T15:15:38.695526+00:00</published>
-    <updated>2026-10-08T15:15:38.695526+00:00</updated>
-    <link href="https://thehackernews.com/2026/10/tensorlake-npm-package-compromised-to.html" rel="alternate" />
-    <category term="red-team" />
-    <content type="html">&lt;p&gt;&lt;em&gt;red-team · supply-chain-attack&lt;/em&gt;&lt;/p&gt;&lt;p&gt;The npm package "tensorlake" (versions including 0.5.144) was compromised to deliver the Shai-Hulud credential-stealing worm, which harvests developer credentials, exfiltrates secrets, establishes persistence, and executes remote commands. This represents a high-severity supply chain attack actively exploited in the wild as part of the ChainDrop campaign targeting software developers. Immediately remove the compromised package version and audit all systems where it was installed for credential compromise and unauthorized access. Regenerate any exposed credentials (API keys, tokens, SSH keys) and review logs for signs of remote code execution or data exfiltration.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/tensorlake-npm-package-compromised-to.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
   </entry>
 </feed>
