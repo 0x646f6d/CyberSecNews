@@ -3,7 +3,16 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-10-25T18:44:47.617114+00:00</updated>
+  <updated>2026-10-26T14:53:36.895238+00:00</updated>
+  <entry>
+    <title>uCreator Android Spyware Can Steal Telegram 2FA Passwords and Clone WeChat Accounts</title>
+    <id>urn:cybersecnews:item:612</id>
+    <published>2026-10-26T14:53:36.895238+00:00</published>
+    <updated>2026-10-26T14:53:36.895238+00:00</updated>
+    <link href="https://thehackernews.com/2026/10/ucreator-android-spyware-can-steal.html" rel="alternate" />
+    <category term="red-team" />
+    <content type="html">&lt;p&gt;&lt;em&gt;red-team · spyware&lt;/em&gt;&lt;/p&gt;&lt;p&gt;uCreator is an Android spyware kit distributed through sideloaded, modified versions of Telegram and WeChat outside official app stores. The malware intercepts 2FA codes and account credentials, enabling account takeover and cloning of both messaging platforms. While currently limited in reach due to reliance on sideloaded distribution, this represents a significant threat to users of these widely-used communications platforms. Mitigation: Install only official Telegram and WeChat from Google Play Store, avoid sideloading apps, and enable additional account security measures such as two-factor authentication through official channels.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/ucreator-android-spyware-can-steal.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Unpatched Tailscale SSH Flaws Could Let a Hacked Device Reach Root on Other Servers</title>
     <id>urn:cybersecnews:item:611</id>
@@ -894,14 +903,5 @@
     <link href="https://www.bleepingcomputer.com/news/security/cisco-warns-of-critical-flaws-allowing-nexus-switch-takeover/" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Cisco NX-OS used in Nexus switches contains five critical vulnerabilities allowing unauthenticated remote attackers to execute arbitrary code with root privileges. The flaws are in core NX-OS functionality and impact multiple Nexus platforms across the product line. Cisco has not reported active exploitation in the wild at this time, but the critical severity rating and ease of exploitation make immediate patching essential. Apply the latest security updates from Cisco as soon as possible, prioritize patching internet-facing Nexus switches, and consider implementing network segmentation to limit switch management access.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/cisco-warns-of-critical-flaws-allowing-nexus-switch-takeover/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Japan Sees Sharp Rise in Web Data Leaks Amid Mobile API Abuse and Metabase Attacks</title>
-    <id>urn:cybersecnews:item:512</id>
-    <published>2026-10-08T21:05:03.449964+00:00</published>
-    <updated>2026-10-08T21:05:03.449964+00:00</updated>
-    <link href="https://thehackernews.com/2026/10/japan-sees-sharp-rise-in-web-data-leaks.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · api-abuse&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Japan is experiencing increased data breaches involving API abuse targeting mobile applications and exploitation of known vulnerabilities in software like Metabase. JPCERT/CC reports these attacks are leveraging unpatched flaws and weak API security controls, though specific threat actors and victims remain undisclosed. Organizations should prioritize patching known vulnerabilities in exposed software, implementing API rate limiting and authentication controls, and conducting security audits of mobile application endpoints. Immediate action to identify and remediate unpatched systems and enforce strict API access controls is critical given active exploitation in the wild.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/japan-sees-sharp-rise-in-web-data-leaks.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
   </entry>
 </feed>
