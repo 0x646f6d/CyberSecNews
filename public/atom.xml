@@ -3,7 +3,52 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-10-27T03:55:01.770343+00:00</updated>
+  <updated>2026-10-27T14:01:53.770963+00:00</updated>
+  <entry>
+    <title>Tricks from the Past deployed via signed ChatGPT and Claude binaries</title>
+    <id>urn:cybersecnews:item:621</id>
+    <published>2026-10-27T14:01:53.770963+00:00</published>
+    <updated>2026-10-27T14:01:53.770963+00:00</updated>
+    <link href="https://research.checkpoint.com/2026/tricks-from-the-past-deployed-via-signed-chatgpt-and-claude-binaries/" rel="alternate" />
+    <category term="red-team" />
+    <content type="html">&lt;p&gt;&lt;em&gt;red-team · supply-chain&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Attackers are distributing malware via trojanized binaries of ChatGPT and Claude desktop applications hosted on fake GitHub repositories, leveraging the popularity of AI tools to deceive users. The campaign deploys a custom malware chain called Yoba that uses legitimate-looking project names (GPT-5.6 Sol, GPT-6 Astra, Claude variants) with signed binaries to evade detection. The severity is high as the malware uses legitimate code-signing to bypass security controls; exploitation is active and ongoing. Users should verify AI tool downloads only from official sources (OpenAI.com, Anthropic.com, GitHub.com official accounts), avoid third-party GitHub repositories, and implement application whitelisting or binary signature verification controls.&lt;/p&gt;&lt;p&gt;&lt;a href="https://research.checkpoint.com/2026/tricks-from-the-past-deployed-via-signed-chatgpt-and-claude-binaries/"&gt;Read more&lt;/a&gt; · Source: checkpoint-research&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>MONAILabel Server Crash and Silent Inference Corruption via Crafted DICOM (pydicom DS/IS Validation Bypass) (CVE-2026-48705)</title>
+    <id>urn:cybersecnews:item:620</id>
+    <published>2026-10-27T14:01:53.769976+00:00</published>
+    <updated>2026-10-27T14:01:53.769976+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-6hp3-vr39-rqw8" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · dos-and-data-corruption · CVE-2026-48705&lt;/em&gt;&lt;/p&gt;&lt;p&gt;MONAILabel Server via MONAI library is vulnerable to remote crash and silent inference corruption through crafted DICOM files exploiting pydicom's lack of DS/IS validation (CVE-2026-48705, CVSS critical). An unauthenticated attacker can upload a malicious DICOM containing NaN/infinity values that bypass validation and propagate through the inference pipeline, causing server crashes or corrupted medical AI results. No evidence of active exploitation in the wild. Immediately patch MONAI/MONAILabel to versions with strict DS/IS validation and implement input validation at the REST API layer; consider restricting DICOM upload access pending patch deployment.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-6hp3-vr39-rqw8"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Agno: Arbitrary code execution via `eval()` on `field_type` in `FunctionCall` (CVE-2026-35002)</title>
+    <id>urn:cybersecnews:item:619</id>
+    <published>2026-10-27T14:01:53.768568+00:00</published>
+    <updated>2026-10-27T14:01:53.768568+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-m4w4-3r8h-jw98" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-35002&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Agno prior to version 2.3.24 contains a critical arbitrary code execution vulnerability (CVE-2026-35002) where the `field_type` parameter in `FunctionCall` is passed directly to Python's `eval()`, allowing remote code execution with CVSS 9.3. An attacker who can influence the `field_type` value gains full system compromise. There is no indication of current wild exploitation, but this is an immediate threat given the critical severity. Upgrade Agno to version 2.3.24 or later immediately; if immediate patching is impossible, restrict network access to Agno deployments and validate all external input to `FunctionCall` objects.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-m4w4-3r8h-jw98"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>OpenAI Compaction Flaw Let Researchers Bypass Hidden Reasoning Protections</title>
+    <id>urn:cybersecnews:item:618</id>
+    <published>2026-10-27T14:01:53.766687+00:00</published>
+    <updated>2026-10-27T14:01:53.766687+00:00</updated>
+    <link href="https://thehackernews.com/2026/10/openai-compaction-flaw-let-researchers.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · information-disclosure&lt;/em&gt;&lt;/p&gt;&lt;p&gt;OpenAI's reasoning models contain a vulnerability in the compaction feature that allows researchers to extract hidden reasoning data that should remain encrypted. By manipulating conversation compression mechanisms, attackers can bypass protections designed to conceal intermediate problem-solving steps. While currently demonstrated only by researchers rather than widespread exploitation, this technique undermines the security model of reasoning features. OpenAI should immediately patch the compaction logic to prevent unauthorized access to encrypted reasoning outputs and implement additional validation to ensure reasoning data remains inaccessible through compression workflows.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/openai-compaction-flaw-let-researchers.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Microsoft Authenticator Flaw Let Permissionless Android Apps Steal Work Account Tokens</title>
+    <id>urn:cybersecnews:item:617</id>
+    <published>2026-10-27T14:01:53.761301+00:00</published>
+    <updated>2026-10-27T14:01:53.761301+00:00</updated>
+    <link href="https://thehackernews.com/2026/10/microsoft-authenticator-flaw-let.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-80097&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Microsoft Authenticator for Android contained a flaw (CVE-2026-80097) allowing unprivileged malicious apps to impersonate legitimate Microsoft applications and steal work account authentication tokens. The vulnerability exploited Android's intent-based app communication model, enabling token theft without requiring any special permissions. Microsoft patched the issue in Authenticator version 6.2606.4246; immediate update is recommended for all Android users as the flaw poses severe risk to enterprise account security.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/microsoft-authenticator-flaw-let.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Apple Patches for October 2026, (Mon, Oct 26th)</title>
     <id>urn:cybersecnews:item:616</id>
@@ -858,50 +903,5 @@
     <link href="https://github.com/advisories/GHSA-6v25-8wq6-xq4j" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass,memory-disclosure,dos,rce · CVE-2026-107726&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Hazelcast Enterprise and Community editions (all versions) contain a critical memory access vulnerability (CVE-2026-107726) allowing low-privileged clients to read arbitrary memory from cluster members including heap, off-heap data, and JVM address space. Affected versions may also permit denial-of-service crashes or memory corruption leading to potential RCE in Enterprise configurations. This vulnerability is critical severity; check vendor advisories for exploitation status and immediately apply available patches or implement network access controls restricting client connections to trusted sources only.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-6v25-8wq6-xq4j"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>AsyncHttpClient: Replay to a different host sends the original host request and credentials to the new host (CVE-2026-107282)</title>
-    <id>urn:cybersecnews:item:521</id>
-    <published>2026-10-08T21:05:03.457291+00:00</published>
-    <updated>2026-10-08T21:05:03.457291+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-jmqq-x5g9-9p2w" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · credential-leakage · CVE-2026-107282&lt;/em&gt;&lt;/p&gt;&lt;p&gt;AsyncHttpClient (org.asynchttpclient:async-http-client) contains a critical vulnerability where replayed requests to different hosts inadvertently send the original host's credentials and request data to the new host. This occurs through normal documented features including ResponseFilter failover patterns and IOException retry mechanisms, requiring no special attacker capabilities. The vulnerability has not been reported as exploited in the wild. Users should immediately update to a patched version when available; as a temporary mitigation, avoid using automatic replay/failover features that redirect to different hosts.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-jmqq-x5g9-9p2w"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Handlebars: JavaScript Injection via Own Property Check Bypass (CVE-2026-106445)</title>
-    <id>urn:cybersecnews:item:520</id>
-    <published>2026-10-08T21:05:03.456610+00:00</published>
-    <updated>2026-10-08T21:05:03.456610+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-p8wg-vrv2-v86f" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · prototype-pollution-rce · CVE-2026-106445&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Handlebars JavaScript template engine contains a critical prototype pollution vulnerability (CVE-2026-106445) allowing Remote Code Execution through the Function constructor bypass. When `allowProtoMethodsByDefault: true` is configured, attackers who control template input can inject arbitrary JavaScript by exploiting the `lookupProperty` function's trust of own properties on `Function.prototype.constructor`. This vulnerability is critical severity; immediate patching is required for all affected versions. Upgrade Handlebars to the latest patched version and disable `allowProtoMethodsByDefault` unless explicitly required, or implement strict template input validation.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-p8wg-vrv2-v86f"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Handlebars: JavaScript Injection via AST Type Confusion in compile (bypass of CVE-2026-33937) (CVE-2026-106446)</title>
-    <id>urn:cybersecnews:item:519</id>
-    <published>2026-10-08T21:05:03.455816+00:00</published>
-    <updated>2026-10-08T21:05:03.455816+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-8r5x-fm3f-whwj" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · code-injection · CVE-2026-106446&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Handlebars.compile() and Handlebars.precompile() functions are vulnerable to JavaScript injection via AST type confusion (CVE-2026-106446), bypassing previous mitigation CVE-2026-33937. The vulnerability allows attackers who can supply untrusted AST objects to inject arbitrary JavaScript code because the functions only validate specific node types while leaving others unchecked. This is critical severity and likely exploited given the prior CVE bypass. Update Handlebars to the latest patched version immediately, and avoid passing untrusted objects directly to compile/precompile functions; validate and sanitize all user-supplied AST input.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-8r5x-fm3f-whwj"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>ProFTPD ProFTPD: ProFTPD Improper Access Control Vulnerability (CVE-2015-3306)</title>
-    <id>urn:cybersecnews:item:518</id>
-    <published>2026-10-08T21:05:03.455041+00:00</published>
-    <updated>2026-10-08T21:05:03.455041+00:00</updated>
-    <link href="https://nvd.nist.gov/vuln/detail/CVE-2015-3306" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · improper-access-control · CVE-2015-3306&lt;/em&gt;&lt;/p&gt;&lt;p&gt;ProFTPD versions prior to 1.3.5 contain an improper access control vulnerability exploitable via the SITE CPFR and SITE CPTO commands, allowing unauthenticated remote attackers to read and write arbitrary files on affected systems. This vulnerability is actively exploited in the wild and carries high severity. Immediately apply vendor patches to ProFTPD 1.3.5 or later, prioritize remediation per CISA BOD 26-04 guidelines, and discontinue use if patches cannot be deployed. Conduct forensic triage on systems that cannot be patched immediately to assess exposure and potential compromise.&lt;/p&gt;&lt;p&gt;&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2015-3306"&gt;Read more&lt;/a&gt; · Source: cisa-kev&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>ONLYOFFICE Docs: ONLYOFFICE Docs Server Path Traversal Vulnerability (CVE-2021-3199)</title>
-    <id>urn:cybersecnews:item:517</id>
-    <published>2026-10-08T21:05:03.454365+00:00</published>
-    <updated>2026-10-08T21:05:03.454365+00:00</updated>
-    <link href="https://nvd.nist.gov/vuln/detail/CVE-2021-3199" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · path-traversal · CVE-2021-3199&lt;/em&gt;&lt;/p&gt;&lt;p&gt;ONLYOFFICE Docs Server contains a path traversal vulnerability (CVE-2021-3199) affecting JWT-authenticated image upload functionality, exploitable via /.. sequences in parameters to achieve remote code execution. This vulnerability is actively exploited in the wild and carries high severity. Apply vendor-supplied patches immediately per CISA BOD 26-04 guidance, or discontinue use if mitigations are unavailable; evaluate internet exposure for all affected instances and prioritize based on external accessibility.&lt;/p&gt;&lt;p&gt;&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2021-3199"&gt;Read more&lt;/a&gt; · Source: cisa-kev&lt;/p&gt;</content>
   </entry>
 </feed>
