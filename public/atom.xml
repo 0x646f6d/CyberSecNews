@@ -3,7 +3,34 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-10-27T14:01:53.770963+00:00</updated>
+  <updated>2026-10-27T20:28:23.054152+00:00</updated>
+  <entry>
+    <title>Authlib: empty signatures validation in JWS JSON deserialization (CVE-2026-96760)</title>
+    <id>urn:cybersecnews:item:624</id>
+    <published>2026-10-27T20:28:23.054152+00:00</published>
+    <updated>2026-10-27T20:28:23.054152+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-6v38-4h7w-rj9h" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · signature-bypass · CVE-2026-96760&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Authlib versions prior to 1.9.0 contain a critical signature verification bypass in the JsonWebSignature.deserialize_json() method, which accepts JWS JSON Serialization objects and returns payloads as verified without actually validating signatures or requiring cryptographic keys. The vulnerability occurs because signature validation is not properly enforced in the deserialization logic. This is exploited in the wild and affects all applications using Authlib's JWS JSON deserialization. Upgrade immediately to Authlib 1.9.0 or later to patch this critical vulnerability.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-6v38-4h7w-rj9h"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Adobe Commerce and Magento: Adobe Commerce and Magento Unrestricted Upload of File with Dangerous Type Vulnerability (CVE-2026-48356)</title>
+    <id>urn:cybersecnews:item:623</id>
+    <published>2026-10-27T20:28:23.052723+00:00</published>
+    <updated>2026-10-27T20:28:23.052723+00:00</updated>
+    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-48356" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · unrestricted-file-upload · CVE-2026-48356&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Adobe Commerce and Magento are affected by CVE-2026-48356, an unrestricted file upload vulnerability allowing arbitrary code execution with current user privileges, potentially leading to account compromise or elevated access. This vulnerability is actively exploited in the wild and carries high severity. Immediately apply vendor-provided patches per CISA BOD 26-04 guidance; for cloud deployments without available mitigations, discontinue use and evaluate alternative solutions. Conduct forensics triage on internet-exposed instances and prioritize patching based on asset exposure levels.&lt;/p&gt;&lt;p&gt;&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2026-48356"&gt;Read more&lt;/a&gt; · Source: cisa-kev&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>GoAhead TLS Flaws Allow Revoked Client Certificates and Enable Session Decryption</title>
+    <id>urn:cybersecnews:item:622</id>
+    <published>2026-10-27T20:28:23.050504+00:00</published>
+    <updated>2026-10-27T20:28:23.050504+00:00</updated>
+    <link href="https://thehackernews.com/2026/10/goahead-tls-flaws-allow-revoked-client.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass&lt;/em&gt;&lt;/p&gt;&lt;p&gt;GoAhead embedded web server's OpenSSL-backed TLS implementation fails to enable certificate revocation checking despite loading revocation lists, allowing revoked client certificates to authenticate successfully in mutual-TLS deployments. The vulnerability affects versions using OpenSSL backend with client certificate authentication configured, enabling unauthorized access when revocation lists are present but unenforced. This is a high-severity flaw that enables authentication bypass; exploitability in the wild depends on deployment prevalence of mutual-TLS configurations with revocation lists. Affected organizations should immediately patch GoAhead to the latest version and verify revocation checking is explicitly enabled post-update.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/goahead-tls-flaws-allow-revoked-client.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Tricks from the Past deployed via signed ChatGPT and Claude binaries</title>
     <id>urn:cybersecnews:item:621</id>
@@ -876,32 +903,5 @@
     <link href="https://thehackernews.com/2026/10/attackers-exploit-ahsaycbs-flaws-to.html" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-105133, CVE-2026-105134&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Attackers are actively exploiting two vulnerabilities in AhsayCBS backup software (CVE-2026-105133 and an undisclosed second flaw) to gain unauthorized device access and deploy XMRig cryptocurrency miners and web shells. CVE-2026-105133, a moderate-severity improper authentication flaw in the checkSysPwd() function (CVSS 5.5), is being leveraged in active exploitation campaigns. This threat is occurring in the wild with direct impact to confidentiality and system resources. Organizations running AhsayCBS should immediately patch to the latest available version and monitor systems for signs of cryptomining activity and unauthorized web shell access.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/attackers-exploit-ahsaycbs-flaws-to.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Researchers Publish Working Exploit for Pre-Auth AnyDesk Linux Flaw That Gives Root Access</title>
-    <id>urn:cybersecnews:item:524</id>
-    <published>2026-10-09T15:01:24.583835+00:00</published>
-    <updated>2026-10-09T15:01:24.583835+00:00</updated>
-    <link href="https://thehackernews.com/2026/10/researchers-publish-working-exploit-for.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;AnyDesk Linux versions prior to 8.0.3 contain a pre-authentication remote code execution vulnerability allowing unauthenticated attackers to achieve root access without user approval. A working public exploit has been released following AnyDesk's June patch, which was initially downplayed as a crash fix with no CVE disclosure. This represents high severity as it bypasses all authentication and authorization controls. Immediate patching to version 8.0.3 or later is critical for all Linux deployments; organizations should prioritize this update and monitor for signs of exploitation.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/researchers-publish-working-exploit-for.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>PraisonAI: AICoder Arbitrary File Write and Command Execution via LLM Tool Calls (CVE-2026-61445)</title>
-    <id>urn:cybersecnews:item:523</id>
-    <published>2026-10-09T04:49:41.750358+00:00</published>
-    <updated>2026-10-09T04:49:41.750358+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-9mp3-24cc-77mg" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · arbitrary-file-write,rce · CVE-2026-61445&lt;/em&gt;&lt;/p&gt;&lt;p&gt;PraisonAI's AICoder UI component (pip/praisonai) contains critical vulnerabilities in the `write_to_file` and `execute_command` tools exposed to LLMs without path validation or command sanitization. An attacker can inject malicious prompts via the chat interface to achieve arbitrary file writes to sensitive locations (e.g., `/root/.ssh/authorized_keys`, `/etc/crontab`) and execute arbitrary commands; impact is maximized as Docker containers typically run as root. This vulnerability is critical and no indication of wild exploitation is mentioned. Users should immediately update PraisonAI to a patched version and consider restricting LLM tool access to validated safe directories and commands, or disable these tools until a fix is deployed.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-9mp3-24cc-77mg"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Hazelcast allows arbitrary member memory access by low-privileged client (CVE-2026-107726)</title>
-    <id>urn:cybersecnews:item:522</id>
-    <published>2026-10-09T04:49:41.748719+00:00</published>
-    <updated>2026-10-09T04:49:41.748719+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-6v25-8wq6-xq4j" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass,memory-disclosure,dos,rce · CVE-2026-107726&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Hazelcast Enterprise and Community editions (all versions) contain a critical memory access vulnerability (CVE-2026-107726) allowing low-privileged clients to read arbitrary memory from cluster members including heap, off-heap data, and JVM address space. Affected versions may also permit denial-of-service crashes or memory corruption leading to potential RCE in Enterprise configurations. This vulnerability is critical severity; check vendor advisories for exploitation status and immediately apply available patches or implement network access controls restricting client connections to trusted sources only.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-6v25-8wq6-xq4j"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
   </entry>
 </feed>
