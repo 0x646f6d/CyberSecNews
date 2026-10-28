@@ -3,7 +3,43 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-10-27T20:28:23.054152+00:00</updated>
+  <updated>2026-10-28T14:54:14.843399+00:00</updated>
+  <entry>
+    <title>CVE-2026-20362 | Cisco Finesse Server-Side Request Forgery Vulnerability</title>
+    <id>urn:cybersecnews:item:628</id>
+    <published>2026-10-28T14:54:14.843399+00:00</published>
+    <updated>2026-10-28T14:54:14.843399+00:00</updated>
+    <link href="https://horizon3.ai/attack-research/vulnerabilities/cve-2026-20362/" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · ssrf · CVE-2026-20362&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Cisco Finesse is vulnerable to a server-side request forgery (SSRF) flaw (CVE-2026-20362) that allows authenticated attackers to make arbitrary network requests from the affected server. The vulnerability is rated high severity and currently lacks evidence of active exploitation in the wild. Cisco has released patches for affected versions; organizations should update Finesse servers immediately and restrict network access to the application as an interim mitigation if patching cannot be completed promptly.&lt;/p&gt;&lt;p&gt;&lt;a href="https://horizon3.ai/attack-research/vulnerabilities/cve-2026-20362/"&gt;Read more&lt;/a&gt; · Source: horizon3&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Hackers now scanning systems for recently-patched Oracle flaw</title>
+    <id>urn:cybersecnews:item:627</id>
+    <published>2026-10-28T14:54:14.842234+00:00</published>
+    <updated>2026-10-28T14:54:14.842234+00:00</updated>
+    <link href="https://www.bleepingcomputer.com/news/security/hackers-now-scanning-systems-for-recently-patched-oracle-flaw/" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Oracle E-Business Suite (EBS) is under active reconnaissance following disclosure of a critical vulnerability in the WebLogic component. The flaw allows remote code execution without authentication, exploitable via network access alone. Active scanning in the wild indicates imminent exploitation risk with high severity. Apply Oracle's latest security patches immediately to all affected EBS systems and restrict network access to WebLogic ports where possible.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/hackers-now-scanning-systems-for-recently-patched-oracle-flaw/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Adobe Fixes 8 Critical Campaign Classic Flaws Allowing Code Execution and Security Bypass</title>
+    <id>urn:cybersecnews:item:626</id>
+    <published>2026-10-28T14:54:14.840903+00:00</published>
+    <updated>2026-10-28T14:54:14.840903+00:00</updated>
+    <link href="https://thehackernews.com/2026/10/adobe-fixes-8-critical-campaign-classic.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · code-injection,rce,privilege-escalation,security-bypass · CVE-2026-104351&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Adobe Campaign Classic contains eight critical vulnerabilities including CVE-2026-104351 (CVSS 9.9), a code injection flaw enabling arbitrary code execution, plus additional flaws allowing security bypass and privilege escalation. These vulnerabilities pose severe risk to affected deployments with potential for complete system compromise. Apply Adobe's latest patches immediately; there is no indication of active exploitation but the critical severity warrants urgent remediation. Verify all Campaign Classic instances are updated and implement network segmentation for defense-in-depth protection.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/adobe-fixes-8-critical-campaign-classic.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>eMudhra-TLS-Leck: Apple lässt Problem auf macOS-Kommandozeile zunächst bestehen</title>
+    <id>urn:cybersecnews:item:625</id>
+    <published>2026-10-28T14:54:14.839075+00:00</published>
+    <updated>2026-10-28T14:54:14.839075+00:00</updated>
+    <link href="https://www.heise.de/news/eMudhra-TLS-Leck-Apple-laesst-Problem-auf-macOS-Kommandozeile-zunaechst-bestehen-11500945.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · cert-validation&lt;/em&gt;&lt;/p&gt;&lt;p&gt;eMudhra certificate authority issued a fraudulent TLS certificate that was included in macOS system certificate bundles used by command-line tools, creating a trusted path for potential man-in-the-middle attacks. Apple has patched browsers but left the legacy cert.pem file used by CLI utilities unpatched, exposing developers and administrators using command-line tools to ongoing risk. Users should manually remove the compromised eMudhra certificate from the system cert.pem file or update to the latest macOS version when available, and review any TLS traffic from CLI tools for signs of compromise.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.heise.de/news/eMudhra-TLS-Leck-Apple-laesst-Problem-auf-macOS-Kommandozeile-zunaechst-bestehen-11500945.html"&gt;Read more&lt;/a&gt; · Source: heise-security&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Authlib: empty signatures validation in JWS JSON deserialization (CVE-2026-96760)</title>
     <id>urn:cybersecnews:item:624</id>
@@ -867,41 +903,5 @@
     <link href="https://www.rapid7.com/blog/post/pt-metasploit-wrap-up-a-collection-of-what-can-only-be-called-eclectic-modules" rel="alternate" />
     <category term="red-team" />
     <content type="html">&lt;p&gt;&lt;em&gt;red-team · exploitation-framework&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Metasploit framework received updates including eclectic new modules across various attack vectors and post-exploitation capabilities. The additions expand the toolkit's functionality but do not represent specific vulnerability disclosures or critical security issues requiring immediate patching. No particular software vulnerability is highlighted as actively exploited in the wild from this update. Organizations using Metasploit should update to access these new modules for security testing purposes, though this is routine maintenance rather than a critical security action.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.rapid7.com/blog/post/pt-metasploit-wrap-up-a-collection-of-what-can-only-be-called-eclectic-modules"&gt;Read more&lt;/a&gt; · Source: rapid7&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>P7 DarkSword iOS Exploit Kit Adds Crypto Wallet Data Theft and Remote Commands</title>
-    <id>urn:cybersecnews:item:528</id>
-    <published>2026-10-09T20:35:19.456161+00:00</published>
-    <updated>2026-10-09T20:35:19.456161+00:00</updated>
-    <link href="https://thehackernews.com/2026/10/p7-darksword-ios-exploit-kit-adds.html" rel="alternate" />
-    <category term="red-team" />
-    <content type="html">&lt;p&gt;&lt;em&gt;red-team · c2&lt;/em&gt;&lt;/p&gt;&lt;p&gt;P7 DarkSword iOS exploit kit targets iOS devices with reduced footprint, enhanced keychain/crypto-wallet data theft capabilities, and bidirectional command-and-control communication enabling remote code execution. This represents an evolution of previously known DarkSword variants with increased functionality for sensitive data exfiltration. No indicators of widespread wild exploitation have been publicly reported, though the kit's enhanced capabilities present elevated risk to targeted users, particularly those holding cryptocurrency assets. Organizations should ensure iOS devices run current OS patches, enforce strong endpoint security policies, and consider mobile threat defense solutions; users should restrict app permissions and monitor for unusual device behavior.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/p7-darksword-ios-exploit-kit-adds.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Three Teams Demonstrate Remote Hacks of Fully Patched Google Pixel 10 at Pwn2Own</title>
-    <id>urn:cybersecnews:item:527</id>
-    <published>2026-10-09T15:01:24.588476+00:00</published>
-    <updated>2026-10-09T15:01:24.588476+00:00</updated>
-    <link href="https://thehackernews.com/2026/10/three-teams-demonstrate-remote-hacks-of.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Three research teams successfully exploited fully patched Google Pixel 10 devices at Pwn2Own Ireland, demonstrating zero-day vulnerabilities in the flagship Android device despite current security patches. The exploits likely involved chained vulnerabilities across multiple components (kernel, drivers, or system services), with the winning entry from Ikotas Labs earning the top $300,000 prize. These vulnerabilities are not yet exploited in the wild but represent real attack paths that Google will receive detailed technical information on for remediation. Google should prioritize expedited patching of the disclosed vulnerabilities and conduct comprehensive security reviews of the affected components across its Pixel line.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/three-teams-demonstrate-remote-hacks-of.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>GoBalance Flaw Lets Attackers Hijack .onion Addresses by Recovering Tor-Format Keys</title>
-    <id>urn:cybersecnews:item:526</id>
-    <published>2026-10-09T15:01:24.587255+00:00</published>
-    <updated>2026-10-09T15:01:24.587255+00:00</updated>
-    <link href="https://thehackernews.com/2026/10/gobalance-flaw-lets-attackers-hijack.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · key-recovery&lt;/em&gt;&lt;/p&gt;&lt;p&gt;GoBalance, a Tor onion address management tool, contains a cryptographic flaw that allows attackers to recover the private key controlling a .onion address using only publicly available information, enabling complete hijacking of the hidden service. The vulnerability stems from improper key derivation in GoBalance's implementation of Tor-format keys. This is a critical severity issue with potential for active exploitation given the tool's use by dark-web operators and the straightforward nature of the attack requiring only public data. Administrators should immediately discontinue GoBalance use, migrate to alternative solutions, and regenerate all onion addresses with properly secured key management systems.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/gobalance-flaw-lets-attackers-hijack.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Attackers Exploit AhsayCBS Flaws to Deploy XMRig Miners Disguised as Microsoft Edge</title>
-    <id>urn:cybersecnews:item:525</id>
-    <published>2026-10-09T15:01:24.585941+00:00</published>
-    <updated>2026-10-09T15:01:24.585941+00:00</updated>
-    <link href="https://thehackernews.com/2026/10/attackers-exploit-ahsaycbs-flaws-to.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-105133, CVE-2026-105134&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Attackers are actively exploiting two vulnerabilities in AhsayCBS backup software (CVE-2026-105133 and an undisclosed second flaw) to gain unauthorized device access and deploy XMRig cryptocurrency miners and web shells. CVE-2026-105133, a moderate-severity improper authentication flaw in the checkSysPwd() function (CVSS 5.5), is being leveraged in active exploitation campaigns. This threat is occurring in the wild with direct impact to confidentiality and system resources. Organizations running AhsayCBS should immediately patch to the latest available version and monitor systems for signs of cryptomining activity and unauthorized web shell access.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/attackers-exploit-ahsaycbs-flaws-to.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
   </entry>
 </feed>
