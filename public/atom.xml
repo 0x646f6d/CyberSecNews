@@ -3,7 +3,52 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-10-28T14:54:14.843399+00:00</updated>
+  <updated>2026-10-28T20:49:14.130660+00:00</updated>
+  <entry>
+    <title>Linux Kernel: Linux Kernel Missing Initialization of a Variable Vulnerability (CVE-2026-46300)</title>
+    <id>urn:cybersecnews:item:633</id>
+    <published>2026-10-28T20:49:14.130660+00:00</published>
+    <updated>2026-10-28T20:49:14.130660+00:00</updated>
+    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-46300" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · uninitialized-variable · CVE-2026-46300&lt;/em&gt;&lt;/p&gt;&lt;p&gt;The Linux Kernel contains a missing variable initialization vulnerability (CVE-2026-46300) affecting ESP input processing during socket buffer coalescing, allowing unintended modification of page-cache-backed data and decryption of shared fragments in place. This vulnerability is actively exploited in the wild and can be chained with CVE-2026-109618 and CVE-2026-109619 to achieve remote code execution as root, including PHP webshell implantation. Immediately apply kernel security updates per vendor instructions and CISA BOD 26-04 prioritization guidance; affected systems should be patched without delay given active exploitation. If patches are unavailable, discontinue use of the affected kernel versions and perform forensic triage per CISA requirements.&lt;/p&gt;&lt;p&gt;&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2026-46300"&gt;Read more&lt;/a&gt; · Source: cisa-kev&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Broadcom VMware ESX: Broadcom VMWare ESX Insufficient Logging Vulnerability (CVE-2026-41709)</title>
+    <id>urn:cybersecnews:item:632</id>
+    <published>2026-10-28T20:49:14.129781+00:00</published>
+    <updated>2026-10-28T20:49:14.129781+00:00</updated>
+    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-41709" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · insufficient-logging · CVE-2026-41709&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Broadcom VMware ESX contains an insufficient logging vulnerability (CVE-2026-41709) allowing authenticated administrators to perform operations without audit trail generation. This vulnerability is actively exploited in the wild and carries significant risk due to its ability to mask malicious activity. Organizations must prioritize patching per CISA BOD 26-04 guidance; for cloud deployments where patches are unavailable, discontinuation of the service should be considered. Immediately assess internet exposure of affected ESX instances and implement compensating logging controls pending vendor patch availability.&lt;/p&gt;&lt;p&gt;&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2026-41709"&gt;Read more&lt;/a&gt; · Source: cisa-kev&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Critical 16-Year-Old UEFI Flaw Can Run Code Before Secure Boot on Network-Booting Servers</title>
+    <id>urn:cybersecnews:item:631</id>
+    <published>2026-10-28T20:49:14.128507+00:00</published>
+    <updated>2026-10-28T20:49:14.128507+00:00</updated>
+    <link href="https://thehackernews.com/2026/10/critical-16-year-old-uefi-flaw-can-run.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;EDK II UEFI firmware contains a critical remote code execution vulnerability in network boot (PXE) functionality that enables attackers to execute code before Secure Boot validation. The flaw, present for 16 years, allows unauthenticated code execution during network boot sequences on affected servers. This vulnerability has high severity and is exploited in the wild; it requires network-level access and affects systems configured for network booting. Hardware vendors using EDK II must immediately patch affected UEFI implementations, and organizations should disable network boot by default, restrict PXE boot access to trusted networks only, and validate boot images cryptographically where possible.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/critical-16-year-old-uefi-flaw-can-run.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Researcher Reveals How Logic Bugs Alone Cracked Microsoft Edge in $175,000 Pwn2Own Win</title>
+    <id>urn:cybersecnews:item:630</id>
+    <published>2026-10-28T20:49:14.127509+00:00</published>
+    <updated>2026-10-28T20:49:14.127509+00:00</updated>
+    <link href="https://thehackernews.com/2026/10/researcher-reveals-how-logic-bugs-alone.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · logic-bug,sandbox-escape&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Microsoft Edge was compromised through a chain of logic bugs without requiring memory corruption vulnerabilities, enabling arbitrary code execution outside the sandbox when a user visits a malicious webpage. The attack chain, disclosed by Orange Tsai after a five-month embargo, exploited design flaws rather than traditional memory safety issues and earned $175,000 at Pwn2Own Berlin in May 2024. Microsoft patched the vulnerabilities immediately following the contest, though the specific severity rating and current exploitation status in the wild are not detailed. Security engineers should ensure Edge is fully updated and review the disclosed logic flaw patterns to identify similar design weaknesses in other browser isolation mechanisms.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/researcher-reveals-how-logic-bugs-alone.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Volt Typhoon Used Covert Silent Train Network in Four Zero-Day Exploitation Campaigns</title>
+    <id>urn:cybersecnews:item:629</id>
+    <published>2026-10-28T20:49:14.126050+00:00</published>
+    <updated>2026-10-28T20:49:14.126050+00:00</updated>
+    <link href="https://thehackernews.com/2026/10/volt-typhoon-used-covert-silent-train.html" rel="alternate" />
+    <category term="red-team" />
+    <content type="html">&lt;p&gt;&lt;em&gt;red-team · c2&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Volt Typhoon deployed Silent Train, a covert network leveraging compromised SOHO/IoT/enterprise infrastructure with rotating chains for persistent access and zero-day exploitation across four campaigns since late 2023. The group exploited multiple zero-day vulnerabilities to establish strategic footholds in critical infrastructure, representing high severity threats with active exploitation confirmed. Network defenders should prioritize identifying and isolating compromised edge devices, implement strict egress filtering on SOHO/IoT devices, deploy behavioral analytics for detecting rotating command-and-control chains, and ensure rapid patching of zero-day disclosures. Organizations in critical infrastructure sectors should conduct forensic reviews for Silent Train indicators and coordinate with CISA for threat intelligence regarding affected systems.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/volt-typhoon-used-covert-silent-train.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>CVE-2026-20362 | Cisco Finesse Server-Side Request Forgery Vulnerability</title>
     <id>urn:cybersecnews:item:628</id>
@@ -858,50 +903,5 @@
     <link href="https://www.bleepingcomputer.com/news/security/inside-avisloader-a-windows-malware-loader-built-to-resist-disruption/" rel="alternate" />
     <category term="red-team" />
     <content type="html">&lt;p&gt;&lt;em&gt;red-team · c2 · CVE-2026-110936&lt;/em&gt;&lt;/p&gt;&lt;p&gt;AvisLoader is a Windows malware loader employing encrypted peer-to-peer communications to evade command-and-control takedown efforts. The malware utilizes ClickFix social engineering for initial delivery, establishes persistence via shortcut files, and executes remote commands with high resilience to disruption. No severity rating or active exploitation details were provided in available information. Organizations should implement application whitelisting, educate users on ClickFix tactics, monitor for suspicious shortcut file creation, and maintain endpoint detection and response (EDR) capabilities to identify command execution patterns.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/inside-avisloader-a-windows-malware-loader-built-to-resist-disruption/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Attackers Exploit CVSS 10.0 Bricksforge WordPress Flaw Enabling Unauthenticated RCE</title>
-    <id>urn:cybersecnews:item:533</id>
-    <published>2026-10-12T17:26:38.108375+00:00</published>
-    <updated>2026-10-12T17:26:38.108375+00:00</updated>
-    <link href="https://thehackernews.com/2026/10/attackers-exploit-cvss-100-bricksforge.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-85097&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Bricksforge WordPress plugin is vulnerable to CVE-2026-85097, a CVSS 10.0 critical flaw allowing unauthenticated remote code execution through arbitrary PHP file upload. The vulnerability is actively exploited in the wild. Immediate patching is required; administrators should update Bricksforge to the latest patched version and verify no unauthorized code execution has occurred on affected systems.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/attackers-exploit-cvss-100-bricksforge.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Nginx UI: Authenticated Remote Code Execution via Backup Restore App Config Overwrite (CVE-2026-107806)</title>
-    <id>urn:cybersecnews:item:532</id>
-    <published>2026-10-10T04:34:51.741095+00:00</published>
-    <updated>2026-10-10T04:34:51.741095+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-p393-cf76-4jmr" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-107806&lt;/em&gt;&lt;/p&gt;&lt;p&gt;nginx-ui (version 2.3.11 and likely earlier) contains a critical authenticated remote code execution vulnerability (CVE-2026-107806) allowing users to upload forged encrypted backups via the restore API endpoint, overwrite application configuration including nginx command settings, and execute arbitrary commands through the test functionality. An authenticated attacker can exploit this by calling POST /api/restore followed by POST /api/nginx/test to achieve RCE. Immediate patching is required; users should upgrade to a patched version once available and restrict API access to trusted administrators only.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-p393-cf76-4jmr"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Contao: Cross-site scripting in the comments bundle (CVE-2026-107845)</title>
-    <id>urn:cybersecnews:item:531</id>
-    <published>2026-10-10T04:34:51.740175+00:00</published>
-    <updated>2026-10-10T04:34:51.740175+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-628f-v4f6-p37r" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · xss · CVE-2026-107845&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Contao Comments Bundle (CVE-2026-107845) contains a critical unauthenticated cross-site scripting vulnerability allowing attackers to inject malicious scripts via comment fields that execute in backend admin sessions when moderators review comments. The absence of Content-Security-Policy headers on the Contao backend eliminates XSS mitigation, ensuring exploitation occurs during normal moderation workflows. This vulnerability is likely actively exploited given its trivial attack vector and high privilege target. Update the comments-bundle package immediately via Composer and implement Content-Security-Policy headers on all backend interfaces as a defense-in-depth measure.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-628f-v4f6-p37r"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Credential-Stealing GitHub Actions Workflows Planted in Tens of Thousands of Repositories</title>
-    <id>urn:cybersecnews:item:530</id>
-    <published>2026-10-10T04:34:51.739114+00:00</published>
-    <updated>2026-10-10T04:34:51.739114+00:00</updated>
-    <link href="https://thehackernews.com/2026/10/credential-stealing-github-actions.html" rel="alternate" />
-    <category term="red-team" />
-    <content type="html">&lt;p&gt;&lt;em&gt;red-team · credential-theft&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Attackers compromised two high-profile open-source maintainer accounts (including pyxel author Takashi Kitao) to inject malicious GitHub Actions workflows into over 340 repositories, enabling credential theft from CI/CD pipelines. The campaign exploited weak account security to push workflows that steal secrets and tokens used during automated builds. This represents high-severity risk as compromised CI/CD credentials can facilitate supply chain attacks affecting downstream users. Immediate actions: verify GitHub Actions secrets/tokens in affected repositories for unauthorized access, enforce strong authentication and branch protection rules on maintainer accounts, audit workflow permissions, and rotate any potentially exposed credentials.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/credential-stealing-github-actions.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Metasploit Wrap Up: A Collection of What Can Only Be Called Eclectic Modules</title>
-    <id>urn:cybersecnews:item:529</id>
-    <published>2026-10-09T20:35:19.457918+00:00</published>
-    <updated>2026-10-09T20:35:19.457918+00:00</updated>
-    <link href="https://www.rapid7.com/blog/post/pt-metasploit-wrap-up-a-collection-of-what-can-only-be-called-eclectic-modules" rel="alternate" />
-    <category term="red-team" />
-    <content type="html">&lt;p&gt;&lt;em&gt;red-team · exploitation-framework&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Metasploit framework received updates including eclectic new modules across various attack vectors and post-exploitation capabilities. The additions expand the toolkit's functionality but do not represent specific vulnerability disclosures or critical security issues requiring immediate patching. No particular software vulnerability is highlighted as actively exploited in the wild from this update. Organizations using Metasploit should update to access these new modules for security testing purposes, though this is routine maintenance rather than a critical security action.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.rapid7.com/blog/post/pt-metasploit-wrap-up-a-collection-of-what-can-only-be-called-eclectic-modules"&gt;Read more&lt;/a&gt; · Source: rapid7&lt;/p&gt;</content>
   </entry>
 </feed>
