@@ -3,7 +3,43 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-10-29T04:37:15.821797+00:00</updated>
+  <updated>2026-10-29T14:59:09.548452+00:00</updated>
+  <entry>
+    <title>New Cisco firewall zero-day exploited to crash SSL VPN devices</title>
+    <id>urn:cybersecnews:item:639</id>
+    <published>2026-10-29T14:59:09.548452+00:00</published>
+    <updated>2026-10-29T14:59:09.548452+00:00</updated>
+    <link href="https://www.bleepingcomputer.com/news/security/cisco-warns-of-firewall-zero-day-exploited-to-crash-ssl-vpn-devices/" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · dos&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Cisco Adaptive Security Appliance (ASA) and Threat Defense (FTD) are affected by a remotely exploitable denial-of-service zero-day vulnerability in SSL VPN functionality. Attackers can crash vulnerable firewall devices without authentication, disrupting network connectivity and security services. This vulnerability has active exploitation in the wild. Apply Cisco's released security updates immediately to affected ASA and FTD devices, prioritizing internet-facing SSL VPN endpoints.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/cisco-warns-of-firewall-zero-day-exploited-to-crash-ssl-vpn-devices/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Attackers Exploit PHP2Shell Flaws in Internet-Exposed Palo Alto Networks Management Interfaces</title>
+    <id>urn:cybersecnews:item:638</id>
+    <published>2026-10-29T14:59:09.546706+00:00</published>
+    <updated>2026-10-29T14:59:09.546706+00:00</updated>
+    <link href="https://thehackernews.com/2026/10/attackers-exploit-php2shell-flaws-in.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Palo Alto Networks management interfaces are being actively exploited in the wild via recently patched PHP2Shell vulnerabilities. The flaws allow unauthenticated remote code execution when management interfaces are exposed to the internet. This represents critical severity with confirmed active exploitation ongoing. Immediately patch affected systems and ensure management interfaces are not internet-accessible; implement network segmentation and access controls to restrict management access to trusted networks only.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/attackers-exploit-php2shell-flaws-in.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Hackers Exploited Cisco SD-WAN Flaw to Plant Malware Built to Steal Encryption Keys</title>
+    <id>urn:cybersecnews:item:637</id>
+    <published>2026-10-29T14:59:09.545655+00:00</published>
+    <updated>2026-10-29T14:59:09.545655+00:00</updated>
+    <link href="https://thehackernews.com/2026/10/hackers-exploited-cisco-sd-wan-flaw-to.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Cisco Catalyst SD-WAN was exploited in-the-wild via a critical vulnerability (patched February 2024) to deploy KeyDrift malware designed to exfiltrate encryption keys used for inter-site traffic. The malware represents severe risk as compromised keys enable decryption of encrypted SD-WAN communications. Talos attributes these attacks to a sophisticated threat actor conducting what are classified as historical intrusions. Organizations must immediately verify systems are patched to the latest Catalyst SD-WAN release and implement network monitoring for KeyDrift indicators of compromise.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/hackers-exploited-cisco-sd-wan-flaw-to.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Telegram Android Flaw Lets Attackers Run Code When Users Answer Voice Calls</title>
+    <id>urn:cybersecnews:item:636</id>
+    <published>2026-10-29T14:59:09.543919+00:00</published>
+    <updated>2026-10-29T14:59:09.543919+00:00</updated>
+    <link href="https://thehackernews.com/2026/10/telegram-android-flaw-lets-attackers.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Telegram Android versions prior to 12.10.4 contained a remote code execution vulnerability triggered during voice call initiation that allowed attackers with a valid Telegram account to execute arbitrary code on victim devices upon call acceptance. The flaw was actively exploitable in the wild and required no special privileges, only a standard Telegram account. Telegram patched the vulnerability in version 12.10.4 released September 2024. Users should immediately update Telegram to version 12.10.4 or later to remediate exposure.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/telegram-android-flaw-lets-attackers.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>zip: Critical Parser Differential &amp; Security Control Bypass via Dual-Header Inconsistencies (Zip Cloaking) Leading to Arbitrary File Overwrite &amp; RCE (CVE-2026-115905)</title>
     <id>urn:cybersecnews:item:635</id>
@@ -38,7 +74,7 @@
     <updated>2026-10-28T20:49:14.129781+00:00</updated>
     <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-41709" rel="alternate" />
     <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · insufficient-logging · CVE-2026-41709&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Broadcom VMware ESX contains an insufficient logging vulnerability (CVE-2026-41709) allowing authenticated administrators to perform operations without audit trail generation. This vulnerability is actively exploited in the wild and carries significant risk due to its ability to mask malicious activity. Organizations must prioritize patching per CISA BOD 26-04 guidance; for cloud deployments where patches are unavailable, discontinuation of the service should be considered. Immediately assess internet exposure of affected ESX instances and implement compensating logging controls pending vendor patch availability.&lt;/p&gt;&lt;p&gt;&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2026-41709"&gt;Read more&lt;/a&gt; · Source: cisa-kev&lt;/p&gt;</content>
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · insufficient-logging · CVE-2024-41709, CVE-2026-41709&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Broadcom VMware ESX contains an insufficient logging vulnerability (CVE-2026-41709) allowing authenticated administrators to perform operations without audit trail generation. This vulnerability is actively exploited in the wild and carries significant risk due to its ability to mask malicious activity. Organizations must prioritize patching per CISA BOD 26-04 guidance; for cloud deployments where patches are unavailable, discontinuation of the service should be considered. Immediately assess internet exposure of affected ESX instances and implement compensating logging controls pending vendor patch availability.&lt;/p&gt;&lt;p&gt;&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2026-41709"&gt;Read more&lt;/a&gt; · Source: cisa-kev&lt;/p&gt;</content>
   </entry>
   <entry>
     <title>Critical 16-Year-Old UEFI Flaw Can Run Code Before Secure Boot on Network-Booting Servers</title>
@@ -867,41 +903,5 @@
     <link href="https://blog.fox-it.com/2026/10/13/releasing-the-cobalt-strike-beacon-corpus/" rel="alternate" />
     <category term="red-team" />
     <content type="html">&lt;p&gt;&lt;em&gt;red-team · c2&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Fox-IT released a comprehensive dataset of 56,843 Cobalt Strike Beacon samples with parsed configurations collected from over 30,600 unique command-and-control servers between July 2018 and September 2026. This corpus documents widespread exploitation of Cobalt Strike, a legitimate penetration testing framework frequently weaponized by threat actors for post-exploitation activities. The dataset provides security researchers and defenders with detailed intelligence on malicious beacon infrastructure, configurations, and deployment patterns to improve detection and attribution capabilities. Organizations should use this corpus to enhance threat hunting, update detection signatures for Cobalt Strike C2 communication patterns, and conduct forensic analysis of compromised systems potentially connected to these known malicious Team Servers.&lt;/p&gt;&lt;p&gt;&lt;a href="https://blog.fox-it.com/2026/10/13/releasing-the-cobalt-strike-beacon-corpus/"&gt;Read more&lt;/a&gt; · Source: fox-it&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>CVE-2026-97229: Critical Unauthenticated Remote Code Execution in GitLab</title>
-    <id>urn:cybersecnews:item:539</id>
-    <published>2026-10-13T15:38:21.391639+00:00</published>
-    <updated>2026-10-13T15:38:21.391639+00:00</updated>
-    <link href="https://www.rapid7.com/blog/post/etr-cve-2026-97229-critical-unauthenticated-remote-code-execution-in-gitlab" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · integer-overflow-rce · CVE-2026-97229&lt;/em&gt;&lt;/p&gt;&lt;p&gt;GitLab Community and Enterprise Editions (CE/EE) versions 19.2 through 19.4.1 contain a critical integer overflow (CWE-190) in the CI/CD regular expression compiler that enables unauthenticated remote code execution with a CVSS score of 10.0. An attacker must commit a malicious .gitlab-ci.yml to a repository with UTF-8 characters; when evaluated, an encoding recompilation triggers integer overflow in Onigmo regex engine, allowing arbitrary code execution as the GitLab git user. While no confirmed in-the-wild exploitation exists, Rapid7 has independently reproduced code execution on unpatched instances. Organizations must immediately upgrade affected self-managed instances to versions 19.2.8, 19.3.5, or 19.4.2 outside normal patch cycles; GitLab.com and Dedicated are unaffected. Interim mitigation includes restricting anonymous access and preventing untrusted users from creating public projects, though these do not remediate the underlying vulnerability.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.rapid7.com/blog/post/etr-cve-2026-97229-critical-unauthenticated-remote-code-execution-in-gitlab"&gt;Read more&lt;/a&gt; · Source: rapid7&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Ivanti Connect Secure: Ivanti Connect Secure Authentication Bypass by Spoofing Vulnerability (CVE-2026-104935)</title>
-    <id>urn:cybersecnews:item:538</id>
-    <published>2026-10-13T15:38:21.390872+00:00</published>
-    <updated>2026-10-13T15:38:21.390872+00:00</updated>
-    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-104935" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-104935&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Ivanti Connect Secure is affected by CVE-2026-104935, an authentication bypass vulnerability allowing remote unauthenticated attackers to execute arbitrary commands through spoofing. This vulnerability is actively exploited in the wild and carries high severity. Immediately apply vendor mitigations per CISA BOD 26-04 guidance, prioritize patching based on internet exposure risk assessment, or discontinue use if patches are unavailable. Conduct forensics triage on affected systems per CISA requirements.&lt;/p&gt;&lt;p&gt;&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2026-104935"&gt;Read more&lt;/a&gt; · Source: cisa-kev&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Two Critical MarkLogic Flaws Could Give Delegated Managers Persistent Admin Control</title>
-    <id>urn:cybersecnews:item:537</id>
-    <published>2026-10-13T15:38:21.390083+00:00</published>
-    <updated>2026-10-13T15:38:21.390083+00:00</updated>
-    <link href="https://thehackernews.com/2026/10/two-critical-marklogic-flaws-could-give.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · privilege-escalation&lt;/em&gt;&lt;/p&gt;&lt;p&gt;MarkLogic Server versions prior to 11.3.7 and 12.1.0 contain two critical privilege escalation vulnerabilities that allow delegated manager accounts to obtain persistent administrator control of the database server. Progress Software released patches in September 2024, with 31 total vulnerabilities disclosed in October including five rated critical. Organizations should immediately apply updates to MarkLogic 11.3.7 or 12.1.0 or later, prioritizing this patch given the privilege escalation severity and potential for lateral movement within managed environments.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/two-critical-marklogic-flaws-could-give.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>LG Smart TVs Vulnerable to Pre-Auth Root Takeover From Local Network</title>
-    <id>urn:cybersecnews:item:536</id>
-    <published>2026-10-13T15:38:21.388974+00:00</published>
-    <updated>2026-10-13T15:38:21.388974+00:00</updated>
-    <link href="https://thehackernews.com/2026/10/lg-smart-tvs-vulnerable-to-pre-auth.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · pre-auth-rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;LG webOS smart TVs contain three pre-authentication vulnerabilities allowing local network attackers to chain exploits for unauthenticated root access without user interaction. The vulnerabilities affect models 32LQ636BPSA and 27TQ600SW running webOS 7.5.7-25 and represent a critical severity issue enabling complete device compromise. LG has released patches; affected users should immediately update their TV firmware and consider network segmentation to restrict smart TV access from untrusted devices on their home network.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/lg-smart-tvs-vulnerable-to-pre-auth.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
   </entry>
 </feed>
