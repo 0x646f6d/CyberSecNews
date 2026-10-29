@@ -3,7 +3,25 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-10-28T20:49:14.130660+00:00</updated>
+  <updated>2026-10-29T04:37:15.821797+00:00</updated>
+  <entry>
+    <title>zip: Critical Parser Differential &amp; Security Control Bypass via Dual-Header Inconsistencies (Zip Cloaking) Leading to Arbitrary File Overwrite &amp; RCE (CVE-2026-115905)</title>
+    <id>urn:cybersecnews:item:635</id>
+    <published>2026-10-29T04:37:15.821797+00:00</published>
+    <updated>2026-10-29T04:37:15.821797+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-m665-v7pm-7grj" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · parser-differential · CVE-2026-115905&lt;/em&gt;&lt;/p&gt;&lt;p&gt;The Rust `zip` crate (versions ≤9.0.4) contains a critical parser differential vulnerability (CVE-2026-115905) where `ZipArchive` and `ZipStreamReader` interpret filenames differently—the former trusts the Central Directory File Header while the latter relies on the Local File Header. Attackers can craft malicious ZIP archives with inconsistent headers to achieve arbitrary file overwrites and remote code execution, exploiting this inconsistency to bypass security controls. This vulnerability is critical severity; no active exploitation in the wild has been confirmed at time of advisory. Immediately update to `zip` version &gt;9.0.4 and validate all ZIP extraction logic, particularly any code using `ZipStreamReader`.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-m665-v7pm-7grj"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Electrum: Malicious server can replace a just-broadcast tx and try to trick user into RBF-ing it (CVE-2026-117601)</title>
+    <id>urn:cybersecnews:item:634</id>
+    <published>2026-10-29T04:37:15.811496+00:00</published>
+    <updated>2026-10-29T04:37:15.811496+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-6jp4-8v48-cc5v" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · tx-replacement-attack · CVE-2026-117601&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Electrum Bitcoin wallet is vulnerable to server-side transaction manipulation (CVE-2026-117601) where a malicious server can intercept broadcasted transactions, suppress them, and inject conflicting transactions to redirect funds to attacker-controlled addresses. The vulnerability is critical severity and exploitable in the wild by compromised or malicious Electrum servers. Users should immediately update to the latest patched version and consider using trusted server configurations or running their own Electrum server to mitigate this attack vector.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-6jp4-8v48-cc5v"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Linux Kernel: Linux Kernel Missing Initialization of a Variable Vulnerability (CVE-2026-46300)</title>
     <id>urn:cybersecnews:item:633</id>
@@ -245,7 +263,7 @@
     <updated>2026-10-24T03:30:28.007871+00:00</updated>
     <link href="https://github.com/advisories/GHSA-897f-g5gm-fmxm" rel="alternate" />
     <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · miscompilation · CVE-2026-115889&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Wasmtime versions prior to v43 contain a critical vulnerability (CVE-2026-115889) in the Cranelift compiler backend where bit-packing of SSA value indices causes silent overflow in release builds, leading to incorrect IR value references and arbitrary miscompilation. A specially crafted WebAssembly function with excessive SSA values can trigger type confusion and sandbox escape. Update Wasmtime to v43 or later immediately, which remediates the issue by using full u32 indices instead of bit-packed values. No evidence of wild exploitation currently reported, but the critical severity and sandbox escape potential warrant emergency patching.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-897f-g5gm-fmxm"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · miscompilation · CVE-2026-115889, CVE-2026-115893&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Wasmtime versions prior to v43 contain a critical vulnerability (CVE-2026-115889) in the Cranelift compiler backend where bit-packing of SSA value indices causes silent overflow in release builds, leading to incorrect IR value references and arbitrary miscompilation. A specially crafted WebAssembly function with excessive SSA values can trigger type confusion and sandbox escape. Update Wasmtime to v43 or later immediately, which remediates the issue by using full u32 indices instead of bit-packed values. No evidence of wild exploitation currently reported, but the critical severity and sandbox escape potential warrant emergency patching.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-897f-g5gm-fmxm"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
   </entry>
   <entry>
     <title>obsidian-tc HTTP transport lacks Origin/DNS-rebinding protection, enabling drive-by vault access on loopback (CVE-2026-77363)</title>
@@ -885,23 +903,5 @@
     <link href="https://thehackernews.com/2026/10/lg-smart-tvs-vulnerable-to-pre-auth.html" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · pre-auth-rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;LG webOS smart TVs contain three pre-authentication vulnerabilities allowing local network attackers to chain exploits for unauthenticated root access without user interaction. The vulnerabilities affect models 32LQ636BPSA and 27TQ600SW running webOS 7.5.7-25 and represent a critical severity issue enabling complete device compromise. LG has released patches; affected users should immediately update their TV firmware and consider network segmentation to restrict smart TV access from untrusted devices on their home network.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/lg-smart-tvs-vulnerable-to-pre-auth.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Patchday SAP: Angreifer können Systeme übernehmen</title>
-    <id>urn:cybersecnews:item:535</id>
-    <published>2026-10-13T15:38:21.387513+00:00</published>
-    <updated>2026-10-13T15:38:21.387513+00:00</updated>
-    <link href="https://www.heise.de/news/Patchday-SAP-Angreifer-koennen-Systeme-uebernehmen-11486228.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;SAP Cloud SDK for Python and related SAP enterprise products received critical security updates addressing remote code execution vulnerabilities that could allow attackers to gain system control. The vulnerabilities affect multiple SAP applications and components, with high severity ratings. Exploitation in active attacks has been reported or is considered likely given the attack vectors. Organizations running affected SAP systems should apply the latest patches immediately as part of standard patch management procedures; admins should prioritize deployment given the severity and exploitation potential.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.heise.de/news/Patchday-SAP-Angreifer-koennen-Systeme-uebernehmen-11486228.html"&gt;Read more&lt;/a&gt; · Source: heise-security&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Inside AvisLoader: A Windows Malware Loader Built to Resist Disruption</title>
-    <id>urn:cybersecnews:item:534</id>
-    <published>2026-10-12T17:26:38.110489+00:00</published>
-    <updated>2026-10-12T17:26:38.110489+00:00</updated>
-    <link href="https://www.bleepingcomputer.com/news/security/inside-avisloader-a-windows-malware-loader-built-to-resist-disruption/" rel="alternate" />
-    <category term="red-team" />
-    <content type="html">&lt;p&gt;&lt;em&gt;red-team · c2 · CVE-2026-110936&lt;/em&gt;&lt;/p&gt;&lt;p&gt;AvisLoader is a Windows malware loader employing encrypted peer-to-peer communications to evade command-and-control takedown efforts. The malware utilizes ClickFix social engineering for initial delivery, establishes persistence via shortcut files, and executes remote commands with high resilience to disruption. No severity rating or active exploitation details were provided in available information. Organizations should implement application whitelisting, educate users on ClickFix tactics, monitor for suspicious shortcut file creation, and maintain endpoint detection and response (EDR) capabilities to identify command execution patterns.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/inside-avisloader-a-windows-malware-loader-built-to-resist-disruption/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
   </entry>
 </feed>
