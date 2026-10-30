@@ -3,7 +3,16 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-10-29T14:59:09.548452+00:00</updated>
+  <updated>2026-10-30T04:37:29.544815+00:00</updated>
+  <entry>
+    <title>Hugging Face malware campaign returns to hijack GPUs for crypto mining</title>
+    <id>urn:cybersecnews:item:640</id>
+    <published>2026-10-30T04:37:29.544815+00:00</published>
+    <updated>2026-10-30T04:37:29.544815+00:00</updated>
+    <link href="https://www.bleepingcomputer.com/news/security/hugging-face-malware-campaign-returns-to-hijack-gpus-for-crypto-mining/" rel="alternate" />
+    <category term="red-team" />
+    <content type="html">&lt;p&gt;&lt;em&gt;red-team · supply-chain-attack&lt;/em&gt;&lt;/p&gt;&lt;p&gt;A persistent crypto-mining campaign is targeting Hugging Face model repositories, hijacking GPU resources and installing backdoors in compromised systems; one malicious model exceeded 28,000 downloads before removal. The threat actors rapidly redeployed similar models within days of initial takedown, demonstrating operational resilience. Separately, a fake Solana development kit on GitHub is designed to exploit AI coding agents into executing NetSupport RAT installations. Users should audit Hugging Face model sources and GitHub dependencies for legitimacy, implement repository integrity verification, disable auto-execution in AI development workflows, and monitor GPU utilization for anomalous crypto-mining activity; organizations should restrict GPU access and enforce signed dependency policies.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/hugging-face-malware-campaign-returns-to-hijack-gpus-for-crypto-mining/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>New Cisco firewall zero-day exploited to crash SSL VPN devices</title>
     <id>urn:cybersecnews:item:639</id>
@@ -894,14 +903,5 @@
     <link href="https://thehackernews.com/2026/10/docker-fixes-critical-two-year-old-hub.html" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Docker Hub contained a critical authorization flaw in the account-to-organization conversion feature that persisted for two years, allowing authenticated users to push, pull, or delete container images as another user. The vulnerability affected Docker Hub's core image registry functionality and had CVSS severity indicating critical risk. Docker reports no evidence of active exploitation in the wild. Affected users should ensure their Docker Hub installation is updated to the patched version released September 30, 2024, and review image repository access logs for unauthorized activity.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/docker-fixes-critical-two-year-old-hub.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Releasing the Cobalt Strike Beacon Corpus</title>
-    <id>urn:cybersecnews:item:540</id>
-    <published>2026-10-13T15:38:21.392762+00:00</published>
-    <updated>2026-10-13T15:38:21.392762+00:00</updated>
-    <link href="https://blog.fox-it.com/2026/10/13/releasing-the-cobalt-strike-beacon-corpus/" rel="alternate" />
-    <category term="red-team" />
-    <content type="html">&lt;p&gt;&lt;em&gt;red-team · c2&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Fox-IT released a comprehensive dataset of 56,843 Cobalt Strike Beacon samples with parsed configurations collected from over 30,600 unique command-and-control servers between July 2018 and September 2026. This corpus documents widespread exploitation of Cobalt Strike, a legitimate penetration testing framework frequently weaponized by threat actors for post-exploitation activities. The dataset provides security researchers and defenders with detailed intelligence on malicious beacon infrastructure, configurations, and deployment patterns to improve detection and attribution capabilities. Organizations should use this corpus to enhance threat hunting, update detection signatures for Cobalt Strike C2 communication patterns, and conduct forensic analysis of compromised systems potentially connected to these known malicious Team Servers.&lt;/p&gt;&lt;p&gt;&lt;a href="https://blog.fox-it.com/2026/10/13/releasing-the-cobalt-strike-beacon-corpus/"&gt;Read more&lt;/a&gt; · Source: fox-it&lt;/p&gt;</content>
   </entry>
 </feed>
