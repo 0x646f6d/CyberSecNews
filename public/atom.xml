@@ -3,7 +3,25 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-10-30T14:52:42.515767+00:00</updated>
+  <updated>2026-10-30T20:27:22.959660+00:00</updated>
+  <entry>
+    <title>pypi-publish action revocation of CA in the chain that Sigstore uses in Trusted Publishing and Digital Attestations for PyPI</title>
+    <id>urn:cybersecnews:item:647</id>
+    <published>2026-10-30T20:27:22.959660+00:00</published>
+    <updated>2026-10-30T20:27:22.959660+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-5xjx-3w67-w9x9" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · cert-trust-store&lt;/em&gt;&lt;/p&gt;&lt;p&gt;The GitHub Actions pypi-publish action (versions before 1.14.2) bundled an outdated emSign root CA certificate through the certifi dependency that Sigstore relies on for PyPI Trusted Publishing and Digital Attestations. The revoked CA certificate in the trust store could potentially allow man-in-the-middle attacks or certificate validation bypasses during package publishing workflows. This is marked as critical severity. Users should immediately upgrade to pypi-publish version 1.14.2 or later, which removes the revoked certificate from the bundled trust store.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-5xjx-3w67-w9x9"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Erneut kritischer Bug in Linux TCP/IP aufgedeckt – Updates in Arbeit</title>
+    <id>urn:cybersecnews:item:646</id>
+    <published>2026-10-30T20:27:22.958291+00:00</published>
+    <updated>2026-10-30T20:27:22.958291+00:00</updated>
+    <link href="https://www.heise.de/news/Erneut-kritischer-Bug-in-Linux-TCP-IP-aufgedeckt-Updates-in-Arbeit-11506050.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Linux kernel TCP/IP stack contains a critical vulnerability enabling remote code execution, recently discovered after existing undetected for eleven years. The flaw affects core networking functionality and carries CVSS severity in the critical range. No evidence of active exploitation in the wild has been reported at this time. Apply kernel updates immediately once patches are released by your Linux distribution; affected systems should be prioritized for rapid deployment given the RCE severity and widespread impact potential.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.heise.de/news/Erneut-kritischer-Bug-in-Linux-TCP-IP-aufgedeckt-Updates-in-Arbeit-11506050.html"&gt;Read more&lt;/a&gt; · Source: heise-security&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Microsoft finally fixes VPN issues caused by September updates</title>
     <id>urn:cybersecnews:item:645</id>
@@ -885,23 +903,5 @@
     <link href="https://thehackernews.com/2026/10/researchers-used-public-openai-model-to.html" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Researchers used OpenAI's GPT-5.6 Sol model to chain three previously unknown Google Chrome vulnerabilities into a full exploit capable of arbitrary code execution on Windows via malicious web pages, demonstrating AI-assisted vulnerability discovery at scale. The exploit achieved high severity (full system compromise) and was not exploited in the wild before disclosure. Google has patched all three vulnerabilities and awarded XBOW a maximum bug bounty; organizations should apply Chrome updates immediately and consider restricting AI model access to security researchers given the accelerated exploit development timeline.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/researchers-used-public-openai-model-to.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>curl Patches HTTP/2 Upload Flaw After PoC Demonstrates Client-Side Code Execution</title>
-    <id>urn:cybersecnews:item:547</id>
-    <published>2026-10-14T13:21:32.493966+00:00</published>
-    <updated>2026-10-14T13:21:32.493966+00:00</updated>
-    <link href="https://thehackernews.com/2026/10/curl-patches-http2-upload-flaw-after.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · memory-corruption&lt;/em&gt;&lt;/p&gt;&lt;p&gt;curl versions prior to 8.23.0 contain an HTTP/2 upload vulnerability allowing malicious servers to corrupt client memory during file uploads, potentially enabling code execution. The flaw requires precise knowledge of the victim's build and memory layout, and exploitation typically results in client crashes, limiting practical real-world impact. A proof-of-concept has been publicly demonstrated. Affected organizations should upgrade to curl 8.23.0 or later immediately, particularly systems performing uploads to untrusted servers.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/curl-patches-http2-upload-flaw-after.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Ghostscript flaw lets hackers hijack servers via PDF uploads</title>
-    <id>urn:cybersecnews:item:546</id>
-    <published>2026-10-14T03:45:42.783546+00:00</published>
-    <updated>2026-10-14T03:45:42.783546+00:00</updated>
-    <link href="https://www.bleepingcomputer.com/news/security/ghostscript-flaw-lets-hackers-hijack-servers-via-pdf-uploads/" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · heap-buffer-overflow · CVE-2026-112900, CVE-2026-39919&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Ghostscript PDF interpreter contains a critical heap buffer overflow (CVE-2026-39919) enabling remote code execution via malicious PDF uploads. The vulnerability affects file upload functionality across web services and document processing systems that use Ghostscript for rendering. No active exploitation in the wild has been confirmed at this time, though the critical severity rating and ease of weaponization via PDF attachments present significant risk. Apply available security patches immediately and implement input validation on PDF uploads as a compensating control until patching is complete.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/ghostscript-flaw-lets-hackers-hijack-servers-via-pdf-uploads/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
   </entry>
 </feed>
