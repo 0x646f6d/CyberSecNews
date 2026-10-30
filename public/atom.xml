@@ -3,7 +3,52 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-10-30T04:37:29.544815+00:00</updated>
+  <updated>2026-10-30T14:52:42.515767+00:00</updated>
+  <entry>
+    <title>Microsoft finally fixes VPN issues caused by September updates</title>
+    <id>urn:cybersecnews:item:645</id>
+    <published>2026-10-30T14:52:42.515767+00:00</published>
+    <updated>2026-10-30T14:52:42.515767+00:00</updated>
+    <link href="https://www.bleepingcomputer.com/news/microsoft/microsoft-finally-fixes-vpn-issues-caused-by-september-updates/" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · vpn-connectivity&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Microsoft patched Always On VPN connection failures introduced by September 2026 Windows 11 security updates, which prevented users from establishing VPN connections after the monthly patches. The root cause stemmed from changes in the security update that impacted VPN driver initialization. No evidence suggests active exploitation in the wild, as this was primarily a functionality issue rather than a security vulnerability. Users experiencing VPN connectivity problems following the September updates should apply the latest cumulative patch or contact Microsoft support for workarounds if immediate patching is not feasible.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/microsoft/microsoft-finally-fixes-vpn-issues-caused-by-september-updates/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Malicious Claude Code extension on Cursor planted SSH backdoors</title>
+    <id>urn:cybersecnews:item:644</id>
+    <published>2026-10-30T14:52:42.514868+00:00</published>
+    <updated>2026-10-30T14:52:42.514868+00:00</updated>
+    <link href="https://www.bleepingcomputer.com/news/security/malicious-claude-code-extension-on-cursor-planted-ssh-backdoors/" rel="alternate" />
+    <category term="red-team" />
+    <content type="html">&lt;p&gt;&lt;em&gt;red-team · supply-chain&lt;/em&gt;&lt;/p&gt;&lt;p&gt;A compromised Claude Code VS Code extension distributed via Cursor's marketplace for 11 hours on October 29 contained malware designed to install persistent SSH backdoors on affected systems. The attack targeted approximately 5,000 developers who downloaded the malicious extension during the window of exposure. This represents a high-severity supply chain attack with demonstrated capability for remote code execution and persistent system compromise, though exploitation in the wild beyond the initial distribution has not been confirmed. Affected users should immediately uninstall the malicious extension, audit SSH configurations and keys for unauthorized access, rotate credentials, and update to the legitimate version once restored to the marketplace.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/malicious-claude-code-extension-on-cursor-planted-ssh-backdoors/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Hackers Actively Exploit Highly Critical Drupal Commerce Core Authorization Bypass Flaw</title>
+    <id>urn:cybersecnews:item:643</id>
+    <published>2026-10-30T14:52:42.513450+00:00</published>
+    <updated>2026-10-30T14:52:42.513450+00:00</updated>
+    <link href="https://thehackernews.com/2026/10/hackers-actively-exploit-highly.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-118539&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Drupal Commerce Core versions 0.0.0-2.41 and 3.0.0-3.3.13 contain a critical authorization bypass vulnerability (CVE-2026-118539) that allows unauthenticated attackers to perform unauthorized actions within the e-commerce platform. The flaw is actively exploited in the wild and affects the core shopping cart functionality. Immediate patching to version 2.42 or 3.3.14 and later is required; organizations running vulnerable versions should prioritize this update and consider temporarily restricting access to Commerce Core until patched.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/hackers-actively-exploit-highly.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Official Claude Code Extension on Cursor Marketplace Trojanized with Persistent SSH Backdoor</title>
+    <id>urn:cybersecnews:item:642</id>
+    <published>2026-10-30T14:52:42.512046+00:00</published>
+    <updated>2026-10-30T14:52:42.512046+00:00</updated>
+    <link href="https://thehackernews.com/2026/10/official-claude-code-vs-code-extension.html" rel="alternate" />
+    <category term="red-team" />
+    <content type="html">&lt;p&gt;&lt;em&gt;red-team · supply-chain&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Anthropic's Claude Code extension for Cursor was compromised and distributed via Cursor Marketplace with a persistent SSH backdoor payload in version 2.1.313. The trojanized extension leveraged the legitimate publisher identity to gain trust, establishing unauthorized remote access on affected developer systems. This represents critical severity with active exploitation through supply chain compromise. Users should immediately uninstall the affected version, update to the patched release when available, audit systems for unauthorized SSH access, and rotate credentials on compromised machines.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/official-claude-code-vs-code-extension.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Claude-Code-Erweiterung im Cursor-Marktplatz mit Malware infiziert</title>
+    <id>urn:cybersecnews:item:641</id>
+    <published>2026-10-30T14:52:42.510195+00:00</published>
+    <updated>2026-10-30T14:52:42.510195+00:00</updated>
+    <link href="https://www.heise.de/news/Claude-Code-Erweiterung-im-Cursor-Marktplatz-mit-Malware-infiziert-11506368.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · backdoor&lt;/em&gt;&lt;/p&gt;&lt;p&gt;A malicious SSH backdoor was discovered in the official Claude-Code extension available in the Cursor IDE marketplace. The backdoor allowed arbitrary code execution and unauthorized system access through compromised extension code distributed to developers. Severity is high as the extension targeted developers who typically have elevated system privileges; exploit in the wild is confirmed through the marketplace distribution vector. Users should immediately uninstall the affected Claude-Code extension, update Cursor, and review system logs for suspicious SSH activity; consider rotating SSH keys if the extension was installed.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.heise.de/news/Claude-Code-Erweiterung-im-Cursor-Marktplatz-mit-Malware-infiziert-11506368.html"&gt;Read more&lt;/a&gt; · Source: heise-security&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Hugging Face malware campaign returns to hijack GPUs for crypto mining</title>
     <id>urn:cybersecnews:item:640</id>
@@ -858,50 +903,5 @@
     <link href="https://www.bleepingcomputer.com/news/security/ghostscript-flaw-lets-hackers-hijack-servers-via-pdf-uploads/" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · heap-buffer-overflow · CVE-2026-112900, CVE-2026-39919&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Ghostscript PDF interpreter contains a critical heap buffer overflow (CVE-2026-39919) enabling remote code execution via malicious PDF uploads. The vulnerability affects file upload functionality across web services and document processing systems that use Ghostscript for rendering. No active exploitation in the wild has been confirmed at this time, though the critical severity rating and ease of weaponization via PDF attachments present significant risk. Apply available security patches immediately and implement input validation on PDF uploads as a compensating control until patching is complete.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/ghostscript-flaw-lets-hackers-hijack-servers-via-pdf-uploads/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>October 2026 Microsoft Patch Tuesday, (Tue, Oct 13th)</title>
-    <id>urn:cybersecnews:item:545</id>
-    <published>2026-10-13T21:01:59.319174+00:00</published>
-    <updated>2026-10-13T21:01:59.319174+00:00</updated>
-    <link href="https://isc.sans.edu/diary/rss/33422" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · mixed&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Microsoft released patches for 1,417 vulnerabilities in October 2026 Patch Tuesday, including 76 critical-severity issues across multiple products and components. One vulnerability is currently exploited in the wild and another was disclosed prior to patch release, indicating active threat activity. Seven critical vulnerabilities require no customer action, while the remainder should be prioritized for immediate patching based on organizational risk assessment and affected system inventory. Organizations should deploy patches urgently for exploited and pre-disclosed vulnerabilities, and establish a triage process for the remaining critical issues based on asset criticality and exposure.&lt;/p&gt;&lt;p&gt;&lt;a href="https://isc.sans.edu/diary/rss/33422"&gt;Read more&lt;/a&gt; · Source: sans-isc&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Microsoft Security Advisory CVE-2026-70188 - ASP.NET Core Security Feature Bypass Vulnerability</title>
-    <id>urn:cybersecnews:item:544</id>
-    <published>2026-10-13T21:01:59.318257+00:00</published>
-    <updated>2026-10-13T21:01:59.318257+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-fpq8-4vhr-rcxx" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · security-feature-bypass · CVE-2026-70188&lt;/em&gt;&lt;/p&gt;&lt;p&gt;CVE-2026-70188 affects Microsoft.AspNetCore.Server.Kestrel.Core across multiple platforms (Linux ARM/x64, macOS). The vulnerability is a security feature bypass where Kestrel improperly accepts newline characters in HTTP/2 request trailers and HPACK dynamic table values instead of rejecting them as malformed, potentially allowing request smuggling or header injection attacks. Severity is critical with no indication of current wild exploitation. Developers must update the affected Microsoft.AspNetCore.App.Runtime packages to patched versions immediately.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-fpq8-4vhr-rcxx"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Microsoft Security Advisory CVE-2026-88092 - ASP.NET Core Security Feature Bypass Vulnerability</title>
-    <id>urn:cybersecnews:item:543</id>
-    <published>2026-10-13T21:01:59.317465+00:00</published>
-    <updated>2026-10-13T21:01:59.317465+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-rv87-ccxw-8ggf" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · request-smuggling · CVE-2026-88092&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Microsoft.AspNetCore.Server.Kestrel.Core contains a critical HTTP request smuggling vulnerability (CVE-2026-88092) where aborted HTTP/1 connections can reparse unread request-body bytes as separate requests, enabling request desynchronization attacks. The vulnerability affects multiple runtime packages across Linux and macOS platforms and is classified as critical severity. Immediate patching is required; developers must update to the latest patched version of Microsoft.AspNetCore.App.Runtime packages across all affected platform variants. Monitor for exploitation attempts targeting Kestrel-based applications until patches are fully deployed.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-rv87-ccxw-8ggf"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Microsoft Windows: Microsoft Windows Command Injection Vulnerability (CVE-2026-96951)</title>
-    <id>urn:cybersecnews:item:542</id>
-    <published>2026-10-13T21:01:59.316308+00:00</published>
-    <updated>2026-10-13T21:01:59.316308+00:00</updated>
-    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-96951" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · command-injection · CVE-2026-0322, CVE-2026-108398, CVE-2026-70242, CVE-2026-70291, CVE-2026-88156, CVE-2026-96951, CVE-2026-97016, CVE-2026-97749&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Microsoft Windows Shell is vulnerable to command injection (CVE-2026-96951) allowing network-based attackers to bypass security features; this vulnerability is actively exploited in the wild and carries high severity. Immediately apply vendor patches in accordance with CISA BOD 26-04 prioritization guidance, with expedited remediation required for internet-facing systems. For environments where patches are unavailable, implement mitigations per vendor documentation or discontinue use of affected systems. Conduct forensics triage on potentially compromised assets per CISA requirements.&lt;/p&gt;&lt;p&gt;&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2026-96951"&gt;Read more&lt;/a&gt; · Source: cisa-kev&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Docker Fixes Critical Two-Year-Old Hub Flaw That Let One User Push Images as Another</title>
-    <id>urn:cybersecnews:item:541</id>
-    <published>2026-10-13T21:01:59.315194+00:00</published>
-    <updated>2026-10-13T21:01:59.315194+00:00</updated>
-    <link href="https://thehackernews.com/2026/10/docker-fixes-critical-two-year-old-hub.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Docker Hub contained a critical authorization flaw in the account-to-organization conversion feature that persisted for two years, allowing authenticated users to push, pull, or delete container images as another user. The vulnerability affected Docker Hub's core image registry functionality and had CVSS severity indicating critical risk. Docker reports no evidence of active exploitation in the wild. Affected users should ensure their Docker Hub installation is updated to the patched version released September 30, 2024, and review image repository access logs for unauthorized activity.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/docker-fixes-critical-two-year-old-hub.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
   </entry>
 </feed>
