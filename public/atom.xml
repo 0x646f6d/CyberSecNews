@@ -3,7 +3,16 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-10-31T04:20:15.168894+00:00</updated>
+  <updated>2026-10-31T19:44:40.679380+00:00</updated>
+  <entry>
+    <title>New Android SMS of Death exploit can remotely crash unpatched phones</title>
+    <id>urn:cybersecnews:item:650</id>
+    <published>2026-10-31T19:44:40.679380+00:00</published>
+    <updated>2026-10-31T19:44:40.679380+00:00</updated>
+    <link href="https://www.bleepingcomputer.com/news/security/new-android-sms-of-death-exploit-can-remotely-crash-unpatched-phones/" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · dos · CVE-2026-58882&lt;/em&gt;&lt;/p&gt;&lt;p&gt;A remotely triggered denial-of-service vulnerability (CVE-2026-58882, "SMS of Death") affects Android devices and allows attackers to crash phones or disrupt cellular service via malicious SMS messages. The vulnerability has been patched by Google, but a public PoC exploit now exists, increasing risk for unpatched devices. Severity is high given the low barrier to exploitation and potential for widespread disruption. Immediate patching through available Android security updates is critical; users should ensure their devices receive the latest monthly security patches.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/new-android-sms-of-death-exploit-can-remotely-crash-unpatched-phones/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>imgproxy has integer overflow in imgproxy ICO loader that causes denial of service and may permit remote code execution</title>
     <id>urn:cybersecnews:item:649</id>
@@ -894,14 +903,5 @@
     <link href="https://thehackernews.com/2026/10/ai-found-linux-kernel-flaw-gives-local.html" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · privilege-escalation · CVE-2026-74580, CVE-2026-99999&lt;/em&gt;&lt;/p&gt;&lt;p&gt;CVE-2026-74580 affects the Linux kernel's vhost subsystem across multiple versions spanning approximately a decade. The vulnerability allows local users to read and write arbitrary kernel memory, escalate to root privileges, and in virtualization scenarios enables guest VMs to access host memory and compromise the hypervisor process. Severity is critical with active exploitation potential in multi-tenant cloud environments. Immediate kernel patching is required; users should prioritize updates for affected distributions and review VM isolation controls pending patch deployment.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/ai-found-linux-kernel-flaw-gives-local.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>An AI Agent Found a Critical OTP Bypass in Production. The Attack Was the Easy Part.</title>
-    <id>urn:cybersecnews:item:550</id>
-    <published>2026-10-14T13:21:32.497253+00:00</published>
-    <updated>2026-10-14T13:21:32.497253+00:00</updated>
-    <link href="https://thehackernews.com/2026/10/an-ai-agent-found-critical-otp-bypass.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass&lt;/em&gt;&lt;/p&gt;&lt;p&gt;An AI pentesting agent identified a critical authentication bypass in a major insurer's production login system where users could arbitrarily redirect one-time passcodes to attacker-controlled destinations, circumventing OTP-based multi-factor authentication. This vulnerability allows complete account takeover with minimal technical sophistication and represents a fundamental flaw in OTP delivery validation rather than a weak implementation. The severity is critical with high exploitability; while discovered during authorized testing, the simplicity of the attack suggests it could be weaponized in the wild if not remediated. The affected organization must immediately implement server-side validation restricting OTP delivery destinations to pre-registered user-controlled channels, audit logs for exploitation evidence, and enforce strict controls over OTP transmission parameters.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/an-ai-agent-found-critical-otp-bypass.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
   </entry>
 </feed>
