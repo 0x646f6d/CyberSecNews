@@ -3,7 +3,25 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-10-30T20:27:22.959660+00:00</updated>
+  <updated>2026-10-31T04:20:15.168894+00:00</updated>
+  <entry>
+    <title>imgproxy has integer overflow in imgproxy ICO loader that causes denial of service and may permit remote code execution</title>
+    <id>urn:cybersecnews:item:649</id>
+    <published>2026-10-31T04:20:15.168894+00:00</published>
+    <updated>2026-10-31T04:20:15.168894+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-hff9-5pqw-6w9f" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · integer-overflow&lt;/em&gt;&lt;/p&gt;&lt;p&gt;imgproxy ICO image loader contains an integer overflow vulnerability in heap allocation when processing attacker-controlled 32-bit data size values. When data_size exceeds UINT32_MAX minus BMP_FILE_HEADER_LEN, the allocation wraps to a smaller buffer, followed by heap overflow during write operations. This critical vulnerability affects imgproxy v1, v2, and v3, and can be exploited remotely via malicious ICO files to cause denial of service or achieve remote code execution. Immediately patch to the latest patched version; if immediate patching is unavailable, disable or restrict ICO image processing.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-hff9-5pqw-6w9f"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Signal K resources API path traversal can disclose the JWT signing secret and enable remote code execution</title>
+    <id>urn:cybersecnews:item:648</id>
+    <published>2026-10-31T04:20:15.165696+00:00</published>
+    <updated>2026-10-31T04:20:15.165696+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-4xm8-rg9h-jhq2" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · path-traversal&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Path traversal vulnerability in Signal K resources and applicationData APIs (npm/@signalk/resources-provider and npm/signalk-server) allows unauthenticated or low-privileged users to read, write, and delete arbitrary files outside the intended storage directory. An attacker can exploit this to read config/security.json, obtain the JWT signing secret, forge admin tokens, and achieve remote code execution. Severity is critical with active exploitation likely given the ease of exploitation and high impact. Immediate patching is required; upgrade to the latest patched versions of affected npm packages and restrict API access until patched.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-4xm8-rg9h-jhq2"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>pypi-publish action revocation of CA in the chain that Sigstore uses in Trusted Publishing and Digital Attestations for PyPI</title>
     <id>urn:cybersecnews:item:647</id>
@@ -885,23 +903,5 @@
     <link href="https://thehackernews.com/2026/10/an-ai-agent-found-critical-otp-bypass.html" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass&lt;/em&gt;&lt;/p&gt;&lt;p&gt;An AI pentesting agent identified a critical authentication bypass in a major insurer's production login system where users could arbitrarily redirect one-time passcodes to attacker-controlled destinations, circumventing OTP-based multi-factor authentication. This vulnerability allows complete account takeover with minimal technical sophistication and represents a fundamental flaw in OTP delivery validation rather than a weak implementation. The severity is critical with high exploitability; while discovered during authorized testing, the simplicity of the attack suggests it could be weaponized in the wild if not remediated. The affected organization must immediately implement server-side validation restricting OTP delivery destinations to pre-registered user-controlled channels, audit logs for exploitation evidence, and enforce strict controls over OTP transmission parameters.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/an-ai-agent-found-critical-otp-bypass.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Hirudo Android Trojan Uses Patched Banking Apps to Bypass Their Built-In Security Checks</title>
-    <id>urn:cybersecnews:item:549</id>
-    <published>2026-10-14T13:21:32.496378+00:00</published>
-    <updated>2026-10-14T13:21:32.496378+00:00</updated>
-    <link href="https://thehackernews.com/2026/10/hirudo-android-trojan-uses-patched.html" rel="alternate" />
-    <category term="red-team" />
-    <content type="html">&lt;p&gt;&lt;em&gt;red-team · banking-fraud&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Hirudo is an Android banking trojan that replaces legitimate banking apps with modified versions that disable built-in security checks, targeting Indonesian financial institutions. The malware operates by sideloading patched banking apps that bypass security mechanisms from within the application itself, representing an escalation in mobile banking fraud techniques. This represents a high-severity threat with active exploitation in the wild targeting Indonesian users. Users should uninstall suspicious banking apps, download only from official app stores, and enable Google Play Protect; financial institutions should enhance device attestation and implement server-side anomaly detection to identify compromised client instances.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/hirudo-android-trojan-uses-patched.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Researchers Used a Public OpenAI Model to Build a $250,000 Chrome Full-Chain Exploit in Six Days</title>
-    <id>urn:cybersecnews:item:548</id>
-    <published>2026-10-14T13:21:32.495511+00:00</published>
-    <updated>2026-10-14T13:21:32.495511+00:00</updated>
-    <link href="https://thehackernews.com/2026/10/researchers-used-public-openai-model-to.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Researchers used OpenAI's GPT-5.6 Sol model to chain three previously unknown Google Chrome vulnerabilities into a full exploit capable of arbitrary code execution on Windows via malicious web pages, demonstrating AI-assisted vulnerability discovery at scale. The exploit achieved high severity (full system compromise) and was not exploited in the wild before disclosure. Google has patched all three vulnerabilities and awarded XBOW a maximum bug bounty; organizations should apply Chrome updates immediately and consider restricting AI model access to security researchers given the accelerated exploit development timeline.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/researchers-used-public-openai-model-to.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
   </entry>
 </feed>
