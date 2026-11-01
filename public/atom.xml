@@ -3,7 +3,16 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-10-31T19:44:40.679380+00:00</updated>
+  <updated>2026-11-01T14:46:16.931404+00:00</updated>
+  <entry>
+    <title>CVSS 10.0 LXD, MicroCloud Flaw Lets Attackers Impersonate Trusted Clients Without a Private Key</title>
+    <id>urn:cybersecnews:item:651</id>
+    <published>2026-11-01T14:46:16.931404+00:00</published>
+    <updated>2026-11-01T14:46:16.931404+00:00</updated>
+    <link href="https://thehackernews.com/2026/11/critical-lxd-and-microcloud-flaw-cvss.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Canonical's LXD and MicroCloud container management systems contain a critical authentication bypass flaw (CVSS 10.0) allowing unauthenticated attackers to impersonate trusted clients without possessing their private keys, requiring only network access to the HTTPS API and the target client's public certificate. Successful exploitation grants full cluster and virtual machine access with the privileges of the impersonated account. This vulnerability is likely being exploited given its critical severity and ease of exploitation. Immediately patch affected LXD and MicroCloud installations to the latest versions and restrict network access to the management API.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/11/critical-lxd-and-microcloud-flaw-cvss.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>New Android SMS of Death exploit can remotely crash unpatched phones</title>
     <id>urn:cybersecnews:item:650</id>
@@ -894,14 +903,5 @@
     <link href="https://thehackernews.com/2026/10/cisco-warns-of-active-attacks.html" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Cisco Secure Email Gateway contains a critical unauthenticated file write vulnerability (CVE-2024-20421) that allows remote attackers to execute arbitrary commands as root by sending crafted email attachments. This flaw is actively exploited in the wild with no authentication required. Immediate patching is essential; organizations should apply Cisco's available security updates or implement temporary workarounds if patches cannot be deployed immediately.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/cisco-warns-of-active-attacks.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>AI-Found Linux Kernel Flaw Gives Local Users Root, and Can Break a Guest Out to the Host</title>
-    <id>urn:cybersecnews:item:551</id>
-    <published>2026-10-14T13:21:32.498251+00:00</published>
-    <updated>2026-10-14T13:21:32.498251+00:00</updated>
-    <link href="https://thehackernews.com/2026/10/ai-found-linux-kernel-flaw-gives-local.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · privilege-escalation · CVE-2026-74580, CVE-2026-99999&lt;/em&gt;&lt;/p&gt;&lt;p&gt;CVE-2026-74580 affects the Linux kernel's vhost subsystem across multiple versions spanning approximately a decade. The vulnerability allows local users to read and write arbitrary kernel memory, escalate to root privileges, and in virtualization scenarios enables guest VMs to access host memory and compromise the hypervisor process. Severity is critical with active exploitation potential in multi-tenant cloud environments. Immediate kernel patching is required; users should prioritize updates for affected distributions and review VM isolation controls pending patch deployment.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/ai-found-linux-kernel-flaw-gives-local.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
   </entry>
 </feed>
