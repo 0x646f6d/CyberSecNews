@@ -3,7 +3,34 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-11-01T14:46:16.931404+00:00</updated>
+  <updated>2026-11-02T17:53:17.824261+00:00</updated>
+  <entry>
+    <title>BTCPay Server warns of hot wallet crypto thefts on outdated instances</title>
+    <id>urn:cybersecnews:item:654</id>
+    <published>2026-11-02T17:53:17.824261+00:00</published>
+    <updated>2026-11-02T17:53:17.824261+00:00</updated>
+    <link href="https://www.bleepingcomputer.com/news/security/btcpay-server-warns-of-hot-wallet-thefts-targeting-outdated-instances/" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · hot-wallet-theft&lt;/em&gt;&lt;/p&gt;&lt;p&gt;BTCPay Server cryptocurrency payment processor versions prior to the latest release contain a vulnerability enabling attackers to drain hot wallets from affected instances. The flaw affects outdated deployments and is actively being exploited in the wild to steal cryptocurrency funds. This represents critical severity due to direct financial loss potential. Immediate action required: all BTCPay Server users must upgrade to the latest patched version without delay, and operators should audit wallet balances and transaction logs for suspicious activity.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/btcpay-server-warns-of-hot-wallet-thefts-targeting-outdated-instances/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Attackers Pose as IT Support on Microsoft Teams, Abuse AD CS to Steal Company Data</title>
+    <id>urn:cybersecnews:item:653</id>
+    <published>2026-11-02T17:53:17.823183+00:00</published>
+    <updated>2026-11-02T17:53:17.823183+00:00</updated>
+    <link href="https://thehackernews.com/2026/11/attackers-pose-as-it-support-on.html" rel="alternate" />
+    <category term="red-team" />
+    <content type="html">&lt;p&gt;&lt;em&gt;red-team · social-engineering,lateral-movement,privilege-escalation&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Threat actors impersonated IT support via Microsoft Teams to socially engineer employees into granting remote access, then exploited misconfigured Active Directory Certificate Services (AD CS) to escalate privileges and obtain certificates for domain controller accounts. This technique leverages weak certificate template configurations that allow unprivileged users to request high-value certificates, enabling lateral movement and persistent access to critical infrastructure. Microsoft documented at least two confirmed intrusions using this method, indicating active exploitation in the wild. Organizations should immediately audit AD CS templates for overly permissive enrollment rights, implement certificate-based authentication hardening, and enforce multi-factor authentication for remote access tools to prevent social engineering attacks.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/11/attackers-pose-as-it-support-on.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Critical Langflow Flaws Could Let Unauthenticated Attackers Run Code on Servers</title>
+    <id>urn:cybersecnews:item:652</id>
+    <published>2026-11-02T17:53:17.821823+00:00</published>
+    <updated>2026-11-02T17:53:17.821823+00:00</updated>
+    <link href="https://thehackernews.com/2026/11/critical-langflow-flaws-could-let.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass,rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Langflow versions 1.0.0 through 1.12.8 contain two critical authentication bypass and arbitrary code execution vulnerabilities affecting the open-source AI workflow platform. Unauthenticated remote attackers can exploit these flaws to bypass authentication controls and achieve remote code execution on affected servers. IBM reported these vulnerabilities with no evidence of active exploitation in the wild to date. Immediate upgrade to Langflow version 1.13.0 is required; organizations using affected versions should prioritize this patch deployment.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/11/critical-langflow-flaws-could-let.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>CVSS 10.0 LXD, MicroCloud Flaw Lets Attackers Impersonate Trusted Clients Without a Private Key</title>
     <id>urn:cybersecnews:item:651</id>
@@ -876,32 +903,5 @@
     <link href="https://www.rapid7.com/blog/post/ve-breaking-zimbra-identity-boundaries-part-1" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · multi · CVE-2026-10631, CVE-2026-50055, CVE-2026-73571, CVE-2026-93635, CVE-2026-93637&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Zimbra Collaboration Suite (ZCS) contains five account-related vulnerabilities affecting authentication, mailbox authorization, and mail filtering: CVE-2026-93637 (GraphQL authentication rate-limit bypass, CVSS 3.7), CVE-2026-93635 (LDAP filter injection, CVSS 5.3), CVE-2026-73571 (email impersonation via SaveDraftRequest, CVSS 8.3), CVE-2026-10631 (EWS cross-user mailbox access, CVSS 6.5), and CVE-2026-50055 (Sieve notify forwarding-restriction bypass, CVSS 6.5). CVE-2026-73571, CVE-2026-10631, and CVE-2026-50055 are confirmed fixed in ZCS 10.1.17–10.1.20; fixes for CVE-2026-93637 and CVE-2026-93635 were not publicly listed at publication. No evidence of active exploitation in the wild is mentioned, but the high-severity email impersonation flaw and the cross-user mailbox access vulnerability allow full account compromise chains when chained with subsequent findings. Affected organizations must immediately upgrade to ZCS 10.1.20 or later, inspect existing Sieve rules for illicit notify actions, and review EWS access logs for suspicious cross-account operations.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.rapid7.com/blog/post/ve-breaking-zimbra-identity-boundaries-part-1"&gt;Read more&lt;/a&gt; · Source: rapid7&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Cisco Secure Email Gateway: Cisco Secure Email Gateway Relative Path Traversal Vulnerability (CVE-2026-76519)</title>
-    <id>urn:cybersecnews:item:554</id>
-    <published>2026-10-14T20:01:31.945526+00:00</published>
-    <updated>2026-10-14T20:01:31.945526+00:00</updated>
-    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-76519" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · path-traversal · CVE-2025-61624, CVE-2026-76519&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Cisco Secure Email Gateway is affected by CVE-2026-76519, a relative path traversal vulnerability enabling unauthenticated remote attackers to write arbitrary files to the underlying operating system. This vulnerability is actively exploited in the wild and carries high severity due to the lack of authentication requirements and potential for complete system compromise. Immediately apply vendor mitigations per CISA BOD 26-04 guidelines; if mitigations are unavailable, discontinue use of the product. Conduct forensics triage on potentially compromised systems and assess internet exposure of all affected assets.&lt;/p&gt;&lt;p&gt;&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2026-76519"&gt;Read more&lt;/a&gt; · Source: cisa-kev&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Hackers Backdoor Nextcloud Servers Through Critical Flaw in Collabora’s Built-in CODE App</title>
-    <id>urn:cybersecnews:item:553</id>
-    <published>2026-10-14T20:01:31.944597+00:00</published>
-    <updated>2026-10-14T20:01:31.944597+00:00</updated>
-    <link href="https://thehackernews.com/2026/10/hackers-backdoor-nextcloud-servers.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-110447&lt;/em&gt;&lt;/p&gt;&lt;p&gt;A critical vulnerability in Nextcloud's optional Collabora Online - Built-in CODE Server app allows unauthenticated attackers to execute arbitrary code and plant web shells on affected servers. The flaw has been actively exploited in the wild since at least September 10, with documented cases affecting multiple Nextcloud installations. Administrators should immediately update the Collabora Online app to the patched version and review server logs for suspicious activity or unauthorized web shell uploads. Alternatively, disable or remove the Collabora Online - Built-in CODE Server app if the functionality is not required.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/hackers-backdoor-nextcloud-servers.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Cisco Warns of Active Attacks Exploiting New Critical Secure Email Gateway Vulnerability</title>
-    <id>urn:cybersecnews:item:552</id>
-    <published>2026-10-14T20:01:31.943014+00:00</published>
-    <updated>2026-10-14T20:01:31.943014+00:00</updated>
-    <link href="https://thehackernews.com/2026/10/cisco-warns-of-active-attacks.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Cisco Secure Email Gateway contains a critical unauthenticated file write vulnerability (CVE-2024-20421) that allows remote attackers to execute arbitrary commands as root by sending crafted email attachments. This flaw is actively exploited in the wild with no authentication required. Immediate patching is essential; organizations should apply Cisco's available security updates or implement temporary workarounds if patches cannot be deployed immediately.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/cisco-warns-of-active-attacks.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
   </entry>
 </feed>
