@@ -3,7 +3,43 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-11-02T17:53:17.824261+00:00</updated>
+  <updated>2026-11-03T15:52:41.287258+00:00</updated>
+  <entry>
+    <title>Barracuda warns of critical flaws allowing root access to devices</title>
+    <id>urn:cybersecnews:item:658</id>
+    <published>2026-11-03T15:52:41.287258+00:00</published>
+    <updated>2026-11-03T15:52:41.287258+00:00</updated>
+    <link href="https://www.bleepingcomputer.com/news/security/barracuda-warns-of-critical-flaws-allowing-root-access-to-devices/" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Barracuda Networks products contain two critical vulnerabilities enabling unauthenticated remote code execution with root privileges. The flaws allow attackers to execute arbitrary commands at the highest privilege level, posing severe risk to affected deployments. Barracuda has not disclosed active exploitation in the wild at time of advisory. Immediate patching is mandatory; administrators should apply vendor-supplied fixes and verify system integrity post-compromise given the severity.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/barracuda-warns-of-critical-flaws-allowing-root-access-to-devices/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Synology NAS Devices Targeted in Ransomware Attacks Exploiting Patched DSM Flaw</title>
+    <id>urn:cybersecnews:item:657</id>
+    <published>2026-11-03T15:52:41.286393+00:00</published>
+    <updated>2026-11-03T15:52:41.286393+00:00</updated>
+    <link href="https://thehackernews.com/2026/11/synology-nas-devices-targeted-in.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Synology DSM (DiskStation Manager) NAS software is being actively exploited in ransomware campaigns targeting devices running versions prior to the December 2024 patch. The vulnerability enables attackers to gain unauthorized access and encrypt victim data for extortion purposes. This represents high severity with confirmed active exploitation in the wild. Immediate patching of DSM to the latest version is critical; organizations should prioritize updates for all exposed NAS devices and consider network segmentation to limit lateral movement from compromised devices.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/11/synology-nas-devices-targeted-in.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Russia-Aligned Gorbag Hackers Exploit WinRAR Flaw to Deploy Data-Stealing Malware</title>
+    <id>urn:cybersecnews:item:656</id>
+    <published>2026-11-03T15:52:41.285582+00:00</published>
+    <updated>2026-11-03T15:52:41.285582+00:00</updated>
+    <link href="https://thehackernews.com/2026/11/russia-aligned-gorbag-hackers-exploit.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Gorbag, a Russia-aligned threat actor, actively exploits the CVE-2024-49978 WinRAR vulnerability to deliver data-stealing malware against Ukrainian targets since February 2025. The flaw allows arbitrary code execution through specially crafted RAR files, making it an effective initial access vector for information theft operations. The group specifically targets Ukrainian law enforcement, justice entities, local administrations, and defense sector organizations near active conflict zones. Immediate patching of WinRAR to the latest version is critical; organizations should also implement email filtering for suspicious RAR archives and monitor for data exfiltration activity.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/11/russia-aligned-gorbag-hackers-exploit.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>TV-Boxen und mehr: 1,3 Millionen Android-Geräte mit Backdoor verkauft</title>
+    <id>urn:cybersecnews:item:655</id>
+    <published>2026-11-03T15:52:41.283321+00:00</published>
+    <updated>2026-11-03T15:52:41.283321+00:00</updated>
+    <link href="https://www.golem.de/news/tv-boxen-und-mehr-1-3-millionen-android-geraete-mit-backdoor-verkauft-2611-214785.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · backdoor&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Chinese manufacturer sold approximately 1.3 million Android devices including TV boxes with pre-installed backdoor functionality, with access subsequently sold to criminal actors. The backdoor enables unauthorized remote access and control of affected devices, allowing attackers to execute arbitrary commands and potentially distribute malware. This represents a supply chain compromise with high severity given the scale of affected devices and active criminal exploitation. Users should immediately check device sources, apply any available security updates, perform factory resets on affected hardware, and consider replacing devices from untrusted manufacturers; enterprises should audit procurement channels and implement network segmentation to limit potential lateral movement from compromised endpoints.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.golem.de/news/tv-boxen-und-mehr-1-3-millionen-android-geraete-mit-backdoor-verkauft-2611-214785.html"&gt;Read more&lt;/a&gt; · Source: golem-security&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>BTCPay Server warns of hot wallet crypto thefts on outdated instances</title>
     <id>urn:cybersecnews:item:654</id>
@@ -867,41 +903,5 @@
     <link href="https://thehackernews.com/2026/10/drupal-patches-critical-core-rce-flaw.html" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Drupal core versions 10.x, 11.3.x, and 11.4.x contain a critical remote code execution vulnerability in the Field UI module exploitable through contributed modules without requiring authentication. The flaw allows unauthenticated attackers to execute arbitrary code on vulnerable servers when specific contributed modules are present, though the vulnerability cannot be directly exploited through core alone. Drupal released patches on October 14 in versions 10.6.19, 11.3.19, and 11.4.10; immediate patching is required along with assessment of installed contributed modules for exploitation paths. No evidence of active wild exploitation has been reported, but the critical severity and no-auth requirement make immediate remediation essential.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/drupal-patches-critical-core-rce-flaw.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Unsichere Firewall: Palo Alto Networks warnt vor Angriffen auf Zero-Day-Lücke</title>
-    <id>urn:cybersecnews:item:558</id>
-    <published>2026-10-15T13:06:28.799809+00:00</published>
-    <updated>2026-10-15T13:06:28.799809+00:00</updated>
-    <link href="https://www.golem.de/news/unsichere-firewall-palo-alto-networks-warnt-vor-angriffen-auf-zero-day-luecke-2610-214137.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Palo Alto Networks firewalls (PA and VM series) are vulnerable to a zero-day remote code execution vulnerability allowing attackers to execute code with root privileges. The vulnerability is being actively exploited in the wild and poses critical risk to affected organizations. Immediate patching is required; users should apply available security updates or implement network segmentation to isolate affected firewalls until patches can be deployed. Monitor firewall logs for signs of compromise and consider temporary failover to unaffected security infrastructure if updates cannot be applied immediately.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.golem.de/news/unsichere-firewall-palo-alto-networks-warnt-vor-angriffen-auf-zero-day-luecke-2610-214137.html"&gt;Read more&lt;/a&gt; · Source: golem-security&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Threat Actor Abuses Agentic AI Pentesting Framework to Target South Korean Financial Institutions</title>
-    <id>urn:cybersecnews:item:557</id>
-    <published>2026-10-15T03:27:10.082591+00:00</published>
-    <updated>2026-10-15T03:27:10.082591+00:00</updated>
-    <link href="https://www.zscaler.com/blogs/security-research/threat-actor-abuses-agentic-ai-pentesting-framework-target-south-korean" rel="alternate" />
-    <category term="red-team" />
-    <content type="html">&lt;p&gt;&lt;em&gt;red-team · agentic-ai-framework&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Threat actors abused ARTEX, an open-source agentic AI pentesting framework, to target South Korean financial institutions by automating reconnaissance, vulnerability identification, and exploitation against peripheral web applications. The campaign, attributed with moderate confidence to a financially motivated Chinese-speaking actor, exploited SQL injection and authentication bypass vulnerabilities in customer-facing portals and employee backends, exfiltrating PII for approximately 67,000 individuals with high impact. Organizations should isolate any locally deployed pentesting frameworks from production environments, avoid storing production credentials in open-source tools, implement Zero Trust architecture with least-privilege access controls, deploy deception controls to detect AI-driven reconnaissance, and enforce rate limiting and authorization checks on external portals to prevent enumeration attacks. Monitor for outbound API calls to LLM services (DeepSeek, Anthropic, Zhipu) and high-frequency automated requests with sequential enumeration patterns as behavioral indicators of compromise.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.zscaler.com/blogs/security-research/threat-actor-abuses-agentic-ai-pentesting-framework-target-south-korean"&gt;Read more&lt;/a&gt; · Source: zscaler-threatlabz&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Unauthenticated SQL Injection In Channel Software WebAlliance eCommerce</title>
-    <id>urn:cybersecnews:item:556</id>
-    <published>2026-10-14T20:01:31.948025+00:00</published>
-    <updated>2026-10-14T20:01:31.948025+00:00</updated>
-    <link href="https://www.rapid7.com/blog/post/ve-unauthenticated-sql-injection-in-channel-software-weballiance-ecommerce" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · sqli · CVE-2026-101767, CVE-2026-108065&lt;/em&gt;&lt;/p&gt;&lt;p&gt;CVE-2026-108065 affects Channel Software WebAlliance eCommerce, an unauthenticated SQL injection vulnerability in the GetUser SOAP method's sUserID parameter that fails to properly escape user input. The vulnerability is critical (CVSS 9.8) and allows attackers to extract sensitive data including PII and passwords, or execute system commands if the database runs with admin privileges; exploitation via time-based SQL injection and MSSQL stacked queries is trivial and no evidence of wild exploitation is reported but the public PoC increases risk. Organizations running WebAlliance eCommerce should immediately block access to /preapproval.asmx endpoint as a temporary mitigation and contact Channel Software for a patched version, as the vendor has not released a fix as of October 2026.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.rapid7.com/blog/post/ve-unauthenticated-sql-injection-in-channel-software-weballiance-ecommerce"&gt;Read more&lt;/a&gt; · Source: rapid7&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>From One Account to Every Mailbox: Breaking Zimbra's Identity Boundaries (Part 1)</title>
-    <id>urn:cybersecnews:item:555</id>
-    <published>2026-10-14T20:01:31.946447+00:00</published>
-    <updated>2026-10-14T20:01:31.946447+00:00</updated>
-    <link href="https://www.rapid7.com/blog/post/ve-breaking-zimbra-identity-boundaries-part-1" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · multi · CVE-2026-10631, CVE-2026-50055, CVE-2026-73571, CVE-2026-93635, CVE-2026-93637&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Zimbra Collaboration Suite (ZCS) contains five account-related vulnerabilities affecting authentication, mailbox authorization, and mail filtering: CVE-2026-93637 (GraphQL authentication rate-limit bypass, CVSS 3.7), CVE-2026-93635 (LDAP filter injection, CVSS 5.3), CVE-2026-73571 (email impersonation via SaveDraftRequest, CVSS 8.3), CVE-2026-10631 (EWS cross-user mailbox access, CVSS 6.5), and CVE-2026-50055 (Sieve notify forwarding-restriction bypass, CVSS 6.5). CVE-2026-73571, CVE-2026-10631, and CVE-2026-50055 are confirmed fixed in ZCS 10.1.17–10.1.20; fixes for CVE-2026-93637 and CVE-2026-93635 were not publicly listed at publication. No evidence of active exploitation in the wild is mentioned, but the high-severity email impersonation flaw and the cross-user mailbox access vulnerability allow full account compromise chains when chained with subsequent findings. Affected organizations must immediately upgrade to ZCS 10.1.20 or later, inspect existing Sieve rules for illicit notify actions, and review EWS access logs for suspicious cross-account operations.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.rapid7.com/blog/post/ve-breaking-zimbra-identity-boundaries-part-1"&gt;Read more&lt;/a&gt; · Source: rapid7&lt;/p&gt;</content>
   </entry>
 </feed>
