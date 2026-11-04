@@ -3,7 +3,70 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-11-03T21:32:20.478312+00:00</updated>
+  <updated>2026-11-04T15:59:50.091487+00:00</updated>
+  <entry>
+    <title>ZDI-26-869: MailEnable Save Directory Traversal Arbitrary File Creation Vulnerability</title>
+    <id>urn:cybersecnews:item:669</id>
+    <published>2026-11-04T15:59:50.091487+00:00</published>
+    <updated>2026-11-04T15:59:50.091487+00:00</updated>
+    <link href="http://www.zerodayinitiative.com/advisories/ZDI-26-869/" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · directory-traversal · CVE-2026-114556&lt;/em&gt;&lt;/p&gt;&lt;p&gt;MailEnable is affected by a pre-authentication directory traversal vulnerability (CVE-2026-114556) that allows remote attackers to create arbitrary files, rated CVSS 7.4. No evidence of active exploitation in the wild has been reported at this time. MailEnable administrators should apply vendor patches immediately and consider implementing network-level access controls to restrict connections to MailEnable services from untrusted sources.&lt;/p&gt;&lt;p&gt;&lt;a href="http://www.zerodayinitiative.com/advisories/ZDI-26-869/"&gt;Read more&lt;/a&gt; · Source: zdi-published&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Hackers use n-day exploits in zero-click attacks on iOS, Android devices</title>
+    <id>urn:cybersecnews:item:668</id>
+    <published>2026-11-04T15:59:50.090431+00:00</published>
+    <updated>2026-11-04T15:59:50.090431+00:00</updated>
+    <link href="https://www.bleepingcomputer.com/news/security/hackers-use-n-day-exploits-in-zero-click-attacks-on-ios-android-devices/" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · zero-click&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Russian threat actors are conducting large-scale watering hole attacks exploiting n-day vulnerabilities in iOS and Android through zero-click vectors, primarily via compromised or spoofed websites. These n-day exploits bypass user interaction requirements, making them particularly dangerous for mass targeting. Severity is high given the zero-click nature and broad device coverage; active exploitation in the wild is confirmed. Users should apply the latest iOS and Android security patches immediately and consider network-level protections; organizations should implement domain reputation filtering and educate users on verifying legitimate portals before visiting.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/hackers-use-n-day-exploits-in-zero-click-attacks-on-ios-android-devices/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>SonicWall warns of unpatched flaws in end-of-life GMS software</title>
+    <id>urn:cybersecnews:item:667</id>
+    <published>2026-11-04T15:59:50.089403+00:00</published>
+    <updated>2026-11-04T15:59:50.089403+00:00</updated>
+    <link href="https://www.bleepingcomputer.com/news/security/sonicwall-warns-of-unpatched-flaws-in-end-of-life-gms-software/" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · unspecified&lt;/em&gt;&lt;/p&gt;&lt;p&gt;SonicWall Global Management System (GMS) contains two unpatched security vulnerabilities in end-of-life versions that will not receive fixes. The specific vulnerability details and severity levels were not disclosed in available information, but the fact that patches will not be released indicates potential high-risk exposure for affected organizations. Organizations running legacy GMS instances should immediately discontinue use or isolate these systems from production networks, as no vendor remediation is forthcoming. Transition to supported SonicWall management solutions and implement network segmentation to limit potential lateral movement if compromise occurs.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/sonicwall-warns-of-unpatched-flaws-in-end-of-life-gms-software/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>China-Aligned Hackers Hijack Sogou Input Method DNS Requests to Deploy DarkVigil Backdoor</title>
+    <id>urn:cybersecnews:item:666</id>
+    <published>2026-11-04T15:59:50.088129+00:00</published>
+    <updated>2026-11-04T15:59:50.088129+00:00</updated>
+    <link href="https://thehackernews.com/2026/11/china-aligned-hackers-hijack-sogou.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · insecure-dns,dns-hijacking&lt;/em&gt;&lt;/p&gt;&lt;p&gt;SlippyNunchucks exploited insecure HTTP DNS communication in Sogou Input Method (Windows) to hijack requests and deploy the DarkVigil backdoor, targeting organizations since July 1, 2026. The vulnerability stems from unencrypted DNS communications allowing man-in-the-middle attacks to redirect victims to malicious servers. This is a high-severity issue with active exploitation in the wild by a China-aligned threat actor conducting surveillance operations. Organizations should immediately update Sogou Input Method, enforce encrypted DNS (DoH/DoT) network-wide, and monitor for DarkVigil indicators of compromise; consider restricting or disabling Sogou Input Method in sensitive environments pending patches.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/11/china-aligned-hackers-hijack-sogou.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Xen Hypervisor Flaws Let One Malicious VM Read and Write Any Other VM's Memory</title>
+    <id>urn:cybersecnews:item:665</id>
+    <published>2026-11-04T15:59:50.086886+00:00</published>
+    <updated>2026-11-04T15:59:50.086886+00:00</updated>
+    <link href="https://thehackernews.com/2026/11/xen-hypervisor-flaws-let-one-malicious.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · memory-disclosure,memory-corruption&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Two memory access vulnerabilities in Xen hypervisor versions 4.6 and later (CVE-2024-9407 and CVE-2024-9408) allow a malicious guest VM to read and write arbitrary memory of other VMs including dom0, the privileged management VM. These flaws result in complete VM isolation bypass with high severity and potential for privilege escalation across the hypervisor. No mitigation exists; immediate patching is required for all affected Xen installations. Apply vendor security updates as soon as available; consider prioritizing systems running untrusted guest workloads.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/11/xen-hypervisor-flaws-let-one-malicious.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Critical Rails Flaw Lets Attackers Write Server Files via Crafted ImageMagick Uploads</title>
+    <id>urn:cybersecnews:item:664</id>
+    <published>2026-11-04T15:59:50.085829+00:00</published>
+    <updated>2026-11-04T15:59:50.085829+00:00</updated>
+    <link href="https://thehackernews.com/2026/11/critical-rails-flaw-lets-attackers.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · arbitrary-file-write&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Ruby on Rails Active Storage component contains a critical arbitrary file write vulnerability affecting versions prior to 8.1.4.1 and 8.0.5.2, exploitable by unauthenticated attackers through crafted file uploads processed by ImageMagick. The vulnerability allows remote code execution and complete server compromise with no authentication required. Organizations using affected Rails versions must immediately upgrade to patched versions 8.1.4.1, 8.0.5.2, or later, and consider disabling ImageMagick processing or implementing strict file type validation as interim mitigations pending patching.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/11/critical-rails-flaw-lets-attackers.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>APT29-Linked Hackers Hijack Web Analytics Script to Deliver iOS and Android Exploits</title>
+    <id>urn:cybersecnews:item:663</id>
+    <published>2026-11-04T15:59:50.084069+00:00</published>
+    <updated>2026-11-04T15:59:50.084069+00:00</updated>
+    <link href="https://thehackernews.com/2026/11/apt29-linked-hackers-hijack-web.html" rel="alternate" />
+    <category term="red-team" />
+    <content type="html">&lt;p&gt;&lt;em&gt;red-team · supply-chain-attack&lt;/em&gt;&lt;/p&gt;&lt;p&gt;APT29 conducted a large-scale watering hole campaign exploiting the Ukrainian web analytics service Plerdy SEO Tracker to deliver iOS and Android exploits. The threat actor injected malicious JavaScript into the analytics script to collect device attributes and redirect users to exploit landing pages. This supply chain attack affects any organization using the compromised Plerdy service and represents a high-severity threat with active exploitation in the wild. Organizations should immediately audit Plerdy implementations, block suspicious redirects at network perimeter, and consider removing the service pending vendor remediation.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/11/apt29-linked-hackers-hijack-web.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Free the Model, Sell the Gateway: Prompt Adware hidden in Jailbreak Bundles</title>
     <id>urn:cybersecnews:item:662</id>
@@ -119,7 +182,7 @@
     <updated>2026-10-31T19:44:40.679380+00:00</updated>
     <link href="https://www.bleepingcomputer.com/news/security/new-android-sms-of-death-exploit-can-remotely-crash-unpatched-phones/" rel="alternate" />
     <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · dos · CVE-2026-58882&lt;/em&gt;&lt;/p&gt;&lt;p&gt;A remotely triggered denial-of-service vulnerability (CVE-2026-58882, "SMS of Death") affects Android devices and allows attackers to crash phones or disrupt cellular service via malicious SMS messages. The vulnerability has been patched by Google, but a public PoC exploit now exists, increasing risk for unpatched devices. Severity is high given the low barrier to exploitation and potential for widespread disruption. Immediate patching through available Android security updates is critical; users should ensure their devices receive the latest monthly security patches.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/new-android-sms-of-death-exploit-can-remotely-crash-unpatched-phones/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · dos · CVE-2026-58868, CVE-2026-58882&lt;/em&gt;&lt;/p&gt;&lt;p&gt;A remotely triggered denial-of-service vulnerability (CVE-2026-58882, "SMS of Death") affects Android devices and allows attackers to crash phones or disrupt cellular service via malicious SMS messages. The vulnerability has been patched by Google, but a public PoC exploit now exists, increasing risk for unpatched devices. Severity is high given the low barrier to exploitation and potential for widespread disruption. Immediate patching through available Android security updates is critical; users should ensure their devices receive the latest monthly security patches.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/new-android-sms-of-death-exploit-can-remotely-crash-unpatched-phones/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
   </entry>
   <entry>
     <title>imgproxy has integer overflow in imgproxy ICO loader that causes denial of service and may permit remote code execution</title>
@@ -840,68 +903,5 @@
     <link href="https://www.bleepingcomputer.com/news/security/hackers-exploit-siteguard-waf-flaw-to-run-commands-as-system-root/" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · os-command-injection · CVE-2026-106931&lt;/em&gt;&lt;/p&gt;&lt;p&gt;SiteGuard Server Edition is vulnerable to OS command injection that allows attackers to execute arbitrary commands with root/SYSTEM privileges. The vulnerability is actively exploited in the wild according to reports. Patch availability status should be confirmed with the vendor immediately, and affected systems should be isolated or placed behind an additional WAF layer if patching is delayed. Organizations running SiteGuard Server Edition should prioritize patching and monitor for signs of exploitation such as unusual command execution or privilege escalation attempts.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/hackers-exploit-siteguard-waf-flaw-to-run-commands-as-system-root/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Claude Agent SDK: Argument Injection via resume Option Allows Arbitrary Command Execution (CVE-2026-96620)</title>
-    <id>urn:cybersecnews:item:569</id>
-    <published>2026-10-17T03:13:07.558035+00:00</published>
-    <updated>2026-10-17T03:13:07.558035+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-h4mw-j7qp-8mwm" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · argument-injection · CVE-2026-96620&lt;/em&gt;&lt;/p&gt;&lt;p&gt;The Claude Agent SDK for Python (pip package) contains a critical argument injection vulnerability (CVE-2026-96620) in the `resume` option that passes unsanitized input to the Claude CLI. An attacker controlling the resume parameter can inject malicious CLI flags like `--mcp-config` to execute arbitrary commands at startup, bypassing SDK permission controls. This requires an application to pass untrusted input as a session ID. Users should immediately update to a patched version; applications should validate and sanitize all user-supplied input used as session identifiers.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-h4mw-j7qp-8mwm"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Critical BlockStrap flaw lets hackers run code on Magento servers</title>
-    <id>urn:cybersecnews:item:568</id>
-    <published>2026-10-17T03:13:07.556167+00:00</published>
-    <updated>2026-10-17T03:13:07.556167+00:00</updated>
-    <link href="https://www.bleepingcomputer.com/news/security/critical-blockstrap-flaw-lets-hackers-run-code-on-magento-servers/" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-103849&lt;/em&gt;&lt;/p&gt;&lt;p&gt;BlockStrap extension for Magento and Adobe Commerce contains a critical remote code execution vulnerability (CVE-2026-103849) that allows unauthenticated attackers to execute arbitrary PHP code on affected servers. The flaw has a CVSS score of 9.8 and poses immediate risk to e-commerce operations. No evidence of active exploitation in the wild has been reported at this time, but patch availability should be verified immediately with Adobe/vendor. Affected organizations must prioritize applying security updates or disabling the BlockStrap extension until a fix is confirmed available.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/critical-blockstrap-flaw-lets-hackers-run-code-on-magento-servers/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Vitess vttablet /twopcz reflected XSS (CVE-2026-104252)</title>
-    <id>urn:cybersecnews:item:567</id>
-    <published>2026-10-16T03:23:12.305649+00:00</published>
-    <updated>2026-10-16T03:23:12.305649+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-v75v-6fpf-gvw8" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · xss · CVE-2026-104252&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Vitess vttablet's /twopcz endpoint (CVE-2026-104252) contains a reflected XSS vulnerability where the `Action` and `dtid` form parameters are written directly to HTML responses without escaping in the `twopczHandler` function. This is critical severity as the endpoint is reachable by default due to Vitess's permissive ACL policy and the response is served as HTML. There is no indication of active exploitation in the wild. Upgrade to a patched version of Vitess that implements proper HTML escaping for user-supplied parameters in the twopcz handler, or restrict access to the /twopcz endpoint via firewall/ACL rules.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-v75v-6fpf-gvw8"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Dgraph: Zero Unauthenticated HTTP Admin removeNode Denial of Service (CVE-2026-102748)</title>
-    <id>urn:cybersecnews:item:566</id>
-    <published>2026-10-16T03:23:12.304456+00:00</published>
-    <updated>2026-10-16T03:23:12.304456+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-qj98-gp63-54xj" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass,dos · CVE-2026-102748&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Dgraph Zero versions prior to v25.3.8 expose unauthenticated HTTP administrative endpoints on port 6080, including /removeNode, /assign, /state, and /moveTablet. An attacker can send an unauthenticated request to /removeNode to trigger a denial of service by breaking the Zero control plane and preventing Alpha instances from reconnecting. This is a critical severity vulnerability with active exploitation potential given the trivial attack vector. Users should immediately upgrade to Dgraph v25.3.8 or later and restrict network access to port 6080 to trusted administrators only.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-qj98-gp63-54xj"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Argo CD: AppProject destination-namespace and resource restrictions bypassed by PreDelete/PostDelete resource hooks (CVE-2026-77459)</title>
-    <id>urn:cybersecnews:item:565</id>
-    <published>2026-10-16T03:23:12.303230+00:00</published>
-    <updated>2026-10-16T03:23:12.303230+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-fmxq-cgp8-87wp" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-102764, CVE-2026-77459&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Argo CD versions 2.10.0 and later are affected by CVE-2026-77459, where PreDelete and PostDelete resource hooks bypass AppProject destination-namespace and resource restrictions during application deletion. An attacker can exploit this critical vulnerability to create resources outside permitted namespaces or deploy cluster-scoped resources that should be denied by AppProject policies, leveraging application-controller credentials on the destination cluster. No evidence of active exploitation in the wild is mentioned, but immediate patching is essential; users should upgrade to the latest patched version once available and review PreDelete/PostDelete hooks in existing Applications for policy compliance.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-fmxq-cgp8-87wp"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>KEDA: Privilege escalation from namespace admin to cluster admin via KEDA TriggerAuthentication (CVE-2026-77524)</title>
-    <id>urn:cybersecnews:item:564</id>
-    <published>2026-10-16T03:23:12.301666+00:00</published>
-    <updated>2026-10-16T03:23:12.301666+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-637c-6jxx-4rwm" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · privilege-escalation · CVE-2026-77524&lt;/em&gt;&lt;/p&gt;&lt;p&gt;KEDA (Kubernetes Event Driven Autoscaling) versions prior to patched releases contain a critical privilege escalation vulnerability (CVE-2026-77524) where a namespace admin can exploit TriggerAuthentication and ScaledObject resources to exfiltrate the KEDA operator's cluster-admin ServiceAccount token to a tenant-controlled URL. The operator token grants broad cluster-wide permissions including reading all Secrets, creating/deleting batch jobs, modifying workload scaling, and updating validating webhooks, enabling complete cluster compromise. This vulnerability is critical severity and should be assumed exploitable given the straightforward attack chain. Immediately upgrade KEDA to patched versions and restrict namespace admin permissions; review audit logs for TriggerAuthentication abuse and monitor for suspicious outbound connections from KEDA operator pods.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-637c-6jxx-4rwm"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Podman: The `podman run` command can be instructed to disable almost all sandboxing by image annotation (CVE-2026-94603)</title>
-    <id>urn:cybersecnews:item:563</id>
-    <published>2026-10-16T03:23:12.300430+00:00</published>
-    <updated>2026-10-16T03:23:12.300430+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-2cvf-wqm6-wr9g" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · sandbox-bypass · CVE-2026-94603&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Podman versions 4.4.0 and later are affected by CVE-2026-94603, where the `podman run` command silently ignores user-specified sandbox security settings when executing containers from OCI registry checkpoints, allowing attackers to disable sandboxing via malicious image annotations. This is a critical vulnerability that enables complete bypass of container isolation controls. There is no indication of active wild exploitation at this time. Users should immediately update to a patched version once available, and until then avoid running container images from untrusted sources or restrict checkpoint functionality at the system level.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-2cvf-wqm6-wr9g"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
   </entry>
 </feed>
