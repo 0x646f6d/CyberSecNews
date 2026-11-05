@@ -3,7 +3,34 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-11-04T21:49:23.129136+00:00</updated>
+  <updated>2026-11-05T16:12:31.376375+00:00</updated>
+  <entry>
+    <title>ChatGPT Lockdown Mode Bypass: Phishing, Malware Delivery, and Silent Data Exfiltration</title>
+    <id>urn:cybersecnews:item:675</id>
+    <published>2026-11-05T16:12:31.376375+00:00</published>
+    <updated>2026-11-05T16:12:31.376375+00:00</updated>
+    <link href="https://research.checkpoint.com/2026/chatgpt-lockdown-mode-bypass-phishing-malware-delivery-and-silent-data-exfiltration/" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · data-exfiltration&lt;/em&gt;&lt;/p&gt;&lt;p&gt;OpenAI's ChatGPT code-execution runtime contained a network isolation bypass that allowed attackers to exfiltrate sensitive conversation data via DNS tunneling, circumventing Lockdown Mode protections. The vulnerability enabled phishing, malware delivery, and silent data theft through hidden outbound channels. OpenAI deployed a fix promptly after disclosure by Check Point Research; no indication of active wild exploitation is mentioned, but the technique demonstrates a critical attack vector against sandboxed AI execution environments. Users should ensure their ChatGPT instances are fully updated and consider restricting code execution capabilities for sensitive conversations.&lt;/p&gt;&lt;p&gt;&lt;a href="https://research.checkpoint.com/2026/chatgpt-lockdown-mode-bypass-phishing-malware-delivery-and-silent-data-exfiltration/"&gt;Read more&lt;/a&gt; · Source: checkpoint-research&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Vulnerability Scans for Older Cisco IOS Vulnerability / Opt-Out Headers, (Thu, Nov 5th)</title>
+    <id>urn:cybersecnews:item:674</id>
+    <published>2026-11-05T16:12:31.372684+00:00</published>
+    <updated>2026-11-05T16:12:31.372684+00:00</updated>
+    <link href="https://isc.sans.edu/diary/rss/33492" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2023-20198&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Cisco IOS devices are experiencing reconnaissance activity targeting a known vulnerability, suspected to be CVE-2023-20198, with attackers probing systems via vulnerability scans. The exploit attempts detected in honeypot traffic indicate active interest in compromising older Cisco IOS installations, though this represents established threat activity rather than novel exploitation. Organizations running affected Cisco IOS versions should prioritize patching to the latest available security updates if not already deployed. Monitor for scanning activity targeting Cisco devices and ensure access controls restrict management interfaces to authorized networks only.&lt;/p&gt;&lt;p&gt;&lt;a href="https://isc.sans.edu/diary/rss/33492"&gt;Read more&lt;/a&gt; · Source: sans-isc&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Schadcode-Attacken möglich: In Microsoft Paint klafft eine Zero-Click-Lücke</title>
+    <id>urn:cybersecnews:item:673</id>
+    <published>2026-11-05T16:12:31.371316+00:00</published>
+    <updated>2026-11-05T16:12:31.371316+00:00</updated>
+    <link href="https://www.golem.de/news/schadcode-attacken-moeglich-in-microsoft-paint-klafft-eine-zero-click-luecke-2611-214873.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Microsoft Paint contains a zero-click vulnerability (CVE-2024-21323) allowing remote code execution on Windows 11 systems through maliciously crafted image files. The vulnerability has been patched by Microsoft, though the update has not yet reached all affected systems. Users should immediately apply available Windows updates; alternatively, restrict Paint's access to untrusted image sources until patches are deployed. No evidence of active exploitation in the wild has been reported, but the zero-click nature and ease of delivery via image files presents significant risk.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.golem.de/news/schadcode-attacken-moeglich-in-microsoft-paint-klafft-eine-zero-click-luecke-2611-214873.html"&gt;Read more&lt;/a&gt; · Source: golem-security&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Apple Multiple Products: Apple Multiple Products Improper Authentication Vulnerability (CVE-2024-27834)</title>
     <id>urn:cybersecnews:item:672</id>
@@ -876,32 +903,5 @@
     <link href="https://horizon3.ai/attack-research/cve-2026-106173-deep-dive-fortisiem-grpc-path-traversal-file-write-rce/" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · path-traversal,rce · CVE-2026-106173&lt;/em&gt;&lt;/p&gt;&lt;p&gt;FortiSIEM's unauthenticated gRPC service contains a critical path traversal vulnerability (CVE-2026-106173) enabling arbitrary file writes and RCE through null-byte handling in file paths. The flaw affects FortiSIEM across multiple versions and requires no authentication, making it readily exploitable. Active exploitation in the wild has been observed based on available indicators of compromise. Immediately patch FortiSIEM to the latest patched version; as interim mitigation, restrict gRPC service access (default port 50051) to trusted networks only and monitor for suspicious file write patterns in FortiSIEM directories.&lt;/p&gt;&lt;p&gt;&lt;a href="https://horizon3.ai/attack-research/cve-2026-106173-deep-dive-fortisiem-grpc-path-traversal-file-write-rce/"&gt;Read more&lt;/a&gt; · Source: horizon3&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Authentication Bypass, Remote Code Execution, and Database Read in Eptura Archibus (FIXED)</title>
-    <id>urn:cybersecnews:item:575</id>
-    <published>2026-10-19T20:54:49.905520+00:00</published>
-    <updated>2026-10-19T20:54:49.905520+00:00</updated>
-    <link href="https://www.rapid7.com/blog/post/ve-authentication-bypass-remote-code-execution-and-database-read-in-eptura-archibus-fixed" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass,rce,database-read · CVE-2026-107186, CVE-2026-107187, CVE-2026-107188&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Eptura Archibus versions prior to 2025.02 contain three chained vulnerabilities in its Java Direct Web Remoting (DWR) API: an authentication bypass (CVE-2026-107186, CVSS 8.6) allowing unauthenticated workflow execution, full database read access (CVE-2026-107187, CVSS 8.5) to extract credentials and sensitive data, and unrestricted file upload (CVE-2026-107188, CVSS 9.6 Critical) enabling remote code execution as NT AUTHORITY/Local Service. These vulnerabilities are exploitable by network-adjacent attackers with HTTP access and were actively exploited on a customer system during discovery; no evidence of widespread wild exploitation is documented. Immediate patching to Archibus 2025.02 or later is required, as the vulnerable DWR authentication mechanism was redesigned into a REST API in the patched version.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.rapid7.com/blog/post/ve-authentication-bypass-remote-code-execution-and-database-read-in-eptura-archibus-fixed"&gt;Read more&lt;/a&gt; · Source: rapid7&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Mercury: Unauthenticated Remote Code Execution in /api/terminals - access control bypass (CVE-2026-111057)</title>
-    <id>urn:cybersecnews:item:574</id>
-    <published>2026-10-19T20:54:49.904121+00:00</published>
-    <updated>2026-10-19T20:54:49.904121+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-f8c7-rwf9-fmgm" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · access-control-bypass · CVE-2026-111057&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Mercury (pip package) contains a critical access control bypass in `/api/terminals` due to a missing comma in the `BLOCKED_PATTERNS` list within `mercury_app/block_handler.py`, allowing unauthenticated attackers to spawn interactive OS-level shells on affected hosts. This vulnerability (CVE-2026-111057) is a syntax error that causes the blocklist to fail covering the `/api/terminals` endpoint. There is no indication of active exploitation in the wild at this time. Affected users should immediately upgrade to a patched version when available; as interim mitigation, restrict network access to Mercury instances or implement authentication controls at the network perimeter.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-f8c7-rwf9-fmgm"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Unpatched Broadcom Wi-Fi Flaw Lets Attackers in Range Run Code as Root on Routers</title>
-    <id>urn:cybersecnews:item:573</id>
-    <published>2026-10-19T15:19:32.148270+00:00</published>
-    <updated>2026-10-19T15:19:32.148270+00:00</updated>
-    <link href="https://thehackernews.com/2026/10/unpatched-broadcom-wi-fi-flaw-lets.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Broadcom Wi-Fi setup software contains a remote code execution vulnerability allowing unauthenticated attackers within radio range to execute arbitrary code as root on affected routers without requiring network credentials or pairing. The flaw affects home gateways from multiple ISPs and has been actively demonstrated to extract sensitive data including Wi-Fi passwords. No evidence of widespread exploitation in the wild has been reported, but the attack requires only proximity to the device with no authentication barriers. Affected users should contact their ISP or device manufacturer immediately for patches; if unavailable, isolate routers to trusted networks only and disable remote management features.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/unpatched-broadcom-wi-fi-flaw-lets.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
   </entry>
 </feed>
