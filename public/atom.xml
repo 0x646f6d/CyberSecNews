@@ -3,7 +3,34 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-11-05T16:12:31.376375+00:00</updated>
+  <updated>2026-11-06T15:42:42.772497+00:00</updated>
+  <entry>
+    <title>D-Link warns of multiple zero-days in DGS-3130 Series switches</title>
+    <id>urn:cybersecnews:item:678</id>
+    <published>2026-11-06T15:42:42.772497+00:00</published>
+    <updated>2026-11-06T15:42:42.772497+00:00</updated>
+    <link href="https://www.bleepingcomputer.com/news/security/d-link-warns-of-multiple-zero-days-in-dgs-3130-series-switches/" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · multiple&lt;/em&gt;&lt;/p&gt;&lt;p&gt;D-Link DGS-3130 series managed Gigabit switches contain multiple unpatched zero-day vulnerabilities affecting authentication and command injection mechanisms. Specific severity ratings and active exploitation status were not disclosed in the warning. D-Link has released only interim mitigation measures rather than patches; deploy recommended workarounds immediately, restrict network access to affected switches, and monitor vendor advisories for patch availability.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/d-link-warns-of-multiple-zero-days-in-dgs-3130-series-switches/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Hackers Hide Linux Backdoor in Control Web Panel Server to Execute Commands Without Logs</title>
+    <id>urn:cybersecnews:item:677</id>
+    <published>2026-11-06T15:42:42.771633+00:00</published>
+    <updated>2026-11-06T15:42:42.771633+00:00</updated>
+    <link href="https://thehackernews.com/2026/11/hackers-hide-linux-backdoor-in-control.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · backdoor&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Control Web Panel (CWP) web server contains a backdoor allowing remote command execution without logging to access logs; installation requires prior root-level compromise. Severity is high due to persistence and log-evasion capabilities, though initial access barrier is significant. No indication of widespread wild exploitation currently reported. Immediately audit all CWP installations for unauthorized modifications to the web server binary, isolate compromised systems, and restore from clean backups; implement file integrity monitoring and restrict root access privileges.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/11/hackers-hide-linux-backdoor-in-control.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Sicherheitslücke in der Firmware: PHP2Shell bleibt in Firewalls und Industriegeräten gefährlich</title>
+    <id>urn:cybersecnews:item:676</id>
+    <published>2026-11-06T15:42:42.769307+00:00</published>
+    <updated>2026-11-06T15:42:42.769307+00:00</updated>
+    <link href="https://www.golem.de/news/sicherheitsluecke-in-der-firmware-php2shell-bleibt-in-firewalls-und-industriegeraeten-gefaehrlich-2611-214898.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Embedded PHP in network devices (firewalls, routers, industrial equipment) contains unpatched vulnerabilities that device administrators cannot remediate independently. The PHP2Shell technique enables attackers to execute arbitrary code through vulnerable PHP interfaces, persisting even after firmware updates if the underlying PHP code is not addressed. Severity is high given the critical nature of affected devices and their role in network security perimeters. Recommended actions: contact device manufacturers for PHP security patches, implement network segmentation to restrict access to management interfaces, and monitor for suspicious PHP execution patterns until vendor patches are available.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.golem.de/news/sicherheitsluecke-in-der-firmware-php2shell-bleibt-in-firewalls-und-industriegeraeten-gefaehrlich-2611-214898.html"&gt;Read more&lt;/a&gt; · Source: golem-security&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>ChatGPT Lockdown Mode Bypass: Phishing, Malware Delivery, and Silent Data Exfiltration</title>
     <id>urn:cybersecnews:item:675</id>
@@ -29,7 +56,7 @@
     <updated>2026-11-05T16:12:31.371316+00:00</updated>
     <link href="https://www.golem.de/news/schadcode-attacken-moeglich-in-microsoft-paint-klafft-eine-zero-click-luecke-2611-214873.html" rel="alternate" />
     <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Microsoft Paint contains a zero-click vulnerability (CVE-2024-21323) allowing remote code execution on Windows 11 systems through maliciously crafted image files. The vulnerability has been patched by Microsoft, though the update has not yet reached all affected systems. Users should immediately apply available Windows updates; alternatively, restrict Paint's access to untrusted image sources until patches are deployed. No evidence of active exploitation in the wild has been reported, but the zero-click nature and ease of delivery via image files presents significant risk.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.golem.de/news/schadcode-attacken-moeglich-in-microsoft-paint-klafft-eine-zero-click-luecke-2611-214873.html"&gt;Read more&lt;/a&gt; · Source: golem-security&lt;/p&gt;</content>
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-83844&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Microsoft Paint contains a zero-click vulnerability (CVE-2024-21323) allowing remote code execution on Windows 11 systems through maliciously crafted image files. The vulnerability has been patched by Microsoft, though the update has not yet reached all affected systems. Users should immediately apply available Windows updates; alternatively, restrict Paint's access to untrusted image sources until patches are deployed. No evidence of active exploitation in the wild has been reported, but the zero-click nature and ease of delivery via image files presents significant risk.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.golem.de/news/schadcode-attacken-moeglich-in-microsoft-paint-klafft-eine-zero-click-luecke-2611-214873.html"&gt;Read more&lt;/a&gt; · Source: golem-security&lt;/p&gt;</content>
   </entry>
   <entry>
     <title>Apple Multiple Products: Apple Multiple Products Improper Authentication Vulnerability (CVE-2024-27834)</title>
@@ -876,32 +903,5 @@
     <link href="https://www.bleepingcomputer.com/news/security/php-warns-admins-of-two-critical-flaws-emergency-patches-coming-tomorrow/" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · critical · CVE-2026-109618, CVE-2026-109619&lt;/em&gt;&lt;/p&gt;&lt;p&gt;PHP is releasing emergency patches tomorrow for two critical vulnerabilities affecting the PHP interpreter; details have leaked early, compromising the coordinated disclosure timeline. The exact nature of these flaws remains undisclosed, but their critical rating and premature exposure suggest active exploitation risk is high or imminent. Administrators should prioritize applying these patches immediately upon release tomorrow and consider temporarily restricting PHP application exposure if feasible. Monitor PHP's official security advisory channels for details and patch availability as soon as updates become available.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/php-warns-admins-of-two-critical-flaws-emergency-patches-coming-tomorrow/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Stolen UpdraftCentral keys used to backdoor WordPress sites</title>
-    <id>urn:cybersecnews:item:578</id>
-    <published>2026-10-21T03:32:06.421231+00:00</published>
-    <updated>2026-10-21T03:32:06.421231+00:00</updated>
-    <link href="https://www.bleepingcomputer.com/news/security/stolen-updraftcentral-keys-used-to-backdoor-wordpress-sites/" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · credential-compromise&lt;/em&gt;&lt;/p&gt;&lt;p&gt;UpdraftCentral, a WordPress management tool used to remotely administer WordPress sites, had authentication keys compromised following a breach of TeamUpdraft's infrastructure. The stolen keys allow attackers to send arbitrary commands to WordPress installations connected through UpdraftCentral, enabling complete site compromise. This vulnerability is actively exploited in the wild with confirmed backdooring of WordPress sites. Immediately revoke and regenerate all UpdraftCentral connection keys, audit sites for unauthorized activity, and monitor for suspicious commands sent through the platform; consider temporarily disconnecting UpdraftCentral until key rotation is complete.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/stolen-updraftcentral-keys-used-to-backdoor-wordpress-sites/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>uv's bundled CA store trusts an emSign root whose intermediate CA keys are compromised</title>
-    <id>urn:cybersecnews:item:577</id>
-    <published>2026-10-20T19:51:41.418630+00:00</published>
-    <updated>2026-10-20T19:51:41.418630+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-hq85-5cpj-mr62" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · tls-trust-store&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Python dependency manager uv bundles compromised CA root certificates in its vendored webpki-root-certs store. Versions prior to 0.13.4 include emSign ECC Root CA - G3, which has eight intermediate CAs with compromised private keys that eMudhra has revoked; attackers with these keys can issue valid certificates for any hostname to perform MITM attacks. This is critical severity with potential for exploitation in the wild. Update to uv 0.13.4 or later immediately to remove the vulnerable root from the trusted store.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-hq85-5cpj-mr62"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>CVE-2026-106173 Deep-Dive: FortiSIEM gRPC Path Traversal File Write RCE</title>
-    <id>urn:cybersecnews:item:576</id>
-    <published>2026-10-20T13:22:47.104894+00:00</published>
-    <updated>2026-10-20T13:22:47.104894+00:00</updated>
-    <link href="https://horizon3.ai/attack-research/cve-2026-106173-deep-dive-fortisiem-grpc-path-traversal-file-write-rce/" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · path-traversal,rce · CVE-2026-106173&lt;/em&gt;&lt;/p&gt;&lt;p&gt;FortiSIEM's unauthenticated gRPC service contains a critical path traversal vulnerability (CVE-2026-106173) enabling arbitrary file writes and RCE through null-byte handling in file paths. The flaw affects FortiSIEM across multiple versions and requires no authentication, making it readily exploitable. Active exploitation in the wild has been observed based on available indicators of compromise. Immediately patch FortiSIEM to the latest patched version; as interim mitigation, restrict gRPC service access (default port 50051) to trusted networks only and monitor for suspicious file write patterns in FortiSIEM directories.&lt;/p&gt;&lt;p&gt;&lt;a href="https://horizon3.ai/attack-research/cve-2026-106173-deep-dive-fortisiem-grpc-path-traversal-file-write-rce/"&gt;Read more&lt;/a&gt; · Source: horizon3&lt;/p&gt;</content>
   </entry>
 </feed>
