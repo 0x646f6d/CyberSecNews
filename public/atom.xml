@@ -3,7 +3,34 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-11-06T15:42:42.772497+00:00</updated>
+  <updated>2026-11-06T21:19:13.208785+00:00</updated>
+  <entry>
+    <title>SonicWall SonicOS SSLVPN: SonicWall SonicOS SSLVPN Use of Single-factor Authentication Vulnerability (CVE-2026-19868)</title>
+    <id>urn:cybersecnews:item:681</id>
+    <published>2026-11-06T21:19:13.208785+00:00</published>
+    <updated>2026-11-06T21:19:13.208785+00:00</updated>
+    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-19868" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-19868&lt;/em&gt;&lt;/p&gt;&lt;p&gt;SonicWall SonicOS SSLVPN is affected by CVE-2026-19868, which allows authenticated users with alternate credentials to bypass SAML authentication and MFA controls. This vulnerability is actively exploited in the wild according to CISA's KEV catalog. Organizations must immediately apply vendor-supplied mitigations per BOD 26-04 guidance, or discontinue product use if patches are unavailable, with priority based on internet exposure assessment.&lt;/p&gt;&lt;p&gt;&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2026-19868"&gt;Read more&lt;/a&gt; · Source: cisa-kev&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Fake security tools on GitHub push backdoors and infostealers</title>
+    <id>urn:cybersecnews:item:680</id>
+    <published>2026-11-06T21:19:13.207082+00:00</published>
+    <updated>2026-11-06T21:19:13.207082+00:00</updated>
+    <link href="https://www.bleepingcomputer.com/news/security/fake-security-tools-on-github-push-backdoors-and-infostealers/" rel="alternate" />
+    <category term="red-team" />
+    <content type="html">&lt;p&gt;&lt;em&gt;red-team · supply-chain&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Fake security tools hosted on GitHub are distributing backdoor and infostealer malware to security professionals. These malicious repositories impersonate legitimate security utilities, deceiving developers into installing compromised software that establishes persistent access and exfiltrates sensitive data. The threat is actively exploited in the wild, targeting security teams who may have elevated system access and valuable credentials. Mitigation requires vetting GitHub projects for authenticity (verifying maintainers and commit history), using software supply chain security tools, and implementing strict code review practices before executing third-party security tools in production environments.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/fake-security-tools-on-github-push-backdoors-and-infostealers/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Hackers Target OpenSSH SSHole Flaw Within Hours of Disclosure, Gain Root on Honeypot</title>
+    <id>urn:cybersecnews:item:679</id>
+    <published>2026-11-06T21:19:13.205218+00:00</published>
+    <updated>2026-11-06T21:19:13.205218+00:00</updated>
+    <link href="https://thehackernews.com/2026/11/hackers-exploited-openssh-sshole-flaw.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-123158&lt;/em&gt;&lt;/p&gt;&lt;p&gt;OpenSSH on musl-based Linux systems with PAM disabled is vulnerable to CVE-2026-123158 (SSHole, CVSS 8.1), which allows unauthorized root login to passwordless accounts. Exploitation in the wild has been confirmed within hours of public disclosure, with threat actors successfully gaining root access on honeypot systems. Apply the latest OpenSSH security patch immediately, and enable PAM or migrate to glibc-based systems as interim mitigations if patching is delayed.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/11/hackers-exploited-openssh-sshole-flaw.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>D-Link warns of multiple zero-days in DGS-3130 Series switches</title>
     <id>urn:cybersecnews:item:678</id>
@@ -876,32 +903,5 @@
     <link href="https://thehackernews.com/2026/10/china-aligned-bronze-sandcastle-abuses.html" rel="alternate" />
     <category term="red-team" />
     <content type="html">&lt;p&gt;&lt;em&gt;red-team · dll-sideloading&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Bronze Sandcastle, a China-aligned threat actor active since mid-2025, exploits DLL sideloading vulnerabilities in Sandboxie to deploy backdoors against organizations in Asia and Africa. The group leverages legitimate Sandboxie processes to load malicious DLLs, a technique that evades detection by appearing as benign sandbox software execution. No severity rating or in-the-wild exploitation prevalence data was provided in available details. Organizations should update Sandboxie to the latest version, implement DLL sideloading mitigations (code signing enforcement, application whitelisting), and monitor for suspicious Sandboxie process behavior.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/china-aligned-bronze-sandcastle-abuses.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Oracle October 2026 Critical Patch Update Addresses 1209 CVEs</title>
-    <id>urn:cybersecnews:item:581</id>
-    <published>2026-10-21T03:32:06.424610+00:00</published>
-    <updated>2026-10-21T03:32:06.424610+00:00</updated>
-    <link href="https://www.tenable.com/blog/oracle-october-2026-critical-patch-update-addresses-1209-cves" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · multiple&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Oracle's October 2026 Critical Patch Update addresses 1209 CVEs across 33 product families, with 112 critical-severity patches representing 8.6% of total patches released. Oracle Fusion Middleware and E-Business Suite received the most patches (206 and 194 respectively), with 134 and 31 remote exploits without authentication required. The high prevalence of remotely exploitable critical vulnerabilities in Fusion Middleware (95 of 206 patches) and Siebel CRM (66 of 122 patches) indicates immediate risk. Apply all relevant patches from this CPU immediately, prioritizing critical updates for Fusion Middleware and E-Business Suite deployments.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.tenable.com/blog/oracle-october-2026-critical-patch-update-addresses-1209-cves"&gt;Read more&lt;/a&gt; · Source: tenable&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Pillow: Heap buffer overflow in ImagingJpegDecode (CVE-2026-112403)</title>
-    <id>urn:cybersecnews:item:580</id>
-    <published>2026-10-21T03:32:06.423764+00:00</published>
-    <updated>2026-10-21T03:32:06.423764+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-8g5g-8vmr-9782" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · heap-buffer-overflow · CVE-2026-112393, CVE-2026-112398, CVE-2026-112403, CVE-2026-96639&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Pillow's `JpegImageFile.draft()` method used by `Image.thumbnail()` contains a critical heap buffer overflow in `ImagingJpegDecode()` that fails to validate JPEG decoder output dimensions against the allocated decode buffer. The vulnerability occurs when requesting scaled JPEG output (1/2, 1/4, or 1/8) because the buffer allocation does not account for actual output parameters set by `jpeg_start_decompress()`. This flaw can be exploited remotely via specially crafted JPEG files to achieve arbitrary code execution. Users should immediately update Pillow to the latest patched version.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-8g5g-8vmr-9782"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>PHP warns admins of two critical flaws, emergency patches coming tomorrow</title>
-    <id>urn:cybersecnews:item:579</id>
-    <published>2026-10-21T03:32:06.422443+00:00</published>
-    <updated>2026-10-21T03:32:06.422443+00:00</updated>
-    <link href="https://www.bleepingcomputer.com/news/security/php-warns-admins-of-two-critical-flaws-emergency-patches-coming-tomorrow/" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · critical · CVE-2026-109618, CVE-2026-109619&lt;/em&gt;&lt;/p&gt;&lt;p&gt;PHP is releasing emergency patches tomorrow for two critical vulnerabilities affecting the PHP interpreter; details have leaked early, compromising the coordinated disclosure timeline. The exact nature of these flaws remains undisclosed, but their critical rating and premature exposure suggest active exploitation risk is high or imminent. Administrators should prioritize applying these patches immediately upon release tomorrow and consider temporarily restricting PHP application exposure if feasible. Monitor PHP's official security advisory channels for details and patch availability as soon as updates become available.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/php-warns-admins-of-two-critical-flaws-emergency-patches-coming-tomorrow/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
   </entry>
 </feed>
