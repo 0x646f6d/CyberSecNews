@@ -3,7 +3,106 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-11-10T06:08:51.063666+00:00</updated>
+  <updated>2026-11-10T16:09:37.701263+00:00</updated>
+  <entry>
+    <title>Not All That Glitters Is Gold: Tracking CopperDragon’s Sparrow Framework Around the Globe</title>
+    <id>urn:cybersecnews:item:697</id>
+    <published>2026-11-10T16:09:37.701263+00:00</published>
+    <updated>2026-11-10T16:09:37.701263+00:00</updated>
+    <link href="https://research.checkpoint.com/2026/not-all-that-glitters-is-gold-tracking-copperdragons-sparrow-framework-around-the-globe/" rel="alternate" />
+    <category term="red-team" />
+    <content type="html">&lt;p&gt;&lt;em&gt;red-team · c2&lt;/em&gt;&lt;/p&gt;&lt;p&gt;CopperDragon threat group deploys the Sparrow framework alongside various backdoors and post-exploitation tools in coordinated intrusion campaigns targeting high-profile organizations across Latin America, Asia, and Europe. The Sparrow framework enables multi-stage payload delivery and persistence mechanisms, allowing attackers to establish flexible command-and-control infrastructure across geographically diverse targets. This represents an active, ongoing threat with demonstrated capability against enterprise environments; organizations should implement detection signatures for Sparrow artifacts and conduct forensic analysis of systems showing indicators of CopperDragon activity. Recommended mitigations include network segmentation, enhanced monitoring of C2 communications patterns, and threat hunting for lateral movement artifacts associated with observed post-exploitation tools.&lt;/p&gt;&lt;p&gt;&lt;a href="https://research.checkpoint.com/2026/not-all-that-glitters-is-gold-tracking-copperdragons-sparrow-framework-around-the-globe/"&gt;Read more&lt;/a&gt; · Source: checkpoint-research&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>node-opcua: Namespace-Level RBAC Fail-Open - Anonymous Write/Call Bypass via Unbound `DefaultRolePermissions (CVE-2026-95860)</title>
+    <id>urn:cybersecnews:item:696</id>
+    <published>2026-11-10T16:09:37.700548+00:00</published>
+    <updated>2026-11-10T16:09:37.700548+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-xggf-m53x-jc3f" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-95860&lt;/em&gt;&lt;/p&gt;&lt;p&gt;node-opcua and related packages (node-opcua-address-space, node-opcua-server) fail to enforce role-based access control (RBAC) at the namespace level, allowing unauthenticated clients to write protected variables and call privileged methods on nodes lacking explicit per-node permissions. The vulnerability stems from improper handling of DefaultRolePermissions inheritance; the implementation grants access instead of applying the required default-deny policy specified in OPC UA Part 3. Severity is critical with no indication of active exploitation reported. Immediately patch to the latest version and review OPC UA server configurations to ensure explicit RolePermissions are defined on sensitive nodes as a temporary mitigation.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-xggf-m53x-jc3f"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>bitcoinjs-lib: Undetected merkle node duplication in block root computation validates a forged transaction list (CVE-2026-107846)</title>
+    <id>urn:cybersecnews:item:695</id>
+    <published>2026-11-10T16:09:37.699696+00:00</published>
+    <updated>2026-11-10T16:09:37.699696+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-8vv3-6qpc-gpw6" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · merkle-tree-collision · CVE-2026-107846&lt;/em&gt;&lt;/p&gt;&lt;p&gt;The bitcoinjs-lib npm package contains a critical vulnerability (CVE-2026-107846) in its merkle root computation where `fastMerkleRoot` silently pads odd-level nodes by self-hashing without indication, allowing attackers to duplicate transactions while maintaining an identical merkle root and block hash. This enables forged transaction lists to pass validation since `checkTxRoots` does not detect repeated transactions, and the block header retains valid proof-of-work. There is no indication of active wild exploitation. Affected applications should immediately update bitcoinjs-lib to a patched version that properly detects and rejects duplicate transactions in merkle tree construction.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-8vv3-6qpc-gpw6"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Turla hackers use new Cereal malware to spy on govt Exchange servers</title>
+    <id>urn:cybersecnews:item:694</id>
+    <published>2026-11-10T16:09:37.698763+00:00</published>
+    <updated>2026-11-10T16:09:37.698763+00:00</updated>
+    <link href="https://www.bleepingcomputer.com/news/security/turla-hackers-use-new-ceral-malware-to-spy-on-govt-exchange-servers/" rel="alternate" />
+    <category term="red-team" />
+    <content type="html">&lt;p&gt;&lt;em&gt;red-team · c2&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Turla has deployed a new malware family designated "Cereal" targeting Microsoft Exchange servers at government entities to intercept email communications. The malware operates as a post-exploitation tool for persistent access and email exfiltration on compromised Exchange infrastructure. No CVSS score provided, but this represents active exploitation in the wild against high-value government targets. Organizations should immediately patch all Exchange servers to the latest security updates, conduct forensic analysis for indicators of compromise including unusual Exchange service behavior and mail forwarding rules, and review email access logs for anomalous activity.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/turla-hackers-use-new-ceral-malware-to-spy-on-govt-exchange-servers/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>SAP patches ICM2SHELL and PROXYGATE maximum severity flaws</title>
+    <id>urn:cybersecnews:item:693</id>
+    <published>2026-11-10T16:09:37.698063+00:00</published>
+    <updated>2026-11-10T16:09:37.698063+00:00</updated>
+    <link href="https://www.bleepingcomputer.com/news/security/sap-patches-four-maximum-severity-security-vulnerabilities/" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;SAP resolved 35 vulnerabilities in November 2026 updates, including four critical flaws in NetWeaver, Web Dispatcher, and Gateway components. The maximum-severity issues ICM2SHELL and PROXYGATE affect core SAP infrastructure and enable remote code execution through improper input validation and proxy request handling. These vulnerabilities carry CVSS ratings of 9.8+ and are likely to be exploited given their severity and accessibility; no evidence of active exploitation in the wild has been confirmed at this time. Immediately apply SAP's November 2026 security patches to all affected systems, prioritize Web Dispatcher and Gateway deployments, and restrict network access to these components where feasible pending patching.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/sap-patches-four-maximum-severity-security-vulnerabilities/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Binance warns of iOS flaw that could leak crypto wallet secrets</title>
+    <id>urn:cybersecnews:item:692</id>
+    <published>2026-11-10T16:09:37.697222+00:00</published>
+    <updated>2026-11-10T16:09:37.697222+00:00</updated>
+    <link href="https://www.bleepingcomputer.com/news/security/binance-warns-of-ios-flaw-that-could-leak-crypto-wallet-secrets/" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · file-disclosure&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Apple iOS versions 26.7.1, 27.0.1, and 27.2 contain a file access vulnerability allowing third-party applications to read private files from other apps, potentially exposing cryptocurrency seed phrases, secret keys, and login credentials. The flaw affects iOS users running these specific versions and poses severe risk to cryptocurrency holders whose wallet secrets could be compromised. There is no indication the vulnerability is currently exploited in the wild, but the exposure of cryptographic material would be critical if weaponized. Users should immediately update iOS to patched versions once available, and cryptocurrency users should consider moving assets to hardware wallets or secure offline storage pending patches.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/binance-warns-of-ios-flaw-that-could-leak-crypto-wallet-secrets/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Google Issues Chrome Security Update for Eighth Actively Exploited Zero-Day of 2026</title>
+    <id>urn:cybersecnews:item:691</id>
+    <published>2026-11-10T16:09:37.696496+00:00</published>
+    <updated>2026-11-10T16:09:37.696496+00:00</updated>
+    <link href="https://thehackernews.com/2026/11/google-issues-chrome-security-update.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · use-after-free · CVE-2026-125350&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Google Chrome has patched CVE-2026-125350, a high-severity use-after-free vulnerability in the XML component that is actively exploited in the wild. This marks the eighth zero-day vulnerability exploited against Chrome in 2026. Users should immediately update to the latest Chrome version to mitigate exposure to active attacks targeting this flaw.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/11/google-issues-chrome-security-update.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>SAP Patches Four CVSS 10.0 Flaws, Including Two Enabling Remote Code Execution</title>
+    <id>urn:cybersecnews:item:690</id>
+    <published>2026-11-10T16:09:37.695598+00:00</published>
+    <updated>2026-11-10T16:09:37.695598+00:00</updated>
+    <link href="https://thehackernews.com/2026/11/sap-patches-four-cvss-100-flaws.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;SAP addressed four critical vulnerabilities in NetWeaver Application Server and Web Dispatcher, all rated CVSS 10.0, enabling unauthenticated remote code execution and complete system compromise. These flaws require no user interaction and are exploitable over the network without authentication, representing maximum severity threats. Immediate patching is mandatory; organizations should prioritize applying SAP's latest security updates and consider network segmentation to restrict access to affected components pending patch deployment. Monitor for any indicators of exploitation targeting these newly disclosed flaws.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/11/sap-patches-four-cvss-100-flaws.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Dringend patchen: Attackierte Chrome-Lücke gefährdet unzählige Nutzer</title>
+    <id>urn:cybersecnews:item:689</id>
+    <published>2026-11-10T16:09:37.694813+00:00</published>
+    <updated>2026-11-10T16:09:37.694813+00:00</updated>
+    <link href="https://www.golem.de/news/dringend-patchen-attackierte-chrome-luecke-gefaehrdet-unzaehlige-nutzer-2611-215019.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Google Chrome addressed multiple critical vulnerabilities in a recent security update, including a zero-day flaw currently being exploited in the wild. The affected versions expose countless users to active attack campaigns. Immediate patching to the latest Chrome version is essential and should be prioritized across all systems.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.golem.de/news/dringend-patchen-attackierte-chrome-luecke-gefaehrdet-unzaehlige-nutzer-2611-215019.html"&gt;Read more&lt;/a&gt; · Source: golem-security&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Zahlreiche Sicherheitslücken bedrohen IBM App Connect Enterprise</title>
+    <id>urn:cybersecnews:item:688</id>
+    <published>2026-11-10T16:09:37.693895+00:00</published>
+    <updated>2026-11-10T16:09:37.693895+00:00</updated>
+    <link href="https://www.heise.de/news/Zahlreiche-Sicherheitsluecken-bedrohen-IBM-App-Connect-Enterprise-11518678.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · multiple&lt;/em&gt;&lt;/p&gt;&lt;p&gt;IBM App Connect Enterprise, Log Source Management App for IBM QRadar SIEM, and TS4500 Tape Library contain multiple unspecified vulnerabilities that could enable unauthorized access, information disclosure, or system compromise. Severity levels vary by individual CVEs but impact critical integration and security infrastructure components. No indication provided of active exploitation in the wild. IBM has released patches; administrators should apply updates immediately based on CVSS scores and environmental risk assessment.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.heise.de/news/Zahlreiche-Sicherheitsluecken-bedrohen-IBM-App-Connect-Enterprise-11518678.html"&gt;Read more&lt;/a&gt; · Source: heise-security&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>SAP-Patchday bringt Korrekturen für Codeschmuggel-Lücken</title>
+    <id>urn:cybersecnews:item:687</id>
+    <published>2026-11-10T16:09:37.692713+00:00</published>
+    <updated>2026-11-10T16:09:37.692713+00:00</updated>
+    <link href="https://www.heise.de/news/SAP-Patchday-bringt-Korrekturen-fuer-Codeschmuggel-Luecken-11519250.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · code-injection,memory-corruption&lt;/em&gt;&lt;/p&gt;&lt;p&gt;SAP released patches for nine critical vulnerabilities on its November patchday, addressing code injection and memory corruption flaws that could enable unauthorized code execution. The vulnerabilities affect multiple SAP products and components across their enterprise application suite. Severity is critical with active exploitation potential in enterprise environments given SAP's widespread use. Organizations running SAP systems should immediately apply available patches and prioritize updates for affected components to mitigate code injection and memory corruption risks.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.heise.de/news/SAP-Patchday-bringt-Korrekturen-fuer-Codeschmuggel-Luecken-11519250.html"&gt;Read more&lt;/a&gt; · Source: heise-security&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>U.S. urges critical infrastructure orgs to secure refrigeration systems ASAP after EU supermarket and blood bank attacks</title>
     <id>urn:cybersecnews:item:686</id>
@@ -47,7 +146,7 @@
     <updated>2026-11-10T06:08:51.053549+00:00</updated>
     <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-102895" rel="alternate" />
     <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-102895&lt;/em&gt;&lt;/p&gt;&lt;p&gt;GPUStack contains an improper authentication vulnerability (CVE-2026-102895) allowing unauthenticated administrative access including user/model manipulation, persistent API key creation, secret disclosure, and remote code execution via POST /v2/inference-backends/from-yaml. This vulnerability is actively exploited in the wild and carries high severity due to its potential for complete system compromise. Organizations must immediately apply vendor-supplied mitigations and follow CISA BOD 26-04 patching guidance; discontinue use if patches are unavailable. Conduct forensics triage and assess internet exposure to prioritize remediation per CISA's risk-based guidelines.&lt;/p&gt;&lt;p&gt;&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2026-102895"&gt;Read more&lt;/a&gt; · Source: cisa-kev&lt;/p&gt;</content>
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-102894, CVE-2026-102895&lt;/em&gt;&lt;/p&gt;&lt;p&gt;GPUStack contains an improper authentication vulnerability (CVE-2026-102895) allowing unauthenticated administrative access including user/model manipulation, persistent API key creation, secret disclosure, and remote code execution via POST /v2/inference-backends/from-yaml. This vulnerability is actively exploited in the wild and carries high severity due to its potential for complete system compromise. Organizations must immediately apply vendor-supplied mitigations and follow CISA BOD 26-04 patching guidance; discontinue use if patches are unavailable. Conduct forensics triage and assess internet exposure to prioritize remediation per CISA's risk-based guidelines.&lt;/p&gt;&lt;p&gt;&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2026-102895"&gt;Read more&lt;/a&gt; · Source: cisa-kev&lt;/p&gt;</content>
   </entry>
   <entry>
     <title>SonicWall SonicOS SSLVPN: SonicWall SonicOS SSLVPN Use of Single-factor Authentication Vulnerability (CVE-2026-19868)</title>
@@ -804,104 +903,5 @@
     <link href="https://github.com/advisories/GHSA-2464-fhr4-w9xw" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Next.js Image Optimization API is vulnerable to unauthenticated remote code execution on glibc-based Linux systems when processing SVG files, caused by a memory-related vulnerability in the upstream sharp library. This is a critical severity issue with potential for active exploitation. Users must upgrade to Next.js versions that include sharp 0.35.5 or later; fresh installations are already patched, but existing deployments require immediate updates through package manager upgrades.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-2464-fhr4-w9xw"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Sentry-Javascript: Middleware Bypass when using Tunnel route (CVE-2026-114139)</title>
-    <id>urn:cybersecnews:item:597</id>
-    <published>2026-10-22T19:47:25.015126+00:00</published>
-    <updated>2026-10-22T19:47:25.015126+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-mchm-gjx6-7h55" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · middleware-bypass · CVE-2026-114139&lt;/em&gt;&lt;/p&gt;&lt;p&gt;The Sentry JavaScript SDK for Next.js (npm/@sentry/nextjs) contains a critical middleware bypass vulnerability (CVE-2026-114139) in the `tunnelRoute` feature. The vulnerability allows unauthenticated requests to bypass server middleware when the tunnel route is configured, as the middleware skip applies more broadly than the actual rewrite rule that should restrict access to tunnel endpoints. This is exploitable in production environments and allows attackers to bypass security middleware protections. Upgrade to the patched version of @sentry/nextjs immediately and review deployed middleware to ensure no sensitive operations were exposed.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-mchm-gjx6-7h55"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>DOMPurify SAFE_FOR_TEMPLATES bypass: split template expressions survive in attached shadow root content on DOM output modes</title>
-    <id>urn:cybersecnews:item:596</id>
-    <published>2026-10-22T19:47:25.014402+00:00</published>
-    <updated>2026-10-22T19:47:25.014402+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-cg2g-xh64-v4q7" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · template-injection&lt;/em&gt;&lt;/p&gt;&lt;p&gt;DOMPurify versions with SAFE_FOR_TEMPLATES mode enabled alongside DOM-returning modes (RETURN_DOM, RETURN_DOM_FRAGMENT, or IN_PLACE) fail to sanitize template expressions like {{...}}, ${...}, and &lt;%...%&gt; within attached shadow root content, allowing bypass of template injection protections. The vulnerability exists because the safety net function _scrubTemplateExpressions does not recurse into attached shadow roots despite handling template content. This is critical severity and appears exploitable when users rely on SAFE_FOR_TEMPLATES to prevent template injection attacks. Update DOMPurify to the latest patched version immediately.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-cg2g-xh64-v4q7"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Next.js: Unauthenticated Remote Code Execution in `use cache` functions returning typed arrays</title>
-    <id>urn:cybersecnews:item:595</id>
-    <published>2026-10-22T19:47:25.013388+00:00</published>
-    <updated>2026-10-22T19:47:25.013388+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-673q-mjm6-r5xr" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Next.js App Router applications using `use cache` functions that return typed arrays are vulnerable to unauthenticated remote code execution due to improper serialization handling. This is a critical severity issue actively exploitable in production environments. All Next.js users should upgrade immediately regardless of whether they currently implement affected `use cache` patterns, as there is no viable workaround. Patch to the latest Next.js version as soon as possible.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-673q-mjm6-r5xr"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Two CVSS 9.0 Linux KSMBD RCE Flaws Disclosed on Public Mailing Lists Before Kernel Fixes</title>
-    <id>urn:cybersecnews:item:594</id>
-    <published>2026-10-22T19:47:25.012476+00:00</published>
-    <updated>2026-10-22T19:47:25.012476+00:00</updated>
-    <link href="https://thehackernews.com/2026/10/two-cvss-90-linux-ksmbd-rce-flaws.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Linux KSMBD kernel SMB server contains two critical remote code execution vulnerabilities (CVE details pending) rated CVSS 9.0 by ZDI, with one exploitable pre-authentication and the other requiring SMB Direct/RDMA. Both flaws have been disclosed publicly on mailing lists before kernel patches were available, increasing exploitation risk. No fixes currently exist in mainline kernel; administrators should disable KSMBD immediately on exposed systems until patches are released. Monitor vendor communications and apply kernel updates containing security fixes as soon as available.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/two-cvss-90-linux-ksmbd-rce-flaws.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>eMudhra to Exit Global SSL/TLS Business After 8 Intermediate CA Keys Found Easily Guessable</title>
-    <id>urn:cybersecnews:item:593</id>
-    <published>2026-10-22T19:47:25.011122+00:00</published>
-    <updated>2026-10-22T19:47:25.011122+00:00</updated>
-    <link href="https://thehackernews.com/2026/10/emudhra-to-exit-global-ssltls-business.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · weak-key-generation&lt;/em&gt;&lt;/p&gt;&lt;p&gt;eMudhra's global SSL/TLS certificate business is shutting down following the discovery that eight intermediate CA private keys were cryptographically weak and easily recoverable by researchers. This represents a critical vulnerability in certificate authority infrastructure, as compromised intermediate CA keys enable attackers to forge valid SSL/TLS certificates for any domain, undermining trust across the internet. The severity is extremely high with confirmed exploitability, though eMudhra has not disclosed evidence of malicious exploitation in the wild. Organizations using eMudhra certificates should immediately obtain replacements from partner CAs and audit their systems for any fraudulent certificates issued during the compromise window.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/emudhra-to-exit-global-ssltls-business.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Amazon says PHP2Shell exploitation began 4 days before patches</title>
-    <id>urn:cybersecnews:item:592</id>
-    <published>2026-10-22T13:31:17.210676+00:00</published>
-    <updated>2026-10-22T13:31:17.210676+00:00</updated>
-    <link href="https://www.bleepingcomputer.com/news/security/amazon-says-php2shell-exploitation-began-4-days-before-patches/" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;PHP2Shell vulnerability in PHP affects file upload and code execution capabilities, allowing remote attackers to bypass security restrictions and execute arbitrary code. Amazon Threat Intelligence confirmed active exploitation in the wild beginning approximately four days before vendor patches were released. The vulnerability carries high severity due to its remote code execution potential and demonstrated exploitation by threat actors. Organizations running affected PHP versions should apply security patches immediately and review logs for signs of compromise dating back several days prior to patch availability.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/amazon-says-php2shell-exploitation-began-4-days-before-patches/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>China-Linked Hackers Use ARTEX AI Agents in ConnectWise Supply Chain Attack</title>
-    <id>urn:cybersecnews:item:591</id>
-    <published>2026-10-22T13:31:17.208967+00:00</published>
-    <updated>2026-10-22T13:31:17.208967+00:00</updated>
-    <link href="https://thehackernews.com/2026/10/china-linked-hackers-use-artex-ai.html" rel="alternate" />
-    <category term="red-team" />
-    <content type="html">&lt;p&gt;&lt;em&gt;red-team · supply-chain-compromise&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Storm-0940, a China-aligned threat actor, compromised ConnectWise Cloud Backup through a supply chain attack and deployed ARTEX, a Go-based agentic AI penetration testing framework, to automate post-exploitation activities. ARTEX was previously used against South Korean financial institutions and was converted to closed-source following those attacks. The vulnerability severity and current exploitation status require immediate patching of ConnectWise Cloud Backup; organizations should assume compromise if running affected versions and conduct forensic investigation for ARTEX artifacts and lateral movement indicators.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/china-linked-hackers-use-artex-ai.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Someone Tried to Exploit PHP2Shell 4 Days Before the Vulnerabilities Were Publicly Disclosed</title>
-    <id>urn:cybersecnews:item:590</id>
-    <published>2026-10-22T13:31:17.207992+00:00</published>
-    <updated>2026-10-22T13:31:17.207992+00:00</updated>
-    <link href="https://thehackernews.com/2026/10/someone-tried-to-exploit-php2shell-4.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;PHP2Shell, a web shell generation tool, contains multiple remote code execution vulnerabilities that were exploited in the wild just days after public disclosure on October 21, 2026. Amazon's honeypot detected exploitation attempts as early as October 17, 2026, originating from anonymized IP addresses, indicating active reconnaissance or early-stage attacks. The vulnerabilities enable unauthenticated attackers to execute arbitrary code on affected systems, representing critical severity. Immediate patching is essential for all systems running PHP2Shell, and organizations should monitor for indicators of compromise and suspicious web shell activity.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/someone-tried-to-exploit-php2shell-4.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>New QPACK Flaws Can Crash HTTP/3 Servers, Trigger Up to 4,000-Fold Memory Amplification</title>
-    <id>urn:cybersecnews:item:589</id>
-    <published>2026-10-22T13:31:17.207086+00:00</published>
-    <updated>2026-10-22T13:31:17.207086+00:00</updated>
-    <link href="https://thehackernews.com/2026/10/new-qpack-flaws-can-crash-http3-servers.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · dos&lt;/em&gt;&lt;/p&gt;&lt;p&gt;HTTP/3 servers using vulnerable QPACK header compression implementations are susceptible to denial-of-service attacks via memory amplification flaws discovered by FoxIO. An unauthenticated remote attacker can crash affected servers by sending specially crafted compressed HTTP headers that expand to consume up to 4,000 times more memory than the original payload, requiring minimal resources from the attacker. This vulnerability is actively exploited in the wild with public proof-of-concept code available. Administrators should immediately patch HTTP/3 server implementations and consider implementing request size limits and rate limiting as interim mitigations until patches are available.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/new-qpack-flaws-can-crash-http3-servers.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Node.js Brotli Decoder Bug Could Allow Remote Code Execution in All Supported Versions</title>
-    <id>urn:cybersecnews:item:588</id>
-    <published>2026-10-22T13:31:17.205996+00:00</published>
-    <updated>2026-10-22T13:31:17.205996+00:00</updated>
-    <link href="https://thehackernews.com/2026/10/nodejs-brotli-decoder-bug-could-allow.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-111497&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Node.js versions 22.x, 24.x, and 26.x contain a critical remote code execution vulnerability in the bundled Brotli decompression library affecting all supported release lines. An attacker can exploit this flaw during Brotli decompression to execute arbitrary code on affected systems. Severity is critical with no evidence of active exploitation reported. Immediate patching to the fixed versions released October 21 is mandatory for all production Node.js deployments.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/nodejs-brotli-decoder-bug-could-allow.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>LiteLLM Suspects GitHub Token Leak in AI Gateway Logs Behind Malicious Package Release</title>
-    <id>urn:cybersecnews:item:587</id>
-    <published>2026-10-22T13:31:17.204891+00:00</published>
-    <updated>2026-10-22T13:31:17.204891+00:00</updated>
-    <link href="https://thehackernews.com/2026/10/litellm-suspects-github-token-leak-in.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · supply-chain&lt;/em&gt;&lt;/p&gt;&lt;p&gt;LiteLLM Python package (version 1.107.0 distributed via PyPI and Docker Hub on October 21, 2026) was compromised to deliver a credential stealer and backdoor payload. Threat actors bypassed multiple security controls, likely via a leaked GitHub token discovered in LiteLLM's AI gateway logs, enabling unauthorized package release. This represents critical severity with active exploitation in the wild through supply chain infection of the widely-used AI library. Immediately remove version 1.107.0 from any systems, verify integrity of LiteLLM installations against known good checksums, rotate all GitHub and package repository credentials, and update to a patched version once released by the LiteLLM team.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/litellm-suspects-github-token-leak-in.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
   </entry>
 </feed>
