@@ -3,7 +3,52 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-11-06T21:19:13.208785+00:00</updated>
+  <updated>2026-11-10T06:08:51.063666+00:00</updated>
+  <entry>
+    <title>U.S. urges critical infrastructure orgs to secure refrigeration systems ASAP after EU supermarket and blood bank attacks</title>
+    <id>urn:cybersecnews:item:686</id>
+    <published>2026-11-10T06:08:51.063666+00:00</published>
+    <updated>2026-11-10T06:08:51.063666+00:00</updated>
+    <link href="https://www.tenable.com/blog/u-s-urges-critical-infrastructure-orgs-to-secure-refrigeration-systems-asap-after-eu" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass, rce, misconfig&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Industrial refrigeration and cold-chain monitoring controllers used in healthcare, food, agriculture, and transportation sectors are being actively exploited in ongoing attacks against French blood banks and European supermarkets. Attackers are remotely manipulating temperature controls through unpatched vulnerabilities, weak/default passwords, and misconfigurations in devices such as Danfoss AK-SM/AK-SC, Copeland, and Dixell XWEB controllers to spoil products and create fire hazards. These attacks are confirmed exploited in the wild with hundreds of grocery stores compromised. CISA, FBI, HHS, USDA, and DoT recommend immediate action: change default credentials, patch critical vulnerabilities, replace end-of-life devices, isolate OT systems from business networks, remove unnecessary remote access, identify internet-accessible systems, and maintain offsite backups.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.tenable.com/blog/u-s-urges-critical-infrastructure-orgs-to-secure-refrigeration-systems-asap-after-eu"&gt;Read more&lt;/a&gt; · Source: tenable&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Kubeflow Pipelines API server lacks authorization for shared pipeline uploads (CVE-2026-77596)</title>
+    <id>urn:cybersecnews:item:685</id>
+    <published>2026-11-10T06:08:51.062676+00:00</published>
+    <updated>2026-11-10T06:08:51.062676+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-rjr3-43j3-4q8g" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-77596&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Kubeflow Pipelines API server (go/github.com/kubeflow/pipelines) lacks authorization checks on pipeline upload endpoints when the target namespace is empty, allowing unauthorized users to upload pipelines in multi-user deployments. The vulnerability affects `POST /apis/v2beta1/pipelines/upload` and `POST /apis/v2beta1/pipelines/upload_version` endpoints, which skip SubjectAccessReview validation when namespace resolution returns an empty string. This is rated critical severity; exploitation likelihood in the wild is unknown from the provided data. Immediate patching is required; verify your Kubeflow Pipelines deployment namespace configuration and apply security updates when available.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-rjr3-43j3-4q8g"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>IBM Aspera Faspex: IBM Aspera Faspex Incorrect Authorization Vulnerability (CVE-2026-123218)</title>
+    <id>urn:cybersecnews:item:684</id>
+    <published>2026-11-10T06:08:51.061555+00:00</published>
+    <updated>2026-11-10T06:08:51.061555+00:00</updated>
+    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-123218" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-123218&lt;/em&gt;&lt;/p&gt;&lt;p&gt;IBM Aspera Faspex is affected by CVE-2026-123218, an incorrect authorization vulnerability allowing authenticated users to craft specific messages that bypass authorization controls and achieve privilege escalation. This vulnerability is actively exploited in the wild and carries high severity. Immediately apply vendor-supplied mitigations in accordance with CISA BOD 26-04 guidance, prioritizing internet-exposed assets for patching. If mitigations are unavailable, discontinue use of the product or transition to alternative solutions.&lt;/p&gt;&lt;p&gt;&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2026-123218"&gt;Read more&lt;/a&gt; · Source: cisa-kev&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>SignalWire FreeSwitch: SignalWire FreeSwitch Code Injection Vulnerability (CVE-2026-116779)</title>
+    <id>urn:cybersecnews:item:683</id>
+    <published>2026-11-10T06:08:51.060422+00:00</published>
+    <updated>2026-11-10T06:08:51.060422+00:00</updated>
+    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-116779" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · code-injection · CVE-2026-116779&lt;/em&gt;&lt;/p&gt;&lt;p&gt;SignalWire FreeSwitch is vulnerable to CVE-2026-116779, a code injection flaw enabling configuration disclosure, credential theft, arbitrary call control, and remote command execution. This vulnerability is actively exploited in the wild and carries high severity. Organizations must immediately apply vendor-supplied mitigations per CISA BOD 26-04 guidance; if unavailable, discontinue use of the product or migrate to cloud alternatives. Prioritize patching based on internet exposure assessment and comply with mandatory CISA patching timelines.&lt;/p&gt;&lt;p&gt;&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2026-116779"&gt;Read more&lt;/a&gt; · Source: cisa-kev&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>GPUStack GPUStack: GPUStack Improper Authentication Vulnerability (CVE-2026-102895)</title>
+    <id>urn:cybersecnews:item:682</id>
+    <published>2026-11-10T06:08:51.053549+00:00</published>
+    <updated>2026-11-10T06:08:51.053549+00:00</updated>
+    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-102895" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-102895&lt;/em&gt;&lt;/p&gt;&lt;p&gt;GPUStack contains an improper authentication vulnerability (CVE-2026-102895) allowing unauthenticated administrative access including user/model manipulation, persistent API key creation, secret disclosure, and remote code execution via POST /v2/inference-backends/from-yaml. This vulnerability is actively exploited in the wild and carries high severity due to its potential for complete system compromise. Organizations must immediately apply vendor-supplied mitigations and follow CISA BOD 26-04 patching guidance; discontinue use if patches are unavailable. Conduct forensics triage and assess internet exposure to prioritize remediation per CISA's risk-based guidelines.&lt;/p&gt;&lt;p&gt;&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2026-102895"&gt;Read more&lt;/a&gt; · Source: cisa-kev&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>SonicWall SonicOS SSLVPN: SonicWall SonicOS SSLVPN Use of Single-factor Authentication Vulnerability (CVE-2026-19868)</title>
     <id>urn:cybersecnews:item:681</id>
@@ -858,50 +903,5 @@
     <link href="https://thehackernews.com/2026/10/litellm-suspects-github-token-leak-in.html" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · supply-chain&lt;/em&gt;&lt;/p&gt;&lt;p&gt;LiteLLM Python package (version 1.107.0 distributed via PyPI and Docker Hub on October 21, 2026) was compromised to deliver a credential stealer and backdoor payload. Threat actors bypassed multiple security controls, likely via a leaked GitHub token discovered in LiteLLM's AI gateway logs, enabling unauthorized package release. This represents critical severity with active exploitation in the wild through supply chain infection of the widely-used AI library. Immediately remove version 1.107.0 from any systems, verify integrity of LiteLLM installations against known good checksums, rotate all GitHub and package repository credentials, and update to a patched version once released by the LiteLLM team.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/litellm-suspects-github-token-leak-in.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>php2shell: Updates trudeln ein, viele Webseiten offline, Angriffe laufen</title>
-    <id>urn:cybersecnews:item:586</id>
-    <published>2026-10-22T13:31:17.202364+00:00</published>
-    <updated>2026-10-22T13:31:17.202364+00:00</updated>
-    <link href="https://www.heise.de/news/php2shell-Updates-trudeln-ein-viele-Webseiten-offline-Angriffe-laufen-11496366.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-115560&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Multiple Linux distributions are releasing updated PHP packages following reports of a potential vulnerability affecting PHP installations. Several websites went offline during the incident, though successful exploits have not been confirmed yet. The vulnerability appears to stem from improper handling in PHP's core functionality. Administrators should prioritize applying PHP security updates from their respective Linux distribution providers immediately and monitor systems for exploitation attempts.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.heise.de/news/php2shell-Updates-trudeln-ein-viele-Webseiten-offline-Angriffe-laufen-11496366.html"&gt;Read more&lt;/a&gt; · Source: heise-security&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Storybook: Missing origin validation in Storybook preview allows code injection from malicious websites (CVE-2026-114125)</title>
-    <id>urn:cybersecnews:item:585</id>
-    <published>2026-10-21T19:57:00.556481+00:00</published>
-    <updated>2026-10-21T19:57:00.556481+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-f2ph-cmg5-wxc8" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · code-injection · CVE-2026-114125&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Storybook preview (@storybook/core, @storybook/core-server, and related addons) contains a missing origin validation vulnerability allowing code injection from malicious websites when a dev server is running. An attacker can cause unauthorized file changes in a developer's project, potentially leading to code execution with developer privileges if a changed file is executed by a local runtime. No active exploitation in the wild has been reported. Update affected Storybook packages to patched versions immediately, and avoid opening Storybook dev servers in untrusted browser contexts.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-f2ph-cmg5-wxc8"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Hackers Hid Vasilek Backdoor in VMware Tools During 2-Year Russian Healthcare Intrusion</title>
-    <id>urn:cybersecnews:item:584</id>
-    <published>2026-10-21T13:29:58.573234+00:00</published>
-    <updated>2026-10-21T13:29:58.573234+00:00</updated>
-    <link href="https://thehackernews.com/2026/10/hackers-hid-vasilek-backdoor-in-vmware.html" rel="alternate" />
-    <category term="red-team" />
-    <content type="html">&lt;p&gt;&lt;em&gt;red-team · backdoor&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Partisan Zmiy (Cyber Partisans) deployed the Vasilek backdoor by compromising VMware Tools within a Russian healthcare network over a two-year intrusion campaign, demonstrating sophisticated persistence techniques. The attack exploits VMware Tools as a delivery mechanism for malware, allowing the threat actor to maintain long-term access to critical infrastructure. No severity score or widespread exploitation data provided, but the multi-year dwell time indicates high operational impact to the targeted organization. Immediate action required: audit VMware Tools installations for unauthorized modifications, verify integrity of VMware Tools packages, isolate and analyze any suspicious VMware processes, and implement strict access controls and monitoring on hypervisor and guest-agent communications.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/hackers-hid-vasilek-backdoor-in-vmware.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Attackers Hijacked Over 300 Tor Exit Relays to Intercept SSH Connections</title>
-    <id>urn:cybersecnews:item:583</id>
-    <published>2026-10-21T13:29:58.571774+00:00</published>
-    <updated>2026-10-21T13:29:58.571774+00:00</updated>
-    <link href="https://thehackernews.com/2026/10/attackers-hijacked-over-300-tor-exit.html" rel="alternate" />
-    <category term="red-team" />
-    <content type="html">&lt;p&gt;&lt;em&gt;red-team · man-in-the-middle&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Attackers compromised over 300 Tor exit relays in October 2020 to intercept SSH traffic and harvest login credentials from users connecting through those nodes. The attack exploited the trust model of Tor's exit relay network, redirecting SSH connections to attacker-controlled servers that captured passwords before forwarding traffic to legitimate destinations. This represents a high-severity threat to users relying on Tor for secure remote access, though exploitation was limited to SSH password authentication during the five-day window. Users should assume compromised credentials from that period and immediately change SSH passwords; operators should audit exit relay deployments for unauthorized modifications and implement additional monitoring for anomalous SSH traffic patterns.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/attackers-hijacked-over-300-tor-exit.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>China-Aligned Bronze Sandcastle Abuses Sandboxie DLL Sideloading to Deploy Backdoors</title>
-    <id>urn:cybersecnews:item:582</id>
-    <published>2026-10-21T13:29:58.570163+00:00</published>
-    <updated>2026-10-21T13:29:58.570163+00:00</updated>
-    <link href="https://thehackernews.com/2026/10/china-aligned-bronze-sandcastle-abuses.html" rel="alternate" />
-    <category term="red-team" />
-    <content type="html">&lt;p&gt;&lt;em&gt;red-team · dll-sideloading&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Bronze Sandcastle, a China-aligned threat actor active since mid-2025, exploits DLL sideloading vulnerabilities in Sandboxie to deploy backdoors against organizations in Asia and Africa. The group leverages legitimate Sandboxie processes to load malicious DLLs, a technique that evades detection by appearing as benign sandbox software execution. No severity rating or in-the-wild exploitation prevalence data was provided in available details. Organizations should update Sandboxie to the latest version, implement DLL sideloading mitigations (code signing enforcement, application whitelisting), and monitor for suspicious Sandboxie process behavior.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/china-aligned-bronze-sandcastle-abuses.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
   </entry>
 </feed>
