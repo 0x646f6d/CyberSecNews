@@ -3,7 +3,52 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-11-11T04:56:24.228262+00:00</updated>
+  <updated>2026-11-11T15:54:39.351883+00:00</updated>
+  <entry>
+    <title>Able2Shell: Frequently asked questions for reported N-able N-central zero-day vulnerabilities</title>
+    <id>urn:cybersecnews:item:711</id>
+    <published>2026-11-11T15:54:39.351883+00:00</published>
+    <updated>2026-11-11T15:54:39.351883+00:00</updated>
+    <link href="https://www.tenable.com/blog/able2shell-frequently-asked-questions-for-reported-n-able-n-central-zero-day-vulnerabilities" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · multiple · CVE-2026-125878, CVE-2026-125879, CVE-2026-125880, CVE-2026-125881, CVE-2026-125882, CVE-2026-125883, CVE-2026-91000&lt;/em&gt;&lt;/p&gt;&lt;p&gt;N-able N-central has been affected by 33 alleged zero-day vulnerabilities (Able2Shell) disclosed with proof-of-concept code on November 9, 2026, including multiple critical flaws such as XXE injection, SSRF, OGNL injection, and unauthenticated remote code execution chains with CVSS scores ranging from 8.3 to 9.3. While exploitation attempts have been observed against honeypots and the researcher demonstrated an unauthenticated attack chain requiring no credentials, no confirmed customer compromise had been reported as of November 10. N-able released N-central 2026.4 Hotfix 2 (build 2026.4.1.26) on November 10 fixing seven CVEs, with a follow-up hotfix planned; on-premises customers should take systems offline immediately until patched, while N-able upgraded all hosted environments. Security teams should review login activity from November 8 onward, watch for unauthorized administrator accounts and anomalous remote access, and deploy available Tenable detection plugins.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.tenable.com/blog/able2shell-frequently-asked-questions-for-reported-n-able-n-central-zero-day-vulnerabilities"&gt;Read more&lt;/a&gt; · Source: tenable&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>eBPF Rootkits: Why Underground Actors Are Taking Notice</title>
+    <id>urn:cybersecnews:item:710</id>
+    <published>2026-11-11T15:54:39.351049+00:00</published>
+    <updated>2026-11-11T15:54:39.351049+00:00</updated>
+    <link href="https://www.bleepingcomputer.com/news/security/ebpf-rootkits-why-underground-actors-are-taking-notice/" rel="alternate" />
+    <category term="red-team" />
+    <content type="html">&lt;p&gt;&lt;em&gt;red-team · rootkit&lt;/em&gt;&lt;/p&gt;&lt;p&gt;eBPF (extended Berkeley Packet Filter) is being weaponized by threat actors to create rootkits that operate in the Linux kernel without requiring traditional kernel module loading, enabling evasion of standard detection tools. These techniques are actively circulating in underground forums with shared source code and tutorials, indicating organized adoption by malicious actors. Severity is high due to the difficulty of detection and potential for persistent, privileged access; active exploitation in the wild is occurring. Organizations should harden Linux systems by restricting eBPF capabilities via sysctl controls, enforce strict BPF program loading policies, implement kernel-level monitoring for suspicious eBPF activity, and apply the latest kernel patches to address eBPF-related CVEs.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/ebpf-rootkits-why-underground-actors-are-taking-notice/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Hackers use AntiFox AI agents in AWS credential-theft attacks</title>
+    <id>urn:cybersecnews:item:709</id>
+    <published>2026-11-11T15:54:39.349633+00:00</published>
+    <updated>2026-11-11T15:54:39.349633+00:00</updated>
+    <link href="https://www.bleepingcomputer.com/news/security/hackers-use-antifox-ai-agents-in-aws-credential-theft-attacks/" rel="alternate" />
+    <category term="red-team" />
+    <content type="html">&lt;p&gt;&lt;em&gt;red-team · c2&lt;/em&gt;&lt;/p&gt;&lt;p&gt;AntiFox, an open-source AI-based penetration testing platform, is being weaponized by attackers to conduct credential-theft attacks against AWS environments and web services. Threat actors are leveraging Alibaba Cloud infrastructure to host malicious AntiFox instances that automate reconnaissance and exploitation workflows. This technique demonstrates moderate severity as it enables sophisticated, scalable attacks against cloud infrastructure, and exploitation is actively occurring in the wild. Organizations should implement strict API key management and IAM policies, monitor for unusual AI/ML tool activity in logs, restrict outbound connections to suspicious cloud providers, and conduct security reviews of web-exposed services for credential exposure.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/hackers-use-antifox-ai-agents-in-aws-credential-theft-attacks/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Hackers Target Qlik Sense Servers With Reverse Shells, Stage ActiveMQ and Veeam Exploits</title>
+    <id>urn:cybersecnews:item:708</id>
+    <published>2026-11-11T15:54:39.348028+00:00</published>
+    <updated>2026-11-11T15:54:39.348028+00:00</updated>
+    <link href="https://thehackernews.com/2026/11/hackers-target-qlik-sense-servers-with.html" rel="alternate" />
+    <category term="red-team" />
+    <content type="html">&lt;p&gt;&lt;em&gt;red-team · reverse-shell&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Qlik Sense servers are being targeted with PowerShell reverse shell payloads in active exploitation attempts, with threat actors staging follow-on exploits for ActiveMQ and Veeam. The attacks were observed in October 2026 across multiple EU-based environments within a compressed timeframe, suggesting coordinated campaign activity. Severity appears moderate as initial reverse shell delivery was unsuccessful in observed cases, though staging of additional critical vulnerabilities (ActiveMQ, Veeam) indicates intent for high-impact compromise. Recommended actions: apply available Qlik Sense patches immediately, restrict network access to Qlik servers, implement reverse shell detection/prevention controls, and patch ActiveMQ and Veeam systems to prevent exploit chaining.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/11/hackers-target-qlik-sense-servers-with.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Patchday Adobe: Kritische Lücken mit Höchstwertung bedrohen Connect</title>
+    <id>urn:cybersecnews:item:707</id>
+    <published>2026-11-11T15:54:39.345680+00:00</published>
+    <updated>2026-11-11T15:54:39.345680+00:00</updated>
+    <link href="https://www.heise.de/news/Patchday-Adobe-Kritische-Luecken-mit-Hoechstwertung-bedrohen-Connect-11520346.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Adobe Connect, Illustrator, InDesign, Premiere Pro, and After Effects are affected by multiple critical vulnerabilities rated CVSS 9.8-10.0, allowing remote code execution and complete system compromise. These flaws enable attackers to execute arbitrary code with elevated privileges through crafted files or network exploitation; there is no evidence of active exploitation in the wild at this time. All users should apply the latest security patches immediately, prioritizing Adobe Connect due to its network-exposed nature and the severity of the vulnerabilities. Organizations should enforce patch deployment across all affected Adobe products as part of standard patch management procedures.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.heise.de/news/Patchday-Adobe-Kritische-Luecken-mit-Hoechstwertung-bedrohen-Connect-11520346.html"&gt;Read more&lt;/a&gt; · Source: heise-security&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Microsoft Patch Tuesday November 2027 , (Tue, Nov 10th)</title>
     <id>urn:cybersecnews:item:706</id>
@@ -858,50 +903,5 @@
     <link href="https://thehackernews.com/2026/10/ucreator-android-spyware-can-steal.html" rel="alternate" />
     <category term="red-team" />
     <content type="html">&lt;p&gt;&lt;em&gt;red-team · spyware&lt;/em&gt;&lt;/p&gt;&lt;p&gt;uCreator is an Android spyware kit distributed through sideloaded, modified versions of Telegram and WeChat outside official app stores. The malware intercepts 2FA codes and account credentials, enabling account takeover and cloning of both messaging platforms. While currently limited in reach due to reliance on sideloaded distribution, this represents a significant threat to users of these widely-used communications platforms. Mitigation: Install only official Telegram and WeChat from Google Play Store, avoid sideloading apps, and enable additional account security measures such as two-factor authentication through official channels.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/ucreator-android-spyware-can-steal.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Unpatched Tailscale SSH Flaws Could Let a Hacked Device Reach Root on Other Servers</title>
-    <id>urn:cybersecnews:item:611</id>
-    <published>2026-10-25T18:44:47.617114+00:00</published>
-    <updated>2026-10-25T18:44:47.617114+00:00</updated>
-    <link href="https://thehackernews.com/2026/10/unpatched-tailscale-ssh-flaws-could-let.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · privilege-escalation&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Tailscale SSH implementation contains privilege escalation vulnerabilities allowing compromised network devices to gain root access on target servers when SSH port forwarding is enabled. An attacker with control of one permitted device can exploit flaws in Tailscale's access controls to escalate privileges and laterally move across the network. Severity is high given the requirement for only network access and the resulting full system compromise, though exploitation requires prior device compromise. Users should immediately disable SSH port forwarding in Tailscale security policies if not operationally required, and apply available security patches when released; review network segmentation and device access controls to limit lateral movement potential.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/unpatched-tailscale-ssh-flaws-could-let.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>BlackX UEFI bootkit exploits Baton Drop flaw to bypass Secure Boot</title>
-    <id>urn:cybersecnews:item:610</id>
-    <published>2026-10-24T18:36:34.681761+00:00</published>
-    <updated>2026-10-24T18:36:34.681761+00:00</updated>
-    <link href="https://www.bleepingcomputer.com/news/security/blackx-uefi-bootkit-exploits-baton-drop-flaw-to-bypass-secure-boot/" rel="alternate" />
-    <category term="red-team" />
-    <content type="html">&lt;p&gt;&lt;em&gt;red-team · secure-boot-bypass&lt;/em&gt;&lt;/p&gt;&lt;p&gt;BlackX UEFI bootkit exploits CVE-2021-21224 (Baton Drop), a Secure Boot bypass flaw in certain firmware implementations, to load malicious drivers targeting Kaspersky and Avast security solutions. The vulnerability is critical as it completely circumvents Secure Boot protections; exploitation is confirmed active in espionage campaigns as of early 2026. Affected organizations should immediately verify UEFI firmware versions and apply available security updates from their OEM, while considering additional endpoint detection and response (EDR) solutions to compensate for compromised security products. Forensic investigation of systems with unusual UEFI modifications is recommended to detect potential BlackX deployment.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/blackx-uefi-bootkit-exploits-baton-drop-flaw-to-bypass-secure-boot/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Echo: Rejected WebSocket upgrades can bypass Echo route-level access controls</title>
-    <id>urn:cybersecnews:item:609</id>
-    <published>2026-10-24T03:30:28.022937+00:00</published>
-    <updated>2026-10-24T03:30:28.022937+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-cxf3-9h37-7rr8" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Echo web framework versions 4 and 5 contain a critical vulnerability in the Proxy middleware where rejected WebSocket upgrades bypass route-level access controls. When an upstream server rejects a WebSocket upgrade but maintains the connection, subsequent HTTP requests are tunneled directly without passing through Echo's router or middleware, potentially circumventing authentication and authorization checks. This is actively exploitable and affects any Echo application using the Proxy middleware with route-level security controls. Users should immediately upgrade to patched versions of echo/v4 and echo/v5 and review any proxied traffic for potential unauthorized access.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-cxf3-9h37-7rr8"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Laravel TokenGuard authentication bypass through non-string API credentials (CVE-2026-114509)</title>
-    <id>urn:cybersecnews:item:608</id>
-    <published>2026-10-24T03:30:28.022023+00:00</published>
-    <updated>2026-10-24T03:30:28.022023+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-f9x3-7vq9-cph6" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-114509&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Laravel's TokenGuard authentication mechanism contains a critical bypass vulnerability (CVE-2026-114509) affecting token-based API authentication, particularly on MySQL/MariaDB databases. By submitting specially crafted non-string credential values, attackers can exploit type juggling in authentication queries to authenticate as arbitrary users without valid API tokens. This vulnerability is critical severity; current exploitation status in the wild is not specified in the advisory. Affected Laravel installations using TokenGuard with standard API authentication should immediately update the framework to the patched version and review access logs for suspicious authentication attempts.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-f9x3-7vq9-cph6"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Wasmtime: Bit-packing in Cranelift compiler causes silent overflow and miscompilation (CVE-2026-115889)</title>
-    <id>urn:cybersecnews:item:607</id>
-    <published>2026-10-24T03:30:28.007871+00:00</published>
-    <updated>2026-10-24T03:30:28.007871+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-897f-g5gm-fmxm" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · miscompilation · CVE-2026-115889, CVE-2026-115893&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Wasmtime versions prior to v43 contain a critical vulnerability (CVE-2026-115889) in the Cranelift compiler backend where bit-packing of SSA value indices causes silent overflow in release builds, leading to incorrect IR value references and arbitrary miscompilation. A specially crafted WebAssembly function with excessive SSA values can trigger type confusion and sandbox escape. Update Wasmtime to v43 or later immediately, which remediates the issue by using full u32 indices instead of bit-packed values. No evidence of wild exploitation currently reported, but the critical severity and sandbox escape potential warrant emergency patching.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-897f-g5gm-fmxm"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
   </entry>
 </feed>
