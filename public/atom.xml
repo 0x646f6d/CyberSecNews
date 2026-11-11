@@ -3,7 +3,88 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-11-10T16:09:37.701263+00:00</updated>
+  <updated>2026-11-11T04:56:24.228262+00:00</updated>
+  <entry>
+    <title>Microsoft Patch Tuesday November 2027 , (Tue, Nov 10th)</title>
+    <id>urn:cybersecnews:item:706</id>
+    <published>2026-11-11T04:56:24.228262+00:00</published>
+    <updated>2026-11-11T04:56:24.228262+00:00</updated>
+    <link href="https://isc.sans.edu/diary/rss/33508" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · multiple&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Microsoft released patches for 1,260 vulnerabilities in November 2027, including 68 critical issues and 167 Chromium-based flaws affecting Microsoft Edge. The critical vulnerabilities span multiple Microsoft products and represent a significant security update requirement across enterprise environments. Several critical issues are being actively exploited in the wild according to threat intelligence reports. Organizations should prioritize patching critical vulnerabilities immediately, with particular attention to Edge browser deployments, and establish a phased rollout plan for remaining updates to minimize operational disruption.&lt;/p&gt;&lt;p&gt;&lt;a href="https://isc.sans.edu/diary/rss/33508"&gt;Read more&lt;/a&gt; · Source: sans-isc&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Mongoose: sanitizeFilter not applied on countDocuments (CVE-2026-125120)</title>
+    <id>urn:cybersecnews:item:705</id>
+    <published>2026-11-11T04:56:24.227153+00:00</published>
+    <updated>2026-11-11T04:56:24.227153+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-pcrw-h46h-c93h" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · query-injection · CVE-2026-125120&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Mongoose versions prior to 9.9.2, 8.24.3, 7.8.12, and 6.13.11 lack `sanitizeFilter` protection on `countDocuments()` queries, enabling query selector injection attacks. This critical vulnerability allows attackers to bypass input validation and inject malicious query selectors when counting documents. The flaw is confirmed exploitable in production environments. Immediately upgrade Mongoose to patched versions (9.9.2+, 8.24.3+, 7.8.12+, or 6.13.11+) depending on your major version line; if immediate patching is not feasible, implement middleware-based input sanitization as a temporary workaround.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-pcrw-h46h-c93h"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>React: Unauthenticated Remote Code Execution in React Server Components (CVE-2026-126187)</title>
+    <id>urn:cybersecnews:item:704</id>
+    <published>2026-11-11T04:56:24.226254+00:00</published>
+    <updated>2026-11-11T04:56:24.226254+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-xqc2-xf4c-x3h3" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-126187&lt;/em&gt;&lt;/p&gt;&lt;p&gt;React Server Components packages (react-server-dom-webpack, react-server-dom-parcel, react-server-dom-turbopack) versions 19.0.0-19.3.0 contain a critical unauthenticated remote code execution vulnerability triggered by crafted payloads in responses containing multiple typed arrays. The flaw affects rare edge cases but carries critical severity; no evidence of exploitation in the wild is mentioned, though immediate patching is strongly recommended. Update all affected Server Components packages to patched versions immediately, prioritizing this given the critical severity and ease of exploitation.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-xqc2-xf4c-x3h3"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Cisco BroadWorks: Cisco BroadWorks Improper Restriction of XML External Entity Reference Vulnerability (CVE-2026-20320)</title>
+    <id>urn:cybersecnews:item:703</id>
+    <published>2026-11-11T04:56:24.225277+00:00</published>
+    <updated>2026-11-11T04:56:24.225277+00:00</updated>
+    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-20320" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · xxe · CVE-2026-20320&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Cisco BroadWorks is vulnerable to an XXE (XML External Entity) injection flaw that allows unauthenticated remote attackers to exfiltrate sensitive configuration data from affected systems. This vulnerability is actively exploited in the wild and carries high severity. Apply vendor-supplied patches immediately in accordance with CISA BOD 26-04 prioritization guidance; if mitigations are unavailable, discontinue use of the product or transition to cloud services with equivalent security posture. Conduct forensics triage on internet-exposed instances and verify patch compliance across your environment.&lt;/p&gt;&lt;p&gt;&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2026-20320"&gt;Read more&lt;/a&gt; · Source: cisa-kev&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Openwave Messaging Limited Webtop Media Transcoder: Openwave Messaging Limited Webtop Media Transcoder Incorrect Resource Transfer Between Spheres Vulnerability (CVE-2026-111793)</title>
+    <id>urn:cybersecnews:item:702</id>
+    <published>2026-11-11T04:56:24.224427+00:00</published>
+    <updated>2026-11-11T04:56:24.224427+00:00</updated>
+    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-111793" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · incorrect-resource-transfer · CVE-2026-111793&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Openwave Messaging Limited Webtop Media Transcoder is affected by CVE-2026-111793, an incorrect resource transfer vulnerability allowing authenticated users to process and convert unintended document types by bypassing the Webmail interface. This vulnerability is actively exploited in the wild with high severity. Apply vendor mitigations immediately per CISA BOD 26-04 guidance; discontinue use if patches are unavailable. Prioritize remediation based on internet exposure and follow forensics triage requirements.&lt;/p&gt;&lt;p&gt;&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2026-111793"&gt;Read more&lt;/a&gt; · Source: cisa-kev&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Microsoft Office: Microsoft Office Outlook Missing User Interaction for Potentially Unsafe Action Vulnerability (CVE-2026-124194)</title>
+    <id>urn:cybersecnews:item:701</id>
+    <published>2026-11-11T04:56:24.223269+00:00</published>
+    <updated>2026-11-11T04:56:24.223269+00:00</updated>
+    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-124194" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · spoofing · CVE-2026-124194&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Microsoft Outlook contains a missing user interaction vulnerability (CVE-2026-124194) that enables network-based spoofing attacks without requiring user confirmation of potentially unsafe actions. This vulnerability is actively exploited in the wild and poses significant risk. Apply vendor-supplied patches or mitigations immediately in accordance with CISA BOD 26-04 prioritization guidance; if mitigations are unavailable, discontinue use of the affected product. Assess internet exposure of all affected assets and ensure compliance with mandatory BOD 26-04 patching timelines.&lt;/p&gt;&lt;p&gt;&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2026-124194"&gt;Read more&lt;/a&gt; · Source: cisa-kev&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Microsoft November 2026 Patch Tuesday fixes 1,235 flaws, Outlook zero-day</title>
+    <id>urn:cybersecnews:item:700</id>
+    <published>2026-11-11T04:56:24.222246+00:00</published>
+    <updated>2026-11-11T04:56:24.222246+00:00</updated>
+    <link href="https://www.bleepingcomputer.com/news/microsoft/microsoft-november-2026-patch-tuesday-fixes-1-235-flaws-outlook-zero-day/" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · unspecified&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Microsoft released November 2026 Patch Tuesday updates addressing 1,235 vulnerabilities across its product portfolio, including a zero-day in Microsoft Outlook currently exploited in the wild. The Outlook vulnerability enables remote code execution through specially crafted email messages. This represents critical severity with active exploitation confirmed; immediate patching is mandatory for all affected Outlook versions. Apply all available security updates from Microsoft immediately, prioritize Outlook patching, and consider implementing email filtering controls as a temporary mitigation while updates deploy.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/microsoft/microsoft-november-2026-patch-tuesday-fixes-1-235-flaws-outlook-zero-day/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>SGLang RCE Exploit Breaches NEAR AI, Steals Data From 18 Agents and About 100 Users</title>
+    <id>urn:cybersecnews:item:699</id>
+    <published>2026-11-11T04:56:24.221209+00:00</published>
+    <updated>2026-11-11T04:56:24.221209+00:00</updated>
+    <link href="https://thehackernews.com/2026/11/sglang-rce-exploit-breaches-near-ai.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;SGLang open-source inference engine contains an unpatched remote code execution vulnerability that was exploited against NEAR AI's infrastructure, resulting in unauthorized code execution and exposure of requests from approximately 100 users and 18 agents. The RCE flaw has been actively exploited in the wild and poses critical risk to any deployment processing sensitive data. Affected organizations should immediately audit SGLang instances for compromise indicators, isolate vulnerable servers, and apply available security patches or implement network-level access controls until patches are available. Developers should update to patched versions and review logs for evidence of exploitation, particularly any unauthorized command execution or data access.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/11/sglang-rce-exploit-breaches-near-ai.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Git Patches Flaw That Lets Malicious Repositories Execute Code During Recursive Clones</title>
+    <id>urn:cybersecnews:item:698</id>
+    <published>2026-11-11T04:56:24.219004+00:00</published>
+    <updated>2026-11-11T04:56:24.219004+00:00</updated>
+    <link href="https://thehackernews.com/2026/11/git-patches-flaw-that-lets-malicious.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-111760&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Git versions prior to 2.56.1 (and patched versions 2.50.2 through 2.55.1) contain an integer truncation vulnerability in index handling that allows arbitrary code execution when recursively cloning malicious repositories with submodules. CVE-2026-111760 has moderate-to-high severity as it requires user interaction but enables full code execution on affected systems. Update to Git 2.56.1 or the corresponding patched version for your release series immediately; avoid cloning untrusted repositories recursively until patched.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/11/git-patches-flaw-that-lets-malicious.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Not All That Glitters Is Gold: Tracking CopperDragon’s Sparrow Framework Around the Globe</title>
     <id>urn:cybersecnews:item:697</id>
@@ -822,86 +903,5 @@
     <link href="https://github.com/advisories/GHSA-897f-g5gm-fmxm" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · miscompilation · CVE-2026-115889, CVE-2026-115893&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Wasmtime versions prior to v43 contain a critical vulnerability (CVE-2026-115889) in the Cranelift compiler backend where bit-packing of SSA value indices causes silent overflow in release builds, leading to incorrect IR value references and arbitrary miscompilation. A specially crafted WebAssembly function with excessive SSA values can trigger type confusion and sandbox escape. Update Wasmtime to v43 or later immediately, which remediates the issue by using full u32 indices instead of bit-packed values. No evidence of wild exploitation currently reported, but the critical severity and sandbox escape potential warrant emergency patching.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-897f-g5gm-fmxm"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>obsidian-tc HTTP transport lacks Origin/DNS-rebinding protection, enabling drive-by vault access on loopback (CVE-2026-77363)</title>
-    <id>urn:cybersecnews:item:606</id>
-    <published>2026-10-23T19:49:37.371811+00:00</published>
-    <updated>2026-10-23T19:49:37.371811+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-pqh8-4pj7-32xx" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-77363&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Obsidian-tc HTTP transport lacks origin and DNS-rebinding protections, allowing unauthenticated attackers to access local vaults via drive-by web pages that forge requests to the loopback interface. With default authentication disabled, an attacker can POST to http://127.0.0.1/mcp to gain full read/write vault access. Severity is critical and no public exploitation reports are documented, but the attack is straightforward to execute. Upgrade immediately to version 1.3.1 or later, which implements DNS-rebinding protection and origin validation.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-pqh8-4pj7-32xx"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Exposed Infrastructure Reveals How Ransomware Affiliates Used AI Agents to Execute Intrusions</title>
-    <id>urn:cybersecnews:item:605</id>
-    <published>2026-10-23T19:49:37.371075+00:00</published>
-    <updated>2026-10-23T19:49:37.371075+00:00</updated>
-    <link href="https://thehackernews.com/2026/10/exposed-infrastructure-reveals-how.html" rel="alternate" />
-    <category term="red-team" />
-    <content type="html">&lt;p&gt;&lt;em&gt;red-team · c2&lt;/em&gt;&lt;/p&gt;&lt;p&gt;INC and The Gentlemen ransomware affiliates operate an AI-driven intrusion framework called Phantom that automates reconnaissance, exploitation, and lateral movement in target networks. This Autonomous Red Team Kill Chain Framework significantly reduces manual effort required for intrusions and increases operational scale. The threat is actively exploited in the wild with moderate-to-high severity given the automation capabilities and dual ransomware/extortion model. Organizations should implement robust network segmentation, enhanced endpoint detection and response (EDR) monitoring for unusual automation patterns, restrict AI tool access, and enforce strict access controls to limit lateral movement opportunities.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/exposed-infrastructure-reveals-how.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Ruby Fixes Three Regex Engine Bugs Responsible for Four Critical GitLab RCE Flaws</title>
-    <id>urn:cybersecnews:item:604</id>
-    <published>2026-10-23T19:49:37.370196+00:00</published>
-    <updated>2026-10-23T19:49:37.370196+00:00</updated>
-    <link href="https://thehackernews.com/2026/10/ruby-fixes-three-regex-engine-bugs.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · memory-corruption,rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Ruby released versions 3.3.13, 3.4.12, and 4.0.9 addressing three Onigmo regex engine bugs that enabled four critical RCE vulnerabilities in GitLab. Specially crafted regex patterns cause memory corruption during compilation, allowing arbitrary code execution. These flaws are critical severity and have been actively exploited against GitLab instances in the wild. Update Ruby immediately to patched versions and audit systems for evidence of exploitation targeting regex processing functionality.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/ruby-fixes-three-regex-engine-bugs.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>BlackX UEFI Bootkit Bypasses Secure Boot on Patched Windows Systems Missing Revocations</title>
-    <id>urn:cybersecnews:item:603</id>
-    <published>2026-10-23T19:49:37.368304+00:00</published>
-    <updated>2026-10-23T19:49:37.368304+00:00</updated>
-    <link href="https://thehackernews.com/2026/10/blackx-uefi-bootkit-bypasses-secure.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · secure-boot-bypass&lt;/em&gt;&lt;/p&gt;&lt;p&gt;BlackX UEFI bootkit targets Windows systems by exploiting insufficient Secure Boot revocation mechanisms, allowing attackers to bypass Secure Boot protections on patched systems missing updated certificate revocations. The bootkit establishes persistent firmware-level control, enabling advanced threats that survive OS reinstalls and standard remediation. Active exploitation has been confirmed against diplomatic entities in Central Asia, with APT41 attributed as the suspected operator. Organizations should immediately apply all available UEFI/firmware updates from OEMs, verify Secure Boot certificate revocation lists are current, and conduct firmware integrity audits on potentially affected systems; consider EDR solutions with firmware visibility for threatened entities.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/blackx-uefi-bootkit-bypasses-secure.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>HPE patches eight max severity RCE and auth bypass AOS flaws</title>
-    <id>urn:cybersecnews:item:602</id>
-    <published>2026-10-23T13:07:17.970389+00:00</published>
-    <updated>2026-10-23T13:07:17.970389+00:00</updated>
-    <link href="https://www.bleepingcomputer.com/news/security/hpe-patches-eight-max-severity-rce-and-auth-bypass-aos-flaws/" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce,auth-bypass&lt;/em&gt;&lt;/p&gt;&lt;p&gt;HPE released patches for 72 vulnerabilities in ArubaOS, including eight maximum-severity flaws allowing remote code execution and authentication bypass. The critical issues affect Aruba access points and controllers, with no indication of active exploitation in the wild at this time. Organizations running ArubaOS should apply the available security updates immediately, prioritizing systems exposed to untrusted networks. HPE has published detailed advisories with affected version numbers and patch availability information.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/hpe-patches-eight-max-severity-rce-and-auth-bypass-aos-flaws/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Russian-Linked Hackers Used New Mesh Network Backdoor in Destructive Ukraine Attack</title>
-    <id>urn:cybersecnews:item:601</id>
-    <published>2026-10-23T13:07:17.968434+00:00</published>
-    <updated>2026-10-23T13:07:17.968434+00:00</updated>
-    <link href="https://thehackernews.com/2026/10/russian-linked-hackers-used-new-mesh.html" rel="alternate" />
-    <category term="red-team" />
-    <content type="html">&lt;p&gt;&lt;em&gt;red-team · c2&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Sandworm and UAC-0099 conducted a destructive attack against a Ukrainian logistics firm using a novel mesh network backdoor deployed via spear-phishing in July 2025. The malware establishes peer-to-peer command and control infrastructure to enable lateral movement and data destruction while evading traditional network detection. This represents active exploitation in targeted campaigns against critical infrastructure with high destructive capability. Organizations should prioritize email security controls, implement network segmentation, deploy behavioral detection for unusual C2 patterns, and maintain offline backups to mitigate mesh botnet propagation and wiper malware impacts.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/russian-linked-hackers-used-new-mesh.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>CVE-2026-76268 | Splunk Enterprise Patroni REST API Missing Authentication Vulnerability</title>
-    <id>urn:cybersecnews:item:600</id>
-    <published>2026-10-23T03:35:55.621895+00:00</published>
-    <updated>2026-10-23T03:35:55.621895+00:00</updated>
-    <link href="https://horizon3.ai/attack-research/vulnerabilities/cve-2026-76268/" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-76268&lt;/em&gt;&lt;/p&gt;&lt;p&gt;CVE-2026-76268 affects Splunk Enterprise's Patroni REST API, which lacks proper authentication controls. Unauthenticated attackers with network access can execute arbitrary operating system commands, representing a critical severity vulnerability. There is no indication of active exploitation in the wild at this time, though the attack surface is significant given the API's network accessibility. Splunk Enterprise users should immediately apply available patches and restrict network access to the Patroni REST API through firewall rules or network segmentation until updates are deployed.&lt;/p&gt;&lt;p&gt;&lt;a href="https://horizon3.ai/attack-research/vulnerabilities/cve-2026-76268/"&gt;Read more&lt;/a&gt; · Source: horizon3&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>SEO Poisoning Campaign Delivers New Armorsteal Malware</title>
-    <id>urn:cybersecnews:item:599</id>
-    <published>2026-10-22T19:47:25.016690+00:00</published>
-    <updated>2026-10-22T19:47:25.016690+00:00</updated>
-    <link href="https://www.zscaler.com/blogs/security-research/seo-poisoning-campaign-delivers-new-armorsteal-malware" rel="alternate" />
-    <category term="red-team" />
-    <content type="html">&lt;p&gt;&lt;em&gt;red-team · malware&lt;/em&gt;&lt;/p&gt;&lt;p&gt;SEO poisoning campaign distributes Armorsteal, a Python-based malware with remote access, keystroke logging, clipboard hijacking, and credential stealing modules targeting cryptocurrency wallets, Discord tokens, browsers, SSH keys, and Steam data. Severity is high as the malware is actively exploited in the wild with sophisticated anti-analysis techniques including Pyarmor obfuscation and cloud provider detection. Organizations should immediately hunt for SysCheck2/SysCheckX scheduled tasks and C:\Windows\SystemHealth\Update\ artifacts, block listed malicious domains, review PowerShell logs for suspicious downloads, and educate users to verify software sources before executing installation commands.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.zscaler.com/blogs/security-research/seo-poisoning-campaign-delivers-new-armorsteal-malware"&gt;Read more&lt;/a&gt; · Source: zscaler-threatlabz&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Next.js: Unauthenticated Remote Code Execution in Image Optimization API when SVG files are used</title>
-    <id>urn:cybersecnews:item:598</id>
-    <published>2026-10-22T19:47:25.015974+00:00</published>
-    <updated>2026-10-22T19:47:25.015974+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-2464-fhr4-w9xw" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Next.js Image Optimization API is vulnerable to unauthenticated remote code execution on glibc-based Linux systems when processing SVG files, caused by a memory-related vulnerability in the upstream sharp library. This is a critical severity issue with potential for active exploitation. Users must upgrade to Next.js versions that include sharp 0.35.5 or later; fresh installations are already patched, but existing deployments require immediate updates through package manager upgrades.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-2464-fhr4-w9xw"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
   </entry>
 </feed>
