@@ -3,7 +3,25 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-11-11T15:54:39.351883+00:00</updated>
+  <updated>2026-11-11T22:30:20.834131+00:00</updated>
+  <entry>
+    <title>Proofpoint ITM | 4.4.3.148–5.0.1</title>
+    <id>urn:cybersecnews:item:713</id>
+    <published>2026-11-11T22:30:20.834131+00:00</published>
+    <updated>2026-11-11T22:30:20.834131+00:00</updated>
+    <link href="https://bishopfox.com/blog/proofpoint-itm-4-4-3-148-5-0-1" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · privilege-escalation&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Proofpoint Information and Threat Management (ITM) agent versions 4.4.3.148–5.0.1 on macOS contains a privilege escalation vulnerability in the File Activity Monitor component. A standard user can achieve root access by creating a specially crafted filename in a OneDrive-managed folder, exploiting unsafe shell command construction from unsanitized filenames. This is a critical severity issue with unknown wild exploitation status. Users should immediately update to version 5.0.2 or later, and organizations should audit systems for suspicious file creation patterns in OneDrive directories pending patching.&lt;/p&gt;&lt;p&gt;&lt;a href="https://bishopfox.com/blog/proofpoint-itm-4-4-3-148-5-0-1"&gt;Read more&lt;/a&gt; · Source: bishop-fox&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Critical Zoom Workplace Flaw Could Allow Unauthenticated Remote Privilege Escalation</title>
+    <id>urn:cybersecnews:item:712</id>
+    <published>2026-11-11T22:30:20.831601+00:00</published>
+    <updated>2026-11-11T22:30:20.831601+00:00</updated>
+    <link href="https://thehackernews.com/2026/11/critical-zoom-workplace-flaw-could.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · privilege-escalation · CVE-2026-108186&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Zoom Workplace for Windows contains CVE-2026-108186, a critical improper input validation flaw (CVSS 9.6) allowing unauthenticated remote privilege escalation. No active exploitation in the wild has been reported at this time. Apply Zoom's latest security updates immediately to all affected Windows systems, prioritizing this critical vulnerability in your patching schedule.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/11/critical-zoom-workplace-flaw-could.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Able2Shell: Frequently asked questions for reported N-able N-central zero-day vulnerabilities</title>
     <id>urn:cybersecnews:item:711</id>
@@ -885,23 +903,5 @@
     <link href="https://www.bleepingcomputer.com/news/security/critical-http2shell-brotli-vulnerability-triggers-emergency-patches/" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · memory-corruption&lt;/em&gt;&lt;/p&gt;&lt;p&gt;A critical vulnerability in Brotli, the C decoder library integrated into Node.js, allows remote attackers to corrupt memory and potentially access sensitive data through malformed HTTP/2 requests. The flaw, tracked as HTTP2Shell, affects Node.js versions that bundle the vulnerable Brotli decoder and has been reported as exploited in active attacks. Apply emergency patches immediately to affected Node.js installations, prioritizing systems handling untrusted HTTP/2 traffic. Verify Brotli library updates are applied across all dependent applications and runtimes.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/critical-http2shell-brotli-vulnerability-triggers-emergency-patches/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Hackers Infect 953 Online Stores With Scanner-Evading JavaScript, Mostly on Magento</title>
-    <id>urn:cybersecnews:item:613</id>
-    <published>2026-10-26T20:55:00.969731+00:00</published>
-    <updated>2026-10-26T20:55:00.969731+00:00</updated>
-    <link href="https://thehackernews.com/2026/10/hackers-infect-953-online-stores-with.html" rel="alternate" />
-    <category term="red-team" />
-    <content type="html">&lt;p&gt;&lt;em&gt;red-team · malware-injection&lt;/em&gt;&lt;/p&gt;&lt;p&gt;A threat actor has compromised 953 e-commerce stores, predominantly Magento installations, injecting malicious JavaScript through CMS blocks since July 2025 to serve scanner-evading loader code to visitors. The attack exploits Magento vulnerabilities or weak access controls to inject persistent malicious code designed to evade security scanning tools, likely for credential theft or payment card skimming. This represents an active, ongoing campaign affecting a large merchant base with moderate-to-high severity due to potential customer data compromise. Affected Magento administrators should immediately audit CMS block contents, apply available security patches, enforce strong access controls, implement Web Application Firewall rules to detect injected JavaScript, and conduct forensic analysis of compromised stores.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/hackers-infect-953-online-stores-with.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>uCreator Android Spyware Can Steal Telegram 2FA Passwords and Clone WeChat Accounts</title>
-    <id>urn:cybersecnews:item:612</id>
-    <published>2026-10-26T14:53:36.895238+00:00</published>
-    <updated>2026-10-26T14:53:36.895238+00:00</updated>
-    <link href="https://thehackernews.com/2026/10/ucreator-android-spyware-can-steal.html" rel="alternate" />
-    <category term="red-team" />
-    <content type="html">&lt;p&gt;&lt;em&gt;red-team · spyware&lt;/em&gt;&lt;/p&gt;&lt;p&gt;uCreator is an Android spyware kit distributed through sideloaded, modified versions of Telegram and WeChat outside official app stores. The malware intercepts 2FA codes and account credentials, enabling account takeover and cloning of both messaging platforms. While currently limited in reach due to reliance on sideloaded distribution, this represents a significant threat to users of these widely-used communications platforms. Mitigation: Install only official Telegram and WeChat from Google Play Store, avoid sideloading apps, and enable additional account security measures such as two-factor authentication through official channels.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/ucreator-android-spyware-can-steal.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
   </entry>
 </feed>
