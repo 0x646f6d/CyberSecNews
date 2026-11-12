@@ -3,7 +3,16 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-11-11T22:30:20.834131+00:00</updated>
+  <updated>2026-11-12T05:57:27.044257+00:00</updated>
+  <entry>
+    <title>Active ScreenConnect attacks breach MSPs, impact dozens of organizations</title>
+    <id>urn:cybersecnews:item:714</id>
+    <published>2026-11-12T05:57:27.044257+00:00</published>
+    <updated>2026-11-12T05:57:27.044257+00:00</updated>
+    <link href="https://www.bleepingcomputer.com/news/security/active-screenconnect-attacks-breach-msps-impact-dozens-of-organizations/" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;ConnectWise ScreenConnect is being actively exploited in the wild as attackers compromise MSP instances to deploy unauthorized remote-access tools across customer networks, potentially impacting dozens of organizations. The attack leverages legitimate ScreenConnect access to establish persistent backdoors on downstream endpoints, making it difficult to detect and remediate. This represents a critical supply-chain attack vector targeting the MSP industry. MSPs should immediately audit ScreenConnect logs for suspicious activity, isolate compromised instances, reset credentials, and apply the latest security patches; consider implementing network segmentation to limit lateral movement if compromise is suspected.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/active-screenconnect-attacks-breach-msps-impact-dozens-of-organizations/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Proofpoint ITM | 4.4.3.148–5.0.1</title>
     <id>urn:cybersecnews:item:713</id>
@@ -92,7 +101,7 @@
     <updated>2026-11-11T04:56:24.226254+00:00</updated>
     <link href="https://github.com/advisories/GHSA-xqc2-xf4c-x3h3" rel="alternate" />
     <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-126187&lt;/em&gt;&lt;/p&gt;&lt;p&gt;React Server Components packages (react-server-dom-webpack, react-server-dom-parcel, react-server-dom-turbopack) versions 19.0.0-19.3.0 contain a critical unauthenticated remote code execution vulnerability triggered by crafted payloads in responses containing multiple typed arrays. The flaw affects rare edge cases but carries critical severity; no evidence of exploitation in the wild is mentioned, though immediate patching is strongly recommended. Update all affected Server Components packages to patched versions immediately, prioritizing this given the critical severity and ease of exploitation.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-xqc2-xf4c-x3h3"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-119618, CVE-2026-126187&lt;/em&gt;&lt;/p&gt;&lt;p&gt;React Server Components packages (react-server-dom-webpack, react-server-dom-parcel, react-server-dom-turbopack) versions 19.0.0-19.3.0 contain a critical unauthenticated remote code execution vulnerability triggered by crafted payloads in responses containing multiple typed arrays. The flaw affects rare edge cases but carries critical severity; no evidence of exploitation in the wild is mentioned, though immediate patching is strongly recommended. Update all affected Server Components packages to patched versions immediately, prioritizing this given the critical severity and ease of exploitation.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-xqc2-xf4c-x3h3"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
   </entry>
   <entry>
     <title>Cisco BroadWorks: Cisco BroadWorks Improper Restriction of XML External Entity Reference Vulnerability (CVE-2026-20320)</title>
@@ -894,14 +903,5 @@
     <link href="https://www.bleepingcomputer.com/news/microsoft/microsoft-releases-emergency-net-patches-for-critical-brotli-flaw/" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Microsoft released emergency patches for .NET addressing a critical vulnerability in Brotli compression (CVE tracking pending). The flaw allows remote code execution through maliciously crafted compressed data, potentially enabling attackers to execute arbitrary code in .NET applications using Brotli decompression. No evidence of active exploitation in the wild has been reported at this time, though the critical severity and emergency patch status indicate high risk. Immediately apply available .NET security updates to all affected systems and prioritize environments processing untrusted compressed data.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/microsoft/microsoft-releases-emergency-net-patches-for-critical-brotli-flaw/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Critical 'HTTP2Shell' Brotli vulnerability triggers emergency patches</title>
-    <id>urn:cybersecnews:item:614</id>
-    <published>2026-10-26T20:55:00.972762+00:00</published>
-    <updated>2026-10-26T20:55:00.972762+00:00</updated>
-    <link href="https://www.bleepingcomputer.com/news/security/critical-http2shell-brotli-vulnerability-triggers-emergency-patches/" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · memory-corruption&lt;/em&gt;&lt;/p&gt;&lt;p&gt;A critical vulnerability in Brotli, the C decoder library integrated into Node.js, allows remote attackers to corrupt memory and potentially access sensitive data through malformed HTTP/2 requests. The flaw, tracked as HTTP2Shell, affects Node.js versions that bundle the vulnerable Brotli decoder and has been reported as exploited in active attacks. Apply emergency patches immediately to affected Node.js installations, prioritizing systems handling untrusted HTTP/2 traffic. Verify Brotli library updates are applied across all dependent applications and runtimes.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/critical-http2shell-brotli-vulnerability-triggers-emergency-patches/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
   </entry>
 </feed>
