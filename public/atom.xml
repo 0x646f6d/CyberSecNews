@@ -3,7 +3,97 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-11-12T05:57:27.044257+00:00</updated>
+  <updated>2026-11-12T16:38:41.255709+00:00</updated>
+  <entry>
+    <title>0% GPU utilization: How SANSAR hides Linux cryptomining</title>
+    <id>urn:cybersecnews:item:724</id>
+    <published>2026-11-12T16:38:41.255709+00:00</published>
+    <updated>2026-11-12T16:38:41.255709+00:00</updated>
+    <link href="https://www.elastic.co/security-labs/threat-command/sansar-linux-cryptomining-malware" rel="alternate" />
+    <category term="red-team" />
+    <content type="html">&lt;p&gt;&lt;em&gt;red-team · rootkit&lt;/em&gt;&lt;/p&gt;&lt;p&gt;SANSAR is a Linux cryptomining orchestrator targeting GPU systems that operates command-and-control infrastructure over Tor while deploying a kernel rootkit, GPU hooks, and an Ethereum-based backdoor for C2 retrieval. The malware actively demonstrates sophisticated evasion techniques including 0% GPU utilization masking and kernel-level persistence, indicating moderate-to-high severity with evidence of active exploitation in the wild. Affected systems are Linux servers and workstations with GPUs; immediate actions include kernel patching, implementing rootkit detection tools, network segmentation to restrict Tor egress, and GPU process monitoring for anomalous activity. Organizations should audit systems for unexpected kernel modules and cryptocurrency mining processes, with priority given to internet-facing or compromised Linux infrastructure.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.elastic.co/security-labs/threat-command/sansar-linux-cryptomining-malware"&gt;Read more&lt;/a&gt; · Source: elastic-security-labs&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Hackers plant GSocket on Linux servers for persistent access</title>
+    <id>urn:cybersecnews:item:723</id>
+    <published>2026-11-12T16:38:41.255004+00:00</published>
+    <updated>2026-11-12T16:38:41.255004+00:00</updated>
+    <link href="https://www.bleepingcomputer.com/news/security/hackers-plant-gsocket-on-linux-servers-for-persistent-access/" rel="alternate" />
+    <category term="red-team" />
+    <content type="html">&lt;p&gt;&lt;em&gt;red-team · persistence&lt;/em&gt;&lt;/p&gt;&lt;p&gt;GSocket, a legitimate open-source remote access utility, is being weaponized by multiple threat actors for persistent backdoor access on compromised Linux servers. The tool allows attackers to maintain connectivity even after organizations patch the initial exploitation vulnerabilities, making post-compromise persistence harder to detect and remove. This technique is actively exploited in the wild and represents a significant evasion challenge since the tool itself is benign. Organizations should monitor for unauthorized GSocket installations, restrict outbound connections from servers, implement process monitoring for suspicious remote access patterns, and audit legitimate remote access tools for unauthorized use.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/hackers-plant-gsocket-on-linux-servers-for-persistent-access/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Critical Pre-Auth MongoDB Flaw (CVE-2026-118383) Can Crash Lagging Servers on Failover</title>
+    <id>urn:cybersecnews:item:722</id>
+    <published>2026-11-12T16:38:41.254256+00:00</published>
+    <updated>2026-11-12T16:38:41.254256+00:00</updated>
+    <link href="https://thehackernews.com/2026/11/critical-pre-auth-mongodb-flaw-cve-2026.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · dos · CVE-2026-118383&lt;/em&gt;&lt;/p&gt;&lt;p&gt;A critical pre-authentication denial-of-service vulnerability in MongoDB Server (CVE-2026-118383) enables unauthenticated attackers to crash database instances during failover scenarios when replica set members lack recent changes. The flaw requires two specially crafted requests and only triggers when a compromised server assumes primary role, creating a window for exploitation during cluster rebalancing. Severity is high given the pre-auth requirement and potential for widespread replica set outages; active exploitation status unclear. Patch immediately to the fixed versions released by MongoDB this week for all affected replica set members.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/11/critical-pre-auth-mongodb-flaw-cve-2026.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>PTC Patches Critical Windchill and FlexPLM Flaw That Could Enable Remote Code Execution</title>
+    <id>urn:cybersecnews:item:721</id>
+    <published>2026-11-12T16:38:41.253483+00:00</published>
+    <updated>2026-11-12T16:38:41.253483+00:00</updated>
+    <link href="https://thehackernews.com/2026/11/ptc-patches-critical-windchill-and.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-126325&lt;/em&gt;&lt;/p&gt;&lt;p&gt;PTC Windchill and FlexPLM are affected by CVE-2026-126325, a critical remote code execution vulnerability (CVSS 9.2) stemming from improper input validation and unsafe deserialization of untrusted data. No evidence of active exploitation in the wild has been reported at this time. Immediate patching is strongly recommended given the critical severity and RCE potential; deploy available PTC security updates to all affected Windchill and FlexPLM instances without delay.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/11/ptc-patches-critical-windchill-and.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Google Cloud Warns Three AMD Turin CPU Flaws Could Leak Data Across Processes in VMs</title>
+    <id>urn:cybersecnews:item:720</id>
+    <published>2026-11-12T16:38:41.252445+00:00</published>
+    <updated>2026-11-12T16:38:41.252445+00:00</updated>
+    <link href="https://thehackernews.com/2026/11/google-cloud-warns-three-amd-turin-cpu.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · side-channel&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Google Cloud has identified three AMD Turin CPU side-channel vulnerabilities (CVE-2024-24675, CVE-2024-24676, CVE-2024-24677) that could allow unprivileged code on the same processor core to infer sensitive data from other processes or the kernel within a VM. Google has already mitigated inter-VM and VM-to-host attacks but intra-VM exploitation remains possible. Affected VMs require a guest OS patch followed by a stop-and-start to fully remediate; Google recommends prioritizing this action for workloads processing sensitive data. No evidence of active exploitation in the wild has been reported, though the local attack surface and covert-channel nature of these flaws warrant prompt patching.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/11/google-cloud-warns-three-amd-turin-cpu.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Citrix Patches 12 NetScaler and Secure Access Client Flaws, Including Authentication Bypass</title>
+    <id>urn:cybersecnews:item:719</id>
+    <published>2026-11-12T16:38:41.251505+00:00</published>
+    <updated>2026-11-12T16:38:41.251505+00:00</updated>
+    <link href="https://thehackernews.com/2026/11/citrix-patches-12-netscaler-and-secure.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass; memory-overflow; dos · CVE-2026-120868&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Citrix NetScaler ADC, NetScaler Gateway, and NetScaler Console are affected by multiple critical vulnerabilities including CVE-2026-120868 (CVSS 9.3), a memory overflow enabling authentication bypass and denial-of-service attacks. These flaws present high severity risk to authentication infrastructure and require immediate patching. Citrix has released patches and users should apply them immediately to all affected instances. Monitor security advisories for complete CVE list and exploit status as this is an active, critical vulnerability affecting widely-deployed access control systems.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/11/citrix-patches-12-netscaler-and-secure.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Critical Red Hat Quay Flaw Lets Attackers Read and Overwrite All Private Container Images in a Registry</title>
+    <id>urn:cybersecnews:item:718</id>
+    <published>2026-11-12T16:38:41.250691+00:00</published>
+    <updated>2026-11-12T16:38:41.250691+00:00</updated>
+    <link href="https://thehackernews.com/2026/11/critical-red-hat-quay-flaw-lets.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Red Hat Quay contains a critical authentication bypass vulnerability (CVE details not specified in excerpt) that enables unauthorized read and overwrite access to all private container images regardless of repository permissions. The flaw affects all Quay versions and is exploitable by anonymous users when anonymous access is enabled, or by any authenticated user when disabled, making it high-severity and likely to be exploited given the ease of access. Immediate patching to the latest fixed builds is critical; administrators should also disable anonymous access as an interim mitigation and audit container image registries for unauthorized modifications.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/11/critical-red-hat-quay-flaw-lets.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Red Hat: Kritische Sicherheitslücke in Apache HTTP Server entdeckt</title>
+    <id>urn:cybersecnews:item:717</id>
+    <published>2026-11-12T16:38:41.249694+00:00</published>
+    <updated>2026-11-12T16:38:41.249694+00:00</updated>
+    <link href="https://www.golem.de/news/red-hat-kritische-sicherheitsluecke-in-apache-http-server-entdeckt-2611-215134.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;CVE affects Apache HTTP Server with a critical severity rating of 9.8/10. The vulnerability allows remote attackers to execute arbitrary code or cause denial of service through an unspecified attack vector in the HTTP request processing mechanism. Immediate patching is essential; apply the latest security updates from Red Hat and Apache Foundation without delay. Monitor systems for exploitation attempts and consider temporarily implementing Web Application Firewall rules if patching cannot be immediately deployed.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.golem.de/news/red-hat-kritische-sicherheitsluecke-in-apache-http-server-entdeckt-2611-215134.html"&gt;Read more&lt;/a&gt; · Source: golem-security&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>iOS, macOS, iPadOS: Calif.io-Exploit setzt auf Brotli-Bug für Jailbreak</title>
+    <id>urn:cybersecnews:item:716</id>
+    <published>2026-11-12T16:38:41.248711+00:00</published>
+    <updated>2026-11-12T16:38:41.248711+00:00</updated>
+    <link href="https://www.heise.de/news/Naechster-Calif-io-Angriff-Jailbreak-nutzt-Brotli-Luecke-auf-Mac-iPhone-und-iPad-11521975.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Apple iOS, macOS, and iPadOS are vulnerable to a Brotli compression library flaw exploited through WiFi captive portal attacks, allowing unauthenticated code execution and jailbreak. The Calif.io team demonstrated active exploitation in the wild using this method, making it a critical severity issue. Users should immediately update to the latest OS versions from Apple to patch the underlying Brotli vulnerability and disable automatic captive portal handling where possible. This vector is particularly dangerous as it requires only WiFi proximity without user interaction beyond connecting to open networks.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.heise.de/news/Naechster-Calif-io-Angriff-Jailbreak-nutzt-Brotli-Luecke-auf-Mac-iPhone-und-iPad-11521975.html"&gt;Read more&lt;/a&gt; · Source: heise-security&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Kritische Sicherheitslücke in Apache2 ermöglicht Codeeinschleusung</title>
+    <id>urn:cybersecnews:item:715</id>
+    <published>2026-11-12T16:38:41.247414+00:00</published>
+    <updated>2026-11-12T16:38:41.247414+00:00</updated>
+    <link href="https://www.heise.de/news/Kritische-Sicherheitsluecke-in-Apache2-ermoeglicht-Codeeinschleusung-11523150.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Apache HTTP Server versions with HTTP/2 enabled are vulnerable to remote code injection attacks. The flaw allows attackers to inject malicious code through specially crafted HTTP/2 requests, though successful exploitation is technically complex. This is a critical severity issue; while no widespread active exploitation has been reported, patching is strongly recommended for all affected deployments. Apply the latest Apache security updates immediately, particularly for systems with HTTP/2 module enabled, or temporarily disable HTTP/2 if patching cannot be done promptly.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.heise.de/news/Kritische-Sicherheitsluecke-in-Apache2-ermoeglicht-Codeeinschleusung-11523150.html"&gt;Read more&lt;/a&gt; · Source: heise-security&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Active ScreenConnect attacks breach MSPs, impact dozens of organizations</title>
     <id>urn:cybersecnews:item:714</id>
@@ -11,7 +101,7 @@
     <updated>2026-11-12T05:57:27.044257+00:00</updated>
     <link href="https://www.bleepingcomputer.com/news/security/active-screenconnect-attacks-breach-msps-impact-dozens-of-organizations/" rel="alternate" />
     <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;ConnectWise ScreenConnect is being actively exploited in the wild as attackers compromise MSP instances to deploy unauthorized remote-access tools across customer networks, potentially impacting dozens of organizations. The attack leverages legitimate ScreenConnect access to establish persistent backdoors on downstream endpoints, making it difficult to detect and remediate. This represents a critical supply-chain attack vector targeting the MSP industry. MSPs should immediately audit ScreenConnect logs for suspicious activity, isolate compromised instances, reset credentials, and apply the latest security patches; consider implementing network segmentation to limit lateral movement if compromise is suspected.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/active-screenconnect-attacks-breach-msps-impact-dozens-of-organizations/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-84869&lt;/em&gt;&lt;/p&gt;&lt;p&gt;ConnectWise ScreenConnect is being actively exploited in the wild as attackers compromise MSP instances to deploy unauthorized remote-access tools across customer networks, potentially impacting dozens of organizations. The attack leverages legitimate ScreenConnect access to establish persistent backdoors on downstream endpoints, making it difficult to detect and remediate. This represents a critical supply-chain attack vector targeting the MSP industry. MSPs should immediately audit ScreenConnect logs for suspicious activity, isolate compromised instances, reset credentials, and apply the latest security patches; consider implementing network segmentation to limit lateral movement if compromise is suspected.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/active-screenconnect-attacks-breach-msps-impact-dozens-of-organizations/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
   </entry>
   <entry>
     <title>Proofpoint ITM | 4.4.3.148–5.0.1</title>
@@ -813,95 +903,5 @@
     <link href="https://www.heise.de/news/eMudhra-TLS-Leck-Apple-laesst-Problem-auf-macOS-Kommandozeile-zunaechst-bestehen-11500945.html" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · cert-validation&lt;/em&gt;&lt;/p&gt;&lt;p&gt;eMudhra certificate authority issued a fraudulent TLS certificate that was included in macOS system certificate bundles used by command-line tools, creating a trusted path for potential man-in-the-middle attacks. Apple has patched browsers but left the legacy cert.pem file used by CLI utilities unpatched, exposing developers and administrators using command-line tools to ongoing risk. Users should manually remove the compromised eMudhra certificate from the system cert.pem file or update to the latest macOS version when available, and review any TLS traffic from CLI tools for signs of compromise.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.heise.de/news/eMudhra-TLS-Leck-Apple-laesst-Problem-auf-macOS-Kommandozeile-zunaechst-bestehen-11500945.html"&gt;Read more&lt;/a&gt; · Source: heise-security&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Authlib: empty signatures validation in JWS JSON deserialization (CVE-2026-96760)</title>
-    <id>urn:cybersecnews:item:624</id>
-    <published>2026-10-27T20:28:23.054152+00:00</published>
-    <updated>2026-10-27T20:28:23.054152+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-6v38-4h7w-rj9h" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · signature-bypass · CVE-2026-96760&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Authlib versions prior to 1.9.0 contain a critical signature verification bypass in the JsonWebSignature.deserialize_json() method, which accepts JWS JSON Serialization objects and returns payloads as verified without actually validating signatures or requiring cryptographic keys. The vulnerability occurs because signature validation is not properly enforced in the deserialization logic. This is exploited in the wild and affects all applications using Authlib's JWS JSON deserialization. Upgrade immediately to Authlib 1.9.0 or later to patch this critical vulnerability.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-6v38-4h7w-rj9h"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Adobe Commerce and Magento: Adobe Commerce and Magento Unrestricted Upload of File with Dangerous Type Vulnerability (CVE-2026-48356)</title>
-    <id>urn:cybersecnews:item:623</id>
-    <published>2026-10-27T20:28:23.052723+00:00</published>
-    <updated>2026-10-27T20:28:23.052723+00:00</updated>
-    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-48356" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · unrestricted-file-upload · CVE-2026-48356&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Adobe Commerce and Magento are affected by CVE-2026-48356, an unrestricted file upload vulnerability allowing arbitrary code execution with current user privileges, potentially leading to account compromise or elevated access. This vulnerability is actively exploited in the wild and carries high severity. Immediately apply vendor-provided patches per CISA BOD 26-04 guidance; for cloud deployments without available mitigations, discontinue use and evaluate alternative solutions. Conduct forensics triage on internet-exposed instances and prioritize patching based on asset exposure levels.&lt;/p&gt;&lt;p&gt;&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2026-48356"&gt;Read more&lt;/a&gt; · Source: cisa-kev&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>GoAhead TLS Flaws Allow Revoked Client Certificates and Enable Session Decryption</title>
-    <id>urn:cybersecnews:item:622</id>
-    <published>2026-10-27T20:28:23.050504+00:00</published>
-    <updated>2026-10-27T20:28:23.050504+00:00</updated>
-    <link href="https://thehackernews.com/2026/10/goahead-tls-flaws-allow-revoked-client.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass&lt;/em&gt;&lt;/p&gt;&lt;p&gt;GoAhead embedded web server's OpenSSL-backed TLS implementation fails to enable certificate revocation checking despite loading revocation lists, allowing revoked client certificates to authenticate successfully in mutual-TLS deployments. The vulnerability affects versions using OpenSSL backend with client certificate authentication configured, enabling unauthorized access when revocation lists are present but unenforced. This is a high-severity flaw that enables authentication bypass; exploitability in the wild depends on deployment prevalence of mutual-TLS configurations with revocation lists. Affected organizations should immediately patch GoAhead to the latest version and verify revocation checking is explicitly enabled post-update.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/goahead-tls-flaws-allow-revoked-client.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Tricks from the Past deployed via signed ChatGPT and Claude binaries</title>
-    <id>urn:cybersecnews:item:621</id>
-    <published>2026-10-27T14:01:53.770963+00:00</published>
-    <updated>2026-10-27T14:01:53.770963+00:00</updated>
-    <link href="https://research.checkpoint.com/2026/tricks-from-the-past-deployed-via-signed-chatgpt-and-claude-binaries/" rel="alternate" />
-    <category term="red-team" />
-    <content type="html">&lt;p&gt;&lt;em&gt;red-team · supply-chain&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Attackers are distributing malware via trojanized binaries of ChatGPT and Claude desktop applications hosted on fake GitHub repositories, leveraging the popularity of AI tools to deceive users. The campaign deploys a custom malware chain called Yoba that uses legitimate-looking project names (GPT-5.6 Sol, GPT-6 Astra, Claude variants) with signed binaries to evade detection. The severity is high as the malware uses legitimate code-signing to bypass security controls; exploitation is active and ongoing. Users should verify AI tool downloads only from official sources (OpenAI.com, Anthropic.com, GitHub.com official accounts), avoid third-party GitHub repositories, and implement application whitelisting or binary signature verification controls.&lt;/p&gt;&lt;p&gt;&lt;a href="https://research.checkpoint.com/2026/tricks-from-the-past-deployed-via-signed-chatgpt-and-claude-binaries/"&gt;Read more&lt;/a&gt; · Source: checkpoint-research&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>MONAILabel Server Crash and Silent Inference Corruption via Crafted DICOM (pydicom DS/IS Validation Bypass) (CVE-2026-48705)</title>
-    <id>urn:cybersecnews:item:620</id>
-    <published>2026-10-27T14:01:53.769976+00:00</published>
-    <updated>2026-10-27T14:01:53.769976+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-6hp3-vr39-rqw8" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · dos-and-data-corruption · CVE-2026-48705&lt;/em&gt;&lt;/p&gt;&lt;p&gt;MONAILabel Server via MONAI library is vulnerable to remote crash and silent inference corruption through crafted DICOM files exploiting pydicom's lack of DS/IS validation (CVE-2026-48705, CVSS critical). An unauthenticated attacker can upload a malicious DICOM containing NaN/infinity values that bypass validation and propagate through the inference pipeline, causing server crashes or corrupted medical AI results. No evidence of active exploitation in the wild. Immediately patch MONAI/MONAILabel to versions with strict DS/IS validation and implement input validation at the REST API layer; consider restricting DICOM upload access pending patch deployment.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-6hp3-vr39-rqw8"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Agno: Arbitrary code execution via `eval()` on `field_type` in `FunctionCall` (CVE-2026-35002)</title>
-    <id>urn:cybersecnews:item:619</id>
-    <published>2026-10-27T14:01:53.768568+00:00</published>
-    <updated>2026-10-27T14:01:53.768568+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-m4w4-3r8h-jw98" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-35002&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Agno prior to version 2.3.24 contains a critical arbitrary code execution vulnerability (CVE-2026-35002) where the `field_type` parameter in `FunctionCall` is passed directly to Python's `eval()`, allowing remote code execution with CVSS 9.3. An attacker who can influence the `field_type` value gains full system compromise. There is no indication of current wild exploitation, but this is an immediate threat given the critical severity. Upgrade Agno to version 2.3.24 or later immediately; if immediate patching is impossible, restrict network access to Agno deployments and validate all external input to `FunctionCall` objects.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-m4w4-3r8h-jw98"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>OpenAI Compaction Flaw Let Researchers Bypass Hidden Reasoning Protections</title>
-    <id>urn:cybersecnews:item:618</id>
-    <published>2026-10-27T14:01:53.766687+00:00</published>
-    <updated>2026-10-27T14:01:53.766687+00:00</updated>
-    <link href="https://thehackernews.com/2026/10/openai-compaction-flaw-let-researchers.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · information-disclosure&lt;/em&gt;&lt;/p&gt;&lt;p&gt;OpenAI's reasoning models contain a vulnerability in the compaction feature that allows researchers to extract hidden reasoning data that should remain encrypted. By manipulating conversation compression mechanisms, attackers can bypass protections designed to conceal intermediate problem-solving steps. While currently demonstrated only by researchers rather than widespread exploitation, this technique undermines the security model of reasoning features. OpenAI should immediately patch the compaction logic to prevent unauthorized access to encrypted reasoning outputs and implement additional validation to ensure reasoning data remains inaccessible through compression workflows.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/openai-compaction-flaw-let-researchers.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Microsoft Authenticator Flaw Let Permissionless Android Apps Steal Work Account Tokens</title>
-    <id>urn:cybersecnews:item:617</id>
-    <published>2026-10-27T14:01:53.761301+00:00</published>
-    <updated>2026-10-27T14:01:53.761301+00:00</updated>
-    <link href="https://thehackernews.com/2026/10/microsoft-authenticator-flaw-let.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-80097&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Microsoft Authenticator for Android contained a flaw (CVE-2026-80097) allowing unprivileged malicious apps to impersonate legitimate Microsoft applications and steal work account authentication tokens. The vulnerability exploited Android's intent-based app communication model, enabling token theft without requiring any special permissions. Microsoft patched the issue in Authenticator version 6.2606.4246; immediate update is recommended for all Android users as the flaw poses severe risk to enterprise account security.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/microsoft-authenticator-flaw-let.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Apple Patches for October 2026, (Mon, Oct 26th)</title>
-    <id>urn:cybersecnews:item:616</id>
-    <published>2026-10-27T03:55:01.770343+00:00</published>
-    <updated>2026-10-27T03:55:01.770343+00:00</updated>
-    <link href="https://isc.sans.edu/diary/rss/33458" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Apple released patches for 304 vulnerabilities across its product portfolio in October 2026, maintaining its typical monthly update cadence. The advisory does not specify severity ratings or whether any vulnerabilities are actively exploited in the wild. Immediate patching is recommended for all affected Apple systems (iOS, macOS, watchOS, tvOS) to close the identified security gaps. Users should prioritize deployment through Apple's standard software update mechanisms as soon as testing permits.&lt;/p&gt;&lt;p&gt;&lt;a href="https://isc.sans.edu/diary/rss/33458"&gt;Read more&lt;/a&gt; · Source: sans-isc&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Microsoft releases emergency .NET patches for critical Brotli flaw</title>
-    <id>urn:cybersecnews:item:615</id>
-    <published>2026-10-26T20:55:00.973605+00:00</published>
-    <updated>2026-10-26T20:55:00.973605+00:00</updated>
-    <link href="https://www.bleepingcomputer.com/news/microsoft/microsoft-releases-emergency-net-patches-for-critical-brotli-flaw/" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Microsoft released emergency patches for .NET addressing a critical vulnerability in Brotli compression (CVE tracking pending). The flaw allows remote code execution through maliciously crafted compressed data, potentially enabling attackers to execute arbitrary code in .NET applications using Brotli decompression. No evidence of active exploitation in the wild has been reported at this time, though the critical severity and emergency patch status indicate high risk. Immediately apply available .NET security updates to all affected systems and prioritize environments processing untrusted compressed data.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/microsoft/microsoft-releases-emergency-net-patches-for-critical-brotli-flaw/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
   </entry>
 </feed>
