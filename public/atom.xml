@@ -3,7 +3,34 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-11-13T05:20:26.121204+00:00</updated>
+  <updated>2026-11-13T15:57:24.742246+00:00</updated>
+  <entry>
+    <title>56 AWS API calls in 141 milliseconds: Inside an AI-run intrusion</title>
+    <id>urn:cybersecnews:item:729</id>
+    <published>2026-11-13T15:57:24.742246+00:00</published>
+    <updated>2026-11-13T15:57:24.742246+00:00</updated>
+    <link href="https://www.elastic.co/security-labs/threat-command/cyberstrikeai-aws-cloudtrail-intrusion" rel="alternate" />
+    <category term="red-team" />
+    <content type="html">&lt;p&gt;&lt;em&gt;red-team · detection-evasion&lt;/em&gt;&lt;/p&gt;&lt;p&gt;An AI-driven intrusion campaign leveraged compromised AWS credentials to execute 56 API calls across four accounts using eight distinct identities within 141 milliseconds, enabling rapid lateral movement and reconnaissance while evading detection. The attack demonstrates how high-velocity, distributed API activity can fragment across multiple detection rules, with individual detections flagging only partial portions of the coordinated behavior rather than the full attack chain. AWS CloudTrail logging and correlation-based detection were insufficient to identify the complete attack scope in real-time, highlighting gaps in cloud security monitoring for coordinated, rapid-fire API abuse. Organizations should implement behavioral analytics and anomaly detection specifically tuned for distributed identity activity within short timeframes, enforce strict credential hygiene and access controls, and correlate CloudTrail events across accounts to detect coordinated multi-identity patterns indicative of lateral movement.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.elastic.co/security-labs/threat-command/cyberstrikeai-aws-cloudtrail-intrusion"&gt;Read more&lt;/a&gt; · Source: elastic-security-labs&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Check Point warns of zero-day flaw exploited for root access</title>
+    <id>urn:cybersecnews:item:728</id>
+    <published>2026-11-13T15:57:24.740931+00:00</published>
+    <updated>2026-11-13T15:57:24.740931+00:00</updated>
+    <link href="https://www.bleepingcomputer.com/news/security/check-point-patches-zero-day-that-lets-hackers-get-root-access/" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · privilege-escalation&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Check Point products are affected by a high-severity zero-day vulnerability being actively exploited in the wild since late October to achieve root-level access and establish persistence on compromised systems. The flaw allows attackers to escalate privileges and maintain long-term control of affected devices. Check Point has released emergency hotfixes to address this issue. Immediate patching is required; prioritize deployment of available hotfixes to all affected Check Point systems.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/check-point-patches-zero-day-that-lets-hackers-get-root-access/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Hackers Exploit PHP2Shell Flaws in Check Point Gateways to Deploy TSGA Backdoor and Wipe ESXi Files</title>
+    <id>urn:cybersecnews:item:727</id>
+    <published>2026-11-13T15:57:24.739464+00:00</published>
+    <updated>2026-11-13T15:57:24.739464+00:00</updated>
+    <link href="https://thehackernews.com/2026/11/hackers-exploit-php2shell-flaws-in.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce; privilege-escalation&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Check Point Security Gateways are vulnerable to PHP2Shell exploitation enabling remote code execution; attackers chain this with a previously unknown local privilege escalation in Gaia OS to deploy the TSGA backdoor and execute destructive operations including ESXi file deletion. Active exploitation targeting Israeli organizations began October 30, 2026, indicating high severity with demonstrated in-the-wild attacks. Immediate patching of Check Point gateways is critical; organizations should also implement network segmentation and monitor for backdoor indicators including TSGA command-and-control communications.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/11/hackers-exploit-php2shell-flaws-in.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Macfinger ClickFix campaign sends DownTheDRAIN infostealer for macOS, (Fri, Nov 13th)</title>
     <id>urn:cybersecnews:item:726</id>
@@ -876,32 +903,5 @@
     <link href="https://thehackernews.com/2026/10/researcher-reveals-how-logic-bugs-alone.html" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · logic-bug,sandbox-escape&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Microsoft Edge was compromised through a chain of logic bugs without requiring memory corruption vulnerabilities, enabling arbitrary code execution outside the sandbox when a user visits a malicious webpage. The attack chain, disclosed by Orange Tsai after a five-month embargo, exploited design flaws rather than traditional memory safety issues and earned $175,000 at Pwn2Own Berlin in May 2024. Microsoft patched the vulnerabilities immediately following the contest, though the specific severity rating and current exploitation status in the wild are not detailed. Security engineers should ensure Edge is fully updated and review the disclosed logic flaw patterns to identify similar design weaknesses in other browser isolation mechanisms.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/researcher-reveals-how-logic-bugs-alone.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Volt Typhoon Used Covert Silent Train Network in Four Zero-Day Exploitation Campaigns</title>
-    <id>urn:cybersecnews:item:629</id>
-    <published>2026-10-28T20:49:14.126050+00:00</published>
-    <updated>2026-10-28T20:49:14.126050+00:00</updated>
-    <link href="https://thehackernews.com/2026/10/volt-typhoon-used-covert-silent-train.html" rel="alternate" />
-    <category term="red-team" />
-    <content type="html">&lt;p&gt;&lt;em&gt;red-team · c2&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Volt Typhoon deployed Silent Train, a covert network leveraging compromised SOHO/IoT/enterprise infrastructure with rotating chains for persistent access and zero-day exploitation across four campaigns since late 2023. The group exploited multiple zero-day vulnerabilities to establish strategic footholds in critical infrastructure, representing high severity threats with active exploitation confirmed. Network defenders should prioritize identifying and isolating compromised edge devices, implement strict egress filtering on SOHO/IoT devices, deploy behavioral analytics for detecting rotating command-and-control chains, and ensure rapid patching of zero-day disclosures. Organizations in critical infrastructure sectors should conduct forensic reviews for Silent Train indicators and coordinate with CISA for threat intelligence regarding affected systems.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/volt-typhoon-used-covert-silent-train.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>CVE-2026-20362 | Cisco Finesse Server-Side Request Forgery Vulnerability</title>
-    <id>urn:cybersecnews:item:628</id>
-    <published>2026-10-28T14:54:14.843399+00:00</published>
-    <updated>2026-10-28T14:54:14.843399+00:00</updated>
-    <link href="https://horizon3.ai/attack-research/vulnerabilities/cve-2026-20362/" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · ssrf · CVE-2026-20362&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Cisco Finesse is vulnerable to a server-side request forgery (SSRF) flaw (CVE-2026-20362) that allows authenticated attackers to make arbitrary network requests from the affected server. The vulnerability is rated high severity and currently lacks evidence of active exploitation in the wild. Cisco has released patches for affected versions; organizations should update Finesse servers immediately and restrict network access to the application as an interim mitigation if patching cannot be completed promptly.&lt;/p&gt;&lt;p&gt;&lt;a href="https://horizon3.ai/attack-research/vulnerabilities/cve-2026-20362/"&gt;Read more&lt;/a&gt; · Source: horizon3&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Hackers now scanning systems for recently-patched Oracle flaw</title>
-    <id>urn:cybersecnews:item:627</id>
-    <published>2026-10-28T14:54:14.842234+00:00</published>
-    <updated>2026-10-28T14:54:14.842234+00:00</updated>
-    <link href="https://www.bleepingcomputer.com/news/security/hackers-now-scanning-systems-for-recently-patched-oracle-flaw/" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Oracle E-Business Suite (EBS) is under active reconnaissance following disclosure of a critical vulnerability in the WebLogic component. The flaw allows remote code execution without authentication, exploitable via network access alone. Active scanning in the wild indicates imminent exploitation risk with high severity. Apply Oracle's latest security patches immediately to all affected EBS systems and restrict network access to WebLogic ports where possible.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/hackers-now-scanning-systems-for-recently-patched-oracle-flaw/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
   </entry>
 </feed>
