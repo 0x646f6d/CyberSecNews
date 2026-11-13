@@ -3,7 +3,25 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-11-12T16:38:41.255709+00:00</updated>
+  <updated>2026-11-13T05:20:26.121204+00:00</updated>
+  <entry>
+    <title>Macfinger ClickFix campaign sends DownTheDRAIN infostealer for macOS, (Fri, Nov 13th)</title>
+    <id>urn:cybersecnews:item:726</id>
+    <published>2026-11-13T05:20:26.121204+00:00</published>
+    <updated>2026-11-13T05:20:26.121204+00:00</updated>
+    <link href="https://isc.sans.edu/diary/rss/33518" rel="alternate" />
+    <category term="red-team" />
+    <content type="html">&lt;p&gt;&lt;em&gt;red-team · infostealer&lt;/em&gt;&lt;/p&gt;&lt;p&gt;The ClickFix campaign targets macOS users through deceptive prompts, distributing the DownTheDRAIN infostealer malware. The malware is designed to exfiltrate sensitive user data including credentials and browser information from compromised Mac systems. There are active in-the-wild infections reported as part of this campaign. Users should avoid clicking suspicious popup prompts claiming security alerts, maintain updated antivirus software, and monitor systems for unauthorized data exfiltration indicators; security teams should block associated malicious domains and educate end users on social engineering tactics used in the campaign.&lt;/p&gt;&lt;p&gt;&lt;a href="https://isc.sans.edu/diary/rss/33518"&gt;Read more&lt;/a&gt; · Source: sans-isc&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Rucio: Unauthenticated administrator impersonation through SSH challenge tokens (CVE-2026-100397)</title>
+    <id>urn:cybersecnews:item:725</id>
+    <published>2026-11-13T05:20:26.113887+00:00</published>
+    <updated>2026-11-13T05:20:26.113887+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-x585-4vv8-2mh2" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-100397&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Rucio's authentication token validation function fails to differentiate between SSH challenge tokens and legitimate authentication tokens, allowing unauthenticated attackers to impersonate administrators by supplying a crafted SSH challenge token. The vulnerability is critical severity as it enables complete authentication bypass and administrative account impersonation without prior authentication. Exploit status in the wild is not mentioned but should be assumed likely given the severity and ease of exploitation. Update Rucio immediately to a patched version that properly validates token types before granting access.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-x585-4vv8-2mh2"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>0% GPU utilization: How SANSAR hides Linux cryptomining</title>
     <id>urn:cybersecnews:item:724</id>
@@ -551,7 +569,7 @@
     <updated>2026-11-04T15:59:50.085829+00:00</updated>
     <link href="https://thehackernews.com/2026/11/critical-rails-flaw-lets-attackers.html" rel="alternate" />
     <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · arbitrary-file-write&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Ruby on Rails Active Storage component contains a critical arbitrary file write vulnerability affecting versions prior to 8.1.4.1 and 8.0.5.2, exploitable by unauthenticated attackers through crafted file uploads processed by ImageMagick. The vulnerability allows remote code execution and complete server compromise with no authentication required. Organizations using affected Rails versions must immediately upgrade to patched versions 8.1.4.1, 8.0.5.2, or later, and consider disabling ImageMagick processing or implementing strict file type validation as interim mitigations pending patching.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/11/critical-rails-flaw-lets-attackers.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · arbitrary-file-write · CVE-2026-122006&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Ruby on Rails Active Storage component contains a critical arbitrary file write vulnerability affecting versions prior to 8.1.4.1 and 8.0.5.2, exploitable by unauthenticated attackers through crafted file uploads processed by ImageMagick. The vulnerability allows remote code execution and complete server compromise with no authentication required. Organizations using affected Rails versions must immediately upgrade to patched versions 8.1.4.1, 8.0.5.2, or later, and consider disabling ImageMagick processing or implementing strict file type validation as interim mitigations pending patching.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/11/critical-rails-flaw-lets-attackers.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
   </entry>
   <entry>
     <title>APT29-Linked Hackers Hijack Web Analytics Script to Deliver iOS and Android Exploits</title>
@@ -885,23 +903,5 @@
     <link href="https://www.bleepingcomputer.com/news/security/hackers-now-scanning-systems-for-recently-patched-oracle-flaw/" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Oracle E-Business Suite (EBS) is under active reconnaissance following disclosure of a critical vulnerability in the WebLogic component. The flaw allows remote code execution without authentication, exploitable via network access alone. Active scanning in the wild indicates imminent exploitation risk with high severity. Apply Oracle's latest security patches immediately to all affected EBS systems and restrict network access to WebLogic ports where possible.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/hackers-now-scanning-systems-for-recently-patched-oracle-flaw/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Adobe Fixes 8 Critical Campaign Classic Flaws Allowing Code Execution and Security Bypass</title>
-    <id>urn:cybersecnews:item:626</id>
-    <published>2026-10-28T14:54:14.840903+00:00</published>
-    <updated>2026-10-28T14:54:14.840903+00:00</updated>
-    <link href="https://thehackernews.com/2026/10/adobe-fixes-8-critical-campaign-classic.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · code-injection,rce,privilege-escalation,security-bypass · CVE-2026-104351&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Adobe Campaign Classic contains eight critical vulnerabilities including CVE-2026-104351 (CVSS 9.9), a code injection flaw enabling arbitrary code execution, plus additional flaws allowing security bypass and privilege escalation. These vulnerabilities pose severe risk to affected deployments with potential for complete system compromise. Apply Adobe's latest patches immediately; there is no indication of active exploitation but the critical severity warrants urgent remediation. Verify all Campaign Classic instances are updated and implement network segmentation for defense-in-depth protection.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/adobe-fixes-8-critical-campaign-classic.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>eMudhra-TLS-Leck: Apple lässt Problem auf macOS-Kommandozeile zunächst bestehen</title>
-    <id>urn:cybersecnews:item:625</id>
-    <published>2026-10-28T14:54:14.839075+00:00</published>
-    <updated>2026-10-28T14:54:14.839075+00:00</updated>
-    <link href="https://www.heise.de/news/eMudhra-TLS-Leck-Apple-laesst-Problem-auf-macOS-Kommandozeile-zunaechst-bestehen-11500945.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · cert-validation&lt;/em&gt;&lt;/p&gt;&lt;p&gt;eMudhra certificate authority issued a fraudulent TLS certificate that was included in macOS system certificate bundles used by command-line tools, creating a trusted path for potential man-in-the-middle attacks. Apple has patched browsers but left the legacy cert.pem file used by CLI utilities unpatched, exposing developers and administrators using command-line tools to ongoing risk. Users should manually remove the compromised eMudhra certificate from the system cert.pem file or update to the latest macOS version when available, and review any TLS traffic from CLI tools for signs of compromise.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.heise.de/news/eMudhra-TLS-Leck-Apple-laesst-Problem-auf-macOS-Kommandozeile-zunaechst-bestehen-11500945.html"&gt;Read more&lt;/a&gt; · Source: heise-security&lt;/p&gt;</content>
   </entry>
 </feed>
