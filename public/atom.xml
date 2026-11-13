@@ -3,7 +3,25 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-11-13T15:57:24.742246+00:00</updated>
+  <updated>2026-11-13T21:50:46.414712+00:00</updated>
+  <entry>
+    <title>UnrealIRCd UnrealIRCd: UnrealIRCd Improper Neutralization of Delimiters Vulnerability (CVE-2026-114713)</title>
+    <id>urn:cybersecnews:item:731</id>
+    <published>2026-11-13T21:50:46.414712+00:00</published>
+    <updated>2026-11-13T21:50:46.414712+00:00</updated>
+    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-114713" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · command-injection · CVE-2026-114713&lt;/em&gt;&lt;/p&gt;&lt;p&gt;UnrealIRCd contains an improper neutralization of delimiters vulnerability (CVE-2026-114713) allowing unauthenticated command injection across linked servers, enabling attackers to execute arbitrary commands with server authority. This vulnerability is actively exploited in the wild and carries high severity due to the ease of exploitation and broad impact on multi-server deployments. Patch immediately per vendor instructions in compliance with CISA BOD 26-04 prioritization requirements; if patches are unavailable, discontinue use of the product or implement network segmentation to isolate affected systems.&lt;/p&gt;&lt;p&gt;&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2026-114713"&gt;Read more&lt;/a&gt; · Source: cisa-kev&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>PostgreSQL Patches 52 Flaws, Including 22-Year-Old Bug Enabling Authenticated RCE</title>
+    <id>urn:cybersecnews:item:730</id>
+    <published>2026-11-13T21:50:46.412844+00:00</published>
+    <updated>2026-11-13T21:50:46.412844+00:00</updated>
+    <link href="https://thehackernews.com/2026/11/postgresql-patches-52-flaws-including.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · type-confusion-rce · CVE-2026-6460&lt;/em&gt;&lt;/p&gt;&lt;p&gt;PostgreSQL released patches for 52 vulnerabilities including CVE-2026-6460, a 22-year-old type confusion flaw allowing authenticated remote code execution with CVSS 8.8 that affects users with object creation privileges. The vulnerability enables arbitrary code execution at the OS level with database server privileges and has no indication of active exploitation in the wild. Organizations must apply PostgreSQL updates immediately and rebuild all C-language extensions to achieve full protection; authenticated users with CREATE privileges pose the primary threat vector.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/11/postgresql-patches-52-flaws-including.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>56 AWS API calls in 141 milliseconds: Inside an AI-run intrusion</title>
     <id>urn:cybersecnews:item:729</id>
@@ -20,7 +38,7 @@
     <updated>2026-11-13T15:57:24.740931+00:00</updated>
     <link href="https://www.bleepingcomputer.com/news/security/check-point-patches-zero-day-that-lets-hackers-get-root-access/" rel="alternate" />
     <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · privilege-escalation&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Check Point products are affected by a high-severity zero-day vulnerability being actively exploited in the wild since late October to achieve root-level access and establish persistence on compromised systems. The flaw allows attackers to escalate privileges and maintain long-term control of affected devices. Check Point has released emergency hotfixes to address this issue. Immediate patching is required; prioritize deployment of available hotfixes to all affected Check Point systems.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/check-point-patches-zero-day-that-lets-hackers-get-root-access/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · privilege-escalation · CVE-2026-123039&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Check Point products are affected by a high-severity zero-day vulnerability being actively exploited in the wild since late October to achieve root-level access and establish persistence on compromised systems. The flaw allows attackers to escalate privileges and maintain long-term control of affected devices. Check Point has released emergency hotfixes to address this issue. Immediate patching is required; prioritize deployment of available hotfixes to all affected Check Point systems.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/check-point-patches-zero-day-that-lets-hackers-get-root-access/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
   </entry>
   <entry>
     <title>Hackers Exploit PHP2Shell Flaws in Check Point Gateways to Deploy TSGA Backdoor and Wipe ESXi Files</title>
@@ -885,23 +903,5 @@
     <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-41709" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · insufficient-logging · CVE-2024-41709, CVE-2026-41709&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Broadcom VMware ESX contains an insufficient logging vulnerability (CVE-2026-41709) allowing authenticated administrators to perform operations without audit trail generation. This vulnerability is actively exploited in the wild and carries significant risk due to its ability to mask malicious activity. Organizations must prioritize patching per CISA BOD 26-04 guidance; for cloud deployments where patches are unavailable, discontinuation of the service should be considered. Immediately assess internet exposure of affected ESX instances and implement compensating logging controls pending vendor patch availability.&lt;/p&gt;&lt;p&gt;&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2026-41709"&gt;Read more&lt;/a&gt; · Source: cisa-kev&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Critical 16-Year-Old UEFI Flaw Can Run Code Before Secure Boot on Network-Booting Servers</title>
-    <id>urn:cybersecnews:item:631</id>
-    <published>2026-10-28T20:49:14.128507+00:00</published>
-    <updated>2026-10-28T20:49:14.128507+00:00</updated>
-    <link href="https://thehackernews.com/2026/10/critical-16-year-old-uefi-flaw-can-run.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;EDK II UEFI firmware contains a critical remote code execution vulnerability in network boot (PXE) functionality that enables attackers to execute code before Secure Boot validation. The flaw, present for 16 years, allows unauthenticated code execution during network boot sequences on affected servers. This vulnerability has high severity and is exploited in the wild; it requires network-level access and affects systems configured for network booting. Hardware vendors using EDK II must immediately patch affected UEFI implementations, and organizations should disable network boot by default, restrict PXE boot access to trusted networks only, and validate boot images cryptographically where possible.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/critical-16-year-old-uefi-flaw-can-run.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Researcher Reveals How Logic Bugs Alone Cracked Microsoft Edge in $175,000 Pwn2Own Win</title>
-    <id>urn:cybersecnews:item:630</id>
-    <published>2026-10-28T20:49:14.127509+00:00</published>
-    <updated>2026-10-28T20:49:14.127509+00:00</updated>
-    <link href="https://thehackernews.com/2026/10/researcher-reveals-how-logic-bugs-alone.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · logic-bug,sandbox-escape&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Microsoft Edge was compromised through a chain of logic bugs without requiring memory corruption vulnerabilities, enabling arbitrary code execution outside the sandbox when a user visits a malicious webpage. The attack chain, disclosed by Orange Tsai after a five-month embargo, exploited design flaws rather than traditional memory safety issues and earned $175,000 at Pwn2Own Berlin in May 2024. Microsoft patched the vulnerabilities immediately following the contest, though the specific severity rating and current exploitation status in the wild are not detailed. Security engineers should ensure Edge is fully updated and review the disclosed logic flaw patterns to identify similar design weaknesses in other browser isolation mechanisms.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/researcher-reveals-how-logic-bugs-alone.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
   </entry>
 </feed>
