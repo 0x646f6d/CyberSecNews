@@ -3,7 +3,34 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-11-15T20:51:07.257922+00:00</updated>
+  <updated>2026-11-16T18:00:07.951232+00:00</updated>
+  <entry>
+    <title>From view-only access to container root: five vulnerabilities in ONLYOFFICE Docs (FIXED)</title>
+    <id>urn:cybersecnews:item:735</id>
+    <published>2026-11-16T18:00:07.951232+00:00</published>
+    <updated>2026-11-16T18:00:07.951232+00:00</updated>
+    <link href="https://www.rapid7.com/blog/post/ve-from-view-only-access-to-container-root-five-vulnerabilities-in-onlyoffice-docs-fixed" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass,rce,file-read,path-traversal · CVE-2026-110385, CVE-2026-113627, CVE-2026-113630, CVE-2026-113631, CVE-2026-97727&lt;/em&gt;&lt;/p&gt;&lt;p&gt;ONLYOFFICE Document Server versions prior to 10.0 contain five critical vulnerabilities (CVE-2026-113627, CVE-2026-110385, CVE-2026-97727, CVE-2026-113630, CVE-2026-113631) allowing view-only document access to escalate to arbitrary code execution as root. The vulnerabilities stem from DocBuilder authorization flaws accepting view-only tokens, unsafe parameter injection enabling file writes and code execution, path traversal in save operations, and a passwordless sudo helper with sed injection. All five issues are confirmed exploited in proof-of-concept chains demonstrating remote root command execution within the official container. Organizations must immediately upgrade to Document Server 10.0 or later; patched versions restrict DocBuilder token reuse, filter conversion parameters, validate storage paths, sanitize helper arguments, and enforce callback binding for view-only sessions.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.rapid7.com/blog/post/ve-from-view-only-access-to-container-root-five-vulnerabilities-in-onlyoffice-docs-fixed"&gt;Read more&lt;/a&gt; · Source: rapid7&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>New NoisyTCP vulnerability lets attackers crash Linux servers</title>
+    <id>urn:cybersecnews:item:734</id>
+    <published>2026-11-16T18:00:07.950186+00:00</published>
+    <updated>2026-11-16T18:00:07.950186+00:00</updated>
+    <link href="https://www.bleepingcomputer.com/news/linux/new-noisytcp-linux-kernel-flaw-lets-attackers-crash-servers/" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · dos&lt;/em&gt;&lt;/p&gt;&lt;p&gt;An 11-year-old vulnerability in the Linux kernel, termed NoisyTCP, affects nearly all Linux distributions and enables remote denial-of-service attacks against systems running default-configured Nginx, Apache, and SSH services. The flaw allows attackers to crash vulnerable servers through crafted network traffic without requiring authentication. Severity is moderate to high due to the widespread impact across distributions and commonly deployed services; active exploitation in the wild has been observed. Linux kernel maintainers have released patches; administrators should prioritize updates for affected kernel versions and consider implementing network-level protections or firewall rules to restrict malformed traffic until patching is complete.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/linux/new-noisytcp-linux-kernel-flaw-lets-attackers-crash-servers/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Retadup Worm Resurfaces 7 Years After Takedown to Spread CoffeeLoader Malware</title>
+    <id>urn:cybersecnews:item:733</id>
+    <published>2026-11-16T18:00:07.948630+00:00</published>
+    <updated>2026-11-16T18:00:07.948630+00:00</updated>
+    <link href="https://thehackernews.com/2026/11/retadup-worm-resurfaces-7-years-after.html" rel="alternate" />
+    <category term="red-team" />
+    <content type="html">&lt;p&gt;&lt;em&gt;red-team · malware-distribution&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Retadup worm, dormant for seven years, has resurfaced to distribute CoffeeLoader malware via NSIS-based installers that execute malicious DLLs through rundll32.exe to deliver additional payloads. This represents moderate severity as CoffeeLoader functions as a loader for secondary malware threats and appears to be actively exploited in the wild based on Kaspersky's discovery and analysis. Users should immediately scan systems for infection indicators, block suspicious installer execution, and apply endpoint detection rules targeting rundll32.exe abuse patterns; organizations should restrict unsigned DLL execution and monitor for CoffeeLoader callbacks to command and control infrastructure.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/11/retadup-worm-resurfaces-7-years-after.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>FBI warns ARTEX AI hacking tool is powering global cyberattacks</title>
     <id>urn:cybersecnews:item:732</id>
@@ -876,32 +903,5 @@
     <link href="https://thehackernews.com/2026/10/telegram-android-flaw-lets-attackers.html" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Telegram Android versions prior to 12.10.4 contained a remote code execution vulnerability triggered during voice call initiation that allowed attackers with a valid Telegram account to execute arbitrary code on victim devices upon call acceptance. The flaw was actively exploitable in the wild and required no special privileges, only a standard Telegram account. Telegram patched the vulnerability in version 12.10.4 released September 2024. Users should immediately update Telegram to version 12.10.4 or later to remediate exposure.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/telegram-android-flaw-lets-attackers.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>zip: Critical Parser Differential &amp; Security Control Bypass via Dual-Header Inconsistencies (Zip Cloaking) Leading to Arbitrary File Overwrite &amp; RCE (CVE-2026-115905)</title>
-    <id>urn:cybersecnews:item:635</id>
-    <published>2026-10-29T04:37:15.821797+00:00</published>
-    <updated>2026-10-29T04:37:15.821797+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-m665-v7pm-7grj" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · parser-differential · CVE-2026-115905&lt;/em&gt;&lt;/p&gt;&lt;p&gt;The Rust `zip` crate (versions ≤9.0.4) contains a critical parser differential vulnerability (CVE-2026-115905) where `ZipArchive` and `ZipStreamReader` interpret filenames differently—the former trusts the Central Directory File Header while the latter relies on the Local File Header. Attackers can craft malicious ZIP archives with inconsistent headers to achieve arbitrary file overwrites and remote code execution, exploiting this inconsistency to bypass security controls. This vulnerability is critical severity; no active exploitation in the wild has been confirmed at time of advisory. Immediately update to `zip` version &gt;9.0.4 and validate all ZIP extraction logic, particularly any code using `ZipStreamReader`.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-m665-v7pm-7grj"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Electrum: Malicious server can replace a just-broadcast tx and try to trick user into RBF-ing it (CVE-2026-117601)</title>
-    <id>urn:cybersecnews:item:634</id>
-    <published>2026-10-29T04:37:15.811496+00:00</published>
-    <updated>2026-10-29T04:37:15.811496+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-6jp4-8v48-cc5v" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · tx-replacement-attack · CVE-2026-117601&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Electrum Bitcoin wallet is vulnerable to server-side transaction manipulation (CVE-2026-117601) where a malicious server can intercept broadcasted transactions, suppress them, and inject conflicting transactions to redirect funds to attacker-controlled addresses. The vulnerability is critical severity and exploitable in the wild by compromised or malicious Electrum servers. Users should immediately update to the latest patched version and consider using trusted server configurations or running their own Electrum server to mitigate this attack vector.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-6jp4-8v48-cc5v"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Linux Kernel: Linux Kernel Missing Initialization of a Variable Vulnerability (CVE-2026-46300)</title>
-    <id>urn:cybersecnews:item:633</id>
-    <published>2026-10-28T20:49:14.130660+00:00</published>
-    <updated>2026-10-28T20:49:14.130660+00:00</updated>
-    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-46300" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · uninitialized-variable · CVE-2026-46300, CVE-2026-98432&lt;/em&gt;&lt;/p&gt;&lt;p&gt;The Linux Kernel contains a missing variable initialization vulnerability (CVE-2026-46300) affecting ESP input processing during socket buffer coalescing, allowing unintended modification of page-cache-backed data and decryption of shared fragments in place. This vulnerability is actively exploited in the wild and can be chained with CVE-2026-109618 and CVE-2026-109619 to achieve remote code execution as root, including PHP webshell implantation. Immediately apply kernel security updates per vendor instructions and CISA BOD 26-04 prioritization guidance; affected systems should be patched without delay given active exploitation. If patches are unavailable, discontinue use of the affected kernel versions and perform forensic triage per CISA requirements.&lt;/p&gt;&lt;p&gt;&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2026-46300"&gt;Read more&lt;/a&gt; · Source: cisa-kev&lt;/p&gt;</content>
   </entry>
 </feed>
