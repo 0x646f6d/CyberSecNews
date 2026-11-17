@@ -3,7 +3,16 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-11-16T18:00:07.951232+00:00</updated>
+  <updated>2026-11-17T06:48:56.044528+00:00</updated>
+  <entry>
+    <title>Optimizely hack infected CNN, Fox News, BBC, Salesforce sites with malware</title>
+    <id>urn:cybersecnews:item:736</id>
+    <published>2026-11-17T06:48:56.044528+00:00</published>
+    <updated>2026-11-17T06:48:56.044528+00:00</updated>
+    <link href="https://www.bleepingcomputer.com/news/security/optimizely-supply-chain-attack-delivers-malware-to-cnn-fox-news-bbc-salesforce-sites/" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · supply-chain-attack&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Optimizely content delivery platform was compromised in a supply chain attack distributing malicious JavaScript to hundreds of major websites including CNN, Fox News, BBC, Zoom, Salesforce, and GitLab. The injected scripts targeted visitor browsers to steal cryptocurrency and payment card data while exploiting iOS vulnerabilities. This represents high-severity exploitation actively occurring in the wild affecting millions of end users. Affected organizations should immediately audit Optimizely implementations, review content delivery logs, purge cached malicious assets, implement Content Security Policy headers, and monitor for indicators of compromise on affected domains; consider alternative CDN providers pending Optimizely's security remediation.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/optimizely-supply-chain-attack-delivers-malware-to-cnn-fox-news-bbc-salesforce-sites/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>From view-only access to container root: five vulnerabilities in ONLYOFFICE Docs (FIXED)</title>
     <id>urn:cybersecnews:item:735</id>
@@ -894,14 +903,5 @@
     <link href="https://thehackernews.com/2026/10/hackers-exploited-cisco-sd-wan-flaw-to.html" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-20127&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Cisco Catalyst SD-WAN was exploited in-the-wild via a critical vulnerability (patched February 2024) to deploy KeyDrift malware designed to exfiltrate encryption keys used for inter-site traffic. The malware represents severe risk as compromised keys enable decryption of encrypted SD-WAN communications. Talos attributes these attacks to a sophisticated threat actor conducting what are classified as historical intrusions. Organizations must immediately verify systems are patched to the latest Catalyst SD-WAN release and implement network monitoring for KeyDrift indicators of compromise.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/hackers-exploited-cisco-sd-wan-flaw-to.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Telegram Android Flaw Lets Attackers Run Code When Users Answer Voice Calls</title>
-    <id>urn:cybersecnews:item:636</id>
-    <published>2026-10-29T14:59:09.543919+00:00</published>
-    <updated>2026-10-29T14:59:09.543919+00:00</updated>
-    <link href="https://thehackernews.com/2026/10/telegram-android-flaw-lets-attackers.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Telegram Android versions prior to 12.10.4 contained a remote code execution vulnerability triggered during voice call initiation that allowed attackers with a valid Telegram account to execute arbitrary code on victim devices upon call acceptance. The flaw was actively exploitable in the wild and required no special privileges, only a standard Telegram account. Telegram patched the vulnerability in version 12.10.4 released September 2024. Users should immediately update Telegram to version 12.10.4 or later to remediate exposure.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/telegram-android-flaw-lets-attackers.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
   </entry>
 </feed>
