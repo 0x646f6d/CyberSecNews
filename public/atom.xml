@@ -3,7 +3,34 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-11-17T06:48:56.044528+00:00</updated>
+  <updated>2026-11-17T17:25:48.469460+00:00</updated>
+  <entry>
+    <title>New GitDoor and GraphDoor Backdoors Turn GitHub and SharePoint Into Covert C2 Channels</title>
+    <id>urn:cybersecnews:item:739</id>
+    <published>2026-11-17T17:25:48.469460+00:00</published>
+    <updated>2026-11-17T17:25:48.469460+00:00</updated>
+    <link href="https://thehackernews.com/2026/11/new-gitdoor-and-graphdoor-backdoors.html" rel="alternate" />
+    <category term="red-team" />
+    <content type="html">&lt;p&gt;&lt;em&gt;red-team · c2&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Government entities in Asia and Africa are being targeted by Operation ShadowCloud, which deploys GitDoor and GraphDoor backdoors that abuse GitHub and Microsoft SharePoint as covert C2 channels, respectively. These previously undocumented backdoors leverage legitimate services to evade detection and maintain persistent command-and-control communications. The campaign is currently active and represents a significant threat to government infrastructure; mitigation should focus on monitoring for anomalous GitHub and SharePoint API activity, implementing strict access controls on these platforms, and deploying behavioral detection for unusual file synchronization or repository access patterns. Organizations should audit existing GitHub and SharePoint usage for indicators of compromise and consider network segmentation to limit lateral movement if either service is compromised.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/11/new-gitdoor-and-graphdoor-backdoors.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Researchers Detail iPhone Flaw That Let Apps Record Audio Despite Denied Microphone Permission</title>
+    <id>urn:cybersecnews:item:738</id>
+    <published>2026-11-17T17:25:48.468326+00:00</published>
+    <updated>2026-11-17T17:25:48.468326+00:00</updated>
+    <link href="https://thehackernews.com/2026/11/researchers-detail-iphone-flaw-that-let.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · permission-bypass&lt;/em&gt;&lt;/p&gt;&lt;p&gt;A patched flaw in Apple's audio service (CVE-2024-27850) allowed iOS and iPadOS apps to record audio despite users denying microphone permissions, affecting devices running iOS 17.5.1 and earlier. The vulnerability exploited improper permission validation in the audio framework and was not observed in active exploitation. Apple addressed the flaw in security updates released August 17, 2024; users should update to iOS 17.5.1 or later to remediate the issue.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/11/researchers-detail-iphone-flaw-that-let.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Hackers Found a Way Around GitHub SHA Pinning. This Webinar Explains How to Close the Gap</title>
+    <id>urn:cybersecnews:item:737</id>
+    <published>2026-11-17T17:25:48.464636+00:00</published>
+    <updated>2026-11-17T17:25:48.464636+00:00</updated>
+    <link href="https://thehackernews.com/2026/11/hackers-found-way-around-github-sha.html" rel="alternate" />
+    <category term="red-team" />
+    <content type="html">&lt;p&gt;&lt;em&gt;red-team · supply-chain-attack&lt;/em&gt;&lt;/p&gt;&lt;p&gt;GitHub Actions SHA pinning, a technique used to prevent supply chain attacks by locking workflows to specific commit hashes, can be circumvented by attackers who compromise upstream repositories and inject malicious code disguised as legitimate updates. The March 2026 Trivy compromise demonstrated this vulnerability in practice, where attackers successfully planted malicious code appearing to originate from GitHub's official checkout action. Organizations should implement additional verification controls beyond SHA pinning, including code review of pinned actions, monitoring for behavioral anomalies in CI/CD pipelines, and considering alternative supply chain security measures such as SBOM verification and runtime integrity checks. Immediate patching of affected actions is necessary, but administrators should recognize that SHA pinning alone provides incomplete protection against determined adversaries with repository access.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/11/hackers-found-way-around-github-sha.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Optimizely hack infected CNN, Fox News, BBC, Salesforce sites with malware</title>
     <id>urn:cybersecnews:item:736</id>
@@ -876,32 +903,5 @@
     <link href="https://www.bleepingcomputer.com/news/security/hugging-face-malware-campaign-returns-to-hijack-gpus-for-crypto-mining/" rel="alternate" />
     <category term="red-team" />
     <content type="html">&lt;p&gt;&lt;em&gt;red-team · supply-chain-attack&lt;/em&gt;&lt;/p&gt;&lt;p&gt;A persistent crypto-mining campaign is targeting Hugging Face model repositories, hijacking GPU resources and installing backdoors in compromised systems; one malicious model exceeded 28,000 downloads before removal. The threat actors rapidly redeployed similar models within days of initial takedown, demonstrating operational resilience. Separately, a fake Solana development kit on GitHub is designed to exploit AI coding agents into executing NetSupport RAT installations. Users should audit Hugging Face model sources and GitHub dependencies for legitimacy, implement repository integrity verification, disable auto-execution in AI development workflows, and monitor GPU utilization for anomalous crypto-mining activity; organizations should restrict GPU access and enforce signed dependency policies.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/hugging-face-malware-campaign-returns-to-hijack-gpus-for-crypto-mining/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>New Cisco firewall zero-day exploited to crash SSL VPN devices</title>
-    <id>urn:cybersecnews:item:639</id>
-    <published>2026-10-29T14:59:09.548452+00:00</published>
-    <updated>2026-10-29T14:59:09.548452+00:00</updated>
-    <link href="https://www.bleepingcomputer.com/news/security/cisco-warns-of-firewall-zero-day-exploited-to-crash-ssl-vpn-devices/" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · dos&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Cisco Adaptive Security Appliance (ASA) and Threat Defense (FTD) are affected by a remotely exploitable denial-of-service zero-day vulnerability in SSL VPN functionality. Attackers can crash vulnerable firewall devices without authentication, disrupting network connectivity and security services. This vulnerability has active exploitation in the wild. Apply Cisco's released security updates immediately to affected ASA and FTD devices, prioritizing internet-facing SSL VPN endpoints.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/cisco-warns-of-firewall-zero-day-exploited-to-crash-ssl-vpn-devices/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Attackers Exploit PHP2Shell Flaws in Internet-Exposed Palo Alto Networks Management Interfaces</title>
-    <id>urn:cybersecnews:item:638</id>
-    <published>2026-10-29T14:59:09.546706+00:00</published>
-    <updated>2026-10-29T14:59:09.546706+00:00</updated>
-    <link href="https://thehackernews.com/2026/10/attackers-exploit-php2shell-flaws-in.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Palo Alto Networks management interfaces are being actively exploited in the wild via recently patched PHP2Shell vulnerabilities. The flaws allow unauthenticated remote code execution when management interfaces are exposed to the internet. This represents critical severity with confirmed active exploitation ongoing. Immediately patch affected systems and ensure management interfaces are not internet-accessible; implement network segmentation and access controls to restrict management access to trusted networks only.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/attackers-exploit-php2shell-flaws-in.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Hackers Exploited Cisco SD-WAN Flaw to Plant Malware Built to Steal Encryption Keys</title>
-    <id>urn:cybersecnews:item:637</id>
-    <published>2026-10-29T14:59:09.545655+00:00</published>
-    <updated>2026-10-29T14:59:09.545655+00:00</updated>
-    <link href="https://thehackernews.com/2026/10/hackers-exploited-cisco-sd-wan-flaw-to.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-20127&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Cisco Catalyst SD-WAN was exploited in-the-wild via a critical vulnerability (patched February 2024) to deploy KeyDrift malware designed to exfiltrate encryption keys used for inter-site traffic. The malware represents severe risk as compromised keys enable decryption of encrypted SD-WAN communications. Talos attributes these attacks to a sophisticated threat actor conducting what are classified as historical intrusions. Organizations must immediately verify systems are patched to the latest Catalyst SD-WAN release and implement network monitoring for KeyDrift indicators of compromise.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/hackers-exploited-cisco-sd-wan-flaw-to.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
   </entry>
 </feed>
