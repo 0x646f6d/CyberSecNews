@@ -3,7 +3,34 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-11-18T06:07:31.212041+00:00</updated>
+  <updated>2026-11-18T16:59:05.092023+00:00</updated>
+  <entry>
+    <title>CVE-2026-123007: Critical NGINX HTTP/2 Integer Underflow Leads to RCE (FIXED)</title>
+    <id>urn:cybersecnews:item:747</id>
+    <published>2026-11-18T16:59:05.092023+00:00</published>
+    <updated>2026-11-18T16:59:05.092023+00:00</updated>
+    <link href="https://www.rapid7.com/blog/post/ve-cve-2026-123007-critical-nginx-http-2-integer-underflow-leads-to-rce-fixed" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · integer-underflow · CVE-2026-123007&lt;/em&gt;&lt;/p&gt;&lt;p&gt;CVE-2026-123007 is a critical integer underflow vulnerability (CWE-191, CVSS 9.2) in nginx HTTP/2 flow-control implementation affecting versions 1.9.5-1.30.6 and 1.31.0-1.31.8 that enables unauthenticated remote code execution with nginx worker privileges. The flaw allows attackers to manipulate HTTP/2 window-update frames to cause the connection send-window counter to exceed protocol limits, eventually triggering memory corruption in TLS output handling via unsafe memcpy operations. Active exploitation requires approximately 128 GB of network traffic (practical only over high-bandwidth connections due to connection timeout constraints) and depends on specific glibc EVEX/YMM memcpy implementations, limiting real-world internet exploitation though it has been proven viable in lab conditions. Immediately apply vendor patches: nginx open source 1.30.7 or 1.31.9; nginx Plus R37.0.8.1 or R37.3.0.1; nginx Plus R34-R36 have no fix available and require upgrade paths.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.rapid7.com/blog/post/ve-cve-2026-123007-critical-nginx-http-2-integer-underflow-leads-to-rce-fixed"&gt;Read more&lt;/a&gt; · Source: rapid7&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Mustache for Ruby: RCE using built-in method access (CVE-2026-130001)</title>
+    <id>urn:cybersecnews:item:746</id>
+    <published>2026-11-18T16:59:05.090743+00:00</published>
+    <updated>2026-11-18T16:59:05.090743+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-5hrj-7fc3-cmx9" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-130001&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Mustache template engine for Ruby versions 1.1.2 and earlier contains a critical remote code execution vulnerability (CVE-2026-130001) that allows attackers to execute arbitrary code by accessing built-in methods through specially crafted templates. The vulnerability has not been confirmed as actively exploited in the wild at this time. Users should immediately update to a patched version beyond 1.1.2; full technical details and proof-of-concept code will be released after a grace period for patching.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-5hrj-7fc3-cmx9"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Apache warns of Roller RCE vulnerability exploited in attacks</title>
+    <id>urn:cybersecnews:item:745</id>
+    <published>2026-11-18T16:59:05.088660+00:00</published>
+    <updated>2026-11-18T16:59:05.088660+00:00</updated>
+    <link href="https://www.bleepingcomputer.com/news/security/apache-warns-of-roller-rce-vulnerability-exploited-in-attacks/" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Apache Roller versions prior to 6.1.3 contain a critical remote code execution vulnerability being actively exploited in the wild. The flaw allows unauthenticated attackers to execute arbitrary code on affected servers. Organizations running Roller should immediately upgrade to version 6.1.3 or later to remediate this exposure.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/apache-warns-of-roller-rce-vulnerability-exploited-in-attacks/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Java4Shell (CVE-2026-114938): Frequently asked questions about OpenJDK remote code execution vulnerability</title>
     <id>urn:cybersecnews:item:744</id>
@@ -876,32 +903,5 @@
     <link href="https://github.com/advisories/GHSA-4xm8-rg9h-jhq2" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · path-traversal&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Path traversal vulnerability in Signal K resources and applicationData APIs (npm/@signalk/resources-provider and npm/signalk-server) allows unauthenticated or low-privileged users to read, write, and delete arbitrary files outside the intended storage directory. An attacker can exploit this to read config/security.json, obtain the JWT signing secret, forge admin tokens, and achieve remote code execution. Severity is critical with active exploitation likely given the ease of exploitation and high impact. Immediate patching is required; upgrade to the latest patched versions of affected npm packages and restrict API access until patched.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-4xm8-rg9h-jhq2"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>pypi-publish action revocation of CA in the chain that Sigstore uses in Trusted Publishing and Digital Attestations for PyPI</title>
-    <id>urn:cybersecnews:item:647</id>
-    <published>2026-10-30T20:27:22.959660+00:00</published>
-    <updated>2026-10-30T20:27:22.959660+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-5xjx-3w67-w9x9" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · cert-trust-store&lt;/em&gt;&lt;/p&gt;&lt;p&gt;The GitHub Actions pypi-publish action (versions before 1.14.2) bundled an outdated emSign root CA certificate through the certifi dependency that Sigstore relies on for PyPI Trusted Publishing and Digital Attestations. The revoked CA certificate in the trust store could potentially allow man-in-the-middle attacks or certificate validation bypasses during package publishing workflows. This is marked as critical severity. Users should immediately upgrade to pypi-publish version 1.14.2 or later, which removes the revoked certificate from the bundled trust store.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-5xjx-3w67-w9x9"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Erneut kritischer Bug in Linux TCP/IP aufgedeckt – Updates in Arbeit</title>
-    <id>urn:cybersecnews:item:646</id>
-    <published>2026-10-30T20:27:22.958291+00:00</published>
-    <updated>2026-10-30T20:27:22.958291+00:00</updated>
-    <link href="https://www.heise.de/news/Erneut-kritischer-Bug-in-Linux-TCP-IP-aufgedeckt-Updates-in-Arbeit-11506050.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Linux kernel TCP/IP stack contains a critical vulnerability enabling remote code execution, recently discovered after existing undetected for eleven years. The flaw affects core networking functionality and carries CVSS severity in the critical range. No evidence of active exploitation in the wild has been reported at this time. Apply kernel updates immediately once patches are released by your Linux distribution; affected systems should be prioritized for rapid deployment given the RCE severity and widespread impact potential.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.heise.de/news/Erneut-kritischer-Bug-in-Linux-TCP-IP-aufgedeckt-Updates-in-Arbeit-11506050.html"&gt;Read more&lt;/a&gt; · Source: heise-security&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Microsoft finally fixes VPN issues caused by September updates</title>
-    <id>urn:cybersecnews:item:645</id>
-    <published>2026-10-30T14:52:42.515767+00:00</published>
-    <updated>2026-10-30T14:52:42.515767+00:00</updated>
-    <link href="https://www.bleepingcomputer.com/news/microsoft/microsoft-finally-fixes-vpn-issues-caused-by-september-updates/" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · vpn-connectivity&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Microsoft patched Always On VPN connection failures introduced by September 2026 Windows 11 security updates, which prevented users from establishing VPN connections after the monthly patches. The root cause stemmed from changes in the security update that impacted VPN driver initialization. No evidence suggests active exploitation in the wild, as this was primarily a functionality issue rather than a security vulnerability. Users experiencing VPN connectivity problems following the September updates should apply the latest cumulative patch or contact Microsoft support for workarounds if immediate patching is not feasible.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/microsoft/microsoft-finally-fixes-vpn-issues-caused-by-september-updates/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
   </entry>
 </feed>
