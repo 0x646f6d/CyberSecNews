@@ -3,7 +3,52 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-11-17T17:25:48.469460+00:00</updated>
+  <updated>2026-11-18T06:07:31.212041+00:00</updated>
+  <entry>
+    <title>Java4Shell (CVE-2026-114938): Frequently asked questions about OpenJDK remote code execution vulnerability</title>
+    <id>urn:cybersecnews:item:744</id>
+    <published>2026-11-18T06:07:31.212041+00:00</published>
+    <updated>2026-11-18T06:07:31.212041+00:00</updated>
+    <link href="https://www.tenable.com/blog/java4shell-cve-2026-114938-frequently-asked-questions-about-openjdk-rce-vulnerability" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · memory-corruption · CVE-2026-114938&lt;/em&gt;&lt;/p&gt;&lt;p&gt;CVE-2026-114938 (Java4Shell) is a memory corruption vulnerability in OpenJDK's Base64 decoder affecting Java 17, 21, 25, and 27 on x86-64 processors supporting AVX-512 VBMI; unauthenticated attackers can achieve remote code execution on applications like Jira, Jenkins, and Keycloak. CVSS score is 8.1, and as of November 17, 2026, no active exploitation has been reported, though proof-of-concept code exists and functional exploits are being developed. Patch immediately by updating to fixed builds (e.g., Java 17.0.21.1, 21.0.13.1) released November 17, or apply mitigation flags -XX:-UseBASE64Intrinsics or -XX:UseAVX=2 if patching is delayed. Verify processor capabilities (AVX-512 VBMI support) and check all OpenJDK distributions including Corretto, Temurin, Zulu, and others for updated builds from respective vendors.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.tenable.com/blog/java4shell-cve-2026-114938-frequently-asked-questions-about-openjdk-rce-vulnerability"&gt;Read more&lt;/a&gt; · Source: tenable&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Perforce Puppet Enterprise: Perforce Puppet Enterprise Deserialization of Untrusted Data Vulnerability (CVE-2026-115731)</title>
+    <id>urn:cybersecnews:item:743</id>
+    <published>2026-11-18T06:07:31.211077+00:00</published>
+    <updated>2026-11-18T06:07:31.211077+00:00</updated>
+    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-115731" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · deserialization-rce · CVE-2026-115731&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Perforce Puppet Enterprise is vulnerable to deserialization of untrusted data (CVE-2026-115731) in its report-processing code, allowing attackers with CA-signed agent certificates to execute arbitrary code on Puppet Server by submitting crafted rich-data types via PUT requests. If the certificate authority lacks strong verification, unauthenticated network attackers can obtain valid certificates and exploit this vulnerability. This flaw is actively exploited in the wild and poses critical severity risk. Immediately apply vendor mitigations per CISA BOD 26-04 guidance, prioritizing patching; if unavailable, discontinue use and evaluate discontinuation based on asset internet exposure.&lt;/p&gt;&lt;p&gt;&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2026-115731"&gt;Read more&lt;/a&gt; · Source: cisa-kev&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Critical Java4Shell flaw allows RCE attacks on major Java applications</title>
+    <id>urn:cybersecnews:item:742</id>
+    <published>2026-11-18T06:07:31.209776+00:00</published>
+    <updated>2026-11-18T06:07:31.209776+00:00</updated>
+    <link href="https://www.bleepingcomputer.com/news/security/critical-java4shell-flaw-allows-rce-attacks-on-major-java-applications/" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;OpenJDK and applications built on it (Jenkins, Atlassian Jira, Confluence, Keycloak) are vulnerable to Java4Shell, a critical remote code execution flaw allowing unauthenticated attackers to execute arbitrary code. The vulnerability affects the core Java runtime and has demonstrated exploit capability in the wild targeting widely deployed enterprise software. Immediate patching of OpenJDK and affected applications is critical; organizations should prioritize updates for internet-facing instances and monitor for exploitation attempts.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/critical-java4shell-flaw-allows-rce-attacks-on-major-java-applications/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Java4Shell: Gefährlicher Bug in Java</title>
+    <id>urn:cybersecnews:item:741</id>
+    <published>2026-11-18T06:07:31.208585+00:00</published>
+    <updated>2026-11-18T06:07:31.208585+00:00</updated>
+    <link href="https://www.heise.de/news/Java4Shell-Gefaehrlicher-Bug-in-Java-11528499.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Oracle released 11 critical RCE vulnerabilities in Java on its latest patch day, including the high-severity Java4Shell exploit. Java4Shell leverages unsafe deserialization in common Java libraries to achieve remote code execution, requiring minimal attacker interaction. This vulnerability is actively exploited in the wild and poses severe risk to any Java-based application or service. Immediate patching of Oracle Java Runtime Environment to the latest security update is mandatory; organizations should prioritize this alongside network segmentation and input validation controls for Java applications.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.heise.de/news/Java4Shell-Gefaehrlicher-Bug-in-Java-11528499.html"&gt;Read more&lt;/a&gt; · Source: heise-security&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Java: RCE mit AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</title>
+    <id>urn:cybersecnews:item:740</id>
+    <published>2026-11-18T06:07:31.206968+00:00</published>
+    <updated>2026-11-18T06:07:31.206968+00:00</updated>
+    <link href="https://www.heise.de/news/Java-RCE-mit-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA-11528561.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Java4Shell is a remote code execution vulnerability affecting certain Java implementations through specially crafted serialized objects, with exploitation limited to specific processor architectures. The vulnerability impacts both Java servers and client applications that deserialize untrusted data, though practical exploit scope is narrowed by hardware requirements. This has been observed in active exploitation campaigns in the wild. Immediate patching of affected Java runtime environments is critical; additionally, implementing strict deserialization filters and avoiding deserialization of untrusted sources provides essential mitigation.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.heise.de/news/Java-RCE-mit-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA-11528561.html"&gt;Read more&lt;/a&gt; · Source: heise-security&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>New GitDoor and GraphDoor Backdoors Turn GitHub and SharePoint Into Covert C2 Channels</title>
     <id>urn:cybersecnews:item:739</id>
@@ -858,50 +903,5 @@
     <link href="https://www.bleepingcomputer.com/news/microsoft/microsoft-finally-fixes-vpn-issues-caused-by-september-updates/" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · vpn-connectivity&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Microsoft patched Always On VPN connection failures introduced by September 2026 Windows 11 security updates, which prevented users from establishing VPN connections after the monthly patches. The root cause stemmed from changes in the security update that impacted VPN driver initialization. No evidence suggests active exploitation in the wild, as this was primarily a functionality issue rather than a security vulnerability. Users experiencing VPN connectivity problems following the September updates should apply the latest cumulative patch or contact Microsoft support for workarounds if immediate patching is not feasible.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/microsoft/microsoft-finally-fixes-vpn-issues-caused-by-september-updates/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Malicious Claude Code extension on Cursor planted SSH backdoors</title>
-    <id>urn:cybersecnews:item:644</id>
-    <published>2026-10-30T14:52:42.514868+00:00</published>
-    <updated>2026-10-30T14:52:42.514868+00:00</updated>
-    <link href="https://www.bleepingcomputer.com/news/security/malicious-claude-code-extension-on-cursor-planted-ssh-backdoors/" rel="alternate" />
-    <category term="red-team" />
-    <content type="html">&lt;p&gt;&lt;em&gt;red-team · supply-chain&lt;/em&gt;&lt;/p&gt;&lt;p&gt;A compromised Claude Code VS Code extension distributed via Cursor's marketplace for 11 hours on October 29 contained malware designed to install persistent SSH backdoors on affected systems. The attack targeted approximately 5,000 developers who downloaded the malicious extension during the window of exposure. This represents a high-severity supply chain attack with demonstrated capability for remote code execution and persistent system compromise, though exploitation in the wild beyond the initial distribution has not been confirmed. Affected users should immediately uninstall the malicious extension, audit SSH configurations and keys for unauthorized access, rotate credentials, and update to the legitimate version once restored to the marketplace.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/malicious-claude-code-extension-on-cursor-planted-ssh-backdoors/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Hackers Actively Exploit Highly Critical Drupal Commerce Core Authorization Bypass Flaw</title>
-    <id>urn:cybersecnews:item:643</id>
-    <published>2026-10-30T14:52:42.513450+00:00</published>
-    <updated>2026-10-30T14:52:42.513450+00:00</updated>
-    <link href="https://thehackernews.com/2026/10/hackers-actively-exploit-highly.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-118539&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Drupal Commerce Core versions 0.0.0-2.41 and 3.0.0-3.3.13 contain a critical authorization bypass vulnerability (CVE-2026-118539) that allows unauthenticated attackers to perform unauthorized actions within the e-commerce platform. The flaw is actively exploited in the wild and affects the core shopping cart functionality. Immediate patching to version 2.42 or 3.3.14 and later is required; organizations running vulnerable versions should prioritize this update and consider temporarily restricting access to Commerce Core until patched.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/hackers-actively-exploit-highly.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Official Claude Code Extension on Cursor Marketplace Trojanized with Persistent SSH Backdoor</title>
-    <id>urn:cybersecnews:item:642</id>
-    <published>2026-10-30T14:52:42.512046+00:00</published>
-    <updated>2026-10-30T14:52:42.512046+00:00</updated>
-    <link href="https://thehackernews.com/2026/10/official-claude-code-vs-code-extension.html" rel="alternate" />
-    <category term="red-team" />
-    <content type="html">&lt;p&gt;&lt;em&gt;red-team · supply-chain&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Anthropic's Claude Code extension for Cursor was compromised and distributed via Cursor Marketplace with a persistent SSH backdoor payload in version 2.1.313. The trojanized extension leveraged the legitimate publisher identity to gain trust, establishing unauthorized remote access on affected developer systems. This represents critical severity with active exploitation through supply chain compromise. Users should immediately uninstall the affected version, update to the patched release when available, audit systems for unauthorized SSH access, and rotate credentials on compromised machines.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/10/official-claude-code-vs-code-extension.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Claude-Code-Erweiterung im Cursor-Marktplatz mit Malware infiziert</title>
-    <id>urn:cybersecnews:item:641</id>
-    <published>2026-10-30T14:52:42.510195+00:00</published>
-    <updated>2026-10-30T14:52:42.510195+00:00</updated>
-    <link href="https://www.heise.de/news/Claude-Code-Erweiterung-im-Cursor-Marktplatz-mit-Malware-infiziert-11506368.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · backdoor&lt;/em&gt;&lt;/p&gt;&lt;p&gt;A malicious SSH backdoor was discovered in the official Claude-Code extension available in the Cursor IDE marketplace. The backdoor allowed arbitrary code execution and unauthorized system access through compromised extension code distributed to developers. Severity is high as the extension targeted developers who typically have elevated system privileges; exploit in the wild is confirmed through the marketplace distribution vector. Users should immediately uninstall the affected Claude-Code extension, update Cursor, and review system logs for suspicious SSH activity; consider rotating SSH keys if the extension was installed.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.heise.de/news/Claude-Code-Erweiterung-im-Cursor-Marktplatz-mit-Malware-infiziert-11506368.html"&gt;Read more&lt;/a&gt; · Source: heise-security&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Hugging Face malware campaign returns to hijack GPUs for crypto mining</title>
-    <id>urn:cybersecnews:item:640</id>
-    <published>2026-10-30T04:37:29.544815+00:00</published>
-    <updated>2026-10-30T04:37:29.544815+00:00</updated>
-    <link href="https://www.bleepingcomputer.com/news/security/hugging-face-malware-campaign-returns-to-hijack-gpus-for-crypto-mining/" rel="alternate" />
-    <category term="red-team" />
-    <content type="html">&lt;p&gt;&lt;em&gt;red-team · supply-chain-attack&lt;/em&gt;&lt;/p&gt;&lt;p&gt;A persistent crypto-mining campaign is targeting Hugging Face model repositories, hijacking GPU resources and installing backdoors in compromised systems; one malicious model exceeded 28,000 downloads before removal. The threat actors rapidly redeployed similar models within days of initial takedown, demonstrating operational resilience. Separately, a fake Solana development kit on GitHub is designed to exploit AI coding agents into executing NetSupport RAT installations. Users should audit Hugging Face model sources and GitHub dependencies for legitimacy, implement repository integrity verification, disable auto-execution in AI development workflows, and monitor GPU utilization for anomalous crypto-mining activity; organizations should restrict GPU access and enforce signed dependency policies.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/hugging-face-malware-campaign-returns-to-hijack-gpus-for-crypto-mining/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
   </entry>
 </feed>
