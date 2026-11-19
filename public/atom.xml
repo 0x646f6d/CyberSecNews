@@ -3,7 +3,88 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-11-19T06:09:35.814993+00:00</updated>
+  <updated>2026-11-19T17:07:45.701433+00:00</updated>
+  <entry>
+    <title>Spying on Governments with Zero Lines of Malware: A Custom SoftEther Bridge in Webworm’s Toolkit</title>
+    <id>urn:cybersecnews:item:763</id>
+    <published>2026-11-19T17:07:45.701433+00:00</published>
+    <updated>2026-11-19T17:07:45.701433+00:00</updated>
+    <link href="https://www.rapid7.com/blog/post/tr-spying-on-governments-no-malware-custom-webworms-toolkit-softether-bridge" rel="alternate" />
+    <category term="red-team" />
+    <content type="html">&lt;p&gt;&lt;em&gt;red-team · c2,lateral-movement,persistence&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Webworm APT has deployed a custom-compiled SoftEther VPN Bridge (version 4.44) modified to evade detection through PE metadata spoofing, obfuscated HTTP endpoints (/update/alive.cgi and /update/picture.cgi instead of stock /vpnsvc/ paths), custom PNG watermark replacement, embedded and encrypted configuration files, and removal of detectable artifacts like hamcore.se2. The tool provides persistent remote access and network bridging capabilities to compromised governmental networks, particularly in Europe, with minimal detection by antivirus (only one vendor detected it on VirusTotal at time of analysis). No command execution backdoor was identified; the focus is stealth over additional capability. Defenders should monitor for POST requests to /update/picture.cgi with the custom PNG watermark bytes (89 50 4e 47...), familiarize themselves with legitimate SoftEther behavior, and implement the provided YARA rules and IoCs from Rapid7 Intelligence's GitHub repository to detect this variant and its future evolutions.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.rapid7.com/blog/post/tr-spying-on-governments-no-malware-custom-webworms-toolkit-softether-bridge"&gt;Read more&lt;/a&gt; · Source: rapid7&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Jane: Instantiation RCE via query parameter name -&gt; raw PHPDoc */ breakout (jane-php/open-api-3) (CVE-2026-63412)</title>
+    <id>urn:cybersecnews:item:762</id>
+    <published>2026-11-19T17:07:45.700615+00:00</published>
+    <updated>2026-11-19T17:07:45.700615+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-q8v2-3j4h-xg2p" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-63412&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Jane-php (open-api-3) contains a critical remote code execution vulnerability (CVE-2026-63412) where malicious query parameter names can inject PHP code through PHPDoc comment breakout. The generator embeds query parameter names raw into method docblock `@param` annotations, allowing a `*/` sequence to close the docblock early and inject executable PHP code at class body level. This affects the open-api-3 package and is exploitable during code generation if processing untrusted OpenAPI schemas. Update jane-php to the patched version immediately and validate or sanitize all OpenAPI schema inputs before processing.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-q8v2-3j4h-xg2p"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Drupal patches critical RCE flaw, warns exploits may surface quickly</title>
+    <id>urn:cybersecnews:item:761</id>
+    <published>2026-11-19T17:07:45.699847+00:00</published>
+    <updated>2026-11-19T17:07:45.699847+00:00</updated>
+    <link href="https://www.bleepingcomputer.com/news/security/drupal-patches-critical-rce-flaw-warns-exploits-may-surface-quickly/" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Drupal has patched a critical remote code execution vulnerability affecting multiple versions of the content management system that allows unauthenticated attackers to execute arbitrary code and compromise affected sites. The vulnerability has high severity with potential for rapid exploitation in the wild following public disclosure. Administrators should apply available security patches immediately and monitor systems for suspicious activity, as exploit code may be developed quickly by threat actors.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/drupal-patches-critical-rce-flaw-warns-exploits-may-surface-quickly/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>CISA Warns of 4 Exploited Flaws Linked to Ransomware, Cryptomining, and LLMjacking Attacks</title>
+    <id>urn:cybersecnews:item:760</id>
+    <published>2026-11-19T17:07:45.699128+00:00</published>
+    <updated>2026-11-19T17:07:45.699128+00:00</updated>
+    <link href="https://thehackernews.com/2026/11/cisa-warns-of-4-exploited-flaws-linked.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability&lt;/em&gt;&lt;/p&gt;&lt;p&gt;CISA has added four actively exploited vulnerabilities to its KEV catalog: Synology DSM, BerriAI LiteLLM, Apache Axis, and Vanderbilt REDCap. These flaws are being leveraged in the wild for ransomware attacks, cryptomining, and LLMjacking operations. Immediate patching is critical for all affected systems; organizations should prioritize updates for these products and implement network segmentation to limit lateral movement. Monitor for suspicious activity indicative of exploitation including unauthorized access, resource consumption spikes, or unexpected process execution.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/11/cisa-warns-of-4-exploited-flaws-linked.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Researcher Demonstrates Database RCE Exploits Affecting PostgreSQL, MySQL and Oracle</title>
+    <id>urn:cybersecnews:item:759</id>
+    <published>2026-11-19T17:07:45.698405+00:00</published>
+    <updated>2026-11-19T17:07:45.698405+00:00</updated>
+    <link href="https://thehackernews.com/2026/11/researcher-demonstrates-database-rce.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Remote code execution vulnerabilities in PostgreSQL, MySQL, Oracle, and ClickHouse allow low-privilege database accounts to execute arbitrary code on database servers through memory-corruption bugs triggered by standard SQL queries. These exploits bypass typical access controls, enabling users without table read permissions to achieve server-level code execution. Severity is critical given the attack surface and low privilege requirements; active exploitation in the wild is not yet confirmed. Affected organizations should prioritize patching to the latest versions of these database systems and review database user privilege assignments to enforce principle of least privilege for all accounts.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/11/researcher-demonstrates-database-rce.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Ruby Releases Fixes for 7 Regex and String Flaws, Warns 5 Have Proof-of-Concept RCE</title>
+    <id>urn:cybersecnews:item:758</id>
+    <published>2026-11-19T17:07:45.697418+00:00</published>
+    <updated>2026-11-19T17:07:45.697418+00:00</updated>
+    <link href="https://thehackernews.com/2026/11/ruby-releases-fixes-for-7-regex-and.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Ruby addressed seven memory-safety vulnerabilities in its regex engine and string case-conversion functionality, with five confirmed to have proof-of-concept remote code execution exploits. The flaws affect Ruby's core string processing capabilities and are actively exploitable in the wild via crafted input. Update to the latest patched Ruby version immediately as these represent critical severity issues with demonstrated RCE capabilities.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/11/ruby-releases-fixes-for-7-regex-and.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Drupal Patches Critical Installer Flaw That Could Give Unauthenticated Attackers Control of Sites</title>
+    <id>urn:cybersecnews:item:757</id>
+    <published>2026-11-19T17:07:45.696646+00:00</published>
+    <updated>2026-11-19T17:07:45.696646+00:00</updated>
+    <link href="https://thehackernews.com/2026/11/drupal-patches-critical-installer-flaw.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Drupal core contains a critical vulnerability in its installer component that permits unauthenticated attackers to reinstall affected sites under specific conditions, potentially leading to site takeover or remote code execution. The flaw affects uncommon configurations but carries severe impact when exploited. Patch availability was released for all supported Drupal branches as of the disclosure date. All Drupal administrators should immediately update to patched versions; organizations with uncommon configurations allowing installer access should prioritize this update and verify installer is disabled post-installation.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/11/drupal-patches-critical-installer-flaw.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Critical VMware vCenter Flaw (CVSS 9.8) Lets Network Attackers Bypass Authentication</title>
+    <id>urn:cybersecnews:item:756</id>
+    <published>2026-11-19T17:07:45.695624+00:00</published>
+    <updated>2026-11-19T17:07:45.695624+00:00</updated>
+    <link href="https://thehackernews.com/2026/11/critical-vmware-vcenter-flaw-cvss-98.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass&lt;/em&gt;&lt;/p&gt;&lt;p&gt;VMware vCenter contains a critical authentication bypass vulnerability (CVSS 9.8) allowing network-based attackers to gain unauthorized administrative access without credentials. The flaw affects all supported vCenter versions and has no available workaround. Broadcom has released patches for all supported branches and immediate patching is mandatory given the high severity and network-exploitable nature of this vulnerability.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/11/critical-vmware-vcenter-flaw-cvss-98.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>ruby2ßhell: Remote Code Execution durch 21 ß</title>
+    <id>urn:cybersecnews:item:755</id>
+    <published>2026-11-19T17:07:45.694373+00:00</published>
+    <updated>2026-11-19T17:07:45.694373+00:00</updated>
+    <link href="https://www.heise.de/news/ruby2sshell-Remote-Code-Execution-durch-21-ss-11531365.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Ruby versions prior to 2.7.8, 3.0.6, 3.1.4, and 3.2.2 contain a remote code execution vulnerability in the string-to-symbol conversion mechanism when processing the German character ß (U+00DF). The flaw allows attackers to bypass intended filtering and execute arbitrary code in affected applications including GitLab and Mastodon through specially crafted input exploiting Unicode normalization issues. This is a critical vulnerability with active exploitation reported in the wild. Update Ruby to patched versions 2.7.8, 3.0.6, 3.1.4, 3.2.2 or later immediately, and audit deployed applications for compromised instances.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.heise.de/news/ruby2sshell-Remote-Code-Execution-durch-21-ss-11531365.html"&gt;Read more&lt;/a&gt; · Source: heise-security&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Atomic Server: Unauthenticated `/setup` invite grants write access to the entire Drive (CVE-2026-69157)</title>
     <id>urn:cybersecnews:item:754</id>
@@ -822,86 +903,5 @@
     <link href="https://thehackernews.com/2026/11/critical-rails-flaw-lets-attackers.html" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · arbitrary-file-write · CVE-2026-122006&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Ruby on Rails Active Storage component contains a critical arbitrary file write vulnerability affecting versions prior to 8.1.4.1 and 8.0.5.2, exploitable by unauthenticated attackers through crafted file uploads processed by ImageMagick. The vulnerability allows remote code execution and complete server compromise with no authentication required. Organizations using affected Rails versions must immediately upgrade to patched versions 8.1.4.1, 8.0.5.2, or later, and consider disabling ImageMagick processing or implementing strict file type validation as interim mitigations pending patching.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/11/critical-rails-flaw-lets-attackers.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>APT29-Linked Hackers Hijack Web Analytics Script to Deliver iOS and Android Exploits</title>
-    <id>urn:cybersecnews:item:663</id>
-    <published>2026-11-04T15:59:50.084069+00:00</published>
-    <updated>2026-11-04T15:59:50.084069+00:00</updated>
-    <link href="https://thehackernews.com/2026/11/apt29-linked-hackers-hijack-web.html" rel="alternate" />
-    <category term="red-team" />
-    <content type="html">&lt;p&gt;&lt;em&gt;red-team · supply-chain-attack&lt;/em&gt;&lt;/p&gt;&lt;p&gt;APT29 conducted a large-scale watering hole campaign exploiting the Ukrainian web analytics service Plerdy SEO Tracker to deliver iOS and Android exploits. The threat actor injected malicious JavaScript into the analytics script to collect device attributes and redirect users to exploit landing pages. This supply chain attack affects any organization using the compromised Plerdy service and represents a high-severity threat with active exploitation in the wild. Organizations should immediately audit Plerdy implementations, block suspicious redirects at network perimeter, and consider removing the service pending vendor remediation.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/11/apt29-linked-hackers-hijack-web.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Free the Model, Sell the Gateway: Prompt Adware hidden in Jailbreak Bundles</title>
-    <id>urn:cybersecnews:item:662</id>
-    <published>2026-11-03T21:32:20.478312+00:00</published>
-    <updated>2026-11-03T21:32:20.478312+00:00</updated>
-    <link href="https://research.checkpoint.com/2026/free-the-model-sell-the-gateway-prompt-adware-hidden-in-jailbreak-bundles/" rel="alternate" />
-    <category term="red-team" />
-    <content type="html">&lt;p&gt;&lt;em&gt;red-team · c2&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Check Point Research identified a misconfigured Cobalt Strike server operated by threat actors targeting Chinese-speaking individuals, with logs revealing compromised private systems. The threat actor distributed "prompt adware" hidden within AI model jailbreak bundles, injecting malicious prompts into language models to enable unauthorized access and command execution. This technique represents a novel attack vector combining supply chain compromise with LLM exploitation. Recommended action: organizations should implement strict software provenance verification for AI models, disable external command execution capabilities in LLM deployments, and audit existing jailbreak bundles for unauthorized modifications.&lt;/p&gt;&lt;p&gt;&lt;a href="https://research.checkpoint.com/2026/free-the-model-sell-the-gateway-prompt-adware-hidden-in-jailbreak-bundles/"&gt;Read more&lt;/a&gt; · Source: checkpoint-research&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Elo JavaScript emitter has sandbox escape to arbitrary Node.js / browser code execution via unfiltered `.constructor` member access (CVE-2026-44267)</title>
-    <id>urn:cybersecnews:item:661</id>
-    <published>2026-11-03T21:32:20.477442+00:00</published>
-    <updated>2026-11-03T21:32:20.477442+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-33r5-xmm8-v6x5" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · sandbox-escape · CVE-2026-44267&lt;/em&gt;&lt;/p&gt;&lt;p&gt;The npm @enspirit/elo package contains a critical sandbox escape vulnerability (CVE-2026-44267) allowing unauthenticated attackers to execute arbitrary Node.js or browser JavaScript code by exploiting unfiltered `.constructor` member access in the Elo language parser and emitter. An attacker controlling input to `defaultFormats.elo.parse()`, the `bin/elo` CLI tool, or the online playground can craft payloads using `.constructor.constructor` chains to compile directly into `Function` invocations, completely bypassing the language's intended sandboxing. This vulnerability is critical severity; no evidence of active wild exploitation is mentioned but the attack requires only string control, making it highly exploitable. Developers using Elo should immediately update to a patched version once available and avoid processing untrusted Elo code; the online playground should be considered unsafe until patched.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-33r5-xmm8-v6x5"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>WordPress WordPress Core: WordPress WordPress Core Time-of-check Time-of-use (TOCTOU) Race Condition Vulnerability (CVE-2026-119977)</title>
-    <id>urn:cybersecnews:item:660</id>
-    <published>2026-11-03T21:32:20.476608+00:00</published>
-    <updated>2026-11-03T21:32:20.476608+00:00</updated>
-    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-119977" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · race-condition · CVE-2026-119977&lt;/em&gt;&lt;/p&gt;&lt;p&gt;WordPress Core contains a TOCTOU race condition vulnerability (CVE-2026-119977) in its full-package upgrade mechanism that exploits predictable, web-accessible staging paths to allow unauthenticated remote code execution during the upgrade window. This vulnerability is actively exploited in the wild. Apply vendor mitigations immediately per CISA BOD 26-04 guidance; if unavailable, discontinue use or implement compensating controls to restrict upgrade window access. For cloud deployments, evaluate internet exposure and ensure compliance with BOD 26-04 patching timelines.&lt;/p&gt;&lt;p&gt;&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2026-119977"&gt;Read more&lt;/a&gt; · Source: cisa-kev&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>cPGuard Update Channel Hijacked to Backdoor Linux Servers and Collect Password Hashes</title>
-    <id>urn:cybersecnews:item:659</id>
-    <published>2026-11-03T21:32:20.475055+00:00</published>
-    <updated>2026-11-03T21:32:20.475055+00:00</updated>
-    <link href="https://thehackernews.com/2026/11/cpguard-update-channel-hijacked-to.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · supply-chain&lt;/em&gt;&lt;/p&gt;&lt;p&gt;cPGuard security software versions 5.88.25 and later were compromised through a hijacked update channel, delivering malicious scripts that installed backdoors and exfiltrated password hashes and sensitive files from Linux servers. The compromise occurred on November 2 and represents a supply chain attack with high severity; there is no indication of active exploitation in the wild beyond the initial malicious update distribution. Users must immediately update to a patched version released by OPSSHIELD and audit affected systems for indicators of compromise, including unauthorized access and file tampering, while rotating credentials on compromised servers.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/11/cpguard-update-channel-hijacked-to.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Barracuda warns of critical flaws allowing root access to devices</title>
-    <id>urn:cybersecnews:item:658</id>
-    <published>2026-11-03T15:52:41.287258+00:00</published>
-    <updated>2026-11-03T15:52:41.287258+00:00</updated>
-    <link href="https://www.bleepingcomputer.com/news/security/barracuda-warns-of-critical-flaws-allowing-root-access-to-devices/" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-111560, CVE-2026-116606&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Barracuda Networks products contain two critical vulnerabilities enabling unauthenticated remote code execution with root privileges. The flaws allow attackers to execute arbitrary commands at the highest privilege level, posing severe risk to affected deployments. Barracuda has not disclosed active exploitation in the wild at time of advisory. Immediate patching is mandatory; administrators should apply vendor-supplied fixes and verify system integrity post-compromise given the severity.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/barracuda-warns-of-critical-flaws-allowing-root-access-to-devices/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Synology NAS Devices Targeted in Ransomware Attacks Exploiting Patched DSM Flaw</title>
-    <id>urn:cybersecnews:item:657</id>
-    <published>2026-11-03T15:52:41.286393+00:00</published>
-    <updated>2026-11-03T15:52:41.286393+00:00</updated>
-    <link href="https://thehackernews.com/2026/11/synology-nas-devices-targeted-in.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Synology DSM (DiskStation Manager) NAS software is being actively exploited in ransomware campaigns targeting devices running versions prior to the December 2024 patch. The vulnerability enables attackers to gain unauthorized access and encrypt victim data for extortion purposes. This represents high severity with confirmed active exploitation in the wild. Immediate patching of DSM to the latest version is critical; organizations should prioritize updates for all exposed NAS devices and consider network segmentation to limit lateral movement from compromised devices.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/11/synology-nas-devices-targeted-in.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Russia-Aligned Gorbag Hackers Exploit WinRAR Flaw to Deploy Data-Stealing Malware</title>
-    <id>urn:cybersecnews:item:656</id>
-    <published>2026-11-03T15:52:41.285582+00:00</published>
-    <updated>2026-11-03T15:52:41.285582+00:00</updated>
-    <link href="https://thehackernews.com/2026/11/russia-aligned-gorbag-hackers-exploit.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Gorbag, a Russia-aligned threat actor, actively exploits the CVE-2024-49978 WinRAR vulnerability to deliver data-stealing malware against Ukrainian targets since February 2025. The flaw allows arbitrary code execution through specially crafted RAR files, making it an effective initial access vector for information theft operations. The group specifically targets Ukrainian law enforcement, justice entities, local administrations, and defense sector organizations near active conflict zones. Immediate patching of WinRAR to the latest version is critical; organizations should also implement email filtering for suspicious RAR archives and monitor for data exfiltration activity.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/11/russia-aligned-gorbag-hackers-exploit.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>TV-Boxen und mehr: 1,3 Millionen Android-Geräte mit Backdoor verkauft</title>
-    <id>urn:cybersecnews:item:655</id>
-    <published>2026-11-03T15:52:41.283321+00:00</published>
-    <updated>2026-11-03T15:52:41.283321+00:00</updated>
-    <link href="https://www.golem.de/news/tv-boxen-und-mehr-1-3-millionen-android-geraete-mit-backdoor-verkauft-2611-214785.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · backdoor&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Chinese manufacturer sold approximately 1.3 million Android devices including TV boxes with pre-installed backdoor functionality, with access subsequently sold to criminal actors. The backdoor enables unauthorized remote access and control of affected devices, allowing attackers to execute arbitrary commands and potentially distribute malware. This represents a supply chain compromise with high severity given the scale of affected devices and active criminal exploitation. Users should immediately check device sources, apply any available security updates, perform factory resets on affected hardware, and consider replacing devices from untrusted manufacturers; enterprises should audit procurement channels and implement network segmentation to limit potential lateral movement from compromised endpoints.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.golem.de/news/tv-boxen-und-mehr-1-3-millionen-android-geraete-mit-backdoor-verkauft-2611-214785.html"&gt;Read more&lt;/a&gt; · Source: golem-security&lt;/p&gt;</content>
   </entry>
 </feed>
