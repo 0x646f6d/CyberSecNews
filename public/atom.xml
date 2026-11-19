@@ -3,7 +3,70 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-11-18T16:59:05.092023+00:00</updated>
+  <updated>2026-11-19T06:09:35.814993+00:00</updated>
+  <entry>
+    <title>Atomic Server: Unauthenticated `/setup` invite grants write access to the entire Drive (CVE-2026-69157)</title>
+    <id>urn:cybersecnews:item:754</id>
+    <published>2026-11-19T06:09:35.814993+00:00</published>
+    <updated>2026-11-19T06:09:35.814993+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-pfwx-xjp4-qxcj" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-69157&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Atomic Server versions prior to patching contain a critical authentication bypass in the `/setup` endpoint that grants unauthenticated attackers write access to the entire Drive. The vulnerability stems from an invite mechanism that ignores the redeemer's identity and only requires possession of the setup URL; an attacker can invoke `GET /setup?public-key=&lt;attacker_key&gt;` to create a new agent with full write permissions. This is actively exploitable in freshly deployed instances and should be treated as critical requiring immediate patching. Users should upgrade to the patched version immediately and consider restricting network access to the `/setup` endpoint if running vulnerable versions.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-pfwx-xjp4-qxcj"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Miren Runtime: Authentication bypass in RPC layer: unverified TLS client certificates grant cluster superuser access (CVE-2026-75521)</title>
+    <id>urn:cybersecnews:item:753</id>
+    <published>2026-11-19T06:09:35.814108+00:00</published>
+    <updated>2026-11-19T06:09:35.814108+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-8fh7-7q4q-cq52" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-75521&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Miren Runtime RPC layer (QUIC/HTTP3 on port 8443) fails to verify TLS client certificate chains against the cluster Certificate Authority, allowing any actor with network access to present a forged self-signed certificate and gain superuser cluster access. This is critical severity and exploitable without valid credentials or prior authorization. Patch immediately by updating to a version that validates client certificates against the cluster CA; network segmentation of the RPC listener is a temporary mitigation pending patch deployment.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-8fh7-7q4q-cq52"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Apache Axis: Apache Axis Unsafe Reflection Vulnerability (CVE-2026-90436)</title>
+    <id>urn:cybersecnews:item:752</id>
+    <published>2026-11-19T06:09:35.813210+00:00</published>
+    <updated>2026-11-19T06:09:35.813210+00:00</updated>
+    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-90436" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-90436&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Apache Axis is vulnerable to unsafe reflection (CVE-2026-90436) allowing unauthenticated remote code execution through crafted SOAP fault messages that instantiate attacker-controlled classes present on the classpath. This vulnerability is actively exploited in the wild and carries high severity. Apache Axis is end-of-life/end-of-service; immediate discontinuation or transition to supported alternatives is strongly recommended, or apply mitigations per vendor guidance in compliance with CISA BOD 26-04 prioritization requirements.&lt;/p&gt;&lt;p&gt;&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2026-90436"&gt;Read more&lt;/a&gt; · Source: cisa-kev&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Vanderbilt University Research Electronic Data Capture (REDCap): Vanderbilt University Research Electronic Data Capture (REDCap) Code Injection Vulnerability (CVE-2026-90817)</title>
+    <id>urn:cybersecnews:item:751</id>
+    <published>2026-11-19T06:09:35.812277+00:00</published>
+    <updated>2026-11-19T06:09:35.812277+00:00</updated>
+    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-90817" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · code-injection · CVE-2026-90817&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Vanderbilt University REDCap (Research Electronic Data Capture) contains an unauthenticated code injection vulnerability (CVE-2026-90817) allowing arbitrary server-side code execution via crafted HTTP requests to public survey endpoints with manipulated file-path or stream parameters during data import. The vulnerability is actively exploited in the wild and requires knowledge of a valid public survey hash to exploit. Immediately apply vendor-supplied mitigations following CISA BOD 26-04 prioritization guidance, or discontinue use if patches are unavailable; conduct forensics triage on potentially compromised instances and assess internet exposure of affected assets.&lt;/p&gt;&lt;p&gt;&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2026-90817"&gt;Read more&lt;/a&gt; · Source: cisa-kev&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Synology DiskStation Manager (DSM): Synology DiskStation Manager (DSM) Improper Encoding or Escaping of Output Vulnerability (CVE-2024-10441)</title>
+    <id>urn:cybersecnews:item:750</id>
+    <published>2026-11-19T06:09:35.811147+00:00</published>
+    <updated>2026-11-19T06:09:35.811147+00:00</updated>
+    <link href="https://nvd.nist.gov/vuln/detail/CVE-2024-10441" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · improper-encoding-output · CVE-2024-10441&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Synology DiskStation Manager (DSM) and BeeStation OS (BSM) contain an improper output encoding/escaping vulnerability in the system plugin daemon that permits remote arbitrary code execution. This vulnerability (CVE-2024-10441) is actively exploited in the wild and carries critical severity. Organizations must immediately apply vendor-supplied mitigations per CISA BOD 26-04 guidance, prioritizing internet-exposed assets for patching; if patches are unavailable for critical systems, discontinue use or implement network isolation controls.&lt;/p&gt;&lt;p&gt;&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2024-10441"&gt;Read more&lt;/a&gt; · Source: cisa-kev&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>PHP Warns of Critical Security Flaws Affecting All Supported Versions, Fixes Coming November 19</title>
+    <id>urn:cybersecnews:item:749</id>
+    <published>2026-11-19T06:09:35.810142+00:00</published>
+    <updated>2026-11-19T06:09:35.810142+00:00</updated>
+    <link href="https://thehackernews.com/2026/11/php-warns-of-critical-security-flaws.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · unspecified&lt;/em&gt;&lt;/p&gt;&lt;p&gt;PHP development team announced critical security vulnerabilities affecting all supported PHP versions, with fixes scheduled for November 19, 2026. Specific vulnerability details and affected version numbers were not disclosed in the advisory. Apply all available security patches immediately upon release on November 19, and monitor official PHP channels for detailed vulnerability information and mitigation guidance once patches become available.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/11/php-warns-of-critical-security-flaws.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Webserver: nginx-Update schließt schwere Lücken</title>
+    <id>urn:cybersecnews:item:748</id>
+    <published>2026-11-19T06:09:35.808349+00:00</published>
+    <updated>2026-11-19T06:09:35.808349+00:00</updated>
+    <link href="https://www.heise.de/news/Webserver-nginx-Update-schliesst-schwere-Luecken-11530216.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability&lt;/em&gt;&lt;/p&gt;&lt;p&gt;nginx has released security updates addressing multiple severe vulnerabilities. The specific flaws are not detailed in the summary but are classified as severe, affecting the globally most-used webserver. Immediate patching is strongly recommended to mitigate the risk of exploitation. Apply available updates to nginx installations without delay.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.heise.de/news/Webserver-nginx-Update-schliesst-schwere-Luecken-11530216.html"&gt;Read more&lt;/a&gt; · Source: heise-security&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>CVE-2026-123007: Critical NGINX HTTP/2 Integer Underflow Leads to RCE (FIXED)</title>
     <id>urn:cybersecnews:item:747</id>
@@ -11,7 +74,7 @@
     <updated>2026-11-18T16:59:05.092023+00:00</updated>
     <link href="https://www.rapid7.com/blog/post/ve-cve-2026-123007-critical-nginx-http-2-integer-underflow-leads-to-rce-fixed" rel="alternate" />
     <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · integer-underflow · CVE-2026-123007&lt;/em&gt;&lt;/p&gt;&lt;p&gt;CVE-2026-123007 is a critical integer underflow vulnerability (CWE-191, CVSS 9.2) in nginx HTTP/2 flow-control implementation affecting versions 1.9.5-1.30.6 and 1.31.0-1.31.8 that enables unauthenticated remote code execution with nginx worker privileges. The flaw allows attackers to manipulate HTTP/2 window-update frames to cause the connection send-window counter to exceed protocol limits, eventually triggering memory corruption in TLS output handling via unsafe memcpy operations. Active exploitation requires approximately 128 GB of network traffic (practical only over high-bandwidth connections due to connection timeout constraints) and depends on specific glibc EVEX/YMM memcpy implementations, limiting real-world internet exploitation though it has been proven viable in lab conditions. Immediately apply vendor patches: nginx open source 1.30.7 or 1.31.9; nginx Plus R37.0.8.1 or R37.3.0.1; nginx Plus R34-R36 have no fix available and require upgrade paths.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.rapid7.com/blog/post/ve-cve-2026-123007-critical-nginx-http-2-integer-underflow-leads-to-rce-fixed"&gt;Read more&lt;/a&gt; · Source: rapid7&lt;/p&gt;</content>
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · integer-underflow · CVE-2026-113425, CVE-2026-118899, CVE-2026-120967, CVE-2026-120993, CVE-2026-121810, CVE-2026-123007, CVE-2026-123633, CVE-2026-123634, CVE-2026-123640, CVE-2026-125283&lt;/em&gt;&lt;/p&gt;&lt;p&gt;CVE-2026-123007 is a critical integer underflow vulnerability (CWE-191, CVSS 9.2) in nginx HTTP/2 flow-control implementation affecting versions 1.9.5-1.30.6 and 1.31.0-1.31.8 that enables unauthenticated remote code execution with nginx worker privileges. The flaw allows attackers to manipulate HTTP/2 window-update frames to cause the connection send-window counter to exceed protocol limits, eventually triggering memory corruption in TLS output handling via unsafe memcpy operations. Active exploitation requires approximately 128 GB of network traffic (practical only over high-bandwidth connections due to connection timeout constraints) and depends on specific glibc EVEX/YMM memcpy implementations, limiting real-world internet exploitation though it has been proven viable in lab conditions. Immediately apply vendor patches: nginx open source 1.30.7 or 1.31.9; nginx Plus R37.0.8.1 or R37.3.0.1; nginx Plus R34-R36 have no fix available and require upgrade paths.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.rapid7.com/blog/post/ve-cve-2026-123007-critical-nginx-http-2-integer-underflow-leads-to-rce-fixed"&gt;Read more&lt;/a&gt; · Source: rapid7&lt;/p&gt;</content>
   </entry>
   <entry>
     <title>Mustache for Ruby: RCE using built-in method access (CVE-2026-130001)</title>
@@ -840,68 +903,5 @@
     <link href="https://www.golem.de/news/tv-boxen-und-mehr-1-3-millionen-android-geraete-mit-backdoor-verkauft-2611-214785.html" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · backdoor&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Chinese manufacturer sold approximately 1.3 million Android devices including TV boxes with pre-installed backdoor functionality, with access subsequently sold to criminal actors. The backdoor enables unauthorized remote access and control of affected devices, allowing attackers to execute arbitrary commands and potentially distribute malware. This represents a supply chain compromise with high severity given the scale of affected devices and active criminal exploitation. Users should immediately check device sources, apply any available security updates, perform factory resets on affected hardware, and consider replacing devices from untrusted manufacturers; enterprises should audit procurement channels and implement network segmentation to limit potential lateral movement from compromised endpoints.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.golem.de/news/tv-boxen-und-mehr-1-3-millionen-android-geraete-mit-backdoor-verkauft-2611-214785.html"&gt;Read more&lt;/a&gt; · Source: golem-security&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>BTCPay Server warns of hot wallet crypto thefts on outdated instances</title>
-    <id>urn:cybersecnews:item:654</id>
-    <published>2026-11-02T17:53:17.824261+00:00</published>
-    <updated>2026-11-02T17:53:17.824261+00:00</updated>
-    <link href="https://www.bleepingcomputer.com/news/security/btcpay-server-warns-of-hot-wallet-thefts-targeting-outdated-instances/" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · hot-wallet-theft&lt;/em&gt;&lt;/p&gt;&lt;p&gt;BTCPay Server cryptocurrency payment processor versions prior to the latest release contain a vulnerability enabling attackers to drain hot wallets from affected instances. The flaw affects outdated deployments and is actively being exploited in the wild to steal cryptocurrency funds. This represents critical severity due to direct financial loss potential. Immediate action required: all BTCPay Server users must upgrade to the latest patched version without delay, and operators should audit wallet balances and transaction logs for suspicious activity.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/btcpay-server-warns-of-hot-wallet-thefts-targeting-outdated-instances/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Attackers Pose as IT Support on Microsoft Teams, Abuse AD CS to Steal Company Data</title>
-    <id>urn:cybersecnews:item:653</id>
-    <published>2026-11-02T17:53:17.823183+00:00</published>
-    <updated>2026-11-02T17:53:17.823183+00:00</updated>
-    <link href="https://thehackernews.com/2026/11/attackers-pose-as-it-support-on.html" rel="alternate" />
-    <category term="red-team" />
-    <content type="html">&lt;p&gt;&lt;em&gt;red-team · social-engineering,lateral-movement,privilege-escalation&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Threat actors impersonated IT support via Microsoft Teams to socially engineer employees into granting remote access, then exploited misconfigured Active Directory Certificate Services (AD CS) to escalate privileges and obtain certificates for domain controller accounts. This technique leverages weak certificate template configurations that allow unprivileged users to request high-value certificates, enabling lateral movement and persistent access to critical infrastructure. Microsoft documented at least two confirmed intrusions using this method, indicating active exploitation in the wild. Organizations should immediately audit AD CS templates for overly permissive enrollment rights, implement certificate-based authentication hardening, and enforce multi-factor authentication for remote access tools to prevent social engineering attacks.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/11/attackers-pose-as-it-support-on.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Critical Langflow Flaws Could Let Unauthenticated Attackers Run Code on Servers</title>
-    <id>urn:cybersecnews:item:652</id>
-    <published>2026-11-02T17:53:17.821823+00:00</published>
-    <updated>2026-11-02T17:53:17.821823+00:00</updated>
-    <link href="https://thehackernews.com/2026/11/critical-langflow-flaws-could-let.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass,rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Langflow versions 1.0.0 through 1.12.8 contain two critical authentication bypass and arbitrary code execution vulnerabilities affecting the open-source AI workflow platform. Unauthenticated remote attackers can exploit these flaws to bypass authentication controls and achieve remote code execution on affected servers. IBM reported these vulnerabilities with no evidence of active exploitation in the wild to date. Immediate upgrade to Langflow version 1.13.0 is required; organizations using affected versions should prioritize this patch deployment.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/11/critical-langflow-flaws-could-let.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>CVSS 10.0 LXD, MicroCloud Flaw Lets Attackers Impersonate Trusted Clients Without a Private Key</title>
-    <id>urn:cybersecnews:item:651</id>
-    <published>2026-11-01T14:46:16.931404+00:00</published>
-    <updated>2026-11-01T14:46:16.931404+00:00</updated>
-    <link href="https://thehackernews.com/2026/11/critical-lxd-and-microcloud-flaw-cvss.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Canonical's LXD and MicroCloud container management systems contain a critical authentication bypass flaw (CVSS 10.0) allowing unauthenticated attackers to impersonate trusted clients without possessing their private keys, requiring only network access to the HTTPS API and the target client's public certificate. Successful exploitation grants full cluster and virtual machine access with the privileges of the impersonated account. This vulnerability is likely being exploited given its critical severity and ease of exploitation. Immediately patch affected LXD and MicroCloud installations to the latest versions and restrict network access to the management API.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/11/critical-lxd-and-microcloud-flaw-cvss.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>New Android SMS of Death exploit can remotely crash unpatched phones</title>
-    <id>urn:cybersecnews:item:650</id>
-    <published>2026-10-31T19:44:40.679380+00:00</published>
-    <updated>2026-10-31T19:44:40.679380+00:00</updated>
-    <link href="https://www.bleepingcomputer.com/news/security/new-android-sms-of-death-exploit-can-remotely-crash-unpatched-phones/" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · dos · CVE-2026-58868, CVE-2026-58882&lt;/em&gt;&lt;/p&gt;&lt;p&gt;A remotely triggered denial-of-service vulnerability (CVE-2026-58882, "SMS of Death") affects Android devices and allows attackers to crash phones or disrupt cellular service via malicious SMS messages. The vulnerability has been patched by Google, but a public PoC exploit now exists, increasing risk for unpatched devices. Severity is high given the low barrier to exploitation and potential for widespread disruption. Immediate patching through available Android security updates is critical; users should ensure their devices receive the latest monthly security patches.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/new-android-sms-of-death-exploit-can-remotely-crash-unpatched-phones/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>imgproxy has integer overflow in imgproxy ICO loader that causes denial of service and may permit remote code execution</title>
-    <id>urn:cybersecnews:item:649</id>
-    <published>2026-10-31T04:20:15.168894+00:00</published>
-    <updated>2026-10-31T04:20:15.168894+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-hff9-5pqw-6w9f" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · integer-overflow&lt;/em&gt;&lt;/p&gt;&lt;p&gt;imgproxy ICO image loader contains an integer overflow vulnerability in heap allocation when processing attacker-controlled 32-bit data size values. When data_size exceeds UINT32_MAX minus BMP_FILE_HEADER_LEN, the allocation wraps to a smaller buffer, followed by heap overflow during write operations. This critical vulnerability affects imgproxy v1, v2, and v3, and can be exploited remotely via malicious ICO files to cause denial of service or achieve remote code execution. Immediately patch to the latest patched version; if immediate patching is unavailable, disable or restrict ICO image processing.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-hff9-5pqw-6w9f"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Signal K resources API path traversal can disclose the JWT signing secret and enable remote code execution</title>
-    <id>urn:cybersecnews:item:648</id>
-    <published>2026-10-31T04:20:15.165696+00:00</published>
-    <updated>2026-10-31T04:20:15.165696+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-4xm8-rg9h-jhq2" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · path-traversal&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Path traversal vulnerability in Signal K resources and applicationData APIs (npm/@signalk/resources-provider and npm/signalk-server) allows unauthenticated or low-privileged users to read, write, and delete arbitrary files outside the intended storage directory. An attacker can exploit this to read config/security.json, obtain the JWT signing secret, forge admin tokens, and achieve remote code execution. Severity is critical with active exploitation likely given the ease of exploitation and high impact. Immediate patching is required; upgrade to the latest patched versions of affected npm packages and restrict API access until patched.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-4xm8-rg9h-jhq2"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
   </entry>
 </feed>
