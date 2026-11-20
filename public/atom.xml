@@ -3,7 +3,88 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-11-19T17:07:45.701433+00:00</updated>
+  <updated>2026-11-20T05:56:27.759051+00:00</updated>
+  <entry>
+    <title>NLTK incomplete fix: additional JVM/JAR sandbox bypass through unvalidated launcher tokens in java() command arguments (CVE-2026-128138)</title>
+    <id>urn:cybersecnews:item:772</id>
+    <published>2026-11-20T05:56:27.759051+00:00</published>
+    <updated>2026-11-20T05:56:27.759051+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-x8q7-6c7m-52gw" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · sandbox-bypass · CVE-2026-128138&lt;/em&gt;&lt;/p&gt;&lt;p&gt;NLTK versions up to 3.10.3 contain an incomplete fix for JVM/JAR sandbox bypass in the java() function; while patched options validation blocks argument files and -jar modes, the caller-provided cmd sequence parameter remains unvalidated and can still be exploited for arbitrary JAR execution. This is a critical vulnerability allowing attackers to bypass Java sandbox restrictions through unvalidated launcher tokens. No evidence of active exploitation in the wild is currently documented. Upgrade to a patched version of NLTK beyond 3.10.3 when available, and audit code using nltk.internals.java() to ensure cmd arguments are properly validated before passing user-controlled input.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-x8q7-6c7m-52gw"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Refitter allows arbitrary code execution through unescaped OpenAPI content-type values (CVE-2026-63344)</title>
+    <id>urn:cybersecnews:item:771</id>
+    <published>2026-11-20T05:56:27.758227+00:00</published>
+    <updated>2026-11-20T05:56:27.758227+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-p32v-8v8j-j534" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · code-injection · CVE-2026-63344&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Refitter (NuGet package) allows arbitrary code execution through improper sanitization of OpenAPI content-type values in generated Refit attributes. An attacker can craft a malicious OpenAPI specification with unescaped quote characters in content-type fields to inject arbitrary C# code, including module initializer methods that execute during assembly load. This is a critical vulnerability and there is no indication of active exploitation in the wild at this time. Users should immediately update Refitter to a patched version; validation and escaping of all OpenAPI specification inputs before code generation is essential.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-p32v-8v8j-j534"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Flyto2 Core: Arbitrary file write via unguarded data.*/file.* modules (incomplete fix of CVE-2026-67429) (CVE-2026-77312)</title>
+    <id>urn:cybersecnews:item:770</id>
+    <published>2026-11-20T05:56:27.757322+00:00</published>
+    <updated>2026-11-20T05:56:27.757322+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-p34x-fmph-9fjx" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · path-traversal · CVE-2026-77312&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Flyto2 Core's data.* and file.* modules contain an arbitrary file write vulnerability (CVE-2026-77312) due to incomplete patching of CVE-2026-67429, allowing authenticated attackers to traverse directory paths and overwrite arbitrary files on the system with CVSS 9.3 severity. The vulnerability enables code execution through file overwrite and escapes sandbox confinement to affect the host filesystem and other components. No indication of active exploitation in the wild at this time. Immediate patching of Flyto2 Core is required; validate that all data and file write modules properly sanitize path inputs and enforce strict sandboxing boundaries.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-p34x-fmph-9fjx"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Jupyter MCP Server: Browser DNS rebinding can hijack the Jupyter backend through management routes (CVE-2026-77359)</title>
+    <id>urn:cybersecnews:item:769</id>
+    <published>2026-11-20T05:56:27.756077+00:00</published>
+    <updated>2026-11-20T05:56:27.756077+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-9x8x-crjq-g64h" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-77359&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Jupyter MCP Server versions using standalone streamable-http mode are vulnerable to DNS rebinding attacks that bypass host validation on custom management routes (CVE-2026-77359). An attacker can craft a malicious website that resolves to localhost/private IPs and send authenticated requests to management endpoints like `/api/connect`, allowing hijacking of the active Jupyter backend without proper origin checks. This is a critical severity vulnerability with active exploitation potential. Users should immediately update jupyter-mcp-server to a patched version and consider implementing network-level protections such as DNS rebinding filters or restricting access to management routes.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-9x8x-crjq-g64h"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Daptin: Unauthenticated SQL Injection via the `sort` query parameter on every entity list endpoint (CVE-2026-77367)</title>
+    <id>urn:cybersecnews:item:768</id>
+    <published>2026-11-20T05:56:27.755104+00:00</published>
+    <updated>2026-11-20T05:56:27.755104+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-hq2p-f2vj-v3cm" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · sqli · CVE-2026-77367&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Daptin's generic entity list endpoint (`GET /api/&lt;entity&gt;`) is vulnerable to unauthenticated SQL injection through the `sort` query parameter, which is concatenated into raw SQL queries without column validation. This critical vulnerability affects all tables in a Daptin instance and mirrors a previously patched flaw in a sibling code path, suggesting inadequate fix implementation. No information on active exploitation is provided, but given the critical severity and unauthenticated nature, assume hostile interest. Users should immediately upgrade to a patched version and restrict API access through network controls pending an update.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-hq2p-f2vj-v3cm"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Daptin: Broken Access Control (IDOR) in the generic YJS collaboration endpoint (CVE-2026-77369)</title>
+    <id>urn:cybersecnews:item:767</id>
+    <published>2026-11-20T05:56:27.753871+00:00</published>
+    <updated>2026-11-20T05:56:27.753871+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-wj7x-58c2-5793" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · idor · CVE-2026-77369&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Daptin's generic YJS collaboration WebSocket endpoint (`GET /yjs/:documentName`) contains an insecure direct object reference (IDOR) vulnerability allowing any authenticated user to access arbitrary document columns regardless of permissions. The endpoint only checks for session existence rather than enforcing per-resource authorization, enabling privilege escalation and unauthorized data access. This is rated critical severity and has not been confirmed exploited in the wild. Organizations using Daptin should immediately update to the latest patched version and implement additional authorization checks on the YJS endpoint or restrict access to trusted users only.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-wj7x-58c2-5793"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Etherpad: Pre-auth arbitrary file read (CVE-2026-114516)</title>
+    <id>urn:cybersecnews:item:766</id>
+    <published>2026-11-20T05:56:27.752720+00:00</published>
+    <updated>2026-11-20T05:56:27.752720+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-mc8w-wjhw-45x5" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · path-traversal · CVE-2026-114516&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Etherpad (npm/ep_etherpad-lite) contains a critical pre-authentication arbitrary file read vulnerability in its /static/* handler that allows unauthenticated attackers to traverse the filesystem and read any file accessible to the Etherpad process, including sensitive system files like /etc/passwd. The vulnerability exploits path traversal via URL encoding bypass and is particularly severe because the vulnerable endpoint is processed before authentication middleware. No evidence of active exploitation in the wild is provided, but given the critical severity and ease of exploitation, immediate patching is essential. Apply the latest security update from Etherpad's repository and implement access controls restricting the /static/* endpoint if an immediate patch is unavailable.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-mc8w-wjhw-45x5"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>ASUS warns of critical hard-coded key flaw in Control Center Express</title>
+    <id>urn:cybersecnews:item:765</id>
+    <published>2026-11-20T05:56:27.751450+00:00</published>
+    <updated>2026-11-20T05:56:27.751450+00:00</updated>
+    <link href="https://www.bleepingcomputer.com/news/security/asus-warns-of-critical-hard-coded-key-flaw-in-control-center-express/" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · hardcoded-credentials&lt;/em&gt;&lt;/p&gt;&lt;p&gt;ASUS Control Center Express versions prior to 1.7.29 contain critical hard-coded credential vulnerabilities allowing remote attackers to obtain administrative access to the management console and controlled devices. The flaws enable complete compromise of the management infrastructure without authentication. Immediate patching to version 1.7.29 or later is mandatory for all deployments; organizations should prioritize this update as critical given the administrative access exposure and ease of exploitation.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/asus-warns-of-critical-hard-coded-key-flaw-in-control-center-express/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>New Unpatched Windows 0-Day FastUnlock Lets Someone Holding a Locked PC Run Programs on It</title>
+    <id>urn:cybersecnews:item:764</id>
+    <published>2026-11-20T05:56:27.749563+00:00</published>
+    <updated>2026-11-20T05:56:27.749563+00:00</updated>
+    <link href="https://thehackernews.com/2026/11/new-unpatched-windows-0-day-fastunlock.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · privilege-escalation&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Windows lock screen bypass vulnerability dubbed FastUnlock allows local attackers with physical access to execute arbitrary programs without authentication, though privileges are limited to standard user level. The technique exploits Windows accessibility features and has been publicly disclosed as an unpatched zero-day with no current mitigation available from Microsoft. Severity is moderate given the requirement for physical access and limited privilege escalation potential, with no evidence of active exploitation in the wild at this time. Organizations should implement physical access controls, enable BIOS/UEFI passwords, and monitor for suspicious process execution from locked sessions until a patch is released.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/11/new-unpatched-windows-0-day-fastunlock.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Spying on Governments with Zero Lines of Malware: A Custom SoftEther Bridge in Webworm’s Toolkit</title>
     <id>urn:cybersecnews:item:763</id>
@@ -74,7 +155,7 @@
     <updated>2026-11-19T17:07:45.695624+00:00</updated>
     <link href="https://thehackernews.com/2026/11/critical-vmware-vcenter-flaw-cvss-98.html" rel="alternate" />
     <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass&lt;/em&gt;&lt;/p&gt;&lt;p&gt;VMware vCenter contains a critical authentication bypass vulnerability (CVSS 9.8) allowing network-based attackers to gain unauthorized administrative access without credentials. The flaw affects all supported vCenter versions and has no available workaround. Broadcom has released patches for all supported branches and immediate patching is mandatory given the high severity and network-exploitable nature of this vulnerability.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/11/critical-vmware-vcenter-flaw-cvss-98.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-123890&lt;/em&gt;&lt;/p&gt;&lt;p&gt;VMware vCenter contains a critical authentication bypass vulnerability (CVSS 9.8) allowing network-based attackers to gain unauthorized administrative access without credentials. The flaw affects all supported vCenter versions and has no available workaround. Broadcom has released patches for all supported branches and immediate patching is mandatory given the high severity and network-exploitable nature of this vulnerability.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/11/critical-vmware-vcenter-flaw-cvss-98.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
   </entry>
   <entry>
     <title>ruby2ßhell: Remote Code Execution durch 21 ß</title>
@@ -822,86 +903,5 @@
     <link href="https://www.golem.de/news/schadcode-attacken-moeglich-in-microsoft-paint-klafft-eine-zero-click-luecke-2611-214873.html" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-83844&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Microsoft Paint contains a zero-click vulnerability (CVE-2024-21323) allowing remote code execution on Windows 11 systems through maliciously crafted image files. The vulnerability has been patched by Microsoft, though the update has not yet reached all affected systems. Users should immediately apply available Windows updates; alternatively, restrict Paint's access to untrusted image sources until patches are deployed. No evidence of active exploitation in the wild has been reported, but the zero-click nature and ease of delivery via image files presents significant risk.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.golem.de/news/schadcode-attacken-moeglich-in-microsoft-paint-klafft-eine-zero-click-luecke-2611-214873.html"&gt;Read more&lt;/a&gt; · Source: golem-security&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Apple Multiple Products: Apple Multiple Products Improper Authentication Vulnerability (CVE-2024-27834)</title>
-    <id>urn:cybersecnews:item:672</id>
-    <published>2026-11-04T21:49:23.129136+00:00</published>
-    <updated>2026-11-04T21:49:23.129136+00:00</updated>
-    <link href="https://nvd.nist.gov/vuln/detail/CVE-2024-27834" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2024-27834&lt;/em&gt;&lt;/p&gt;&lt;p&gt;CVE-2024-27834 affects Apple iOS, iPadOS, macOS, Safari, tvOS, and watchOS 10.5, involving an improper authentication vulnerability that allows attackers with arbitrary read/write capabilities to bypass pointer authentication protections. This vulnerability is actively exploited in the wild. Immediately apply security updates from Apple per vendor instructions and adhere to CISA BOD 26-04 prioritization guidance; if patches are unavailable, discontinue use or implement compensating controls based on asset exposure assessment.&lt;/p&gt;&lt;p&gt;&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2024-27834"&gt;Read more&lt;/a&gt; · Source: cisa-kev&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Zyxel fixes zero-day exploited to hack nearly 1,000 network switches</title>
-    <id>urn:cybersecnews:item:671</id>
-    <published>2026-11-04T21:49:23.124464+00:00</published>
-    <updated>2026-11-04T21:49:23.124464+00:00</updated>
-    <link href="https://www.bleepingcomputer.com/news/security/zyxel-fixes-zero-day-exploited-to-hack-nearly-1-000-network-switches/" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Zyxel GS1900 series network switches contained an unpatched zero-day vulnerability exploited by attackers to compromise approximately 1,000 devices globally. The vulnerability allowed unauthorized access to extract configuration files and credentials from affected switches. This is an active, in-the-wild exploit with moderate-to-high severity given the sensitive nature of exposed data and the scale of compromise. Immediate patching is strongly recommended for all GS1900 series switches; verify configurations and credentials stored on compromised devices for potential lateral movement or further exploitation.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/zyxel-fixes-zero-day-exploited-to-hack-nearly-1-000-network-switches/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Debian and Ubuntu APT Flaw Lets MitM Attackers Swap Verified Packages and Run Code as Root</title>
-    <id>urn:cybersecnews:item:670</id>
-    <published>2026-11-04T21:49:23.115431+00:00</published>
-    <updated>2026-11-04T21:49:23.115431+00:00</updated>
-    <link href="https://thehackernews.com/2026/11/debian-and-ubuntu-apt-flaw-lets-mitm.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · package-substitution&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Debian and Ubuntu APT package manager contains a vulnerability enabling man-in-the-middle attackers to substitute verified packages with malicious ones, resulting in arbitrary code execution with root privileges. The flaw exploits APT's default retry mechanism for failed downloads, allowing attackers positioned to intercept network traffic to swap legitimate packages. This is a critical severity issue affecting Debian 12 and Ubuntu systems with default configurations. Users should apply security patches released by Debian and Ubuntu on November 4, 2024, immediately and consider network segmentation or VPN usage to reduce MitM attack surface until patched.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/11/debian-and-ubuntu-apt-flaw-lets-mitm.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>ZDI-26-869: MailEnable Save Directory Traversal Arbitrary File Creation Vulnerability</title>
-    <id>urn:cybersecnews:item:669</id>
-    <published>2026-11-04T15:59:50.091487+00:00</published>
-    <updated>2026-11-04T15:59:50.091487+00:00</updated>
-    <link href="http://www.zerodayinitiative.com/advisories/ZDI-26-869/" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · directory-traversal · CVE-2026-114556&lt;/em&gt;&lt;/p&gt;&lt;p&gt;MailEnable is affected by a pre-authentication directory traversal vulnerability (CVE-2026-114556) that allows remote attackers to create arbitrary files, rated CVSS 7.4. No evidence of active exploitation in the wild has been reported at this time. MailEnable administrators should apply vendor patches immediately and consider implementing network-level access controls to restrict connections to MailEnable services from untrusted sources.&lt;/p&gt;&lt;p&gt;&lt;a href="http://www.zerodayinitiative.com/advisories/ZDI-26-869/"&gt;Read more&lt;/a&gt; · Source: zdi-published&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Hackers use n-day exploits in zero-click attacks on iOS, Android devices</title>
-    <id>urn:cybersecnews:item:668</id>
-    <published>2026-11-04T15:59:50.090431+00:00</published>
-    <updated>2026-11-04T15:59:50.090431+00:00</updated>
-    <link href="https://www.bleepingcomputer.com/news/security/hackers-use-n-day-exploits-in-zero-click-attacks-on-ios-android-devices/" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · zero-click&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Russian threat actors are conducting large-scale watering hole attacks exploiting n-day vulnerabilities in iOS and Android through zero-click vectors, primarily via compromised or spoofed websites. These n-day exploits bypass user interaction requirements, making them particularly dangerous for mass targeting. Severity is high given the zero-click nature and broad device coverage; active exploitation in the wild is confirmed. Users should apply the latest iOS and Android security patches immediately and consider network-level protections; organizations should implement domain reputation filtering and educate users on verifying legitimate portals before visiting.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/hackers-use-n-day-exploits-in-zero-click-attacks-on-ios-android-devices/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>SonicWall warns of unpatched flaws in end-of-life GMS software</title>
-    <id>urn:cybersecnews:item:667</id>
-    <published>2026-11-04T15:59:50.089403+00:00</published>
-    <updated>2026-11-04T15:59:50.089403+00:00</updated>
-    <link href="https://www.bleepingcomputer.com/news/security/sonicwall-warns-of-unpatched-flaws-in-end-of-life-gms-software/" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · unspecified · CVE-2026-109593&lt;/em&gt;&lt;/p&gt;&lt;p&gt;SonicWall Global Management System (GMS) contains two unpatched security vulnerabilities in end-of-life versions that will not receive fixes. The specific vulnerability details and severity levels were not disclosed in available information, but the fact that patches will not be released indicates potential high-risk exposure for affected organizations. Organizations running legacy GMS instances should immediately discontinue use or isolate these systems from production networks, as no vendor remediation is forthcoming. Transition to supported SonicWall management solutions and implement network segmentation to limit potential lateral movement if compromise occurs.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/sonicwall-warns-of-unpatched-flaws-in-end-of-life-gms-software/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>China-Aligned Hackers Hijack Sogou Input Method DNS Requests to Deploy DarkVigil Backdoor</title>
-    <id>urn:cybersecnews:item:666</id>
-    <published>2026-11-04T15:59:50.088129+00:00</published>
-    <updated>2026-11-04T15:59:50.088129+00:00</updated>
-    <link href="https://thehackernews.com/2026/11/china-aligned-hackers-hijack-sogou.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · insecure-dns,dns-hijacking&lt;/em&gt;&lt;/p&gt;&lt;p&gt;SlippyNunchucks exploited insecure HTTP DNS communication in Sogou Input Method (Windows) to hijack requests and deploy the DarkVigil backdoor, targeting organizations since July 1, 2026. The vulnerability stems from unencrypted DNS communications allowing man-in-the-middle attacks to redirect victims to malicious servers. This is a high-severity issue with active exploitation in the wild by a China-aligned threat actor conducting surveillance operations. Organizations should immediately update Sogou Input Method, enforce encrypted DNS (DoH/DoT) network-wide, and monitor for DarkVigil indicators of compromise; consider restricting or disabling Sogou Input Method in sensitive environments pending patches.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/11/china-aligned-hackers-hijack-sogou.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Xen Hypervisor Flaws Let One Malicious VM Read and Write Any Other VM's Memory</title>
-    <id>urn:cybersecnews:item:665</id>
-    <published>2026-11-04T15:59:50.086886+00:00</published>
-    <updated>2026-11-04T15:59:50.086886+00:00</updated>
-    <link href="https://thehackernews.com/2026/11/xen-hypervisor-flaws-let-one-malicious.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · memory-disclosure,memory-corruption&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Two memory access vulnerabilities in Xen hypervisor versions 4.6 and later (CVE-2024-9407 and CVE-2024-9408) allow a malicious guest VM to read and write arbitrary memory of other VMs including dom0, the privileged management VM. These flaws result in complete VM isolation bypass with high severity and potential for privilege escalation across the hypervisor. No mitigation exists; immediate patching is required for all affected Xen installations. Apply vendor security updates as soon as available; consider prioritizing systems running untrusted guest workloads.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/11/xen-hypervisor-flaws-let-one-malicious.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Critical Rails Flaw Lets Attackers Write Server Files via Crafted ImageMagick Uploads</title>
-    <id>urn:cybersecnews:item:664</id>
-    <published>2026-11-04T15:59:50.085829+00:00</published>
-    <updated>2026-11-04T15:59:50.085829+00:00</updated>
-    <link href="https://thehackernews.com/2026/11/critical-rails-flaw-lets-attackers.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · arbitrary-file-write · CVE-2026-122006&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Ruby on Rails Active Storage component contains a critical arbitrary file write vulnerability affecting versions prior to 8.1.4.1 and 8.0.5.2, exploitable by unauthenticated attackers through crafted file uploads processed by ImageMagick. The vulnerability allows remote code execution and complete server compromise with no authentication required. Organizations using affected Rails versions must immediately upgrade to patched versions 8.1.4.1, 8.0.5.2, or later, and consider disabling ImageMagick processing or implementing strict file type validation as interim mitigations pending patching.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/11/critical-rails-flaw-lets-attackers.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
   </entry>
 </feed>
