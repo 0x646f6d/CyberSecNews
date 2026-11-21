@@ -3,7 +3,25 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-11-21T05:50:22.560871+00:00</updated>
+  <updated>2026-11-21T15:56:02.919655+00:00</updated>
+  <entry>
+    <title>Attackers' AI Agents Found a Zero-Day in Medical-Imaging Software and Gained Root Access</title>
+    <id>urn:cybersecnews:item:779</id>
+    <published>2026-11-21T15:56:02.919655+00:00</published>
+    <updated>2026-11-21T15:56:02.919655+00:00</updated>
+    <link href="https://thehackernews.com/2026/11/attackers-ai-agents-found-zero-day-in.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · path-traversal&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Suspected China-linked threat actors employed autonomous AI agents to discover a zero-day vulnerability in MONAI Label (medical imaging server) versions 0.8.5 and earlier, enabling unauthenticated arbitrary file write operations that led to root access compromise of a university server. The vulnerability allows attackers to write files outside designated storage directories in default configurations, posing critical risk to healthcare infrastructure. This represents the first documented case of AI-driven autonomous agents discovering and exploiting zero-day vulnerabilities in production environments. Immediate patching to versions beyond 0.8.5 is essential; affected organizations should prioritize updating MONAI Label and implement network segmentation to restrict server access.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/11/attackers-ai-agents-found-zero-day-in.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>GnuPG Warns Critical GPGME Flaw Could Expose App Data via Malicious OpenPGP Keys</title>
+    <id>urn:cybersecnews:item:778</id>
+    <published>2026-11-21T15:56:02.916411+00:00</published>
+    <updated>2026-11-21T15:56:02.916411+00:00</updated>
+    <link href="https://thehackernews.com/2026/11/gnupg-warns-critical-gpgme-flaw-could.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · memory-corruption · CVE-2026-129975&lt;/em&gt;&lt;/p&gt;&lt;p&gt;GPGME library versions prior to 2.3.0 is vulnerable to a critical memory corruption flaw triggered by malicious OpenPGP keys containing abnormally long user IDs (CVE-2026-129975). The vulnerability allows attackers to execute arbitrary code or exfiltrate sensitive application data when processing crafted keys. This affects all applications using vulnerable GPGME versions; GnuPG has released patched versions. Organizations should immediately update GPGME to version 2.3.0 or later and audit applications relying on this library for potential compromise.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/11/gnupg-warns-critical-gpgme-flaw-could.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>SAP NetWeaver: SAP NetWeaver Improper Neutralization of Special Elements in Data Query Logic Vulnerability (CVE-2025-42884)</title>
     <id>urn:cybersecnews:item:777</id>
@@ -885,23 +903,5 @@
     <link href="https://www.bleepingcomputer.com/news/security/fake-security-tools-on-github-push-backdoors-and-infostealers/" rel="alternate" />
     <category term="red-team" />
     <content type="html">&lt;p&gt;&lt;em&gt;red-team · supply-chain&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Fake security tools hosted on GitHub are distributing backdoor and infostealer malware to security professionals. These malicious repositories impersonate legitimate security utilities, deceiving developers into installing compromised software that establishes persistent access and exfiltrates sensitive data. The threat is actively exploited in the wild, targeting security teams who may have elevated system access and valuable credentials. Mitigation requires vetting GitHub projects for authenticity (verifying maintainers and commit history), using software supply chain security tools, and implementing strict code review practices before executing third-party security tools in production environments.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/fake-security-tools-on-github-push-backdoors-and-infostealers/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Hackers Target OpenSSH SSHole Flaw Within Hours of Disclosure, Gain Root on Honeypot</title>
-    <id>urn:cybersecnews:item:679</id>
-    <published>2026-11-06T21:19:13.205218+00:00</published>
-    <updated>2026-11-06T21:19:13.205218+00:00</updated>
-    <link href="https://thehackernews.com/2026/11/hackers-exploited-openssh-sshole-flaw.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-123158&lt;/em&gt;&lt;/p&gt;&lt;p&gt;OpenSSH on musl-based Linux systems with PAM disabled is vulnerable to CVE-2026-123158 (SSHole, CVSS 8.1), which allows unauthorized root login to passwordless accounts. Exploitation in the wild has been confirmed within hours of public disclosure, with threat actors successfully gaining root access on honeypot systems. Apply the latest OpenSSH security patch immediately, and enable PAM or migrate to glibc-based systems as interim mitigations if patching is delayed.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/11/hackers-exploited-openssh-sshole-flaw.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>D-Link warns of multiple zero-days in DGS-3130 Series switches</title>
-    <id>urn:cybersecnews:item:678</id>
-    <published>2026-11-06T15:42:42.772497+00:00</published>
-    <updated>2026-11-06T15:42:42.772497+00:00</updated>
-    <link href="https://www.bleepingcomputer.com/news/security/d-link-warns-of-multiple-zero-days-in-dgs-3130-series-switches/" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · multiple&lt;/em&gt;&lt;/p&gt;&lt;p&gt;D-Link DGS-3130 series managed Gigabit switches contain multiple unpatched zero-day vulnerabilities affecting authentication and command injection mechanisms. Specific severity ratings and active exploitation status were not disclosed in the warning. D-Link has released only interim mitigation measures rather than patches; deploy recommended workarounds immediately, restrict network access to affected switches, and monitor vendor advisories for patch availability.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/d-link-warns-of-multiple-zero-days-in-dgs-3130-series-switches/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
   </entry>
 </feed>
