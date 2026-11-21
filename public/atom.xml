@@ -3,7 +3,16 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-11-20T16:45:01.303402+00:00</updated>
+  <updated>2026-11-21T05:50:22.560871+00:00</updated>
+  <entry>
+    <title>SAP NetWeaver: SAP NetWeaver Improper Neutralization of Special Elements in Data Query Logic Vulnerability (CVE-2025-42884)</title>
+    <id>urn:cybersecnews:item:777</id>
+    <published>2026-11-21T05:50:22.560871+00:00</published>
+    <updated>2026-11-21T05:50:22.560871+00:00</updated>
+    <link href="https://nvd.nist.gov/vuln/detail/CVE-2025-42884" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · injection · CVE-2025-42884&lt;/em&gt;&lt;/p&gt;&lt;p&gt;SAP NetWeaver Enterprise Portal is vulnerable to improper neutralization of special elements in JNDI query logic (CVE-2025-42884), allowing unauthenticated attackers to disclose or modify server information through injected JNDI environment properties or malicious URLs. This vulnerability is actively exploited in the wild with high severity impact. Immediately apply SAP's vendor-supplied mitigations and prioritize patching per CISA BOD 26-04 requirements; discontinue use if patches are unavailable. Conduct forensic triage and assess internet exposure of affected NetWeaver instances to determine remediation urgency.&lt;/p&gt;&lt;p&gt;&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2025-42884"&gt;Read more&lt;/a&gt; · Source: cisa-kev&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Fabio: Access-control bypass through unnormalized request paths (CVE-2026-104099)</title>
     <id>urn:cybersecnews:item:776</id>
@@ -290,7 +299,7 @@
     <updated>2026-11-18T16:59:05.088660+00:00</updated>
     <link href="https://www.bleepingcomputer.com/news/security/apache-warns-of-roller-rce-vulnerability-exploited-in-attacks/" rel="alternate" />
     <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Apache Roller versions prior to 6.1.3 contain a critical remote code execution vulnerability being actively exploited in the wild. The flaw allows unauthenticated attackers to execute arbitrary code on affected servers. Organizations running Roller should immediately upgrade to version 6.1.3 or later to remediate this exposure.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/apache-warns-of-roller-rce-vulnerability-exploited-in-attacks/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-129448, CVE-2026-82384&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Apache Roller versions prior to 6.1.3 contain a critical remote code execution vulnerability being actively exploited in the wild. The flaw allows unauthenticated attackers to execute arbitrary code on affected servers. Organizations running Roller should immediately upgrade to version 6.1.3 or later to remediate this exposure.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/apache-warns-of-roller-rce-vulnerability-exploited-in-attacks/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
   </entry>
   <entry>
     <title>Java4Shell (CVE-2026-114938): Frequently asked questions about OpenJDK remote code execution vulnerability</title>
@@ -894,14 +903,5 @@
     <link href="https://www.bleepingcomputer.com/news/security/d-link-warns-of-multiple-zero-days-in-dgs-3130-series-switches/" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · multiple&lt;/em&gt;&lt;/p&gt;&lt;p&gt;D-Link DGS-3130 series managed Gigabit switches contain multiple unpatched zero-day vulnerabilities affecting authentication and command injection mechanisms. Specific severity ratings and active exploitation status were not disclosed in the warning. D-Link has released only interim mitigation measures rather than patches; deploy recommended workarounds immediately, restrict network access to affected switches, and monitor vendor advisories for patch availability.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/d-link-warns-of-multiple-zero-days-in-dgs-3130-series-switches/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Hackers Hide Linux Backdoor in Control Web Panel Server to Execute Commands Without Logs</title>
-    <id>urn:cybersecnews:item:677</id>
-    <published>2026-11-06T15:42:42.771633+00:00</published>
-    <updated>2026-11-06T15:42:42.771633+00:00</updated>
-    <link href="https://thehackernews.com/2026/11/hackers-hide-linux-backdoor-in-control.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · backdoor&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Control Web Panel (CWP) web server contains a backdoor allowing remote command execution without logging to access logs; installation requires prior root-level compromise. Severity is high due to persistence and log-evasion capabilities, though initial access barrier is significant. No indication of widespread wild exploitation currently reported. Immediately audit all CWP installations for unauthorized modifications to the web server binary, isolate compromised systems, and restore from clean backups; implement file integrity monitoring and restrict root access privileges.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/11/hackers-hide-linux-backdoor-in-control.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
   </entry>
 </feed>
