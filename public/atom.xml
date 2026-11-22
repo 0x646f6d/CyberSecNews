@@ -3,7 +3,16 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-11-21T21:28:22.294747+00:00</updated>
+  <updated>2026-11-22T15:57:40.850784+00:00</updated>
+  <entry>
+    <title>GL.iNet: Schwachstelle entdeckt, Patch verfügbar</title>
+    <id>urn:cybersecnews:item:781</id>
+    <published>2026-11-22T15:57:40.850784+00:00</published>
+    <updated>2026-11-22T15:57:40.850784+00:00</updated>
+    <link href="https://www.heise.de/news/GL-iNet-Schwachstelle-entdeckt-Patch-verfuegbar-11533722.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;GL.iNet routers are vulnerable to an authentication bypass in cloud-based remote management services that is actively exploited in the wild. The vulnerability allows attackers to gain unauthorized administrative access to affected devices without credentials. Severity is high due to the remote nature and active exploitation. Administrators should immediately apply the available patch and consider disabling cloud management features if remote administration is not critical.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.heise.de/news/GL-iNet-Schwachstelle-entdeckt-Patch-verfuegbar-11533722.html"&gt;Read more&lt;/a&gt; · Source: heise-security&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Microsoft Entra Connect Health flaw exploited to steal tenant data</title>
     <id>urn:cybersecnews:item:780</id>
@@ -894,14 +903,5 @@
     <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-102895" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-102894, CVE-2026-102895&lt;/em&gt;&lt;/p&gt;&lt;p&gt;GPUStack contains an improper authentication vulnerability (CVE-2026-102895) allowing unauthenticated administrative access including user/model manipulation, persistent API key creation, secret disclosure, and remote code execution via POST /v2/inference-backends/from-yaml. This vulnerability is actively exploited in the wild and carries high severity due to its potential for complete system compromise. Organizations must immediately apply vendor-supplied mitigations and follow CISA BOD 26-04 patching guidance; discontinue use if patches are unavailable. Conduct forensics triage and assess internet exposure to prioritize remediation per CISA's risk-based guidelines.&lt;/p&gt;&lt;p&gt;&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2026-102895"&gt;Read more&lt;/a&gt; · Source: cisa-kev&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>SonicWall SonicOS SSLVPN: SonicWall SonicOS SSLVPN Use of Single-factor Authentication Vulnerability (CVE-2026-19868)</title>
-    <id>urn:cybersecnews:item:681</id>
-    <published>2026-11-06T21:19:13.208785+00:00</published>
-    <updated>2026-11-06T21:19:13.208785+00:00</updated>
-    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-19868" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-19868&lt;/em&gt;&lt;/p&gt;&lt;p&gt;SonicWall SonicOS SSLVPN is affected by CVE-2026-19868, which allows authenticated users with alternate credentials to bypass SAML authentication and MFA controls. This vulnerability is actively exploited in the wild according to CISA's KEV catalog. Organizations must immediately apply vendor-supplied mitigations per BOD 26-04 guidance, or discontinue product use if patches are unavailable, with priority based on internet exposure assessment.&lt;/p&gt;&lt;p&gt;&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2026-19868"&gt;Read more&lt;/a&gt; · Source: cisa-kev&lt;/p&gt;</content>
   </entry>
 </feed>
