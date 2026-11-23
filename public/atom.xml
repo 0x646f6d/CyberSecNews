@@ -3,7 +3,52 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-11-22T15:57:40.850784+00:00</updated>
+  <updated>2026-11-23T19:54:33.022498+00:00</updated>
+  <entry>
+    <title>ARTEX leads to persistent ZQAgent backdoor</title>
+    <id>urn:cybersecnews:item:786</id>
+    <published>2026-11-23T19:54:33.022498+00:00</published>
+    <updated>2026-11-23T19:54:33.022498+00:00</updated>
+    <link href="https://blog.nviso.eu/2026/11/23/artex-fog0003-zqagent-backdoor/" rel="alternate" />
+    <category term="red-team" />
+    <content type="html">&lt;p&gt;&lt;em&gt;red-team · backdoor&lt;/em&gt;&lt;/p&gt;&lt;p&gt;ARTEX malware campaign deploys ZQAgent, a new persistent backdoor providing remote access and command execution capabilities to attackers. ZQAgent establishes a durable foothold in compromised environments, suggesting sophisticated post-exploitation objectives beyond initial access. The threat appears active in the wild with demonstrated deployment capability. Organizations should prioritize detection of ARTEX infection vectors, implement network monitoring for ZQAgent command-and-control communications, and conduct forensic analysis on systems showing indicators of ARTEX activity to identify and remove both malware stages.&lt;/p&gt;&lt;p&gt;&lt;a href="https://blog.nviso.eu/2026/11/23/artex-fog0003-zqagent-backdoor/"&gt;Read more&lt;/a&gt; · Source: nviso-labs&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Xen Orchestra: Empty-object login token (CVE-2026-133469)</title>
+    <id>urn:cybersecnews:item:785</id>
+    <published>2026-11-23T19:54:33.021961+00:00</published>
+    <updated>2026-11-23T19:54:33.021961+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-2r3w-c2vx-fv5g" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-133469&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Xen Orchestra (xo-server npm package) contains a critical authentication bypass vulnerability (CVE-2026-133469) where REST cookie parsing converts an empty JSON object token into a valid authentication credential, allowing unauthenticated attackers to obtain legitimate login tokens and gain full system access. The vulnerability results from improper input validation in the token provider which treats an empty object as a wildcard lookup, returning the first available token from the collection. This is actively exploitable and requires immediate patching; update xo-server to the latest patched version and implement strict input validation on authentication token parameters as an interim mitigation.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-2r3w-c2vx-fv5g"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Microsoft Azure flaw exploited to steal customers' API credentials</title>
+    <id>urn:cybersecnews:item:784</id>
+    <published>2026-11-23T19:54:33.021530+00:00</published>
+    <updated>2026-11-23T19:54:33.021530+00:00</updated>
+    <link href="https://www.bleepingcomputer.com/news/security/microsoft-azure-flaw-exploited-to-steal-customers-api-credentials/" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · credential-exposure&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Microsoft Azure API Management Classic tiers contained a vulnerability allowing threat actors to extract stored API credentials from affected instances. The flaw was actively exploited in the wild targeting energy sector organizations in Norway and potentially other sectors. Severity is high due to direct credential compromise enabling lateral movement and further system access. Microsoft recommends immediately upgrading from Classic tier to the Standard/Premium tiers where the vulnerability does not exist, implementing network access controls, and rotating all potentially exposed API credentials.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/microsoft-azure-flaw-exploited-to-steal-customers-api-credentials/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>N-able Discloses Critical Mail Assure Vulnerability Found During Breach Investigation</title>
+    <id>urn:cybersecnews:item:783</id>
+    <published>2026-11-23T19:54:33.020801+00:00</published>
+    <updated>2026-11-23T19:54:33.020801+00:00</updated>
+    <link href="https://thehackernews.com/2026/11/n-able-discloses-critical-mail-assure.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · ssrf · CVE-2026-134624&lt;/em&gt;&lt;/p&gt;&lt;p&gt;N-able's Mail Assure and SpamExperts Hosted Cloud email filtering service contains a critical server-side request forgery (SSRF) vulnerability (CVE-2026-134624) that allows authenticated users with high-level API access to establish connections to arbitrary internal systems. The vulnerability was discovered during the investigation of an active breach affecting the service. This flaw is currently exploited in the wild as evidenced by the breach discovery. Customers should immediately patch to the latest version and review API access controls to restrict high-privilege API credentials to only necessary personnel.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/11/n-able-discloses-critical-mail-assure.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Critical binary-parser Flaw Enables JavaScript Injection via Malicious Parser Definitions</title>
+    <id>urn:cybersecnews:item:782</id>
+    <published>2026-11-23T19:54:33.019846+00:00</published>
+    <updated>2026-11-23T19:54:33.019846+00:00</updated>
+    <link href="https://thehackernews.com/2026/11/critical-binary-parser-flaw-enables.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · code-injection · CVE-2026-134814&lt;/em&gt;&lt;/p&gt;&lt;p&gt;The binary-parser library versions prior to 2.3.1 contain a code injection vulnerability (CVE-2026-134814, CVSS 9.2/8.1) that enables arbitrary code execution when an attacker controls parser definitions. The flaw exploits unsafe handling of parser configuration to inject malicious JavaScript code during parsing operations. Upgrade to binary-parser 2.3.1 or later immediately; if immediate patching is unavailable, restrict parser definition sources to trusted inputs only and implement strict validation of parser schemas before use.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/11/critical-binary-parser-flaw-enables.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>GL.iNet: Schwachstelle entdeckt, Patch verfügbar</title>
     <id>urn:cybersecnews:item:781</id>
@@ -858,50 +903,5 @@
     <link href="https://www.heise.de/news/SAP-Patchday-bringt-Korrekturen-fuer-Codeschmuggel-Luecken-11519250.html" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · code-injection,memory-corruption&lt;/em&gt;&lt;/p&gt;&lt;p&gt;SAP released patches for nine critical vulnerabilities on its November patchday, addressing code injection and memory corruption flaws that could enable unauthorized code execution. The vulnerabilities affect multiple SAP products and components across their enterprise application suite. Severity is critical with active exploitation potential in enterprise environments given SAP's widespread use. Organizations running SAP systems should immediately apply available patches and prioritize updates for affected components to mitigate code injection and memory corruption risks.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.heise.de/news/SAP-Patchday-bringt-Korrekturen-fuer-Codeschmuggel-Luecken-11519250.html"&gt;Read more&lt;/a&gt; · Source: heise-security&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>U.S. urges critical infrastructure orgs to secure refrigeration systems ASAP after EU supermarket and blood bank attacks</title>
-    <id>urn:cybersecnews:item:686</id>
-    <published>2026-11-10T06:08:51.063666+00:00</published>
-    <updated>2026-11-10T06:08:51.063666+00:00</updated>
-    <link href="https://www.tenable.com/blog/u-s-urges-critical-infrastructure-orgs-to-secure-refrigeration-systems-asap-after-eu" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass, rce, misconfig&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Industrial refrigeration and cold-chain monitoring controllers used in healthcare, food, agriculture, and transportation sectors are being actively exploited in ongoing attacks against French blood banks and European supermarkets. Attackers are remotely manipulating temperature controls through unpatched vulnerabilities, weak/default passwords, and misconfigurations in devices such as Danfoss AK-SM/AK-SC, Copeland, and Dixell XWEB controllers to spoil products and create fire hazards. These attacks are confirmed exploited in the wild with hundreds of grocery stores compromised. CISA, FBI, HHS, USDA, and DoT recommend immediate action: change default credentials, patch critical vulnerabilities, replace end-of-life devices, isolate OT systems from business networks, remove unnecessary remote access, identify internet-accessible systems, and maintain offsite backups.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.tenable.com/blog/u-s-urges-critical-infrastructure-orgs-to-secure-refrigeration-systems-asap-after-eu"&gt;Read more&lt;/a&gt; · Source: tenable&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Kubeflow Pipelines API server lacks authorization for shared pipeline uploads (CVE-2026-77596)</title>
-    <id>urn:cybersecnews:item:685</id>
-    <published>2026-11-10T06:08:51.062676+00:00</published>
-    <updated>2026-11-10T06:08:51.062676+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-rjr3-43j3-4q8g" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-77596&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Kubeflow Pipelines API server (go/github.com/kubeflow/pipelines) lacks authorization checks on pipeline upload endpoints when the target namespace is empty, allowing unauthorized users to upload pipelines in multi-user deployments. The vulnerability affects `POST /apis/v2beta1/pipelines/upload` and `POST /apis/v2beta1/pipelines/upload_version` endpoints, which skip SubjectAccessReview validation when namespace resolution returns an empty string. This is rated critical severity; exploitation likelihood in the wild is unknown from the provided data. Immediate patching is required; verify your Kubeflow Pipelines deployment namespace configuration and apply security updates when available.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-rjr3-43j3-4q8g"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>IBM Aspera Faspex: IBM Aspera Faspex Incorrect Authorization Vulnerability (CVE-2026-123218)</title>
-    <id>urn:cybersecnews:item:684</id>
-    <published>2026-11-10T06:08:51.061555+00:00</published>
-    <updated>2026-11-10T06:08:51.061555+00:00</updated>
-    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-123218" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-123218&lt;/em&gt;&lt;/p&gt;&lt;p&gt;IBM Aspera Faspex is affected by CVE-2026-123218, an incorrect authorization vulnerability allowing authenticated users to craft specific messages that bypass authorization controls and achieve privilege escalation. This vulnerability is actively exploited in the wild and carries high severity. Immediately apply vendor-supplied mitigations in accordance with CISA BOD 26-04 guidance, prioritizing internet-exposed assets for patching. If mitigations are unavailable, discontinue use of the product or transition to alternative solutions.&lt;/p&gt;&lt;p&gt;&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2026-123218"&gt;Read more&lt;/a&gt; · Source: cisa-kev&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>SignalWire FreeSwitch: SignalWire FreeSwitch Code Injection Vulnerability (CVE-2026-116779)</title>
-    <id>urn:cybersecnews:item:683</id>
-    <published>2026-11-10T06:08:51.060422+00:00</published>
-    <updated>2026-11-10T06:08:51.060422+00:00</updated>
-    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-116779" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · code-injection · CVE-2026-116779&lt;/em&gt;&lt;/p&gt;&lt;p&gt;SignalWire FreeSwitch is vulnerable to CVE-2026-116779, a code injection flaw enabling configuration disclosure, credential theft, arbitrary call control, and remote command execution. This vulnerability is actively exploited in the wild and carries high severity. Organizations must immediately apply vendor-supplied mitigations per CISA BOD 26-04 guidance; if unavailable, discontinue use of the product or migrate to cloud alternatives. Prioritize patching based on internet exposure assessment and comply with mandatory CISA patching timelines.&lt;/p&gt;&lt;p&gt;&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2026-116779"&gt;Read more&lt;/a&gt; · Source: cisa-kev&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>GPUStack GPUStack: GPUStack Improper Authentication Vulnerability (CVE-2026-102895)</title>
-    <id>urn:cybersecnews:item:682</id>
-    <published>2026-11-10T06:08:51.053549+00:00</published>
-    <updated>2026-11-10T06:08:51.053549+00:00</updated>
-    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-102895" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-102894, CVE-2026-102895&lt;/em&gt;&lt;/p&gt;&lt;p&gt;GPUStack contains an improper authentication vulnerability (CVE-2026-102895) allowing unauthenticated administrative access including user/model manipulation, persistent API key creation, secret disclosure, and remote code execution via POST /v2/inference-backends/from-yaml. This vulnerability is actively exploited in the wild and carries high severity due to its potential for complete system compromise. Organizations must immediately apply vendor-supplied mitigations and follow CISA BOD 26-04 patching guidance; discontinue use if patches are unavailable. Conduct forensics triage and assess internet exposure to prioritize remediation per CISA's risk-based guidelines.&lt;/p&gt;&lt;p&gt;&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2026-102895"&gt;Read more&lt;/a&gt; · Source: cisa-kev&lt;/p&gt;</content>
   </entry>
 </feed>
