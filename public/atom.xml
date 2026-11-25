@@ -3,7 +3,25 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-11-23T19:54:33.022498+00:00</updated>
+  <updated>2026-11-25T00:24:11.993397+00:00</updated>
+  <entry>
+    <title>Idunno AntiCsrf: Idunno AntiCsrf Deserialization of Untrusted Data Vulnerability (CVE-2026-131914)</title>
+    <id>urn:cybersecnews:item:788</id>
+    <published>2026-11-25T00:24:11.993397+00:00</published>
+    <updated>2026-11-25T00:24:11.993397+00:00</updated>
+    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-131914" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · deserialization-rce · CVE-2026-131914&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Idunno AntiCsrf, an ASP.NET anti-CSRF library, contains a deserialization of untrusted data vulnerability (CVE-2026-131914) allowing unauthenticated remote code execution through object injection. This vulnerability is actively exploited in the wild and carries critical severity. The affected product is reportedly end-of-life or end-of-service; organizations must immediately apply vendor-supplied mitigations or discontinue use, prioritizing patching per CISA BOD 26-04 guidelines and conducting forensics triage to identify exposure and compromise indicators.&lt;/p&gt;&lt;p&gt;&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2026-131914"&gt;Read more&lt;/a&gt; · Source: cisa-kev&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Iran-Aligned Volant Manticore Uses IPFS-Based KuboShell Backdoor in Espionage Campaigns</title>
+    <id>urn:cybersecnews:item:787</id>
+    <published>2026-11-25T00:24:11.988299+00:00</published>
+    <updated>2026-11-25T00:24:11.988299+00:00</updated>
+    <link href="https://thehackernews.com/2026/11/iran-aligned-volant-manticore-uses-ipfs.html" rel="alternate" />
+    <category term="red-team" />
+    <content type="html">&lt;p&gt;&lt;em&gt;red-team · c2&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Volant Manticore, an Iran-aligned threat actor, deployed the previously unknown KuboShell backdoor targeting telecommunications, aviation, and critical infrastructure sectors in Cyprus, leveraging IPFS for C2 communications to evade traditional network detection. KuboShell uses the distributed InterPlanetary File System protocol for command delivery and data exfiltration, combined with the Homa post-compromise framework for lateral movement and persistence. No severity rating or in-the-wild exploitation details were provided in the available summary, though the targeting of critical infrastructure suggests high impact potential. Organizations in targeted sectors should implement network segmentation, monitor for IPFS protocol anomalies, hunt for KuboShell artifacts, and maintain updated endpoint detection capabilities while awaiting formal indicators of compromise.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/11/iran-aligned-volant-manticore-uses-ipfs.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>ARTEX leads to persistent ZQAgent backdoor</title>
     <id>urn:cybersecnews:item:786</id>
@@ -461,7 +479,7 @@
     <updated>2026-11-17T06:48:56.044528+00:00</updated>
     <link href="https://www.bleepingcomputer.com/news/security/optimizely-supply-chain-attack-delivers-malware-to-cnn-fox-news-bbc-salesforce-sites/" rel="alternate" />
     <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · supply-chain-attack&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Optimizely content delivery platform was compromised in a supply chain attack distributing malicious JavaScript to hundreds of major websites including CNN, Fox News, BBC, Zoom, Salesforce, and GitLab. The injected scripts targeted visitor browsers to steal cryptocurrency and payment card data while exploiting iOS vulnerabilities. This represents high-severity exploitation actively occurring in the wild affecting millions of end users. Affected organizations should immediately audit Optimizely implementations, review content delivery logs, purge cached malicious assets, implement Content Security Policy headers, and monitor for indicators of compromise on affected domains; consider alternative CDN providers pending Optimizely's security remediation.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/optimizely-supply-chain-attack-delivers-malware-to-cnn-fox-news-bbc-salesforce-sites/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · supply-chain-attack · CVE-2026-132224&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Optimizely content delivery platform was compromised in a supply chain attack distributing malicious JavaScript to hundreds of major websites including CNN, Fox News, BBC, Zoom, Salesforce, and GitLab. The injected scripts targeted visitor browsers to steal cryptocurrency and payment card data while exploiting iOS vulnerabilities. This represents high-severity exploitation actively occurring in the wild affecting millions of end users. Affected organizations should immediately audit Optimizely implementations, review content delivery logs, purge cached malicious assets, implement Content Security Policy headers, and monitor for indicators of compromise on affected domains; consider alternative CDN providers pending Optimizely's security remediation.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/optimizely-supply-chain-attack-delivers-malware-to-cnn-fox-news-bbc-salesforce-sites/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
   </entry>
   <entry>
     <title>From view-only access to container root: five vulnerabilities in ONLYOFFICE Docs (FIXED)</title>
@@ -885,23 +903,5 @@
     <link href="https://www.golem.de/news/dringend-patchen-attackierte-chrome-luecke-gefaehrdet-unzaehlige-nutzer-2611-215019.html" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Google Chrome addressed multiple critical vulnerabilities in a recent security update, including a zero-day flaw currently being exploited in the wild. The affected versions expose countless users to active attack campaigns. Immediate patching to the latest Chrome version is essential and should be prioritized across all systems.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.golem.de/news/dringend-patchen-attackierte-chrome-luecke-gefaehrdet-unzaehlige-nutzer-2611-215019.html"&gt;Read more&lt;/a&gt; · Source: golem-security&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Zahlreiche Sicherheitslücken bedrohen IBM App Connect Enterprise</title>
-    <id>urn:cybersecnews:item:688</id>
-    <published>2026-11-10T16:09:37.693895+00:00</published>
-    <updated>2026-11-10T16:09:37.693895+00:00</updated>
-    <link href="https://www.heise.de/news/Zahlreiche-Sicherheitsluecken-bedrohen-IBM-App-Connect-Enterprise-11518678.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · multiple&lt;/em&gt;&lt;/p&gt;&lt;p&gt;IBM App Connect Enterprise, Log Source Management App for IBM QRadar SIEM, and TS4500 Tape Library contain multiple unspecified vulnerabilities that could enable unauthorized access, information disclosure, or system compromise. Severity levels vary by individual CVEs but impact critical integration and security infrastructure components. No indication provided of active exploitation in the wild. IBM has released patches; administrators should apply updates immediately based on CVSS scores and environmental risk assessment.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.heise.de/news/Zahlreiche-Sicherheitsluecken-bedrohen-IBM-App-Connect-Enterprise-11518678.html"&gt;Read more&lt;/a&gt; · Source: heise-security&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>SAP-Patchday bringt Korrekturen für Codeschmuggel-Lücken</title>
-    <id>urn:cybersecnews:item:687</id>
-    <published>2026-11-10T16:09:37.692713+00:00</published>
-    <updated>2026-11-10T16:09:37.692713+00:00</updated>
-    <link href="https://www.heise.de/news/SAP-Patchday-bringt-Korrekturen-fuer-Codeschmuggel-Luecken-11519250.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · code-injection,memory-corruption&lt;/em&gt;&lt;/p&gt;&lt;p&gt;SAP released patches for nine critical vulnerabilities on its November patchday, addressing code injection and memory corruption flaws that could enable unauthorized code execution. The vulnerabilities affect multiple SAP products and components across their enterprise application suite. Severity is critical with active exploitation potential in enterprise environments given SAP's widespread use. Organizations running SAP systems should immediately apply available patches and prioritize updates for affected components to mitigate code injection and memory corruption risks.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.heise.de/news/SAP-Patchday-bringt-Korrekturen-fuer-Codeschmuggel-Luecken-11519250.html"&gt;Read more&lt;/a&gt; · Source: heise-security&lt;/p&gt;</content>
   </entry>
 </feed>
