@@ -3,7 +3,61 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-11-25T00:24:11.993397+00:00</updated>
+  <updated>2026-11-25T18:28:34.735340+00:00</updated>
+  <entry>
+    <title>@waline/client vulnerable to stored XSS through unsanitized comment edit previews (CVE-2026-64670)</title>
+    <id>urn:cybersecnews:item:794</id>
+    <published>2026-11-25T18:28:34.735340+00:00</published>
+    <updated>2026-11-25T18:28:34.735340+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-crj3-q72p-ggqm" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · stored-xss · CVE-2026-64670&lt;/em&gt;&lt;/p&gt;&lt;p&gt;@waline/client versions prior to the patched release contain a critical stored XSS vulnerability in comment edit previews where unsanitized markdown is rendered via v-html without output encoding. When administrators or comment owners edit comments, malicious HTML/JavaScript from the original comment body executes in their browser session, enabling account compromise and privilege escalation. This vulnerability is not currently exploited in the wild but has critical severity due to potential admin account takeover. Update @waline/client to the latest patched version immediately and review audit logs for suspicious comment edits.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-crj3-q72p-ggqm"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Hewlett Packard Enterprise (HPE) Juniper Session Smart Conductor and Session Smart Router: Hewlett Packard Enterprise (HPE) Juniper Session Smart Conductor and Session Smart Router OS Command Injection Vulnerability (CVE-2026-103406)</title>
+    <id>urn:cybersecnews:item:793</id>
+    <published>2026-11-25T18:28:34.734204+00:00</published>
+    <updated>2026-11-25T18:28:34.734204+00:00</updated>
+    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-103406" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · os-command-injection · CVE-2026-103406&lt;/em&gt;&lt;/p&gt;&lt;p&gt;HPE Juniper Session Smart Conductor and Session Smart Router contain an OS command injection vulnerability (CVE-2026-103406) in salt minion ID handling that enables unauthenticated remote code execution as root. This vulnerability is actively exploited in the wild and poses critical risk to network infrastructure. Affected organizations must immediately apply vendor-supplied mitigations or discontinue use, prioritizing patching per CISA BOD 26-04 guidance, and conduct forensic triage on exposed instances. Internet-facing deployments require emergency remediation due to active exploitation.&lt;/p&gt;&lt;p&gt;&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2026-103406"&gt;Read more&lt;/a&gt; · Source: cisa-kev&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Microsoft confirms authentication issues after November updates</title>
+    <id>urn:cybersecnews:item:792</id>
+    <published>2026-11-25T18:28:34.733310+00:00</published>
+    <updated>2026-11-25T18:28:34.733310+00:00</updated>
+    <link href="https://www.bleepingcomputer.com/news/microsoft/microsoft-confirms-authentication-issues-after-november-updates/" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Microsoft's November security updates addressing a high-severity RCE vulnerability are causing authentication issues for some customers. The company has not yet indicated if this is being actively exploited in the wild. Affected organizations should validate authentication functionality in test environments before broad deployment and consider staged rollouts or temporary rollback if critical systems are impacted. Monitor Microsoft's support channels for targeted patches addressing the authentication regression.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/microsoft/microsoft-confirms-authentication-issues-after-november-updates/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>CISA warns of critical unpatched flaw in Danfoss refrigeration controllers</title>
+    <id>urn:cybersecnews:item:791</id>
+    <published>2026-11-25T18:28:34.732354+00:00</published>
+    <updated>2026-11-25T18:28:34.732354+00:00</updated>
+    <link href="https://www.bleepingcomputer.com/news/security/cisa-warns-of-critical-unpatched-flaw-in-danfoss-refrigeration-controllers/" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Danfoss AK-SM 8xxA Series refrigeration controllers are vulnerable to a critical unpatched flaw allowing unauthenticated remote code execution. CISA has issued a warning indicating active exploitation potential targeting food retail and critical infrastructure operators. No patch is currently available; operators should implement network segmentation, disable remote management interfaces, and monitor for suspicious activity until a fix is released.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/cisa-warns-of-critical-unpatched-flaw-in-danfoss-refrigeration-controllers/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Hackers Exploited CVSS 10.0 Hex.pm RCE Flaw to Compromise 6 Package Registry Servers</title>
+    <id>urn:cybersecnews:item:790</id>
+    <published>2026-11-25T18:28:34.731200+00:00</published>
+    <updated>2026-11-25T18:28:34.731200+00:00</updated>
+    <link href="https://thehackernews.com/2026/11/hackers-exploited-cvss-100-hexpm-rce.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;A critical remote code execution vulnerability (CVSS 10.0) in Hex.pm package registry was exploited in the wild to compromise six production servers, with the flaw present in the codebase since February 2016. The attacker successfully executed arbitrary OS commands on the affected infrastructure before Hex.pm's team patched all servers within approximately 15 minutes of detecting the initial malicious request. Immediate patching is essential for all organizations running vulnerable Hex.pm instances, and comprehensive audits should be conducted to identify any unauthorized access or package tampering during the exploitation window. This incident underscores the importance of promptly applying security patches and implementing robust monitoring for package registry infrastructure.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/11/hackers-exploited-cvss-100-hexpm-rce.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Hackers Exploit Two GeoServer Flaws as Researchers Warn of Unauthenticated RCE Chains</title>
+    <id>urn:cybersecnews:item:789</id>
+    <published>2026-11-25T18:28:34.711531+00:00</published>
+    <updated>2026-11-25T18:28:34.711531+00:00</updated>
+    <link href="https://thehackernews.com/2026/11/hackers-exploit-two-geoserver-flaws-as.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-120705, CVE-2026-129243&lt;/em&gt;&lt;/p&gt;&lt;p&gt;GeoServer versions prior to 2.21.5, 2.22.x before 2.22.3, and 2.23.x before 2.23.1 contain CVE-2024-120705 (CVSS 8.6) and CVE-2024-129243, unauthenticated remote code execution vulnerabilities exploitable through arbitrary file read and expression language injection chains. Active exploitation in the wild has been confirmed by watchTowr researchers. Administrators must immediately patch affected GeoServer installations to the latest patched versions (2.21.5, 2.22.3, or 2.23.1) or implement network-level access controls restricting exposure to untrusted sources.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/11/hackers-exploit-two-geoserver-flaws-as.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Idunno AntiCsrf: Idunno AntiCsrf Deserialization of Untrusted Data Vulnerability (CVE-2026-131914)</title>
     <id>urn:cybersecnews:item:788</id>
@@ -299,7 +353,7 @@
     <updated>2026-11-19T17:07:45.695624+00:00</updated>
     <link href="https://thehackernews.com/2026/11/critical-vmware-vcenter-flaw-cvss-98.html" rel="alternate" />
     <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-123890&lt;/em&gt;&lt;/p&gt;&lt;p&gt;VMware vCenter contains a critical authentication bypass vulnerability (CVSS 9.8) allowing network-based attackers to gain unauthorized administrative access without credentials. The flaw affects all supported vCenter versions and has no available workaround. Broadcom has released patches for all supported branches and immediate patching is mandatory given the high severity and network-exploitable nature of this vulnerability.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/11/critical-vmware-vcenter-flaw-cvss-98.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-123890, CVE-2026-123903&lt;/em&gt;&lt;/p&gt;&lt;p&gt;VMware vCenter contains a critical authentication bypass vulnerability (CVSS 9.8) allowing network-based attackers to gain unauthorized administrative access without credentials. The flaw affects all supported vCenter versions and has no available workaround. Broadcom has released patches for all supported branches and immediate patching is mandatory given the high severity and network-exploitable nature of this vulnerability.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/11/critical-vmware-vcenter-flaw-cvss-98.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
   </entry>
   <entry>
     <title>ruby2ßhell: Remote Code Execution durch 21 ß</title>
@@ -849,59 +903,5 @@
     <link href="https://github.com/advisories/GHSA-8vv3-6qpc-gpw6" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · merkle-tree-collision · CVE-2026-107846&lt;/em&gt;&lt;/p&gt;&lt;p&gt;The bitcoinjs-lib npm package contains a critical vulnerability (CVE-2026-107846) in its merkle root computation where `fastMerkleRoot` silently pads odd-level nodes by self-hashing without indication, allowing attackers to duplicate transactions while maintaining an identical merkle root and block hash. This enables forged transaction lists to pass validation since `checkTxRoots` does not detect repeated transactions, and the block header retains valid proof-of-work. There is no indication of active wild exploitation. Affected applications should immediately update bitcoinjs-lib to a patched version that properly detects and rejects duplicate transactions in merkle tree construction.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-8vv3-6qpc-gpw6"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Turla hackers use new Cereal malware to spy on govt Exchange servers</title>
-    <id>urn:cybersecnews:item:694</id>
-    <published>2026-11-10T16:09:37.698763+00:00</published>
-    <updated>2026-11-10T16:09:37.698763+00:00</updated>
-    <link href="https://www.bleepingcomputer.com/news/security/turla-hackers-use-new-ceral-malware-to-spy-on-govt-exchange-servers/" rel="alternate" />
-    <category term="red-team" />
-    <content type="html">&lt;p&gt;&lt;em&gt;red-team · c2&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Turla has deployed a new malware family designated "Cereal" targeting Microsoft Exchange servers at government entities to intercept email communications. The malware operates as a post-exploitation tool for persistent access and email exfiltration on compromised Exchange infrastructure. No CVSS score provided, but this represents active exploitation in the wild against high-value government targets. Organizations should immediately patch all Exchange servers to the latest security updates, conduct forensic analysis for indicators of compromise including unusual Exchange service behavior and mail forwarding rules, and review email access logs for anomalous activity.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/turla-hackers-use-new-ceral-malware-to-spy-on-govt-exchange-servers/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>SAP patches ICM2SHELL and PROXYGATE maximum severity flaws</title>
-    <id>urn:cybersecnews:item:693</id>
-    <published>2026-11-10T16:09:37.698063+00:00</published>
-    <updated>2026-11-10T16:09:37.698063+00:00</updated>
-    <link href="https://www.bleepingcomputer.com/news/security/sap-patches-four-maximum-severity-security-vulnerabilities/" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;SAP resolved 35 vulnerabilities in November 2026 updates, including four critical flaws in NetWeaver, Web Dispatcher, and Gateway components. The maximum-severity issues ICM2SHELL and PROXYGATE affect core SAP infrastructure and enable remote code execution through improper input validation and proxy request handling. These vulnerabilities carry CVSS ratings of 9.8+ and are likely to be exploited given their severity and accessibility; no evidence of active exploitation in the wild has been confirmed at this time. Immediately apply SAP's November 2026 security patches to all affected systems, prioritize Web Dispatcher and Gateway deployments, and restrict network access to these components where feasible pending patching.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/sap-patches-four-maximum-severity-security-vulnerabilities/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Binance warns of iOS flaw that could leak crypto wallet secrets</title>
-    <id>urn:cybersecnews:item:692</id>
-    <published>2026-11-10T16:09:37.697222+00:00</published>
-    <updated>2026-11-10T16:09:37.697222+00:00</updated>
-    <link href="https://www.bleepingcomputer.com/news/security/binance-warns-of-ios-flaw-that-could-leak-crypto-wallet-secrets/" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · file-disclosure&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Apple iOS versions 26.7.1, 27.0.1, and 27.2 contain a file access vulnerability allowing third-party applications to read private files from other apps, potentially exposing cryptocurrency seed phrases, secret keys, and login credentials. The flaw affects iOS users running these specific versions and poses severe risk to cryptocurrency holders whose wallet secrets could be compromised. There is no indication the vulnerability is currently exploited in the wild, but the exposure of cryptographic material would be critical if weaponized. Users should immediately update iOS to patched versions once available, and cryptocurrency users should consider moving assets to hardware wallets or secure offline storage pending patches.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/binance-warns-of-ios-flaw-that-could-leak-crypto-wallet-secrets/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Google Issues Chrome Security Update for Eighth Actively Exploited Zero-Day of 2026</title>
-    <id>urn:cybersecnews:item:691</id>
-    <published>2026-11-10T16:09:37.696496+00:00</published>
-    <updated>2026-11-10T16:09:37.696496+00:00</updated>
-    <link href="https://thehackernews.com/2026/11/google-issues-chrome-security-update.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · use-after-free · CVE-2026-125350&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Google Chrome has patched CVE-2026-125350, a high-severity use-after-free vulnerability in the XML component that is actively exploited in the wild. This marks the eighth zero-day vulnerability exploited against Chrome in 2026. Users should immediately update to the latest Chrome version to mitigate exposure to active attacks targeting this flaw.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/11/google-issues-chrome-security-update.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>SAP Patches Four CVSS 10.0 Flaws, Including Two Enabling Remote Code Execution</title>
-    <id>urn:cybersecnews:item:690</id>
-    <published>2026-11-10T16:09:37.695598+00:00</published>
-    <updated>2026-11-10T16:09:37.695598+00:00</updated>
-    <link href="https://thehackernews.com/2026/11/sap-patches-four-cvss-100-flaws.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;SAP addressed four critical vulnerabilities in NetWeaver Application Server and Web Dispatcher, all rated CVSS 10.0, enabling unauthenticated remote code execution and complete system compromise. These flaws require no user interaction and are exploitable over the network without authentication, representing maximum severity threats. Immediate patching is mandatory; organizations should prioritize applying SAP's latest security updates and consider network segmentation to restrict access to affected components pending patch deployment. Monitor for any indicators of exploitation targeting these newly disclosed flaws.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/11/sap-patches-four-cvss-100-flaws.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Dringend patchen: Attackierte Chrome-Lücke gefährdet unzählige Nutzer</title>
-    <id>urn:cybersecnews:item:689</id>
-    <published>2026-11-10T16:09:37.694813+00:00</published>
-    <updated>2026-11-10T16:09:37.694813+00:00</updated>
-    <link href="https://www.golem.de/news/dringend-patchen-attackierte-chrome-luecke-gefaehrdet-unzaehlige-nutzer-2611-215019.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Google Chrome addressed multiple critical vulnerabilities in a recent security update, including a zero-day flaw currently being exploited in the wild. The affected versions expose countless users to active attack campaigns. Immediate patching to the latest Chrome version is essential and should be prioritized across all systems.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.golem.de/news/dringend-patchen-attackierte-chrome-luecke-gefaehrdet-unzaehlige-nutzer-2611-215019.html"&gt;Read more&lt;/a&gt; · Source: golem-security&lt;/p&gt;</content>
   </entry>
 </feed>
