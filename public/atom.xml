@@ -3,7 +3,52 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-11-25T18:28:34.735340+00:00</updated>
+  <updated>2026-11-26T07:03:15.915353+00:00</updated>
+  <entry>
+    <title>TastyIgniter allows Remote Code Execution (RCE) via Unrestricted file upload in Media Manager (CVE-2026-69179)</title>
+    <id>urn:cybersecnews:item:799</id>
+    <published>2026-11-26T07:03:15.915353+00:00</published>
+    <updated>2026-11-26T07:03:15.915353+00:00</updated>
+    <link href="https://github.com/advisories/GHSA-7wwv-x6mc-pxqx" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · unrestricted-file-upload · CVE-2026-69179&lt;/em&gt;&lt;/p&gt;&lt;p&gt;TastyIgniter's Media Manager accepts unrestricted file uploads including `.htaccess` files, allowing authenticated administrators to execute arbitrary PHP code by uploading a malicious `.htaccess` that maps image extensions to PHP execution. This vulnerability (CVE-2026-69179) is rated critical and requires immediate patching. Apply the latest security update from the TastyIgniter project immediately, and implement server-level file upload restrictions to block `.htaccess` and other executable configuration files. Additionally, restrict PHP execution permissions in upload directories via web server configuration.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-7wwv-x6mc-pxqx"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Mitel MiCollab: Mitel MiCollab OS Command Injection Vulnerability (CVE-2026-133323)</title>
+    <id>urn:cybersecnews:item:798</id>
+    <published>2026-11-26T07:03:15.914166+00:00</published>
+    <updated>2026-11-26T07:03:15.914166+00:00</updated>
+    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-133323" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · os-command-injection · CVE-2026-133323&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Mitel MiCollab's Audio, Web, and Video Conferencing (AWV) component contains an OS command injection vulnerability (CVE-2026-133323) that permits unauthenticated attackers to execute arbitrary system commands. This vulnerability is actively exploited in the wild and carries critical severity. Organizations must immediately apply vendor mitigations per CISA BOD 26-04 guidance, conduct forensics triage, and assess internet exposure; discontinue use if mitigations are unavailable. Prioritize patching based on asset criticality and internet accessibility.&lt;/p&gt;&lt;p&gt;&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2026-133323"&gt;Read more&lt;/a&gt; · Source: cisa-kev&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Mitel MiCollab: Mitel MiCollab XML Injection Vulnerability (CVE-2026-133303)</title>
+    <id>urn:cybersecnews:item:797</id>
+    <published>2026-11-26T07:03:15.912607+00:00</published>
+    <updated>2026-11-26T07:03:15.912607+00:00</updated>
+    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-133303" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · xml-injection · CVE-2026-133303&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Mitel MiCollab's Audio, Web, and Video Conferencing (AWV) component contains an XML injection vulnerability (CVE-2026-133303) allowing unauthenticated attackers to execute arbitrary commands via pre-staged malicious content. This vulnerability is actively exploited in the wild and carries high severity. Immediately apply vendor-provided mitigations per CISA BOD 26-04 guidance, prioritizing internet-exposed systems; discontinue use if patches are unavailable. Conduct forensic triage on affected systems per CISA requirements and document remediation efforts.&lt;/p&gt;&lt;p&gt;&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2026-133303"&gt;Read more&lt;/a&gt; · Source: cisa-kev&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Mitel MiCollab: Mitel MiCollab Unrestricted Upload of File with Dangerous Type Vulnerability (CVE-2026-133275)</title>
+    <id>urn:cybersecnews:item:796</id>
+    <published>2026-11-26T07:03:15.911322+00:00</published>
+    <updated>2026-11-26T07:03:15.911322+00:00</updated>
+    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-133275" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · unrestricted-file-upload · CVE-2026-133275&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Mitel MiCollab's Audio, Web and Video Conferencing (AWV) component is vulnerable to unrestricted file upload due to insufficient file type validation, allowing unauthenticated attackers to upload arbitrary files (CVE-2026-133275). This vulnerability is actively exploited in the wild and carries high severity. Organizations must immediately apply vendor mitigations per CISA BOD 26-04 prioritization guidance, evaluate internet exposure of affected systems, and discontinue use if patches are unavailable. Conduct forensics triage on potentially compromised instances per CISA requirements.&lt;/p&gt;&lt;p&gt;&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2026-133275"&gt;Read more&lt;/a&gt; · Source: cisa-kev&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Mitel MiCollab: Mitel MiCollab Not Failing Securely Vulnerability (CVE-2026-133324)</title>
+    <id>urn:cybersecnews:item:795</id>
+    <published>2026-11-26T07:03:15.909137+00:00</published>
+    <updated>2026-11-26T07:03:15.909137+00:00</updated>
+    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-133324" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-133324&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Mitel MiCollab's Audio, Web and Video Conferencing (AWV) component contains a not-failing-securely vulnerability (CVE-2026-133324) that allows unauthenticated attackers to bypass authentication controls and execute unauthorized actions. This vulnerability is actively exploited in the wild and carries high severity. Immediately apply vendor-supplied mitigations and prioritize patching according to CISA BOD 26-04 guidance; if mitigations are unavailable, discontinue use of the affected product or migrate to cloud alternatives. Conduct forensic analysis on potentially affected systems and assess internet exposure to identify and prioritize vulnerable instances.&lt;/p&gt;&lt;p&gt;&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2026-133324"&gt;Read more&lt;/a&gt; · Source: cisa-kev&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>@waline/client vulnerable to stored XSS through unsanitized comment edit previews (CVE-2026-64670)</title>
     <id>urn:cybersecnews:item:794</id>
@@ -38,7 +83,7 @@
     <updated>2026-11-25T18:28:34.732354+00:00</updated>
     <link href="https://www.bleepingcomputer.com/news/security/cisa-warns-of-critical-unpatched-flaw-in-danfoss-refrigeration-controllers/" rel="alternate" />
     <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Danfoss AK-SM 8xxA Series refrigeration controllers are vulnerable to a critical unpatched flaw allowing unauthenticated remote code execution. CISA has issued a warning indicating active exploitation potential targeting food retail and critical infrastructure operators. No patch is currently available; operators should implement network segmentation, disable remote management interfaces, and monitor for suspicious activity until a fix is released.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/cisa-warns-of-critical-unpatched-flaw-in-danfoss-refrigeration-controllers/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2023-25914, CVE-2023-25915, CVE-2025-41450&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Danfoss AK-SM 8xxA Series refrigeration controllers are vulnerable to a critical unpatched flaw allowing unauthenticated remote code execution. CISA has issued a warning indicating active exploitation potential targeting food retail and critical infrastructure operators. No patch is currently available; operators should implement network segmentation, disable remote management interfaces, and monitor for suspicious activity until a fix is released.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/cisa-warns-of-critical-unpatched-flaw-in-danfoss-refrigeration-controllers/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
   </entry>
   <entry>
     <title>Hackers Exploited CVSS 10.0 Hex.pm RCE Flaw to Compromise 6 Package Registry Servers</title>
@@ -858,50 +903,5 @@
     <link href="https://www.bleepingcomputer.com/news/microsoft/microsoft-november-2026-patch-tuesday-fixes-1-235-flaws-outlook-zero-day/" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · unspecified&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Microsoft released November 2026 Patch Tuesday updates addressing 1,235 vulnerabilities across its product portfolio, including a zero-day in Microsoft Outlook currently exploited in the wild. The Outlook vulnerability enables remote code execution through specially crafted email messages. This represents critical severity with active exploitation confirmed; immediate patching is mandatory for all affected Outlook versions. Apply all available security updates from Microsoft immediately, prioritize Outlook patching, and consider implementing email filtering controls as a temporary mitigation while updates deploy.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/microsoft/microsoft-november-2026-patch-tuesday-fixes-1-235-flaws-outlook-zero-day/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>SGLang RCE Exploit Breaches NEAR AI, Steals Data From 18 Agents and About 100 Users</title>
-    <id>urn:cybersecnews:item:699</id>
-    <published>2026-11-11T04:56:24.221209+00:00</published>
-    <updated>2026-11-11T04:56:24.221209+00:00</updated>
-    <link href="https://thehackernews.com/2026/11/sglang-rce-exploit-breaches-near-ai.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;SGLang open-source inference engine contains an unpatched remote code execution vulnerability that was exploited against NEAR AI's infrastructure, resulting in unauthorized code execution and exposure of requests from approximately 100 users and 18 agents. The RCE flaw has been actively exploited in the wild and poses critical risk to any deployment processing sensitive data. Affected organizations should immediately audit SGLang instances for compromise indicators, isolate vulnerable servers, and apply available security patches or implement network-level access controls until patches are available. Developers should update to patched versions and review logs for evidence of exploitation, particularly any unauthorized command execution or data access.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/11/sglang-rce-exploit-breaches-near-ai.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Git Patches Flaw That Lets Malicious Repositories Execute Code During Recursive Clones</title>
-    <id>urn:cybersecnews:item:698</id>
-    <published>2026-11-11T04:56:24.219004+00:00</published>
-    <updated>2026-11-11T04:56:24.219004+00:00</updated>
-    <link href="https://thehackernews.com/2026/11/git-patches-flaw-that-lets-malicious.html" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-111760&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Git versions prior to 2.56.1 (and patched versions 2.50.2 through 2.55.1) contain an integer truncation vulnerability in index handling that allows arbitrary code execution when recursively cloning malicious repositories with submodules. CVE-2026-111760 has moderate-to-high severity as it requires user interaction but enables full code execution on affected systems. Update to Git 2.56.1 or the corresponding patched version for your release series immediately; avoid cloning untrusted repositories recursively until patched.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/11/git-patches-flaw-that-lets-malicious.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Not All That Glitters Is Gold: Tracking CopperDragon’s Sparrow Framework Around the Globe</title>
-    <id>urn:cybersecnews:item:697</id>
-    <published>2026-11-10T16:09:37.701263+00:00</published>
-    <updated>2026-11-10T16:09:37.701263+00:00</updated>
-    <link href="https://research.checkpoint.com/2026/not-all-that-glitters-is-gold-tracking-copperdragons-sparrow-framework-around-the-globe/" rel="alternate" />
-    <category term="red-team" />
-    <content type="html">&lt;p&gt;&lt;em&gt;red-team · c2&lt;/em&gt;&lt;/p&gt;&lt;p&gt;CopperDragon threat group deploys the Sparrow framework alongside various backdoors and post-exploitation tools in coordinated intrusion campaigns targeting high-profile organizations across Latin America, Asia, and Europe. The Sparrow framework enables multi-stage payload delivery and persistence mechanisms, allowing attackers to establish flexible command-and-control infrastructure across geographically diverse targets. This represents an active, ongoing threat with demonstrated capability against enterprise environments; organizations should implement detection signatures for Sparrow artifacts and conduct forensic analysis of systems showing indicators of CopperDragon activity. Recommended mitigations include network segmentation, enhanced monitoring of C2 communications patterns, and threat hunting for lateral movement artifacts associated with observed post-exploitation tools.&lt;/p&gt;&lt;p&gt;&lt;a href="https://research.checkpoint.com/2026/not-all-that-glitters-is-gold-tracking-copperdragons-sparrow-framework-around-the-globe/"&gt;Read more&lt;/a&gt; · Source: checkpoint-research&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>node-opcua: Namespace-Level RBAC Fail-Open - Anonymous Write/Call Bypass via Unbound `DefaultRolePermissions (CVE-2026-95860)</title>
-    <id>urn:cybersecnews:item:696</id>
-    <published>2026-11-10T16:09:37.700548+00:00</published>
-    <updated>2026-11-10T16:09:37.700548+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-xggf-m53x-jc3f" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · auth-bypass · CVE-2026-95860&lt;/em&gt;&lt;/p&gt;&lt;p&gt;node-opcua and related packages (node-opcua-address-space, node-opcua-server) fail to enforce role-based access control (RBAC) at the namespace level, allowing unauthenticated clients to write protected variables and call privileged methods on nodes lacking explicit per-node permissions. The vulnerability stems from improper handling of DefaultRolePermissions inheritance; the implementation grants access instead of applying the required default-deny policy specified in OPC UA Part 3. Severity is critical with no indication of active exploitation reported. Immediately patch to the latest version and review OPC UA server configurations to ensure explicit RolePermissions are defined on sensitive nodes as a temporary mitigation.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-xggf-m53x-jc3f"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>bitcoinjs-lib: Undetected merkle node duplication in block root computation validates a forged transaction list (CVE-2026-107846)</title>
-    <id>urn:cybersecnews:item:695</id>
-    <published>2026-11-10T16:09:37.699696+00:00</published>
-    <updated>2026-11-10T16:09:37.699696+00:00</updated>
-    <link href="https://github.com/advisories/GHSA-8vv3-6qpc-gpw6" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · merkle-tree-collision · CVE-2026-107846&lt;/em&gt;&lt;/p&gt;&lt;p&gt;The bitcoinjs-lib npm package contains a critical vulnerability (CVE-2026-107846) in its merkle root computation where `fastMerkleRoot` silently pads odd-level nodes by self-hashing without indication, allowing attackers to duplicate transactions while maintaining an identical merkle root and block hash. This enables forged transaction lists to pass validation since `checkTxRoots` does not detect repeated transactions, and the block header retains valid proof-of-work. There is no indication of active wild exploitation. Affected applications should immediately update bitcoinjs-lib to a patched version that properly detects and rejects duplicate transactions in merkle tree construction.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-8vv3-6qpc-gpw6"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
   </entry>
 </feed>
