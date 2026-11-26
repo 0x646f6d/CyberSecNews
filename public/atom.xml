@@ -3,7 +3,34 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-11-26T07:03:15.915353+00:00</updated>
+  <updated>2026-11-26T18:09:58.212887+00:00</updated>
+  <entry>
+    <title>SYS010 malware abuses browser management to spy on Gmail, Outlook</title>
+    <id>urn:cybersecnews:item:802</id>
+    <published>2026-11-26T18:09:58.212887+00:00</published>
+    <updated>2026-11-26T18:09:58.212887+00:00</updated>
+    <link href="https://www.bleepingcomputer.com/news/security/sys010-malware-abuses-browser-management-to-spy-on-gmail-outlook/" rel="alternate" />
+    <category term="red-team" />
+    <content type="html">&lt;p&gt;&lt;em&gt;red-team · infostealer&lt;/em&gt;&lt;/p&gt;&lt;p&gt;SYS010 infostealer malware, delivered via Meta advertisements, abuses browser management enrollment to force installation of credential-stealing extensions targeting Gmail and Outlook accounts. The malware leverages enterprise browser management policies to bypass typical extension install warnings and gain persistent access to email data. This represents a moderate-to-high severity threat given its ability to harvest sensitive communications at scale through legitimate-appearing ad campaigns. Immediate actions include blocking known malicious ads on Meta, implementing browser policies that restrict unauthorized management enrollment, educating users to verify extension sources before installation, and monitoring for suspicious browser management registration on corporate endpoints.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/sys010-malware-abuses-browser-management-to-spy-on-gmail-outlook/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Remus malware steals Gmail messages via fake Google Sheets extension</title>
+    <id>urn:cybersecnews:item:801</id>
+    <published>2026-11-26T18:09:58.211450+00:00</published>
+    <updated>2026-11-26T18:09:58.211450+00:00</updated>
+    <link href="https://www.bleepingcomputer.com/news/security/remus-malware-steals-gmail-messages-via-fake-google-sheets-extension/" rel="alternate" />
+    <category term="red-team" />
+    <content type="html">&lt;p&gt;&lt;em&gt;red-team · infostealer&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Remus infostealer targets Gmail users via malicious Chrome extensions that hijack email messages and exfiltrate them to attacker infrastructure. The operators falsely marketed this capability as a zero-day vulnerability in Gmail, though it functions as a social engineering attack exploiting user trust in browser extensions. Severity is high as victims lose confidentiality of sensitive email communications; active exploitation in the wild is confirmed. Users should immediately audit installed Chrome extensions for suspicious entries, disable or remove untrusted extensions, enable Chrome Sync security checkup, and consider using Google's Advanced Protection Program for high-risk accounts.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/security/remus-malware-steals-gmail-messages-via-fake-google-sheets-extension/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Palo Alto: Angreifer attackieren öffentlich erreichbare PAN-OS-Firewalls</title>
+    <id>urn:cybersecnews:item:800</id>
+    <published>2026-11-26T18:09:58.201548+00:00</published>
+    <updated>2026-11-26T18:09:58.201548+00:00</updated>
+    <link href="https://www.heise.de/news/Palo-Alto-Angriffe-auf-PAN-OS-Firewalls-mit-offenem-Managementzugang-beobachtet-11538805.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Palo Alto Networks PAN-OS firewalls are under active attack exploiting two chained vulnerabilities to achieve remote code execution. The flaws affect publicly exposed management interfaces and allow unauthenticated attackers to compromise firewall systems, with exploitation confirmed in the wild. Palo Alto has released security patches addressing these vulnerabilities. Immediate patching is critical for all exposed PAN-OS instances; organizations should prioritize applying available updates and restrict management interface access to trusted networks as interim mitigation.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.heise.de/news/Palo-Alto-Angriffe-auf-PAN-OS-Firewalls-mit-offenem-Managementzugang-beobachtet-11538805.html"&gt;Read more&lt;/a&gt; · Source: heise-security&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>TastyIgniter allows Remote Code Execution (RCE) via Unrestricted file upload in Media Manager (CVE-2026-69179)</title>
     <id>urn:cybersecnews:item:799</id>
@@ -876,32 +903,5 @@
     <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-20320" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · xxe · CVE-2026-20320&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Cisco BroadWorks is vulnerable to an XXE (XML External Entity) injection flaw that allows unauthenticated remote attackers to exfiltrate sensitive configuration data from affected systems. This vulnerability is actively exploited in the wild and carries high severity. Apply vendor-supplied patches immediately in accordance with CISA BOD 26-04 prioritization guidance; if mitigations are unavailable, discontinue use of the product or transition to cloud services with equivalent security posture. Conduct forensics triage on internet-exposed instances and verify patch compliance across your environment.&lt;/p&gt;&lt;p&gt;&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2026-20320"&gt;Read more&lt;/a&gt; · Source: cisa-kev&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Openwave Messaging Limited Webtop Media Transcoder: Openwave Messaging Limited Webtop Media Transcoder Incorrect Resource Transfer Between Spheres Vulnerability (CVE-2026-111793)</title>
-    <id>urn:cybersecnews:item:702</id>
-    <published>2026-11-11T04:56:24.224427+00:00</published>
-    <updated>2026-11-11T04:56:24.224427+00:00</updated>
-    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-111793" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · incorrect-resource-transfer · CVE-2026-111793&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Openwave Messaging Limited Webtop Media Transcoder is affected by CVE-2026-111793, an incorrect resource transfer vulnerability allowing authenticated users to process and convert unintended document types by bypassing the Webmail interface. This vulnerability is actively exploited in the wild with high severity. Apply vendor mitigations immediately per CISA BOD 26-04 guidance; discontinue use if patches are unavailable. Prioritize remediation based on internet exposure and follow forensics triage requirements.&lt;/p&gt;&lt;p&gt;&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2026-111793"&gt;Read more&lt;/a&gt; · Source: cisa-kev&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Microsoft Office: Microsoft Office Outlook Missing User Interaction for Potentially Unsafe Action Vulnerability (CVE-2026-124194)</title>
-    <id>urn:cybersecnews:item:701</id>
-    <published>2026-11-11T04:56:24.223269+00:00</published>
-    <updated>2026-11-11T04:56:24.223269+00:00</updated>
-    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-124194" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · spoofing · CVE-2026-124194&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Microsoft Outlook contains a missing user interaction vulnerability (CVE-2026-124194) that enables network-based spoofing attacks without requiring user confirmation of potentially unsafe actions. This vulnerability is actively exploited in the wild and poses significant risk. Apply vendor-supplied patches or mitigations immediately in accordance with CISA BOD 26-04 prioritization guidance; if mitigations are unavailable, discontinue use of the affected product. Assess internet exposure of all affected assets and ensure compliance with mandatory BOD 26-04 patching timelines.&lt;/p&gt;&lt;p&gt;&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2026-124194"&gt;Read more&lt;/a&gt; · Source: cisa-kev&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Microsoft November 2026 Patch Tuesday fixes 1,235 flaws, Outlook zero-day</title>
-    <id>urn:cybersecnews:item:700</id>
-    <published>2026-11-11T04:56:24.222246+00:00</published>
-    <updated>2026-11-11T04:56:24.222246+00:00</updated>
-    <link href="https://www.bleepingcomputer.com/news/microsoft/microsoft-november-2026-patch-tuesday-fixes-1-235-flaws-outlook-zero-day/" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · unspecified&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Microsoft released November 2026 Patch Tuesday updates addressing 1,235 vulnerabilities across its product portfolio, including a zero-day in Microsoft Outlook currently exploited in the wild. The Outlook vulnerability enables remote code execution through specially crafted email messages. This represents critical severity with active exploitation confirmed; immediate patching is mandatory for all affected Outlook versions. Apply all available security updates from Microsoft immediately, prioritize Outlook patching, and consider implementing email filtering controls as a temporary mitigation while updates deploy.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bleepingcomputer.com/news/microsoft/microsoft-november-2026-patch-tuesday-fixes-1-235-flaws-outlook-zero-day/"&gt;Read more&lt;/a&gt; · Source: bleepingcomputer&lt;/p&gt;</content>
   </entry>
 </feed>
