@@ -3,7 +3,16 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-11-26T18:09:58.212887+00:00</updated>
+  <updated>2026-11-27T06:57:46.288084+00:00</updated>
+  <entry>
+    <title>Unpatched Cacti Zero-Day Enables RCE in Just Four HTTP Requests via Guest Access</title>
+    <id>urn:cybersecnews:item:803</id>
+    <published>2026-11-27T06:57:46.288084+00:00</published>
+    <updated>2026-11-27T06:57:46.288084+00:00</updated>
+    <link href="https://thehackernews.com/2026/11/unpatched-cacti-zero-day-enables-rce-in.html" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Cacti network monitoring software is vulnerable to an unauthenticated remote code execution zero-day exploitable via four HTTP requests from guest access, tracked as 4HTTP2SHELL/4HTTP2ROOT. The vulnerability chains multiple weaknesses to achieve command execution as the Cacti server process without authentication. This poses critical severity risk as it requires no credentials and has a publicly available proof-of-concept. Organizations running Cacti should immediately apply available security patches and consider disabling guest access or restricting network access to the application until patched.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/11/unpatched-cacti-zero-day-enables-rce-in.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>SYS010 malware abuses browser management to spy on Gmail, Outlook</title>
     <id>urn:cybersecnews:item:802</id>
@@ -894,14 +903,5 @@
     <link href="https://github.com/advisories/GHSA-xqc2-xf4c-x3h3" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-119618, CVE-2026-126187&lt;/em&gt;&lt;/p&gt;&lt;p&gt;React Server Components packages (react-server-dom-webpack, react-server-dom-parcel, react-server-dom-turbopack) versions 19.0.0-19.3.0 contain a critical unauthenticated remote code execution vulnerability triggered by crafted payloads in responses containing multiple typed arrays. The flaw affects rare edge cases but carries critical severity; no evidence of exploitation in the wild is mentioned, though immediate patching is strongly recommended. Update all affected Server Components packages to patched versions immediately, prioritizing this given the critical severity and ease of exploitation.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/advisories/GHSA-xqc2-xf4c-x3h3"&gt;Read more&lt;/a&gt; · Source: github-advisories&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Cisco BroadWorks: Cisco BroadWorks Improper Restriction of XML External Entity Reference Vulnerability (CVE-2026-20320)</title>
-    <id>urn:cybersecnews:item:703</id>
-    <published>2026-11-11T04:56:24.225277+00:00</published>
-    <updated>2026-11-11T04:56:24.225277+00:00</updated>
-    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-20320" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · xxe · CVE-2026-20320&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Cisco BroadWorks is vulnerable to an XXE (XML External Entity) injection flaw that allows unauthenticated remote attackers to exfiltrate sensitive configuration data from affected systems. This vulnerability is actively exploited in the wild and carries high severity. Apply vendor-supplied patches immediately in accordance with CISA BOD 26-04 prioritization guidance; if mitigations are unavailable, discontinue use of the product or transition to cloud services with equivalent security posture. Conduct forensics triage on internet-exposed instances and verify patch compliance across your environment.&lt;/p&gt;&lt;p&gt;&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2026-20320"&gt;Read more&lt;/a&gt; · Source: cisa-kev&lt;/p&gt;</content>
   </entry>
 </feed>
