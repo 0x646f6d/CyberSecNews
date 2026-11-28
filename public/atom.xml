@@ -3,7 +3,16 @@
   <title>CyberSecNews - zero/n-day &amp; red-team</title>
   <id>urn:cybersecnews:feed</id>
   <generator>CyberSecNews</generator>
-  <updated>2026-11-27T17:52:40.754953+00:00</updated>
+  <updated>2026-11-28T06:31:50.904212+00:00</updated>
+  <entry>
+    <title>Drupal Core: Drupal Core Improper Check for Unusual or Exceptional Conditions Vulnerability (CVE-2026-136716)</title>
+    <id>urn:cybersecnews:item:806</id>
+    <published>2026-11-28T06:31:50.904212+00:00</published>
+    <updated>2026-11-28T06:31:50.904212+00:00</updated>
+    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-136716" rel="alternate" />
+    <category term="vulnerability" />
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · improper-condition-check · CVE-2026-136716&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Drupal Core installations in incomplete or unusual installation states are vulnerable to unauthenticated remote takeover via the exposed installer (CVE-2026-136716). The vulnerability stems from improper validation of exceptional conditions and is actively exploited in the wild. Apply vendor patches immediately per CISA BOD 26-04 guidance; if mitigations are unavailable, discontinue use. Prioritize patching based on internet exposure and follow forensics triage requirements if compromise is suspected.&lt;/p&gt;&lt;p&gt;&lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2026-136716"&gt;Read more&lt;/a&gt; · Source: cisa-kev&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>New NFS2ROOT Linux flaw can let attackers gain root privileges</title>
     <id>urn:cybersecnews:item:805</id>
@@ -155,7 +164,7 @@
     <updated>2026-11-25T18:28:34.711531+00:00</updated>
     <link href="https://thehackernews.com/2026/11/hackers-exploit-two-geoserver-flaws-as.html" rel="alternate" />
     <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-120705, CVE-2026-129243&lt;/em&gt;&lt;/p&gt;&lt;p&gt;GeoServer versions prior to 2.21.5, 2.22.x before 2.22.3, and 2.23.x before 2.23.1 contain CVE-2024-120705 (CVSS 8.6) and CVE-2024-129243, unauthenticated remote code execution vulnerabilities exploitable through arbitrary file read and expression language injection chains. Active exploitation in the wild has been confirmed by watchTowr researchers. Administrators must immediately patch affected GeoServer installations to the latest patched versions (2.21.5, 2.22.3, or 2.23.1) or implement network-level access controls restricting exposure to untrusted sources.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/11/hackers-exploit-two-geoserver-flaws-as.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
+    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce · CVE-2026-120705, CVE-2026-129242, CVE-2026-129243, CVE-2026-129244, CVE-2026-129245&lt;/em&gt;&lt;/p&gt;&lt;p&gt;GeoServer versions prior to 2.21.5, 2.22.x before 2.22.3, and 2.23.x before 2.23.1 contain CVE-2024-120705 (CVSS 8.6) and CVE-2024-129243, unauthenticated remote code execution vulnerabilities exploitable through arbitrary file read and expression language injection chains. Active exploitation in the wild has been confirmed by watchTowr researchers. Administrators must immediately patch affected GeoServer installations to the latest patched versions (2.21.5, 2.22.3, or 2.23.1) or implement network-level access controls restricting exposure to untrusted sources.&lt;/p&gt;&lt;p&gt;&lt;a href="https://thehackernews.com/2026/11/hackers-exploit-two-geoserver-flaws-as.html"&gt;Read more&lt;/a&gt; · Source: thehackernews&lt;/p&gt;</content>
   </entry>
   <entry>
     <title>Idunno AntiCsrf: Idunno AntiCsrf Deserialization of Untrusted Data Vulnerability (CVE-2026-131914)</title>
@@ -894,14 +903,5 @@
     <link href="https://www.heise.de/news/Patchday-Adobe-Kritische-Luecken-mit-Hoechstwertung-bedrohen-Connect-11520346.html" rel="alternate" />
     <category term="vulnerability" />
     <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · rce&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Adobe Connect, Illustrator, InDesign, Premiere Pro, and After Effects are affected by multiple critical vulnerabilities rated CVSS 9.8-10.0, allowing remote code execution and complete system compromise. These flaws enable attackers to execute arbitrary code with elevated privileges through crafted files or network exploitation; there is no evidence of active exploitation in the wild at this time. All users should apply the latest security patches immediately, prioritizing Adobe Connect due to its network-exposed nature and the severity of the vulnerabilities. Organizations should enforce patch deployment across all affected Adobe products as part of standard patch management procedures.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.heise.de/news/Patchday-Adobe-Kritische-Luecken-mit-Hoechstwertung-bedrohen-Connect-11520346.html"&gt;Read more&lt;/a&gt; · Source: heise-security&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Microsoft Patch Tuesday November 2027 , (Tue, Nov 10th)</title>
-    <id>urn:cybersecnews:item:706</id>
-    <published>2026-11-11T04:56:24.228262+00:00</published>
-    <updated>2026-11-11T04:56:24.228262+00:00</updated>
-    <link href="https://isc.sans.edu/diary/rss/33508" rel="alternate" />
-    <category term="vulnerability" />
-    <content type="html">&lt;p&gt;&lt;em&gt;vulnerability · multiple&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Microsoft released patches for 1,260 vulnerabilities in November 2027, including 68 critical issues and 167 Chromium-based flaws affecting Microsoft Edge. The critical vulnerabilities span multiple Microsoft products and represent a significant security update requirement across enterprise environments. Several critical issues are being actively exploited in the wild according to threat intelligence reports. Organizations should prioritize patching critical vulnerabilities immediately, with particular attention to Edge browser deployments, and establish a phased rollout plan for remaining updates to minimize operational disruption.&lt;/p&gt;&lt;p&gt;&lt;a href="https://isc.sans.edu/diary/rss/33508"&gt;Read more&lt;/a&gt; · Source: sans-isc&lt;/p&gt;</content>
   </entry>
 </feed>
